@@ -369,93 +369,10 @@ body.edit-layout-mode .panel-resize-y {
 
 
 /* ==== Pages static dashboard overrides ==== */
-:root {
-  --row-top: 450px;
-  --row-bottom: 450px;
-  --col-left-1: 300px;
-  --col-left-2: 300px;
-  --col-mid: 340px;
-  --col-feed: minmax(560px, 1fr);
-}
-
 .pages-static-note {
   font-size: 12px;
   color: var(--text-muted);
   white-space: nowrap;
-}
-
-#layoutEditBtn,
-.layout-edit-banner,
-.layout-panel-picker,
-#layoutPanelsBtn,
-#layoutResetBtn,
-#layoutDoneBtn,
-#layoutPanelPickerCloseBtn,
-#energyRefreshBtn,
-#marketRefreshBtn,
-#aviationRefreshBtn,
-#disasterRefreshBtn,
-#feedRefreshBtn,
-.f1-refresh-btn,
-.feed-translate-btn,
-.f1-news-translate-btn,
-.f1-news-footer,
-.feed-actions {
-  display: none !important;
-}
-
-@media (min-width: 961px) {
-  .dashboard-main {
-    overflow: visible;
-    padding: 10px;
-  }
-
-  .grid-stack {
-    position: static;
-    min-height: 0;
-    display: grid;
-    grid-template-columns: var(--col-left-1) var(--col-left-2) var(--col-mid) var(--col-feed);
-    grid-template-rows: var(--row-top) var(--row-bottom);
-    grid-template-areas:
-      "energy disaster f1 feed"
-      "aviation market   f1 feed";
-    gap: 10px;
-    align-items: stretch;
-  }
-
-  .grid-stack-item {
-    position: static !important;
-    left: auto !important;
-    top: auto !important;
-    width: auto !important;
-    height: auto !important;
-    min-width: 0;
-    min-height: 0;
-    display: block !important;
-  }
-
-  .grid-stack-item-content,
-  .grid-col {
-    height: 100%;
-    min-height: 0;
-  }
-
-  .grid-stack-item[gs-id="energy"] { grid-area: energy; }
-  .grid-stack-item[gs-id="disaster"] { grid-area: disaster; }
-  .grid-stack-item[gs-id="aviation"] { grid-area: aviation; }
-  .grid-stack-item[gs-id="market"] { grid-area: market; }
-  .grid-stack-item[gs-id="f1"] { grid-area: f1; }
-  .grid-stack-item[gs-id="feed"] { grid-area: feed; }
-
-  .col-feed .feed-list,
-  .col-f1 .f1-panel-scroll,
-  .col-aviation .aviation-list,
-  .col-disaster .disaster-list,
-  .col-market .market-snapshot-list,
-  .col-energy .market-blocks {
-    min-height: 0;
-    overflow: auto;
-  }
 }
 
 @media (max-width: 960px) {

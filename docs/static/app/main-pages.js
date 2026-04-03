@@ -2,6 +2,7 @@ import { AUTO_REFRESH_MS, RELATIVE_CLOCK_MS, STORAGE_KEYS } from "./core/constan
 import { createApi } from "./core/api.js";
 import { createStore } from "./core/store.js";
 import { createThemeModule } from "./modules/theme/index.js";
+import { createLayoutModule } from "./modules/layout/index.js";
 import { createMobileModule } from "./modules/mobile/index.js";
 import { createLightboxModule } from "./modules/lightbox/index.js";
 import { createEnergyModule } from "./modules/energy/index.js";
@@ -61,8 +62,13 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   ctx.lightbox = safeInit("lightbox", createLightboxModule, ctx, modules);
   ctx.theme = safeInit("theme", createThemeModule, ctx, modules);
-  ctx.mobile = safeInit("mobile", createMobileModule, ctx, modules);
+
+  // 先让 F1 模块把自己的内容节点注入 DOM，再让 layout 去扫描所有板块
   ctx.f1Module = safeInit("f1", createF1Module, ctx, modules);
+
+  ctx.layout = safeInit("layout", createLayoutModule, ctx, modules);
+  ctx.mobile = safeInit("mobile", createMobileModule, ctx, modules);
+
   ctx.energyModule = safeInit("energy", createEnergyModule, ctx, modules);
   ctx.marketModule = safeInit("market", createMarketModule, ctx, modules);
   ctx.aviationModule = safeInit("aviation", createAviationModule, ctx, modules);
@@ -70,7 +76,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   ctx.feedModule = safeInit("feed", createFeedModule, ctx, modules);
 
   async function refreshAll() {
-    const refreshers = modules.filter((mod) => typeof mod.refresh === "function").map((mod) => mod.refresh());
+    const refreshers = modules
+      .filter((mod) => typeof mod.refresh === "function")
+      .map((mod) => mod.refresh());
+
     await Promise.all(refreshers);
   }
 

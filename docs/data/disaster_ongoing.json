@@ -1,73 +1,6 @@
 [
   {
     "id": 1,
-    "group_key": "volcano|fdee9f0d619d72ea751af757f6f2988e876f8092",
-    "event_type": "volcano",
-    "severity_level": "very_high",
-    "severity_color": "very_high",
-    "title": "Nyamuragira",
-    "summary": "VRP 1380.41 MW · VIIRS / VIIRS375 · 1.59 km",
-    "started_at": "2026-04-03T11:36:00+00:00",
-    "updated_at": "2026-04-03T11:36:00+00:00",
-    "location_text": "Nyamuragira",
-    "lat": null,
-    "lon": null,
-    "source_primary": "MIROVA",
-    "source_secondary": "VIIRS / VIIRS375",
-    "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
-    "country_code": null,
-    "payload": {
-      "volcano_id": "223020",
-      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
-      "vrp_mw": 1380.41,
-      "distance_km": 1.68,
-      "sensor": "VIIRS",
-      "row_class": [
-        "very_high",
-        "moderate"
-      ],
-      "source_page": "https://www.mirovaweb.it/NRT/",
-      "sensors": [
-        "VIIRS",
-        "VIIRS375"
-      ],
-      "reports": [
-        {
-          "volcano_id": "223020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
-          "vrp_mw": 1380.41,
-          "distance_km": 1.68,
-          "sensor": "VIIRS",
-          "row_class": [
-            "very_high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        },
-        {
-          "volcano_id": "223020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
-          "vrp_mw": 59.8,
-          "distance_km": 1.59,
-          "sensor": "VIIRS375",
-          "row_class": [
-            "moderate"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        }
-      ],
-      "merged_count": 2
-    },
-    "member_event_ids": [
-      18
-    ],
-    "occurred_at": "2026-04-03T11:36:00+00:00",
-    "published_at": "2026-04-03T11:36:00+00:00",
-    "fetched_at": "2026-04-03T11:36:00+00:00"
-  },
-  {
-    "id": 2,
     "group_key": "earthquake|us6000smbs",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -103,7 +36,7 @@
     "fetched_at": "2026-04-03T10:59:07.488000+00:00"
   },
   {
-    "id": 3,
+    "id": 2,
     "group_key": "earthquake|us6000smbl",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -139,7 +72,7 @@
     "fetched_at": "2026-04-03T10:26:42.802000+00:00"
   },
   {
-    "id": 4,
+    "id": 3,
     "group_key": "earthquake|us6000smax",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -175,7 +108,7 @@
     "fetched_at": "2026-04-03T08:22:08.857000+00:00"
   },
   {
-    "id": 6,
+    "id": 5,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|invest_90p|a4db24651b646648",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -219,14 +152,14 @@
       }
     },
     "member_event_ids": [
-      22
+      16
     ],
     "occurred_at": "2026-04-03T06:00:00+00:00",
     "published_at": "2026-04-03T06:00:00+00:00",
     "fetched_at": "2026-04-03T06:00:00+00:00"
   },
   {
-    "id": 5,
+    "id": 4,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|invest_91p|b708d1d8481a7a91",
     "event_type": "typhoon",
     "severity_level": "low",
@@ -268,14 +201,14 @@
       }
     },
     "member_event_ids": [
-      23
+      17
     ],
     "occurred_at": "2026-04-03T06:00:00+00:00",
     "published_at": "2026-04-03T06:00:00+00:00",
     "fetched_at": "2026-04-03T06:00:00+00:00"
   },
   {
-    "id": 7,
+    "id": 6,
     "group_key": "volcano|2ecfcad850979bbb1112c898302db0b5a2843fb5",
     "event_type": "volcano",
     "severity_level": "high",
@@ -322,14 +255,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      19
+      14
     ],
     "occurred_at": "2026-04-03T05:12:01+00:00",
     "published_at": "2026-04-03T05:12:01+00:00",
     "fetched_at": "2026-04-03T05:12:01+00:00"
   },
   {
-    "id": 8,
+    "id": 7,
     "group_key": "earthquake|us6000sma8",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -365,7 +298,7 @@
     "fetched_at": "2026-04-03T04:42:05.125000+00:00"
   },
   {
-    "id": 9,
+    "id": 8,
     "group_key": "earthquake|us6000sm9y",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -401,7 +334,7 @@
     "fetched_at": "2026-04-03T03:37:16.087000+00:00"
   },
   {
-    "id": 10,
+    "id": 9,
     "group_key": "earthquake|us6000sm9g",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -437,7 +370,7 @@
     "fetched_at": "2026-04-03T02:33:49.551000+00:00"
   },
   {
-    "id": 11,
+    "id": 10,
     "group_key": "earthquake|us6000sm96",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -473,7 +406,7 @@
     "fetched_at": "2026-04-03T02:10:53.447000+00:00"
   },
   {
-    "id": 12,
+    "id": 11,
     "group_key": "earthquake|us6000sm8r",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -509,61 +442,7 @@
     "fetched_at": "2026-04-03T01:44:13.456000+00:00"
   },
   {
-    "id": 13,
-    "group_key": "volcano|a6ae49d849e4d6cb1034b4af96053cb607a6d533",
-    "event_type": "volcano",
-    "severity_level": "very_high",
-    "severity_color": "very_high",
-    "title": "Nyamuragira",
-    "summary": "VRP 1382.25 MW · MODIS · 8.94 km",
-    "started_at": "2026-04-03T01:40:00+00:00",
-    "updated_at": "2026-04-03T01:40:00+00:00",
-    "location_text": "Nyamuragira",
-    "lat": null,
-    "lon": null,
-    "source_primary": "MIROVA",
-    "source_secondary": "MODIS",
-    "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=223020",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=223020",
-    "country_code": null,
-    "payload": {
-      "volcano_id": "223020",
-      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=223020",
-      "vrp_mw": 1382.25,
-      "distance_km": 8.94,
-      "sensor": "MODIS",
-      "row_class": [
-        "very_high"
-      ],
-      "source_page": "https://www.mirovaweb.it/NRT/",
-      "sensors": [
-        "MODIS"
-      ],
-      "reports": [
-        {
-          "volcano_id": "223020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=223020",
-          "vrp_mw": 1382.25,
-          "distance_km": 8.94,
-          "sensor": "MODIS",
-          "row_class": [
-            "very_high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        }
-      ],
-      "merged_count": 1
-    },
-    "member_event_ids": [
-      20
-    ],
-    "occurred_at": "2026-04-03T01:40:00+00:00",
-    "published_at": "2026-04-03T01:40:00+00:00",
-    "fetched_at": "2026-04-03T01:40:00+00:00"
-  },
-  {
-    "id": 14,
+    "id": 12,
     "group_key": "earthquake|us6000sm8h",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -599,7 +478,7 @@
     "fetched_at": "2026-04-03T00:32:57.016000+00:00"
   },
   {
-    "id": 15,
+    "id": 13,
     "group_key": "earthquake|us6000sm8g",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -635,7 +514,7 @@
     "fetched_at": "2026-04-03T00:22:20.421000+00:00"
   },
   {
-    "id": 16,
+    "id": 14,
     "group_key": "earthquake|us6000sm8a",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -671,7 +550,7 @@
     "fetched_at": "2026-04-02T23:22:14.773000+00:00"
   },
   {
-    "id": 17,
+    "id": 15,
     "group_key": "earthquake|us6000sm6e",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -707,7 +586,7 @@
     "fetched_at": "2026-04-02T18:46:11.597000+00:00"
   },
   {
-    "id": 18,
+    "id": 16,
     "group_key": "typhoon|TC|jtwc_abio|jtwc_abio|south_indian_ocean_area|tc_29s|2729682be34084be",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -755,14 +634,14 @@
       }
     },
     "member_event_ids": [
-      24
+      18
     ],
     "occurred_at": "2026-04-02T18:00:00+00:00",
     "published_at": "2026-04-02T18:00:00+00:00",
     "fetched_at": "2026-04-02T18:00:00+00:00"
   },
   {
-    "id": 19,
+    "id": 17,
     "group_key": "earthquake|us6000sm5i",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -798,151 +677,7 @@
     "fetched_at": "2026-04-02T16:10:26.585000+00:00"
   },
   {
-    "id": 20,
-    "group_key": "earthquake|us6000sm43",
-    "event_type": "earthquake",
-    "severity_level": "moderate",
-    "severity_color": "moderate",
-    "title": "M 5.3 - 81 km WSW of Nabire, Indonesia",
-    "summary": "81 km WSW of Nabire, Indonesia",
-    "started_at": "2026-04-02T15:36:36.646000+00:00",
-    "updated_at": "2026-04-02T15:55:10.040000+00:00",
-    "location_text": "81 km WSW of Nabire, Indonesia",
-    "lat": -3.7097,
-    "lon": 134.8597,
-    "source_primary": "USGS",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sm43",
-    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sm43",
-    "country_code": null,
-    "payload": {
-      "mag": 5.3,
-      "depth_km": 33.785,
-      "place": "81 km WSW of Nabire, Indonesia",
-      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000sm43.geojson",
-      "alert": null,
-      "sig": 432,
-      "tsunami": 0,
-      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
-    },
-    "member_event_ids": [
-      14
-    ],
-    "occurred_at": "2026-04-02T15:36:36.646000+00:00",
-    "published_at": "2026-04-02T15:36:36.646000+00:00",
-    "fetched_at": "2026-04-02T15:36:36.646000+00:00"
-  },
-  {
-    "id": 21,
-    "group_key": "earthquake|us6000sm40",
-    "event_type": "earthquake",
-    "severity_level": "moderate",
-    "severity_color": "moderate",
-    "title": "M 5.1 - 131 km E of Bitung, Indonesia",
-    "summary": "131 km E of Bitung, Indonesia",
-    "started_at": "2026-04-02T15:34:23.732000+00:00",
-    "updated_at": "2026-04-02T15:52:34.040000+00:00",
-    "location_text": "131 km E of Bitung, Indonesia",
-    "lat": 1.5322,
-    "lon": 126.3035,
-    "source_primary": "USGS",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sm40",
-    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sm40",
-    "country_code": null,
-    "payload": {
-      "mag": 5.1,
-      "depth_km": 10.0,
-      "place": "131 km E of Bitung, Indonesia",
-      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000sm40.geojson",
-      "alert": null,
-      "sig": 400,
-      "tsunami": 0,
-      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
-    },
-    "member_event_ids": [
-      15
-    ],
-    "occurred_at": "2026-04-02T15:34:23.732000+00:00",
-    "published_at": "2026-04-02T15:34:23.732000+00:00",
-    "fetched_at": "2026-04-02T15:34:23.732000+00:00"
-  },
-  {
-    "id": 22,
-    "group_key": "earthquake|us6000sm21",
-    "event_type": "earthquake",
-    "severity_level": "moderate",
-    "severity_color": "moderate",
-    "title": "M 5.8 - 121 km WNW of Ternate, Indonesia",
-    "summary": "121 km WNW of Ternate, Indonesia",
-    "started_at": "2026-04-02T14:34:59.320000+00:00",
-    "updated_at": "2026-04-02T16:58:14.086000+00:00",
-    "location_text": "121 km WNW of Ternate, Indonesia",
-    "lat": 1.2035,
-    "lon": 126.3735,
-    "source_primary": "USGS",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sm21",
-    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sm21",
-    "country_code": null,
-    "payload": {
-      "mag": 5.8,
-      "depth_km": 35.0,
-      "place": "121 km WNW of Ternate, Indonesia",
-      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000sm21.geojson",
-      "alert": "green",
-      "sig": 518,
-      "tsunami": 0,
-      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
-    },
-    "member_event_ids": [
-      16
-    ],
-    "occurred_at": "2026-04-02T14:34:59.320000+00:00",
-    "published_at": "2026-04-02T14:34:59.320000+00:00",
-    "fetched_at": "2026-04-02T14:34:59.320000+00:00"
-  },
-  {
-    "id": 23,
-    "group_key": "earthquake|us6000sm1v",
-    "event_type": "earthquake",
-    "severity_level": "moderate",
-    "severity_color": "moderate",
-    "title": "M 5.9 - 130 km WNW of Ternate, Indonesia",
-    "summary": "130 km WNW of Ternate, Indonesia",
-    "started_at": "2026-04-02T14:13:49.201000+00:00",
-    "updated_at": "2026-04-02T16:41:49.434000+00:00",
-    "location_text": "130 km WNW of Ternate, Indonesia",
-    "lat": 1.2401,
-    "lon": 126.3004,
-    "source_primary": "USGS",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sm1v",
-    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sm1v",
-    "country_code": null,
-    "payload": {
-      "mag": 5.9,
-      "depth_km": 35.0,
-      "place": "130 km WNW of Ternate, Indonesia",
-      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000sm1v.geojson",
-      "alert": "green",
-      "sig": 536,
-      "tsunami": 0,
-      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
-    },
-    "member_event_ids": [
-      17
-    ],
-    "occurred_at": "2026-04-02T14:13:49.201000+00:00",
-    "published_at": "2026-04-02T14:13:49.201000+00:00",
-    "fetched_at": "2026-04-02T14:13:49.201000+00:00"
-  },
-  {
-    "id": 24,
+    "id": 18,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -950,7 +685,7 @@
     "title": "Flood in Democratic Republic of Congo",
     "summary": "Democratic Republic of Congo",
     "started_at": "2026-02-11T01:00:00+00:00",
-    "updated_at": "2026-04-03T09:11:13+00:00",
+    "updated_at": "2026-04-03T15:11:07+00:00",
     "location_text": "Democratic Republic of Congo",
     "lat": null,
     "lon": null,
@@ -994,7 +729,7 @@
         "country": "Democratic Republic of Congo",
         "fromdate": "2026-02-11T01:00:00",
         "todate": "2026-03-05T01:00:00",
-        "datemodified": "2026-04-03T09:11:13",
+        "datemodified": "2026-04-03T15:11:07",
         "iso3": "COD",
         "source": "GLOFAS",
         "sourceid": "",
@@ -1015,7 +750,7 @@
       }
     },
     "member_event_ids": [
-      21
+      15
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

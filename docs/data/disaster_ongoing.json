@@ -1,6 +1,61 @@
 [
   {
     "id": 1,
+    "group_key": "typhoon|TC|jtwc_abio|jtwc_abio|south_indian_ocean_area|tc_29s|964f91f40766e6ae",
+    "event_type": "typhoon",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Tropical Cyclone 29S (Indusa)",
+    "summary": "wind 55 kt (gust 70)",
+    "started_at": "2026-04-03T18:00:00+00:00",
+    "updated_at": "2026-04-03T18:00:00+00:00",
+    "location_text": "15.2S 72.9E",
+    "lat": -15.2,
+    "lon": 72.9,
+    "source_primary": "JTWC-ABIO",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://www.google.com/maps?q=-15.2,72.9",
+    "official_link": "https://www.google.com/maps?q=-15.2,72.9",
+    "country_code": null,
+    "payload": {
+      "item_type": "warning",
+      "source": "jtwc_abio",
+      "source_key": "jtwc_abio|south_indian_ocean_area|tc_29s",
+      "content_hash": "964f91f40766e6ae",
+      "platform_summary": "15.2S 72.9E | wind 55 kt (gust 70)",
+      "platform_location": "15.2S 72.9E",
+      "wind": "55 kt (gust 70)",
+      "risk_48h": null,
+      "risk_7d": null,
+      "next_update": null,
+      "raw_text": "(1) AT 03APR26 0600Z, TROPICAL CYCLONE 29S (INDUSA) WAS LOCATED \nNEAR 15.2S 72.9E, APPROXIMATELY 939 NM EAST-NORTHEAST OF PORT LOUIS, \nMAURITIUS, AND HAD TRACKED SOUTH-SOUTHWESTWARD AT 11 KNOTS OVER THE \nPAST SIX HOURS. MAXIMUM SUSTAINED SURFACE WINDS WERE ESTIMATED AT 55 \nKNOTS GUSTING TO 70 KNOTS. SEE REF A (WTXS31 PGTW 030900) FOR FURTHER \nDETAILS.",
+      "metadata": {
+        "basin_section": "SOUTH INDIAN OCEAN AREA (135E WEST TO COAST OF AFRICA)",
+        "storm_class": "TROPICAL CYCLONE",
+        "storm_id": "29S",
+        "storm_name": "INDUSA",
+        "fix_date": "03APR26",
+        "fix_time": "03APR26 0600Z",
+        "lat": -15.2,
+        "lon": 72.9,
+        "movement_text": "SOUTH-SOUTHWESTWARD",
+        "movement_kt": 11,
+        "wind_kt": 55,
+        "gust_kt": 70,
+        "warning_reference": "WTXS31 PGTW 030900",
+        "bulletin_issue_at": "2026-04-03T18:00:00+00:00"
+      }
+    },
+    "member_event_ids": [
+      16
+    ],
+    "occurred_at": "2026-04-03T18:00:00+00:00",
+    "published_at": "2026-04-03T18:00:00+00:00",
+    "fetched_at": "2026-04-03T18:00:00+00:00"
+  },
+  {
+    "id": 2,
     "group_key": "earthquake|us6000smda",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -8,7 +63,7 @@
     "title": "M 5.8 - 35 km S of Jurm, Afghanistan",
     "summary": "35 km S of Jurm, Afghanistan",
     "started_at": "2026-04-03T16:12:58.037000+00:00",
-    "updated_at": "2026-04-03T17:26:52.854000+00:00",
+    "updated_at": "2026-04-03T18:41:43.830000+00:00",
     "location_text": "35 km S of Jurm, Afghanistan",
     "lat": 36.5479,
     "lon": 70.852,
@@ -24,7 +79,7 @@
       "place": "35 km S of Jurm, Afghanistan",
       "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000smda.geojson",
       "alert": "green",
-      "sig": 529,
+      "sig": 530,
       "tsunami": 0,
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
@@ -36,7 +91,7 @@
     "fetched_at": "2026-04-03T16:12:58.037000+00:00"
   },
   {
-    "id": 2,
+    "id": 3,
     "group_key": "earthquake|us6000smbs",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -72,7 +127,7 @@
     "fetched_at": "2026-04-03T10:59:07.488000+00:00"
   },
   {
-    "id": 3,
+    "id": 4,
     "group_key": "earthquake|us6000smbl",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -108,7 +163,7 @@
     "fetched_at": "2026-04-03T10:26:42.802000+00:00"
   },
   {
-    "id": 4,
+    "id": 5,
     "group_key": "earthquake|us6000smax",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -144,7 +199,7 @@
     "fetched_at": "2026-04-03T08:22:08.857000+00:00"
   },
   {
-    "id": 6,
+    "id": 7,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|invest_90p|a4db24651b646648",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -188,14 +243,14 @@
       }
     },
     "member_event_ids": [
-      16
+      17
     ],
     "occurred_at": "2026-04-03T06:00:00+00:00",
     "published_at": "2026-04-03T06:00:00+00:00",
     "fetched_at": "2026-04-03T06:00:00+00:00"
   },
   {
-    "id": 5,
+    "id": 6,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|invest_91p|b708d1d8481a7a91",
     "event_type": "typhoon",
     "severity_level": "low",
@@ -237,14 +292,14 @@
       }
     },
     "member_event_ids": [
-      17
+      18
     ],
     "occurred_at": "2026-04-03T06:00:00+00:00",
     "published_at": "2026-04-03T06:00:00+00:00",
     "fetched_at": "2026-04-03T06:00:00+00:00"
   },
   {
-    "id": 7,
+    "id": 8,
     "group_key": "volcano|2ecfcad850979bbb1112c898302db0b5a2843fb5",
     "event_type": "volcano",
     "severity_level": "high",
@@ -298,7 +353,7 @@
     "fetched_at": "2026-04-03T05:12:01+00:00"
   },
   {
-    "id": 8,
+    "id": 9,
     "group_key": "earthquake|us6000sma8",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -334,7 +389,7 @@
     "fetched_at": "2026-04-03T04:42:05.125000+00:00"
   },
   {
-    "id": 9,
+    "id": 10,
     "group_key": "earthquake|us6000sm9y",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -370,7 +425,7 @@
     "fetched_at": "2026-04-03T03:37:16.087000+00:00"
   },
   {
-    "id": 10,
+    "id": 11,
     "group_key": "earthquake|us6000sm9g",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -406,7 +461,7 @@
     "fetched_at": "2026-04-03T02:33:49.551000+00:00"
   },
   {
-    "id": 11,
+    "id": 12,
     "group_key": "earthquake|us6000sm96",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -442,7 +497,7 @@
     "fetched_at": "2026-04-03T02:10:53.447000+00:00"
   },
   {
-    "id": 12,
+    "id": 13,
     "group_key": "earthquake|us6000sm8r",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -478,7 +533,7 @@
     "fetched_at": "2026-04-03T01:44:13.456000+00:00"
   },
   {
-    "id": 13,
+    "id": 14,
     "group_key": "earthquake|us6000sm8h",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -514,7 +569,7 @@
     "fetched_at": "2026-04-03T00:32:57.016000+00:00"
   },
   {
-    "id": 14,
+    "id": 15,
     "group_key": "earthquake|us6000sm8g",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -550,7 +605,7 @@
     "fetched_at": "2026-04-03T00:22:20.421000+00:00"
   },
   {
-    "id": 15,
+    "id": 16,
     "group_key": "earthquake|us6000sm8a",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -586,7 +641,7 @@
     "fetched_at": "2026-04-02T23:22:14.773000+00:00"
   },
   {
-    "id": 16,
+    "id": 17,
     "group_key": "earthquake|us6000sm6e",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -622,61 +677,6 @@
     "fetched_at": "2026-04-02T18:46:11.597000+00:00"
   },
   {
-    "id": 17,
-    "group_key": "typhoon|TC|jtwc_abio|jtwc_abio|south_indian_ocean_area|tc_29s|2729682be34084be",
-    "event_type": "typhoon",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "Tropical Cyclone 29S (Indusa)",
-    "summary": "wind 45 kt (gust 55)",
-    "started_at": "2026-04-02T18:00:00+00:00",
-    "updated_at": "2026-04-02T18:00:00+00:00",
-    "location_text": "12.6S 73.2E",
-    "lat": -12.6,
-    "lon": 73.2,
-    "source_primary": "JTWC-ABIO",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://www.google.com/maps?q=-12.6,73.2",
-    "official_link": "https://www.google.com/maps?q=-12.6,73.2",
-    "country_code": null,
-    "payload": {
-      "item_type": "warning",
-      "source": "jtwc_abio",
-      "source_key": "jtwc_abio|south_indian_ocean_area|tc_29s",
-      "content_hash": "2729682be34084be",
-      "platform_summary": "12.6S 73.2E | wind 45 kt (gust 55)",
-      "platform_location": "12.6S 73.2E",
-      "wind": "45 kt (gust 55)",
-      "risk_48h": null,
-      "risk_7d": null,
-      "next_update": null,
-      "raw_text": "(1) AT 02APR26 1200Z, TROPICAL CYCLONE 29S (INDUSA) WAS LOCATED \nNEAR 12.6S 73.2E, APPROXIMATELY 1019 NM EAST-NORTHEAST OF PORT LOUIS, \nMAURITIUS, AND HAD TRACKED SOUTH-SOUTHWESTWARD AT 07 KNOTS OVER THE PAST \nSIX HOURS. MAXIMUM SUSTAINED SURFACE WINDS WERE ESTIMATED AT 45 KNOTS \nGUSTING TO 55 KNOTS. SEE REF A (WTXS31 PGTW 021500) FOR FURTHER DETAILS.",
-      "metadata": {
-        "basin_section": "SOUTH INDIAN OCEAN AREA (135E WEST TO COAST OF AFRICA)",
-        "storm_class": "TROPICAL CYCLONE",
-        "storm_id": "29S",
-        "storm_name": "INDUSA",
-        "fix_date": "02APR26",
-        "fix_time": "02APR26 1200Z",
-        "lat": -12.6,
-        "lon": 73.2,
-        "movement_text": "SOUTH-SOUTHWESTWARD",
-        "movement_kt": 7,
-        "wind_kt": 45,
-        "gust_kt": 55,
-        "warning_reference": "WTXS31 PGTW 021500",
-        "bulletin_issue_at": "2026-04-02T18:00:00+00:00"
-      }
-    },
-    "member_event_ids": [
-      18
-    ],
-    "occurred_at": "2026-04-02T18:00:00+00:00",
-    "published_at": "2026-04-02T18:00:00+00:00",
-    "fetched_at": "2026-04-02T18:00:00+00:00"
-  },
-  {
     "id": 18,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
@@ -685,7 +685,7 @@
     "title": "Flood in Democratic Republic of Congo",
     "summary": "Democratic Republic of Congo",
     "started_at": "2026-02-11T01:00:00+00:00",
-    "updated_at": "2026-04-03T15:11:07+00:00",
+    "updated_at": "2026-04-03T18:11:10+00:00",
     "location_text": "Democratic Republic of Congo",
     "lat": null,
     "lon": null,
@@ -729,7 +729,7 @@
         "country": "Democratic Republic of Congo",
         "fromdate": "2026-02-11T01:00:00",
         "todate": "2026-03-05T01:00:00",
-        "datemodified": "2026-04-03T15:11:07",
+        "datemodified": "2026-04-03T18:11:10",
         "iso3": "COD",
         "source": "GLOFAS",
         "sourceid": "",

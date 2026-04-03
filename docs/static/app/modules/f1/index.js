@@ -1,6 +1,5 @@
 import { renderF1Live, getF1LiveStatusMarkup } from "./render-live.js";
 import { renderF1News } from "./render-news.js";
-import { formatAbsoluteLocalDateTime, formatRelativeLocalTime } from "../../core/time.js";
 
 function findSectionRoot() {
   const direct = document.querySelector(".col-f1");
@@ -54,6 +53,7 @@ function buildShell() {
 
     <div class="f1-tab-panel active" data-f1-tab-panel="live">
       <div class="f1-panel-tools">
+        <button class="f1-refresh-btn" type="button" data-f1-refresh-live>刷新</button>
         <span class="f1-refresh-note" data-f1-live-status>加载中</span>
       </div>
       <div class="f1-panel-scroll" data-f1-live-panel>
@@ -63,6 +63,7 @@ function buildShell() {
 
     <div class="f1-tab-panel" data-f1-tab-panel="news">
       <div class="f1-panel-tools">
+        <button class="f1-refresh-btn" type="button" data-f1-refresh-news>刷新</button>
         <span class="f1-refresh-note" data-f1-news-status>加载中</span>
       </div>
       <div class="f1-panel-scroll" data-f1-news-panel>
@@ -109,19 +110,6 @@ function wireTabs(host) {
   });
 }
 
-function updateHeaderTimestamp(section, fetchedAt) {
-  const updatedAt = section.querySelector("#f1UpdatedAt, .section-updated");
-  if (!updatedAt) return;
-
-  if (!fetchedAt) {
-    updatedAt.textContent = "（暂无更新时间）";
-    updatedAt.title = "";
-    return;
-  }
-
-  updatedAt.textContent = `（${formatRelativeLocalTime(fetchedAt)}更新）`;
-  updatedAt.title = formatAbsoluteLocalDateTime(fetchedAt);
-}
 
 export function createF1Module(ctx) {
   const section = findSectionRoot();
@@ -140,7 +128,6 @@ export function createF1Module(ctx) {
 
     const fetchedAt = new Date().toISOString();
     ctx.state.lastF1FetchedAt = fetchedAt;
-    updateHeaderTimestamp(section, fetchedAt);
     setStatusMarkup(statusEl, getF1LiveStatusMarkup(payload));
 
     ctx.state.f1Live = payload;
@@ -156,7 +143,7 @@ export function createF1Module(ctx) {
       await ctx.api.post("/api/f1/refresh-news");
     }
 
-    const payload = await ctx.api.get("/api/f1/news?limit=24");
+    const payload = await ctx.api.get("/api/f1/news?limit=20");
     renderF1News(ctx, newsPanel, payload);
     setStatus(statusEl, formatRefreshNote(new Date().toISOString()));
 
@@ -181,6 +168,35 @@ export function createF1Module(ctx) {
       const host = ensureHost(section);
       host.innerHTML = buildShell();
       wireTabs(host);
+
+      const liveBtn = host.querySelector("[data-f1-refresh-live]");
+      const newsBtn = host.querySelector("[data-f1-refresh-news]");
+
+      liveBtn?.addEventListener("click", async () => {
+        liveBtn.disabled = true;
+        try {
+          await refreshLive(host, true);
+        } catch (err) {
+          console.error("F1 live refresh failed:", err);
+          setSimpleMessage(host.querySelector("[data-f1-live-panel]"), `F1 实况刷新失败：${err?.message || err}`);
+          setStatus(host.querySelector("[data-f1-live-status]"), "刷新失败", true);
+        } finally {
+          liveBtn.disabled = false;
+        }
+      });
+
+      newsBtn?.addEventListener("click", async () => {
+        newsBtn.disabled = true;
+        try {
+          await refreshNews(host, true);
+        } catch (err) {
+          console.error("F1 news refresh failed:", err);
+          setSimpleMessage(host.querySelector("[data-f1-news-panel]"), `F1 新闻刷新失败：${err?.message || err}`);
+          setStatus(host.querySelector("[data-f1-news-status]"), "刷新失败", true);
+        } finally {
+          newsBtn.disabled = false;
+        }
+      });
 
       refreshLive(host, false).catch((err) => {
         console.error("F1 live load failed:", err);

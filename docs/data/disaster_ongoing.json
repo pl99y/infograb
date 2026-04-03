@@ -115,17 +115,17 @@
     "severity_level": "high",
     "severity_color": "high",
     "title": "Mayon",
-    "summary": "VRP 106.92 MW · VIIRS375 / VIIRS · 2.70 km",
+    "summary": "VRP 106.92 MW · VIIRS / VIIRS375 · 2.70 km",
     "started_at": "2026-04-03T17:48:01+00:00",
     "updated_at": "2026-04-03T17:48:01+00:00",
     "location_text": "Mayon",
     "lat": null,
     "lon": null,
     "source_primary": "MIROVA",
-    "source_secondary": "VIIRS375 / VIIRS",
+    "source_secondary": "VIIRS / VIIRS375",
     "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
     "country_code": null,
     "payload": {
       "volcano_id": "273030",
@@ -134,26 +134,15 @@
       "distance_km": 3.09,
       "sensor": "VIIRS",
       "row_class": [
-        "moderate",
-        "high"
+        "high",
+        "moderate"
       ],
       "source_page": "https://www.mirovaweb.it/NRT/",
       "sensors": [
-        "VIIRS375",
-        "VIIRS"
+        "VIIRS",
+        "VIIRS375"
       ],
       "reports": [
-        {
-          "volcano_id": "273030",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
-          "vrp_mw": 54.05,
-          "distance_km": 2.7,
-          "sensor": "VIIRS375",
-          "row_class": [
-            "moderate"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        },
         {
           "volcano_id": "273030",
           "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
@@ -162,6 +151,17 @@
           "sensor": "VIIRS",
           "row_class": [
             "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        },
+        {
+          "volcano_id": "273030",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
+          "vrp_mw": 54.05,
+          "distance_km": 2.7,
+          "sensor": "VIIRS375",
+          "row_class": [
+            "moderate"
           ],
           "source_page": "https://www.mirovaweb.it/NRT/"
         }
@@ -184,7 +184,7 @@
     "title": "M 5.8 - 35 km S of Jurm, Afghanistan",
     "summary": "35 km S of Jurm, Afghanistan",
     "started_at": "2026-04-03T16:12:58.037000+00:00",
-    "updated_at": "2026-04-03T19:56:48.377000+00:00",
+    "updated_at": "2026-04-03T21:05:52.585000+00:00",
     "location_text": "35 km S of Jurm, Afghanistan",
     "lat": 36.5479,
     "lon": 70.852,

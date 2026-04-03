@@ -1,0 +1,153 @@
+[
+  {
+    "id": 1,
+    "quote_key": "wti",
+    "name": "WTI Crude",
+    "price": 111.54,
+    "unit": "USD/bbl",
+    "change": 11.42,
+    "change_percent": 11.41,
+    "timestamp_text": null,
+    "source_name": "OilPrice.com",
+    "source_url": "https://oilprice.com/oil-price-charts/",
+    "provider_used": "oilprice_charts",
+    "is_delayed": 1,
+    "delay_note": "7\n\tHours Delay",
+    "fetched_at": "2026-04-03T04:52:24.088624+00:00",
+    "created_at": "2026-04-03 04:52:24",
+    "extra": {
+      "matched_name": "WTI Crude",
+      "parsed_from": "oilprice_table_row"
+    }
+  },
+  {
+    "id": 2,
+    "quote_key": "brent",
+    "name": "Brent Crude",
+    "price": 109.03,
+    "unit": "USD/bbl",
+    "change": 7.87,
+    "change_percent": 7.78,
+    "timestamp_text": null,
+    "source_name": "OilPrice.com",
+    "source_url": "https://oilprice.com/oil-price-charts/",
+    "provider_used": "oilprice_charts",
+    "is_delayed": 1,
+    "delay_note": "6\n\tHours Delay",
+    "fetched_at": "2026-04-03T04:52:24.088624+00:00",
+    "created_at": "2026-04-03 04:52:24",
+    "extra": {
+      "matched_name": "Brent Crude",
+      "parsed_from": "oilprice_table_row"
+    }
+  },
+  {
+    "id": 3,
+    "quote_key": "murban",
+    "name": "Murban Crude",
+    "price": 114.84,
+    "unit": "USD/bbl",
+    "change": 11.21,
+    "change_percent": 10.82,
+    "timestamp_text": null,
+    "source_name": "OilPrice.com",
+    "source_url": "https://oilprice.com/oil-price-charts/",
+    "provider_used": "oilprice_charts",
+    "is_delayed": 1,
+    "delay_note": "16 Minutes Delay",
+    "fetched_at": "2026-04-03T04:52:24.088624+00:00",
+    "created_at": "2026-04-03 04:52:24",
+    "extra": {
+      "matched_name": "Murban Crude",
+      "parsed_from": "oilprice_table_row"
+    }
+  },
+  {
+    "id": 4,
+    "quote_key": "natural_gas",
+    "name": "Natural Gas",
+    "price": 2.8,
+    "unit": "USD/MMBtu",
+    "change": -0.019,
+    "change_percent": -0.67,
+    "timestamp_text": null,
+    "source_name": "OilPrice.com",
+    "source_url": "https://oilprice.com/oil-price-charts/",
+    "provider_used": "oilprice_charts",
+    "is_delayed": 1,
+    "delay_note": "7\n\tHours Delay",
+    "fetched_at": "2026-04-03T04:52:24.088624+00:00",
+    "created_at": "2026-04-03 04:52:24",
+    "extra": {
+      "matched_name": "Natural Gas",
+      "parsed_from": "oilprice_table_row"
+    }
+  },
+  {
+    "id": 5,
+    "quote_key": "gasoline",
+    "name": "Gasoline (RBOB)",
+    "price": 3.288,
+    "unit": "USD/gal",
+    "change": 0.197,
+    "change_percent": 6.36,
+    "timestamp_text": null,
+    "source_name": "OilPrice.com",
+    "source_url": "https://oilprice.com/oil-price-charts/",
+    "provider_used": "oilprice_charts",
+    "is_delayed": 1,
+    "delay_note": "7\n\tHours Delay",
+    "fetched_at": "2026-04-03T04:52:24.088624+00:00",
+    "created_at": "2026-04-03 04:52:24",
+    "extra": {
+      "matched_name": "Gasoline",
+      "parsed_from": "oilprice_table_row"
+    }
+  },
+  {
+    "id": 6,
+    "quote_key": "china",
+    "name": "China Crude Oil Futures (INE SC)",
+    "price": 719.9,
+    "unit": "CNY/bbl",
+    "change": 32.5,
+    "change_percent": 4.73,
+    "timestamp_text": "11:30:00",
+    "source_name": "Sina Futures",
+    "source_url": "https://gu.sina.cn/ft/hq/nf.php?symbol=sc0",
+    "provider_used": "sina_hq_direct",
+    "is_delayed": 1,
+    "delay_note": "Parsed from direct Sina HQ quote response.",
+    "fetched_at": "2026-04-03T04:52:26.178346+00:00",
+    "created_at": "2026-04-03 04:52:26",
+    "extra": {
+      "parsed_from": "sina_hq_direct",
+      "raw_parts": [
+        "上海原油连续",
+        "113000",
+        "760.000",
+        "763.300",
+        "694.800",
+        "0.000",
+        "719.500",
+        "720.000",
+        "719.900",
+        "0.000",
+        "687.400",
+        "1",
+        "4",
+        "48572.000",
+        "128376",
+        "沪"
+      ],
+      "open_price": 760.0,
+      "high_price": 763.3,
+      "low_price": 694.8,
+      "bid_price": 719.5,
+      "ask_price": 720.0,
+      "last_price": 719.9,
+      "settlement_price": 0.0,
+      "prev_settlement": 687.4
+    }
+  }
+]

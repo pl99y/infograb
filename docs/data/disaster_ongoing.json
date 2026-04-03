@@ -137,6 +137,60 @@
   },
   {
     "id": 4,
+    "group_key": "volcano|9ea628f0944f9bfaaaf9b9798cfba3596b47179c",
+    "event_type": "volcano",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "San Cristobal",
+    "summary": "VRP 208.22 MW · VIIRS · 24.01 km",
+    "started_at": "2026-04-03T20:06:00+00:00",
+    "updated_at": "2026-04-03T20:06:00+00:00",
+    "location_text": "San Cristobal",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "VIIRS",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=344020",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=344020",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "344020",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=344020",
+      "vrp_mw": 208.22,
+      "distance_km": 24.01,
+      "sensor": "VIIRS",
+      "row_class": [
+        "high"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "VIIRS"
+      ],
+      "reports": [
+        {
+          "volcano_id": "344020",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=344020",
+          "vrp_mw": 208.22,
+          "distance_km": 24.01,
+          "sensor": "VIIRS",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 1
+    },
+    "member_event_ids": [
+      13
+    ],
+    "occurred_at": "2026-04-03T20:06:00+00:00",
+    "published_at": "2026-04-03T20:06:00+00:00",
+    "fetched_at": "2026-04-03T20:06:00+00:00"
+  },
+  {
+    "id": 5,
     "group_key": "volcano|f3e947dc9841d1afe8c93d7459c601bf2ea5556f",
     "event_type": "volcano",
     "severity_level": "high",
@@ -190,7 +244,7 @@
     "fetched_at": "2026-04-03T18:25:00+00:00"
   },
   {
-    "id": 5,
+    "id": 6,
     "group_key": "typhoon|TC|jtwc_abio|jtwc_abio|south_indian_ocean_area|tc_29s|964f91f40766e6ae",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -245,7 +299,7 @@
     "fetched_at": "2026-04-03T18:00:00+00:00"
   },
   {
-    "id": 6,
+    "id": 7,
     "group_key": "volcano|c35d2445aeb9f197eab6c895c1a6ce1977cc9693",
     "event_type": "volcano",
     "severity_level": "high",
@@ -312,7 +366,7 @@
     "fetched_at": "2026-04-03T17:48:01+00:00"
   },
   {
-    "id": 7,
+    "id": 8,
     "group_key": "earthquake|us6000smda",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -348,7 +402,7 @@
     "fetched_at": "2026-04-03T16:12:58.037000+00:00"
   },
   {
-    "id": 8,
+    "id": 9,
     "group_key": "earthquake|us6000smbs",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -384,7 +438,7 @@
     "fetched_at": "2026-04-03T10:59:07.488000+00:00"
   },
   {
-    "id": 9,
+    "id": 10,
     "group_key": "earthquake|us6000smbl",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -420,7 +474,7 @@
     "fetched_at": "2026-04-03T10:26:42.802000+00:00"
   },
   {
-    "id": 10,
+    "id": 11,
     "group_key": "earthquake|us6000smax",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -456,7 +510,7 @@
     "fetched_at": "2026-04-03T08:22:08.857000+00:00"
   },
   {
-    "id": 11,
+    "id": 12,
     "group_key": "earthquake|us6000sma8",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -492,7 +546,7 @@
     "fetched_at": "2026-04-03T04:42:05.125000+00:00"
   },
   {
-    "id": 12,
+    "id": 13,
     "group_key": "earthquake|us6000sm9y",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -528,7 +582,7 @@
     "fetched_at": "2026-04-03T03:37:16.087000+00:00"
   },
   {
-    "id": 13,
+    "id": 14,
     "group_key": "earthquake|us6000sm9g",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -564,7 +618,7 @@
     "fetched_at": "2026-04-03T02:33:49.551000+00:00"
   },
   {
-    "id": 14,
+    "id": 15,
     "group_key": "earthquake|us6000sm96",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -600,7 +654,7 @@
     "fetched_at": "2026-04-03T02:10:53.447000+00:00"
   },
   {
-    "id": 15,
+    "id": 16,
     "group_key": "earthquake|us6000sm8r",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -636,7 +690,7 @@
     "fetched_at": "2026-04-03T01:44:13.456000+00:00"
   },
   {
-    "id": 16,
+    "id": 17,
     "group_key": "earthquake|us6000sm8h",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -672,7 +726,7 @@
     "fetched_at": "2026-04-03T00:32:57.016000+00:00"
   },
   {
-    "id": 17,
+    "id": 18,
     "group_key": "earthquake|us6000sm8g",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -706,42 +760,6 @@
     "occurred_at": "2026-04-03T00:22:20.421000+00:00",
     "published_at": "2026-04-03T00:22:20.421000+00:00",
     "fetched_at": "2026-04-03T00:22:20.421000+00:00"
-  },
-  {
-    "id": 18,
-    "group_key": "earthquake|us6000sm8a",
-    "event_type": "earthquake",
-    "severity_level": "moderate",
-    "severity_color": "moderate",
-    "title": "M 5.4 - 73 km NNE of Isangel, Vanuatu",
-    "summary": "73 km NNE of Isangel, Vanuatu",
-    "started_at": "2026-04-02T23:22:14.773000+00:00",
-    "updated_at": "2026-04-03T01:47:14.685000+00:00",
-    "location_text": "73 km NNE of Isangel, Vanuatu",
-    "lat": -18.906,
-    "lon": 169.4841,
-    "source_primary": "USGS",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sm8a",
-    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sm8a",
-    "country_code": null,
-    "payload": {
-      "mag": 5.4,
-      "depth_km": 278.376,
-      "place": "73 km NNE of Isangel, Vanuatu",
-      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000sm8a.geojson",
-      "alert": "green",
-      "sig": 449,
-      "tsunami": 0,
-      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
-    },
-    "member_event_ids": [
-      13
-    ],
-    "occurred_at": "2026-04-02T23:22:14.773000+00:00",
-    "published_at": "2026-04-02T23:22:14.773000+00:00",
-    "fetched_at": "2026-04-02T23:22:14.773000+00:00"
   },
   {
     "id": 19,

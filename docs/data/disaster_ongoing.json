@@ -1,6 +1,106 @@
 [
   {
+    "id": 2,
+    "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|invest_90p|a4db24651b646648",
+    "event_type": "typhoon",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "INVEST 90P",
+    "summary": "wind 23-28 kt · 1001 mb · High",
+    "started_at": "2026-04-03T06:00:00+00:00",
+    "updated_at": "2026-04-03T06:00:00+00:00",
+    "location_text": "10.0S 154.2E",
+    "lat": -10.0,
+    "lon": 154.2,
+    "source_primary": "JTWC-ABPW",
+    "source_secondary": "disturbance",
+    "status": "high",
+    "map_url": "https://www.google.com/maps?q=-10.0,154.2",
+    "official_link": "https://www.google.com/maps?q=-10.0,154.2",
+    "country_code": null,
+    "payload": {
+      "item_type": "disturbance",
+      "source": "jtwc_abpw",
+      "source_key": "jtwc_abpw|south_pacific_area|invest_90p",
+      "content_hash": "a4db24651b646648",
+      "platform_summary": "10.0S 154.2E | winds 23-28 kt | 1001 mb | HIGH",
+      "platform_location": "10.0S 154.2E",
+      "wind": "23-28 kt",
+      "risk_48h": null,
+      "risk_7d": null,
+      "next_update": null,
+      "raw_text": "(1) THE AREA OF CONVECTION (INVEST 90P) PREVIOUSLY LOCATED NEAR \n10.2S 155.0E IS NOW LOCATED NEAR 10.0S 154.2E, APPROXIMATELY 421 NM \nEAST OF PORT MORESBY, PAPUA NEW GUINEA. ANIMATED ENHANCED \nMULTISPECTRAL SATELLITE IMAGERY (MSI) DEPICTS A CONSOLIDATING LOW-\nLEVEL CIRCULATION CENTER (LLCC) EMBEDDED WITHIN PERSISTENT DEEP \nCONVECTION WITH SPIRAL BANDS OF DEEP CONVECTION WRAPPING INTO THE \nCENTER. ENVIRONMENTAL ANALYSIS FOR THE AREA INDICATES A MARGINALLY \nFAVORABLE ENVIRONMENT FOR CYCLOGENESIS WITH LOW TO MODERATE (15-20 \nKTS) VERTICAL WIND SHEAR, WARM SEA SURFACE TEMPERATURES (29-30 C), AND \nROBUST POLEWARD OUTFLOW ALOFT. GLOBAL DETERMINISTIC AND ENSEMBLE \nMODELS, IN ADDITION TO THE EXPERIMENTAL GOOGLE DEEP MIND ENSEMBLE, \nINDICATE QUASI-STATIONARY MOVEMENT WITH QUICK CONSOLIDATION AND \nDEVELOPMENT OVER THE NEXT 24 HOURS. MAXIMUM SUSTAINED SURFACE WINDS \nARE ESTIMATED AT 23 TO 28 KNOTS. MINIMUM SEA LEVEL PRESSURE IS \nESTIMATED TO BE NEAR 1001 MB. THE POTENTIAL FOR THE DEVELOPMENT OF A \nSIGNIFICANT TROPICAL CYCLONE WITHIN THE NEXT 24 HOURS REMAINS HIGH. \nSEE REF A (WTPS21 PGTW 022230) FOR FURTHER DETAILS.",
+      "metadata": {
+        "basin_section": "SOUTH PACIFIC AREA (WEST COAST OF SOUTH AMERICA TO 135 EAST)",
+        "invest_id": "90P",
+        "lat": -10.0,
+        "lon": 154.2,
+        "wind_kt_min": 23,
+        "wind_kt_max": 28,
+        "pressure_mb": 1001,
+        "development_phrase": "REMAINS",
+        "development_level": "HIGH",
+        "bulletin_issue_at": "2026-04-03T06:00:00+00:00"
+      }
+    },
+    "member_event_ids": [
+      26
+    ],
+    "occurred_at": "2026-04-03T06:00:00+00:00",
+    "published_at": "2026-04-03T06:00:00+00:00",
+    "fetched_at": "2026-04-03T06:00:00+00:00"
+  },
+  {
     "id": 1,
+    "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|invest_91p|b708d1d8481a7a91",
+    "event_type": "typhoon",
+    "severity_level": "low",
+    "severity_color": "low",
+    "title": "INVEST 91P",
+    "summary": "wind 23-28 kt · 1003 mb",
+    "started_at": "2026-04-03T06:00:00+00:00",
+    "updated_at": "2026-04-03T06:00:00+00:00",
+    "location_text": "9.0S 173.0E",
+    "lat": -9.0,
+    "lon": 173.0,
+    "source_primary": "JTWC-ABPW",
+    "source_secondary": "disturbance",
+    "status": "monitoring",
+    "map_url": "https://www.google.com/maps?q=-9.0,173.0",
+    "official_link": "https://www.google.com/maps?q=-9.0,173.0",
+    "country_code": null,
+    "payload": {
+      "item_type": "disturbance",
+      "source": "jtwc_abpw",
+      "source_key": "jtwc_abpw|south_pacific_area|invest_91p",
+      "content_hash": "b708d1d8481a7a91",
+      "platform_summary": "9.0S 173.0E | winds 23-28 kt | 1003 mb",
+      "platform_location": "9.0S 173.0E",
+      "wind": "23-28 kt",
+      "risk_48h": null,
+      "risk_7d": null,
+      "next_update": null,
+      "raw_text": "(2) AN AREA OF CONVECTION (INVEST 91P) HAS PERSISTED NEAR 9.0S \n173.0E, APPROXIMATELY 590 NM NORTH-NORTHEAST OF PORT VILA. ANIMATED \nENHANCED MULTISPECTRAL SATELLITE IMAGERY (MSI) AND A 030047Z OCEANSAT \nDEPICTS AN AREA OF CALMER WINDS (5-10 KTS) CLOSER TO THE CENTER, WHILE \nMORE ELEVATED WINDS (10-15 KTS) ARE OBSERVED ALONG THE NORTHERN FLANK \nOF THE CIRCULATION. WITHIN THE STRUCTURE OF 91P, MULTIPLE \nMESOVORTICIES ROTATING CYCLONICALLY ARE IDENTIFIABLE. UPPER AIR \nANALYSIS INDICATES A MARGINALLY FAVORABLE ENVIRONMENT FOR FURTHER \nDEVELOPMENT WITH LOW (10-15 KTS) VERTICAL WIND SHEAR, WARM (29-30 C) \nSEA SURFACE TEMPERATURES AND A MODERATE POLEWARD OUTFLOW CHANNEL \nASSISTING THE SYSTEM. MODEL GUIDANCE IS IN GOOD AGREEMENT ON A \nSOUTHWESTWARD TRACK WITH STEADY INTENSIFICATION OVER THE NEXT 24-48 \nHOURS. MAXIMUM SUSTAINED SURFACE WINDS ARE ESTIMATED AT 23 TO 28 \nKNOTS. MINIMUM SEA LEVEL PRESSURE IS ESTIMATED TO BE NEAR 1003 MB. THE \nPOTENTIAL FOR THE DEVELOPMENT OF A SIGNIFICANT TROPICAL CYCLONE WITHIN \nTHE NEXT 24 HOURS IS LOW.",
+      "metadata": {
+        "basin_section": "SOUTH PACIFIC AREA (WEST COAST OF SOUTH AMERICA TO 135 EAST)",
+        "invest_id": "91P",
+        "lat": -9.0,
+        "lon": 173.0,
+        "wind_kt_min": 23,
+        "wind_kt_max": 28,
+        "pressure_mb": 1003,
+        "bulletin_issue_at": "2026-04-03T06:00:00+00:00"
+      }
+    },
+    "member_event_ids": [
+      27
+    ],
+    "occurred_at": "2026-04-03T06:00:00+00:00",
+    "published_at": "2026-04-03T06:00:00+00:00",
+    "fetched_at": "2026-04-03T06:00:00+00:00"
+  },
+  {
+    "id": 3,
     "group_key": "earthquake|us6000sma8",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -36,7 +136,7 @@
     "fetched_at": "2026-04-03T04:42:05.125000+00:00"
   },
   {
-    "id": 2,
+    "id": 4,
     "group_key": "earthquake|us6000sm9y",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -72,7 +172,7 @@
     "fetched_at": "2026-04-03T03:37:16.087000+00:00"
   },
   {
-    "id": 3,
+    "id": 5,
     "group_key": "earthquake|us6000sm9g",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -108,7 +208,7 @@
     "fetched_at": "2026-04-03T02:33:49.551000+00:00"
   },
   {
-    "id": 4,
+    "id": 6,
     "group_key": "earthquake|us6000sm96",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -144,7 +244,7 @@
     "fetched_at": "2026-04-03T02:10:53.447000+00:00"
   },
   {
-    "id": 5,
+    "id": 7,
     "group_key": "earthquake|us6000sm8r",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -180,7 +280,7 @@
     "fetched_at": "2026-04-03T01:44:13.456000+00:00"
   },
   {
-    "id": 6,
+    "id": 8,
     "group_key": "volcano|a6ae49d849e4d6cb1034b4af96053cb607a6d533",
     "event_type": "volcano",
     "severity_level": "very_high",
@@ -227,14 +327,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      20
+      19
     ],
     "occurred_at": "2026-04-03T01:40:00+00:00",
     "published_at": "2026-04-03T01:40:00+00:00",
     "fetched_at": "2026-04-03T01:40:00+00:00"
   },
   {
-    "id": 7,
+    "id": 9,
     "group_key": "volcano|4d17683e99e43d0cbd9c9eb6f55d8cc6c61f148b",
     "event_type": "volcano",
     "severity_level": "high",
@@ -281,14 +381,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      21
+      20
     ],
     "occurred_at": "2026-04-03T01:05:00+00:00",
     "published_at": "2026-04-03T01:05:00+00:00",
     "fetched_at": "2026-04-03T01:05:00+00:00"
   },
   {
-    "id": 8,
+    "id": 10,
     "group_key": "earthquake|us6000sm8h",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -324,7 +424,7 @@
     "fetched_at": "2026-04-03T00:32:57.016000+00:00"
   },
   {
-    "id": 9,
+    "id": 11,
     "group_key": "earthquake|us6000sm8g",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -360,7 +460,7 @@
     "fetched_at": "2026-04-03T00:22:20.421000+00:00"
   },
   {
-    "id": 10,
+    "id": 12,
     "group_key": "volcano|df7345018023f7b63cb8f7e6acf72c034fe5eee3",
     "event_type": "volcano",
     "severity_level": "high",
@@ -407,14 +507,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      22
+      21
     ],
     "occurred_at": "2026-04-03T00:00:02+00:00",
     "published_at": "2026-04-03T00:00:02+00:00",
     "fetched_at": "2026-04-03T00:00:02+00:00"
   },
   {
-    "id": 11,
+    "id": 13,
     "group_key": "earthquake|us6000sm8a",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -450,7 +550,7 @@
     "fetched_at": "2026-04-02T23:22:14.773000+00:00"
   },
   {
-    "id": 12,
+    "id": 14,
     "group_key": "volcano|7f46add2d07d45badfd887c677421ff52bd6f9da",
     "event_type": "volcano",
     "severity_level": "high",
@@ -497,14 +597,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      23
+      22
     ],
     "occurred_at": "2026-04-02T23:12:01+00:00",
     "published_at": "2026-04-02T23:12:01+00:00",
     "fetched_at": "2026-04-02T23:12:01+00:00"
   },
   {
-    "id": 13,
+    "id": 15,
     "group_key": "volcano|272cde3acd2f811f81d22d185065f823c009f40f",
     "event_type": "volcano",
     "severity_level": "high",
@@ -551,14 +651,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      24
+      23
     ],
     "occurred_at": "2026-04-02T19:54:02+00:00",
     "published_at": "2026-04-02T19:54:02+00:00",
     "fetched_at": "2026-04-02T19:54:02+00:00"
   },
   {
-    "id": 14,
+    "id": 16,
     "group_key": "earthquake|us6000sm6e",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -594,20 +694,20 @@
     "fetched_at": "2026-04-02T18:46:11.597000+00:00"
   },
   {
-    "id": 15,
+    "id": 17,
     "group_key": "volcano|4c717afa306b2ab6db3aa8fc5fc93c0f724596b1",
     "event_type": "volcano",
     "severity_level": "high",
     "severity_color": "high",
     "title": "Mayon",
-    "summary": "VRP 178.64 MW · VIIRS375 / VIIRS · 4.56 km",
+    "summary": "VRP 178.64 MW · VIIRS375 · 4.64 km",
     "started_at": "2026-04-02T18:06:01+00:00",
     "updated_at": "2026-04-02T18:06:01+00:00",
     "location_text": "Mayon",
     "lat": null,
     "lon": null,
     "source_primary": "MIROVA",
-    "source_secondary": "VIIRS375 / VIIRS",
+    "source_secondary": "VIIRS375",
     "status": "active",
     "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
     "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
@@ -619,13 +719,11 @@
       "distance_km": 4.64,
       "sensor": "VIIRS375",
       "row_class": [
-        "high",
-        "moderate"
+        "high"
       ],
       "source_page": "https://www.mirovaweb.it/NRT/",
       "sensors": [
-        "VIIRS375",
-        "VIIRS"
+        "VIIRS375"
       ],
       "reports": [
         {
@@ -638,30 +736,19 @@
             "high"
           ],
           "source_page": "https://www.mirovaweb.it/NRT/"
-        },
-        {
-          "volcano_id": "273030",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
-          "vrp_mw": 75.87,
-          "distance_km": 4.56,
-          "sensor": "VIIRS",
-          "row_class": [
-            "moderate"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
         }
       ],
-      "merged_count": 2
+      "merged_count": 1
     },
     "member_event_ids": [
-      25
+      24
     ],
     "occurred_at": "2026-04-02T18:06:01+00:00",
     "published_at": "2026-04-02T18:06:01+00:00",
     "fetched_at": "2026-04-02T18:06:01+00:00"
   },
   {
-    "id": 16,
+    "id": 18,
     "group_key": "typhoon|TC|jtwc_abio|jtwc_abio|south_indian_ocean_area|tc_29s|2729682be34084be",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -709,14 +796,14 @@
       }
     },
     "member_event_ids": [
-      27
+      28
     ],
     "occurred_at": "2026-04-02T18:00:00+00:00",
     "published_at": "2026-04-02T18:00:00+00:00",
     "fetched_at": "2026-04-02T18:00:00+00:00"
   },
   {
-    "id": 17,
+    "id": 19,
     "group_key": "earthquake|us6000sm5i",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -752,7 +839,7 @@
     "fetched_at": "2026-04-02T16:10:26.585000+00:00"
   },
   {
-    "id": 18,
+    "id": 20,
     "group_key": "earthquake|us6000sm43",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -788,7 +875,7 @@
     "fetched_at": "2026-04-02T15:36:36.646000+00:00"
   },
   {
-    "id": 19,
+    "id": 21,
     "group_key": "earthquake|us6000sm40",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -824,7 +911,7 @@
     "fetched_at": "2026-04-02T15:34:23.732000+00:00"
   },
   {
-    "id": 20,
+    "id": 22,
     "group_key": "earthquake|us6000sm21",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -860,7 +947,7 @@
     "fetched_at": "2026-04-02T14:34:59.320000+00:00"
   },
   {
-    "id": 21,
+    "id": 23,
     "group_key": "earthquake|us6000sm1v",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -896,7 +983,7 @@
     "fetched_at": "2026-04-02T14:13:49.201000+00:00"
   },
   {
-    "id": 22,
+    "id": 24,
     "group_key": "earthquake|us6000slzh",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -932,7 +1019,7 @@
     "fetched_at": "2026-04-02T11:35:35.014000+00:00"
   },
   {
-    "id": 23,
+    "id": 25,
     "group_key": "earthquake|us6000slyx",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -968,7 +1055,7 @@
     "fetched_at": "2026-04-02T08:52:06.334000+00:00"
   },
   {
-    "id": 24,
+    "id": 26,
     "group_key": "earthquake|us6000slyt",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -1004,7 +1091,7 @@
     "fetched_at": "2026-04-02T08:38:59.182000+00:00"
   },
   {
-    "id": 25,
+    "id": 27,
     "group_key": "earthquake|us6000slyj",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -1040,43 +1127,7 @@
     "fetched_at": "2026-04-02T07:39:11.152000+00:00"
   },
   {
-    "id": 26,
-    "group_key": "earthquake|us6000slyf",
-    "event_type": "earthquake",
-    "severity_level": "moderate",
-    "severity_color": "moderate",
-    "title": "M 5.2 - 118 km WNW of Ternate, Indonesia",
-    "summary": "118 km WNW of Ternate, Indonesia",
-    "started_at": "2026-04-02T07:04:14.816000+00:00",
-    "updated_at": "2026-04-02T07:21:10.040000+00:00",
-    "location_text": "118 km WNW of Ternate, Indonesia",
-    "lat": 1.287,
-    "lon": 126.4449,
-    "source_primary": "USGS",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000slyf",
-    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000slyf",
-    "country_code": null,
-    "payload": {
-      "mag": 5.2,
-      "depth_km": 35.0,
-      "place": "118 km WNW of Ternate, Indonesia",
-      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000slyf.geojson",
-      "alert": null,
-      "sig": 416,
-      "tsunami": 0,
-      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
-    },
-    "member_event_ids": [
-      19
-    ],
-    "occurred_at": "2026-04-02T07:04:14.816000+00:00",
-    "published_at": "2026-04-02T07:04:14.816000+00:00",
-    "fetched_at": "2026-04-02T07:04:14.816000+00:00"
-  },
-  {
-    "id": 27,
+    "id": 28,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -1084,7 +1135,7 @@
     "title": "Flood in Democratic Republic of Congo",
     "summary": "Democratic Republic of Congo",
     "started_at": "2026-02-11T01:00:00+00:00",
-    "updated_at": "2026-04-03T06:01:16+00:00",
+    "updated_at": "2026-04-03T07:01:08+00:00",
     "location_text": "Democratic Republic of Congo",
     "lat": null,
     "lon": null,
@@ -1128,7 +1179,7 @@
         "country": "Democratic Republic of Congo",
         "fromdate": "2026-02-11T01:00:00",
         "todate": "2026-03-05T01:00:00",
-        "datemodified": "2026-04-03T06:01:16",
+        "datemodified": "2026-04-03T07:01:08",
         "iso3": "COD",
         "source": "GLOFAS",
         "sourceid": "",
@@ -1149,7 +1200,7 @@
       }
     },
     "member_event_ids": [
-      26
+      25
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

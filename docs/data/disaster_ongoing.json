@@ -1,6 +1,42 @@
 [
   {
     "id": 1,
+    "group_key": "earthquake|us6000smda",
+    "event_type": "earthquake",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "M 5.8 - 35 km S of Jurm, Afghanistan",
+    "summary": "35 km S of Jurm, Afghanistan",
+    "started_at": "2026-04-03T16:12:58.037000+00:00",
+    "updated_at": "2026-04-03T17:26:52.854000+00:00",
+    "location_text": "35 km S of Jurm, Afghanistan",
+    "lat": 36.5479,
+    "lon": 70.852,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000smda",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000smda",
+    "country_code": null,
+    "payload": {
+      "mag": 5.8,
+      "depth_km": 186.371,
+      "place": "35 km S of Jurm, Afghanistan",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000smda.geojson",
+      "alert": "green",
+      "sig": 529,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      1
+    ],
+    "occurred_at": "2026-04-03T16:12:58.037000+00:00",
+    "published_at": "2026-04-03T16:12:58.037000+00:00",
+    "fetched_at": "2026-04-03T16:12:58.037000+00:00"
+  },
+  {
+    "id": 2,
     "group_key": "earthquake|us6000smbs",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -29,14 +65,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      1
+      2
     ],
     "occurred_at": "2026-04-03T10:59:07.488000+00:00",
     "published_at": "2026-04-03T10:59:07.488000+00:00",
     "fetched_at": "2026-04-03T10:59:07.488000+00:00"
   },
   {
-    "id": 2,
+    "id": 3,
     "group_key": "earthquake|us6000smbl",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -44,7 +80,7 @@
     "title": "M 5.5 - 49 km ESE of Rasht, Tajikistan",
     "summary": "49 km ESE of Rasht, Tajikistan",
     "started_at": "2026-04-03T10:26:42.802000+00:00",
-    "updated_at": "2026-04-03T12:52:56.116000+00:00",
+    "updated_at": "2026-04-03T16:36:19.410000+00:00",
     "location_text": "49 km ESE of Rasht, Tajikistan",
     "lat": 38.8967,
     "lon": 70.917,
@@ -60,19 +96,19 @@
       "place": "49 km ESE of Rasht, Tajikistan",
       "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000smbl.geojson",
       "alert": "green",
-      "sig": 465,
+      "sig": 466,
       "tsunami": 0,
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      2
+      3
     ],
     "occurred_at": "2026-04-03T10:26:42.802000+00:00",
     "published_at": "2026-04-03T10:26:42.802000+00:00",
     "fetched_at": "2026-04-03T10:26:42.802000+00:00"
   },
   {
-    "id": 3,
+    "id": 4,
     "group_key": "earthquake|us6000smax",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -101,14 +137,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      3
+      4
     ],
     "occurred_at": "2026-04-03T08:22:08.857000+00:00",
     "published_at": "2026-04-03T08:22:08.857000+00:00",
     "fetched_at": "2026-04-03T08:22:08.857000+00:00"
   },
   {
-    "id": 5,
+    "id": 6,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|invest_90p|a4db24651b646648",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -159,7 +195,7 @@
     "fetched_at": "2026-04-03T06:00:00+00:00"
   },
   {
-    "id": 4,
+    "id": 5,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|invest_91p|b708d1d8481a7a91",
     "event_type": "typhoon",
     "severity_level": "low",
@@ -208,7 +244,7 @@
     "fetched_at": "2026-04-03T06:00:00+00:00"
   },
   {
-    "id": 6,
+    "id": 7,
     "group_key": "volcano|2ecfcad850979bbb1112c898302db0b5a2843fb5",
     "event_type": "volcano",
     "severity_level": "high",
@@ -262,7 +298,7 @@
     "fetched_at": "2026-04-03T05:12:01+00:00"
   },
   {
-    "id": 7,
+    "id": 8,
     "group_key": "earthquake|us6000sma8",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -291,14 +327,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      4
+      5
     ],
     "occurred_at": "2026-04-03T04:42:05.125000+00:00",
     "published_at": "2026-04-03T04:42:05.125000+00:00",
     "fetched_at": "2026-04-03T04:42:05.125000+00:00"
   },
   {
-    "id": 8,
+    "id": 9,
     "group_key": "earthquake|us6000sm9y",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -306,7 +342,7 @@
     "title": "M 5.4 - 111 km WNW of Ternate, Indonesia",
     "summary": "111 km WNW of Ternate, Indonesia",
     "started_at": "2026-04-03T03:37:16.087000+00:00",
-    "updated_at": "2026-04-03T06:00:52.254000+00:00",
+    "updated_at": "2026-04-03T16:57:12.040000+00:00",
     "location_text": "111 km WNW of Ternate, Indonesia",
     "lat": 1.0005,
     "lon": 126.4074,
@@ -327,14 +363,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      5
+      6
     ],
     "occurred_at": "2026-04-03T03:37:16.087000+00:00",
     "published_at": "2026-04-03T03:37:16.087000+00:00",
     "fetched_at": "2026-04-03T03:37:16.087000+00:00"
   },
   {
-    "id": 9,
+    "id": 10,
     "group_key": "earthquake|us6000sm9g",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -363,14 +399,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      6
+      7
     ],
     "occurred_at": "2026-04-03T02:33:49.551000+00:00",
     "published_at": "2026-04-03T02:33:49.551000+00:00",
     "fetched_at": "2026-04-03T02:33:49.551000+00:00"
   },
   {
-    "id": 10,
+    "id": 11,
     "group_key": "earthquake|us6000sm96",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -399,14 +435,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      7
+      8
     ],
     "occurred_at": "2026-04-03T02:10:53.447000+00:00",
     "published_at": "2026-04-03T02:10:53.447000+00:00",
     "fetched_at": "2026-04-03T02:10:53.447000+00:00"
   },
   {
-    "id": 11,
+    "id": 12,
     "group_key": "earthquake|us6000sm8r",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -414,7 +450,7 @@
     "title": "M 5.3 - 124 km WNW of Ternate, Indonesia",
     "summary": "124 km WNW of Ternate, Indonesia",
     "started_at": "2026-04-03T01:44:13.456000+00:00",
-    "updated_at": "2026-04-03T02:00:39.040000+00:00",
+    "updated_at": "2026-04-03T16:48:19.040000+00:00",
     "location_text": "124 km WNW of Ternate, Indonesia",
     "lat": 1.0169,
     "lon": 126.288,
@@ -435,14 +471,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      8
+      9
     ],
     "occurred_at": "2026-04-03T01:44:13.456000+00:00",
     "published_at": "2026-04-03T01:44:13.456000+00:00",
     "fetched_at": "2026-04-03T01:44:13.456000+00:00"
   },
   {
-    "id": 12,
+    "id": 13,
     "group_key": "earthquake|us6000sm8h",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -471,14 +507,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      9
+      10
     ],
     "occurred_at": "2026-04-03T00:32:57.016000+00:00",
     "published_at": "2026-04-03T00:32:57.016000+00:00",
     "fetched_at": "2026-04-03T00:32:57.016000+00:00"
   },
   {
-    "id": 13,
+    "id": 14,
     "group_key": "earthquake|us6000sm8g",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -507,14 +543,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      10
+      11
     ],
     "occurred_at": "2026-04-03T00:22:20.421000+00:00",
     "published_at": "2026-04-03T00:22:20.421000+00:00",
     "fetched_at": "2026-04-03T00:22:20.421000+00:00"
   },
   {
-    "id": 14,
+    "id": 15,
     "group_key": "earthquake|us6000sm8a",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -543,14 +579,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      11
+      12
     ],
     "occurred_at": "2026-04-02T23:22:14.773000+00:00",
     "published_at": "2026-04-02T23:22:14.773000+00:00",
     "fetched_at": "2026-04-02T23:22:14.773000+00:00"
   },
   {
-    "id": 15,
+    "id": 16,
     "group_key": "earthquake|us6000sm6e",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -579,14 +615,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      12
+      13
     ],
     "occurred_at": "2026-04-02T18:46:11.597000+00:00",
     "published_at": "2026-04-02T18:46:11.597000+00:00",
     "fetched_at": "2026-04-02T18:46:11.597000+00:00"
   },
   {
-    "id": 16,
+    "id": 17,
     "group_key": "typhoon|TC|jtwc_abio|jtwc_abio|south_indian_ocean_area|tc_29s|2729682be34084be",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -639,42 +675,6 @@
     "occurred_at": "2026-04-02T18:00:00+00:00",
     "published_at": "2026-04-02T18:00:00+00:00",
     "fetched_at": "2026-04-02T18:00:00+00:00"
-  },
-  {
-    "id": 17,
-    "group_key": "earthquake|us6000sm5i",
-    "event_type": "earthquake",
-    "severity_level": "moderate",
-    "severity_color": "moderate",
-    "title": "M 5.1 - 116 km E of Bitung, Indonesia",
-    "summary": "116 km E of Bitung, Indonesia",
-    "started_at": "2026-04-02T16:10:26.585000+00:00",
-    "updated_at": "2026-04-02T16:29:13.040000+00:00",
-    "location_text": "116 km E of Bitung, Indonesia",
-    "lat": 1.2405,
-    "lon": 126.1543,
-    "source_primary": "USGS",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sm5i",
-    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sm5i",
-    "country_code": null,
-    "payload": {
-      "mag": 5.1,
-      "depth_km": 35.0,
-      "place": "116 km E of Bitung, Indonesia",
-      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000sm5i.geojson",
-      "alert": null,
-      "sig": 400,
-      "tsunami": 0,
-      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
-    },
-    "member_event_ids": [
-      13
-    ],
-    "occurred_at": "2026-04-02T16:10:26.585000+00:00",
-    "published_at": "2026-04-02T16:10:26.585000+00:00",
-    "fetched_at": "2026-04-02T16:10:26.585000+00:00"
   },
   {
     "id": 18,

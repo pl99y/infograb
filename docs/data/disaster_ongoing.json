@@ -227,7 +227,7 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      21
+      20
     ],
     "occurred_at": "2026-04-03T01:40:00+00:00",
     "published_at": "2026-04-03T01:40:00+00:00",
@@ -281,7 +281,7 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      22
+      21
     ],
     "occurred_at": "2026-04-03T01:05:00+00:00",
     "published_at": "2026-04-03T01:05:00+00:00",
@@ -407,7 +407,7 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      23
+      22
     ],
     "occurred_at": "2026-04-03T00:00:02+00:00",
     "published_at": "2026-04-03T00:00:02+00:00",
@@ -497,7 +497,7 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      24
+      23
     ],
     "occurred_at": "2026-04-02T23:12:01+00:00",
     "published_at": "2026-04-02T23:12:01+00:00",
@@ -505,57 +505,6 @@
   },
   {
     "id": 13,
-    "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|invest_90p|cc09ce2eec77ee3d",
-    "event_type": "typhoon",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "INVEST 90P",
-    "summary": "wind 23-28 kt · 1003 mb · High",
-    "started_at": "2026-04-02T22:30:00+00:00",
-    "updated_at": "2026-04-02T22:30:00+00:00",
-    "location_text": "10.2S 155.0E",
-    "lat": -10.2,
-    "lon": 155.0,
-    "source_primary": "JTWC-ABPW",
-    "source_secondary": "disturbance",
-    "status": "high",
-    "map_url": "https://www.google.com/maps?q=-10.2,155.0",
-    "official_link": "https://www.google.com/maps?q=-10.2,155.0",
-    "country_code": null,
-    "payload": {
-      "item_type": "disturbance",
-      "source": "jtwc_abpw",
-      "source_key": "jtwc_abpw|south_pacific_area|invest_90p",
-      "content_hash": "cc09ce2eec77ee3d",
-      "platform_summary": "10.2S 155.0E | winds 23-28 kt | 1003 mb | HIGH",
-      "platform_location": "10.2S 155.0E",
-      "wind": "23-28 kt",
-      "risk_48h": null,
-      "risk_7d": null,
-      "next_update": null,
-      "raw_text": "(1) THE AREA OF CONVECTION (INVEST 90P) PREVIOUSLY LOCATED NEAR \n10.2S 157.8E IS NOW LOCATED NEAR 10.2S 155.0E, APPROXIMATELY 467 NM EAST \nOF PORT MORESBY, PAPUA NEW GUINEA. ANIMATED ENHANCED MULTISPECTRAL \nSATELLITE IMAGERY (MSI) DEPICTS A CONSOLIDATING LOW-LEVEL CIRCULATION \nCENTER (LLCC) EMBEDDED WITHIN PERSISTENT DEEP CONVECTION WITH SPIRAL \nBANDS OF DEEP CONVECTION WRAPPING INTO THE CENTER. ENVIRONMENTAL \nANALYSIS FOR THE AREA INDICATES A MARGINALLY FAVORABLE ENVIRONMENT FOR \nCYCLOGENESIS WITH LOW TO MODERATE (15-20 KTS) VERTICAL WIND SHEAR, WARM \nSEA SURFACE TEMPERATURES (29-30 C), AND ROBUST POLEWARD OUTFLOW ALOFT. \nGLOBAL DETERMINISTIC AND ENSEMBLE MODELS, IN ADDITION TO THE \nEXPERIMENTAL GOOGLE DEEP MIND ENSEMBLE, INDICATE QUASI-STATIONARY \nMOVEMENT WITH QUICK CONSOLIDATION AND DEVELOPMENT OVER THE NEXT 24 \nHOURS. MAXIMUM SUSTAINED SURFACE WINDS ARE ESTIMATED AT 23 TO 28 KNOTS. \nMINIMUM SEA LEVEL PRESSURE IS ESTIMATED TO BE NEAR 1003 MB. THE \nPOTENTIAL FOR THE DEVELOPMENT OF A SIGNIFICANT TROPICAL CYCLONE WITHIN \nTHE NEXT 24 HOURS IS UPGRADED TO HIGH. SEE REF A (WTPS21 PGTW 022230) \nFOR FURTHER DETAILS.",
-      "metadata": {
-        "basin_section": "SOUTH PACIFIC AREA (WEST COAST OF SOUTH AMERICA TO 135 EAST)",
-        "invest_id": "90P",
-        "lat": -10.2,
-        "lon": 155.0,
-        "wind_kt_min": 23,
-        "wind_kt_max": 28,
-        "pressure_mb": 1003,
-        "development_phrase": "UPGRADED TO",
-        "development_level": "HIGH",
-        "bulletin_issue_at": "2026-04-02T22:30:00+00:00"
-      }
-    },
-    "member_event_ids": [
-      28
-    ],
-    "occurred_at": "2026-04-02T22:30:00+00:00",
-    "published_at": "2026-04-02T22:30:00+00:00",
-    "fetched_at": "2026-04-02T22:30:00+00:00"
-  },
-  {
-    "id": 14,
     "group_key": "volcano|272cde3acd2f811f81d22d185065f823c009f40f",
     "event_type": "volcano",
     "severity_level": "high",
@@ -602,14 +551,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      25
+      24
     ],
     "occurred_at": "2026-04-02T19:54:02+00:00",
     "published_at": "2026-04-02T19:54:02+00:00",
     "fetched_at": "2026-04-02T19:54:02+00:00"
   },
   {
-    "id": 15,
+    "id": 14,
     "group_key": "earthquake|us6000sm6e",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -645,7 +594,7 @@
     "fetched_at": "2026-04-02T18:46:11.597000+00:00"
   },
   {
-    "id": 16,
+    "id": 15,
     "group_key": "volcano|4c717afa306b2ab6db3aa8fc5fc93c0f724596b1",
     "event_type": "volcano",
     "severity_level": "high",
@@ -705,14 +654,14 @@
       "merged_count": 2
     },
     "member_event_ids": [
-      26
+      25
     ],
     "occurred_at": "2026-04-02T18:06:01+00:00",
     "published_at": "2026-04-02T18:06:01+00:00",
     "fetched_at": "2026-04-02T18:06:01+00:00"
   },
   {
-    "id": 17,
+    "id": 16,
     "group_key": "typhoon|TC|jtwc_abio|jtwc_abio|south_indian_ocean_area|tc_29s|2729682be34084be",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -760,14 +709,14 @@
       }
     },
     "member_event_ids": [
-      29
+      27
     ],
     "occurred_at": "2026-04-02T18:00:00+00:00",
     "published_at": "2026-04-02T18:00:00+00:00",
     "fetched_at": "2026-04-02T18:00:00+00:00"
   },
   {
-    "id": 18,
+    "id": 17,
     "group_key": "earthquake|us6000sm5i",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -803,7 +752,7 @@
     "fetched_at": "2026-04-02T16:10:26.585000+00:00"
   },
   {
-    "id": 19,
+    "id": 18,
     "group_key": "earthquake|us6000sm43",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -839,7 +788,7 @@
     "fetched_at": "2026-04-02T15:36:36.646000+00:00"
   },
   {
-    "id": 20,
+    "id": 19,
     "group_key": "earthquake|us6000sm40",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -875,7 +824,7 @@
     "fetched_at": "2026-04-02T15:34:23.732000+00:00"
   },
   {
-    "id": 21,
+    "id": 20,
     "group_key": "earthquake|us6000sm21",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -911,7 +860,7 @@
     "fetched_at": "2026-04-02T14:34:59.320000+00:00"
   },
   {
-    "id": 22,
+    "id": 21,
     "group_key": "earthquake|us6000sm1v",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -947,7 +896,7 @@
     "fetched_at": "2026-04-02T14:13:49.201000+00:00"
   },
   {
-    "id": 23,
+    "id": 22,
     "group_key": "earthquake|us6000slzh",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -983,7 +932,7 @@
     "fetched_at": "2026-04-02T11:35:35.014000+00:00"
   },
   {
-    "id": 24,
+    "id": 23,
     "group_key": "earthquake|us6000slyx",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -1019,7 +968,7 @@
     "fetched_at": "2026-04-02T08:52:06.334000+00:00"
   },
   {
-    "id": 25,
+    "id": 24,
     "group_key": "earthquake|us6000slyt",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -1055,7 +1004,7 @@
     "fetched_at": "2026-04-02T08:38:59.182000+00:00"
   },
   {
-    "id": 26,
+    "id": 25,
     "group_key": "earthquake|us6000slyj",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -1091,7 +1040,7 @@
     "fetched_at": "2026-04-02T07:39:11.152000+00:00"
   },
   {
-    "id": 27,
+    "id": 26,
     "group_key": "earthquake|us6000slyf",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -1127,43 +1076,7 @@
     "fetched_at": "2026-04-02T07:04:14.816000+00:00"
   },
   {
-    "id": 28,
-    "group_key": "earthquake|us6000sly3",
-    "event_type": "earthquake",
-    "severity_level": "moderate",
-    "severity_color": "moderate",
-    "title": "M 5.3 - Pagan region, Northern Mariana Islands",
-    "summary": "Pagan region, Northern Mariana Islands",
-    "started_at": "2026-04-02T06:13:40.637000+00:00",
-    "updated_at": "2026-04-03T00:23:48.688000+00:00",
-    "location_text": "Pagan region, Northern Mariana Islands",
-    "lat": 18.1938,
-    "lon": 146.7269,
-    "source_primary": "USGS",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sly3",
-    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sly3",
-    "country_code": null,
-    "payload": {
-      "mag": 5.3,
-      "depth_km": 54.019,
-      "place": "Pagan region, Northern Mariana Islands",
-      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000sly3.geojson",
-      "alert": null,
-      "sig": 432,
-      "tsunami": 0,
-      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
-    },
-    "member_event_ids": [
-      20
-    ],
-    "occurred_at": "2026-04-02T06:13:40.637000+00:00",
-    "published_at": "2026-04-02T06:13:40.637000+00:00",
-    "fetched_at": "2026-04-02T06:13:40.637000+00:00"
-  },
-  {
-    "id": 29,
+    "id": 27,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -1236,7 +1149,7 @@
       }
     },
     "member_event_ids": [
-      27
+      26
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

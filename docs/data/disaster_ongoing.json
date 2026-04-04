@@ -185,7 +185,7 @@
     "title": "M 6.0 - 90 km SE of Sarangani, Philippines",
     "summary": "90 km SE of Sarangani, Philippines",
     "started_at": "2026-04-04T10:34:31.609000+00:00",
-    "updated_at": "2026-04-04T11:36:29.885000+00:00",
+    "updated_at": "2026-04-04T12:58:16.469000+00:00",
     "location_text": "90 km SE of Sarangani, Philippines",
     "lat": 4.8892,
     "lon": 126.1031,
@@ -311,7 +311,7 @@
     "title": "M 5.1 - 21 km SSE of Erciş, Turkey",
     "summary": "21 km SSE of Erciş, Turkey",
     "started_at": "2026-04-04T05:52:42.749000+00:00",
-    "updated_at": "2026-04-04T10:06:36.535000+00:00",
+    "updated_at": "2026-04-04T12:55:58.280000+00:00",
     "location_text": "21 km SSE of Erciş, Turkey",
     "lat": 38.8615,
     "lon": 43.4874,
@@ -417,44 +417,32 @@
     "severity_level": "high",
     "severity_color": "high",
     "title": "Nyamuragira",
-    "summary": "VRP 262.63 MW · VIIRS / VIIRS375 · 8.43 km",
+    "summary": "VRP 204.66 MW · VIIRS375 · 8.43 km",
     "started_at": "2026-04-04T00:12:00+00:00",
     "updated_at": "2026-04-04T00:12:00+00:00",
     "location_text": "Nyamuragira",
     "lat": null,
     "lon": null,
     "source_primary": "MIROVA",
-    "source_secondary": "VIIRS / VIIRS375",
+    "source_secondary": "VIIRS375",
     "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
     "country_code": null,
     "payload": {
       "volcano_id": "223020",
-      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
-      "vrp_mw": 262.63,
-      "distance_km": 8.75,
-      "sensor": "VIIRS",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
+      "vrp_mw": 204.66,
+      "distance_km": 8.43,
+      "sensor": "VIIRS375",
       "row_class": [
         "high"
       ],
       "source_page": "https://www.mirovaweb.it/NRT/",
       "sensors": [
-        "VIIRS",
         "VIIRS375"
       ],
       "reports": [
-        {
-          "volcano_id": "223020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
-          "vrp_mw": 262.63,
-          "distance_km": 8.75,
-          "sensor": "VIIRS",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        },
         {
           "volcano_id": "223020",
           "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
@@ -467,7 +455,7 @@
           "source_page": "https://www.mirovaweb.it/NRT/"
         }
       ],
-      "merged_count": 2
+      "merged_count": 1
     },
     "member_event_ids": [
       11

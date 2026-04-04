@@ -44,7 +44,7 @@
       }
     },
     "member_event_ids": [
-      17
+      16
     ],
     "occurred_at": "2026-04-03T22:30:00+00:00",
     "published_at": "2026-04-03T22:30:00+00:00",
@@ -93,7 +93,7 @@
       }
     },
     "member_event_ids": [
-      18
+      17
     ],
     "occurred_at": "2026-04-03T22:30:00+00:00",
     "published_at": "2026-04-03T22:30:00+00:00",
@@ -196,7 +196,7 @@
       "merged_count": 2
     },
     "member_event_ids": [
-      13
+      12
     ],
     "occurred_at": "2026-04-03T20:06:00+00:00",
     "published_at": "2026-04-03T20:06:00+00:00",
@@ -250,7 +250,7 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      14
+      13
     ],
     "occurred_at": "2026-04-03T18:25:00+00:00",
     "published_at": "2026-04-03T18:25:00+00:00",
@@ -305,7 +305,7 @@
       }
     },
     "member_event_ids": [
-      19
+      18
     ],
     "occurred_at": "2026-04-03T18:00:00+00:00",
     "published_at": "2026-04-03T18:00:00+00:00",
@@ -318,17 +318,17 @@
     "severity_level": "high",
     "severity_color": "high",
     "title": "Mayon",
-    "summary": "VRP 106.92 MW · VIIRS375 / VIIRS · 2.70 km",
+    "summary": "VRP 106.92 MW · VIIRS / VIIRS375 · 2.70 km",
     "started_at": "2026-04-03T17:48:01+00:00",
     "updated_at": "2026-04-03T17:48:01+00:00",
     "location_text": "Mayon",
     "lat": null,
     "lon": null,
     "source_primary": "MIROVA",
-    "source_secondary": "VIIRS375 / VIIRS",
+    "source_secondary": "VIIRS / VIIRS375",
     "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
     "country_code": null,
     "payload": {
       "volcano_id": "273030",
@@ -337,26 +337,15 @@
       "distance_km": 3.09,
       "sensor": "VIIRS",
       "row_class": [
-        "moderate",
-        "high"
+        "high",
+        "moderate"
       ],
       "source_page": "https://www.mirovaweb.it/NRT/",
       "sensors": [
-        "VIIRS375",
-        "VIIRS"
+        "VIIRS",
+        "VIIRS375"
       ],
       "reports": [
-        {
-          "volcano_id": "273030",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
-          "vrp_mw": 54.05,
-          "distance_km": 2.7,
-          "sensor": "VIIRS375",
-          "row_class": [
-            "moderate"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        },
         {
           "volcano_id": "273030",
           "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
@@ -367,12 +356,23 @@
             "high"
           ],
           "source_page": "https://www.mirovaweb.it/NRT/"
+        },
+        {
+          "volcano_id": "273030",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
+          "vrp_mw": 54.05,
+          "distance_km": 2.7,
+          "sensor": "VIIRS375",
+          "row_class": [
+            "moderate"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
         }
       ],
       "merged_count": 2
     },
     "member_event_ids": [
-      15
+      14
     ],
     "occurred_at": "2026-04-03T17:48:01+00:00",
     "published_at": "2026-04-03T17:48:01+00:00",
@@ -387,7 +387,7 @@
     "title": "M 5.8 - 35 km S of Jurm, Afghanistan",
     "summary": "35 km S of Jurm, Afghanistan",
     "started_at": "2026-04-03T16:12:58.037000+00:00",
-    "updated_at": "2026-04-03T21:05:52.585000+00:00",
+    "updated_at": "2026-04-04T00:21:49.102000+00:00",
     "location_text": "35 km S of Jurm, Afghanistan",
     "lat": 36.5479,
     "lon": 70.852,
@@ -740,42 +740,6 @@
   },
   {
     "id": 18,
-    "group_key": "earthquake|us6000sm8g",
-    "event_type": "earthquake",
-    "severity_level": "moderate",
-    "severity_color": "moderate",
-    "title": "M 5.6 - 120 km WNW of Ternate, Indonesia",
-    "summary": "120 km WNW of Ternate, Indonesia",
-    "started_at": "2026-04-03T00:22:20.421000+00:00",
-    "updated_at": "2026-04-03T02:49:16.985000+00:00",
-    "location_text": "120 km WNW of Ternate, Indonesia",
-    "lat": 1.3163,
-    "lon": 126.4332,
-    "source_primary": "USGS",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sm8g",
-    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sm8g",
-    "country_code": null,
-    "payload": {
-      "mag": 5.6,
-      "depth_km": 35.0,
-      "place": "120 km WNW of Ternate, Indonesia",
-      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000sm8g.geojson",
-      "alert": "green",
-      "sig": 482,
-      "tsunami": 0,
-      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
-    },
-    "member_event_ids": [
-      12
-    ],
-    "occurred_at": "2026-04-03T00:22:20.421000+00:00",
-    "published_at": "2026-04-03T00:22:20.421000+00:00",
-    "fetched_at": "2026-04-03T00:22:20.421000+00:00"
-  },
-  {
-    "id": 19,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -848,7 +812,7 @@
       }
     },
     "member_event_ids": [
-      16
+      15
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

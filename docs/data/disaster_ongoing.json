@@ -149,7 +149,7 @@
     "title": "M 5.5 - Mid-Indian Ridge",
     "summary": "Mid-Indian Ridge",
     "started_at": "2026-04-04T04:55:32.105000+00:00",
-    "updated_at": "2026-04-04T05:20:21.035000+00:00",
+    "updated_at": "2026-04-04T07:19:24.862000+00:00",
     "location_text": "Mid-Indian Ridge",
     "lat": -21.8707,
     "lon": 68.913,
@@ -497,17 +497,17 @@
     "severity_level": "high",
     "severity_color": "high",
     "title": "Mayon",
-    "summary": "VRP 106.92 MW · VIIRS375 / VIIRS · 2.70 km",
+    "summary": "VRP 106.92 MW · VIIRS · 3.09 km",
     "started_at": "2026-04-03T17:48:01+00:00",
     "updated_at": "2026-04-03T17:48:01+00:00",
     "location_text": "Mayon",
     "lat": null,
     "lon": null,
     "source_primary": "MIROVA",
-    "source_secondary": "VIIRS375 / VIIRS",
+    "source_secondary": "VIIRS",
     "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
     "country_code": null,
     "payload": {
       "volcano_id": "273030",
@@ -516,26 +516,13 @@
       "distance_km": 3.09,
       "sensor": "VIIRS",
       "row_class": [
-        "moderate",
         "high"
       ],
       "source_page": "https://www.mirovaweb.it/NRT/",
       "sensors": [
-        "VIIRS375",
         "VIIRS"
       ],
       "reports": [
-        {
-          "volcano_id": "273030",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
-          "vrp_mw": 54.05,
-          "distance_km": 2.7,
-          "sensor": "VIIRS375",
-          "row_class": [
-            "moderate"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        },
         {
           "volcano_id": "273030",
           "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
@@ -548,7 +535,7 @@
           "source_page": "https://www.mirovaweb.it/NRT/"
         }
       ],
-      "merged_count": 2
+      "merged_count": 1
     },
     "member_event_ids": [
       12

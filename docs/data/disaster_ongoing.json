@@ -8,7 +8,7 @@
     "title": "M 5.5 - Mid-Indian Ridge",
     "summary": "Mid-Indian Ridge",
     "started_at": "2026-04-04T04:55:32.105000+00:00",
-    "updated_at": "2026-04-04T05:12:26.040000+00:00",
+    "updated_at": "2026-04-04T05:20:21.035000+00:00",
     "location_text": "Mid-Indian Ridge",
     "lat": -21.8707,
     "lon": 68.913,
@@ -23,7 +23,7 @@
       "depth_km": 10.0,
       "place": "Mid-Indian Ridge",
       "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000smhl.geojson",
-      "alert": null,
+      "alert": "green",
       "sig": 465,
       "tsunami": 0,
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
@@ -237,17 +237,17 @@
     "severity_level": "high",
     "severity_color": "high",
     "title": "Nyamuragira",
-    "summary": "VRP 262.63 MW · VIIRS375 / VIIRS · 8.43 km",
+    "summary": "VRP 262.63 MW · VIIRS / VIIRS375 · 8.43 km",
     "started_at": "2026-04-04T00:12:00+00:00",
     "updated_at": "2026-04-04T00:12:00+00:00",
     "location_text": "Nyamuragira",
     "lat": null,
     "lon": null,
     "source_primary": "MIROVA",
-    "source_secondary": "VIIRS375 / VIIRS",
+    "source_secondary": "VIIRS / VIIRS375",
     "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
     "country_code": null,
     "payload": {
       "volcano_id": "223020",
@@ -260,16 +260,16 @@
       ],
       "source_page": "https://www.mirovaweb.it/NRT/",
       "sensors": [
-        "VIIRS375",
-        "VIIRS"
+        "VIIRS",
+        "VIIRS375"
       ],
       "reports": [
         {
           "volcano_id": "223020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
-          "vrp_mw": 204.66,
-          "distance_km": 8.43,
-          "sensor": "VIIRS375",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
+          "vrp_mw": 262.63,
+          "distance_km": 8.75,
+          "sensor": "VIIRS",
           "row_class": [
             "high"
           ],
@@ -277,10 +277,10 @@
         },
         {
           "volcano_id": "223020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
-          "vrp_mw": 262.63,
-          "distance_km": 8.75,
-          "sensor": "VIIRS",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
+          "vrp_mw": 204.66,
+          "distance_km": 8.43,
+          "sensor": "VIIRS375",
           "row_class": [
             "high"
           ],

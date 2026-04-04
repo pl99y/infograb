@@ -47,7 +47,7 @@
       }
     },
     "member_event_ids": [
-      13
+      12
     ],
     "occurred_at": "2026-04-04T03:00:00+00:00",
     "published_at": "2026-04-04T03:00:00+00:00",
@@ -98,7 +98,7 @@
       }
     },
     "member_event_ids": [
-      14
+      13
     ],
     "occurred_at": "2026-04-04T03:00:00+00:00",
     "published_at": "2026-04-04T03:00:00+00:00",
@@ -188,7 +188,7 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      8
+      7
     ],
     "occurred_at": "2026-04-04T00:40:00+00:00",
     "published_at": "2026-04-04T00:40:00+00:00",
@@ -201,17 +201,17 @@
     "severity_level": "high",
     "severity_color": "high",
     "title": "Nyamuragira",
-    "summary": "VRP 262.63 MW · VIIRS / VIIRS375 · 8.43 km",
+    "summary": "VRP 262.63 MW · VIIRS375 / VIIRS · 8.43 km",
     "started_at": "2026-04-04T00:12:00+00:00",
     "updated_at": "2026-04-04T00:12:00+00:00",
     "location_text": "Nyamuragira",
     "lat": null,
     "lon": null,
     "source_primary": "MIROVA",
-    "source_secondary": "VIIRS / VIIRS375",
+    "source_secondary": "VIIRS375 / VIIRS",
     "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
     "country_code": null,
     "payload": {
       "volcano_id": "223020",
@@ -224,21 +224,10 @@
       ],
       "source_page": "https://www.mirovaweb.it/NRT/",
       "sensors": [
-        "VIIRS",
-        "VIIRS375"
+        "VIIRS375",
+        "VIIRS"
       ],
       "reports": [
-        {
-          "volcano_id": "223020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
-          "vrp_mw": 262.63,
-          "distance_km": 8.75,
-          "sensor": "VIIRS",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        },
         {
           "volcano_id": "223020",
           "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
@@ -249,12 +238,23 @@
             "high"
           ],
           "source_page": "https://www.mirovaweb.it/NRT/"
+        },
+        {
+          "volcano_id": "223020",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
+          "vrp_mw": 262.63,
+          "distance_km": 8.75,
+          "sensor": "VIIRS",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
         }
       ],
       "merged_count": 2
     },
     "member_event_ids": [
-      9
+      8
     ],
     "occurred_at": "2026-04-04T00:12:00+00:00",
     "published_at": "2026-04-04T00:12:00+00:00",
@@ -357,7 +357,7 @@
       "merged_count": 2
     },
     "member_event_ids": [
-      10
+      9
     ],
     "occurred_at": "2026-04-03T20:06:00+00:00",
     "published_at": "2026-04-03T20:06:00+00:00",
@@ -412,7 +412,7 @@
       }
     },
     "member_event_ids": [
-      15
+      14
     ],
     "occurred_at": "2026-04-03T18:00:00+00:00",
     "published_at": "2026-04-03T18:00:00+00:00",
@@ -479,7 +479,7 @@
       "merged_count": 2
     },
     "member_event_ids": [
-      11
+      10
     ],
     "occurred_at": "2026-04-03T17:48:01+00:00",
     "published_at": "2026-04-03T17:48:01+00:00",
@@ -494,7 +494,7 @@
     "title": "M 5.8 - 35 km S of Jurm, Afghanistan",
     "summary": "35 km S of Jurm, Afghanistan",
     "started_at": "2026-04-03T16:12:58.037000+00:00",
-    "updated_at": "2026-04-04T00:21:49.102000+00:00",
+    "updated_at": "2026-04-04T04:31:58.953000+00:00",
     "location_text": "35 km S of Jurm, Afghanistan",
     "lat": 36.5479,
     "lon": 70.852,
@@ -510,7 +510,7 @@
       "place": "35 km S of Jurm, Afghanistan",
       "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000smda.geojson",
       "alert": "green",
-      "sig": 531,
+      "sig": 532,
       "tsunami": 0,
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
@@ -631,42 +631,6 @@
   },
   {
     "id": 14,
-    "group_key": "earthquake|us6000sma8",
-    "event_type": "earthquake",
-    "severity_level": "moderate",
-    "severity_color": "moderate",
-    "title": "M 5.2 - 101 km E of Bitung, Indonesia",
-    "summary": "101 km E of Bitung, Indonesia",
-    "started_at": "2026-04-03T04:42:05.125000+00:00",
-    "updated_at": "2026-04-03T05:00:51.040000+00:00",
-    "location_text": "101 km E of Bitung, Indonesia",
-    "lat": 1.4051,
-    "lon": 126.0406,
-    "source_primary": "USGS",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sma8",
-    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sma8",
-    "country_code": null,
-    "payload": {
-      "mag": 5.2,
-      "depth_km": 35.0,
-      "place": "101 km E of Bitung, Indonesia",
-      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000sma8.geojson",
-      "alert": null,
-      "sig": 416,
-      "tsunami": 0,
-      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
-    },
-    "member_event_ids": [
-      7
-    ],
-    "occurred_at": "2026-04-03T04:42:05.125000+00:00",
-    "published_at": "2026-04-03T04:42:05.125000+00:00",
-    "fetched_at": "2026-04-03T04:42:05.125000+00:00"
-  },
-  {
-    "id": 15,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -739,7 +703,7 @@
       }
     },
     "member_event_ids": [
-      12
+      11
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

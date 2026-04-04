@@ -7,7 +7,7 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <link rel="stylesheet" href="./static/dashboard.css">
+    <link rel="stylesheet" href="/static/dashboard.css?v=35">
 </head>
 <body>
     <header class="top-nav">
@@ -17,7 +17,6 @@
         </div>
 
         <div class="nav-right">
-            <div class="pages-static-note">静态公开版 · 15 分钟更新</div>
             <button id="layoutEditBtn" class="btn-refresh" type="button" title="编辑布局">
                 <i class="ph ph-squares-four"></i>
                 <span>编辑布局</span>
@@ -68,6 +67,7 @@
     <div class="mobile-section-tabs" id="mobileSectionTabs">
         <button class="mobile-tab-btn" data-panel="energy" type="button">能源</button>
         <button class="mobile-tab-btn" data-panel="market" type="button">市场</button>
+        <button class="mobile-tab-btn" data-panel="iflow" type="button">频倒</button>
         <button class="mobile-tab-btn" data-panel="aviation" type="button">航空</button>
         <button class="mobile-tab-btn" data-panel="disaster" type="button">灾害</button>
         <button class="mobile-tab-btn" data-panel="f1" type="button">F1</button>
@@ -95,6 +95,10 @@
                                     <div class="section-updated" id="energyUpdatedAt">（加载中）</div>
                                 </div>
 
+                                <button id="energyRefreshBtn" class="btn-refresh btn-refresh-small" type="button">
+                                    <i class="ph ph-arrows-clockwise"></i>
+                                    <span>刷新</span>
+                                </button>
                             </div>
                         </div>
 
@@ -125,6 +129,10 @@
                                     <div class="section-updated" id="marketUpdatedAt">（加载中）</div>
                                 </div>
 
+                                <button id="marketRefreshBtn" class="btn-refresh btn-refresh-small" type="button">
+                                    <i class="ph ph-arrows-clockwise"></i>
+                                    <span>刷新</span>
+                                </button>
                             </div>
                         </div>
 
@@ -154,6 +162,10 @@
                                     <div class="section-updated" id="aviationUpdatedAt">（加载中）</div>
                                 </div>
 
+                                <button id="aviationRefreshBtn" class="btn-refresh btn-refresh-small" type="button">
+                                    <i class="ph ph-arrows-clockwise"></i>
+                                    <span>刷新</span>
+                                </button>
                             </div>
                         </div>
 
@@ -196,6 +208,10 @@
                                     <div class="section-updated" id="disasterUpdatedAt">（加载中）</div>
                                 </div>
 
+                                <button id="disasterRefreshBtn" class="btn-refresh btn-refresh-small" type="button">
+                                    <i class="ph ph-arrows-clockwise"></i>
+                                    <span>刷新</span>
+                                </button>
                             </div>
                         </div>
 
@@ -258,6 +274,10 @@
                             <div class="section-header-row">
                                 <h3>情报流</h3>
 
+                                <button id="feedRefreshBtn" class="btn-refresh btn-refresh-small" type="button">
+                                    <i class="ph ph-arrows-clockwise"></i>
+                                    <span>刷新</span>
+                                </button>
                             </div>
                         </div>
 
@@ -274,6 +294,6 @@
         <img class="lightbox-content" id="lightbox-img" alt="Expanded media">
     </div>
 
-    <script type="module" src="./static/app/main-pages.js"></script>
+    <script type="module" src="/static/app/main-pages.js?v=35"></script>
 </body>
 </html>

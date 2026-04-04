@@ -1,50 +1,14 @@
 [
   {
-    "id": 1,
-    "group_key": "earthquake|us6000smhl",
-    "event_type": "earthquake",
-    "severity_level": "moderate",
-    "severity_color": "moderate",
-    "title": "M 5.5 - Mid-Indian Ridge",
-    "summary": "Mid-Indian Ridge",
-    "started_at": "2026-04-04T04:55:32.105000+00:00",
-    "updated_at": "2026-04-04T05:20:21.035000+00:00",
-    "location_text": "Mid-Indian Ridge",
-    "lat": -21.8707,
-    "lon": 68.913,
-    "source_primary": "USGS",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000smhl",
-    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000smhl",
-    "country_code": null,
-    "payload": {
-      "mag": 5.5,
-      "depth_km": 10.0,
-      "place": "Mid-Indian Ridge",
-      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000smhl.geojson",
-      "alert": "green",
-      "sig": 465,
-      "tsunami": 0,
-      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
-    },
-    "member_event_ids": [
-      1
-    ],
-    "occurred_at": "2026-04-04T04:55:32.105000+00:00",
-    "published_at": "2026-04-04T04:55:32.105000+00:00",
-    "fetched_at": "2026-04-04T04:55:32.105000+00:00"
-  },
-  {
-    "id": 3,
+    "id": 2,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|tc_30p|5620ae4a2e8ff759",
     "event_type": "typhoon",
     "severity_level": "high",
     "severity_color": "high",
     "title": "Tropical Cyclone 30P",
     "summary": "wind 35 kt (gust 45)",
-    "started_at": "2026-04-04T03:00:00+00:00",
-    "updated_at": "2026-04-04T03:00:00+00:00",
+    "started_at": "2026-04-04T06:00:00+00:00",
+    "updated_at": "2026-04-04T06:00:00+00:00",
     "location_text": "9.1S 155.1E",
     "lat": -9.1,
     "lon": 155.1,
@@ -79,66 +43,102 @@
         "wind_kt": 35,
         "gust_kt": 45,
         "warning_reference": "WTPS31 PGTW 040300",
-        "bulletin_issue_at": "2026-04-04T03:00:00+00:00"
+        "bulletin_issue_at": "2026-04-04T06:00:00+00:00"
       }
     },
     "member_event_ids": [
       13
     ],
-    "occurred_at": "2026-04-04T03:00:00+00:00",
-    "published_at": "2026-04-04T03:00:00+00:00",
-    "fetched_at": "2026-04-04T03:00:00+00:00"
+    "occurred_at": "2026-04-04T06:00:00+00:00",
+    "published_at": "2026-04-04T06:00:00+00:00",
+    "fetched_at": "2026-04-04T06:00:00+00:00"
   },
   {
-    "id": 2,
-    "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|invest_91p|dc6df363d660ef25",
+    "id": 1,
+    "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|invest_91p|afe3a4dcf322c621",
     "event_type": "typhoon",
-    "severity_level": "low",
-    "severity_color": "low",
+    "severity_level": "elevated",
+    "severity_color": "elevated",
     "title": "INVEST 91P",
-    "summary": "wind 23-28 kt · 1003 mb · Low",
-    "started_at": "2026-04-04T03:00:00+00:00",
-    "updated_at": "2026-04-04T03:00:00+00:00",
-    "location_text": "9.0S 173.0E",
-    "lat": -9.0,
-    "lon": 173.0,
+    "summary": "wind 28-33 kt · 1002 mb · Medium",
+    "started_at": "2026-04-04T06:00:00+00:00",
+    "updated_at": "2026-04-04T06:00:00+00:00",
+    "location_text": "11.7S 171.8E",
+    "lat": -11.7,
+    "lon": 171.8,
     "source_primary": "JTWC-ABPW",
     "source_secondary": "disturbance",
     "status": "active",
-    "map_url": "https://www.google.com/maps?q=-9.0,173.0",
-    "official_link": "https://www.google.com/maps?q=-9.0,173.0",
+    "map_url": "https://www.google.com/maps?q=-11.7,171.8",
+    "official_link": "https://www.google.com/maps?q=-11.7,171.8",
     "country_code": null,
     "payload": {
       "item_type": "disturbance",
       "source": "jtwc_abpw",
       "source_key": "jtwc_abpw|south_pacific_area|invest_91p",
-      "content_hash": "dc6df363d660ef25",
-      "platform_summary": "9.0S 173.0E | winds 23-28 kt | 1003 mb | LOW",
-      "platform_location": "9.0S 173.0E",
-      "wind": "23-28 kt",
+      "content_hash": "afe3a4dcf322c621",
+      "platform_summary": "11.7S 171.8E | winds 28-33 kt | 1002 mb | MEDIUM",
+      "platform_location": "11.7S 171.8E",
+      "wind": "28-33 kt",
       "risk_48h": null,
       "risk_7d": null,
       "next_update": null,
-      "raw_text": "(2) THE AREA OF CONVECTION (INVEST 91P) HAS PERSISTED NEAR 9.0S \n173.0E, APPROXIMATELY 590 NM NORTH-NORTHEAST OF PORT VILA. ANIMATED \nENHANCED MULTISPECTRAL SATELLITE IMAGERY (MSI) AND A 030047Z OCEANSAT \nDEPICTS AN AREA OF CALMER WINDS (5-10 KTS) CLOSER TO THE CENTER, WHILE \nMORE ELEVATED WINDS (10-15 KTS) ARE OBSERVED ALONG THE NORTHERN FLANK \nOF THE CIRCULATION. WITHIN THE STRUCTURE OF 91P, MULTIPLE \nMESOVORTICIES ROTATING CYCLONICALLY ARE IDENTIFIABLE. UPPER AIR \nANALYSIS INDICATES A MARGINALLY FAVORABLE ENVIRONMENT FOR FURTHER \nDEVELOPMENT WITH LOW (10-15 KTS) VERTICAL WIND SHEAR, WARM (29-30 C) \nSEA SURFACE TEMPERATURES AND A MODERATE POLEWARD OUTFLOW CHANNEL \nASSISTING THE SYSTEM. MODEL GUIDANCE IS IN GOOD AGREEMENT ON A \nSOUTHWESTWARD TRACK WITH STEADY INTENSIFICATION OVER THE NEXT 24-48 \nHOURS. MAXIMUM SUSTAINED SURFACE WINDS ARE ESTIMATED AT 23 TO 28 \nKNOTS. MINIMUM SEA LEVEL PRESSURE IS ESTIMATED TO BE NEAR 1003 MB. THE \nPOTENTIAL FOR THE DEVELOPMENT OF A SIGNIFICANT TROPICAL CYCLONE WITHIN \nTHE NEXT 24 HOURS REMAINS LOW.",
+      "raw_text": "(1) THE AREA OF CONVECTION (INVEST 91P) PREVIOUSLY LOCATED NEAR \n12.4S 170.8E IS NOW LOCATED NEAR 11.7S 171.8E, APPROXIMATELY 347 NM \nNORTH-NORTHEAST OF PORT VILLA. MULTISPECTRAL SATELLITE IMAGERY (MSI) \nREVEALS A BROAD LOW LEVEL CIRCULATION CENTER (LLCC) WITH AN ELONGATED \nBUT SLOWLY CONSOLIDATING CENTER. A RECENT OSCAT-3 PASS REVEALED A \nBROAD CIRCULATION WITH A BAND OF ELEVATED WINDS UP TO 30 KNOTS ALONG \nTHE EASTERN FLANK OF THE ROTATION. ENVIRONMENTAL ANALYSIS REVEALS \nFAVORABLE CONDITIONS FOR DEVELOPMENT WITH LOW TO MODERATE VERTICAL \nWIND SHEAR (15-20 KNOTS), GOOD DIFFLUENT OUTFLOW ALOFT, AND WARM SEA \nSURFACE TEMPERATURES (29-30 C). GLOBAL MODELS ARE IN FAIR AGREEMENT \nTHAT INVEST 91P WILL CONTINUE TO HAVE STEADY DEVELOPMENT AND A \nSOUTHWESTWARD TRACK OVER THE NEXT 24 TO 36 HOURS. MAXIMUM SUSTAINED \nSURFACE WINDS ARE ESTIMATED AT 28 TO 33 KNOTS. MINIMUM SEA LEVEL \nPRESSURE IS ESTIMATED TO BE NEAR 1002 MB. THE POTENTIAL FOR THE \nDEVELOPMENT OF A SIGNIFICANT TROPICAL CYCLONE WITHIN THE NEXT 24 HOURS \nIS UPGRADED TO MEDIUM.",
       "metadata": {
         "basin_section": "SOUTH PACIFIC AREA (WEST COAST OF SOUTH AMERICA TO 135 EAST)",
         "invest_id": "91P",
-        "lat": -9.0,
-        "lon": 173.0,
-        "wind_kt_min": 23,
-        "wind_kt_max": 28,
-        "pressure_mb": 1003,
-        "development_phrase": "REMAINS",
-        "development_level": "LOW",
-        "bulletin_issue_at": "2026-04-04T03:00:00+00:00"
+        "lat": -11.7,
+        "lon": 171.8,
+        "wind_kt_min": 28,
+        "wind_kt_max": 33,
+        "pressure_mb": 1002,
+        "development_phrase": "UPGRADED TO",
+        "development_level": "MEDIUM",
+        "bulletin_issue_at": "2026-04-04T06:00:00+00:00"
       }
     },
     "member_event_ids": [
       14
     ],
-    "occurred_at": "2026-04-04T03:00:00+00:00",
-    "published_at": "2026-04-04T03:00:00+00:00",
-    "fetched_at": "2026-04-04T03:00:00+00:00"
+    "occurred_at": "2026-04-04T06:00:00+00:00",
+    "published_at": "2026-04-04T06:00:00+00:00",
+    "fetched_at": "2026-04-04T06:00:00+00:00"
+  },
+  {
+    "id": 3,
+    "group_key": "earthquake|us6000smhl",
+    "event_type": "earthquake",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "M 5.5 - Mid-Indian Ridge",
+    "summary": "Mid-Indian Ridge",
+    "started_at": "2026-04-04T04:55:32.105000+00:00",
+    "updated_at": "2026-04-04T05:20:21.035000+00:00",
+    "location_text": "Mid-Indian Ridge",
+    "lat": -21.8707,
+    "lon": 68.913,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000smhl",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000smhl",
+    "country_code": null,
+    "payload": {
+      "mag": 5.5,
+      "depth_km": 10.0,
+      "place": "Mid-Indian Ridge",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000smhl.geojson",
+      "alert": "green",
+      "sig": 465,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      1
+    ],
+    "occurred_at": "2026-04-04T04:55:32.105000+00:00",
+    "published_at": "2026-04-04T04:55:32.105000+00:00",
+    "fetched_at": "2026-04-04T04:55:32.105000+00:00"
   },
   {
     "id": 4,
@@ -237,17 +237,17 @@
     "severity_level": "high",
     "severity_color": "high",
     "title": "Nyamuragira",
-    "summary": "VRP 262.63 MW · VIIRS375 / VIIRS · 8.43 km",
+    "summary": "VRP 262.63 MW · VIIRS / VIIRS375 · 8.43 km",
     "started_at": "2026-04-04T00:12:00+00:00",
     "updated_at": "2026-04-04T00:12:00+00:00",
     "location_text": "Nyamuragira",
     "lat": null,
     "lon": null,
     "source_primary": "MIROVA",
-    "source_secondary": "VIIRS375 / VIIRS",
+    "source_secondary": "VIIRS / VIIRS375",
     "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
     "country_code": null,
     "payload": {
       "volcano_id": "223020",
@@ -260,16 +260,16 @@
       ],
       "source_page": "https://www.mirovaweb.it/NRT/",
       "sensors": [
-        "VIIRS375",
-        "VIIRS"
+        "VIIRS",
+        "VIIRS375"
       ],
       "reports": [
         {
           "volcano_id": "223020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
-          "vrp_mw": 204.66,
-          "distance_km": 8.43,
-          "sensor": "VIIRS375",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
+          "vrp_mw": 262.63,
+          "distance_km": 8.75,
+          "sensor": "VIIRS",
           "row_class": [
             "high"
           ],
@@ -277,10 +277,10 @@
         },
         {
           "volcano_id": "223020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
-          "vrp_mw": 262.63,
-          "distance_km": 8.75,
-          "sensor": "VIIRS",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
+          "vrp_mw": 204.66,
+          "distance_km": 8.43,
+          "sensor": "VIIRS375",
           "row_class": [
             "high"
           ],
@@ -461,17 +461,17 @@
     "severity_level": "high",
     "severity_color": "high",
     "title": "Mayon",
-    "summary": "VRP 106.92 MW · VIIRS375 / VIIRS · 2.70 km",
+    "summary": "VRP 106.92 MW · VIIRS / VIIRS375 · 2.70 km",
     "started_at": "2026-04-03T17:48:01+00:00",
     "updated_at": "2026-04-03T17:48:01+00:00",
     "location_text": "Mayon",
     "lat": null,
     "lon": null,
     "source_primary": "MIROVA",
-    "source_secondary": "VIIRS375 / VIIRS",
+    "source_secondary": "VIIRS / VIIRS375",
     "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
     "country_code": null,
     "payload": {
       "volcano_id": "273030",
@@ -480,26 +480,15 @@
       "distance_km": 3.09,
       "sensor": "VIIRS",
       "row_class": [
-        "moderate",
-        "high"
+        "high",
+        "moderate"
       ],
       "source_page": "https://www.mirovaweb.it/NRT/",
       "sensors": [
-        "VIIRS375",
-        "VIIRS"
+        "VIIRS",
+        "VIIRS375"
       ],
       "reports": [
-        {
-          "volcano_id": "273030",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
-          "vrp_mw": 54.05,
-          "distance_km": 2.7,
-          "sensor": "VIIRS375",
-          "row_class": [
-            "moderate"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        },
         {
           "volcano_id": "273030",
           "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
@@ -508,6 +497,17 @@
           "sensor": "VIIRS",
           "row_class": [
             "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        },
+        {
+          "volcano_id": "273030",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
+          "vrp_mw": 54.05,
+          "distance_km": 2.7,
+          "sensor": "VIIRS375",
+          "row_class": [
+            "moderate"
           ],
           "source_page": "https://www.mirovaweb.it/NRT/"
         }

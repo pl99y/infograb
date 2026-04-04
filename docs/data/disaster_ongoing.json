@@ -8,7 +8,7 @@
     "title": "M 5.9 - 111 km ESE of Bitung, Indonesia",
     "summary": "111 km ESE of Bitung, Indonesia",
     "started_at": "2026-04-04T01:35:00.602000+00:00",
-    "updated_at": "2026-04-04T02:05:50.403000+00:00",
+    "updated_at": "2026-04-04T02:22:00.858000+00:00",
     "location_text": "111 km ESE of Bitung, Indonesia",
     "lat": 1.1109,
     "lon": 126.0732,
@@ -24,7 +24,7 @@
       "place": "111 km ESE of Bitung, Indonesia",
       "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000smgy.geojson",
       "alert": "green",
-      "sig": 536,
+      "sig": 537,
       "tsunami": 0,
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
@@ -144,107 +144,7 @@
     "fetched_at": "2026-04-03T22:54:01+00:00"
   },
   {
-    "id": 5,
-    "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|invest_90p|5767c7ba785e690d",
-    "event_type": "typhoon",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "INVEST 90P",
-    "summary": "wind 23-28 kt · 1002 mb · High",
-    "started_at": "2026-04-03T22:30:00+00:00",
-    "updated_at": "2026-04-03T22:30:00+00:00",
-    "location_text": "9.6S 155.8E",
-    "lat": -9.6,
-    "lon": 155.8,
-    "source_primary": "JTWC-ABPW",
-    "source_secondary": "disturbance",
-    "status": "high",
-    "map_url": "https://www.google.com/maps?q=-9.6,155.8",
-    "official_link": "https://www.google.com/maps?q=-9.6,155.8",
-    "country_code": null,
-    "payload": {
-      "item_type": "disturbance",
-      "source": "jtwc_abpw",
-      "source_key": "jtwc_abpw|south_pacific_area|invest_90p",
-      "content_hash": "5767c7ba785e690d",
-      "platform_summary": "9.6S 155.8E | winds 23-28 kt | 1002 mb | HIGH",
-      "platform_location": "9.6S 155.8E",
-      "wind": "23-28 kt",
-      "risk_48h": null,
-      "risk_7d": null,
-      "next_update": null,
-      "raw_text": "(1) THE AREA OF CONVECTION (INVEST 90P) PREVIOUSLY LOCATED NEAR \n10.2S 155.0E IS NOW LOCATED NEAR 9.6S 155.8E, APPROXIMATELY 250 NM \nWEST OF HONIARA. ANIMATED ENHANCED MULTISPECTRAL SATELLITE IMAGERY \n(MSI) DEPICTS A CONSOLIDATING LOW-LEVEL CIRCULATION CENTER (LLCC) \nEMBEDDED WITHIN PERSISTENT DEEP CONVECTION WITH SPIRAL BANDS OF DEEP \nCONVECTION WRAPPING INTO THE CENTER. ENVIRONMENTAL ANALYSIS FOR THE \nAREA INDICATES A MARGINALLY FAVORABLE ENVIRONMENT FOR CYCLOGENESIS \nWITH LOW TO MODERATE (15-20 KTS) VERTICAL WIND SHEAR, WARM SEA SURFACE \nTEMPERATURES (29-30 C), AND ROBUST POLEWARD OUTFLOW ALOFT. GLOBAL \nDETERMINISTIC AND ENSEMBLE MODELS, IN ADDITION TO THE EXPERIMENTAL \nGOOGLE DEEP MIND ENSEMBLE, INDICATE QUASI-STATIONARY MOVEMENT WITH \nQUICK CONSOLIDATION AND DEVELOPMENT OVER THE NEXT 24 HOURS. MAXIMUM \nSUSTAINED SURFACE WINDS ARE ESTIMATED AT 23 TO 28 KNOTS. MINIMUM SEA \nLEVEL PRESSURE IS ESTIMATED TO BE NEAR 1002 MB. THE POTENTIAL FOR THE \nDEVELOPMENT OF A SIGNIFICANT TROPICAL CYCLONE WITHIN THE NEXT 24 HOURS \nREMAINS HIGH. SEE REF A (WTPS21 PGTW 032230) FOR FURTHER DETAILS.",
-      "metadata": {
-        "basin_section": "SOUTH PACIFIC AREA (WEST COAST OF SOUTH AMERICA TO 135 EAST)",
-        "invest_id": "90P",
-        "lat": -9.6,
-        "lon": 155.8,
-        "wind_kt_min": 23,
-        "wind_kt_max": 28,
-        "pressure_mb": 1002,
-        "development_phrase": "REMAINS",
-        "development_level": "HIGH",
-        "bulletin_issue_at": "2026-04-03T22:30:00+00:00"
-      }
-    },
-    "member_event_ids": [
-      16
-    ],
-    "occurred_at": "2026-04-03T22:30:00+00:00",
-    "published_at": "2026-04-03T22:30:00+00:00",
-    "fetched_at": "2026-04-03T22:30:00+00:00"
-  },
-  {
     "id": 4,
-    "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|invest_91p|b708d1d8481a7a91",
-    "event_type": "typhoon",
-    "severity_level": "low",
-    "severity_color": "low",
-    "title": "INVEST 91P",
-    "summary": "wind 23-28 kt · 1003 mb",
-    "started_at": "2026-04-03T22:30:00+00:00",
-    "updated_at": "2026-04-03T22:30:00+00:00",
-    "location_text": "9.0S 173.0E",
-    "lat": -9.0,
-    "lon": 173.0,
-    "source_primary": "JTWC-ABPW",
-    "source_secondary": "disturbance",
-    "status": "monitoring",
-    "map_url": "https://www.google.com/maps?q=-9.0,173.0",
-    "official_link": "https://www.google.com/maps?q=-9.0,173.0",
-    "country_code": null,
-    "payload": {
-      "item_type": "disturbance",
-      "source": "jtwc_abpw",
-      "source_key": "jtwc_abpw|south_pacific_area|invest_91p",
-      "content_hash": "b708d1d8481a7a91",
-      "platform_summary": "9.0S 173.0E | winds 23-28 kt | 1003 mb",
-      "platform_location": "9.0S 173.0E",
-      "wind": "23-28 kt",
-      "risk_48h": null,
-      "risk_7d": null,
-      "next_update": null,
-      "raw_text": "(2) AN AREA OF CONVECTION (INVEST 91P) HAS PERSISTED NEAR 9.0S \n173.0E, APPROXIMATELY 590 NM NORTH-NORTHEAST OF PORT VILA. ANIMATED \nENHANCED MULTISPECTRAL SATELLITE IMAGERY (MSI) AND A 030047Z OCEANSAT \nDEPICTS AN AREA OF CALMER WINDS (5-10 KTS) CLOSER TO THE CENTER, WHILE \nMORE ELEVATED WINDS (10-15 KTS) ARE OBSERVED ALONG THE NORTHERN FLANK \nOF THE CIRCULATION. WITHIN THE STRUCTURE OF 91P, MULTIPLE \nMESOVORTICIES ROTATING CYCLONICALLY ARE IDENTIFIABLE. UPPER AIR \nANALYSIS INDICATES A MARGINALLY FAVORABLE ENVIRONMENT FOR FURTHER \nDEVELOPMENT WITH LOW (10-15 KTS) VERTICAL WIND SHEAR, WARM (29-30 C) \nSEA SURFACE TEMPERATURES AND A MODERATE POLEWARD OUTFLOW CHANNEL \nASSISTING THE SYSTEM. MODEL GUIDANCE IS IN GOOD AGREEMENT ON A \nSOUTHWESTWARD TRACK WITH STEADY INTENSIFICATION OVER THE NEXT 24-48 \nHOURS. MAXIMUM SUSTAINED SURFACE WINDS ARE ESTIMATED AT 23 TO 28 \nKNOTS. MINIMUM SEA LEVEL PRESSURE IS ESTIMATED TO BE NEAR 1003 MB. THE \nPOTENTIAL FOR THE DEVELOPMENT OF A SIGNIFICANT TROPICAL CYCLONE WITHIN \nTHE NEXT 24 HOURS IS LOW.",
-      "metadata": {
-        "basin_section": "SOUTH PACIFIC AREA (WEST COAST OF SOUTH AMERICA TO 135 EAST)",
-        "invest_id": "91P",
-        "lat": -9.0,
-        "lon": 173.0,
-        "wind_kt_min": 23,
-        "wind_kt_max": 28,
-        "pressure_mb": 1003,
-        "bulletin_issue_at": "2026-04-03T22:30:00+00:00"
-      }
-    },
-    "member_event_ids": [
-      17
-    ],
-    "occurred_at": "2026-04-03T22:30:00+00:00",
-    "published_at": "2026-04-03T22:30:00+00:00",
-    "fetched_at": "2026-04-03T22:30:00+00:00"
-  },
-  {
-    "id": 6,
     "group_key": "earthquake|us6000smfm",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -280,7 +180,7 @@
     "fetched_at": "2026-04-03T21:19:06.281000+00:00"
   },
   {
-    "id": 7,
+    "id": 5,
     "group_key": "volcano|9ea628f0944f9bfaaaf9b9798cfba3596b47179c",
     "event_type": "volcano",
     "severity_level": "high",
@@ -347,7 +247,7 @@
     "fetched_at": "2026-04-03T20:06:00+00:00"
   },
   {
-    "id": 8,
+    "id": 6,
     "group_key": "volcano|f3e947dc9841d1afe8c93d7459c601bf2ea5556f",
     "event_type": "volcano",
     "severity_level": "high",
@@ -401,7 +301,7 @@
     "fetched_at": "2026-04-03T18:25:00+00:00"
   },
   {
-    "id": 9,
+    "id": 7,
     "group_key": "typhoon|TC|jtwc_abio|jtwc_abio|south_indian_ocean_area|tc_29s|964f91f40766e6ae",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -449,14 +349,14 @@
       }
     },
     "member_event_ids": [
-      18
+      16
     ],
     "occurred_at": "2026-04-03T18:00:00+00:00",
     "published_at": "2026-04-03T18:00:00+00:00",
     "fetched_at": "2026-04-03T18:00:00+00:00"
   },
   {
-    "id": 10,
+    "id": 8,
     "group_key": "volcano|c35d2445aeb9f197eab6c895c1a6ce1977cc9693",
     "event_type": "volcano",
     "severity_level": "high",
@@ -523,7 +423,7 @@
     "fetched_at": "2026-04-03T17:48:01+00:00"
   },
   {
-    "id": 11,
+    "id": 9,
     "group_key": "earthquake|us6000smda",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -559,7 +459,7 @@
     "fetched_at": "2026-04-03T16:12:58.037000+00:00"
   },
   {
-    "id": 12,
+    "id": 10,
     "group_key": "earthquake|us6000smbs",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -595,7 +495,7 @@
     "fetched_at": "2026-04-03T10:59:07.488000+00:00"
   },
   {
-    "id": 13,
+    "id": 11,
     "group_key": "earthquake|us6000smbl",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -631,7 +531,7 @@
     "fetched_at": "2026-04-03T10:26:42.802000+00:00"
   },
   {
-    "id": 14,
+    "id": 12,
     "group_key": "earthquake|us6000smax",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -667,7 +567,7 @@
     "fetched_at": "2026-04-03T08:22:08.857000+00:00"
   },
   {
-    "id": 15,
+    "id": 13,
     "group_key": "earthquake|us6000sma8",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -703,7 +603,7 @@
     "fetched_at": "2026-04-03T04:42:05.125000+00:00"
   },
   {
-    "id": 16,
+    "id": 14,
     "group_key": "earthquake|us6000sm9y",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -739,7 +639,7 @@
     "fetched_at": "2026-04-03T03:37:16.087000+00:00"
   },
   {
-    "id": 17,
+    "id": 15,
     "group_key": "earthquake|us6000sm9g",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -775,7 +675,61 @@
     "fetched_at": "2026-04-03T02:33:49.551000+00:00"
   },
   {
-    "id": 18,
+    "id": 16,
+    "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|tc_30p|5620ae4a2e8ff759",
+    "event_type": "typhoon",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Tropical Cyclone 30P",
+    "summary": "wind 35 kt (gust 45)",
+    "started_at": "2026-03-04T03:00:00+00:00",
+    "updated_at": "2026-03-04T03:00:00+00:00",
+    "location_text": "9.1S 155.1E",
+    "lat": -9.1,
+    "lon": 155.1,
+    "source_primary": "JTWC-ABPW",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://www.google.com/maps?q=-9.1,155.1",
+    "official_link": "https://www.google.com/maps?q=-9.1,155.1",
+    "country_code": null,
+    "payload": {
+      "item_type": "warning",
+      "source": "jtwc_abpw",
+      "source_key": "jtwc_abpw|south_pacific_area|tc_30p",
+      "content_hash": "5620ae4a2e8ff759",
+      "platform_summary": "9.1S 155.1E | wind 35 kt (gust 45)",
+      "platform_location": "9.1S 155.1E",
+      "wind": "35 kt (gust 45)",
+      "risk_48h": null,
+      "risk_7d": null,
+      "next_update": null,
+      "raw_text": "(1) AT 04APR26 0000Z, TROPICAL CYCLONE 30P (THIRTY) WAS LOCATED \nNEAR 9.1S 155.1E, APPROXIMATELY 717 NM NORTHEAST OF CAIRNS, AUSTRALIA, \nAND HAD TRACKED NORTHWESTWARD AT 06 KNOTS OVER THE PAST SIX HOURS. \nMAXIMUM SUSTAINED SURFACE WINDS WERE ESTIMATED AT 35 KNOTS GUSTING TO \n45 KNOTS. SEE REF A (WTPS31 PGTW 040300) FOR FURTHER DETAILS.",
+      "metadata": {
+        "basin_section": "SOUTH PACIFIC AREA (WEST COAST OF SOUTH AMERICA TO 135 EAST)",
+        "storm_class": "TROPICAL CYCLONE",
+        "storm_id": "30P",
+        "fix_date": "04APR26",
+        "fix_time": "04APR26 0000Z",
+        "lat": -9.1,
+        "lon": 155.1,
+        "movement_text": "NORTHWESTWARD",
+        "movement_kt": 6,
+        "wind_kt": 35,
+        "gust_kt": 45,
+        "warning_reference": "WTPS31 PGTW 040300",
+        "bulletin_issue_at": "2026-03-04T03:00:00+00:00"
+      }
+    },
+    "member_event_ids": [
+      17
+    ],
+    "occurred_at": "2026-03-04T03:00:00+00:00",
+    "published_at": "2026-03-04T03:00:00+00:00",
+    "fetched_at": "2026-03-04T03:00:00+00:00"
+  },
+  {
+    "id": 17,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",

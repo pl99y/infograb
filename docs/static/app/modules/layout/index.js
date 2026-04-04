@@ -3,9 +3,9 @@ import { MOBILE_BREAKPOINT, STORAGE_KEYS } from "../../core/constants.js";
 const TOTAL_COLUMNS = 24;
 const BOARD_GAP_X = 8;
 const BOARD_GAP_Y = 8;
-const Y_STEP = 8;
+const Y_STEP = 12;
 const WIDTH_STEP = 1;
-const HEIGHT_STEP = 80;
+const HEIGHT_STEP = 12;
 
 const DEFAULT_MIN_W = 4;
 const DEFAULT_MIN_H = 320;
@@ -298,7 +298,88 @@ export function createLayoutModule(ctx) {
     }
   }
 
-  function applyDesktopLayout() {
+  function buildDisplayBands(visibleIds) {
+    const rowStarts = [...new Set(
+      visibleIds
+        .map((id) => state.panels[id]?.y)
+        .filter((y) => Number.isFinite(y))
+    )].sort((a, b) => a - b);
+
+    if (!rowStarts.length) {
+      return { rowStarts: [], rowTops: [], rowHeights: [] };
+    }
+
+    const rowHeights = rowStarts.map(() => 0);
+
+    const getSpan = (box, rowIndex) => {
+      const bottom = box.y + box.h;
+      let span = 1;
+      for (let i = rowIndex + 1; i < rowStarts.length; i += 1) {
+        if (rowStarts[i] < bottom - 1) span += 1;
+        else break;
+      }
+      return span;
+    };
+
+    for (let rowIndex = 0; rowIndex < rowStarts.length; rowIndex += 1) {
+      const rowStart = rowStarts[rowIndex];
+      const singles = visibleIds
+        .map((id) => state.panels[id])
+        .filter((box) => box && box.y === rowStart && getSpan(box, rowIndex) === 1);
+
+      if (singles.length) {
+        rowHeights[rowIndex] = Math.max(...singles.map((box) => box.h));
+      }
+    }
+
+    for (let rowIndex = 0; rowIndex < rowStarts.length; rowIndex += 1) {
+      if (rowHeights[rowIndex] > 0) continue;
+
+      const starters = visibleIds
+        .map((id) => state.panels[id])
+        .filter((box) => box && box.y === rowStarts[rowIndex]);
+
+      if (starters.length) {
+        rowHeights[rowIndex] = Math.max(
+          ...starters.map((box) => {
+            const span = getSpan(box, rowIndex);
+            const gapCost = BOARD_GAP_Y * (span - 1);
+            return Math.max(DEFAULT_MIN_H, Math.ceil((box.h - gapCost) / span));
+          })
+        );
+      } else {
+        rowHeights[rowIndex] = DEFAULT_MIN_H;
+      }
+    }
+
+    for (let rowIndex = 0; rowIndex < rowStarts.length; rowIndex += 1) {
+      const starters = visibleIds
+        .map((id) => state.panels[id])
+        .filter((box) => box && box.y === rowStarts[rowIndex]);
+
+      for (const box of starters) {
+        const span = getSpan(box, rowIndex);
+        const current = rowHeights
+          .slice(rowIndex, rowIndex + span)
+          .reduce((sum, h) => sum + h, 0) + BOARD_GAP_Y * (span - 1);
+
+        if (current < box.h) {
+          rowHeights[rowIndex + span - 1] += box.h - current;
+        }
+      }
+    }
+
+    const rowTops = [];
+    let cursorTop = 0;
+    for (let i = 0; i < rowStarts.length; i += 1) {
+      rowTops.push(cursorTop);
+      cursorTop += rowHeights[i] + BOARD_GAP_Y;
+    }
+
+    return { rowStarts, rowTops, rowHeights };
+  }
+
+  function applyDesktopRawLayout() {
     const panels = getPanels(dashboardGrid);
     const visibleIds = getVisibleIds();
     const gridWidth = dashboardGrid.clientWidth;
@@ -307,7 +388,6 @@ export function createLayoutModule(ctx) {
 
     const totalGap = BOARD_GAP_X * (TOTAL_COLUMNS - 1);
     const colWidth = Math.max(1, (gridWidth - totalGap) / TOTAL_COLUMNS);
-
     let maxBottom = 0;
 
     for (const id of visibleIds) {
@@ -330,6 +410,65 @@ export function createLayoutModule(ctx) {
     }
 
     dashboardGrid.style.height = `${Math.max(320, maxBottom)}px`;
+  }
+
+  function applyDesktopAlignedLayout() {
+    const panels = getPanels(dashboardGrid);
+    const visibleIds = getVisibleIds();
+    const gridWidth = dashboardGrid.clientWidth;
+
+    if (!gridWidth) return;
+
+    const totalGap = BOARD_GAP_X * (TOTAL_COLUMNS - 1);
+    const colWidth = Math.max(1, (gridWidth - totalGap) / TOTAL_COLUMNS);
+    const displayBands = buildDisplayBands(visibleIds);
+
+    const getSpan = (box, rowIndex) => {
+      const bottom = box.y + box.h;
+      let span = 1;
+      for (let i = rowIndex + 1; i < displayBands.rowStarts.length; i += 1) {
+        if (displayBands.rowStarts[i] < bottom - 1) span += 1;
+        else break;
+      }
+      return span;
+    };
+
+    let maxBottom = 0;
+
+    for (const id of visibleIds) {
+      const panel = panels.find((p) => getPanelId(p) === id);
+      const box = state.panels[id];
+      if (!panel || !box) continue;
+
+      const left = box.x * (colWidth + BOARD_GAP_X);
+      const width = box.w * colWidth + (box.w - 1) * BOARD_GAP_X;
+      const rowIndex = displayBands.rowStarts.findIndex((y) => y === box.y);
+      const top = rowIndex >= 0 ? displayBands.rowTops[rowIndex] : box.y;
+      const span = rowIndex >= 0 ? getSpan(box, rowIndex) : 1;
+      const height = rowIndex >= 0
+        ? displayBands.rowHeights
+            .slice(rowIndex, rowIndex + span)
+            .reduce((sum, h) => sum + h, 0) + BOARD_GAP_Y * (span - 1)
+        : box.h;
+
+      panel.style.position = "absolute";
+      panel.style.left = `${left}px`;
+      panel.style.top = `${top}px`;
+      panel.style.width = `${width}px`;
+      panel.style.height = `${height}px`;
+
+      maxBottom = Math.max(maxBottom, top + height);
+    }
+
+    dashboardGrid.style.height = `${Math.max(320, maxBottom)}px`;
+  }
+
+  function applyDesktopLayout() {
+    if (ctx.state.layoutEditMode) {
+      applyDesktopRawLayout();
+    } else {
+      applyDesktopAlignedLayout();
+    }
   }
 
   function clearDesktopStylesForMobile() {
@@ -419,7 +558,11 @@ export function createLayoutModule(ctx) {
       return;
     }
 
-    applyDesktopLayout();
+    if (ctx.state.layoutEditMode) {
+      applyDesktopRawLayout();
+    } else {
+      applyDesktopAlignedLayout();
+    }
     renderPanelPicker();
   }
 
@@ -456,6 +599,7 @@ export function createLayoutModule(ctx) {
   function setEditMode(enabled) {
     ctx.state.layoutEditMode = Boolean(enabled) && !isMobile();
     updateEditUI();
+    applyLayout();
   }
 
   function openPanelPicker() {

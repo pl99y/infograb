@@ -7,7 +7,7 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <link rel="stylesheet" href="./static/dashboard.css?v=35">
+    <link rel="stylesheet" href="./static/dashboard.css?v=36">
 </head>
 <body>
     <header class="top-nav">
@@ -94,6 +94,11 @@
                                     <h3>能源监控</h3>
                                     <div class="section-updated" id="energyUpdatedAt">（加载中）</div>
                                 </div>
+
+                                <button id="energyRefreshBtn" class="btn-refresh btn-refresh-small" type="button">
+                                    <i class="ph ph-arrows-clockwise"></i>
+                                    <span>刷新</span>
+                                </button>
                             </div>
                         </div>
 
@@ -123,42 +128,16 @@
                                     <h3>市场观察</h3>
                                     <div class="section-updated" id="marketUpdatedAt">（加载中）</div>
                                 </div>
+
+                                <button id="marketRefreshBtn" class="btn-refresh btn-refresh-small" type="button">
+                                    <i class="ph ph-arrows-clockwise"></i>
+                                    <span>刷新</span>
+                                </button>
                             </div>
                         </div>
 
                         <div class="market-snapshot-list" id="market-container">
                             <div class="loading-state">正在加载市场指数...</div>
-                        </div>
-                    </section>
-                </div>
-            </div>
-
-            <div
-                class="grid-stack-item"
-                gs-id="iflow"
-                data-panel-title="道爷频倒"
-                data-default-w="8"
-                data-default-h="620"
-                data-min-w="4"
-                data-min-h="360"
-                data-max-h="1400"
-            >
-                <div class="grid-stack-item-content">
-                    <section class="grid-col col-iflow">
-                        <div class="section-header">
-                            <div class="section-header-row">
-                                <div class="section-header-text iflow-header-text">
-                                    <div class="iflow-header-inline">
-                                        <h3>道爷频倒</h3>
-                                        <div class="section-updated iflow-updated" id="iflowUpdatedAt">刚刚更新</div>
-                                        <div class="iflow-today-factor" id="iflowTodayFactor">今日指数：0.744</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="iflow-panel" id="iflow-container">
-                            <div class="loading-state">正在加载道爷频倒...</div>
                         </div>
                     </section>
                 </div>
@@ -182,6 +161,11 @@
                                     <h3>航空监控</h3>
                                     <div class="section-updated" id="aviationUpdatedAt">（加载中）</div>
                                 </div>
+
+                                <button id="aviationRefreshBtn" class="btn-refresh btn-refresh-small" type="button">
+                                    <i class="ph ph-arrows-clockwise"></i>
+                                    <span>刷新</span>
+                                </button>
                             </div>
                         </div>
 
@@ -223,6 +207,11 @@
                                     <h3>灾害监控</h3>
                                     <div class="section-updated" id="disasterUpdatedAt">（加载中）</div>
                                 </div>
+
+                                <button id="disasterRefreshBtn" class="btn-refresh btn-refresh-small" type="button">
+                                    <i class="ph ph-arrows-clockwise"></i>
+                                    <span>刷新</span>
+                                </button>
                             </div>
                         </div>
 
@@ -284,6 +273,11 @@
                         <div class="section-header">
                             <div class="section-header-row">
                                 <h3>情报流</h3>
+
+                                <button id="feedRefreshBtn" class="btn-refresh btn-refresh-small" type="button">
+                                    <i class="ph ph-arrows-clockwise"></i>
+                                    <span>刷新</span>
+                                </button>
                             </div>
                         </div>
 
@@ -300,6 +294,6 @@
         <img class="lightbox-content" id="lightbox-img" alt="Expanded media">
     </div>
 
-    <script type="module" src="./static/app/main-pages.js?v=35"></script>
+    <script type="module" src="./static/app/main-pages.js?v=36"></script>
 </body>
 </html>

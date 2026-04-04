@@ -8,7 +8,7 @@
     "title": "M 5.5 - 77 km SSW of Yulara, Australia",
     "summary": "77 km SSW of Yulara, Australia",
     "started_at": "2026-04-04T18:26:13.603000+00:00",
-    "updated_at": "2026-04-04T18:51:01.537000+00:00",
+    "updated_at": "2026-04-04T20:26:00.389000+00:00",
     "location_text": "77 km SSW of Yulara, Australia",
     "lat": -25.9274,
     "lon": 130.8226,
@@ -24,7 +24,7 @@
       "place": "77 km SSW of Yulara, Australia",
       "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000smm5.geojson",
       "alert": "green",
-      "sig": 465,
+      "sig": 466,
       "tsunami": 0,
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
@@ -92,6 +92,60 @@
   },
   {
     "id": 3,
+    "group_key": "volcano|9be7a956e82c033c63870f06afbc3d59a20563c7",
+    "event_type": "volcano",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Mayon",
+    "summary": "VRP 134.82 MW · VIIRS · 2.70 km",
+    "started_at": "2026-04-04T17:24:01+00:00",
+    "updated_at": "2026-04-04T17:24:01+00:00",
+    "location_text": "Mayon",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "VIIRS",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "273030",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
+      "vrp_mw": 134.82,
+      "distance_km": 2.7,
+      "sensor": "VIIRS",
+      "row_class": [
+        "high"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "VIIRS"
+      ],
+      "reports": [
+        {
+          "volcano_id": "273030",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
+          "vrp_mw": 134.82,
+          "distance_km": 2.7,
+          "sensor": "VIIRS",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 1
+    },
+    "member_event_ids": [
+      12
+    ],
+    "occurred_at": "2026-04-04T17:24:01+00:00",
+    "published_at": "2026-04-04T17:24:01+00:00",
+    "fetched_at": "2026-04-04T17:24:01+00:00"
+  },
+  {
+    "id": 4,
     "group_key": "earthquake|us6000smlu",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -99,7 +153,7 @@
     "title": "M 5.5 - 4 km ENE of Hualien City, Taiwan",
     "summary": "4 km ENE of Hualien City, Taiwan",
     "started_at": "2026-04-04T17:14:57.460000+00:00",
-    "updated_at": "2026-04-04T19:42:55.286000+00:00",
+    "updated_at": "2026-04-04T20:16:10.876000+00:00",
     "location_text": "4 km ENE of Hualien City, Taiwan",
     "lat": 23.9901,
     "lon": 121.6455,
@@ -115,7 +169,7 @@
       "place": "4 km ENE of Hualien City, Taiwan",
       "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000smlu.geojson",
       "alert": "green",
-      "sig": 477,
+      "sig": 476,
       "tsunami": 0,
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
@@ -125,60 +179,6 @@
     "occurred_at": "2026-04-04T17:14:57.460000+00:00",
     "published_at": "2026-04-04T17:14:57.460000+00:00",
     "fetched_at": "2026-04-04T17:14:57.460000+00:00"
-  },
-  {
-    "id": 4,
-    "group_key": "volcano|55a79094410f557dfa0c0120f3ed2648005d5484",
-    "event_type": "volcano",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "Mayon",
-    "summary": "VRP 320.50 MW · VIIRS · 4.50 km",
-    "started_at": "2026-04-04T16:36:02+00:00",
-    "updated_at": "2026-04-04T16:36:02+00:00",
-    "location_text": "Mayon",
-    "lat": null,
-    "lon": null,
-    "source_primary": "MIROVA",
-    "source_secondary": "VIIRS",
-    "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
-    "country_code": null,
-    "payload": {
-      "volcano_id": "273030",
-      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
-      "vrp_mw": 320.5,
-      "distance_km": 4.5,
-      "sensor": "VIIRS",
-      "row_class": [
-        "high"
-      ],
-      "source_page": "https://www.mirovaweb.it/NRT/",
-      "sensors": [
-        "VIIRS"
-      ],
-      "reports": [
-        {
-          "volcano_id": "273030",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
-          "vrp_mw": 320.5,
-          "distance_km": 4.5,
-          "sensor": "VIIRS",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        }
-      ],
-      "merged_count": 1
-    },
-    "member_event_ids": [
-      12
-    ],
-    "occurred_at": "2026-04-04T16:36:02+00:00",
-    "published_at": "2026-04-04T16:36:02+00:00",
-    "fetched_at": "2026-04-04T16:36:02+00:00"
   },
   {
     "id": 5,

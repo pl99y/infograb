@@ -1,6 +1,45 @@
 [
   {
     "id": 1,
+    "dedupe_key": "urn:oid:2.49.0.1.840.0.c6a4ba24d4b751584ba24c9632aa1935498b4728.001.1",
+    "source_primary": "WMO",
+    "title": "Tornado Warning issued April 4 at 2:42PM CDT until April 4 at 3:15PM CDT by NWS Shreveport LA",
+    "summary": "Panola, TX; Shelby, TX",
+    "severity_level": "extreme",
+    "color_level": "extreme",
+    "event_type": "weather",
+    "location_text": "Panola, TX; Shelby, TX",
+    "issued_at": "2026-04-04T19:42:00+00:00",
+    "effective_at": "2026-04-04T19:42:00+00:00",
+    "expires_at": "2026-04-04T20:15:00+00:00",
+    "source_url": "https://severeweather.wmo.int/list.html",
+    "detail_url": "https://severeweather.wmo.int/list.html",
+    "payload": {
+      "id": "urn:oid:2.49.0.1.840.0.c6a4ba24d4b751584ba24c9632aa1935498b4728.001.1",
+      "event": "Tornado Warning",
+      "headline": "Tornado Warning issued April 4 at 2:42PM CDT until April 4 at 3:15PM CDT by NWS Shreveport LA",
+      "sent": "2026-04-04 19:42:00",
+      "expires": "2026-04-04 20:15:00",
+      "areaDesc": "Panola, TX; Shelby, TX",
+      "mid": "093",
+      "ra": "4,5",
+      "s": 4,
+      "u": 4,
+      "c": 4,
+      "capURL": "us-noaa-nws-en/2026/04/04/19/42/00-d73b2506ff9894e8e65a266b94e0bfc6.xml",
+      "effective": "2026-04-04 19:42:00",
+      "cap_path": "us-noaa-nws-en/2026/04/04/19/42/00-d73b2506ff9894e8e65a266b94e0bfc6.xml",
+      "source_page": "https://severeweather.wmo.int/list.html",
+      "last_updated": "2026-04-04 20:14:09"
+    },
+    "fetched_at": "2026-04-04T20:15:55.238141+00:00",
+    "published_at": "2026-04-04T19:42:00+00:00",
+    "updated_at": "2026-04-04T20:15:55.238141+00:00",
+    "region_text": "Panola, TX; Shelby, TX",
+    "link_url": "https://severeweather.wmo.int/list.html"
+  },
+  {
+    "id": 2,
     "dedupe_key": "b9ddf085-70f3-4795-b706-61d82879bf9c",
     "source_primary": "WMO",
     "title": "Warning, Heavy rain",
@@ -30,16 +69,16 @@
       "effective": "2026-04-05 07:00:00",
       "cap_path": "sa-ncm-en/2026/04/04/15/34/56-722a2331f4d112eccac7c782f253ffd6.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-04 19:45:07"
+      "last_updated": "2026-04-04 20:14:09"
     },
-    "fetched_at": "2026-04-04T20:00:56.723412+00:00",
+    "fetched_at": "2026-04-04T20:15:55.238141+00:00",
     "published_at": "2026-04-04T15:34:56+00:00",
-    "updated_at": "2026-04-04T20:00:56.723412+00:00",
+    "updated_at": "2026-04-04T20:15:55.238141+00:00",
     "region_text": "Asir Region - Al Amoah : The entire governorate; Asir Region - Al Areen : The entire governorate; Asir Region - Tarib : The entire governorate",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 2,
+    "id": 3,
     "dedupe_key": "urn:oid:2.49.0.1.90.0.2026.4.4.14.6.32",
     "source_primary": "WMO",
     "title": "Tropical Cyclone Warning",
@@ -69,16 +108,16 @@
       "effective": "",
       "cap_path": "sb-sims-en/2026/04/04/14/06/32-acb963b0e5aa64312292e7d0266f48c4.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-04 19:45:07"
+      "last_updated": "2026-04-04 20:14:09"
     },
-    "fetched_at": "2026-04-04T20:00:56.723412+00:00",
+    "fetched_at": "2026-04-04T20:15:55.238141+00:00",
     "published_at": "2026-04-04T14:06:32+00:00",
-    "updated_at": "2026-04-04T20:00:56.723412+00:00",
+    "updated_at": "2026-04-04T20:15:55.238141+00:00",
     "region_text": "Western, Isabel and Choiseul",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 4,
+    "id": 5,
     "dedupe_key": "2.49.0.1.578.1.260404133237.459278",
     "source_primary": "WMO",
     "title": "High avalanche danger for region Hardanger 2026-04-05",
@@ -108,16 +147,16 @@
       "effective": "2026-04-04 22:00:00",
       "cap_path": "no-nve-xx/2026/04/04/11/32/37-a8a20e77790cbf11a9f97dce22862f89.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-04 19:45:07"
+      "last_updated": "2026-04-04 20:14:09"
     },
-    "fetched_at": "2026-04-04T20:00:56.723412+00:00",
+    "fetched_at": "2026-04-04T20:15:55.238141+00:00",
     "published_at": "2026-04-04T11:32:37+00:00",
-    "updated_at": "2026-04-04T20:00:56.723412+00:00",
+    "updated_at": "2026-04-04T20:15:55.238141+00:00",
     "region_text": "Hardanger",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 3,
+    "id": 4,
     "dedupe_key": "2.49.0.1.578.1.260404133237.459280",
     "source_primary": "WMO",
     "title": "High avalanche danger for region Heiane 2026-04-05",
@@ -147,16 +186,16 @@
       "effective": "2026-04-04 22:00:00",
       "cap_path": "no-nve-xx/2026/04/04/11/32/37-d2294e970e3f6e1fa439801011345ed8.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-04 19:45:07"
+      "last_updated": "2026-04-04 20:14:09"
     },
-    "fetched_at": "2026-04-04T20:00:56.723412+00:00",
+    "fetched_at": "2026-04-04T20:15:55.238141+00:00",
     "published_at": "2026-04-04T11:32:37+00:00",
-    "updated_at": "2026-04-04T20:00:56.723412+00:00",
+    "updated_at": "2026-04-04T20:15:55.238141+00:00",
     "region_text": "Heiane",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 5,
+    "id": 6,
     "dedupe_key": "2.49.0.1.578.0.20260404111238.068",
     "source_primary": "WMO",
     "title": "Extremely strong wind gusts, red level, Parts of Rogaland and Agder, 2026-04-05T09:00:00+00:00, 2026-04-05T15:00:00+00:00",
@@ -186,16 +225,16 @@
       "effective": "",
       "cap_path": "no-met-en/2026/04/04/11/27/01-5d82570d8269cf6938c844d8849ba48c.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-04 19:45:07"
+      "last_updated": "2026-04-04 20:14:09"
     },
-    "fetched_at": "2026-04-04T20:00:56.723412+00:00",
+    "fetched_at": "2026-04-04T20:15:55.238141+00:00",
     "published_at": "2026-04-04T11:27:01+00:00",
-    "updated_at": "2026-04-04T20:00:56.723412+00:00",
+    "updated_at": "2026-04-04T20:15:55.238141+00:00",
     "region_text": "Parts of Rogaland and Agder",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 6,
+    "id": 7,
     "dedupe_key": "2.49.0.0.388.0.JM.260404094330.IXv2E348MbjWDEwxg25D",
     "source_primary": "WMO",
     "title": "CAP Alert",
@@ -225,11 +264,11 @@
       "effective": "2026-04-04 09:43:30",
       "cap_path": "jm-jms-en/2026/04/04/09/43/30-7b67d7e96119d2d3bb0f709490864616.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-04 19:45:07"
+      "last_updated": "2026-04-04 20:14:09"
     },
-    "fetched_at": "2026-04-04T20:00:56.723412+00:00",
+    "fetched_at": "2026-04-04T20:15:55.238141+00:00",
     "published_at": "2026-04-04T09:43:30+00:00",
-    "updated_at": "2026-04-04T20:00:56.723412+00:00",
+    "updated_at": "2026-04-04T20:15:55.238141+00:00",
     "region_text": "inshore areas of south coast",
     "link_url": "https://severeweather.wmo.int/list.html"
   }

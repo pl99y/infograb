@@ -1,6 +1,60 @@
 [
   {
-    "id": 2,
+    "id": 1,
+    "group_key": "volcano|5a0337ac94981e70bd08f70abdacefeb364c023b",
+    "event_type": "volcano",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Nyamuragira",
+    "summary": "VRP 109.40 MW · MODIS · 8.06 km",
+    "started_at": "2026-04-04T06:45:00+00:00",
+    "updated_at": "2026-04-04T06:45:00+00:00",
+    "location_text": "Nyamuragira",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "MODIS",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=223020",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=223020",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "223020",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=223020",
+      "vrp_mw": 109.4,
+      "distance_km": 8.06,
+      "sensor": "MODIS",
+      "row_class": [
+        "high"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "MODIS"
+      ],
+      "reports": [
+        {
+          "volcano_id": "223020",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=223020",
+          "vrp_mw": 109.4,
+          "distance_km": 8.06,
+          "sensor": "MODIS",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 1
+    },
+    "member_event_ids": [
+      8
+    ],
+    "occurred_at": "2026-04-04T06:45:00+00:00",
+    "published_at": "2026-04-04T06:45:00+00:00",
+    "fetched_at": "2026-04-04T06:45:00+00:00"
+  },
+  {
+    "id": 3,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|tc_30p|5620ae4a2e8ff759",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -47,14 +101,14 @@
       }
     },
     "member_event_ids": [
-      13
+      12
     ],
     "occurred_at": "2026-04-04T06:00:00+00:00",
     "published_at": "2026-04-04T06:00:00+00:00",
     "fetched_at": "2026-04-04T06:00:00+00:00"
   },
   {
-    "id": 1,
+    "id": 2,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|invest_91p|afe3a4dcf322c621",
     "event_type": "typhoon",
     "severity_level": "elevated",
@@ -98,14 +152,14 @@
       }
     },
     "member_event_ids": [
-      14
+      13
     ],
     "occurred_at": "2026-04-04T06:00:00+00:00",
     "published_at": "2026-04-04T06:00:00+00:00",
     "fetched_at": "2026-04-04T06:00:00+00:00"
   },
   {
-    "id": 3,
+    "id": 4,
     "group_key": "earthquake|us6000smhq",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -141,7 +195,7 @@
     "fetched_at": "2026-04-04T05:52:42.749000+00:00"
   },
   {
-    "id": 4,
+    "id": 5,
     "group_key": "earthquake|us6000smhl",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -177,7 +231,7 @@
     "fetched_at": "2026-04-04T04:55:32.105000+00:00"
   },
   {
-    "id": 5,
+    "id": 6,
     "group_key": "earthquake|us6000smgy",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -213,77 +267,23 @@
     "fetched_at": "2026-04-04T01:35:00.602000+00:00"
   },
   {
-    "id": 6,
-    "group_key": "volcano|0365b759b6d343849b4600c87ffa9b46b3ab6613",
-    "event_type": "volcano",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "Nyamuragira",
-    "summary": "VRP 402.89 MW · MODIS · 8.06 km",
-    "started_at": "2026-04-04T00:40:00+00:00",
-    "updated_at": "2026-04-04T00:40:00+00:00",
-    "location_text": "Nyamuragira",
-    "lat": null,
-    "lon": null,
-    "source_primary": "MIROVA",
-    "source_secondary": "MODIS",
-    "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=223020",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=223020",
-    "country_code": null,
-    "payload": {
-      "volcano_id": "223020",
-      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=223020",
-      "vrp_mw": 402.89,
-      "distance_km": 8.06,
-      "sensor": "MODIS",
-      "row_class": [
-        "high"
-      ],
-      "source_page": "https://www.mirovaweb.it/NRT/",
-      "sensors": [
-        "MODIS"
-      ],
-      "reports": [
-        {
-          "volcano_id": "223020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=223020",
-          "vrp_mw": 402.89,
-          "distance_km": 8.06,
-          "sensor": "MODIS",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        }
-      ],
-      "merged_count": 1
-    },
-    "member_event_ids": [
-      9
-    ],
-    "occurred_at": "2026-04-04T00:40:00+00:00",
-    "published_at": "2026-04-04T00:40:00+00:00",
-    "fetched_at": "2026-04-04T00:40:00+00:00"
-  },
-  {
     "id": 7,
     "group_key": "volcano|0032bb8a5a458b21f88ffda1d55b92a9d8d25295",
     "event_type": "volcano",
     "severity_level": "high",
     "severity_color": "high",
     "title": "Nyamuragira",
-    "summary": "VRP 262.63 MW · VIIRS375 / VIIRS · 8.43 km",
+    "summary": "VRP 262.63 MW · VIIRS / VIIRS375 · 8.43 km",
     "started_at": "2026-04-04T00:12:00+00:00",
     "updated_at": "2026-04-04T00:12:00+00:00",
     "location_text": "Nyamuragira",
     "lat": null,
     "lon": null,
     "source_primary": "MIROVA",
-    "source_secondary": "VIIRS375 / VIIRS",
+    "source_secondary": "VIIRS / VIIRS375",
     "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
     "country_code": null,
     "payload": {
       "volcano_id": "223020",
@@ -296,21 +296,10 @@
       ],
       "source_page": "https://www.mirovaweb.it/NRT/",
       "sensors": [
-        "VIIRS375",
-        "VIIRS"
+        "VIIRS",
+        "VIIRS375"
       ],
       "reports": [
-        {
-          "volcano_id": "223020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
-          "vrp_mw": 204.66,
-          "distance_km": 8.43,
-          "sensor": "VIIRS375",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        },
         {
           "volcano_id": "223020",
           "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
@@ -321,12 +310,23 @@
             "high"
           ],
           "source_page": "https://www.mirovaweb.it/NRT/"
+        },
+        {
+          "volcano_id": "223020",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
+          "vrp_mw": 204.66,
+          "distance_km": 8.43,
+          "sensor": "VIIRS375",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
         }
       ],
       "merged_count": 2
     },
     "member_event_ids": [
-      10
+      9
     ],
     "occurred_at": "2026-04-04T00:12:00+00:00",
     "published_at": "2026-04-04T00:12:00+00:00",
@@ -429,7 +429,7 @@
       "merged_count": 2
     },
     "member_event_ids": [
-      11
+      10
     ],
     "occurred_at": "2026-04-03T20:06:00+00:00",
     "published_at": "2026-04-03T20:06:00+00:00",
@@ -484,7 +484,7 @@
       }
     },
     "member_event_ids": [
-      15
+      14
     ],
     "occurred_at": "2026-04-03T18:00:00+00:00",
     "published_at": "2026-04-03T18:00:00+00:00",
@@ -600,42 +600,6 @@
   },
   {
     "id": 14,
-    "group_key": "earthquake|us6000smax",
-    "event_type": "earthquake",
-    "severity_level": "moderate",
-    "severity_color": "moderate",
-    "title": "M 5.1 - 223 km ESE of Attu Station, Alaska",
-    "summary": "223 km ESE of Attu Station, Alaska",
-    "started_at": "2026-04-03T08:22:08.857000+00:00",
-    "updated_at": "2026-04-03T08:57:44.478000+00:00",
-    "location_text": "223 km ESE of Attu Station, Alaska",
-    "lat": 52.279,
-    "lon": 176.3511,
-    "source_primary": "USGS",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000smax",
-    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000smax",
-    "country_code": null,
-    "payload": {
-      "mag": 5.1,
-      "depth_km": 10.0,
-      "place": "223 km ESE of Attu Station, Alaska",
-      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000smax.geojson",
-      "alert": null,
-      "sig": 400,
-      "tsunami": 0,
-      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
-    },
-    "member_event_ids": [
-      8
-    ],
-    "occurred_at": "2026-04-03T08:22:08.857000+00:00",
-    "published_at": "2026-04-03T08:22:08.857000+00:00",
-    "fetched_at": "2026-04-03T08:22:08.857000+00:00"
-  },
-  {
-    "id": 15,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -708,7 +672,7 @@
       }
     },
     "member_event_ids": [
-      12
+      11
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

@@ -42,6 +42,7 @@ const WEATHER_COUNTRY_PREFIX_MAP = {
   ar: "Argentina",
   cl: "Chile",
   pe: "Peru",
+  sb: "Solomon Islands",
 };
 
 function firstNonEmpty(...values) {
@@ -72,6 +73,7 @@ function inferWeatherCountry(item) {
   if (mid === "063") return "Greece";
   if (mid === "019") return "Croatia";
   if (mid === "176") return "Italy";
+  if (mid === "139") return "Solomon Islands";
 
   return "";
 }

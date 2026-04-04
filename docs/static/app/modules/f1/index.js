@@ -53,7 +53,6 @@ function buildShell() {
 
     <div class="f1-tab-panel active" data-f1-tab-panel="live">
       <div class="f1-panel-tools">
-        <button class="f1-refresh-btn" type="button" data-f1-refresh-live>刷新</button>
         <span class="f1-refresh-note" data-f1-live-status>加载中</span>
       </div>
       <div class="f1-panel-scroll" data-f1-live-panel>
@@ -63,7 +62,6 @@ function buildShell() {
 
     <div class="f1-tab-panel" data-f1-tab-panel="news">
       <div class="f1-panel-tools">
-        <button class="f1-refresh-btn" type="button" data-f1-refresh-news>刷新</button>
         <span class="f1-refresh-note" data-f1-news-status>加载中</span>
       </div>
       <div class="f1-panel-scroll" data-f1-news-panel>
@@ -168,35 +166,6 @@ export function createF1Module(ctx) {
       const host = ensureHost(section);
       host.innerHTML = buildShell();
       wireTabs(host);
-
-      const liveBtn = host.querySelector("[data-f1-refresh-live]");
-      const newsBtn = host.querySelector("[data-f1-refresh-news]");
-
-      liveBtn?.addEventListener("click", async () => {
-        liveBtn.disabled = true;
-        try {
-          await refreshLive(host, true);
-        } catch (err) {
-          console.error("F1 live refresh failed:", err);
-          setSimpleMessage(host.querySelector("[data-f1-live-panel]"), `F1 实况刷新失败：${err?.message || err}`);
-          setStatus(host.querySelector("[data-f1-live-status]"), "刷新失败", true);
-        } finally {
-          liveBtn.disabled = false;
-        }
-      });
-
-      newsBtn?.addEventListener("click", async () => {
-        newsBtn.disabled = true;
-        try {
-          await refreshNews(host, true);
-        } catch (err) {
-          console.error("F1 news refresh failed:", err);
-          setSimpleMessage(host.querySelector("[data-f1-news-panel]"), `F1 新闻刷新失败：${err?.message || err}`);
-          setStatus(host.querySelector("[data-f1-news-status]"), "刷新失败", true);
-        } finally {
-          newsBtn.disabled = false;
-        }
-      });
 
       refreshLive(host, false).catch((err) => {
         console.error("F1 live load failed:", err);

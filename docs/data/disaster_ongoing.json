@@ -1,6 +1,133 @@
 [
   {
     "id": 1,
+    "group_key": "typhoon|TC|jtwc_abio|jtwc_abio|south_indian_ocean_area|tc_29s|54db2d145e758933",
+    "event_type": "typhoon",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Tropical Cyclone 29S (Indusa)",
+    "summary": "wind 60 kt (gust 75)",
+    "started_at": "2026-04-05T18:00:00+00:00",
+    "updated_at": "2026-04-05T18:00:00+00:00",
+    "location_text": "27.6S 70.4E",
+    "lat": -27.6,
+    "lon": 70.4,
+    "source_primary": "JTWC-ABIO",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://www.google.com/maps?q=-27.6,70.4",
+    "official_link": "https://www.google.com/maps?q=-27.6,70.4",
+    "country_code": null,
+    "payload": {
+      "item_type": "warning",
+      "source": "jtwc_abio",
+      "source_key": "jtwc_abio|south_indian_ocean_area|tc_29s",
+      "content_hash": "54db2d145e758933",
+      "platform_summary": "27.6S 70.4E | wind 60 kt (gust 75)",
+      "platform_location": "27.6S 70.4E",
+      "wind": "60 kt (gust 75)",
+      "risk_48h": null,
+      "risk_7d": null,
+      "next_update": null,
+      "raw_text": "(1) AT 05APR26 0600Z, TROPICAL CYCLONE 29S (INDUSA) WAS LOCATED \nNEAR 27.6S 70.4E, APPROXIMATELY 847 NM SOUTHEAST OF PORT LOUIS, \nMAURITIUS, AND HAD TRACKED SOUTHWARD AT 19 KNOTS OVER THE PAST SIX \nHOURS. MAXIMUM SUSTAINED SURFACE WINDS WERE ESTIMATED AT 60 KNOTS \nGUSTING TO 75 KNOTS. SEE REF A (WTXS31 PGTW 050900) FOR FURTHER \nDETAILS.",
+      "metadata": {
+        "basin_section": "SOUTH INDIAN OCEAN AREA (135E WEST TO COAST OF AFRICA)",
+        "storm_class": "TROPICAL CYCLONE",
+        "storm_id": "29S",
+        "storm_name": "INDUSA",
+        "fix_date": "05APR26",
+        "fix_time": "05APR26 0600Z",
+        "lat": -27.6,
+        "lon": 70.4,
+        "movement_text": "SOUTHWARD",
+        "movement_kt": 19,
+        "wind_kt": 60,
+        "gust_kt": 75,
+        "warning_reference": "WTXS31 PGTW 050900",
+        "bulletin_issue_at": "2026-04-05T18:00:00+00:00"
+      }
+    },
+    "member_event_ids": [
+      10
+    ],
+    "occurred_at": "2026-04-05T18:00:00+00:00",
+    "published_at": "2026-04-05T18:00:00+00:00",
+    "fetched_at": "2026-04-05T18:00:00+00:00"
+  },
+  {
+    "id": 2,
+    "group_key": "earthquake|us6000smwq",
+    "event_type": "earthquake",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "M 5.4 - south of the Kermadec Islands",
+    "summary": "south of the Kermadec Islands",
+    "started_at": "2026-04-05T17:20:47.491000+00:00",
+    "updated_at": "2026-04-05T17:55:46.040000+00:00",
+    "location_text": "south of the Kermadec Islands",
+    "lat": -32.0691,
+    "lon": -177.9594,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000smwq",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000smwq",
+    "country_code": null,
+    "payload": {
+      "mag": 5.4,
+      "depth_km": 11.0,
+      "place": "south of the Kermadec Islands",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000smwq.geojson",
+      "alert": null,
+      "sig": 449,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      1
+    ],
+    "occurred_at": "2026-04-05T17:20:47.491000+00:00",
+    "published_at": "2026-04-05T17:20:47.491000+00:00",
+    "fetched_at": "2026-04-05T17:20:47.491000+00:00"
+  },
+  {
+    "id": 3,
+    "group_key": "earthquake|us6000smwn",
+    "event_type": "earthquake",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "M 5.1 - Kermadec Islands region",
+    "summary": "Kermadec Islands region",
+    "started_at": "2026-04-05T17:10:41.726000+00:00",
+    "updated_at": "2026-04-05T17:31:42.040000+00:00",
+    "location_text": "Kermadec Islands region",
+    "lat": -31.9405,
+    "lon": -178.5931,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000smwn",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000smwn",
+    "country_code": null,
+    "payload": {
+      "mag": 5.1,
+      "depth_km": 35.0,
+      "place": "Kermadec Islands region",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000smwn.geojson",
+      "alert": null,
+      "sig": 400,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      2
+    ],
+    "occurred_at": "2026-04-05T17:10:41.726000+00:00",
+    "published_at": "2026-04-05T17:10:41.726000+00:00",
+    "fetched_at": "2026-04-05T17:10:41.726000+00:00"
+  },
+  {
+    "id": 4,
     "group_key": "volcano|a60bc12d2e6f1ec021fd3874f60ce8780f9943b7",
     "event_type": "volcano",
     "severity_level": "high",
@@ -47,14 +174,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      5
+      7
     ],
     "occurred_at": "2026-04-05T14:20:00+00:00",
     "published_at": "2026-04-05T14:20:00+00:00",
     "fetched_at": "2026-04-05T14:20:00+00:00"
   },
   {
-    "id": 2,
+    "id": 5,
     "group_key": "earthquake|us6000smui",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -83,14 +210,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      1
+      3
     ],
     "occurred_at": "2026-04-05T13:22:15.957000+00:00",
     "published_at": "2026-04-05T13:22:15.957000+00:00",
     "fetched_at": "2026-04-05T13:22:15.957000+00:00"
   },
   {
-    "id": 3,
+    "id": 6,
     "group_key": "volcano|c8024837fad7756639ed8de4b4bc2b6bff450db5",
     "event_type": "volcano",
     "severity_level": "high",
@@ -137,14 +264,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      6
+      8
     ],
     "occurred_at": "2026-04-05T09:50:00+00:00",
     "published_at": "2026-04-05T09:50:00+00:00",
     "fetched_at": "2026-04-05T09:50:00+00:00"
   },
   {
-    "id": 5,
+    "id": 8,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|tc_31p|67d48bfcdfdabd65",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -191,14 +318,14 @@
       }
     },
     "member_event_ids": [
-      8
+      11
     ],
     "occurred_at": "2026-04-05T06:00:00+00:00",
     "published_at": "2026-04-05T06:00:00+00:00",
     "fetched_at": "2026-04-05T06:00:00+00:00"
   },
   {
-    "id": 4,
+    "id": 7,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|tc_30p|115365a3d1284437",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -246,14 +373,14 @@
       }
     },
     "member_event_ids": [
-      9
+      12
     ],
     "occurred_at": "2026-04-05T06:00:00+00:00",
     "published_at": "2026-04-05T06:00:00+00:00",
     "fetched_at": "2026-04-05T06:00:00+00:00"
   },
   {
-    "id": 6,
+    "id": 9,
     "group_key": "earthquake|us6000smq4",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -282,14 +409,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      2
+      4
     ],
     "occurred_at": "2026-04-05T02:18:02.073000+00:00",
     "published_at": "2026-04-05T02:18:02.073000+00:00",
     "fetched_at": "2026-04-05T02:18:02.073000+00:00"
   },
   {
-    "id": 7,
+    "id": 10,
     "group_key": "earthquake|us6000smp9",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -318,14 +445,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      3
+      5
     ],
     "occurred_at": "2026-04-04T22:31:20.621000+00:00",
     "published_at": "2026-04-04T22:31:20.621000+00:00",
     "fetched_at": "2026-04-04T22:31:20.621000+00:00"
   },
   {
-    "id": 8,
+    "id": 11,
     "group_key": "earthquake|us6000smm5",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -354,69 +481,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      4
+      6
     ],
     "occurred_at": "2026-04-04T18:26:13.603000+00:00",
     "published_at": "2026-04-04T18:26:13.603000+00:00",
     "fetched_at": "2026-04-04T18:26:13.603000+00:00"
   },
   {
-    "id": 9,
-    "group_key": "typhoon|TC|jtwc_abio|jtwc_abio|south_indian_ocean_area|tc_29s|54db2d145e758933",
-    "event_type": "typhoon",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "Tropical Cyclone 29S (Indusa)",
-    "summary": "wind 60 kt (gust 75)",
-    "started_at": "2026-03-05T18:00:00+00:00",
-    "updated_at": "2026-03-05T18:00:00+00:00",
-    "location_text": "27.6S 70.4E",
-    "lat": -27.6,
-    "lon": 70.4,
-    "source_primary": "JTWC-ABIO",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://www.google.com/maps?q=-27.6,70.4",
-    "official_link": "https://www.google.com/maps?q=-27.6,70.4",
-    "country_code": null,
-    "payload": {
-      "item_type": "warning",
-      "source": "jtwc_abio",
-      "source_key": "jtwc_abio|south_indian_ocean_area|tc_29s",
-      "content_hash": "54db2d145e758933",
-      "platform_summary": "27.6S 70.4E | wind 60 kt (gust 75)",
-      "platform_location": "27.6S 70.4E",
-      "wind": "60 kt (gust 75)",
-      "risk_48h": null,
-      "risk_7d": null,
-      "next_update": null,
-      "raw_text": "(1) AT 05APR26 0600Z, TROPICAL CYCLONE 29S (INDUSA) WAS LOCATED \nNEAR 27.6S 70.4E, APPROXIMATELY 847 NM SOUTHEAST OF PORT LOUIS, \nMAURITIUS, AND HAD TRACKED SOUTHWARD AT 19 KNOTS OVER THE PAST SIX \nHOURS. MAXIMUM SUSTAINED SURFACE WINDS WERE ESTIMATED AT 60 KNOTS \nGUSTING TO 75 KNOTS. SEE REF A (WTXS31 PGTW 050900) FOR FURTHER \nDETAILS.",
-      "metadata": {
-        "basin_section": "SOUTH INDIAN OCEAN AREA (135E WEST TO COAST OF AFRICA)",
-        "storm_class": "TROPICAL CYCLONE",
-        "storm_id": "29S",
-        "storm_name": "INDUSA",
-        "fix_date": "05APR26",
-        "fix_time": "05APR26 0600Z",
-        "lat": -27.6,
-        "lon": 70.4,
-        "movement_text": "SOUTHWARD",
-        "movement_kt": 19,
-        "wind_kt": 60,
-        "gust_kt": 75,
-        "warning_reference": "WTXS31 PGTW 050900",
-        "bulletin_issue_at": "2026-03-05T18:00:00+00:00"
-      }
-    },
-    "member_event_ids": [
-      10
-    ],
-    "occurred_at": "2026-03-05T18:00:00+00:00",
-    "published_at": "2026-03-05T18:00:00+00:00",
-    "fetched_at": "2026-03-05T18:00:00+00:00"
-  },
-  {
-    "id": 10,
+    "id": 12,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -489,7 +561,7 @@
       }
     },
     "member_event_ids": [
-      7
+      9
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

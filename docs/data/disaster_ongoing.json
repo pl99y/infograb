@@ -48,7 +48,7 @@
       }
     },
     "member_event_ids": [
-      10
+      9
     ],
     "occurred_at": "2026-04-05T21:00:00+00:00",
     "published_at": "2026-04-05T21:00:00+00:00",
@@ -102,7 +102,7 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      7
+      6
     ],
     "occurred_at": "2026-04-05T19:20:00+00:00",
     "published_at": "2026-04-05T19:20:00+00:00",
@@ -156,7 +156,7 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      8
+      7
     ],
     "occurred_at": "2026-04-05T18:50:00+00:00",
     "published_at": "2026-04-05T18:50:00+00:00",
@@ -354,7 +354,7 @@
       }
     },
     "member_event_ids": [
-      11
+      10
     ],
     "occurred_at": "2026-04-05T06:00:00+00:00",
     "published_at": "2026-04-05T06:00:00+00:00",
@@ -409,7 +409,7 @@
       }
     },
     "member_event_ids": [
-      12
+      11
     ],
     "occurred_at": "2026-04-05T06:00:00+00:00",
     "published_at": "2026-04-05T06:00:00+00:00",
@@ -453,42 +453,6 @@
   },
   {
     "id": 11,
-    "group_key": "earthquake|us6000smp9",
-    "event_type": "earthquake",
-    "severity_level": "moderate",
-    "severity_color": "moderate",
-    "title": "M 5.0 - Kermadec Islands region",
-    "summary": "Kermadec Islands region",
-    "started_at": "2026-04-04T22:31:20.621000+00:00",
-    "updated_at": "2026-04-04T22:50:25.040000+00:00",
-    "location_text": "Kermadec Islands region",
-    "lat": -31.5203,
-    "lon": -177.9766,
-    "source_primary": "USGS",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000smp9",
-    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000smp9",
-    "country_code": null,
-    "payload": {
-      "mag": 5.0,
-      "depth_km": 30.861,
-      "place": "Kermadec Islands region",
-      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000smp9.geojson",
-      "alert": null,
-      "sig": 385,
-      "tsunami": 0,
-      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
-    },
-    "member_event_ids": [
-      6
-    ],
-    "occurred_at": "2026-04-04T22:31:20.621000+00:00",
-    "published_at": "2026-04-04T22:31:20.621000+00:00",
-    "fetched_at": "2026-04-04T22:31:20.621000+00:00"
-  },
-  {
-    "id": 12,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -561,7 +525,7 @@
       }
     },
     "member_event_ids": [
-      9
+      8
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

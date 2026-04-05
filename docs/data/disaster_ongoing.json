@@ -1,14 +1,14 @@
 [
   {
     "id": 1,
-    "group_key": "volcano|730587e403b947d4079070955e32d57d0ab9eff9",
+    "group_key": "volcano|d4679e49676e29739be6b68690539ee2f36a4b3f",
     "event_type": "volcano",
     "severity_level": "high",
     "severity_color": "high",
     "title": "Aoba",
-    "summary": "VRP 658.51 MW · VIIRS · 2.37 km",
-    "started_at": "2026-04-05T02:24:00+00:00",
-    "updated_at": "2026-04-05T02:24:00+00:00",
+    "summary": "VRP 571.29 MW · VIIRS · 2.70 km",
+    "started_at": "2026-04-05T02:42:01+00:00",
+    "updated_at": "2026-04-05T02:42:01+00:00",
     "location_text": "Aoba",
     "lat": null,
     "lon": null,
@@ -21,8 +21,8 @@
     "payload": {
       "volcano_id": "257030",
       "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=257030",
-      "vrp_mw": 658.51,
-      "distance_km": 2.37,
+      "vrp_mw": 571.29,
+      "distance_km": 2.7,
       "sensor": "VIIRS",
       "row_class": [
         "high"
@@ -35,8 +35,8 @@
         {
           "volcano_id": "257030",
           "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=257030",
-          "vrp_mw": 658.51,
-          "distance_km": 2.37,
+          "vrp_mw": 571.29,
+          "distance_km": 2.7,
           "sensor": "VIIRS",
           "row_class": [
             "high"
@@ -49,12 +49,66 @@
     "member_event_ids": [
       11
     ],
+    "occurred_at": "2026-04-05T02:42:01+00:00",
+    "published_at": "2026-04-05T02:42:01+00:00",
+    "fetched_at": "2026-04-05T02:42:01+00:00"
+  },
+  {
+    "id": 2,
+    "group_key": "volcano|730587e403b947d4079070955e32d57d0ab9eff9",
+    "event_type": "volcano",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Aoba",
+    "summary": "VRP 100.77 MW · VIIRS375 · 2.63 km",
+    "started_at": "2026-04-05T02:24:00+00:00",
+    "updated_at": "2026-04-05T02:24:00+00:00",
+    "location_text": "Aoba",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "VIIRS375",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=257030",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=257030",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "257030",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=257030",
+      "vrp_mw": 100.77,
+      "distance_km": 2.63,
+      "sensor": "VIIRS375",
+      "row_class": [
+        "high"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "VIIRS375"
+      ],
+      "reports": [
+        {
+          "volcano_id": "257030",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=257030",
+          "vrp_mw": 100.77,
+          "distance_km": 2.63,
+          "sensor": "VIIRS375",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 1
+    },
+    "member_event_ids": [
+      12
+    ],
     "occurred_at": "2026-04-05T02:24:00+00:00",
     "published_at": "2026-04-05T02:24:00+00:00",
     "fetched_at": "2026-04-05T02:24:00+00:00"
   },
   {
-    "id": 2,
+    "id": 3,
     "group_key": "earthquake|us6000smq4",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -90,7 +144,7 @@
     "fetched_at": "2026-04-05T02:18:02.073000+00:00"
   },
   {
-    "id": 3,
+    "id": 4,
     "group_key": "volcano|f0ffeae99e4485c15a093bc050fa4b350a6a882c",
     "event_type": "volcano",
     "severity_level": "high",
@@ -137,14 +191,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      12
+      13
     ],
     "occurred_at": "2026-04-05T02:12:02+00:00",
     "published_at": "2026-04-05T02:12:02+00:00",
     "fetched_at": "2026-04-05T02:12:02+00:00"
   },
   {
-    "id": 4,
+    "id": 5,
     "group_key": "volcano|9fda0b6552bd94de9a4182c72c6e408a6d6cbb9e",
     "event_type": "volcano",
     "severity_level": "very_high",
@@ -191,14 +245,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      13
+      14
     ],
     "occurred_at": "2026-04-05T01:20:00+00:00",
     "published_at": "2026-04-05T01:20:00+00:00",
     "fetched_at": "2026-04-05T01:20:00+00:00"
   },
   {
-    "id": 5,
+    "id": 6,
     "group_key": "volcano|a21a80f73a634fbd3ba7e76c968be5762a53f462",
     "event_type": "volcano",
     "severity_level": "high",
@@ -245,14 +299,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      14
+      15
     ],
     "occurred_at": "2026-04-05T00:45:00+00:00",
     "published_at": "2026-04-05T00:45:00+00:00",
     "fetched_at": "2026-04-05T00:45:00+00:00"
   },
   {
-    "id": 6,
+    "id": 7,
     "group_key": "volcano|6434636fdabab034e5b5c7d4436b754e202037e4",
     "event_type": "volcano",
     "severity_level": "high",
@@ -311,14 +365,14 @@
       "merged_count": 2
     },
     "member_event_ids": [
-      15
+      16
     ],
     "occurred_at": "2026-04-05T00:18:01+00:00",
     "published_at": "2026-04-05T00:18:01+00:00",
     "fetched_at": "2026-04-05T00:18:01+00:00"
   },
   {
-    "id": 7,
+    "id": 8,
     "group_key": "volcano|64afacab813aba3092e361a20074cb6cf709cb1c",
     "event_type": "volcano",
     "severity_level": "high",
@@ -365,14 +419,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      16
+      17
     ],
     "occurred_at": "2026-04-04T22:55:00+00:00",
     "published_at": "2026-04-04T22:55:00+00:00",
     "fetched_at": "2026-04-04T22:55:00+00:00"
   },
   {
-    "id": 8,
+    "id": 9,
     "group_key": "earthquake|us6000smp9",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -408,7 +462,7 @@
     "fetched_at": "2026-04-04T22:31:20.621000+00:00"
   },
   {
-    "id": 9,
+    "id": 10,
     "group_key": "volcano|ca350b3a582042d06e67c107710cb3126080fa7e",
     "event_type": "volcano",
     "severity_level": "high",
@@ -455,14 +509,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      17
+      18
     ],
     "occurred_at": "2026-04-04T19:50:00+00:00",
     "published_at": "2026-04-04T19:50:00+00:00",
     "fetched_at": "2026-04-04T19:50:00+00:00"
   },
   {
-    "id": 10,
+    "id": 11,
     "group_key": "earthquake|us6000smm5",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -498,7 +552,7 @@
     "fetched_at": "2026-04-04T18:26:13.603000+00:00"
   },
   {
-    "id": 11,
+    "id": 12,
     "group_key": "typhoon|TC|jtwc_abio|jtwc_abio|south_indian_ocean_area|tc_29s|4a37d242bfeb5779",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -546,30 +600,30 @@
       }
     },
     "member_event_ids": [
-      20
+      21
     ],
     "occurred_at": "2026-04-04T18:00:00+00:00",
     "published_at": "2026-04-04T18:00:00+00:00",
     "fetched_at": "2026-04-04T18:00:00+00:00"
   },
   {
-    "id": 12,
+    "id": 13,
     "group_key": "volcano|9be7a956e82c033c63870f06afbc3d59a20563c7",
     "event_type": "volcano",
     "severity_level": "high",
     "severity_color": "high",
     "title": "Mayon",
-    "summary": "VRP 134.82 MW · VIIRS / VIIRS375 · 2.70 km",
+    "summary": "VRP 134.82 MW · VIIRS375 / VIIRS · 2.70 km",
     "started_at": "2026-04-04T17:24:01+00:00",
     "updated_at": "2026-04-04T17:24:01+00:00",
     "location_text": "Mayon",
     "lat": null,
     "lon": null,
     "source_primary": "MIROVA",
-    "source_secondary": "VIIRS / VIIRS375",
+    "source_secondary": "VIIRS375 / VIIRS",
     "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
     "country_code": null,
     "payload": {
       "volcano_id": "273030",
@@ -578,26 +632,15 @@
       "distance_km": 2.7,
       "sensor": "VIIRS",
       "row_class": [
-        "high",
-        "moderate"
+        "moderate",
+        "high"
       ],
       "source_page": "https://www.mirovaweb.it/NRT/",
       "sensors": [
-        "VIIRS",
-        "VIIRS375"
+        "VIIRS375",
+        "VIIRS"
       ],
       "reports": [
-        {
-          "volcano_id": "273030",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
-          "vrp_mw": 134.82,
-          "distance_km": 2.7,
-          "sensor": "VIIRS",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        },
         {
           "volcano_id": "273030",
           "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
@@ -608,19 +651,30 @@
             "moderate"
           ],
           "source_page": "https://www.mirovaweb.it/NRT/"
+        },
+        {
+          "volcano_id": "273030",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
+          "vrp_mw": 134.82,
+          "distance_km": 2.7,
+          "sensor": "VIIRS",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
         }
       ],
       "merged_count": 2
     },
     "member_event_ids": [
-      18
+      19
     ],
     "occurred_at": "2026-04-04T17:24:01+00:00",
     "published_at": "2026-04-04T17:24:01+00:00",
     "fetched_at": "2026-04-04T17:24:01+00:00"
   },
   {
-    "id": 13,
+    "id": 14,
     "group_key": "earthquake|us6000smlu",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -628,7 +682,7 @@
     "title": "M 5.5 - 4 km ENE of Hualien City, Taiwan",
     "summary": "4 km ENE of Hualien City, Taiwan",
     "started_at": "2026-04-04T17:14:57.460000+00:00",
-    "updated_at": "2026-04-05T04:11:43.219000+00:00",
+    "updated_at": "2026-04-05T05:01:25.672000+00:00",
     "location_text": "4 km ENE of Hualien City, Taiwan",
     "lat": 23.9901,
     "lon": 121.6455,
@@ -644,7 +698,7 @@
       "place": "4 km ENE of Hualien City, Taiwan",
       "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000smlu.geojson",
       "alert": "green",
-      "sig": 482,
+      "sig": 483,
       "tsunami": 0,
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
@@ -656,7 +710,7 @@
     "fetched_at": "2026-04-04T17:14:57.460000+00:00"
   },
   {
-    "id": 14,
+    "id": 15,
     "group_key": "earthquake|us6000smlm",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -692,7 +746,7 @@
     "fetched_at": "2026-04-04T16:23:07.259000+00:00"
   },
   {
-    "id": 15,
+    "id": 16,
     "group_key": "earthquake|us6000smjx",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -728,7 +782,7 @@
     "fetched_at": "2026-04-04T11:21:12.368000+00:00"
   },
   {
-    "id": 16,
+    "id": 17,
     "group_key": "earthquake|us6000smj7",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -764,7 +818,7 @@
     "fetched_at": "2026-04-04T10:36:46.191000+00:00"
   },
   {
-    "id": 17,
+    "id": 18,
     "group_key": "earthquake|us6000smj4",
     "event_type": "earthquake",
     "severity_level": "high",
@@ -800,7 +854,7 @@
     "fetched_at": "2026-04-04T10:34:31.609000+00:00"
   },
   {
-    "id": 18,
+    "id": 19,
     "group_key": "earthquake|us6000smic",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -836,7 +890,7 @@
     "fetched_at": "2026-04-04T08:12:51.492000+00:00"
   },
   {
-    "id": 19,
+    "id": 20,
     "group_key": "earthquake|us6000smhq",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -872,7 +926,7 @@
     "fetched_at": "2026-04-04T05:52:42.749000+00:00"
   },
   {
-    "id": 21,
+    "id": 22,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|tc_31p|67d48bfcdfdabd65",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -919,14 +973,14 @@
       }
     },
     "member_event_ids": [
-      21
+      22
     ],
     "occurred_at": "2026-03-05T06:00:00+00:00",
     "published_at": "2026-03-05T06:00:00+00:00",
     "fetched_at": "2026-03-05T06:00:00+00:00"
   },
   {
-    "id": 20,
+    "id": 21,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|tc_30p|115365a3d1284437",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -974,14 +1028,14 @@
       }
     },
     "member_event_ids": [
-      22
+      23
     ],
     "occurred_at": "2026-03-05T06:00:00+00:00",
     "published_at": "2026-03-05T06:00:00+00:00",
     "fetched_at": "2026-03-05T06:00:00+00:00"
   },
   {
-    "id": 22,
+    "id": 23,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -1054,7 +1108,7 @@
       }
     },
     "member_event_ids": [
-      19
+      20
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

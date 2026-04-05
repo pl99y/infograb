@@ -47,7 +47,7 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      6
+      5
     ],
     "occurred_at": "2026-04-05T14:20:00+00:00",
     "published_at": "2026-04-05T14:20:00+00:00",
@@ -137,7 +137,7 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      7
+      6
     ],
     "occurred_at": "2026-04-05T09:50:00+00:00",
     "published_at": "2026-04-05T09:50:00+00:00",
@@ -191,7 +191,7 @@
       }
     },
     "member_event_ids": [
-      9
+      8
     ],
     "occurred_at": "2026-04-05T06:00:00+00:00",
     "published_at": "2026-04-05T06:00:00+00:00",
@@ -246,7 +246,7 @@
       }
     },
     "member_event_ids": [
-      10
+      9
     ],
     "occurred_at": "2026-04-05T06:00:00+00:00",
     "published_at": "2026-04-05T06:00:00+00:00",
@@ -362,97 +362,61 @@
   },
   {
     "id": 9,
-    "group_key": "typhoon|TC|jtwc_abio|jtwc_abio|south_indian_ocean_area|tc_29s|4a37d242bfeb5779",
+    "group_key": "typhoon|TC|jtwc_abio|jtwc_abio|south_indian_ocean_area|tc_29s|54db2d145e758933",
     "event_type": "typhoon",
     "severity_level": "high",
     "severity_color": "high",
     "title": "Tropical Cyclone 29S (Indusa)",
-    "summary": "wind 90 kt (gust 110)",
-    "started_at": "2026-04-04T18:00:00+00:00",
-    "updated_at": "2026-04-04T18:00:00+00:00",
-    "location_text": "20.3S 70.2E",
-    "lat": -20.3,
-    "lon": 70.2,
+    "summary": "wind 60 kt (gust 75)",
+    "started_at": "2026-03-05T18:00:00+00:00",
+    "updated_at": "2026-03-05T18:00:00+00:00",
+    "location_text": "27.6S 70.4E",
+    "lat": -27.6,
+    "lon": 70.4,
     "source_primary": "JTWC-ABIO",
     "source_secondary": null,
     "status": "active",
-    "map_url": "https://www.google.com/maps?q=-20.3,70.2",
-    "official_link": "https://www.google.com/maps?q=-20.3,70.2",
+    "map_url": "https://www.google.com/maps?q=-27.6,70.4",
+    "official_link": "https://www.google.com/maps?q=-27.6,70.4",
     "country_code": null,
     "payload": {
       "item_type": "warning",
       "source": "jtwc_abio",
       "source_key": "jtwc_abio|south_indian_ocean_area|tc_29s",
-      "content_hash": "4a37d242bfeb5779",
-      "platform_summary": "20.3S 70.2E | wind 90 kt (gust 110)",
-      "platform_location": "20.3S 70.2E",
-      "wind": "90 kt (gust 110)",
+      "content_hash": "54db2d145e758933",
+      "platform_summary": "27.6S 70.4E | wind 60 kt (gust 75)",
+      "platform_location": "27.6S 70.4E",
+      "wind": "60 kt (gust 75)",
       "risk_48h": null,
       "risk_7d": null,
       "next_update": null,
-      "raw_text": "(1) AT 04APR26 0600Z, TROPICAL CYCLONE 29S (INDUSA) WAS LOCATED \nNEAR 20.3S 70.2E, APPROXIMATELY 726 NM EAST OF PORT LOUIS, MAURITIUS, \nAND HAD TRACKED SOUTH-SOUTHWESTWARD AT 12 KNOTS OVER THE PAST SIX \nHOURS. MAXIMUM SUSTAINED SURFACE WINDS WERE ESTIMATED AT 90 KNOTS \nGUSTING TO 110 KNOTS. SEE REF A (WTXS31 PGTW 040900) FOR FURTHER \nDETAILS.",
+      "raw_text": "(1) AT 05APR26 0600Z, TROPICAL CYCLONE 29S (INDUSA) WAS LOCATED \nNEAR 27.6S 70.4E, APPROXIMATELY 847 NM SOUTHEAST OF PORT LOUIS, \nMAURITIUS, AND HAD TRACKED SOUTHWARD AT 19 KNOTS OVER THE PAST SIX \nHOURS. MAXIMUM SUSTAINED SURFACE WINDS WERE ESTIMATED AT 60 KNOTS \nGUSTING TO 75 KNOTS. SEE REF A (WTXS31 PGTW 050900) FOR FURTHER \nDETAILS.",
       "metadata": {
         "basin_section": "SOUTH INDIAN OCEAN AREA (135E WEST TO COAST OF AFRICA)",
         "storm_class": "TROPICAL CYCLONE",
         "storm_id": "29S",
         "storm_name": "INDUSA",
-        "fix_date": "04APR26",
-        "fix_time": "04APR26 0600Z",
-        "lat": -20.3,
-        "lon": 70.2,
-        "movement_text": "SOUTH-SOUTHWESTWARD",
-        "movement_kt": 12,
-        "wind_kt": 90,
-        "gust_kt": 110,
-        "warning_reference": "WTXS31 PGTW 040900",
-        "bulletin_issue_at": "2026-04-04T18:00:00+00:00"
+        "fix_date": "05APR26",
+        "fix_time": "05APR26 0600Z",
+        "lat": -27.6,
+        "lon": 70.4,
+        "movement_text": "SOUTHWARD",
+        "movement_kt": 19,
+        "wind_kt": 60,
+        "gust_kt": 75,
+        "warning_reference": "WTXS31 PGTW 050900",
+        "bulletin_issue_at": "2026-03-05T18:00:00+00:00"
       }
     },
     "member_event_ids": [
-      11
+      10
     ],
-    "occurred_at": "2026-04-04T18:00:00+00:00",
-    "published_at": "2026-04-04T18:00:00+00:00",
-    "fetched_at": "2026-04-04T18:00:00+00:00"
+    "occurred_at": "2026-03-05T18:00:00+00:00",
+    "published_at": "2026-03-05T18:00:00+00:00",
+    "fetched_at": "2026-03-05T18:00:00+00:00"
   },
   {
     "id": 10,
-    "group_key": "earthquake|us6000smlu",
-    "event_type": "earthquake",
-    "severity_level": "moderate",
-    "severity_color": "moderate",
-    "title": "M 5.5 - 4 km ENE of Hualien City, Taiwan",
-    "summary": "4 km ENE of Hualien City, Taiwan",
-    "started_at": "2026-04-04T17:14:57.460000+00:00",
-    "updated_at": "2026-04-05T16:01:37.419000+00:00",
-    "location_text": "4 km ENE of Hualien City, Taiwan",
-    "lat": 23.9901,
-    "lon": 121.6455,
-    "source_primary": "USGS",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000smlu",
-    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000smlu",
-    "country_code": null,
-    "payload": {
-      "mag": 5.5,
-      "depth_km": 22.066,
-      "place": "4 km ENE of Hualien City, Taiwan",
-      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000smlu.geojson",
-      "alert": "green",
-      "sig": 485,
-      "tsunami": 0,
-      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
-    },
-    "member_event_ids": [
-      5
-    ],
-    "occurred_at": "2026-04-04T17:14:57.460000+00:00",
-    "published_at": "2026-04-04T17:14:57.460000+00:00",
-    "fetched_at": "2026-04-04T17:14:57.460000+00:00"
-  },
-  {
-    "id": 11,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -525,7 +489,7 @@
       }
     },
     "member_event_ids": [
-      8
+      7
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

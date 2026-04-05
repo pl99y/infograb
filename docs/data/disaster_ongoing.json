@@ -169,17 +169,17 @@
     "severity_level": "high",
     "severity_color": "high",
     "title": "Aoba",
-    "summary": "VRP 571.29 MW · VIIRS375 / VIIRS · 2.28 km",
+    "summary": "VRP 571.29 MW · VIIRS / VIIRS375 · 2.28 km",
     "started_at": "2026-04-05T02:42:01+00:00",
     "updated_at": "2026-04-05T02:42:01+00:00",
     "location_text": "Aoba",
     "lat": null,
     "lon": null,
     "source_primary": "MIROVA",
-    "source_secondary": "VIIRS375 / VIIRS",
+    "source_secondary": "VIIRS / VIIRS375",
     "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=257030",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=257030",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=257030",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=257030",
     "country_code": null,
     "payload": {
       "volcano_id": "257030",
@@ -188,26 +188,15 @@
       "distance_km": 2.7,
       "sensor": "VIIRS",
       "row_class": [
-        "moderate",
-        "high"
+        "high",
+        "moderate"
       ],
       "source_page": "https://www.mirovaweb.it/NRT/",
       "sensors": [
-        "VIIRS375",
-        "VIIRS"
+        "VIIRS",
+        "VIIRS375"
       ],
       "reports": [
-        {
-          "volcano_id": "257030",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=257030",
-          "vrp_mw": 98.97,
-          "distance_km": 2.28,
-          "sensor": "VIIRS375",
-          "row_class": [
-            "moderate"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        },
         {
           "volcano_id": "257030",
           "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=257030",
@@ -216,6 +205,17 @@
           "sensor": "VIIRS",
           "row_class": [
             "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        },
+        {
+          "volcano_id": "257030",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=257030",
+          "vrp_mw": 98.97,
+          "distance_km": 2.28,
+          "sensor": "VIIRS375",
+          "row_class": [
+            "moderate"
           ],
           "source_page": "https://www.mirovaweb.it/NRT/"
         }
@@ -272,17 +272,17 @@
     "severity_level": "high",
     "severity_color": "high",
     "title": "Nyamuragira",
-    "summary": "VRP 262.57 MW · VIIRS / VIIRS375 · 4.74 km",
+    "summary": "VRP 262.57 MW · VIIRS375 / VIIRS · 4.74 km",
     "started_at": "2026-04-05T00:18:01+00:00",
     "updated_at": "2026-04-05T00:18:01+00:00",
     "location_text": "Nyamuragira",
     "lat": null,
     "lon": null,
     "source_primary": "MIROVA",
-    "source_secondary": "VIIRS / VIIRS375",
+    "source_secondary": "VIIRS375 / VIIRS",
     "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
     "country_code": null,
     "payload": {
       "volcano_id": "223020",
@@ -295,10 +295,21 @@
       ],
       "source_page": "https://www.mirovaweb.it/NRT/",
       "sensors": [
-        "VIIRS",
-        "VIIRS375"
+        "VIIRS375",
+        "VIIRS"
       ],
       "reports": [
+        {
+          "volcano_id": "223020",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
+          "vrp_mw": 226.5,
+          "distance_km": 8.33,
+          "sensor": "VIIRS375",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        },
         {
           "volcano_id": "223020",
           "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
@@ -312,17 +323,17 @@
         },
         {
           "volcano_id": "223020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
-          "vrp_mw": 226.5,
-          "distance_km": 8.33,
-          "sensor": "VIIRS375",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
+          "vrp_mw": 262.57,
+          "distance_km": 4.74,
+          "sensor": "VIIRS",
           "row_class": [
             "high"
           ],
           "source_page": "https://www.mirovaweb.it/NRT/"
         }
       ],
-      "merged_count": 2
+      "merged_count": 3
     },
     "member_event_ids": [
       8
@@ -539,7 +550,7 @@
     "title": "Flood in Democratic Republic of Congo",
     "summary": "Democratic Republic of Congo",
     "started_at": "2026-02-11T01:00:00+00:00",
-    "updated_at": "2026-04-05T12:00:59+00:00",
+    "updated_at": "2026-04-05T12:11:09+00:00",
     "location_text": "Democratic Republic of Congo",
     "lat": null,
     "lon": null,
@@ -583,7 +594,7 @@
         "country": "Democratic Republic of Congo",
         "fromdate": "2026-02-11T01:00:00",
         "todate": "2026-03-05T01:00:00",
-        "datemodified": "2026-04-05T12:00:59",
+        "datemodified": "2026-04-05T12:11:09",
         "iso3": "COD",
         "source": "GLOFAS",
         "sourceid": "",

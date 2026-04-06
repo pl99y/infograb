@@ -1,6 +1,42 @@
 [
   {
     "id": 1,
+    "group_key": "earthquake|us6000sn11",
+    "event_type": "earthquake",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "M 5.9 - Pacific-Antarctic Ridge",
+    "summary": "Pacific-Antarctic Ridge",
+    "started_at": "2026-04-06T11:18:37.401000+00:00",
+    "updated_at": "2026-04-06T11:54:50.040000+00:00",
+    "location_text": "Pacific-Antarctic Ridge",
+    "lat": -54.994,
+    "lon": -129.111,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sn11",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sn11",
+    "country_code": null,
+    "payload": {
+      "mag": 5.9,
+      "depth_km": 10.0,
+      "place": "Pacific-Antarctic Ridge",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000sn11.geojson",
+      "alert": "green",
+      "sig": 536,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      1
+    ],
+    "occurred_at": "2026-04-06T11:18:37.401000+00:00",
+    "published_at": "2026-04-06T11:18:37.401000+00:00",
+    "fetched_at": "2026-04-06T11:18:37.401000+00:00"
+  },
+  {
+    "id": 2,
     "group_key": "earthquake|us6000sn00",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -29,14 +65,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      1
+      2
     ],
     "occurred_at": "2026-04-06T07:22:42.142000+00:00",
     "published_at": "2026-04-06T07:22:42.142000+00:00",
     "fetched_at": "2026-04-06T07:22:42.142000+00:00"
   },
   {
-    "id": 2,
+    "id": 3,
     "group_key": "volcano|c76a99eebe1a9ca79e19c57296bde22e107aa874",
     "event_type": "volcano",
     "severity_level": "high",
@@ -83,14 +119,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      8
+      9
     ],
     "occurred_at": "2026-04-06T07:20:00+00:00",
     "published_at": "2026-04-06T07:20:00+00:00",
     "fetched_at": "2026-04-06T07:20:00+00:00"
   },
   {
-    "id": 3,
+    "id": 4,
     "group_key": "earthquake|us6000smzu",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -119,14 +155,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      2
+      3
     ],
     "occurred_at": "2026-04-06T06:15:25.459000+00:00",
     "published_at": "2026-04-06T06:15:25.459000+00:00",
     "fetched_at": "2026-04-06T06:15:25.459000+00:00"
   },
   {
-    "id": 5,
+    "id": 6,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|tc_31p|ea164119bd9be16b",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -174,14 +210,14 @@
       }
     },
     "member_event_ids": [
-      10
+      11
     ],
     "occurred_at": "2026-04-06T06:00:00+00:00",
     "published_at": "2026-04-06T06:00:00+00:00",
     "fetched_at": "2026-04-06T06:00:00+00:00"
   },
   {
-    "id": 4,
+    "id": 5,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|tc_30p|adfe98417048970d",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -229,14 +265,14 @@
       }
     },
     "member_event_ids": [
-      11
+      12
     ],
     "occurred_at": "2026-04-06T06:00:00+00:00",
     "published_at": "2026-04-06T06:00:00+00:00",
     "fetched_at": "2026-04-06T06:00:00+00:00"
   },
   {
-    "id": 6,
+    "id": 7,
     "group_key": "earthquake|us6000smyb",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -265,14 +301,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      3
+      4
     ],
     "occurred_at": "2026-04-06T00:42:26.628000+00:00",
     "published_at": "2026-04-06T00:42:26.628000+00:00",
     "fetched_at": "2026-04-06T00:42:26.628000+00:00"
   },
   {
-    "id": 7,
+    "id": 8,
     "group_key": "typhoon|TC|jtwc_abio|jtwc_abio|south_indian_ocean_area|tc_29s|a01d52c6b7990c04",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -320,14 +356,14 @@
       }
     },
     "member_event_ids": [
-      12
+      13
     ],
     "occurred_at": "2026-04-05T21:00:00+00:00",
     "published_at": "2026-04-05T21:00:00+00:00",
     "fetched_at": "2026-04-05T21:00:00+00:00"
   },
   {
-    "id": 8,
+    "id": 9,
     "group_key": "earthquake|us6000smwq",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -356,14 +392,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      4
+      5
     ],
     "occurred_at": "2026-04-05T17:20:47.491000+00:00",
     "published_at": "2026-04-05T17:20:47.491000+00:00",
     "fetched_at": "2026-04-05T17:20:47.491000+00:00"
   },
   {
-    "id": 9,
+    "id": 10,
     "group_key": "earthquake|us6000smww",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -392,14 +428,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      5
+      6
     ],
     "occurred_at": "2026-04-05T17:19:51.822000+00:00",
     "published_at": "2026-04-05T17:19:51.822000+00:00",
     "fetched_at": "2026-04-05T17:19:51.822000+00:00"
   },
   {
-    "id": 10,
+    "id": 11,
     "group_key": "earthquake|us6000smwn",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -428,14 +464,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      6
+      7
     ],
     "occurred_at": "2026-04-05T17:10:41.726000+00:00",
     "published_at": "2026-04-05T17:10:41.726000+00:00",
     "fetched_at": "2026-04-05T17:10:41.726000+00:00"
   },
   {
-    "id": 11,
+    "id": 12,
     "group_key": "earthquake|us6000smui",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -464,14 +500,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      7
+      8
     ],
     "occurred_at": "2026-04-05T13:22:15.957000+00:00",
     "published_at": "2026-04-05T13:22:15.957000+00:00",
     "fetched_at": "2026-04-05T13:22:15.957000+00:00"
   },
   {
-    "id": 12,
+    "id": 13,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -544,7 +580,7 @@
       }
     },
     "member_event_ids": [
-      9
+      10
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

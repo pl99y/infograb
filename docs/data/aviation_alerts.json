@@ -1,51 +1,6 @@
 [
   {
     "id": 1,
-    "dedupe_key": "40cebdfd860ded0147026f1c51b227aef49dd597",
-    "callsign": "U28058",
-    "status_text": "Status N/A",
-    "alert_type": "7600 - Lost Comm",
-    "squawk_code": "7600",
-    "event_date_text": "2026 Apr 6",
-    "departure_time_text": "07:10 CEST",
-    "departure_airport": "Barcelona ( BCN/LEBL )",
-    "arrival_time_text": "08:40 BST",
-    "arrival_airport": "London Gatwick ( LGW/EGKK )",
-    "duration_text": "02h37m",
-    "aircraft_text": "A319 ( OE-LQJ )",
-    "distance_text": null,
-    "age_hours": null,
-    "source_name": "AirNav Radar",
-    "source_url": "https://www.airnavradar.com/data/alerts",
-    "fetched_at": "2026-04-06T07:31:10.360829+00:00",
-    "created_at": "2026-04-06 07:31:10",
-    "extra": {
-      "parser_version": "airnav_rows_primary_v3",
-      "raw_cells": [
-        "2026 Apr 6",
-        "U28058",
-        "Barcelona ( BCN/LEBL )",
-        "07:10 CEST",
-        "London Gatwick ( LGW/EGKK )",
-        "08:40 BST",
-        "A319 ( OE-LQJ )",
-        "Landed 08:28 BST Landing time derived from ADS-B/Radar data",
-        "02h37m",
-        "LIVE",
-        "7600 - Lost Comm"
-      ],
-      "raw_callsign": "U28058",
-      "callsign_missing": false,
-      "callsign_source": "flight_column",
-      "notes": [
-        "Landed 08:28 BST Landing time derived from ADS-B/Radar data",
-        "LIVE"
-      ],
-      "fallback_reason": "Could not parse any current AirNav alerts"
-    }
-  },
-  {
-    "id": 2,
     "dedupe_key": "dd10f0a1d7f90bd500711d9994ce8b399936071e",
     "callsign": "CNV7781",
     "status_text": "Status N/A",
@@ -62,8 +17,8 @@
     "age_hours": null,
     "source_name": "AirNav Radar",
     "source_url": "https://www.airnavradar.com/data/alerts",
-    "fetched_at": "2026-04-06T07:31:10.360829+00:00",
-    "created_at": "2026-04-06 07:31:10",
+    "fetched_at": "2026-04-06T08:01:05.566544+00:00",
+    "created_at": "2026-04-06 08:01:05",
     "extra": {
       "parser_version": "airnav_rows_primary_v3",
       "raw_cells": [
@@ -86,7 +41,7 @@
     }
   },
   {
-    "id": 3,
+    "id": 2,
     "dedupe_key": "df135d141e5d0df55fd27ea1798683b904689970",
     "callsign": "N811CC",
     "status_text": "Status N/A",
@@ -103,8 +58,8 @@
     "age_hours": null,
     "source_name": "AirNav Radar",
     "source_url": "https://www.airnavradar.com/data/alerts",
-    "fetched_at": "2026-04-06T07:31:10.360829+00:00",
-    "created_at": "2026-04-06 07:31:10",
+    "fetched_at": "2026-04-06T08:01:05.566544+00:00",
+    "created_at": "2026-04-06 08:01:05",
     "extra": {
       "parser_version": "airnav_rows_primary_v3",
       "raw_cells": [
@@ -130,7 +85,7 @@
     }
   },
   {
-    "id": 4,
+    "id": 3,
     "dedupe_key": "d0b3c71a3cb16439c3120bed32334b2eb4ccc027",
     "callsign": "AR1917",
     "status_text": "Status N/A",
@@ -147,8 +102,8 @@
     "age_hours": null,
     "source_name": "AirNav Radar",
     "source_url": "https://www.airnavradar.com/data/alerts",
-    "fetched_at": "2026-04-06T07:31:10.360829+00:00",
-    "created_at": "2026-04-06 07:31:10",
+    "fetched_at": "2026-04-06T08:01:05.566544+00:00",
+    "created_at": "2026-04-06 08:01:05",
     "extra": {
       "parser_version": "airnav_rows_primary_v3",
       "raw_cells": [
@@ -174,7 +129,7 @@
     }
   },
   {
-    "id": 5,
+    "id": 4,
     "dedupe_key": "a6fa3afbf31cd585abcfa4c70b87b5f6ddc8bd0e",
     "callsign": "CNK9",
     "status_text": "Landed 10:54 MST Landing time derived from company/airport information",
@@ -191,8 +146,8 @@
     "age_hours": null,
     "source_name": "AirNav Radar",
     "source_url": "https://www.airnavradar.com/data/alerts",
-    "fetched_at": "2026-04-06T07:31:10.360829+00:00",
-    "created_at": "2026-04-06 07:31:10",
+    "fetched_at": "2026-04-06T08:01:05.566544+00:00",
+    "created_at": "2026-04-06 08:01:05",
     "extra": {
       "parser_version": "airnav_rows_primary_v3",
       "raw_cells": [
@@ -215,7 +170,7 @@
     }
   },
   {
-    "id": 6,
+    "id": 5,
     "dedupe_key": "e43f32ffdeaa3e4f973d1a75638fe2cb8c4dc8c9",
     "callsign": "B124Q",
     "status_text": "Status N/A",
@@ -232,8 +187,8 @@
     "age_hours": null,
     "source_name": "AirNav Radar",
     "source_url": "https://www.airnavradar.com/data/alerts",
-    "fetched_at": "2026-04-06T07:31:10.360829+00:00",
-    "created_at": "2026-04-06 07:31:10",
+    "fetched_at": "2026-04-06T08:01:05.566544+00:00",
+    "created_at": "2026-04-06 08:01:05",
     "extra": {
       "parser_version": "airnav_rows_primary_v3",
       "raw_cells": [
@@ -259,7 +214,7 @@
     }
   },
   {
-    "id": 7,
+    "id": 6,
     "dedupe_key": "ef6a3b2149a9e66ddcc2c2a316ce53d84d623b83",
     "callsign": "AS2132",
     "status_text": "Status N/A",
@@ -276,8 +231,8 @@
     "age_hours": null,
     "source_name": "AirNav Radar",
     "source_url": "https://www.airnavradar.com/data/alerts",
-    "fetched_at": "2026-04-06T07:31:10.360829+00:00",
-    "created_at": "2026-04-06 07:31:10",
+    "fetched_at": "2026-04-06T08:01:05.566544+00:00",
+    "created_at": "2026-04-06 08:01:05",
     "extra": {
       "parser_version": "airnav_rows_primary_v3",
       "raw_cells": [
@@ -303,7 +258,7 @@
     }
   },
   {
-    "id": 8,
+    "id": 7,
     "dedupe_key": "1d8fbcf8c9d572073728a1f4bfe84ad8034ed4bd",
     "callsign": "N448LF",
     "status_text": "Status N/A",
@@ -320,8 +275,8 @@
     "age_hours": null,
     "source_name": "AirNav Radar",
     "source_url": "https://www.airnavradar.com/data/alerts",
-    "fetched_at": "2026-04-06T07:31:10.360829+00:00",
-    "created_at": "2026-04-06 07:31:10",
+    "fetched_at": "2026-04-06T08:01:05.566544+00:00",
+    "created_at": "2026-04-06 08:01:05",
     "extra": {
       "parser_version": "airnav_rows_primary_v3",
       "raw_cells": [
@@ -347,7 +302,7 @@
     }
   },
   {
-    "id": 9,
+    "id": 8,
     "dedupe_key": "f1ed21bed83c9e2637a2507586e35af5f958229c",
     "callsign": "ASI73",
     "status_text": "Status N/A",
@@ -364,8 +319,8 @@
     "age_hours": null,
     "source_name": "AirNav Radar",
     "source_url": "https://www.airnavradar.com/data/alerts",
-    "fetched_at": "2026-04-06T07:31:10.360829+00:00",
-    "created_at": "2026-04-06 07:31:10",
+    "fetched_at": "2026-04-06T08:01:05.566544+00:00",
+    "created_at": "2026-04-06 08:01:05",
     "extra": {
       "parser_version": "airnav_rows_primary_v3",
       "raw_cells": [
@@ -391,7 +346,7 @@
     }
   },
   {
-    "id": 10,
+    "id": 9,
     "dedupe_key": "c428b643d7d99525e48eed195caa4cf77ea69082",
     "callsign": "N8667N",
     "status_text": "Status N/A",
@@ -408,8 +363,8 @@
     "age_hours": null,
     "source_name": "AirNav Radar",
     "source_url": "https://www.airnavradar.com/data/alerts",
-    "fetched_at": "2026-04-06T07:31:10.360829+00:00",
-    "created_at": "2026-04-06 07:31:10",
+    "fetched_at": "2026-04-06T08:01:05.566544+00:00",
+    "created_at": "2026-04-06 08:01:05",
     "extra": {
       "parser_version": "airnav_rows_primary_v3",
       "raw_cells": [
@@ -435,7 +390,7 @@
     }
   },
   {
-    "id": 11,
+    "id": 10,
     "dedupe_key": "d2a9766e4eaaf8af985d5ea331115fea9af1b811",
     "callsign": "DOCK91",
     "status_text": "Status N/A",
@@ -452,8 +407,8 @@
     "age_hours": null,
     "source_name": "AirNav Radar",
     "source_url": "https://www.airnavradar.com/data/alerts",
-    "fetched_at": "2026-04-06T07:31:10.360829+00:00",
-    "created_at": "2026-04-06 07:31:10",
+    "fetched_at": "2026-04-06T08:01:05.566544+00:00",
+    "created_at": "2026-04-06 08:01:05",
     "extra": {
       "parser_version": "airnav_rows_primary_v3",
       "raw_cells": [
@@ -479,7 +434,7 @@
     }
   },
   {
-    "id": 12,
+    "id": 11,
     "dedupe_key": "caa0b8692d38361826e6a185f2570286030aad91",
     "callsign": "BOBCT35",
     "status_text": "Status N/A",
@@ -496,8 +451,8 @@
     "age_hours": null,
     "source_name": "AirNav Radar",
     "source_url": "https://www.airnavradar.com/data/alerts",
-    "fetched_at": "2026-04-06T07:31:10.360829+00:00",
-    "created_at": "2026-04-06 07:31:10",
+    "fetched_at": "2026-04-06T08:01:05.566544+00:00",
+    "created_at": "2026-04-06 08:01:05",
     "extra": {
       "parser_version": "airnav_rows_primary_v3",
       "raw_cells": [
@@ -523,7 +478,7 @@
     }
   },
   {
-    "id": 13,
+    "id": 12,
     "dedupe_key": "894589a8d0b70cc6e90d7f2cc9e65b37ffae4363",
     "callsign": "CTX90",
     "status_text": "Status N/A",
@@ -540,8 +495,8 @@
     "age_hours": null,
     "source_name": "AirNav Radar",
     "source_url": "https://www.airnavradar.com/data/alerts",
-    "fetched_at": "2026-04-06T07:31:10.360829+00:00",
-    "created_at": "2026-04-06 07:31:10",
+    "fetched_at": "2026-04-06T08:01:05.566544+00:00",
+    "created_at": "2026-04-06 08:01:05",
     "extra": {
       "parser_version": "airnav_rows_primary_v3",
       "raw_cells": [
@@ -564,7 +519,7 @@
     }
   },
   {
-    "id": 14,
+    "id": 13,
     "dedupe_key": "1d4b63f360acf6a2133a0fa11020a03e6392a654",
     "callsign": "TACTICAL",
     "status_text": "Landed",
@@ -581,8 +536,8 @@
     "age_hours": null,
     "source_name": "AirNav Radar",
     "source_url": "https://www.airnavradar.com/data/alerts",
-    "fetched_at": "2026-04-06T07:31:10.360829+00:00",
-    "created_at": "2026-04-06 07:31:10",
+    "fetched_at": "2026-04-06T08:01:05.566544+00:00",
+    "created_at": "2026-04-06 08:01:05",
     "extra": {
       "parser_version": "airnav_rows_primary_v3",
       "raw_cells": [
@@ -605,7 +560,7 @@
     }
   },
   {
-    "id": 15,
+    "id": 14,
     "dedupe_key": "46b06deb9c74cd88f8b963b1c1e12e08c0dae66c",
     "callsign": "N1333M",
     "status_text": "Status N/A",
@@ -622,8 +577,8 @@
     "age_hours": null,
     "source_name": "AirNav Radar",
     "source_url": "https://www.airnavradar.com/data/alerts",
-    "fetched_at": "2026-04-06T07:31:10.360829+00:00",
-    "created_at": "2026-04-06 07:31:10",
+    "fetched_at": "2026-04-06T08:01:05.566544+00:00",
+    "created_at": "2026-04-06 08:01:05",
     "extra": {
       "parser_version": "airnav_rows_primary_v3",
       "raw_cells": [
@@ -649,7 +604,7 @@
     }
   },
   {
-    "id": 16,
+    "id": 15,
     "dedupe_key": "da3d7ff3f375b670ce34f71f60643ac0ca50fe04",
     "callsign": "PT9979",
     "status_text": "Status N/A",
@@ -666,8 +621,8 @@
     "age_hours": null,
     "source_name": "AirNav Radar",
     "source_url": "https://www.airnavradar.com/data/alerts",
-    "fetched_at": "2026-04-06T07:31:10.360829+00:00",
-    "created_at": "2026-04-06 07:31:10",
+    "fetched_at": "2026-04-06T08:01:05.566544+00:00",
+    "created_at": "2026-04-06 08:01:05",
     "extra": {
       "parser_version": "airnav_rows_primary_v3",
       "raw_cells": [
@@ -693,7 +648,7 @@
     }
   },
   {
-    "id": 17,
+    "id": 16,
     "dedupe_key": "ea2929d6d37838d4c4153778d1b8d93512af82ba",
     "callsign": "PH0A6",
     "status_text": "Status N/A",
@@ -710,8 +665,8 @@
     "age_hours": null,
     "source_name": "AirNav Radar",
     "source_url": "https://www.airnavradar.com/data/alerts",
-    "fetched_at": "2026-04-06T07:31:10.360829+00:00",
-    "created_at": "2026-04-06 07:31:10",
+    "fetched_at": "2026-04-06T08:01:05.566544+00:00",
+    "created_at": "2026-04-06 08:01:05",
     "extra": {
       "parser_version": "airnav_rows_primary_v3",
       "raw_cells": [
@@ -737,7 +692,7 @@
     }
   },
   {
-    "id": 18,
+    "id": 17,
     "dedupe_key": "4d79f8cf2e8f2875d0dbd048f13a948f8a46d41e",
     "callsign": "63-8018",
     "status_text": "Landed",
@@ -754,8 +709,8 @@
     "age_hours": null,
     "source_name": "AirNav Radar",
     "source_url": "https://www.airnavradar.com/data/alerts",
-    "fetched_at": "2026-04-06T07:31:10.360829+00:00",
-    "created_at": "2026-04-06 07:31:10",
+    "fetched_at": "2026-04-06T08:01:05.566544+00:00",
+    "created_at": "2026-04-06 08:01:05",
     "extra": {
       "parser_version": "airnav_rows_primary_v3",
       "raw_cells": [
@@ -778,7 +733,7 @@
     }
   },
   {
-    "id": 19,
+    "id": 18,
     "dedupe_key": "9ec6838b5ba49dd1126f01806a9450628e54b17f",
     "callsign": "F35LTNG",
     "status_text": "Landed",
@@ -795,8 +750,8 @@
     "age_hours": null,
     "source_name": "AirNav Radar",
     "source_url": "https://www.airnavradar.com/data/alerts",
-    "fetched_at": "2026-04-06T07:31:10.360829+00:00",
-    "created_at": "2026-04-06 07:31:10",
+    "fetched_at": "2026-04-06T08:01:05.566544+00:00",
+    "created_at": "2026-04-06 08:01:05",
     "extra": {
       "parser_version": "airnav_rows_primary_v3",
       "raw_cells": [
@@ -819,7 +774,7 @@
     }
   },
   {
-    "id": 20,
+    "id": 19,
     "dedupe_key": "a1f1668352f74b6a235181287f439e87900c7179",
     "callsign": "N51390",
     "status_text": "Status N/A",
@@ -836,8 +791,8 @@
     "age_hours": null,
     "source_name": "AirNav Radar",
     "source_url": "https://www.airnavradar.com/data/alerts",
-    "fetched_at": "2026-04-06T07:31:10.360829+00:00",
-    "created_at": "2026-04-06 07:31:10",
+    "fetched_at": "2026-04-06T08:01:05.566544+00:00",
+    "created_at": "2026-04-06 08:01:05",
     "extra": {
       "parser_version": "airnav_rows_primary_v3",
       "raw_cells": [
@@ -863,7 +818,7 @@
     }
   },
   {
-    "id": 21,
+    "id": 20,
     "dedupe_key": "c553bf459aef6ab5c8ae9df12df8e2bf1ee62358",
     "callsign": "N1QS",
     "status_text": "Status N/A",
@@ -880,8 +835,8 @@
     "age_hours": null,
     "source_name": "AirNav Radar",
     "source_url": "https://www.airnavradar.com/data/alerts",
-    "fetched_at": "2026-04-06T07:31:10.360829+00:00",
-    "created_at": "2026-04-06 07:31:10",
+    "fetched_at": "2026-04-06T08:01:05.566544+00:00",
+    "created_at": "2026-04-06 08:01:05",
     "extra": {
       "parser_version": "airnav_rows_primary_v3",
       "raw_cells": [
@@ -907,7 +862,7 @@
     }
   },
   {
-    "id": 22,
+    "id": 21,
     "dedupe_key": "839c4d5fcb09b863962bf189623ff81341dce55c",
     "callsign": "CXK330",
     "status_text": "Status N/A",
@@ -924,8 +879,8 @@
     "age_hours": null,
     "source_name": "AirNav Radar",
     "source_url": "https://www.airnavradar.com/data/alerts",
-    "fetched_at": "2026-04-06T07:31:10.360829+00:00",
-    "created_at": "2026-04-06 07:31:10",
+    "fetched_at": "2026-04-06T08:01:05.566544+00:00",
+    "created_at": "2026-04-06 08:01:05",
     "extra": {
       "parser_version": "airnav_rows_primary_v3",
       "raw_cells": [
@@ -951,7 +906,7 @@
     }
   },
   {
-    "id": 23,
+    "id": 22,
     "dedupe_key": "6429ebb52d0c5febae9070564d05cae62e5ca3c6",
     "callsign": "N251TC",
     "status_text": "Status N/A",
@@ -968,8 +923,8 @@
     "age_hours": null,
     "source_name": "AirNav Radar",
     "source_url": "https://www.airnavradar.com/data/alerts",
-    "fetched_at": "2026-04-06T07:31:10.360829+00:00",
-    "created_at": "2026-04-06 07:31:10",
+    "fetched_at": "2026-04-06T08:01:05.566544+00:00",
+    "created_at": "2026-04-06 08:01:05",
     "extra": {
       "parser_version": "airnav_rows_primary_v3",
       "raw_cells": [
@@ -995,7 +950,7 @@
     }
   },
   {
-    "id": 24,
+    "id": 23,
     "dedupe_key": "c37928530c02c118e8d1cccf162f4814abd925c9",
     "callsign": "N222WM",
     "status_text": "Status N/A",
@@ -1012,8 +967,8 @@
     "age_hours": null,
     "source_name": "AirNav Radar",
     "source_url": "https://www.airnavradar.com/data/alerts",
-    "fetched_at": "2026-04-06T07:31:10.360829+00:00",
-    "created_at": "2026-04-06 07:31:10",
+    "fetched_at": "2026-04-06T08:01:05.566544+00:00",
+    "created_at": "2026-04-06 08:01:05",
     "extra": {
       "parser_version": "airnav_rows_primary_v3",
       "raw_cells": [
@@ -1039,7 +994,7 @@
     }
   },
   {
-    "id": 25,
+    "id": 24,
     "dedupe_key": "2796e7753c7ad264b5ab4ba04077288c25fbb0a9",
     "callsign": "VB611",
     "status_text": "Status N/A",
@@ -1056,8 +1011,8 @@
     "age_hours": null,
     "source_name": "AirNav Radar",
     "source_url": "https://www.airnavradar.com/data/alerts",
-    "fetched_at": "2026-04-06T07:31:10.360829+00:00",
-    "created_at": "2026-04-06 07:31:10",
+    "fetched_at": "2026-04-06T08:01:05.566544+00:00",
+    "created_at": "2026-04-06 08:01:05",
     "extra": {
       "parser_version": "airnav_rows_primary_v3",
       "raw_cells": [
@@ -1083,7 +1038,7 @@
     }
   },
   {
-    "id": 26,
+    "id": 25,
     "dedupe_key": "795b19434e05551121226bc77ff4903d3362b953",
     "callsign": "PW84",
     "status_text": "Status N/A",
@@ -1100,8 +1055,8 @@
     "age_hours": null,
     "source_name": "AirNav Radar",
     "source_url": "https://www.airnavradar.com/data/alerts",
-    "fetched_at": "2026-04-06T07:31:10.360829+00:00",
-    "created_at": "2026-04-06 07:31:10",
+    "fetched_at": "2026-04-06T08:01:05.566544+00:00",
+    "created_at": "2026-04-06 08:01:05",
     "extra": {
       "parser_version": "airnav_rows_primary_v3",
       "raw_cells": [
@@ -1127,7 +1082,7 @@
     }
   },
   {
-    "id": 27,
+    "id": 26,
     "dedupe_key": "62933fd955721dd7f927e56d478073ff5bfbd095",
     "callsign": "GCSPR",
     "status_text": "Status N/A",
@@ -1144,8 +1099,8 @@
     "age_hours": null,
     "source_name": "AirNav Radar",
     "source_url": "https://www.airnavradar.com/data/alerts",
-    "fetched_at": "2026-04-06T07:31:10.360829+00:00",
-    "created_at": "2026-04-06 07:31:10",
+    "fetched_at": "2026-04-06T08:01:05.566544+00:00",
+    "created_at": "2026-04-06 08:01:05",
     "extra": {
       "parser_version": "airnav_rows_primary_v3",
       "raw_cells": [
@@ -1171,7 +1126,7 @@
     }
   },
   {
-    "id": 28,
+    "id": 27,
     "dedupe_key": "c9463573984aac340d173c7e43455765fda70cd5",
     "callsign": "GTGRZ",
     "status_text": "Status N/A",
@@ -1188,8 +1143,8 @@
     "age_hours": null,
     "source_name": "AirNav Radar",
     "source_url": "https://www.airnavradar.com/data/alerts",
-    "fetched_at": "2026-04-06T07:31:10.360829+00:00",
-    "created_at": "2026-04-06 07:31:10",
+    "fetched_at": "2026-04-06T08:01:05.566544+00:00",
+    "created_at": "2026-04-06 08:01:05",
     "extra": {
       "parser_version": "airnav_rows_primary_v3",
       "raw_cells": [
@@ -1215,7 +1170,7 @@
     }
   },
   {
-    "id": 29,
+    "id": 28,
     "dedupe_key": "6bd1d1ff0acafa8344de596ed472a01746bba18e",
     "callsign": "N125RF",
     "status_text": "Status N/A",
@@ -1232,8 +1187,8 @@
     "age_hours": null,
     "source_name": "AirNav Radar",
     "source_url": "https://www.airnavradar.com/data/alerts",
-    "fetched_at": "2026-04-06T07:31:10.360829+00:00",
-    "created_at": "2026-04-06 07:31:10",
+    "fetched_at": "2026-04-06T08:01:05.566544+00:00",
+    "created_at": "2026-04-06 08:01:05",
     "extra": {
       "parser_version": "airnav_rows_primary_v3",
       "raw_cells": [
@@ -1259,7 +1214,7 @@
     }
   },
   {
-    "id": 30,
+    "id": 29,
     "dedupe_key": "4d34905e83e51f61eab94b3d1215b1e4049ad095",
     "callsign": "TH7862",
     "status_text": "Status N/A",
@@ -1276,8 +1231,8 @@
     "age_hours": null,
     "source_name": "AirNav Radar",
     "source_url": "https://www.airnavradar.com/data/alerts",
-    "fetched_at": "2026-04-06T07:31:10.360829+00:00",
-    "created_at": "2026-04-06 07:31:10",
+    "fetched_at": "2026-04-06T08:01:05.566544+00:00",
+    "created_at": "2026-04-06 08:01:05",
     "extra": {
       "parser_version": "airnav_rows_primary_v3",
       "raw_cells": [
@@ -1298,6 +1253,50 @@
       "callsign_source": "flight_column",
       "notes": [
         "Landed 13:52 MYT Landing time derived from ADS-B/Radar data"
+      ],
+      "fallback_reason": "Could not parse any current AirNav alerts"
+    }
+  },
+  {
+    "id": 30,
+    "dedupe_key": "510508284fb636a3b9446769eaa6a0b1951fec9d",
+    "callsign": "MU9671",
+    "status_text": "Status N/A",
+    "alert_type": "7700 - Emergency",
+    "squawk_code": "7700",
+    "event_date_text": "2026 Apr 2",
+    "departure_time_text": "08:00 CST",
+    "departure_airport": "Kunming ( KMG/ZPPP )",
+    "arrival_time_text": "10:55 CST",
+    "arrival_airport": "Ningbo ( NGB/ZSNB )",
+    "duration_text": "02h31m",
+    "aircraft_text": "B738 ( B-207L )",
+    "distance_text": null,
+    "age_hours": null,
+    "source_name": "AirNav Radar",
+    "source_url": "https://www.airnavradar.com/data/alerts",
+    "fetched_at": "2026-04-06T08:01:05.566544+00:00",
+    "created_at": "2026-04-06 08:01:05",
+    "extra": {
+      "parser_version": "airnav_rows_primary_v3",
+      "raw_cells": [
+        "2026 Apr 2",
+        "MU9671",
+        "Kunming ( KMG/ZPPP )",
+        "08:00 CST",
+        "Ningbo ( NGB/ZSNB )",
+        "10:55 CST",
+        "B738 ( B-207L )",
+        "Landed 11:16 CST Time aircraft arrives at gate derived from company/airport information",
+        "02h31m",
+        "",
+        "7700 - Emergency"
+      ],
+      "raw_callsign": "MU9671",
+      "callsign_missing": false,
+      "callsign_source": "flight_column",
+      "notes": [
+        "Landed 11:16 CST Time aircraft arrives at gate derived from company/airport information"
       ],
       "fallback_reason": "Could not parse any current AirNav alerts"
     }

@@ -51,9 +51,9 @@
 .iflow-table-scroll {
   min-height: 0;
   overflow: auto;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  background: var(--bg-surface);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
 }
 
 .iflow-table {

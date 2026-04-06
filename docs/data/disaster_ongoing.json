@@ -8,7 +8,7 @@
     "title": "M 5.2 - 0 km S of Tabonok, Philippines",
     "summary": "0 km S of Tabonok, Philippines",
     "started_at": "2026-04-06T07:22:42.142000+00:00",
-    "updated_at": "2026-04-06T08:12:53.895000+00:00",
+    "updated_at": "2026-04-06T08:36:29.190000+00:00",
     "location_text": "0 km S of Tabonok, Philippines",
     "lat": 10.8435,
     "lon": 123.8752,
@@ -24,7 +24,7 @@
       "place": "0 km S of Tabonok, Philippines",
       "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000sn00.geojson",
       "alert": null,
-      "sig": 426,
+      "sig": 430,
       "tsunami": 0,
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
@@ -37,6 +37,60 @@
   },
   {
     "id": 2,
+    "group_key": "volcano|c76a99eebe1a9ca79e19c57296bde22e107aa874",
+    "event_type": "volcano",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Kilauea",
+    "summary": "VRP 171.72 MW · MODIS · 13.15 km",
+    "started_at": "2026-04-06T07:20:00+00:00",
+    "updated_at": "2026-04-06T07:20:00+00:00",
+    "location_text": "Kilauea",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "MODIS",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=332010",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=332010",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "332010",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=332010",
+      "vrp_mw": 171.72,
+      "distance_km": 13.15,
+      "sensor": "MODIS",
+      "row_class": [
+        "high"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "MODIS"
+      ],
+      "reports": [
+        {
+          "volcano_id": "332010",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=332010",
+          "vrp_mw": 171.72,
+          "distance_km": 13.15,
+          "sensor": "MODIS",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 1
+    },
+    "member_event_ids": [
+      8
+    ],
+    "occurred_at": "2026-04-06T07:20:00+00:00",
+    "published_at": "2026-04-06T07:20:00+00:00",
+    "fetched_at": "2026-04-06T07:20:00+00:00"
+  },
+  {
+    "id": 3,
     "group_key": "earthquake|us6000smzu",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -72,7 +126,7 @@
     "fetched_at": "2026-04-06T06:15:25.459000+00:00"
   },
   {
-    "id": 4,
+    "id": 5,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|tc_31p|ea164119bd9be16b",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -127,7 +181,7 @@
     "fetched_at": "2026-04-06T06:00:00+00:00"
   },
   {
-    "id": 3,
+    "id": 4,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|tc_30p|adfe98417048970d",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -180,60 +234,6 @@
     "occurred_at": "2026-04-06T06:00:00+00:00",
     "published_at": "2026-04-06T06:00:00+00:00",
     "fetched_at": "2026-04-06T06:00:00+00:00"
-  },
-  {
-    "id": 5,
-    "group_key": "volcano|aed501a556899723d79ce961b567b148b25491ee",
-    "event_type": "volcano",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "Mayon",
-    "summary": "VRP 137.06 MW · VIIRS375 · 3.09 km",
-    "started_at": "2026-04-06T04:18:01+00:00",
-    "updated_at": "2026-04-06T04:18:01+00:00",
-    "location_text": "Mayon",
-    "lat": null,
-    "lon": null,
-    "source_primary": "MIROVA",
-    "source_secondary": "VIIRS375",
-    "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
-    "country_code": null,
-    "payload": {
-      "volcano_id": "273030",
-      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
-      "vrp_mw": 137.06,
-      "distance_km": 3.09,
-      "sensor": "VIIRS375",
-      "row_class": [
-        "high"
-      ],
-      "source_page": "https://www.mirovaweb.it/NRT/",
-      "sensors": [
-        "VIIRS375"
-      ],
-      "reports": [
-        {
-          "volcano_id": "273030",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
-          "vrp_mw": 137.06,
-          "distance_km": 3.09,
-          "sensor": "VIIRS375",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        }
-      ],
-      "merged_count": 1
-    },
-    "member_event_ids": [
-      8
-    ],
-    "occurred_at": "2026-04-06T04:18:01+00:00",
-    "published_at": "2026-04-06T04:18:01+00:00",
-    "fetched_at": "2026-04-06T04:18:01+00:00"
   },
   {
     "id": 6,

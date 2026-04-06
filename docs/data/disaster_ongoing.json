@@ -1,6 +1,60 @@
 [
   {
     "id": 1,
+    "group_key": "volcano|859c2d3846c147c047f5fc4e4a844d927d51d861",
+    "event_type": "volcano",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Mayon",
+    "summary": "VRP 204.38 MW · MODIS · 3.16 km",
+    "started_at": "2026-04-06T12:15:00+00:00",
+    "updated_at": "2026-04-06T12:15:00+00:00",
+    "location_text": "Mayon",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "MODIS",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=273030",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=273030",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "273030",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=273030",
+      "vrp_mw": 204.38,
+      "distance_km": 3.16,
+      "sensor": "MODIS",
+      "row_class": [
+        "high"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "MODIS"
+      ],
+      "reports": [
+        {
+          "volcano_id": "273030",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=273030",
+          "vrp_mw": 204.38,
+          "distance_km": 3.16,
+          "sensor": "MODIS",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 1
+    },
+    "member_event_ids": [
+      8
+    ],
+    "occurred_at": "2026-04-06T12:15:00+00:00",
+    "published_at": "2026-04-06T12:15:00+00:00",
+    "fetched_at": "2026-04-06T12:15:00+00:00"
+  },
+  {
+    "id": 2,
     "group_key": "earthquake|us6000sn11",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -8,7 +62,7 @@
     "title": "M 5.9 - Pacific-Antarctic Ridge",
     "summary": "Pacific-Antarctic Ridge",
     "started_at": "2026-04-06T11:18:37.401000+00:00",
-    "updated_at": "2026-04-06T12:02:47.753000+00:00",
+    "updated_at": "2026-04-06T13:43:10.750000+00:00",
     "location_text": "Pacific-Antarctic Ridge",
     "lat": -54.994,
     "lon": -129.111,
@@ -36,7 +90,7 @@
     "fetched_at": "2026-04-06T11:18:37.401000+00:00"
   },
   {
-    "id": 2,
+    "id": 3,
     "group_key": "earthquake|us6000sn00",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -72,7 +126,61 @@
     "fetched_at": "2026-04-06T07:22:42.142000+00:00"
   },
   {
-    "id": 3,
+    "id": 4,
+    "group_key": "volcano|c76a99eebe1a9ca79e19c57296bde22e107aa874",
+    "event_type": "volcano",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Kilauea",
+    "summary": "VRP 171.72 MW · MODIS · 13.15 km",
+    "started_at": "2026-04-06T07:20:00+00:00",
+    "updated_at": "2026-04-06T07:20:00+00:00",
+    "location_text": "Kilauea",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "MODIS",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=332010",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=332010",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "332010",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=332010",
+      "vrp_mw": 171.72,
+      "distance_km": 13.15,
+      "sensor": "MODIS",
+      "row_class": [
+        "high"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "MODIS"
+      ],
+      "reports": [
+        {
+          "volcano_id": "332010",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=332010",
+          "vrp_mw": 171.72,
+          "distance_km": 13.15,
+          "sensor": "MODIS",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 1
+    },
+    "member_event_ids": [
+      9
+    ],
+    "occurred_at": "2026-04-06T07:20:00+00:00",
+    "published_at": "2026-04-06T07:20:00+00:00",
+    "fetched_at": "2026-04-06T07:20:00+00:00"
+  },
+  {
+    "id": 5,
     "group_key": "earthquake|us6000smzu",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -108,7 +216,7 @@
     "fetched_at": "2026-04-06T06:15:25.459000+00:00"
   },
   {
-    "id": 5,
+    "id": 7,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|tc_31p|ea164119bd9be16b",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -156,14 +264,14 @@
       }
     },
     "member_event_ids": [
-      9
+      11
     ],
     "occurred_at": "2026-04-06T06:00:00+00:00",
     "published_at": "2026-04-06T06:00:00+00:00",
     "fetched_at": "2026-04-06T06:00:00+00:00"
   },
   {
-    "id": 4,
+    "id": 6,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|tc_30p|adfe98417048970d",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -211,14 +319,14 @@
       }
     },
     "member_event_ids": [
-      10
+      12
     ],
     "occurred_at": "2026-04-06T06:00:00+00:00",
     "published_at": "2026-04-06T06:00:00+00:00",
     "fetched_at": "2026-04-06T06:00:00+00:00"
   },
   {
-    "id": 6,
+    "id": 8,
     "group_key": "earthquake|us6000smyb",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -254,62 +362,7 @@
     "fetched_at": "2026-04-06T00:42:26.628000+00:00"
   },
   {
-    "id": 7,
-    "group_key": "typhoon|TC|jtwc_abio|jtwc_abio|south_indian_ocean_area|tc_29s|a01d52c6b7990c04",
-    "event_type": "typhoon",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "Tropical Cyclone 29S (Indusa)",
-    "summary": "wind 50 kt (gust 65)",
-    "started_at": "2026-04-05T21:00:00+00:00",
-    "updated_at": "2026-04-05T21:00:00+00:00",
-    "location_text": "32.0S 73.1E",
-    "lat": -32.0,
-    "lon": 73.1,
-    "source_primary": "JTWC-ABIO",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://www.google.com/maps?q=-32.0,73.1",
-    "official_link": "https://www.google.com/maps?q=-32.0,73.1",
-    "country_code": null,
-    "payload": {
-      "item_type": "warning",
-      "source": "jtwc_abio",
-      "source_key": "jtwc_abio|south_indian_ocean_area|tc_29s",
-      "content_hash": "a01d52c6b7990c04",
-      "platform_summary": "32.0S 73.1E | wind 50 kt (gust 65)",
-      "platform_location": "32.0S 73.1E",
-      "wind": "50 kt (gust 65)",
-      "risk_48h": null,
-      "risk_7d": null,
-      "next_update": null,
-      "raw_text": "(1) AT 05APR26 1800Z, TROPICAL CYCLONE 29S (INDUSA) WAS LOCATED \nNEAR 32.0S 73.1E, APPROXIMATELY 1109 NM SOUTHEAST OF PORT LOUIS, \nMAURITIUS, AND HAD TRACKED SOUTH-SOUTHEASTWARD AT 21 KNOTS OVER THE \nPAST SIX HOURS. MAXIMUM SUSTAINED SURFACE WINDS WERE ESTIMATED AT 50 \nKNOTS GUSTING TO 65 KNOTS. SEE REF A (WTXS31 PGTW 052100) FOR THE FINAL \nWARNING ON THIS SYSTEM.",
-      "metadata": {
-        "basin_section": "SOUTH INDIAN OCEAN AREA (135E WEST TO COAST OF AFRICA)",
-        "storm_class": "TROPICAL CYCLONE",
-        "storm_id": "29S",
-        "storm_name": "INDUSA",
-        "fix_date": "05APR26",
-        "fix_time": "05APR26 1800Z",
-        "lat": -32.0,
-        "lon": 73.1,
-        "movement_text": "SOUTH-SOUTHEASTWARD",
-        "movement_kt": 21,
-        "wind_kt": 50,
-        "gust_kt": 65,
-        "warning_reference": "WTXS31 PGTW 052100",
-        "bulletin_issue_at": "2026-04-05T21:00:00+00:00"
-      }
-    },
-    "member_event_ids": [
-      11
-    ],
-    "occurred_at": "2026-04-05T21:00:00+00:00",
-    "published_at": "2026-04-05T21:00:00+00:00",
-    "fetched_at": "2026-04-05T21:00:00+00:00"
-  },
-  {
-    "id": 8,
+    "id": 9,
     "group_key": "earthquake|us6000smwq",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -345,7 +398,7 @@
     "fetched_at": "2026-04-05T17:20:47.491000+00:00"
   },
   {
-    "id": 9,
+    "id": 10,
     "group_key": "earthquake|us6000smww",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -381,7 +434,7 @@
     "fetched_at": "2026-04-05T17:19:51.822000+00:00"
   },
   {
-    "id": 10,
+    "id": 11,
     "group_key": "earthquake|us6000smwn",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -417,7 +470,7 @@
     "fetched_at": "2026-04-05T17:10:41.726000+00:00"
   },
   {
-    "id": 11,
+    "id": 12,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -490,7 +543,7 @@
       }
     },
     "member_event_ids": [
-      8
+      10
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

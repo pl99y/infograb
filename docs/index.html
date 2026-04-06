@@ -7,7 +7,7 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <link rel="stylesheet" href="./static/dashboard.css?v=35">
+    <link rel="stylesheet" href="./static/dashboard.css?v=36">
 </head>
 <body>
     <header class="top-nav">
@@ -24,6 +24,10 @@
 
             <button id="themeToggleBtn" class="btn-refresh" title="切换主题" type="button">
                 <i class="ph ph-moon"></i>
+            </button>
+
+            <button id="mobileNavToggleBtn" class="btn-refresh mobile-menu-toggle" title="板块导航" type="button" aria-label="打开板块导航" aria-controls="mobileNavDrawer" aria-expanded="false">
+                <i class="ph ph-list"></i>
             </button>
         </div>
     </header>
@@ -64,15 +68,22 @@
         </div>
     </div>
 
-    <div class="mobile-section-tabs" id="mobileSectionTabs">
-        <button class="mobile-tab-btn" data-panel="energy" type="button">能源</button>
-        <button class="mobile-tab-btn" data-panel="market" type="button">市场</button>
-        <button class="mobile-tab-btn" data-panel="iflow" type="button">频倒</button>
-        <button class="mobile-tab-btn" data-panel="aviation" type="button">航空</button>
-        <button class="mobile-tab-btn" data-panel="disaster" type="button">灾害</button>
-        <button class="mobile-tab-btn" data-panel="f1" type="button">F1</button>
-        <button class="mobile-tab-btn active" data-panel="feed" type="button">情报</button>
-    </div>
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+
+    <aside class="mobile-nav-drawer" id="mobileNavDrawer" aria-hidden="true">
+        <div class="mobile-nav-drawer-head">
+            <div>
+                <div class="mobile-nav-drawer-title">板块导航</div>
+                <div class="mobile-nav-drawer-desc">选择一个板块查看</div>
+            </div>
+            <button id="mobileNavCloseBtn" class="btn-refresh btn-refresh-small" type="button" aria-label="关闭板块导航">
+                <i class="ph ph-x"></i>
+                <span>关闭</span>
+            </button>
+        </div>
+
+        <div class="mobile-panel-menu" id="mobilePanelMenu"></div>
+    </aside>
 
     <main class="dashboard-main">
         <div class="grid-stack" id="dashboardGrid">
@@ -80,6 +91,7 @@
                 class="grid-stack-item"
                 gs-id="energy"
                 data-panel-title="能源监控"
+                data-mobile-nav-title="能源"
                 data-default-w="4"
                 data-default-h="420"
                 data-min-w="2"
@@ -109,6 +121,7 @@
                 class="grid-stack-item"
                 gs-id="market"
                 data-panel-title="市场观察"
+                data-mobile-nav-title="市场"
                 data-default-w="4"
                 data-default-h="420"
                 data-min-w="3"
@@ -137,6 +150,7 @@
                 class="grid-stack-item"
                 gs-id="iflow"
                 data-panel-title="道爷频倒"
+                data-mobile-nav-title="频倒"
                 data-default-w="8"
                 data-default-h="620"
                 data-min-w="4"
@@ -168,6 +182,7 @@
                 class="grid-stack-item"
                 gs-id="aviation"
                 data-panel-title="航空监控"
+                data-mobile-nav-title="航空"
                 data-default-w="6"
                 data-default-h="700"
                 data-min-w="3"
@@ -209,6 +224,7 @@
                 class="grid-stack-item"
                 gs-id="disaster"
                 data-panel-title="灾害监控"
+                data-mobile-nav-title="灾害"
                 data-default-w="6"
                 data-default-h="700"
                 data-min-w="4"
@@ -250,6 +266,7 @@
                 class="grid-stack-item"
                 gs-id="f1"
                 data-panel-title="F1 监控"
+                data-mobile-nav-title="F1"
                 data-default-w="4"
                 data-default-h="700"
                 data-min-w="3"
@@ -273,6 +290,7 @@
                 class="grid-stack-item mobile-active"
                 gs-id="feed"
                 data-panel-title="情报流"
+                data-mobile-nav-title="情报"
                 data-default-w="8"
                 data-default-h="760"
                 data-min-w="4"
@@ -300,6 +318,6 @@
         <img class="lightbox-content" id="lightbox-img" alt="Expanded media">
     </div>
 
-    <script type="module" src="./static/app/main-pages.js?v=35"></script>
+    <script type="module" src="./static/app/main-pages.js?v=36"></script>
 </body>
 </html>

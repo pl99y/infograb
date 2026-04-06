@@ -47,7 +47,7 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      8
+      5
     ],
     "occurred_at": "2026-04-06T13:20:00+00:00",
     "published_at": "2026-04-06T13:20:00+00:00",
@@ -101,7 +101,7 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      9
+      6
     ],
     "occurred_at": "2026-04-06T12:15:00+00:00",
     "published_at": "2026-04-06T12:15:00+00:00",
@@ -264,7 +264,7 @@
       }
     },
     "member_event_ids": [
-      11
+      8
     ],
     "occurred_at": "2026-04-06T06:00:00+00:00",
     "published_at": "2026-04-06T06:00:00+00:00",
@@ -319,7 +319,7 @@
       }
     },
     "member_event_ids": [
-      12
+      9
     ],
     "occurred_at": "2026-04-06T06:00:00+00:00",
     "published_at": "2026-04-06T06:00:00+00:00",
@@ -363,114 +363,6 @@
   },
   {
     "id": 9,
-    "group_key": "earthquake|us6000smwq",
-    "event_type": "earthquake",
-    "severity_level": "moderate",
-    "severity_color": "moderate",
-    "title": "M 5.4 - south of the Kermadec Islands",
-    "summary": "south of the Kermadec Islands",
-    "started_at": "2026-04-05T17:20:47.491000+00:00",
-    "updated_at": "2026-04-05T20:05:40.738000+00:00",
-    "location_text": "south of the Kermadec Islands",
-    "lat": -32.0691,
-    "lon": -177.9594,
-    "source_primary": "USGS",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000smwq",
-    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000smwq",
-    "country_code": null,
-    "payload": {
-      "mag": 5.4,
-      "depth_km": 11.0,
-      "place": "south of the Kermadec Islands",
-      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000smwq.geojson",
-      "alert": "green",
-      "sig": 449,
-      "tsunami": 0,
-      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
-    },
-    "member_event_ids": [
-      5
-    ],
-    "occurred_at": "2026-04-05T17:20:47.491000+00:00",
-    "published_at": "2026-04-05T17:20:47.491000+00:00",
-    "fetched_at": "2026-04-05T17:20:47.491000+00:00"
-  },
-  {
-    "id": 10,
-    "group_key": "earthquake|us6000smww",
-    "event_type": "earthquake",
-    "severity_level": "moderate",
-    "severity_color": "moderate",
-    "title": "M 5.2 - south of the Kermadec Islands",
-    "summary": "south of the Kermadec Islands",
-    "started_at": "2026-04-05T17:19:51.822000+00:00",
-    "updated_at": "2026-04-05T18:04:41.040000+00:00",
-    "location_text": "south of the Kermadec Islands",
-    "lat": -32.0921,
-    "lon": -178.0867,
-    "source_primary": "USGS",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000smww",
-    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000smww",
-    "country_code": null,
-    "payload": {
-      "mag": 5.2,
-      "depth_km": 10.0,
-      "place": "south of the Kermadec Islands",
-      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000smww.geojson",
-      "alert": null,
-      "sig": 416,
-      "tsunami": 0,
-      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
-    },
-    "member_event_ids": [
-      6
-    ],
-    "occurred_at": "2026-04-05T17:19:51.822000+00:00",
-    "published_at": "2026-04-05T17:19:51.822000+00:00",
-    "fetched_at": "2026-04-05T17:19:51.822000+00:00"
-  },
-  {
-    "id": 11,
-    "group_key": "earthquake|us6000smwn",
-    "event_type": "earthquake",
-    "severity_level": "moderate",
-    "severity_color": "moderate",
-    "title": "M 5.1 - Kermadec Islands region",
-    "summary": "Kermadec Islands region",
-    "started_at": "2026-04-05T17:10:41.726000+00:00",
-    "updated_at": "2026-04-05T17:31:42.040000+00:00",
-    "location_text": "Kermadec Islands region",
-    "lat": -31.9405,
-    "lon": -178.5931,
-    "source_primary": "USGS",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000smwn",
-    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000smwn",
-    "country_code": null,
-    "payload": {
-      "mag": 5.1,
-      "depth_km": 35.0,
-      "place": "Kermadec Islands region",
-      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000smwn.geojson",
-      "alert": null,
-      "sig": 400,
-      "tsunami": 0,
-      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
-    },
-    "member_event_ids": [
-      7
-    ],
-    "occurred_at": "2026-04-05T17:10:41.726000+00:00",
-    "published_at": "2026-04-05T17:10:41.726000+00:00",
-    "fetched_at": "2026-04-05T17:10:41.726000+00:00"
-  },
-  {
-    "id": 12,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -543,7 +435,7 @@
       }
     },
     "member_event_ids": [
-      10
+      7
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

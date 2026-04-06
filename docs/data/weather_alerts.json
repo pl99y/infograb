@@ -1,6 +1,45 @@
 [
   {
     "id": 1,
+    "dedupe_key": "IN-1775479989461017_45",
+    "source_primary": "WMO",
+    "title": "Severe Thunderstorm and lightning accompanied with intense rain, hail and gusty wind with speed 60-70 kmph very likely to affect over some parts of Bankura district during next 2-3 hours from 18:20, 06-04-2026.",
+    "summary": "Some Parts of Bankura District.",
+    "severity_level": "extreme",
+    "color_level": "extreme",
+    "event_type": "weather",
+    "location_text": "Some Parts of Bankura District.",
+    "issued_at": "2026-04-06T13:22:45+00:00",
+    "effective_at": "2026-04-06T13:20:00+00:00",
+    "expires_at": "2026-04-06T16:20:00+00:00",
+    "source_url": "https://severeweather.wmo.int/list.html",
+    "detail_url": "https://severeweather.wmo.int/list.html",
+    "payload": {
+      "id": "IN-1775479989461017_45",
+      "event": "Severe Thunderstorms with surface wind",
+      "headline": "Severe Thunderstorm and lightning accompanied with intense rain, hail and gusty wind with speed 60-70 kmph very likely to affect over some parts of Bankura district during next 2-3 hours from 18:20, 06-04-2026.",
+      "sent": "2026-04-06 13:22:45",
+      "expires": "2026-04-06 16:20:00",
+      "areaDesc": "Some Parts of Bankura District.",
+      "mid": "066",
+      "ra": "2",
+      "s": 4,
+      "u": 4,
+      "c": 3,
+      "url": "in-ndma-xx/2026/04/06/13/22/45-bc115f7ad5ab4c7a85eb67fd405c474d.xml",
+      "effective": "2026-04-06 13:20:00",
+      "cap_path": "in-ndma-xx/2026/04/06/13/22/45-bc115f7ad5ab4c7a85eb67fd405c474d.xml",
+      "source_page": "https://severeweather.wmo.int/list.html",
+      "last_updated": "2026-04-06 13:30:08"
+    },
+    "fetched_at": "2026-04-06T13:31:18.735874+00:00",
+    "published_at": "2026-04-06T13:22:45+00:00",
+    "updated_at": "2026-04-06T13:31:18.735874+00:00",
+    "region_text": "Some Parts of Bankura District.",
+    "link_url": "https://severeweather.wmo.int/list.html"
+  },
+  {
+    "id": 2,
     "dedupe_key": "IN-1775479092835017_45",
     "source_primary": "WMO",
     "title": "Severe Thunderstorm and lightning accompanied with intense rain, hail and gusty wind with speed 60-70 kmph. very likely to affect over some parts of Jhargram district during next 2-3 hours from 18:05, 06-04-2026.",
@@ -30,16 +69,16 @@
       "effective": "2026-04-06 13:05:00",
       "cap_path": "in-ndma-xx/2026/04/06/13/07/49-bea8b5d0238ddf05871d7f940b0e509e.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-06 13:00:10"
+      "last_updated": "2026-04-06 13:30:08"
     },
-    "fetched_at": "2026-04-06T13:01:02.353108+00:00",
+    "fetched_at": "2026-04-06T13:31:18.735874+00:00",
     "published_at": "2026-04-06T13:07:49+00:00",
-    "updated_at": "2026-04-06T13:01:02.353108+00:00",
+    "updated_at": "2026-04-06T13:31:18.735874+00:00",
     "region_text": "Jhargram district of West Bengal",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 2,
+    "id": 3,
     "dedupe_key": "IN-1775477811302012_50",
     "source_primary": "WMO",
     "title": "Severe Thunderstorms,lightning,hail with surface wind 40-50 gusting to 60 kmp and moderate rain is very likely to occur at isolated places over Bhadrak in next 3 hours.",
@@ -69,16 +108,16 @@
       "effective": "2026-04-06 12:45:00",
       "cap_path": "in-ndma-xx/2026/04/06/12/46/29-5cace0f61a8a1c73cda1ecdc388d723a.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-06 13:00:10"
+      "last_updated": "2026-04-06 13:30:08"
     },
-    "fetched_at": "2026-04-06T13:01:02.353108+00:00",
+    "fetched_at": "2026-04-06T13:31:18.735874+00:00",
     "published_at": "2026-04-06T12:46:29+00:00",
-    "updated_at": "2026-04-06T13:01:02.353108+00:00",
+    "updated_at": "2026-04-06T13:31:18.735874+00:00",
     "region_text": "Bhadrak",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 3,
+    "id": 4,
     "dedupe_key": "IN-1775477533734012_50",
     "source_primary": "WMO",
     "title": "Severe Thunderstorms,lightning,hail with surface wind 50-60 gusting to 70 kmph and moderate rain is very likely to occur at isolated places over Kendujhar in next 3 hours.",
@@ -108,51 +147,12 @@
       "effective": "2026-04-06 12:40:00",
       "cap_path": "in-ndma-xx/2026/04/06/12/41/47-cf6d9d7738b0e595368734234c1c2699.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-06 13:00:10"
+      "last_updated": "2026-04-06 13:30:08"
     },
-    "fetched_at": "2026-04-06T13:01:02.353108+00:00",
+    "fetched_at": "2026-04-06T13:31:18.735874+00:00",
     "published_at": "2026-04-06T12:41:47+00:00",
-    "updated_at": "2026-04-06T13:01:02.353108+00:00",
+    "updated_at": "2026-04-06T13:31:18.735874+00:00",
     "region_text": "Keonjhar",
-    "link_url": "https://severeweather.wmo.int/list.html"
-  },
-  {
-    "id": 4,
-    "dedupe_key": "IN-1775476256695008_8",
-    "source_primary": "WMO",
-    "title": "Lightning is Likely to occur over 13 Mandals. Please follow SDMA guidelines.",
-    "summary": "13 Mandals",
-    "severity_level": "extreme",
-    "color_level": "extreme",
-    "event_type": "weather",
-    "location_text": "13 Mandals",
-    "issued_at": "2026-04-06T12:20:56+00:00",
-    "effective_at": "2026-04-06T12:20:00+00:00",
-    "expires_at": "2026-04-06T13:20:00+00:00",
-    "source_url": "https://severeweather.wmo.int/list.html",
-    "detail_url": "https://severeweather.wmo.int/list.html",
-    "payload": {
-      "id": "IN-1775476256695008_8",
-      "event": "Lightning",
-      "headline": "Lightning is Likely to occur over 13 Mandals. Please follow SDMA guidelines.",
-      "sent": "2026-04-06 12:20:56",
-      "expires": "2026-04-06 13:20:00",
-      "areaDesc": "13 Mandals",
-      "mid": "066",
-      "ra": "2",
-      "s": 4,
-      "u": 4,
-      "c": 2,
-      "url": "in-ndma-xx/2026/04/06/12/20/56-fc597fa01fa91215924785408aabf4a.xml",
-      "effective": "2026-04-06 12:20:00",
-      "cap_path": "in-ndma-xx/2026/04/06/12/20/56-fc597fa01fa91215924785408aabf4a.xml",
-      "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-06 13:00:10"
-    },
-    "fetched_at": "2026-04-06T13:01:02.353108+00:00",
-    "published_at": "2026-04-06T12:20:56+00:00",
-    "updated_at": "2026-04-06T13:01:02.353108+00:00",
-    "region_text": "13 Mandals",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
@@ -186,11 +186,11 @@
       "effective": "2026-04-06 11:40:00",
       "cap_path": "in-ndma-xx/2026/04/06/11/41/43-2f5f726311757b7e2ec4c6f9ebfb08c9.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-06 13:00:10"
+      "last_updated": "2026-04-06 13:30:08"
     },
-    "fetched_at": "2026-04-06T13:01:02.353108+00:00",
+    "fetched_at": "2026-04-06T13:31:18.735874+00:00",
     "published_at": "2026-04-06T11:41:43+00:00",
-    "updated_at": "2026-04-06T13:01:02.353108+00:00",
+    "updated_at": "2026-04-06T13:31:18.735874+00:00",
     "region_text": "Khordha district of Odisha",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
@@ -225,11 +225,11 @@
       "effective": "2026-04-06 11:39:00",
       "cap_path": "in-ndma-xx/2026/04/06/11/41/18-82a417f2c56bcd922995a3a2e3db382d.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-06 13:00:10"
+      "last_updated": "2026-04-06 13:30:08"
     },
-    "fetched_at": "2026-04-06T13:01:02.353108+00:00",
+    "fetched_at": "2026-04-06T13:31:18.735874+00:00",
     "published_at": "2026-04-06T11:41:18+00:00",
-    "updated_at": "2026-04-06T13:01:02.353108+00:00",
+    "updated_at": "2026-04-06T13:31:18.735874+00:00",
     "region_text": "Erragondapalem, Markapuram, Darsi, Chimakuruthy, Kanigiri, Podili",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
@@ -264,11 +264,11 @@
       "effective": "2026-04-06 11:22:00",
       "cap_path": "in-ndma-xx/2026/04/06/11/24/04-a71565cc68c6684b2ccf5b3ba35f6b42.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-06 13:00:10"
+      "last_updated": "2026-04-06 13:30:08"
     },
-    "fetched_at": "2026-04-06T13:01:02.353108+00:00",
+    "fetched_at": "2026-04-06T13:31:18.735874+00:00",
     "published_at": "2026-04-06T11:24:04+00:00",
-    "updated_at": "2026-04-06T13:01:02.353108+00:00",
+    "updated_at": "2026-04-06T13:31:18.735874+00:00",
     "region_text": "Cuttack district of Odisha",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
@@ -303,11 +303,11 @@
       "effective": "2026-04-06 11:07:00",
       "cap_path": "in-ndma-xx/2026/04/06/11/09/54-880ad3b3e00a47dcc13040148bb9d45f.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-06 13:00:10"
+      "last_updated": "2026-04-06 13:30:08"
     },
-    "fetched_at": "2026-04-06T13:01:02.353108+00:00",
+    "fetched_at": "2026-04-06T13:31:18.735874+00:00",
     "published_at": "2026-04-06T11:09:54+00:00",
-    "updated_at": "2026-04-06T13:01:02.353108+00:00",
+    "updated_at": "2026-04-06T13:31:18.735874+00:00",
     "region_text": "Balasore",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
@@ -342,11 +342,11 @@
       "effective": "2026-04-06 11:07:00",
       "cap_path": "in-ndma-xx/2026/04/06/11/08/28-8ac1d845919264ebd75fd75db0dece2c.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-06 13:00:10"
+      "last_updated": "2026-04-06 13:30:08"
     },
-    "fetched_at": "2026-04-06T13:01:02.353108+00:00",
+    "fetched_at": "2026-04-06T13:31:18.735874+00:00",
     "published_at": "2026-04-06T11:08:28+00:00",
-    "updated_at": "2026-04-06T13:01:02.353108+00:00",
+    "updated_at": "2026-04-06T13:31:18.735874+00:00",
     "region_text": "Nandigama, Kaiakaluru, Narsapuram",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
@@ -381,11 +381,11 @@
       "effective": "2026-04-06 10:59:00",
       "cap_path": "in-ndma-xx/2026/04/06/11/01/00-e65a73121dc435590d68a3eb35ee6342.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-06 13:00:10"
+      "last_updated": "2026-04-06 13:30:08"
     },
-    "fetched_at": "2026-04-06T13:01:02.353108+00:00",
+    "fetched_at": "2026-04-06T13:31:18.735874+00:00",
     "published_at": "2026-04-06T11:01:00+00:00",
-    "updated_at": "2026-04-06T13:01:02.353108+00:00",
+    "updated_at": "2026-04-06T13:31:18.735874+00:00",
     "region_text": "Saluru, Bobbili,Vizianagaram, Srikakulam",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
@@ -420,11 +420,11 @@
       "effective": "2026-04-06 10:48:00",
       "cap_path": "in-ndma-xx/2026/04/06/10/49/42-489e1a34fe70f50586ef793f01b265b0.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-06 13:00:10"
+      "last_updated": "2026-04-06 13:30:08"
     },
-    "fetched_at": "2026-04-06T13:01:02.353108+00:00",
+    "fetched_at": "2026-04-06T13:31:18.735874+00:00",
     "published_at": "2026-04-06T10:49:42+00:00",
-    "updated_at": "2026-04-06T13:01:02.353108+00:00",
+    "updated_at": "2026-04-06T13:31:18.735874+00:00",
     "region_text": "Alert",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
@@ -459,11 +459,11 @@
       "effective": "",
       "cap_path": "is-vedur-is/2026/04/06/09/49/49-b96cfad10ac617cbbe6bc46fc9f854f7.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-06 13:00:10"
+      "last_updated": "2026-04-06 13:30:08"
     },
-    "fetched_at": "2026-04-06T13:01:02.353108+00:00",
+    "fetched_at": "2026-04-06T13:31:18.735874+00:00",
     "published_at": "2026-04-06T09:49:49+00:00",
-    "updated_at": "2026-04-06T13:01:02.353108+00:00",
+    "updated_at": "2026-04-06T13:31:18.735874+00:00",
     "region_text": "Central highlands - Uninhabited part of Iceland",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
@@ -498,11 +498,11 @@
       "effective": "",
       "cap_path": "sb-sims-en/2026/04/06/08/43/26-c57171dfe41d316222eb5929c8cd282a.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-06 13:00:10"
+      "last_updated": "2026-04-06 13:30:08"
     },
-    "fetched_at": "2026-04-06T13:01:02.353108+00:00",
+    "fetched_at": "2026-04-06T13:31:18.735874+00:00",
     "published_at": "2026-04-06T08:43:26+00:00",
-    "updated_at": "2026-04-06T13:01:02.353108+00:00",
+    "updated_at": "2026-04-06T13:31:18.735874+00:00",
     "region_text": "Western, Isabel and Choiseul",
     "link_url": "https://severeweather.wmo.int/list.html"
   }

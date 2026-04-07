@@ -137,6 +137,8 @@ function normalizeState(container, rawState) {
     );
   }
 
+  normalizeVerticalGapDrift(order, hidden, panelsState);
+
   return {
     order,
     hidden,
@@ -174,6 +176,42 @@ function needsVerticalSeparation(a, b) {
   if (gapBA >= 0 && gapBA < BOARD_GAP_Y) return true;
 
   return false;
+}
+
+function normalizeVerticalGapDrift(order, hidden, panelsState) {
+  const visibleIds = order.filter((id) => !hidden.includes(id) && panelsState[id]);
+  const placed = [];
+
+  visibleIds
+    .slice()
+    .sort((a, b) => {
+      const pa = panelsState[a];
+      const pb = panelsState[b];
+      if (!pa && !pb) return 0;
+      if (!pa) return 1;
+      if (!pb) return -1;
+      if (pa.y !== pb.y) return pa.y - pb.y;
+      if (pa.x !== pb.x) return pa.x - pb.x;
+      return 0;
+    })
+    .forEach((id) => {
+      const current = panelsState[id];
+      if (!current) return;
+
+      let minAllowedY = 0;
+      for (const prevId of placed) {
+        const prev = panelsState[prevId];
+        if (!prev || !horizontalRangesOverlap(prev, current)) continue;
+        minAllowedY = Math.max(minAllowedY, prev.y + prev.h + BOARD_GAP_Y);
+      }
+
+      const drift = current.y - minAllowedY;
+      if (drift > 0 && drift <= Y_STEP) {
+        current.y = minAllowedY;
+      }
+
+      placed.push(id);
+    });
 }
 
 export function createLayoutModule(ctx) {
@@ -464,11 +502,7 @@ export function createLayoutModule(ctx) {
   }
 
   function applyDesktopLayout() {
-    if (ctx.state.layoutEditMode) {
-      applyDesktopRawLayout();
-    } else {
-      applyDesktopAlignedLayout();
-    }
+    applyDesktopRawLayout();
   }
 
   function clearDesktopStylesForMobile() {
@@ -558,11 +592,7 @@ export function createLayoutModule(ctx) {
       return;
     }
 
-    if (ctx.state.layoutEditMode) {
-      applyDesktopRawLayout();
-    } else {
-      applyDesktopAlignedLayout();
-    }
+    applyDesktopRawLayout();
     renderPanelPicker();
   }
 

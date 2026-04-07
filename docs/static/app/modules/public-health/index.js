@@ -42,6 +42,15 @@ function normalizeItem(item) {
   };
 }
 
+const WHO_OUTBREAK_LIST_URL = "https://www.who.int/emergencies/disease-outbreak-news";
+
+function resolveItemHref(item) {
+  if (item?.categoryKey === "outbreak_event") {
+    return WHO_OUTBREAK_LIST_URL;
+  }
+  return item?.itemUrl || item?.listUrl || "";
+}
+
 function formatCardTime(item) {
   if (item?.publishedAt) {
     return formatAbsoluteLocalDateTime(item.publishedAt);
@@ -60,7 +69,7 @@ function renderList(items, emptyText) {
   }
 
   return items.map((item) => {
-    const href = item.itemUrl || item.listUrl || "";
+    const href = resolveItemHref(item);
     const sourceClass = item.sourceKey === "promed" ? "promed" : "who";
     const relative = item.publishedAt ? formatRelativeLocalTime(item.publishedAt) : (item.dateRaw || "");
     return `

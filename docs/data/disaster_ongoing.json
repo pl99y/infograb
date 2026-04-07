@@ -1,36 +1,89 @@
 [
   {
     "id": 1,
-    "group_key": "volcano|cc90e9b16bf4a1b06d10c043636f5560550b98cc",
+    "group_key": "volcano|05f9bf533545c4d76a8998734fc33e32cf8dae36",
     "event_type": "volcano",
     "severity_level": "high",
     "severity_color": "high",
     "title": "Mayon",
-    "summary": "VRP 366.80 MW · VIIRS375 / VIIRS · 4.56 km",
-    "started_at": "2026-04-07T16:30:01+00:00",
-    "updated_at": "2026-04-07T16:30:01+00:00",
+    "summary": "VRP 174.32 MW · VIIRS · 3.18 km",
+    "started_at": "2026-04-07T17:18:02+00:00",
+    "updated_at": "2026-04-07T17:18:02+00:00",
     "location_text": "Mayon",
     "lat": null,
     "lon": null,
     "source_primary": "MIROVA",
-    "source_secondary": "VIIRS375 / VIIRS",
+    "source_secondary": "VIIRS",
     "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
     "country_code": null,
     "payload": {
       "volcano_id": "273030",
       "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
-      "vrp_mw": 366.8,
-      "distance_km": 5.46,
+      "vrp_mw": 174.32,
+      "distance_km": 3.18,
       "sensor": "VIIRS",
       "row_class": [
         "high"
       ],
       "source_page": "https://www.mirovaweb.it/NRT/",
       "sensors": [
-        "VIIRS375",
         "VIIRS"
+      ],
+      "reports": [
+        {
+          "volcano_id": "273030",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
+          "vrp_mw": 174.32,
+          "distance_km": 3.18,
+          "sensor": "VIIRS",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 1
+    },
+    "member_event_ids": [
+      3
+    ],
+    "occurred_at": "2026-04-07T17:18:02+00:00",
+    "published_at": "2026-04-07T17:18:02+00:00",
+    "fetched_at": "2026-04-07T17:18:02+00:00"
+  },
+  {
+    "id": 2,
+    "group_key": "volcano|cc90e9b16bf4a1b06d10c043636f5560550b98cc",
+    "event_type": "volcano",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Mayon",
+    "summary": "VRP 286.09 MW · VIIRS375 · 4.56 km",
+    "started_at": "2026-04-07T16:30:01+00:00",
+    "updated_at": "2026-04-07T16:30:01+00:00",
+    "location_text": "Mayon",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "VIIRS375",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "273030",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
+      "vrp_mw": 286.09,
+      "distance_km": 4.56,
+      "sensor": "VIIRS375",
+      "row_class": [
+        "high"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "VIIRS375"
       ],
       "reports": [
         {
@@ -43,30 +96,19 @@
             "high"
           ],
           "source_page": "https://www.mirovaweb.it/NRT/"
-        },
-        {
-          "volcano_id": "273030",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
-          "vrp_mw": 366.8,
-          "distance_km": 5.46,
-          "sensor": "VIIRS",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
         }
       ],
-      "merged_count": 2
+      "merged_count": 1
     },
     "member_event_ids": [
-      3
+      4
     ],
     "occurred_at": "2026-04-07T16:30:01+00:00",
     "published_at": "2026-04-07T16:30:01+00:00",
     "fetched_at": "2026-04-07T16:30:01+00:00"
   },
   {
-    "id": 2,
+    "id": 3,
     "group_key": "earthquake|us6000sn81",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -102,7 +144,7 @@
     "fetched_at": "2026-04-07T13:40:15.182000+00:00"
   },
   {
-    "id": 3,
+    "id": 4,
     "group_key": "volcano|9d54f4ad9e3d67b62df6b0bc708c85a120016ba4",
     "event_type": "volcano",
     "severity_level": "high",
@@ -149,14 +191,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      4
+      5
     ],
     "occurred_at": "2026-04-07T12:55:00+00:00",
     "published_at": "2026-04-07T12:55:00+00:00",
     "fetched_at": "2026-04-07T12:55:00+00:00"
   },
   {
-    "id": 4,
+    "id": 5,
     "group_key": "earthquake|us6000sn72",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -192,7 +234,7 @@
     "fetched_at": "2026-04-07T09:07:44.598000+00:00"
   },
   {
-    "id": 6,
+    "id": 7,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|tc_31p|7885f3dcfd0d8809",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -240,14 +282,14 @@
       }
     },
     "member_event_ids": [
-      6
+      7
     ],
     "occurred_at": "2026-04-07T06:00:00+00:00",
     "published_at": "2026-04-07T06:00:00+00:00",
     "fetched_at": "2026-04-07T06:00:00+00:00"
   },
   {
-    "id": 5,
+    "id": 6,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|tc_30p|c6ac1bec70108ff1",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -295,14 +337,14 @@
       }
     },
     "member_event_ids": [
-      7
+      8
     ],
     "occurred_at": "2026-04-07T06:00:00+00:00",
     "published_at": "2026-04-07T06:00:00+00:00",
     "fetched_at": "2026-04-07T06:00:00+00:00"
   },
   {
-    "id": 7,
+    "id": 8,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -375,7 +417,7 @@
       }
     },
     "member_event_ids": [
-      5
+      6
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

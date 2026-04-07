@@ -48,7 +48,7 @@
       }
     },
     "member_event_ids": [
-      8
+      7
     ],
     "occurred_at": "2026-04-07T06:00:00+00:00",
     "published_at": "2026-04-07T06:00:00+00:00",
@@ -103,7 +103,7 @@
       }
     },
     "member_event_ids": [
-      9
+      8
     ],
     "occurred_at": "2026-04-07T06:00:00+00:00",
     "published_at": "2026-04-07T06:00:00+00:00",
@@ -157,7 +157,7 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      3
+      2
     ],
     "occurred_at": "2026-04-07T00:55:00+00:00",
     "published_at": "2026-04-07T00:55:00+00:00",
@@ -211,7 +211,7 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      4
+      3
     ],
     "occurred_at": "2026-04-07T00:25:00+00:00",
     "published_at": "2026-04-07T00:25:00+00:00",
@@ -277,7 +277,7 @@
       "merged_count": 2
     },
     "member_event_ids": [
-      5
+      4
     ],
     "occurred_at": "2026-04-06T23:36:01+00:00",
     "published_at": "2026-04-06T23:36:01+00:00",
@@ -290,14 +290,14 @@
     "severity_level": "high",
     "severity_color": "high",
     "title": "Mayon",
-    "summary": "VRP 109.48 MW · VIIRS375 / VIIRS · 4.74 km",
+    "summary": "VRP 109.48 MW · VIIRS375 · 4.93 km",
     "started_at": "2026-04-06T18:12:00+00:00",
     "updated_at": "2026-04-06T18:12:00+00:00",
     "location_text": "Mayon",
     "lat": null,
     "lon": null,
     "source_primary": "MIROVA",
-    "source_secondary": "VIIRS375 / VIIRS",
+    "source_secondary": "VIIRS375",
     "status": "active",
     "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
     "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
@@ -309,13 +309,11 @@
       "distance_km": 4.93,
       "sensor": "VIIRS375",
       "row_class": [
-        "high",
-        "moderate"
+        "high"
       ],
       "source_page": "https://www.mirovaweb.it/NRT/",
       "sensors": [
-        "VIIRS375",
-        "VIIRS"
+        "VIIRS375"
       ],
       "reports": [
         {
@@ -328,23 +326,12 @@
             "high"
           ],
           "source_page": "https://www.mirovaweb.it/NRT/"
-        },
-        {
-          "volcano_id": "273030",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
-          "vrp_mw": 64.39,
-          "distance_km": 4.74,
-          "sensor": "VIIRS",
-          "row_class": [
-            "moderate"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
         }
       ],
-      "merged_count": 2
+      "merged_count": 1
     },
     "member_event_ids": [
-      6
+      5
     ],
     "occurred_at": "2026-04-06T18:12:00+00:00",
     "published_at": "2026-04-06T18:12:00+00:00",
@@ -388,42 +375,6 @@
   },
   {
     "id": 8,
-    "group_key": "earthquake|us6000sn00",
-    "event_type": "earthquake",
-    "severity_level": "moderate",
-    "severity_color": "moderate",
-    "title": "M 5.2 - 0 km S of Tabonok, Philippines",
-    "summary": "0 km S of Tabonok, Philippines",
-    "started_at": "2026-04-06T07:22:42.142000+00:00",
-    "updated_at": "2026-04-06T15:57:56.825000+00:00",
-    "location_text": "0 km S of Tabonok, Philippines",
-    "lat": 10.8435,
-    "lon": 123.8752,
-    "source_primary": "USGS",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sn00",
-    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sn00",
-    "country_code": null,
-    "payload": {
-      "mag": 5.2,
-      "depth_km": 10.0,
-      "place": "0 km S of Tabonok, Philippines",
-      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000sn00.geojson",
-      "alert": null,
-      "sig": 439,
-      "tsunami": 0,
-      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
-    },
-    "member_event_ids": [
-      2
-    ],
-    "occurred_at": "2026-04-06T07:22:42.142000+00:00",
-    "published_at": "2026-04-06T07:22:42.142000+00:00",
-    "fetched_at": "2026-04-06T07:22:42.142000+00:00"
-  },
-  {
-    "id": 9,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -496,7 +447,7 @@
       }
     },
     "member_event_ids": [
-      7
+      6
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

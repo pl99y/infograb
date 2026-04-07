@@ -3,9 +3,9 @@ import { MOBILE_BREAKPOINT, STORAGE_KEYS } from "../../core/constants.js";
 const TOTAL_COLUMNS = 24;
 const BOARD_GAP_X = 8;
 const BOARD_GAP_Y = 8;
-const Y_STEP = 12;
+const Y_STEP = 4;
 const WIDTH_STEP = 1;
-const HEIGHT_STEP = 12;
+const HEIGHT_STEP = 4;
 
 const DEFAULT_MIN_W = 4;
 const DEFAULT_MIN_H = 320;

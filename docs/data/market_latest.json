@@ -1,1 +1,56 @@
-[]
+[
+  {
+    "key": "nasdaq",
+    "name": "NASDAQ Composite",
+    "symbol": "^IXIC",
+    "price": 21730.53,
+    "change_percent": -1.21,
+    "source": "yahoo_finance",
+    "fetched_at": "2026-04-07T14:42:36.123667+00:00"
+  },
+  {
+    "key": "sp500",
+    "name": "S&P 500",
+    "symbol": "^GSPC",
+    "price": 6565.31,
+    "change_percent": -0.7,
+    "source": "yahoo_finance",
+    "fetched_at": "2026-04-07T14:42:36.123667+00:00"
+  },
+  {
+    "key": "dowjones",
+    "name": "Dow Jones Industrial Average",
+    "symbol": "^DJI",
+    "price": 46474.66,
+    "change_percent": -0.42,
+    "source": "yahoo_finance",
+    "fetched_at": "2026-04-07T14:42:36.123667+00:00"
+  },
+  {
+    "key": "a_share_sse",
+    "name": "上证指数",
+    "symbol": "000001",
+    "price": 3890.16,
+    "change_percent": 0.26,
+    "source": "eastmoney",
+    "fetched_at": "2026-04-07T14:42:36.123667+00:00"
+  },
+  {
+    "key": "nikkei225",
+    "name": "Nikkei 225",
+    "symbol": "^N225",
+    "price": 53429.56,
+    "change_percent": 0.03,
+    "source": "yahoo_finance",
+    "fetched_at": "2026-04-07T14:42:36.123667+00:00"
+  },
+  {
+    "key": "hangseng",
+    "name": "Hang Seng Index",
+    "symbol": "^HSI",
+    "price": 25116.53,
+    "change_percent": -0.7,
+    "source": "yahoo_finance",
+    "fetched_at": "2026-04-07T14:42:36.123667+00:00"
+  }
+]

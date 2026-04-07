@@ -1,1 +1,336 @@
-[]
+[
+  {
+    "id": 1,
+    "group_key": "volcano|9d54f4ad9e3d67b62df6b0bc708c85a120016ba4",
+    "event_type": "volcano",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Mayon",
+    "summary": "VRP 179.58 MW · MODIS · 3.16 km",
+    "started_at": "2026-04-07T12:55:00+00:00",
+    "updated_at": "2026-04-07T12:55:00+00:00",
+    "location_text": "Mayon",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "MODIS",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=273030",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=273030",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "273030",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=273030",
+      "vrp_mw": 179.58,
+      "distance_km": 3.16,
+      "sensor": "MODIS",
+      "row_class": [
+        "high"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "MODIS"
+      ],
+      "reports": [
+        {
+          "volcano_id": "273030",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=273030",
+          "vrp_mw": 179.58,
+          "distance_km": 3.16,
+          "sensor": "MODIS",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 1
+    },
+    "member_event_ids": [
+      2
+    ],
+    "occurred_at": "2026-04-07T12:55:00+00:00",
+    "published_at": "2026-04-07T12:55:00+00:00",
+    "fetched_at": "2026-04-07T12:55:00+00:00"
+  },
+  {
+    "id": 2,
+    "group_key": "earthquake|us6000sn72",
+    "event_type": "earthquake",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "M 5.2 - Pacific-Antarctic Ridge",
+    "summary": "Pacific-Antarctic Ridge",
+    "started_at": "2026-04-07T09:07:44.598000+00:00",
+    "updated_at": "2026-04-07T13:50:25.040000+00:00",
+    "location_text": "Pacific-Antarctic Ridge",
+    "lat": -55.1335,
+    "lon": -128.4399,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sn72",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sn72",
+    "country_code": null,
+    "payload": {
+      "mag": 5.2,
+      "depth_km": 10.0,
+      "place": "Pacific-Antarctic Ridge",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000sn72.geojson",
+      "alert": null,
+      "sig": 416,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      1
+    ],
+    "occurred_at": "2026-04-07T09:07:44.598000+00:00",
+    "published_at": "2026-04-07T09:07:44.598000+00:00",
+    "fetched_at": "2026-04-07T09:07:44.598000+00:00"
+  },
+  {
+    "id": 3,
+    "group_key": "volcano|2b9a45e927fe5dca345a24771d33bd05a0184a2f",
+    "event_type": "volcano",
+    "severity_level": "very_high",
+    "severity_color": "very_high",
+    "title": "Nyamuragira",
+    "summary": "VRP 1690.04 MW · MODIS · 2.24 km",
+    "started_at": "2026-04-07T07:05:00+00:00",
+    "updated_at": "2026-04-07T07:05:00+00:00",
+    "location_text": "Nyamuragira",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "MODIS",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=223020",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=223020",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "223020",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=223020",
+      "vrp_mw": 1690.04,
+      "distance_km": 2.24,
+      "sensor": "MODIS",
+      "row_class": [
+        "very_high"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "MODIS"
+      ],
+      "reports": [
+        {
+          "volcano_id": "223020",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=223020",
+          "vrp_mw": 1690.04,
+          "distance_km": 2.24,
+          "sensor": "MODIS",
+          "row_class": [
+            "very_high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 1
+    },
+    "member_event_ids": [
+      3
+    ],
+    "occurred_at": "2026-04-07T07:05:00+00:00",
+    "published_at": "2026-04-07T07:05:00+00:00",
+    "fetched_at": "2026-04-07T07:05:00+00:00"
+  },
+  {
+    "id": 5,
+    "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|tc_31p|7885f3dcfd0d8809",
+    "event_type": "typhoon",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Tropical Cyclone 31P (Vaianu)",
+    "summary": "wind 100 kt (gust 125)",
+    "started_at": "2026-04-07T06:00:00+00:00",
+    "updated_at": "2026-04-07T06:00:00+00:00",
+    "location_text": "18.1S 174.8E",
+    "lat": -18.1,
+    "lon": 174.8,
+    "source_primary": "JTWC-ABPW",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://www.google.com/maps?q=-18.1,174.8",
+    "official_link": "https://www.google.com/maps?q=-18.1,174.8",
+    "country_code": null,
+    "payload": {
+      "item_type": "warning",
+      "source": "jtwc_abpw",
+      "source_key": "jtwc_abpw|south_pacific_area|tc_31p",
+      "content_hash": "7885f3dcfd0d8809",
+      "platform_summary": "18.1S 174.8E | wind 100 kt (gust 125)",
+      "platform_location": "18.1S 174.8E",
+      "wind": "100 kt (gust 125)",
+      "risk_48h": null,
+      "risk_7d": null,
+      "next_update": null,
+      "raw_text": "(1) AT 07APR26 0000Z, TROPICAL CYCLONE 31P (VAIANU) WAS LOCATED \nNEAR 18.1S 174.8E, APPROXIMATELY 205 NM WEST OF SUVA, FIJI, AND HAD \nTRACKED SOUTH-SOUTHEASTWARD AT 10 KNOTS OVER THE PAST SIX HOURS. MAXIMUM \nSUSTAINED SURFACE WINDS WERE ESTIMATED AT 100 KNOTS GUSTING TO 125 \nKNOTS. SEE REF A (WTPS32 PGTW 070300) FOR FURTHER DETAILS.",
+      "metadata": {
+        "basin_section": "SOUTH PACIFIC AREA (WEST COAST OF SOUTH AMERICA TO 135 EAST)",
+        "storm_class": "TROPICAL CYCLONE",
+        "storm_id": "31P",
+        "storm_name": "VAIANU",
+        "fix_date": "07APR26",
+        "fix_time": "07APR26 0000Z",
+        "lat": -18.1,
+        "lon": 174.8,
+        "movement_text": "SOUTH-SOUTHEASTWARD",
+        "movement_kt": 10,
+        "wind_kt": 100,
+        "gust_kt": 125,
+        "warning_reference": "WTPS32 PGTW 070300",
+        "bulletin_issue_at": "2026-04-07T06:00:00+00:00"
+      }
+    },
+    "member_event_ids": [
+      5
+    ],
+    "occurred_at": "2026-04-07T06:00:00+00:00",
+    "published_at": "2026-04-07T06:00:00+00:00",
+    "fetched_at": "2026-04-07T06:00:00+00:00"
+  },
+  {
+    "id": 4,
+    "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|tc_30p|c6ac1bec70108ff1",
+    "event_type": "typhoon",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Tropical Cyclone 30P (Maila)",
+    "summary": "wind 90 kt (gust 110)",
+    "started_at": "2026-04-07T06:00:00+00:00",
+    "updated_at": "2026-04-07T06:00:00+00:00",
+    "location_text": "9.9S 156.4E",
+    "lat": -9.9,
+    "lon": 156.4,
+    "source_primary": "JTWC-ABPW",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://www.google.com/maps?q=-9.9,156.4",
+    "official_link": "https://www.google.com/maps?q=-9.9,156.4",
+    "country_code": null,
+    "payload": {
+      "item_type": "warning",
+      "source": "jtwc_abpw",
+      "source_key": "jtwc_abpw|south_pacific_area|tc_30p",
+      "content_hash": "c6ac1bec70108ff1",
+      "platform_summary": "9.9S 156.4E | wind 90 kt (gust 110)",
+      "platform_location": "9.9S 156.4E",
+      "wind": "90 kt (gust 110)",
+      "risk_48h": null,
+      "risk_7d": null,
+      "next_update": null,
+      "raw_text": "(2) AT 07APR26 0000Z, TROPICAL CYCLONE 30P (MAILA) WAS LOCATED \nNEAR 9.9S 156.4E, APPROXIMATELY 667 NM SOUTH OF KAPINGAMARANGI, AND HAD \nTRACKED EAST-SOUTHEASTWARD AT 02 KNOTS OVER THE PAST SIX HOURS. MAXIMUM \nSUSTAINED SURFACE WINDS WERE ESTIMATED AT 90 KNOTS GUSTING TO 110 KNOTS. \nSEE REF B (WTPS31 PGTW 070300) FOR FURTHER DETAILS.",
+      "metadata": {
+        "basin_section": "SOUTH PACIFIC AREA (WEST COAST OF SOUTH AMERICA TO 135 EAST)",
+        "storm_class": "TROPICAL CYCLONE",
+        "storm_id": "30P",
+        "storm_name": "MAILA",
+        "fix_date": "07APR26",
+        "fix_time": "07APR26 0000Z",
+        "lat": -9.9,
+        "lon": 156.4,
+        "movement_text": "EAST-SOUTHEASTWARD",
+        "movement_kt": 2,
+        "wind_kt": 90,
+        "gust_kt": 110,
+        "warning_reference": "WTPS31 PGTW 070300",
+        "bulletin_issue_at": "2026-04-07T06:00:00+00:00"
+      }
+    },
+    "member_event_ids": [
+      6
+    ],
+    "occurred_at": "2026-04-07T06:00:00+00:00",
+    "published_at": "2026-04-07T06:00:00+00:00",
+    "fetched_at": "2026-04-07T06:00:00+00:00"
+  },
+  {
+    "id": 6,
+    "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
+    "event_type": "flood",
+    "severity_level": "orange",
+    "severity_color": "orange",
+    "title": "Flood in Democratic Republic of Congo",
+    "summary": "Democratic Republic of Congo",
+    "started_at": "2026-02-11T01:00:00+00:00",
+    "updated_at": "2026-04-07T09:00:59+00:00",
+    "location_text": "Democratic Republic of Congo",
+    "lat": null,
+    "lon": null,
+    "source_primary": "GDACS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://www.gdacs.org/report.aspx?eventid=1103784&episodeid=6&eventtype=FL",
+    "official_link": "https://www.gdacs.org/report.aspx?eventid=1103784&episodeid=6&eventtype=FL",
+    "country_code": null,
+    "payload": {
+      "eventid": "1103784",
+      "episodeid": "6",
+      "alertlevel": "orange",
+      "report_url": "https://www.gdacs.org/report.aspx?eventid=1103784&episodeid=6&eventtype=FL",
+      "geometry_url": null,
+      "details_url": null,
+      "source_page": "https://www.gdacs.org/Alerts/",
+      "active_within_days": 14,
+      "raw": {
+        "eventtype": "FL",
+        "eventid": 1103784,
+        "episodeid": 6,
+        "eventname": "",
+        "glide": "",
+        "name": "Flood in Democratic Republic of Congo",
+        "description": "Flood in Democratic Republic of Congo",
+        "htmldescription": "Orange Flood in Democratic Republic of Congo from: 11 Feb 2026 01 to: 05 Mar 2026 01.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/FL.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/FL.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=FL&eventid=1103784&episodeid=6",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1103784&episodeid=6&eventtype=FL",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=FL&eventid=1103784"
+        },
+        "alertlevel": "Orange",
+        "alertscore": 2,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "false",
+        "country": "Democratic Republic of Congo",
+        "fromdate": "2026-02-11T01:00:00",
+        "todate": "2026-03-05T01:00:00",
+        "datemodified": "2026-04-07T09:00:59",
+        "iso3": "COD",
+        "source": "GLOFAS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "CD",
+            "iso3": "COD",
+            "countryname": "Democratic Republic of Congo"
+          }
+        ],
+        "severitydata": {
+          "severity": 0.0,
+          "severitytext": "Magnitude 0 ",
+          "severityunit": ""
+        }
+      }
+    },
+    "member_event_ids": [
+      4
+    ],
+    "occurred_at": "2026-02-11T01:00:00+00:00",
+    "published_at": "2026-02-11T01:00:00+00:00",
+    "fetched_at": "2026-02-11T01:00:00+00:00"
+  }
+]

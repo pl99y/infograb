@@ -7,8 +7,8 @@
   "raw_geomag_text": ":Product: Geomagnetic Forecast\n:Issued: 2026 Apr 06 2205 UTC\n# Prepared by the U.S. Dept. of Commerce, NOAA, Space Weather Prediction Center\n#\nNOAA Ap Index Forecast\nObserved Ap 05 Apr 012\nEstimated Ap 06 Apr 009\nPredicted Ap 07 Apr-09 Apr 008-005-005\n\nNOAA Geomagnetic Activity Probabilities 07 Apr-09 Apr\nActive                20/15/15\nMinor storm           05/01/01\nModerate storm        01/01/01\nStrong-Extreme storm  01/01/01\n\nNOAA Kp index forecast 07 Apr - 09 Apr\n             Apr 07    Apr 08    Apr 09\n00-03UT        2.67      1.67      1.67      \n03-06UT        2.67      1.67      1.67      \n06-09UT        2.67      1.67      1.67      \n09-12UT        2.00      1.33      1.00      \n12-15UT        0.67      0.67      0.67      \n15-18UT        0.67      0.67      1.33      \n18-21UT        1.67      1.67      1.33      \n21-00UT        2.67      2.00      1.67      \n",
   "source_name": "SWPC Forecast",
   "source_url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
-  "fetched_at": "2026-04-07T14:57:39.586931+00:00",
-  "created_at": "2026-04-07 14:57:51",
+  "fetched_at": "2026-04-07T19:47:44.471533+00:00",
+  "created_at": "2026-04-07 19:47:59",
   "panel": {
     "forecast_issued_at": "2026-04-07T12:30:00+00:00",
     "geomag_issued_at": "2026-04-06T22:05:00+00:00",
@@ -17,9 +17,9 @@
       "expected_summary": "Apr 07-Apr 09 2026年预计最高的3 kp为3.",
       "rationale": "预计不会有G1(微型)或更大的地磁风暴。 预测的太阳风没有显著的短暂性或经常性特征.",
       "days": [
-        "Apr 06",
-        "Apr 01",
-        "Apr 00"
+        "Apr 07",
+        "Apr 08",
+        "Apr 09"
       ],
       "ap_index": {
         "observed": "05 Apr 012 Estimated Ap 06 Apr 009 Predicted Ap 07 Apr-09 Apr 008-005-005 NOAA Geomagnetic Activity Probabilities 07 Apr-09 Apr Active 20/15/15 Minor storm 05/01/01 Moderate storm 01/01/01 Strong-Extreme storm 01/01/01 NOAA Kp index forecast 07 Apr - 09 Apr Apr 07 Apr 08 Apr 09 00-03UT 2.67 1.67 1.67 03-06UT 2.67 1.67 1.67 06-09UT 2.67 1.67 1.67 09-12UT 2.00 1.33 1.00 12-15UT 0.67 0.67 0.67 15-18UT 0.67 0.67 1.33 18-21UT 1.67 1.67 1.33 21-00UT 2.67 2.00 1.67",
@@ -52,9 +52,9 @@
     "solar_radiation": {
       "observed_summary": "过去24小时,NOAA GOES-18观察到太阳辐射低于S级风暴阈值.",
       "days": [
-        "Apr 06",
-        "Apr 01",
-        "Apr 00"
+        "Apr 07",
+        "Apr 08",
+        "Apr 09"
       ],
       "s1_or_greater": [
         "5%",
@@ -66,9 +66,9 @@
     "radio_blackout": {
       "observed_summary": "过去24小时没有看到无线电停电.",
       "days": [
-        "Apr 06",
-        "Apr 01",
-        "Apr 00"
+        "Apr 07",
+        "Apr 08",
+        "Apr 09"
       ],
       "r1_r2": [
         "30%",

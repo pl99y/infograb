@@ -126,61 +126,7 @@
     "fetched_at": "2026-04-07T09:07:44.598000+00:00"
   },
   {
-    "id": 4,
-    "group_key": "volcano|2b9a45e927fe5dca345a24771d33bd05a0184a2f",
-    "event_type": "volcano",
-    "severity_level": "very_high",
-    "severity_color": "very_high",
-    "title": "Nyamuragira",
-    "summary": "VRP 1690.04 MW · MODIS · 2.24 km",
-    "started_at": "2026-04-07T07:05:00+00:00",
-    "updated_at": "2026-04-07T07:05:00+00:00",
-    "location_text": "Nyamuragira",
-    "lat": null,
-    "lon": null,
-    "source_primary": "MIROVA",
-    "source_secondary": "MODIS",
-    "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=223020",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=223020",
-    "country_code": null,
-    "payload": {
-      "volcano_id": "223020",
-      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=223020",
-      "vrp_mw": 1690.04,
-      "distance_km": 2.24,
-      "sensor": "MODIS",
-      "row_class": [
-        "very_high"
-      ],
-      "source_page": "https://www.mirovaweb.it/NRT/",
-      "sensors": [
-        "MODIS"
-      ],
-      "reports": [
-        {
-          "volcano_id": "223020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=223020",
-          "vrp_mw": 1690.04,
-          "distance_km": 2.24,
-          "sensor": "MODIS",
-          "row_class": [
-            "very_high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        }
-      ],
-      "merged_count": 1
-    },
-    "member_event_ids": [
-      4
-    ],
-    "occurred_at": "2026-04-07T07:05:00+00:00",
-    "published_at": "2026-04-07T07:05:00+00:00",
-    "fetched_at": "2026-04-07T07:05:00+00:00"
-  },
-  {
-    "id": 6,
+    "id": 5,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|tc_31p|7885f3dcfd0d8809",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -228,14 +174,14 @@
       }
     },
     "member_event_ids": [
-      6
+      5
     ],
     "occurred_at": "2026-04-07T06:00:00+00:00",
     "published_at": "2026-04-07T06:00:00+00:00",
     "fetched_at": "2026-04-07T06:00:00+00:00"
   },
   {
-    "id": 5,
+    "id": 4,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|tc_30p|c6ac1bec70108ff1",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -283,14 +229,14 @@
       }
     },
     "member_event_ids": [
-      7
+      6
     ],
     "occurred_at": "2026-04-07T06:00:00+00:00",
     "published_at": "2026-04-07T06:00:00+00:00",
     "fetched_at": "2026-04-07T06:00:00+00:00"
   },
   {
-    "id": 7,
+    "id": 6,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -363,7 +309,7 @@
       }
     },
     "member_event_ids": [
-      5
+      4
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

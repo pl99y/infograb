@@ -22,18 +22,18 @@
 
 .iflow-header-inline h3 {
   margin: 0;
-  font-size: 13px;
+  font-size: 14px;
   color: var(--text-main);
   letter-spacing: 0;
   font-weight: 700;
 }
 
 .iflow-updated {
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .iflow-today-factor {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
   color: var(--text-main);
   white-space: nowrap;
@@ -60,7 +60,7 @@
   width: 100%;
   border-collapse: collapse;
   min-width: 920px;
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .iflow-table thead th {
@@ -69,7 +69,7 @@
   z-index: 1;
   background: var(--bg-card);
   color: var(--text-sec);
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
   text-align: left;
   padding: 7px 9px;
@@ -112,7 +112,7 @@
   .iflow-header-inline h3,
   .iflow-updated,
   .iflow-today-factor {
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .iflow-panel {
@@ -120,7 +120,7 @@
   }
 
   .iflow-table {
-    font-size: 10px;
+    font-size: 11px;
     min-width: 820px;
   }
 

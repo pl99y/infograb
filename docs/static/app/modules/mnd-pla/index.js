@@ -126,6 +126,7 @@ function renderSummary(summary) {
   const noAircraftTooltip = noAircraftDates.length
     ? `七日内无到访日期：${noAircraftDates.join("、")}`
     : "未到访日";
+  const noAircraftDatesText = noAircraftDates.length ? noAircraftDates.join("、") : "无";
 
   return `
     <div class="mnd-pla-summary-heading">7日内家长到访统计</div>
@@ -152,6 +153,7 @@ function renderSummary(summary) {
       >
         <span>无到访日</span>
         <strong>${escapeHtml(formatInt(summary?.no_aircraft_days))}</strong>
+        <div class="mnd-pla-no-aircraft-dates mnd-pla-mobile-only">${escapeHtml(noAircraftDatesText)}</div>
       </div>
     </div>
   `;

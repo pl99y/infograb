@@ -1,6 +1,42 @@
 [
   {
     "id": 1,
+    "group_key": "earthquake|us6000sn81",
+    "event_type": "earthquake",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "M 5.0 - 186 km WSW of Bandar Lampung, Indonesia",
+    "summary": "186 km WSW of Bandar Lampung, Indonesia",
+    "started_at": "2026-04-07T13:40:15.182000+00:00",
+    "updated_at": "2026-04-07T14:47:29.040000+00:00",
+    "location_text": "186 km WSW of Bandar Lampung, Indonesia",
+    "lat": -6.1919,
+    "lon": 103.7635,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sn81",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sn81",
+    "country_code": null,
+    "payload": {
+      "mag": 5.0,
+      "depth_km": 30.783,
+      "place": "186 km WSW of Bandar Lampung, Indonesia",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000sn81.geojson",
+      "alert": null,
+      "sig": 385,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      1
+    ],
+    "occurred_at": "2026-04-07T13:40:15.182000+00:00",
+    "published_at": "2026-04-07T13:40:15.182000+00:00",
+    "fetched_at": "2026-04-07T13:40:15.182000+00:00"
+  },
+  {
+    "id": 2,
     "group_key": "volcano|9d54f4ad9e3d67b62df6b0bc708c85a120016ba4",
     "event_type": "volcano",
     "severity_level": "high",
@@ -47,14 +83,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      2
+      3
     ],
     "occurred_at": "2026-04-07T12:55:00+00:00",
     "published_at": "2026-04-07T12:55:00+00:00",
     "fetched_at": "2026-04-07T12:55:00+00:00"
   },
   {
-    "id": 2,
+    "id": 3,
     "group_key": "earthquake|us6000sn72",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -83,14 +119,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      1
+      2
     ],
     "occurred_at": "2026-04-07T09:07:44.598000+00:00",
     "published_at": "2026-04-07T09:07:44.598000+00:00",
     "fetched_at": "2026-04-07T09:07:44.598000+00:00"
   },
   {
-    "id": 3,
+    "id": 4,
     "group_key": "volcano|2b9a45e927fe5dca345a24771d33bd05a0184a2f",
     "event_type": "volcano",
     "severity_level": "very_high",
@@ -137,14 +173,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      3
+      4
     ],
     "occurred_at": "2026-04-07T07:05:00+00:00",
     "published_at": "2026-04-07T07:05:00+00:00",
     "fetched_at": "2026-04-07T07:05:00+00:00"
   },
   {
-    "id": 5,
+    "id": 6,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|tc_31p|7885f3dcfd0d8809",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -192,14 +228,14 @@
       }
     },
     "member_event_ids": [
-      5
+      6
     ],
     "occurred_at": "2026-04-07T06:00:00+00:00",
     "published_at": "2026-04-07T06:00:00+00:00",
     "fetched_at": "2026-04-07T06:00:00+00:00"
   },
   {
-    "id": 4,
+    "id": 5,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|tc_30p|c6ac1bec70108ff1",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -247,14 +283,14 @@
       }
     },
     "member_event_ids": [
-      6
+      7
     ],
     "occurred_at": "2026-04-07T06:00:00+00:00",
     "published_at": "2026-04-07T06:00:00+00:00",
     "fetched_at": "2026-04-07T06:00:00+00:00"
   },
   {
-    "id": 6,
+    "id": 7,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -327,7 +363,7 @@
       }
     },
     "member_event_ids": [
-      4
+      5
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

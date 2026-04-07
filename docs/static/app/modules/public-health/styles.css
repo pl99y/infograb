@@ -1,0 +1,138 @@
+.col-public-health {
+    min-height: 0;
+}
+
+.public-health-tabs {
+    display: flex;
+    gap: 8px;
+    padding: 10px 16px 0;
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+}
+
+.public-health-tab-btn {
+    appearance: none;
+    border: 0;
+    border-bottom: 2px solid transparent;
+    background: transparent;
+    color: var(--text-sec);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px 2px 12px;
+    cursor: pointer;
+}
+
+.public-health-tab-btn.active {
+    color: var(--text-main);
+    border-bottom-color: var(--accent-blue);
+}
+
+.public-health-tab-panel {
+    display: none;
+    min-height: 0;
+    flex: 1;
+}
+
+.public-health-tab-panel.active {
+    display: flex;
+    min-height: 0;
+}
+
+.public-health-list {
+    flex: 1;
+    min-height: 0;
+    overflow: auto;
+    padding: 12px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.public-health-card {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--bg-surface);
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.public-health-card.has-link {
+    cursor: pointer;
+}
+
+.public-health-card.has-link:hover,
+.public-health-card.has-link:focus {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.12);
+    outline: none;
+}
+
+.public-health-card-top,
+.public-health-meta-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.public-health-source-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.public-health-source-badge.promed {
+    background: rgba(245, 158, 11, 0.14);
+    color: #b45309;
+}
+
+.public-health-source-badge.who {
+    background: rgba(37, 99, 235, 0.12);
+    color: #1d4ed8;
+}
+
+.public-health-time,
+.public-health-date {
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+.public-health-title {
+    color: var(--text-main);
+    font-size: 14px;
+    line-height: 1.45;
+    font-weight: 600;
+}
+
+.public-health-link {
+    color: var(--accent-blue);
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.public-health-link:hover {
+    text-decoration: underline;
+}
+
+.public-health-empty {
+    padding: 28px 10px;
+    text-align: center;
+}
+
+.public-health-empty-title {
+    color: var(--text-main);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.public-health-empty-subtitle {
+    margin-top: 6px;
+    color: var(--text-muted);
+    font-size: 12px;
+}

@@ -7,7 +7,7 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <link rel="stylesheet" href="./static/dashboard.css?v=36">
+    <link rel="stylesheet" href="./static/dashboard.css?v=40">
 </head>
 <body>
     <header class="top-nav">
@@ -146,6 +146,80 @@
                 </div>
             </div>
 
+
+            <div
+                class="grid-stack-item"
+                gs-id="space-weather"
+                data-panel-title="太空天气"
+                data-mobile-nav-title="太空"
+                data-default-w="8"
+                data-default-h="620"
+                data-min-w="4"
+                data-min-h="420"
+                data-max-h="1400"
+            >
+                <div class="grid-stack-item-content">
+                    <section class="grid-col col-space-weather">
+                        <div class="section-header">
+                            <div class="section-header-row">
+                                <div class="section-header-text">
+                                    <h3>太空天气</h3>
+                                    <div class="section-updated" id="spaceWeatherUpdatedAt">（加载中）</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-weather-wrap">
+                            <div class="space-weather-tabs" id="spaceWeatherTabs">
+                                <button class="space-weather-tab-btn active" type="button" data-space-weather-tab="alerts">NOAA Alerts</button>
+                                <button class="space-weather-tab-btn" type="button" data-space-weather-tab="forecast">3-Day Forecast</button>
+                            </div>
+
+                            <div class="space-weather-tab-panel active" id="spaceWeatherAlertsPanel" data-space-weather-panel="alerts">
+                                <div class="space-weather-alerts" id="spaceWeatherAlertsContainer">
+                                    <div class="loading-state">正在加载 NOAA Alerts...</div>
+                                </div>
+                            </div>
+
+                            <div class="space-weather-tab-panel" id="spaceWeatherForecastPanel" data-space-weather-panel="forecast">
+                                <div class="space-weather-forecast" id="spaceWeatherForecastContainer">
+                                    <div class="loading-state">正在加载 NOAA 3-Day Forecast...</div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div
+                class="grid-stack-item"
+                gs-id="mnd-pla"
+                data-panel-title="台海动态"
+                data-mobile-nav-title="台海"
+                data-default-w="6"
+                data-default-h="720"
+                data-min-w="3"
+                data-min-h="420"
+                data-max-h="1400"
+            >
+                <div class="grid-stack-item-content">
+                    <section class="grid-col col-mnd-pla">
+                        <div class="section-header">
+                            <div class="section-header-row">
+                                <div class="section-header-text">
+                                    <h3>台海动态</h3>
+                                    <div class="section-updated" id="mndPlaUpdatedAt">（加载中）</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mnd-pla-panel" id="mndPlaContainer">
+                            <div class="loading-state">正在加载台海动态...</div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
             <div
                 class="grid-stack-item"
                 gs-id="iflow"
@@ -262,6 +336,49 @@
                 </div>
             </div>
 
+
+            <div
+                class="grid-stack-item"
+                gs-id="public-health"
+                data-panel-title="公众健康"
+                data-mobile-nav-title="健康"
+                data-default-w="6"
+                data-default-h="700"
+                data-min-w="4"
+                data-min-h="420"
+                data-max-h="1600"
+            >
+                <div class="grid-stack-item-content">
+                    <section class="grid-col col-public-health">
+                        <div class="section-header">
+                            <div class="section-header-row">
+                                <div class="section-header-text">
+                                    <h3>公众健康</h3>
+                                    <div class="section-updated" id="publicHealthUpdatedAt">（加载中）</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="public-health-tabs" id="publicHealthTabs">
+                            <button class="public-health-tab-btn active" data-tab="early-warning" type="button">早期预警</button>
+                            <button class="public-health-tab-btn" data-tab="outbreak-event" type="button">爆发事件</button>
+                        </div>
+
+                        <div class="public-health-tab-panel active" id="publicHealthEarlyPanel">
+                            <div class="public-health-list" id="publicHealthEarlyContainer">
+                                <div class="loading-state">正在加载早期预警...</div>
+                            </div>
+                        </div>
+
+                        <div class="public-health-tab-panel" id="publicHealthOutbreakPanel">
+                            <div class="public-health-list" id="publicHealthOutbreakContainer">
+                                <div class="loading-state">正在加载爆发事件...</div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
             <div
                 class="grid-stack-item"
                 gs-id="f1"
@@ -318,6 +435,6 @@
         <img class="lightbox-content" id="lightbox-img" alt="Expanded media">
     </div>
 
-    <script type="module" src="./static/app/main-pages.js?v=36"></script>
+    <script type="module" src="./static/app/main-pages.js?v=40"></script>
 </body>
 </html>

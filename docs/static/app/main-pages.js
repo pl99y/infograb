@@ -10,6 +10,9 @@ import { createMarketModule } from "./modules/market/index.js";
 import { createIflowModule } from "./modules/iflow/index.js";
 import { createAviationModule } from "./modules/aviation/index.js";
 import { createDisasterModule } from "./modules/disaster/index.js";
+import { createPublicHealthModule } from "./modules/public-health/index.js";
+import { createSpaceWeatherModule } from "./modules/space-weather/index.js";
+import { createMndPlaModule } from "./modules/mnd-pla/index.js";
 import { createF1Module } from "./modules/f1/index.js";
 import { createFeedModule } from "./modules/feed/index.js";
 
@@ -29,7 +32,12 @@ function createContext() {
       aviationAlerts: [],
       aviationDisruptions: [],
       disasterInstant: [],
+      publicHealthEarlyWarnings: [],
+      publicHealthOutbreakEvents: [],
       telegram: [],
+      spaceWeatherAlerts: [],
+      spaceWeatherForecast: null,
+      mndPlaData: null,
       f1Live: null,
       f1News: [],
       translationCache: new Map(),
@@ -38,6 +46,9 @@ function createContext() {
       lastIflowFetchedAt: null,
       lastAviationFetchedAt: null,
       lastDisasterFetchedAt: null,
+      lastPublicHealthFetchedAt: null,
+      lastSpaceWeatherFetchedAt: null,
+      lastMndPlaFetchedAt: null,
       lastF1FetchedAt: null,
       refreshTimer: null,
       relativeClockTimer: null,
@@ -70,9 +81,12 @@ document.addEventListener("DOMContentLoaded", async () => {
   ctx.mobile = safeInit("mobile", createMobileModule, ctx, modules);
   ctx.energyModule = safeInit("energy", createEnergyModule, ctx, modules);
   ctx.marketModule = safeInit("market", createMarketModule, ctx, modules);
+  ctx.spaceWeatherModule = safeInit("space-weather", createSpaceWeatherModule, ctx, modules);
+  ctx.mndPlaModule = safeInit("mnd-pla", createMndPlaModule, ctx, modules);
   ctx.iflowModule = safeInit("iflow", createIflowModule, ctx, modules);
   ctx.aviationModule = safeInit("aviation", createAviationModule, ctx, modules);
   ctx.disasterModule = safeInit("disaster", createDisasterModule, ctx, modules);
+  ctx.publicHealthModule = safeInit("public-health", createPublicHealthModule, ctx, modules);
   ctx.feedModule = safeInit("feed", createFeedModule, ctx, modules);
 
   async function refreshAll() {
@@ -83,9 +97,12 @@ document.addEventListener("DOMContentLoaded", async () => {
   function updateRelativeTexts() {
     try { ctx.energyModule?.updateHeader?.(); } catch (error) { console.error("[relative update failed] energy", error); }
     try { ctx.marketModule?.updateHeader?.(); } catch (error) { console.error("[relative update failed] market", error); }
+    try { ctx.spaceWeatherModule?.updateHeader?.(); } catch (error) { console.error("[relative update failed] space-weather", error); }
+    try { ctx.mndPlaModule?.updateHeader?.(); } catch (error) { console.error("[relative update failed] mnd-pla", error); }
     try { ctx.iflowModule?.updateHeader?.(); } catch (error) { console.error("[relative update failed] iflow", error); }
     try { ctx.aviationModule?.updateHeader?.(); } catch (error) { console.error("[relative update failed] aviation", error); }
     try { ctx.disasterModule?.updateHeader?.(); } catch (error) { console.error("[relative update failed] disaster", error); }
+    try { ctx.publicHealthModule?.updateHeader?.(); } catch (error) { console.error("[relative update failed] public-health", error); }
     try { ctx.f1Module?.updateHeader?.(); } catch (error) { console.error("[relative update failed] f1", error); }
     try { ctx.feedModule?.updateRelativeTimes?.(); } catch (error) { console.error("[relative update failed] feed", error); }
   }

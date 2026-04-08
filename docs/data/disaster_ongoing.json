@@ -1,6 +1,42 @@
 [
   {
     "id": 1,
+    "group_key": "earthquake|us7000sbau",
+    "event_type": "earthquake",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "M 5.6 - 64 km SSE of Sovetabad, Azerbaijan",
+    "summary": "64 km SSE of Sovetabad, Azerbaijan",
+    "started_at": "2026-04-08T09:05:36.878000+00:00",
+    "updated_at": "2026-04-08T09:22:46.040000+00:00",
+    "location_text": "64 km SSE of Sovetabad, Azerbaijan",
+    "lat": 38.8408,
+    "lon": 49.6001,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sbau",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sbau",
+    "country_code": null,
+    "payload": {
+      "mag": 5.6,
+      "depth_km": 10.0,
+      "place": "64 km SSE of Sovetabad, Azerbaijan",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us7000sbau.geojson",
+      "alert": null,
+      "sig": 482,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      1
+    ],
+    "occurred_at": "2026-04-08T09:05:36.878000+00:00",
+    "published_at": "2026-04-08T09:05:36.878000+00:00",
+    "fetched_at": "2026-04-08T09:05:36.878000+00:00"
+  },
+  {
+    "id": 2,
     "group_key": "earthquake|us7000sbap",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -29,14 +65,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      1
+      2
     ],
     "occurred_at": "2026-04-08T08:33:16.977000+00:00",
     "published_at": "2026-04-08T08:33:16.977000+00:00",
     "fetched_at": "2026-04-08T08:33:16.977000+00:00"
   },
   {
-    "id": 3,
+    "id": 4,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|tc_31p|0315fdc95fe58579",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -91,7 +127,7 @@
     "fetched_at": "2026-04-08T06:00:00+00:00"
   },
   {
-    "id": 2,
+    "id": 3,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|tc_30p|607ec087c458c179",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -146,7 +182,7 @@
     "fetched_at": "2026-04-08T06:00:00+00:00"
   },
   {
-    "id": 4,
+    "id": 5,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|western_north_pacific_area|invest_90w|4056ea81037795f2",
     "event_type": "typhoon",
     "severity_level": "elevated",
@@ -197,7 +233,7 @@
     "fetched_at": "2026-04-08T06:00:00+00:00"
   },
   {
-    "id": 5,
+    "id": 6,
     "group_key": "volcano|cbde336475e6e2e786fa645e7bc19cda92a2fa2f",
     "event_type": "volcano",
     "severity_level": "high",
@@ -251,7 +287,7 @@
     "fetched_at": "2026-04-08T05:18:01+00:00"
   },
   {
-    "id": 6,
+    "id": 7,
     "group_key": "earthquake|us7000sb8q",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -280,14 +316,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      2
+      3
     ],
     "occurred_at": "2026-04-08T00:11:27.976000+00:00",
     "published_at": "2026-04-08T00:11:27.976000+00:00",
     "fetched_at": "2026-04-08T00:11:27.976000+00:00"
   },
   {
-    "id": 7,
+    "id": 8,
     "group_key": "volcano|db142dd070ac87a2c1132511d751c1fc2d6bc3b9",
     "event_type": "volcano",
     "severity_level": "high",
@@ -341,7 +377,7 @@
     "fetched_at": "2026-04-07T23:18:01+00:00"
   },
   {
-    "id": 8,
+    "id": 9,
     "group_key": "volcano|e008ee228cdafbca03139971d63518535bf87382",
     "event_type": "volcano",
     "severity_level": "high",
@@ -395,7 +431,7 @@
     "fetched_at": "2026-04-07T18:12:01+00:00"
   },
   {
-    "id": 9,
+    "id": 10,
     "group_key": "earthquake|us6000sn81",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -424,47 +460,11 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      3
+      4
     ],
     "occurred_at": "2026-04-07T13:40:15.182000+00:00",
     "published_at": "2026-04-07T13:40:15.182000+00:00",
     "fetched_at": "2026-04-07T13:40:15.182000+00:00"
-  },
-  {
-    "id": 10,
-    "group_key": "earthquake|us6000sn72",
-    "event_type": "earthquake",
-    "severity_level": "moderate",
-    "severity_color": "moderate",
-    "title": "M 5.2 - Pacific-Antarctic Ridge",
-    "summary": "Pacific-Antarctic Ridge",
-    "started_at": "2026-04-07T09:07:44.598000+00:00",
-    "updated_at": "2026-04-07T13:50:25.040000+00:00",
-    "location_text": "Pacific-Antarctic Ridge",
-    "lat": -55.1335,
-    "lon": -128.4399,
-    "source_primary": "USGS",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sn72",
-    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sn72",
-    "country_code": null,
-    "payload": {
-      "mag": 5.2,
-      "depth_km": 10.0,
-      "place": "Pacific-Antarctic Ridge",
-      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000sn72.geojson",
-      "alert": null,
-      "sig": 416,
-      "tsunami": 0,
-      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
-    },
-    "member_event_ids": [
-      4
-    ],
-    "occurred_at": "2026-04-07T09:07:44.598000+00:00",
-    "published_at": "2026-04-07T09:07:44.598000+00:00",
-    "fetched_at": "2026-04-07T09:07:44.598000+00:00"
   },
   {
     "id": 11,

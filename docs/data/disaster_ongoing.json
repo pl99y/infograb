@@ -1,6 +1,165 @@
 [
   {
+    "id": 2,
+    "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|tc_31p|16b8616bde4110f2",
+    "event_type": "typhoon",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Tropical Cyclone 31P (Vaianu)",
+    "summary": "wind 90 kt (gust 110)",
+    "started_at": "2026-04-08T02:00:00+00:00",
+    "updated_at": "2026-04-08T02:00:00+00:00",
+    "location_text": "21.1S 177.0E",
+    "lat": -21.1,
+    "lon": 177.0,
+    "source_primary": "JTWC-ABPW",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://www.google.com/maps?q=-21.1,177.0",
+    "official_link": "https://www.google.com/maps?q=-21.1,177.0",
+    "country_code": null,
+    "payload": {
+      "item_type": "warning",
+      "source": "jtwc_abpw",
+      "source_key": "jtwc_abpw|south_pacific_area|tc_31p",
+      "content_hash": "16b8616bde4110f2",
+      "platform_summary": "21.1S 177.0E | wind 90 kt (gust 110)",
+      "platform_location": "21.1S 177.0E",
+      "wind": "90 kt (gust 110)",
+      "risk_48h": null,
+      "risk_7d": null,
+      "next_update": null,
+      "raw_text": "(1) AT 07APR26 1800Z, TROPICAL CYCLONE 31P (VAIANU) WAS LOCATED \nNEAR 21.1S 177.0E, APPROXIMATELY 197 NM SOUTH-SOUTHWEST OF SUVA, FIJI, \nAND HAD TRACKED SOUTHEASTWARD AT 15 KNOTS OVER THE PAST SIX HOURS. \nMAXIMUM SUSTAINED SURFACE WINDS WERE ESTIMATED AT 90 KNOTS GUSTING TO \n110 KNOTS. SEE REF A (WTPS32 PGTW 072100) FOR FURTHER DETAILS.",
+      "metadata": {
+        "basin_section": "SOUTH PACIFIC AREA (WEST COAST OF SOUTH AMERICA TO 135 EAST)",
+        "storm_class": "TROPICAL CYCLONE",
+        "storm_id": "31P",
+        "storm_name": "VAIANU",
+        "fix_date": "07APR26",
+        "fix_time": "07APR26 1800Z",
+        "lat": -21.1,
+        "lon": 177.0,
+        "movement_text": "SOUTHEASTWARD",
+        "movement_kt": 15,
+        "wind_kt": 90,
+        "gust_kt": 110,
+        "warning_reference": "WTPS32 PGTW 072100",
+        "bulletin_issue_at": "2026-04-08T02:00:00+00:00"
+      }
+    },
+    "member_event_ids": [
+      10
+    ],
+    "occurred_at": "2026-04-08T02:00:00+00:00",
+    "published_at": "2026-04-08T02:00:00+00:00",
+    "fetched_at": "2026-04-08T02:00:00+00:00"
+  },
+  {
     "id": 1,
+    "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|tc_30p|1d674f202d570013",
+    "event_type": "typhoon",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Tropical Cyclone 30P (Maila)",
+    "summary": "wind 125 kt (gust 150)",
+    "started_at": "2026-04-08T02:00:00+00:00",
+    "updated_at": "2026-04-08T02:00:00+00:00",
+    "location_text": "9.5S 156.0E",
+    "lat": -9.5,
+    "lon": 156.0,
+    "source_primary": "JTWC-ABPW",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://www.google.com/maps?q=-9.5,156.0",
+    "official_link": "https://www.google.com/maps?q=-9.5,156.0",
+    "country_code": null,
+    "payload": {
+      "item_type": "warning",
+      "source": "jtwc_abpw",
+      "source_key": "jtwc_abpw|south_pacific_area|tc_30p",
+      "content_hash": "1d674f202d570013",
+      "platform_summary": "9.5S 156.0E | wind 125 kt (gust 150)",
+      "platform_location": "9.5S 156.0E",
+      "wind": "125 kt (gust 150)",
+      "risk_48h": null,
+      "risk_7d": null,
+      "next_update": null,
+      "raw_text": "(2) AT 07APR26 1800Z, TROPICAL CYCLONE 30P (MAILA) WAS LOCATED \nNEAR 9.5S 156.0E, APPROXIMATELY 743 NM NORTHEAST OF CAIRNS, AUSTRALIA, \nAND HAD TRACKED NORTHWESTWARD AT 04 KNOTS OVER THE PAST SIX HOURS. \nMAXIMUM SUSTAINED SURFACE WINDS WERE ESTIMATED AT 125 KNOTS GUSTING TO \n150 KNOTS. SEE REF B (WTPS31 PGTW 072100) FOR FURTHER DETAILS.",
+      "metadata": {
+        "basin_section": "SOUTH PACIFIC AREA (WEST COAST OF SOUTH AMERICA TO 135 EAST)",
+        "storm_class": "TROPICAL CYCLONE",
+        "storm_id": "30P",
+        "storm_name": "MAILA",
+        "fix_date": "07APR26",
+        "fix_time": "07APR26 1800Z",
+        "lat": -9.5,
+        "lon": 156.0,
+        "movement_text": "NORTHWESTWARD",
+        "movement_kt": 4,
+        "wind_kt": 125,
+        "gust_kt": 150,
+        "warning_reference": "WTPS31 PGTW 072100",
+        "bulletin_issue_at": "2026-04-08T02:00:00+00:00"
+      }
+    },
+    "member_event_ids": [
+      11
+    ],
+    "occurred_at": "2026-04-08T02:00:00+00:00",
+    "published_at": "2026-04-08T02:00:00+00:00",
+    "fetched_at": "2026-04-08T02:00:00+00:00"
+  },
+  {
+    "id": 3,
+    "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|western_north_pacific_area|invest_90w|b75b49a3b4efa938",
+    "event_type": "typhoon",
+    "severity_level": "low",
+    "severity_color": "low",
+    "title": "INVEST 90W",
+    "summary": "wind 13-18 kt · 1002 mb",
+    "started_at": "2026-04-08T02:00:00+00:00",
+    "updated_at": "2026-04-08T02:00:00+00:00",
+    "location_text": "9.2N 155.4E",
+    "lat": 9.2,
+    "lon": 155.4,
+    "source_primary": "JTWC-ABPW",
+    "source_secondary": "disturbance",
+    "status": "monitoring",
+    "map_url": "https://www.google.com/maps?q=9.2,155.4",
+    "official_link": "https://www.google.com/maps?q=9.2,155.4",
+    "country_code": null,
+    "payload": {
+      "item_type": "disturbance",
+      "source": "jtwc_abpw",
+      "source_key": "jtwc_abpw|western_north_pacific_area|invest_90w",
+      "content_hash": "b75b49a3b4efa938",
+      "platform_summary": "9.2N 155.4E | winds 13-18 kt | 1002 mb",
+      "platform_location": "9.2N 155.4E",
+      "wind": "13-18 kt",
+      "risk_48h": null,
+      "risk_7d": null,
+      "next_update": null,
+      "raw_text": "(1) AN AREA OF CONVECTION (INVEST 90W) HAS PERSISTED NEAR 9.2N \n155.4E, APPROXIMATELY 234 NM WEST-SOUTHWEST OF CHUUK. ANIMATED \nENHANCED INFRARED SATELLITE IMAGERY DEPICT A BROAD AREA OF CYCLONIC \nTURNING WITH DENSE FLARING CONVECTION OBSCURING THE LOW LEVEL CENTER. \nTHE POSITION IS BASED ON THE CENTROID OF THE OVERALL CIRCULATION AND \nPROMINENT MID-LEVEL FLOW. ENVIRONMENTAL ANALYSIS INDICATES 90W IS \nCURRENTLY IN A FAVORABLE ENVIRONMENT FOR DEVELOPMENT BEING CENTERED IN \nA LOWER POCKET (10-15 KT) OF VERTICAL WIND SHEAR, WARM (29-30 C) SEA \nSURFACE TEMPERATURES, AND A POINT SOURCE JUST EAST ASSISTING WITH \nMODERATE POLEWARD OUTFLOW. GLOBAL MODELS ARE IN GOOD AGREEMENT ON A \nWESTWARD TRACK WITH INTENSIFICATION OVER THE NEXT 24-48 HOURS. MAXIMUM \nSUSTAINED SURFACE WINDS ARE ESTIMATED AT 13 TO 18 KNOTS. MINIMUM SEA \nLEVEL PRESSURE IS ESTIMATED TO BE NEAR 1002 MB. THE POTENTIAL FOR THE \nDEVELOPMENT OF A SIGNIFICANT TROPICAL CYCLONE WITHIN THE NEXT 24 HOURS \nIS MEDIUM.",
+      "metadata": {
+        "basin_section": "WESTERN NORTH PACIFIC AREA (180 TO MALAY PENINSULA)",
+        "invest_id": "90W",
+        "lat": 9.2,
+        "lon": 155.4,
+        "wind_kt_min": 13,
+        "wind_kt_max": 18,
+        "pressure_mb": 1002,
+        "bulletin_issue_at": "2026-04-08T02:00:00+00:00"
+      }
+    },
+    "member_event_ids": [
+      9
+    ],
+    "occurred_at": "2026-04-08T02:00:00+00:00",
+    "published_at": "2026-04-08T02:00:00+00:00",
+    "fetched_at": "2026-04-08T02:00:00+00:00"
+  },
+  {
+    "id": 4,
     "group_key": "earthquake|us7000sb8q",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -36,7 +195,7 @@
     "fetched_at": "2026-04-08T00:11:28.728000+00:00"
   },
   {
-    "id": 2,
+    "id": 5,
     "group_key": "volcano|1efeca978ec083d274a78a5a1c1e03b3c2d1d904",
     "event_type": "volcano",
     "severity_level": "high",
@@ -90,7 +249,7 @@
     "fetched_at": "2026-04-07T23:00:00+00:00"
   },
   {
-    "id": 3,
+    "id": 6,
     "group_key": "volcano|43eb214cd3673f15276fcb05e54bde17d658aa1d",
     "event_type": "volcano",
     "severity_level": "very_high",
@@ -144,7 +303,7 @@
     "fetched_at": "2026-04-07T19:25:00+00:00"
   },
   {
-    "id": 4,
+    "id": 7,
     "group_key": "volcano|7974c1176516e633a545ba484c1ce31d5b56049d",
     "event_type": "volcano",
     "severity_level": "high",
@@ -198,23 +357,23 @@
     "fetched_at": "2026-04-07T18:55:00+00:00"
   },
   {
-    "id": 5,
+    "id": 8,
     "group_key": "volcano|e008ee228cdafbca03139971d63518535bf87382",
     "event_type": "volcano",
     "severity_level": "high",
     "severity_color": "high",
     "title": "Mayon",
-    "summary": "VRP 164.27 MW · VIIRS / VIIRS375 · 6.41 km",
+    "summary": "VRP 164.27 MW · VIIRS375 / VIIRS · 6.41 km",
     "started_at": "2026-04-07T18:12:01+00:00",
     "updated_at": "2026-04-07T18:12:01+00:00",
     "location_text": "Mayon",
     "lat": null,
     "lon": null,
     "source_primary": "MIROVA",
-    "source_secondary": "VIIRS / VIIRS375",
+    "source_secondary": "VIIRS375 / VIIRS",
     "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
     "country_code": null,
     "payload": {
       "volcano_id": "273030",
@@ -223,26 +382,15 @@
       "distance_km": 6.55,
       "sensor": "VIIRS375",
       "row_class": [
-        "moderate",
-        "high"
+        "high",
+        "moderate"
       ],
       "source_page": "https://www.mirovaweb.it/NRT/",
       "sensors": [
-        "VIIRS",
-        "VIIRS375"
+        "VIIRS375",
+        "VIIRS"
       ],
       "reports": [
-        {
-          "volcano_id": "273030",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
-          "vrp_mw": 70.09,
-          "distance_km": 6.41,
-          "sensor": "VIIRS",
-          "row_class": [
-            "moderate"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        },
         {
           "volcano_id": "273030",
           "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
@@ -251,6 +399,17 @@
           "sensor": "VIIRS375",
           "row_class": [
             "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        },
+        {
+          "volcano_id": "273030",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
+          "vrp_mw": 70.09,
+          "distance_km": 6.41,
+          "sensor": "VIIRS",
+          "row_class": [
+            "moderate"
           ],
           "source_page": "https://www.mirovaweb.it/NRT/"
         }
@@ -265,7 +424,7 @@
     "fetched_at": "2026-04-07T18:12:01+00:00"
   },
   {
-    "id": 6,
+    "id": 9,
     "group_key": "earthquake|us6000sn81",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -301,7 +460,7 @@
     "fetched_at": "2026-04-07T13:40:15.182000+00:00"
   },
   {
-    "id": 7,
+    "id": 10,
     "group_key": "earthquake|us6000sn72",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -337,117 +496,7 @@
     "fetched_at": "2026-04-07T09:07:44.598000+00:00"
   },
   {
-    "id": 9,
-    "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|tc_31p|7885f3dcfd0d8809",
-    "event_type": "typhoon",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "Tropical Cyclone 31P (Vaianu)",
-    "summary": "wind 100 kt (gust 125)",
-    "started_at": "2026-04-07T06:00:00+00:00",
-    "updated_at": "2026-04-07T06:00:00+00:00",
-    "location_text": "18.1S 174.8E",
-    "lat": -18.1,
-    "lon": 174.8,
-    "source_primary": "JTWC-ABPW",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://www.google.com/maps?q=-18.1,174.8",
-    "official_link": "https://www.google.com/maps?q=-18.1,174.8",
-    "country_code": null,
-    "payload": {
-      "item_type": "warning",
-      "source": "jtwc_abpw",
-      "source_key": "jtwc_abpw|south_pacific_area|tc_31p",
-      "content_hash": "7885f3dcfd0d8809",
-      "platform_summary": "18.1S 174.8E | wind 100 kt (gust 125)",
-      "platform_location": "18.1S 174.8E",
-      "wind": "100 kt (gust 125)",
-      "risk_48h": null,
-      "risk_7d": null,
-      "next_update": null,
-      "raw_text": "(1) AT 07APR26 0000Z, TROPICAL CYCLONE 31P (VAIANU) WAS LOCATED \nNEAR 18.1S 174.8E, APPROXIMATELY 205 NM WEST OF SUVA, FIJI, AND HAD \nTRACKED SOUTH-SOUTHEASTWARD AT 10 KNOTS OVER THE PAST SIX HOURS. MAXIMUM \nSUSTAINED SURFACE WINDS WERE ESTIMATED AT 100 KNOTS GUSTING TO 125 \nKNOTS. SEE REF A (WTPS32 PGTW 070300) FOR FURTHER DETAILS.",
-      "metadata": {
-        "basin_section": "SOUTH PACIFIC AREA (WEST COAST OF SOUTH AMERICA TO 135 EAST)",
-        "storm_class": "TROPICAL CYCLONE",
-        "storm_id": "31P",
-        "storm_name": "VAIANU",
-        "fix_date": "07APR26",
-        "fix_time": "07APR26 0000Z",
-        "lat": -18.1,
-        "lon": 174.8,
-        "movement_text": "SOUTH-SOUTHEASTWARD",
-        "movement_kt": 10,
-        "wind_kt": 100,
-        "gust_kt": 125,
-        "warning_reference": "WTPS32 PGTW 070300",
-        "bulletin_issue_at": "2026-04-07T06:00:00+00:00"
-      }
-    },
-    "member_event_ids": [
-      9
-    ],
-    "occurred_at": "2026-04-07T06:00:00+00:00",
-    "published_at": "2026-04-07T06:00:00+00:00",
-    "fetched_at": "2026-04-07T06:00:00+00:00"
-  },
-  {
-    "id": 8,
-    "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|tc_30p|c6ac1bec70108ff1",
-    "event_type": "typhoon",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "Tropical Cyclone 30P (Maila)",
-    "summary": "wind 90 kt (gust 110)",
-    "started_at": "2026-04-07T06:00:00+00:00",
-    "updated_at": "2026-04-07T06:00:00+00:00",
-    "location_text": "9.9S 156.4E",
-    "lat": -9.9,
-    "lon": 156.4,
-    "source_primary": "JTWC-ABPW",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://www.google.com/maps?q=-9.9,156.4",
-    "official_link": "https://www.google.com/maps?q=-9.9,156.4",
-    "country_code": null,
-    "payload": {
-      "item_type": "warning",
-      "source": "jtwc_abpw",
-      "source_key": "jtwc_abpw|south_pacific_area|tc_30p",
-      "content_hash": "c6ac1bec70108ff1",
-      "platform_summary": "9.9S 156.4E | wind 90 kt (gust 110)",
-      "platform_location": "9.9S 156.4E",
-      "wind": "90 kt (gust 110)",
-      "risk_48h": null,
-      "risk_7d": null,
-      "next_update": null,
-      "raw_text": "(2) AT 07APR26 0000Z, TROPICAL CYCLONE 30P (MAILA) WAS LOCATED \nNEAR 9.9S 156.4E, APPROXIMATELY 667 NM SOUTH OF KAPINGAMARANGI, AND HAD \nTRACKED EAST-SOUTHEASTWARD AT 02 KNOTS OVER THE PAST SIX HOURS. MAXIMUM \nSUSTAINED SURFACE WINDS WERE ESTIMATED AT 90 KNOTS GUSTING TO 110 KNOTS. \nSEE REF B (WTPS31 PGTW 070300) FOR FURTHER DETAILS.",
-      "metadata": {
-        "basin_section": "SOUTH PACIFIC AREA (WEST COAST OF SOUTH AMERICA TO 135 EAST)",
-        "storm_class": "TROPICAL CYCLONE",
-        "storm_id": "30P",
-        "storm_name": "MAILA",
-        "fix_date": "07APR26",
-        "fix_time": "07APR26 0000Z",
-        "lat": -9.9,
-        "lon": 156.4,
-        "movement_text": "EAST-SOUTHEASTWARD",
-        "movement_kt": 2,
-        "wind_kt": 90,
-        "gust_kt": 110,
-        "warning_reference": "WTPS31 PGTW 070300",
-        "bulletin_issue_at": "2026-04-07T06:00:00+00:00"
-      }
-    },
-    "member_event_ids": [
-      10
-    ],
-    "occurred_at": "2026-04-07T06:00:00+00:00",
-    "published_at": "2026-04-07T06:00:00+00:00",
-    "fetched_at": "2026-04-07T06:00:00+00:00"
-  },
-  {
-    "id": 10,
+    "id": 11,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",

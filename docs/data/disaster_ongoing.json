@@ -174,7 +174,7 @@
       }
     },
     "member_event_ids": [
-      11
+      10
     ],
     "occurred_at": "2026-04-08T06:00:00+00:00",
     "published_at": "2026-04-08T06:00:00+00:00",
@@ -229,7 +229,7 @@
       }
     },
     "member_event_ids": [
-      12
+      11
     ],
     "occurred_at": "2026-04-08T06:00:00+00:00",
     "published_at": "2026-04-08T06:00:00+00:00",
@@ -280,7 +280,7 @@
       }
     },
     "member_event_ids": [
-      10
+      9
     ],
     "occurred_at": "2026-04-08T06:00:00+00:00",
     "published_at": "2026-04-08T06:00:00+00:00",
@@ -432,60 +432,6 @@
   },
   {
     "id": 10,
-    "group_key": "volcano|e008ee228cdafbca03139971d63518535bf87382",
-    "event_type": "volcano",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "Mayon",
-    "summary": "VRP 164.27 MW · VIIRS375 · 6.55 km",
-    "started_at": "2026-04-07T18:12:01+00:00",
-    "updated_at": "2026-04-07T18:12:01+00:00",
-    "location_text": "Mayon",
-    "lat": null,
-    "lon": null,
-    "source_primary": "MIROVA",
-    "source_secondary": "VIIRS375",
-    "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
-    "country_code": null,
-    "payload": {
-      "volcano_id": "273030",
-      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
-      "vrp_mw": 164.27,
-      "distance_km": 6.55,
-      "sensor": "VIIRS375",
-      "row_class": [
-        "high"
-      ],
-      "source_page": "https://www.mirovaweb.it/NRT/",
-      "sensors": [
-        "VIIRS375"
-      ],
-      "reports": [
-        {
-          "volcano_id": "273030",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
-          "vrp_mw": 164.27,
-          "distance_km": 6.55,
-          "sensor": "VIIRS375",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        }
-      ],
-      "merged_count": 1
-    },
-    "member_event_ids": [
-      7
-    ],
-    "occurred_at": "2026-04-07T18:12:01+00:00",
-    "published_at": "2026-04-07T18:12:01+00:00",
-    "fetched_at": "2026-04-07T18:12:01+00:00"
-  },
-  {
-    "id": 11,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -558,14 +504,14 @@
       }
     },
     "member_event_ids": [
-      8
+      7
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",
     "fetched_at": "2026-03-25T01:00:00+00:00"
   },
   {
-    "id": 12,
+    "id": 11,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -638,7 +584,7 @@
       }
     },
     "member_event_ids": [
-      9
+      8
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

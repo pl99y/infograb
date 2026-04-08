@@ -6,37 +6,37 @@ const energyInfoMap = {
     title: "美国 WTI 原油",
     subtitle: "WTI Crude",
     unit: "美元/桶",
-    note: "改为 CME 官方页面抓取。",
+    note: "西得克萨斯中间基原油，常被做为反映当前世界石油市场的参考价格",
   },
   brent: {
     title: "布伦特原油",
     subtitle: "Brent Crude",
     unit: "美元/桶",
-    note: "改为 CME 官方页面抓取。",
+    note: "产自欧洲北海地区，是全球约三分之二国际原油交易的定价基准",
   },
   murban: {
     title: "穆尔班原油",
     subtitle: "Murban Crude",
     unit: "美元/桶",
-    note: "当前仍保留原来源。",
+    note: "阿布扎比出产的一种高品质原油，常作为中东原油的定价基准之一",
   },
   natural_gas: {
     title: "美国天然气",
     subtitle: "Natural Gas",
     unit: "美元/MMBtu",
-    note: "改为 CME 官方页面抓取。",
+    note: "美国出产的以页岩气为主的天然气资源，主要成分为甲烷",
   },
   gasoline: {
     title: "美国汽油",
     subtitle: "Gasoline (RBOB)",
     unit: "美元/加仑",
-    note: "改为 CME 官方页面抓取。",
+    note: "一种清洁环保的未完成提炼汽油，美国汽油市场的重要基准价格",
   },
   china: {
     title: "上海原油 SC",
     subtitle: "China Crude Oil Futures",
     unit: "元/桶",
-    note: "",
+    note: "我国首个国际化的期货品种，代表中国及亚太地区供需关系的价格信号",
   },
 };
 

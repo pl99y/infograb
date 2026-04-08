@@ -259,19 +259,6 @@
         display: none;
     }
 
-    .aviation-disruption-item {
-        grid-template-columns: 72px 1fr;
-        grid-template-areas:
-            "code name"
-            "metrics metrics";
-        gap: 10px 12px;
-        padding: 12px 0;
-    }
-
-    .aviation-disruption-metrics-compact {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
     .feed-list {
         overflow: visible;
     }
@@ -309,11 +296,6 @@
 
     .market-blocks {
         grid-template-columns: 1fr;
-    }
-
-    .aviation-disruption-metrics-compact {
-        grid-template-columns: 1fr;
-        gap: 8px;
     }
 
     .feed-media-grid {

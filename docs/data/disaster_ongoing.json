@@ -164,13 +164,13 @@
     "event_type": "earthquake",
     "severity_level": "moderate",
     "severity_color": "moderate",
-    "title": "M 5.1 - 90 km E of Tadine, New Caledonia",
-    "summary": "90 km E of Tadine, New Caledonia",
-    "started_at": "2026-04-08T00:11:28.728000+00:00",
-    "updated_at": "2026-04-08T00:30:40.040000+00:00",
-    "location_text": "90 km E of Tadine, New Caledonia",
-    "lat": -21.4991,
-    "lon": 168.7522,
+    "title": "M 5.1 - 99 km E of Tadine, New Caledonia",
+    "summary": "99 km E of Tadine, New Caledonia",
+    "started_at": "2026-04-08T00:11:27.976000+00:00",
+    "updated_at": "2026-04-08T02:23:58.040000+00:00",
+    "location_text": "99 km E of Tadine, New Caledonia",
+    "lat": -21.4657,
+    "lon": 168.8373,
     "source_primary": "USGS",
     "source_secondary": null,
     "status": "active",
@@ -180,7 +180,7 @@
     "payload": {
       "mag": 5.1,
       "depth_km": 10.0,
-      "place": "90 km E of Tadine, New Caledonia",
+      "place": "99 km E of Tadine, New Caledonia",
       "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us7000sb8q.geojson",
       "alert": null,
       "sig": 400,
@@ -190,9 +190,9 @@
     "member_event_ids": [
       1
     ],
-    "occurred_at": "2026-04-08T00:11:28.728000+00:00",
-    "published_at": "2026-04-08T00:11:28.728000+00:00",
-    "fetched_at": "2026-04-08T00:11:28.728000+00:00"
+    "occurred_at": "2026-04-08T00:11:27.976000+00:00",
+    "published_at": "2026-04-08T00:11:27.976000+00:00",
+    "fetched_at": "2026-04-08T00:11:27.976000+00:00"
   },
   {
     "id": 5,
@@ -363,17 +363,17 @@
     "severity_level": "high",
     "severity_color": "high",
     "title": "Mayon",
-    "summary": "VRP 164.27 MW · VIIRS375 / VIIRS · 6.41 km",
+    "summary": "VRP 164.27 MW · VIIRS / VIIRS375 · 6.41 km",
     "started_at": "2026-04-07T18:12:01+00:00",
     "updated_at": "2026-04-07T18:12:01+00:00",
     "location_text": "Mayon",
     "lat": null,
     "lon": null,
     "source_primary": "MIROVA",
-    "source_secondary": "VIIRS375 / VIIRS",
+    "source_secondary": "VIIRS / VIIRS375",
     "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
     "country_code": null,
     "payload": {
       "volcano_id": "273030",
@@ -382,26 +382,15 @@
       "distance_km": 6.55,
       "sensor": "VIIRS375",
       "row_class": [
-        "high",
-        "moderate"
+        "moderate",
+        "high"
       ],
       "source_page": "https://www.mirovaweb.it/NRT/",
       "sensors": [
-        "VIIRS375",
-        "VIIRS"
+        "VIIRS",
+        "VIIRS375"
       ],
       "reports": [
-        {
-          "volcano_id": "273030",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
-          "vrp_mw": 164.27,
-          "distance_km": 6.55,
-          "sensor": "VIIRS375",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        },
         {
           "volcano_id": "273030",
           "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
@@ -410,6 +399,17 @@
           "sensor": "VIIRS",
           "row_class": [
             "moderate"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        },
+        {
+          "volcano_id": "273030",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
+          "vrp_mw": 164.27,
+          "distance_km": 6.55,
+          "sensor": "VIIRS375",
+          "row_class": [
+            "high"
           ],
           "source_page": "https://www.mirovaweb.it/NRT/"
         }

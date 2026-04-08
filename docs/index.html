@@ -7,7 +7,7 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <link rel="stylesheet" href="./static/dashboard.css?v=40">
+    <link rel="stylesheet" href="./static/dashboard.css?v=41">
 </head>
 <body>
     <header class="top-nav">
@@ -379,6 +379,36 @@
                 </div>
             </div>
 
+
+            <div
+                class="grid-stack-item mobile-active"
+                gs-id="news-timeline"
+                data-panel-title="新闻流"
+                data-mobile-nav-title="新闻"
+                data-default-w="8"
+                data-default-h="760"
+                data-min-w="4"
+                data-min-h="420"
+                data-max-h="1600"
+            >
+                <div class="grid-stack-item-content">
+                    <section class="grid-col col-news-timeline">
+                        <div class="section-header">
+                            <div class="section-header-row">
+                                <div class="section-header-text">
+                                    <h3>新闻流</h3>
+                                    <div class="section-updated" id="newsTimelineUpdatedAt">（加载中）</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="news-timeline-list" id="newsTimelineContainer">
+                            <div class="loading-state">正在加载新闻流...</div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
             <div
                 class="grid-stack-item"
                 gs-id="f1"
@@ -404,7 +434,7 @@
             </div>
 
             <div
-                class="grid-stack-item mobile-active"
+                class="grid-stack-item"
                 gs-id="feed"
                 data-panel-title="情报流"
                 data-mobile-nav-title="情报"
@@ -435,6 +465,6 @@
         <img class="lightbox-content" id="lightbox-img" alt="Expanded media">
     </div>
 
-    <script type="module" src="./static/app/main-pages.js?v=40"></script>
+    <script type="module" src="./static/app/main-pages.js?v=41"></script>
 </body>
 </html>

@@ -15,6 +15,7 @@ import { createSpaceWeatherModule } from "./modules/space-weather/index.js";
 import { createMndPlaModule } from "./modules/mnd-pla/index.js";
 import { createF1Module } from "./modules/f1/index.js";
 import { createFeedModule } from "./modules/feed/index.js";
+import { createNewsTimelineModule } from "./modules/news-timeline/index.js";
 
 function createContext() {
   const store = createStore();
@@ -23,7 +24,7 @@ function createContext() {
     store,
     state: {
       theme: store.get(STORAGE_KEYS.theme, "dark"),
-      mobilePanel: store.get(STORAGE_KEYS.mobilePanel, "feed"),
+      mobilePanel: store.get(STORAGE_KEYS.mobilePanel, "news-timeline"),
       aviationTab: store.get(STORAGE_KEYS.aviationTab, "alerts"),
       layoutEditMode: false,
       energy: [],
@@ -35,6 +36,7 @@ function createContext() {
       publicHealthEarlyWarnings: [],
       publicHealthOutbreakEvents: [],
       telegram: [],
+      newsTimeline: [],
       spaceWeatherAlerts: [],
       spaceWeatherForecast: null,
       mndPlaData: null,
@@ -49,6 +51,7 @@ function createContext() {
       lastPublicHealthFetchedAt: null,
       lastSpaceWeatherFetchedAt: null,
       lastMndPlaFetchedAt: null,
+      lastNewsTimelineFetchedAt: null,
       lastF1FetchedAt: null,
       refreshTimer: null,
       relativeClockTimer: null,
@@ -87,6 +90,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   ctx.aviationModule = safeInit("aviation", createAviationModule, ctx, modules);
   ctx.disasterModule = safeInit("disaster", createDisasterModule, ctx, modules);
   ctx.publicHealthModule = safeInit("public-health", createPublicHealthModule, ctx, modules);
+  ctx.newsTimelineModule = safeInit("news-timeline", createNewsTimelineModule, ctx, modules);
   ctx.feedModule = safeInit("feed", createFeedModule, ctx, modules);
 
   async function refreshAll() {
@@ -103,6 +107,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     try { ctx.aviationModule?.updateHeader?.(); } catch (error) { console.error("[relative update failed] aviation", error); }
     try { ctx.disasterModule?.updateHeader?.(); } catch (error) { console.error("[relative update failed] disaster", error); }
     try { ctx.publicHealthModule?.updateHeader?.(); } catch (error) { console.error("[relative update failed] public-health", error); }
+    try { ctx.newsTimelineModule?.updateRelativeTimes?.(); ctx.newsTimelineModule?.updateHeader?.(); } catch (error) { console.error("[relative update failed] news-timeline", error); }
     try { ctx.f1Module?.updateHeader?.(); } catch (error) { console.error("[relative update failed] f1", error); }
     try { ctx.feedModule?.updateRelativeTimes?.(); } catch (error) { console.error("[relative update failed] feed", error); }
   }

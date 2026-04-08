@@ -23,6 +23,7 @@ export function createApi() {
     if (clean.startsWith("/api/f1/live")) return "./data/f1_live.json";
     if (clean.startsWith("/api/f1/news")) return "./data/f1_news.json";
     if (clean.startsWith("/api/telegram")) return "./data/telegram.json";
+    if (clean.startsWith("/api/news-timeline/latest")) return "./data/news_timeline_latest.json";
     throw new Error(`Static Pages API mapping missing for GET ${clean}`);
   }
 

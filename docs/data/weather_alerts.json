@@ -1,6 +1,84 @@
 [
   {
     "id": 1,
+    "dedupe_key": "IN-1775649616138017_45",
+    "source_primary": "WMO",
+    "title": "Intense Thunderstorm lightning accompanied with light to moderate rain and gusty wind with speed 50-60 kmph. very likely to affect over some parts of Murshidabad, Nadia districts during next 2-3 hours from 17:30, 08-04-2026.",
+    "summary": "Murshidabad, Nadia districts of West Bengal",
+    "severity_level": "extreme",
+    "color_level": "extreme",
+    "event_type": "weather",
+    "location_text": "Murshidabad, Nadia districts of West Bengal",
+    "issued_at": "2026-04-08T12:29:53+00:00",
+    "effective_at": "2026-04-08T12:30:00+00:00",
+    "expires_at": "2026-04-08T15:30:00+00:00",
+    "source_url": "https://severeweather.wmo.int/list.html",
+    "detail_url": "https://severeweather.wmo.int/list.html",
+    "payload": {
+      "id": "IN-1775649616138017_45",
+      "event": "Thunderstorm with Lightning",
+      "headline": "Intense Thunderstorm  lightning accompanied with light to moderate rain and gusty wind with speed 50-60 kmph. very likely to affect over some parts of Murshidabad, Nadia districts during next 2-3 hours from 17:30, 08-04-2026.",
+      "sent": "2026-04-08 12:29:53",
+      "expires": "2026-04-08 15:30:00",
+      "areaDesc": "Murshidabad, Nadia districts of West Bengal",
+      "mid": "066",
+      "ra": "2",
+      "s": 4,
+      "u": 4,
+      "c": 3,
+      "url": "in-ndma-xx/2026/04/08/12/29/53-fb9f8c5ac83dff5d060450182dfee52b.xml",
+      "effective": "2026-04-08 12:30:00",
+      "cap_path": "in-ndma-xx/2026/04/08/12/29/53-fb9f8c5ac83dff5d060450182dfee52b.xml",
+      "source_page": "https://severeweather.wmo.int/list.html",
+      "last_updated": "2026-04-08 12:24:08"
+    },
+    "fetched_at": "2026-04-08T12:25:59.852701+00:00",
+    "published_at": "2026-04-08T12:29:53+00:00",
+    "updated_at": "2026-04-08T12:25:59.852701+00:00",
+    "region_text": "Murshidabad, Nadia districts of West Bengal",
+    "link_url": "https://severeweather.wmo.int/list.html"
+  },
+  {
+    "id": 2,
+    "dedupe_key": "IN-1775649440049017_17",
+    "source_primary": "WMO",
+    "title": "Severe Thunderstorm lightning accompanied with intense rain and squally wind with speed 70-80 kmph. very likely to affect over some parts of West Midnapore, Hooghly, East Burdwan, Howrah districts during next 2-3 hours from 17:24, 08-04-2026.",
+    "summary": "some parts of West Midnapore, Hooghly, East Burdwan, Howrah districts",
+    "severity_level": "extreme",
+    "color_level": "extreme",
+    "event_type": "weather",
+    "location_text": "some parts of West Midnapore, Hooghly, East Burdwan, Howrah districts",
+    "issued_at": "2026-04-08T12:29:09+00:00",
+    "effective_at": "2026-04-08T12:24:00+00:00",
+    "expires_at": "2026-04-08T15:24:00+00:00",
+    "source_url": "https://severeweather.wmo.int/list.html",
+    "detail_url": "https://severeweather.wmo.int/list.html",
+    "payload": {
+      "id": "IN-1775649440049017_17",
+      "event": "Severe Thunderstorms with surface wind",
+      "headline": "Severe Thunderstorm  lightning accompanied with intense rain and squally wind with speed 70-80 kmph. very likely to affect over some parts of West Midnapore, Hooghly, East Burdwan, Howrah districts during next 2-3 hours from 17:24, 08-04-2026.",
+      "sent": "2026-04-08 12:29:09",
+      "expires": "2026-04-08 15:24:00",
+      "areaDesc": "some parts of West Midnapore, Hooghly, East Burdwan, Howrah districts ",
+      "mid": "066",
+      "ra": "2",
+      "s": 4,
+      "u": 4,
+      "c": 3,
+      "url": "in-ndma-xx/2026/04/08/12/29/09-bc246209478c56746b5c698ea2e2c2c0.xml",
+      "effective": "2026-04-08 12:24:00",
+      "cap_path": "in-ndma-xx/2026/04/08/12/29/09-bc246209478c56746b5c698ea2e2c2c0.xml",
+      "source_page": "https://severeweather.wmo.int/list.html",
+      "last_updated": "2026-04-08 12:24:08"
+    },
+    "fetched_at": "2026-04-08T12:25:59.852701+00:00",
+    "published_at": "2026-04-08T12:29:09+00:00",
+    "updated_at": "2026-04-08T12:25:59.852701+00:00",
+    "region_text": "some parts of West Midnapore, Hooghly, East Burdwan, Howrah districts",
+    "link_url": "https://severeweather.wmo.int/list.html"
+  },
+  {
+    "id": 3,
     "dedupe_key": "IN-1775647641003012_50",
     "source_primary": "WMO",
     "title": "Severe Thunderstorms with Hail and Rain with wind speed 50-60kmph is very likely to occur at a few places over Dhenkanal, Kendujhar in next 3 hours.",
@@ -30,16 +108,16 @@
       "effective": "2026-04-08 11:54:00",
       "cap_path": "in-ndma-xx/2026/04/08/11/56/15-ee3a5c8aefdfa9dd653c1c0637ec0dcf.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-08 11:44:12"
+      "last_updated": "2026-04-08 12:24:08"
     },
-    "fetched_at": "2026-04-08T12:05:55.286015+00:00",
+    "fetched_at": "2026-04-08T12:25:59.852701+00:00",
     "published_at": "2026-04-08T11:56:15+00:00",
-    "updated_at": "2026-04-08T12:05:55.286015+00:00",
+    "updated_at": "2026-04-08T12:25:59.852701+00:00",
     "region_text": "Dhenkanal, Kendujhar districts of Odisha",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 2,
+    "id": 4,
     "dedupe_key": "IN-1775646627034013_58",
     "source_primary": "WMO",
     "title": "Moderate Thunderstorm (wind speed 40- 60 KMph) with Lightning ,Moderate spell of Rain and Hail is very likely to occur at a few places over Auraiya, Etawah, Jalaun, Kanpur Dehat, Bahraich, Lakhimpur Kheri, Sitapur, Hardoi, Kannauj in next 3 hours.",
@@ -69,16 +147,16 @@
       "effective": "2026-04-08 11:39:00",
       "cap_path": "in-ndma-xx/2026/04/08/11/40/05-6e435e631bc7d1c77df85f56c2eccac.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-08 11:44:12"
+      "last_updated": "2026-04-08 12:24:08"
     },
-    "fetched_at": "2026-04-08T12:05:55.286015+00:00",
+    "fetched_at": "2026-04-08T12:25:59.852701+00:00",
     "published_at": "2026-04-08T11:40:05+00:00",
-    "updated_at": "2026-04-08T12:05:55.286015+00:00",
+    "updated_at": "2026-04-08T12:25:59.852701+00:00",
     "region_text": "Central UP",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 3,
+    "id": 5,
     "dedupe_key": "IN-1775645292362017_45",
     "source_primary": "WMO",
     "title": "Severe Thunderstorm lightning accompanied with hail, light to moderate rain and gusty wind with speed 70-80 kmph. very likely to affect over some parts of Bankura, Purulia, Birbhum, West Burdwan, East Burdwan districts during next 2-3 hours from 16:15, 08-04-2026.",
@@ -108,16 +186,16 @@
       "effective": "2026-04-08 11:15:00",
       "cap_path": "in-ndma-xx/2026/04/08/11/17/44-6659bfac04aac65c542d2339ba794b7e.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-08 11:44:12"
+      "last_updated": "2026-04-08 12:24:08"
     },
-    "fetched_at": "2026-04-08T12:05:55.286015+00:00",
+    "fetched_at": "2026-04-08T12:25:59.852701+00:00",
     "published_at": "2026-04-08T11:17:44+00:00",
-    "updated_at": "2026-04-08T12:05:55.286015+00:00",
+    "updated_at": "2026-04-08T12:25:59.852701+00:00",
     "region_text": "some parts of Bankura, Purulia, Birbhum, West Burdwan, East Burdwan districts",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 4,
+    "id": 6,
     "dedupe_key": "IN-1775644123029013_58",
     "source_primary": "WMO",
     "title": "Moderate Thunderstorm (wind speed 40- 60 KMph) with Lightning ,Moderate spell of Rain and Hail is very likely to occur at a few places over Bahraich, Lakhimpur Kheri in next 3 hours.",
@@ -147,16 +225,16 @@
       "effective": "2026-04-08 10:57:00",
       "cap_path": "in-ndma-xx/2026/04/08/10/58/11-dff7749ec2be3ec10cd96d3f37f9d5fd.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-08 11:44:12"
+      "last_updated": "2026-04-08 12:24:08"
     },
-    "fetched_at": "2026-04-08T12:05:55.286015+00:00",
+    "fetched_at": "2026-04-08T12:25:59.852701+00:00",
     "published_at": "2026-04-08T10:58:11+00:00",
-    "updated_at": "2026-04-08T12:05:55.286015+00:00",
+    "updated_at": "2026-04-08T12:25:59.852701+00:00",
     "region_text": "kheri and adj areas",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 5,
+    "id": 7,
     "dedupe_key": "IN-1775643772339012_50",
     "source_primary": "WMO",
     "title": "Moderate Thunderstorms, Lightning with Rain and surface wind 40-50kmphis very likely to occur at most places over Ganjam in next 3 hours.",
@@ -186,16 +264,16 @@
       "effective": "2026-04-08 10:51:00",
       "cap_path": "in-ndma-xx/2026/04/08/10/52/19-5420896f5bcca6eaf2de38d61dd67ca4.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-08 11:44:12"
+      "last_updated": "2026-04-08 12:24:08"
     },
-    "fetched_at": "2026-04-08T12:05:55.286015+00:00",
+    "fetched_at": "2026-04-08T12:25:59.852701+00:00",
     "published_at": "2026-04-08T10:52:19+00:00",
-    "updated_at": "2026-04-08T12:05:55.286015+00:00",
+    "updated_at": "2026-04-08T12:25:59.852701+00:00",
     "region_text": "Ganjam district of Odisha",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 6,
+    "id": 8,
     "dedupe_key": "IN-1775643415079012_50",
     "source_primary": "WMO",
     "title": "Very Severe Thunderstorms, lightning with Hail and Rain with surface wind 50-60kmph is very likely to occur at a few places over Khordha, Puri in next 3 hours.",
@@ -225,16 +303,16 @@
       "effective": "2026-04-08 10:44:00",
       "cap_path": "in-ndma-xx/2026/04/08/10/46/12-ea66bb51a47c3951b62b59fe3e5d50eb.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-08 11:44:12"
+      "last_updated": "2026-04-08 12:24:08"
     },
-    "fetched_at": "2026-04-08T12:05:55.286015+00:00",
+    "fetched_at": "2026-04-08T12:25:59.852701+00:00",
     "published_at": "2026-04-08T10:46:12+00:00",
-    "updated_at": "2026-04-08T12:05:55.286015+00:00",
+    "updated_at": "2026-04-08T12:25:59.852701+00:00",
     "region_text": "Khordha, Puri districts of Odisha",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 7,
+    "id": 9,
     "dedupe_key": "IN-1775643074837012_50",
     "source_primary": "WMO",
     "title": "Very Severe Thunderstorms, Lightning with Hail and Rain with surface wind 50-60kmph is very likely to occur at a few places over Khordha in next 3 hours.",
@@ -264,16 +342,16 @@
       "effective": "2026-04-08 10:39:00",
       "cap_path": "in-ndma-xx/2026/04/08/10/40/24-45d5d49b4cfd0532b66e86c6f820d7bb.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-08 11:44:12"
+      "last_updated": "2026-04-08 12:24:08"
     },
-    "fetched_at": "2026-04-08T12:05:55.286015+00:00",
+    "fetched_at": "2026-04-08T12:25:59.852701+00:00",
     "published_at": "2026-04-08T10:40:24+00:00",
-    "updated_at": "2026-04-08T12:05:55.286015+00:00",
+    "updated_at": "2026-04-08T12:25:59.852701+00:00",
     "region_text": "Khordha district of Odisha",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 8,
+    "id": 10,
     "dedupe_key": "IN-1775642245592012_50",
     "source_primary": "WMO",
     "title": "Very Severe Thunderstorms, Lightning with Hail and Rain and surface wind 50-60kmph is very likely to occur at a few places over Cuttack, Nayagarh in next 3 hours.",
@@ -303,16 +381,16 @@
       "effective": "2026-04-08 10:24:00",
       "cap_path": "in-ndma-xx/2026/04/08/10/26/39-7c59569ea46d26f53bc4d426b1e322b.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-08 11:44:12"
+      "last_updated": "2026-04-08 12:24:08"
     },
-    "fetched_at": "2026-04-08T12:05:55.286015+00:00",
+    "fetched_at": "2026-04-08T12:25:59.852701+00:00",
     "published_at": "2026-04-08T10:26:39+00:00",
-    "updated_at": "2026-04-08T12:05:55.286015+00:00",
+    "updated_at": "2026-04-08T12:25:59.852701+00:00",
     "region_text": "Cuttack, Nayagarh districts of Odisha",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 9,
+    "id": 11,
     "dedupe_key": "IN-1775639697461013_58",
     "source_primary": "WMO",
     "title": "Moderate Thunderstorm (wind speed 40- 60 KMph) with Lightning , Hail and Moderate spell of Rain is very likely to occur at a few places over Amroha, Bijnor, Hapur, Meerut, Muzaffarnagar, Shamli in next 3 hours.",
@@ -342,16 +420,16 @@
       "effective": "2026-04-08 09:44:00",
       "cap_path": "in-ndma-xx/2026/04/08/09/44/35-ea95ade437bf0e47ed9ecf3544000660.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-08 11:44:12"
+      "last_updated": "2026-04-08 12:24:08"
     },
-    "fetched_at": "2026-04-08T12:05:55.286015+00:00",
+    "fetched_at": "2026-04-08T12:25:59.852701+00:00",
     "published_at": "2026-04-08T09:44:35+00:00",
-    "updated_at": "2026-04-08T12:05:55.286015+00:00",
+    "updated_at": "2026-04-08T12:25:59.852701+00:00",
     "region_text": "Shamli and Meerut Adjoining",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 10,
+    "id": 12,
     "dedupe_key": "52232741600000_20260408153838",
     "source_primary": "WMO",
     "title": "Ceheng County Meteorological Observatory issues a red alert for high temperatures [Level I/Particularly Severe]",
@@ -381,11 +459,11 @@
       "effective": "2026-04-08 07:38:38",
       "cap_path": "cn-cma-xx/2026/04/08/07/38/38-4bc526a79706ff78aa6dc0ca1c9ef736.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-08 11:44:12"
+      "last_updated": "2026-04-08 12:24:08"
     },
-    "fetched_at": "2026-04-08T12:05:55.286015+00:00",
+    "fetched_at": "2026-04-08T12:25:59.852701+00:00",
     "published_at": "2026-04-08T07:38:38+00:00",
-    "updated_at": "2026-04-08T12:05:55.286015+00:00",
+    "updated_at": "2026-04-08T12:25:59.852701+00:00",
     "region_text": "Ceheng County",
     "link_url": "https://severeweather.wmo.int/list.html"
   }

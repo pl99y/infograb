@@ -1,6 +1,60 @@
 [
   {
     "id": 1,
+    "group_key": "volcano|ac3285eaa25e4a32529b436089e1c13d7617f778",
+    "event_type": "volcano",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Fournaise Pitondela",
+    "summary": "VRP 922.35 MW · MODIS · 6.32 km",
+    "started_at": "2026-04-08T12:10:00+00:00",
+    "updated_at": "2026-04-08T12:10:00+00:00",
+    "location_text": "Fournaise Pitondela",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "MODIS",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=233020",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=233020",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "233020",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=233020",
+      "vrp_mw": 922.35,
+      "distance_km": 6.32,
+      "sensor": "MODIS",
+      "row_class": [
+        "high"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "MODIS"
+      ],
+      "reports": [
+        {
+          "volcano_id": "233020",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=233020",
+          "vrp_mw": 922.35,
+          "distance_km": 6.32,
+          "sensor": "MODIS",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 1
+    },
+    "member_event_ids": [
+      4
+    ],
+    "occurred_at": "2026-04-08T12:10:00+00:00",
+    "published_at": "2026-04-08T12:10:00+00:00",
+    "fetched_at": "2026-04-08T12:10:00+00:00"
+  },
+  {
+    "id": 2,
     "group_key": "earthquake|us7000sbau",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -36,7 +90,7 @@
     "fetched_at": "2026-04-08T09:05:36.878000+00:00"
   },
   {
-    "id": 2,
+    "id": 3,
     "group_key": "earthquake|us7000sbap",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -72,7 +126,7 @@
     "fetched_at": "2026-04-08T08:33:16.977000+00:00"
   },
   {
-    "id": 4,
+    "id": 5,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|tc_31p|0315fdc95fe58579",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -120,14 +174,14 @@
       }
     },
     "member_event_ids": [
-      10
+      11
     ],
     "occurred_at": "2026-04-08T06:00:00+00:00",
     "published_at": "2026-04-08T06:00:00+00:00",
     "fetched_at": "2026-04-08T06:00:00+00:00"
   },
   {
-    "id": 3,
+    "id": 4,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|tc_30p|607ec087c458c179",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -175,14 +229,14 @@
       }
     },
     "member_event_ids": [
-      11
+      12
     ],
     "occurred_at": "2026-04-08T06:00:00+00:00",
     "published_at": "2026-04-08T06:00:00+00:00",
     "fetched_at": "2026-04-08T06:00:00+00:00"
   },
   {
-    "id": 5,
+    "id": 6,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|western_north_pacific_area|invest_90w|4056ea81037795f2",
     "event_type": "typhoon",
     "severity_level": "elevated",
@@ -226,14 +280,14 @@
       }
     },
     "member_event_ids": [
-      9
+      10
     ],
     "occurred_at": "2026-04-08T06:00:00+00:00",
     "published_at": "2026-04-08T06:00:00+00:00",
     "fetched_at": "2026-04-08T06:00:00+00:00"
   },
   {
-    "id": 6,
+    "id": 7,
     "group_key": "volcano|cbde336475e6e2e786fa645e7bc19cda92a2fa2f",
     "event_type": "volcano",
     "severity_level": "high",
@@ -280,14 +334,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      4
+      5
     ],
     "occurred_at": "2026-04-08T05:18:01+00:00",
     "published_at": "2026-04-08T05:18:01+00:00",
     "fetched_at": "2026-04-08T05:18:01+00:00"
   },
   {
-    "id": 7,
+    "id": 8,
     "group_key": "earthquake|us7000sb8q",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -323,7 +377,7 @@
     "fetched_at": "2026-04-08T00:11:27.976000+00:00"
   },
   {
-    "id": 8,
+    "id": 9,
     "group_key": "volcano|db142dd070ac87a2c1132511d751c1fc2d6bc3b9",
     "event_type": "volcano",
     "severity_level": "high",
@@ -370,14 +424,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      5
+      6
     ],
     "occurred_at": "2026-04-07T23:18:01+00:00",
     "published_at": "2026-04-07T23:18:01+00:00",
     "fetched_at": "2026-04-07T23:18:01+00:00"
   },
   {
-    "id": 9,
+    "id": 10,
     "group_key": "volcano|e008ee228cdafbca03139971d63518535bf87382",
     "event_type": "volcano",
     "severity_level": "high",
@@ -424,14 +478,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      6
+      7
     ],
     "occurred_at": "2026-04-07T18:12:01+00:00",
     "published_at": "2026-04-07T18:12:01+00:00",
     "fetched_at": "2026-04-07T18:12:01+00:00"
   },
   {
-    "id": 10,
+    "id": 11,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -504,14 +558,14 @@
       }
     },
     "member_event_ids": [
-      7
+      8
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",
     "fetched_at": "2026-03-25T01:00:00+00:00"
   },
   {
-    "id": 11,
+    "id": 12,
     "group_key": "flood|87e3bb7c2a10dde82114c824bd0c4d4656280df9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -584,7 +638,7 @@
       }
     },
     "member_event_ids": [
-      8
+      9
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

@@ -162,60 +162,6 @@
   },
   {
     "id": 6,
-    "group_key": "volcano|b49af59afb53402d144f40623e6c06a3f906a54e",
-    "event_type": "volcano",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "Bezymianny",
-    "summary": "VRP 136.37 MW · MODIS · 26.83 km",
-    "started_at": "2026-04-08T02:40:00+00:00",
-    "updated_at": "2026-04-08T02:40:00+00:00",
-    "location_text": "Bezymianny",
-    "lat": null,
-    "lon": null,
-    "source_primary": "MIROVA",
-    "source_secondary": "MODIS",
-    "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=300250",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=300250",
-    "country_code": null,
-    "payload": {
-      "volcano_id": "300250",
-      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=300250",
-      "vrp_mw": 136.37,
-      "distance_km": 26.83,
-      "sensor": "MODIS",
-      "row_class": [
-        "high"
-      ],
-      "source_page": "https://www.mirovaweb.it/NRT/",
-      "sensors": [
-        "MODIS"
-      ],
-      "reports": [
-        {
-          "volcano_id": "300250",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=300250",
-          "vrp_mw": 136.37,
-          "distance_km": 26.83,
-          "sensor": "MODIS",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        }
-      ],
-      "merged_count": 1
-    },
-    "member_event_ids": [
-      4
-    ],
-    "occurred_at": "2026-04-08T02:40:00+00:00",
-    "published_at": "2026-04-08T02:40:00+00:00",
-    "fetched_at": "2026-04-08T02:40:00+00:00"
-  },
-  {
-    "id": 4,
     "group_key": "volcano|a3f2b0a6dfa30f9fbfb341d679f23853928dd715",
     "event_type": "volcano",
     "severity_level": "high",
@@ -252,6 +198,60 @@
           "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=300260",
           "vrp_mw": 171.17,
           "distance_km": 24.04,
+          "sensor": "MODIS",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 1
+    },
+    "member_event_ids": [
+      4
+    ],
+    "occurred_at": "2026-04-08T02:40:00+00:00",
+    "published_at": "2026-04-08T02:40:00+00:00",
+    "fetched_at": "2026-04-08T02:40:00+00:00"
+  },
+  {
+    "id": 4,
+    "group_key": "volcano|b49af59afb53402d144f40623e6c06a3f906a54e",
+    "event_type": "volcano",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Bezymianny",
+    "summary": "VRP 136.37 MW · MODIS · 26.83 km",
+    "started_at": "2026-04-08T02:40:00+00:00",
+    "updated_at": "2026-04-08T02:40:00+00:00",
+    "location_text": "Bezymianny",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "MODIS",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=300250",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=300250",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "300250",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=300250",
+      "vrp_mw": 136.37,
+      "distance_km": 26.83,
+      "sensor": "MODIS",
+      "row_class": [
+        "high"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "MODIS"
+      ],
+      "reports": [
+        {
+          "volcano_id": "300250",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=300250",
+          "vrp_mw": 136.37,
+          "distance_km": 26.83,
           "sensor": "MODIS",
           "row_class": [
             "high"
@@ -419,17 +419,17 @@
     "severity_level": "high",
     "severity_color": "high",
     "title": "Mayon",
-    "summary": "VRP 164.27 MW · VIIRS375 / VIIRS · 6.41 km",
+    "summary": "VRP 164.27 MW · VIIRS / VIIRS375 · 6.41 km",
     "started_at": "2026-04-07T18:12:01+00:00",
     "updated_at": "2026-04-07T18:12:01+00:00",
     "location_text": "Mayon",
     "lat": null,
     "lon": null,
     "source_primary": "MIROVA",
-    "source_secondary": "VIIRS375 / VIIRS",
+    "source_secondary": "VIIRS / VIIRS375",
     "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
     "country_code": null,
     "payload": {
       "volcano_id": "273030",
@@ -438,26 +438,15 @@
       "distance_km": 6.55,
       "sensor": "VIIRS375",
       "row_class": [
-        "high",
-        "moderate"
+        "moderate",
+        "high"
       ],
       "source_page": "https://www.mirovaweb.it/NRT/",
       "sensors": [
-        "VIIRS375",
-        "VIIRS"
+        "VIIRS",
+        "VIIRS375"
       ],
       "reports": [
-        {
-          "volcano_id": "273030",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
-          "vrp_mw": 164.27,
-          "distance_km": 6.55,
-          "sensor": "VIIRS375",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        },
         {
           "volcano_id": "273030",
           "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
@@ -466,6 +455,17 @@
           "sensor": "VIIRS",
           "row_class": [
             "moderate"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        },
+        {
+          "volcano_id": "273030",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
+          "vrp_mw": 164.27,
+          "distance_km": 6.55,
+          "sensor": "VIIRS375",
+          "row_class": [
+            "high"
           ],
           "source_page": "https://www.mirovaweb.it/NRT/"
         }
@@ -560,7 +560,7 @@
     "title": "Flood in Democratic Republic of Congo",
     "summary": "Democratic Republic of Congo",
     "started_at": "2026-02-11T01:00:00+00:00",
-    "updated_at": "2026-04-08T06:00:58+00:00",
+    "updated_at": "2026-04-08T06:10:55+00:00",
     "location_text": "Democratic Republic of Congo",
     "lat": null,
     "lon": null,
@@ -604,7 +604,7 @@
         "country": "Democratic Republic of Congo",
         "fromdate": "2026-02-11T01:00:00",
         "todate": "2026-03-05T01:00:00",
-        "datemodified": "2026-04-08T06:00:58",
+        "datemodified": "2026-04-08T06:10:55",
         "iso3": "COD",
         "source": "GLOFAS",
         "sourceid": "",

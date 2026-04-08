@@ -1,6 +1,42 @@
 [
   {
     "id": 1,
+    "group_key": "earthquake|us7000sbbr",
+    "event_type": "earthquake",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "M 5.0 - western Indian-Antarctic Ridge",
+    "summary": "western Indian-Antarctic Ridge",
+    "started_at": "2026-04-08T15:14:03.918000+00:00",
+    "updated_at": "2026-04-08T16:47:55.040000+00:00",
+    "location_text": "western Indian-Antarctic Ridge",
+    "lat": -49.4766,
+    "lon": 125.5082,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sbbr",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sbbr",
+    "country_code": null,
+    "payload": {
+      "mag": 5.0,
+      "depth_km": 29.265,
+      "place": "western Indian-Antarctic Ridge",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us7000sbbr.geojson",
+      "alert": null,
+      "sig": 385,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      1
+    ],
+    "occurred_at": "2026-04-08T15:14:03.918000+00:00",
+    "published_at": "2026-04-08T15:14:03.918000+00:00",
+    "fetched_at": "2026-04-08T15:14:03.918000+00:00"
+  },
+  {
+    "id": 2,
     "group_key": "volcano|ac3285eaa25e4a32529b436089e1c13d7617f778",
     "event_type": "volcano",
     "severity_level": "high",
@@ -47,14 +83,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      4
+      5
     ],
     "occurred_at": "2026-04-08T12:10:00+00:00",
     "published_at": "2026-04-08T12:10:00+00:00",
     "fetched_at": "2026-04-08T12:10:00+00:00"
   },
   {
-    "id": 2,
+    "id": 3,
     "group_key": "earthquake|us7000sbau",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -83,14 +119,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      1
+      2
     ],
     "occurred_at": "2026-04-08T09:05:36.878000+00:00",
     "published_at": "2026-04-08T09:05:36.878000+00:00",
     "fetched_at": "2026-04-08T09:05:36.878000+00:00"
   },
   {
-    "id": 3,
+    "id": 4,
     "group_key": "earthquake|us7000sbap",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -119,14 +155,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      2
+      3
     ],
     "occurred_at": "2026-04-08T08:33:16.977000+00:00",
     "published_at": "2026-04-08T08:33:16.977000+00:00",
     "fetched_at": "2026-04-08T08:33:16.977000+00:00"
   },
   {
-    "id": 5,
+    "id": 6,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|tc_31p|0315fdc95fe58579",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -181,7 +217,7 @@
     "fetched_at": "2026-04-08T06:00:00+00:00"
   },
   {
-    "id": 4,
+    "id": 5,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|tc_30p|607ec087c458c179",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -236,7 +272,7 @@
     "fetched_at": "2026-04-08T06:00:00+00:00"
   },
   {
-    "id": 6,
+    "id": 7,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|western_north_pacific_area|invest_90w|4056ea81037795f2",
     "event_type": "typhoon",
     "severity_level": "elevated",
@@ -287,7 +323,7 @@
     "fetched_at": "2026-04-08T06:00:00+00:00"
   },
   {
-    "id": 7,
+    "id": 8,
     "group_key": "volcano|cbde336475e6e2e786fa645e7bc19cda92a2fa2f",
     "event_type": "volcano",
     "severity_level": "high",
@@ -334,14 +370,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      5
+      6
     ],
     "occurred_at": "2026-04-08T05:18:01+00:00",
     "published_at": "2026-04-08T05:18:01+00:00",
     "fetched_at": "2026-04-08T05:18:01+00:00"
   },
   {
-    "id": 8,
+    "id": 9,
     "group_key": "earthquake|us7000sb8q",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -370,65 +406,11 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      3
+      4
     ],
     "occurred_at": "2026-04-08T00:11:27.976000+00:00",
     "published_at": "2026-04-08T00:11:27.976000+00:00",
     "fetched_at": "2026-04-08T00:11:27.976000+00:00"
-  },
-  {
-    "id": 9,
-    "group_key": "volcano|db142dd070ac87a2c1132511d751c1fc2d6bc3b9",
-    "event_type": "volcano",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "Nyamuragira",
-    "summary": "VRP 345.04 MW · VIIRS375 · 7.72 km",
-    "started_at": "2026-04-07T23:18:01+00:00",
-    "updated_at": "2026-04-07T23:18:01+00:00",
-    "location_text": "Nyamuragira",
-    "lat": null,
-    "lon": null,
-    "source_primary": "MIROVA",
-    "source_secondary": "VIIRS375",
-    "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
-    "country_code": null,
-    "payload": {
-      "volcano_id": "223020",
-      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
-      "vrp_mw": 345.04,
-      "distance_km": 7.72,
-      "sensor": "VIIRS375",
-      "row_class": [
-        "high"
-      ],
-      "source_page": "https://www.mirovaweb.it/NRT/",
-      "sensors": [
-        "VIIRS375"
-      ],
-      "reports": [
-        {
-          "volcano_id": "223020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
-          "vrp_mw": 345.04,
-          "distance_km": 7.72,
-          "sensor": "VIIRS375",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        }
-      ],
-      "merged_count": 1
-    },
-    "member_event_ids": [
-      6
-    ],
-    "occurred_at": "2026-04-07T23:18:01+00:00",
-    "published_at": "2026-04-07T23:18:01+00:00",
-    "fetched_at": "2026-04-07T23:18:01+00:00"
   },
   {
     "id": 10,

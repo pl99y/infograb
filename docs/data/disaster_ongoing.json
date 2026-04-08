@@ -120,7 +120,7 @@
       }
     },
     "member_event_ids": [
-      11
+      10
     ],
     "occurred_at": "2026-04-08T06:00:00+00:00",
     "published_at": "2026-04-08T06:00:00+00:00",
@@ -175,7 +175,7 @@
       }
     },
     "member_event_ids": [
-      12
+      11
     ],
     "occurred_at": "2026-04-08T06:00:00+00:00",
     "published_at": "2026-04-08T06:00:00+00:00",
@@ -226,7 +226,7 @@
       }
     },
     "member_event_ids": [
-      10
+      9
     ],
     "occurred_at": "2026-04-08T06:00:00+00:00",
     "published_at": "2026-04-08T06:00:00+00:00",
@@ -280,7 +280,7 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      5
+      4
     ],
     "occurred_at": "2026-04-08T05:18:01+00:00",
     "published_at": "2026-04-08T05:18:01+00:00",
@@ -370,7 +370,7 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      6
+      5
     ],
     "occurred_at": "2026-04-07T23:18:01+00:00",
     "published_at": "2026-04-07T23:18:01+00:00",
@@ -424,7 +424,7 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      7
+      6
     ],
     "occurred_at": "2026-04-07T18:12:01+00:00",
     "published_at": "2026-04-07T18:12:01+00:00",
@@ -432,42 +432,6 @@
   },
   {
     "id": 10,
-    "group_key": "earthquake|us6000sn81",
-    "event_type": "earthquake",
-    "severity_level": "moderate",
-    "severity_color": "moderate",
-    "title": "M 5.0 - 186 km WSW of Bandar Lampung, Indonesia",
-    "summary": "186 km WSW of Bandar Lampung, Indonesia",
-    "started_at": "2026-04-07T13:40:15.182000+00:00",
-    "updated_at": "2026-04-08T03:15:46.911000+00:00",
-    "location_text": "186 km WSW of Bandar Lampung, Indonesia",
-    "lat": -6.1919,
-    "lon": 103.7635,
-    "source_primary": "USGS",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sn81",
-    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sn81",
-    "country_code": null,
-    "payload": {
-      "mag": 5.0,
-      "depth_km": 30.783,
-      "place": "186 km WSW of Bandar Lampung, Indonesia",
-      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000sn81.geojson",
-      "alert": null,
-      "sig": 385,
-      "tsunami": 0,
-      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
-    },
-    "member_event_ids": [
-      4
-    ],
-    "occurred_at": "2026-04-07T13:40:15.182000+00:00",
-    "published_at": "2026-04-07T13:40:15.182000+00:00",
-    "fetched_at": "2026-04-07T13:40:15.182000+00:00"
-  },
-  {
-    "id": 11,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -540,14 +504,14 @@
       }
     },
     "member_event_ids": [
-      8
+      7
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",
     "fetched_at": "2026-03-25T01:00:00+00:00"
   },
   {
-    "id": 12,
+    "id": 11,
     "group_key": "flood|87e3bb7c2a10dde82114c824bd0c4d4656280df9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -620,7 +584,7 @@
       }
     },
     "member_event_ids": [
-      9
+      8
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

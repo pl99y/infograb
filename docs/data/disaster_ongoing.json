@@ -489,17 +489,17 @@
     "severity_level": "high",
     "severity_color": "high",
     "title": "Fournaise Pitondela",
-    "summary": "VRP 350.48 MW · VIIRS / VIIRS375 · 5.37 km",
+    "summary": "VRP 350.48 MW · VIIRS375 / VIIRS · 5.37 km",
     "started_at": "2026-04-09T10:42:02+00:00",
     "updated_at": "2026-04-09T10:42:02+00:00",
     "location_text": "Fournaise Pitondela",
     "lat": null,
     "lon": null,
     "source_primary": "MIROVA",
-    "source_secondary": "VIIRS / VIIRS375",
+    "source_secondary": "VIIRS375 / VIIRS",
     "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=233020",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=233020",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=233020",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=233020",
     "country_code": null,
     "payload": {
       "volcano_id": "233020",
@@ -512,16 +512,16 @@
       ],
       "source_page": "https://www.mirovaweb.it/NRT/",
       "sensors": [
-        "VIIRS",
-        "VIIRS375"
+        "VIIRS375",
+        "VIIRS"
       ],
       "reports": [
         {
           "volcano_id": "233020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=233020",
-          "vrp_mw": 315.04,
-          "distance_km": 5.71,
-          "sensor": "VIIRS",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=233020",
+          "vrp_mw": 350.48,
+          "distance_km": 5.37,
+          "sensor": "VIIRS375",
           "row_class": [
             "high"
           ],
@@ -529,10 +529,10 @@
         },
         {
           "volcano_id": "233020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=233020",
-          "vrp_mw": 350.48,
-          "distance_km": 5.37,
-          "sensor": "VIIRS375",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=233020",
+          "vrp_mw": 315.04,
+          "distance_km": 5.71,
+          "sensor": "VIIRS",
           "row_class": [
             "high"
           ],

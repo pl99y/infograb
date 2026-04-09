@@ -47,6 +47,14 @@ body {
     letter-spacing: 1px;
 }
 
+.logo-note {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0;
+    color: var(--text-sec);
+    white-space: nowrap;
+}
+
 .nav-right {
     display: flex;
     align-items: center;

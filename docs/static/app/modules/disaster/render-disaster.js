@@ -49,7 +49,7 @@ function typeLabel(eventType) {
 
 function severityClass(level) {
   const v = String(level || "").toLowerCase();
-  if (["critical", "red", "high", "extreme"].includes(v)) return "level-high";
+  if (["critical", "red", "high", "very_high", "very-high", "extreme"].includes(v)) return "level-high";
   if (["moderate", "orange", "medium", "elevated"].includes(v)) return "level-mid";
   if (["low", "green", "info"].includes(v)) return "level-low";
   return "level-neutral";

@@ -1,6 +1,42 @@
 [
   {
-    "id": 2,
+    "id": 1,
+    "group_key": "earthquake|us6000snmv",
+    "event_type": "earthquake",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "M 5.1 - 93 km ENE of Nabire, Indonesia",
+    "summary": "93 km ENE of Nabire, Indonesia",
+    "started_at": "2026-04-09T07:32:21.057000+00:00",
+    "updated_at": "2026-04-09T07:51:01.040000+00:00",
+    "location_text": "93 km ENE of Nabire, Indonesia",
+    "lat": -2.9855,
+    "lon": 136.2579,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000snmv",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000snmv",
+    "country_code": null,
+    "payload": {
+      "mag": 5.1,
+      "depth_km": 10.0,
+      "place": "93 km ENE of Nabire, Indonesia",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000snmv.geojson",
+      "alert": null,
+      "sig": 400,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      1
+    ],
+    "occurred_at": "2026-04-09T07:32:21.057000+00:00",
+    "published_at": "2026-04-09T07:32:21.057000+00:00",
+    "fetched_at": "2026-04-09T07:32:21.057000+00:00"
+  },
+  {
+    "id": 3,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|tc_31p|f7f2ab754bc7d5d0",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -55,7 +91,7 @@
     "fetched_at": "2026-04-09T06:00:00+00:00"
   },
   {
-    "id": 1,
+    "id": 2,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|tc_30p|1073a47185300e14",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -110,7 +146,7 @@
     "fetched_at": "2026-04-09T06:00:00+00:00"
   },
   {
-    "id": 3,
+    "id": 4,
     "group_key": "earthquake|us6000snmg",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -139,14 +175,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      1
+      2
     ],
     "occurred_at": "2026-04-09T05:35:00.259000+00:00",
     "published_at": "2026-04-09T05:35:00.259000+00:00",
     "fetched_at": "2026-04-09T05:35:00.259000+00:00"
   },
   {
-    "id": 4,
+    "id": 5,
     "group_key": "volcano|2ea71c73d8683beb0186bf148040886a9866c7aa",
     "event_type": "volcano",
     "severity_level": "very_high",
@@ -193,65 +229,11 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      5
+      6
     ],
     "occurred_at": "2026-04-09T05:10:00+00:00",
     "published_at": "2026-04-09T05:10:00+00:00",
     "fetched_at": "2026-04-09T05:10:00+00:00"
-  },
-  {
-    "id": 5,
-    "group_key": "volcano|c95ae9d3f9a1518c058d51e5ff53f718d0a15c2c",
-    "event_type": "volcano",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "Mayon",
-    "summary": "VRP 104.17 MW · VIIRS375 · 5.10 km",
-    "started_at": "2026-04-09T04:06:02+00:00",
-    "updated_at": "2026-04-09T04:06:02+00:00",
-    "location_text": "Mayon",
-    "lat": null,
-    "lon": null,
-    "source_primary": "MIROVA",
-    "source_secondary": "VIIRS375",
-    "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
-    "country_code": null,
-    "payload": {
-      "volcano_id": "273030",
-      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
-      "vrp_mw": 104.17,
-      "distance_km": 5.1,
-      "sensor": "VIIRS375",
-      "row_class": [
-        "high"
-      ],
-      "source_page": "https://www.mirovaweb.it/NRT/",
-      "sensors": [
-        "VIIRS375"
-      ],
-      "reports": [
-        {
-          "volcano_id": "273030",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
-          "vrp_mw": 104.17,
-          "distance_km": 5.1,
-          "sensor": "VIIRS375",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        }
-      ],
-      "merged_count": 1
-    },
-    "member_event_ids": [
-      6
-    ],
-    "occurred_at": "2026-04-09T04:06:02+00:00",
-    "published_at": "2026-04-09T04:06:02+00:00",
-    "fetched_at": "2026-04-09T04:06:02+00:00"
   },
   {
     "id": 6,
@@ -368,17 +350,17 @@
     "severity_level": "high",
     "severity_color": "high",
     "title": "Fournaise Pitondela",
-    "summary": "VRP 873.21 MW · VIIRS375 / VIIRS · 7.83 km",
+    "summary": "VRP 873.21 MW · VIIRS / VIIRS375 · 7.83 km",
     "started_at": "2026-04-08T22:12:02+00:00",
     "updated_at": "2026-04-08T22:12:02+00:00",
     "location_text": "Fournaise Pitondela",
     "lat": null,
     "lon": null,
     "source_primary": "MIROVA",
-    "source_secondary": "VIIRS375 / VIIRS",
+    "source_secondary": "VIIRS / VIIRS375",
     "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=233020",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=233020",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=233020",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=233020",
     "country_code": null,
     "payload": {
       "volcano_id": "233020",
@@ -391,16 +373,16 @@
       ],
       "source_page": "https://www.mirovaweb.it/NRT/",
       "sensors": [
-        "VIIRS375",
-        "VIIRS"
+        "VIIRS",
+        "VIIRS375"
       ],
       "reports": [
         {
           "volcano_id": "233020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=233020",
-          "vrp_mw": 382.56,
-          "distance_km": 8.91,
-          "sensor": "VIIRS375",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=233020",
+          "vrp_mw": 873.21,
+          "distance_km": 7.83,
+          "sensor": "VIIRS",
           "row_class": [
             "high"
           ],
@@ -408,10 +390,10 @@
         },
         {
           "volcano_id": "233020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=233020",
-          "vrp_mw": 873.21,
-          "distance_km": 7.83,
-          "sensor": "VIIRS",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=233020",
+          "vrp_mw": 382.56,
+          "distance_km": 8.91,
+          "sensor": "VIIRS375",
           "row_class": [
             "high"
           ],
@@ -511,7 +493,7 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      2
+      3
     ],
     "occurred_at": "2026-04-08T15:14:03.918000+00:00",
     "published_at": "2026-04-08T15:14:03.918000+00:00",
@@ -547,7 +529,7 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      3
+      4
     ],
     "occurred_at": "2026-04-08T09:05:36.878000+00:00",
     "published_at": "2026-04-08T09:05:36.878000+00:00",
@@ -583,7 +565,7 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      4
+      5
     ],
     "occurred_at": "2026-04-08T08:33:16.977000+00:00",
     "published_at": "2026-04-08T08:33:16.977000+00:00",

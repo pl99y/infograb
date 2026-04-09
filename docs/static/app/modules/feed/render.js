@@ -39,13 +39,15 @@ export function renderTelegram(ctx, container, items) {
     wrapper.className = "feed-item";
 
     const timeValue = item.published_at || item.fetched_at || "";
+    const displayText = String(item.text_zh || item.text || "").trim();
+
     wrapper.innerHTML = `
       <div class="feed-category-line"></div>
       <div class="feed-meta">
         <a class="feed-source" href="${item.post_url || "#"}" target="_blank" rel="noopener noreferrer">${item.source_name || "Unknown Source"}</a>
         <div class="feed-type" data-time-value="${timeValue}"></div>
       </div>
-      ${String(item.text || "").trim() ? `<div class="feed-text"></div>` : ""}
+      ${displayText ? `<div class="feed-text"></div>` : ""}
     `;
 
     const timeEl = wrapper.querySelector(".feed-type");
@@ -56,7 +58,7 @@ export function renderTelegram(ctx, container, items) {
 
     const textEl = wrapper.querySelector(".feed-text");
     if (textEl) {
-      textEl.textContent = item.text || "";
+      textEl.textContent = displayText;
     }
 
     const mediaGrid = createMediaGrid(ctx, Array.isArray(item.media) ? item.media : []);
@@ -67,7 +69,7 @@ export function renderTelegram(ctx, container, items) {
     const actionHost = document.createElement("div");
     wrapper.appendChild(actionHost);
 
-    if (String(item.text || "").trim()) {
+    if (displayText) {
       createTranslateButton(ctx, item, actionHost);
     }
 

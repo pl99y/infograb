@@ -31,9 +31,14 @@ function buildMeta(article) {
   return parts.join(" · ");
 }
 
+function buildDisplayTitle(article) {
+  const zh = String(article?.title_zh || "").trim();
+  const en = String(article?.title || article?.title_en || "").trim();
+  return zh || en || "Untitled";
+}
 
 function buildItem(article, index) {
-  const title = article?.title || "Untitled";
+  const title = buildDisplayTitle(article);
   const href = article?.post_url || article?.url || "#";
   const meta = buildMeta(article);
 

@@ -147,6 +147,60 @@
   },
   {
     "id": 4,
+    "group_key": "volcano|2ea71c73d8683beb0186bf148040886a9866c7aa",
+    "event_type": "volcano",
+    "severity_level": "very_high",
+    "severity_color": "very_high",
+    "title": "Fournaise Pitondela",
+    "summary": "VRP 1076.51 MW · MODIS · 5.83 km",
+    "started_at": "2026-04-09T05:10:00+00:00",
+    "updated_at": "2026-04-09T05:10:00+00:00",
+    "location_text": "Fournaise Pitondela",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "MODIS",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=233020",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=233020",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "233020",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=233020",
+      "vrp_mw": 1076.51,
+      "distance_km": 5.83,
+      "sensor": "MODIS",
+      "row_class": [
+        "very_high"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "MODIS"
+      ],
+      "reports": [
+        {
+          "volcano_id": "233020",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=233020",
+          "vrp_mw": 1076.51,
+          "distance_km": 5.83,
+          "sensor": "MODIS",
+          "row_class": [
+            "very_high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 1
+    },
+    "member_event_ids": [
+      5
+    ],
+    "occurred_at": "2026-04-09T05:10:00+00:00",
+    "published_at": "2026-04-09T05:10:00+00:00",
+    "fetched_at": "2026-04-09T05:10:00+00:00"
+  },
+  {
+    "id": 5,
     "group_key": "volcano|c95ae9d3f9a1518c058d51e5ff53f718d0a15c2c",
     "event_type": "volcano",
     "severity_level": "high",
@@ -193,14 +247,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      5
+      6
     ],
     "occurred_at": "2026-04-09T04:06:02+00:00",
     "published_at": "2026-04-09T04:06:02+00:00",
     "fetched_at": "2026-04-09T04:06:02+00:00"
   },
   {
-    "id": 5,
+    "id": 6,
     "group_key": "volcano|d06d4e709484f06c9c5f78123e2bc3cf5fda3e3b",
     "event_type": "volcano",
     "severity_level": "high",
@@ -247,14 +301,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      6
+      7
     ],
     "occurred_at": "2026-04-09T00:24:00+00:00",
     "published_at": "2026-04-09T00:24:00+00:00",
     "fetched_at": "2026-04-09T00:24:00+00:00"
   },
   {
-    "id": 6,
+    "id": 7,
     "group_key": "volcano|93d94ba8898611bbcc650ff8df26ae8efdb74401",
     "event_type": "volcano",
     "severity_level": "very_high",
@@ -301,65 +355,11 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      7
+      8
     ],
     "occurred_at": "2026-04-08T23:48:02+00:00",
     "published_at": "2026-04-08T23:48:02+00:00",
     "fetched_at": "2026-04-08T23:48:02+00:00"
-  },
-  {
-    "id": 7,
-    "group_key": "volcano|94865e6d45d137e5665f78a1605a6b567af53987",
-    "event_type": "volcano",
-    "severity_level": "very_high",
-    "severity_color": "very_high",
-    "title": "Fournaise Pitondela",
-    "summary": "VRP 1368.33 MW · MODIS · 9.22 km",
-    "started_at": "2026-04-08T23:00:00+00:00",
-    "updated_at": "2026-04-08T23:00:00+00:00",
-    "location_text": "Fournaise Pitondela",
-    "lat": null,
-    "lon": null,
-    "source_primary": "MIROVA",
-    "source_secondary": "MODIS",
-    "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=233020",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=233020",
-    "country_code": null,
-    "payload": {
-      "volcano_id": "233020",
-      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=233020",
-      "vrp_mw": 1368.33,
-      "distance_km": 9.22,
-      "sensor": "MODIS",
-      "row_class": [
-        "very_high"
-      ],
-      "source_page": "https://www.mirovaweb.it/NRT/",
-      "sensors": [
-        "MODIS"
-      ],
-      "reports": [
-        {
-          "volcano_id": "233020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=233020",
-          "vrp_mw": 1368.33,
-          "distance_km": 9.22,
-          "sensor": "MODIS",
-          "row_class": [
-            "very_high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        }
-      ],
-      "merged_count": 1
-    },
-    "member_event_ids": [
-      8
-    ],
-    "occurred_at": "2026-04-08T23:00:00+00:00",
-    "published_at": "2026-04-08T23:00:00+00:00",
-    "fetched_at": "2026-04-08T23:00:00+00:00"
   },
   {
     "id": 8,
@@ -368,17 +368,17 @@
     "severity_level": "high",
     "severity_color": "high",
     "title": "Fournaise Pitondela",
-    "summary": "VRP 873.21 MW · VIIRS375 / VIIRS · 7.83 km",
+    "summary": "VRP 873.21 MW · VIIRS / VIIRS375 · 7.83 km",
     "started_at": "2026-04-08T22:12:02+00:00",
     "updated_at": "2026-04-08T22:12:02+00:00",
     "location_text": "Fournaise Pitondela",
     "lat": null,
     "lon": null,
     "source_primary": "MIROVA",
-    "source_secondary": "VIIRS375 / VIIRS",
+    "source_secondary": "VIIRS / VIIRS375",
     "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=233020",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=233020",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=233020",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=233020",
     "country_code": null,
     "payload": {
       "volcano_id": "233020",
@@ -391,16 +391,16 @@
       ],
       "source_page": "https://www.mirovaweb.it/NRT/",
       "sensors": [
-        "VIIRS375",
-        "VIIRS"
+        "VIIRS",
+        "VIIRS375"
       ],
       "reports": [
         {
           "volcano_id": "233020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=233020",
-          "vrp_mw": 382.56,
-          "distance_km": 8.91,
-          "sensor": "VIIRS375",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=233020",
+          "vrp_mw": 873.21,
+          "distance_km": 7.83,
+          "sensor": "VIIRS",
           "row_class": [
             "high"
           ],
@@ -408,10 +408,10 @@
         },
         {
           "volcano_id": "233020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=233020",
-          "vrp_mw": 873.21,
-          "distance_km": 7.83,
-          "sensor": "VIIRS",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=233020",
+          "vrp_mw": 382.56,
+          "distance_km": 8.91,
+          "sensor": "VIIRS375",
           "row_class": [
             "high"
           ],

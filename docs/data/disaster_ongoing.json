@@ -138,7 +138,7 @@
       }
     },
     "member_event_ids": [
-      10
+      12
     ],
     "occurred_at": "2026-04-09T06:00:00+00:00",
     "published_at": "2026-04-09T06:00:00+00:00",
@@ -193,7 +193,7 @@
       }
     },
     "member_event_ids": [
-      11
+      13
     ],
     "occurred_at": "2026-04-09T06:00:00+00:00",
     "published_at": "2026-04-09T06:00:00+00:00",
@@ -552,5 +552,165 @@
     "occurred_at": "2026-04-08T15:14:03.918000+00:00",
     "published_at": "2026-04-08T15:14:03.918000+00:00",
     "fetched_at": "2026-04-08T15:14:03.918000+00:00"
+  },
+  {
+    "id": 12,
+    "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
+    "event_type": "flood",
+    "severity_level": "orange",
+    "severity_color": "orange",
+    "title": "Flood in Afghanistan",
+    "summary": "Afghanistan",
+    "started_at": "2026-03-25T01:00:00+00:00",
+    "updated_at": "2026-04-08T15:01:29+00:00",
+    "location_text": "Afghanistan",
+    "lat": null,
+    "lon": null,
+    "source_primary": "GDACS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://www.gdacs.org/report.aspx?eventid=1103815&episodeid=1&eventtype=FL",
+    "official_link": "https://www.gdacs.org/report.aspx?eventid=1103815&episodeid=1&eventtype=FL",
+    "country_code": null,
+    "payload": {
+      "eventid": "1103815",
+      "episodeid": "1",
+      "alertlevel": "orange",
+      "report_url": "https://www.gdacs.org/report.aspx?eventid=1103815&episodeid=1&eventtype=FL",
+      "geometry_url": null,
+      "details_url": null,
+      "source_page": "https://www.gdacs.org/Alerts/",
+      "active_within_days": 14,
+      "raw": {
+        "eventtype": "FL",
+        "eventid": 1103815,
+        "episodeid": 1,
+        "eventname": "",
+        "glide": "FL-2026-000047-AFG",
+        "name": "Flood in Afghanistan",
+        "description": "Flood in Afghanistan",
+        "htmldescription": "Orange Flood in Afghanistan from: 25 Mar 2026 01 to: 05 Apr 2026 01.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/FL.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/FL.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=FL&eventid=1103815&episodeid=1",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1103815&episodeid=1&eventtype=FL",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=FL&eventid=1103815"
+        },
+        "alertlevel": "Orange",
+        "alertscore": 2,
+        "episodealertlevel": "Orange",
+        "episodealertscore": 1.5,
+        "istemporary": "false",
+        "iscurrent": "false",
+        "country": "Afghanistan",
+        "fromdate": "2026-03-25T01:00:00",
+        "todate": "2026-04-05T01:00:00",
+        "datemodified": "2026-04-08T15:01:29",
+        "iso3": "AFG",
+        "source": "GLOFAS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "AF",
+            "iso3": "AFG",
+            "countryname": "Afghanistan"
+          }
+        ],
+        "severitydata": {
+          "severity": 0.0,
+          "severitytext": "Magnitude 0 ",
+          "severityunit": ""
+        }
+      }
+    },
+    "member_event_ids": [
+      11
+    ],
+    "occurred_at": "2026-03-25T01:00:00+00:00",
+    "published_at": "2026-03-25T01:00:00+00:00",
+    "fetched_at": "2026-03-25T01:00:00+00:00"
+  },
+  {
+    "id": 13,
+    "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
+    "event_type": "flood",
+    "severity_level": "orange",
+    "severity_color": "orange",
+    "title": "Flood in Democratic Republic of Congo",
+    "summary": "Democratic Republic of Congo",
+    "started_at": "2026-02-11T01:00:00+00:00",
+    "updated_at": "2026-04-09T05:20:51+00:00",
+    "location_text": "Democratic Republic of Congo",
+    "lat": null,
+    "lon": null,
+    "source_primary": "GDACS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://www.gdacs.org/report.aspx?eventid=1103784&episodeid=6&eventtype=FL",
+    "official_link": "https://www.gdacs.org/report.aspx?eventid=1103784&episodeid=6&eventtype=FL",
+    "country_code": null,
+    "payload": {
+      "eventid": "1103784",
+      "episodeid": "6",
+      "alertlevel": "orange",
+      "report_url": "https://www.gdacs.org/report.aspx?eventid=1103784&episodeid=6&eventtype=FL",
+      "geometry_url": null,
+      "details_url": null,
+      "source_page": "https://www.gdacs.org/Alerts/",
+      "active_within_days": 14,
+      "raw": {
+        "eventtype": "FL",
+        "eventid": 1103784,
+        "episodeid": 6,
+        "eventname": "",
+        "glide": "",
+        "name": "Flood in Democratic Republic of Congo",
+        "description": "Flood in Democratic Republic of Congo",
+        "htmldescription": "Orange Flood in Democratic Republic of Congo from: 11 Feb 2026 01 to: 05 Mar 2026 01.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/FL.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/FL.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=FL&eventid=1103784&episodeid=6",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1103784&episodeid=6&eventtype=FL",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=FL&eventid=1103784"
+        },
+        "alertlevel": "Orange",
+        "alertscore": 2,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "false",
+        "country": "Democratic Republic of Congo",
+        "fromdate": "2026-02-11T01:00:00",
+        "todate": "2026-03-05T01:00:00",
+        "datemodified": "2026-04-09T05:20:51",
+        "iso3": "COD",
+        "source": "GLOFAS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "CD",
+            "iso3": "COD",
+            "countryname": "Democratic Republic of Congo"
+          }
+        ],
+        "severitydata": {
+          "severity": 0.0,
+          "severitytext": "Magnitude 0 ",
+          "severityunit": ""
+        }
+      }
+    },
+    "member_event_ids": [
+      10
+    ],
+    "occurred_at": "2026-02-11T01:00:00+00:00",
+    "published_at": "2026-02-11T01:00:00+00:00",
+    "fetched_at": "2026-02-11T01:00:00+00:00"
   }
 ]

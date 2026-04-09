@@ -1,6 +1,60 @@
 [
   {
     "id": 1,
+    "group_key": "volcano|93d94ba8898611bbcc650ff8df26ae8efdb74401",
+    "event_type": "volcano",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Nyamuragira",
+    "summary": "VRP 118.29 MW · VIIRS375 · 8.23 km",
+    "started_at": "2026-04-08T23:48:02+00:00",
+    "updated_at": "2026-04-08T23:48:02+00:00",
+    "location_text": "Nyamuragira",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "VIIRS375",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "223020",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
+      "vrp_mw": 118.29,
+      "distance_km": 8.23,
+      "sensor": "VIIRS375",
+      "row_class": [
+        "high"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "VIIRS375"
+      ],
+      "reports": [
+        {
+          "volcano_id": "223020",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
+          "vrp_mw": 118.29,
+          "distance_km": 8.23,
+          "sensor": "VIIRS375",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 1
+    },
+    "member_event_ids": [
+      4
+    ],
+    "occurred_at": "2026-04-08T23:48:02+00:00",
+    "published_at": "2026-04-08T23:48:02+00:00",
+    "fetched_at": "2026-04-08T23:48:02+00:00"
+  },
+  {
+    "id": 2,
     "group_key": "volcano|94865e6d45d137e5665f78a1605a6b567af53987",
     "event_type": "volcano",
     "severity_level": "very_high",
@@ -47,14 +101,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      4
+      5
     ],
     "occurred_at": "2026-04-08T23:00:00+00:00",
     "published_at": "2026-04-08T23:00:00+00:00",
     "fetched_at": "2026-04-08T23:00:00+00:00"
   },
   {
-    "id": 2,
+    "id": 3,
     "group_key": "volcano|d89c4ddb900602db17a4ab84c6d7f39a13124b2f",
     "event_type": "volcano",
     "severity_level": "high",
@@ -101,14 +155,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      5
+      6
     ],
     "occurred_at": "2026-04-08T22:12:02+00:00",
     "published_at": "2026-04-08T22:12:02+00:00",
     "fetched_at": "2026-04-08T22:12:02+00:00"
   },
   {
-    "id": 3,
+    "id": 4,
     "group_key": "volcano|425ceea8a70eb18c1d754ad53bc411a550251571",
     "event_type": "volcano",
     "severity_level": "very_high",
@@ -155,14 +209,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      6
+      7
     ],
     "occurred_at": "2026-04-08T21:24:01+00:00",
     "published_at": "2026-04-08T21:24:01+00:00",
     "fetched_at": "2026-04-08T21:24:01+00:00"
   },
   {
-    "id": 6,
+    "id": 7,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|western_north_pacific_area|invest_90w|327ad0c212a6ddc8",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -206,14 +260,14 @@
       }
     },
     "member_event_ids": [
-      10
+      11
     ],
     "occurred_at": "2026-04-08T18:00:00+00:00",
     "published_at": "2026-04-08T18:00:00+00:00",
     "fetched_at": "2026-04-08T18:00:00+00:00"
   },
   {
-    "id": 5,
+    "id": 6,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|tc_31p|df62ae77aa237d04",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -261,14 +315,14 @@
       }
     },
     "member_event_ids": [
-      11
+      12
     ],
     "occurred_at": "2026-04-08T18:00:00+00:00",
     "published_at": "2026-04-08T18:00:00+00:00",
     "fetched_at": "2026-04-08T18:00:00+00:00"
   },
   {
-    "id": 4,
+    "id": 5,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|tc_30p|6fc76101fe99a38d",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -316,14 +370,14 @@
       }
     },
     "member_event_ids": [
-      12
+      13
     ],
     "occurred_at": "2026-04-08T18:00:00+00:00",
     "published_at": "2026-04-08T18:00:00+00:00",
     "fetched_at": "2026-04-08T18:00:00+00:00"
   },
   {
-    "id": 7,
+    "id": 8,
     "group_key": "volcano|56f79a2a67c43e28aaf9552f25915deb6cb3a110",
     "event_type": "volcano",
     "severity_level": "high",
@@ -382,14 +436,14 @@
       "merged_count": 2
     },
     "member_event_ids": [
-      7
+      8
     ],
     "occurred_at": "2026-04-08T17:54:01+00:00",
     "published_at": "2026-04-08T17:54:01+00:00",
     "fetched_at": "2026-04-08T17:54:01+00:00"
   },
   {
-    "id": 8,
+    "id": 9,
     "group_key": "earthquake|us7000sbbr",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -425,7 +479,7 @@
     "fetched_at": "2026-04-08T15:14:03.918000+00:00"
   },
   {
-    "id": 9,
+    "id": 10,
     "group_key": "earthquake|us7000sbau",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -461,7 +515,7 @@
     "fetched_at": "2026-04-08T09:05:36.878000+00:00"
   },
   {
-    "id": 10,
+    "id": 11,
     "group_key": "earthquake|us7000sbap",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -497,7 +551,7 @@
     "fetched_at": "2026-04-08T08:33:16.977000+00:00"
   },
   {
-    "id": 11,
+    "id": 12,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -570,14 +624,14 @@
       }
     },
     "member_event_ids": [
-      9
+      10
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",
     "fetched_at": "2026-03-25T01:00:00+00:00"
   },
   {
-    "id": 12,
+    "id": 13,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -650,7 +704,7 @@
       }
     },
     "member_event_ids": [
-      8
+      9
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

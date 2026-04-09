@@ -47,7 +47,7 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      4
+      3
     ],
     "occurred_at": "2026-04-09T12:35:00+00:00",
     "published_at": "2026-04-09T12:35:00+00:00",
@@ -113,7 +113,7 @@
       "merged_count": 2
     },
     "member_event_ids": [
-      5
+      4
     ],
     "occurred_at": "2026-04-09T10:42:02+00:00",
     "published_at": "2026-04-09T10:42:02+00:00",
@@ -204,7 +204,7 @@
       }
     },
     "member_event_ids": [
-      8
+      7
     ],
     "occurred_at": "2026-04-09T06:00:00+00:00",
     "published_at": "2026-04-09T06:00:00+00:00",
@@ -259,7 +259,7 @@
       }
     },
     "member_event_ids": [
-      9
+      8
     ],
     "occurred_at": "2026-04-09T06:00:00+00:00",
     "published_at": "2026-04-09T06:00:00+00:00",
@@ -303,42 +303,6 @@
   },
   {
     "id": 7,
-    "group_key": "earthquake|us7000sbbr",
-    "event_type": "earthquake",
-    "severity_level": "moderate",
-    "severity_color": "moderate",
-    "title": "M 5.0 - western Indian-Antarctic Ridge",
-    "summary": "western Indian-Antarctic Ridge",
-    "started_at": "2026-04-08T15:14:03.918000+00:00",
-    "updated_at": "2026-04-08T16:47:55.040000+00:00",
-    "location_text": "western Indian-Antarctic Ridge",
-    "lat": -49.4766,
-    "lon": 125.5082,
-    "source_primary": "USGS",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sbbr",
-    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sbbr",
-    "country_code": null,
-    "payload": {
-      "mag": 5.0,
-      "depth_km": 29.265,
-      "place": "western Indian-Antarctic Ridge",
-      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us7000sbbr.geojson",
-      "alert": null,
-      "sig": 385,
-      "tsunami": 0,
-      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
-    },
-    "member_event_ids": [
-      3
-    ],
-    "occurred_at": "2026-04-08T15:14:03.918000+00:00",
-    "published_at": "2026-04-08T15:14:03.918000+00:00",
-    "fetched_at": "2026-04-08T15:14:03.918000+00:00"
-  },
-  {
-    "id": 8,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -411,14 +375,14 @@
       }
     },
     "member_event_ids": [
-      7
+      6
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",
     "fetched_at": "2026-03-25T01:00:00+00:00"
   },
   {
-    "id": 9,
+    "id": 8,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -491,7 +455,7 @@
       }
     },
     "member_event_ids": [
-      6
+      5
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

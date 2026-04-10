@@ -48,7 +48,7 @@
       }
     },
     "member_event_ids": [
-      11
+      10
     ],
     "occurred_at": "2026-04-10T06:00:00+00:00",
     "published_at": "2026-04-10T06:00:00+00:00",
@@ -103,7 +103,7 @@
       }
     },
     "member_event_ids": [
-      12
+      11
     ],
     "occurred_at": "2026-04-10T06:00:00+00:00",
     "published_at": "2026-04-10T06:00:00+00:00",
@@ -157,7 +157,7 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      4
+      3
     ],
     "occurred_at": "2026-04-10T01:15:00+00:00",
     "published_at": "2026-04-10T01:15:00+00:00",
@@ -211,7 +211,7 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      5
+      4
     ],
     "occurred_at": "2026-04-10T00:45:00+00:00",
     "published_at": "2026-04-10T00:45:00+00:00",
@@ -224,17 +224,17 @@
     "severity_level": "high",
     "severity_color": "high",
     "title": "Nyamuragira",
-    "summary": "VRP 186.26 MW · VIIRS375 / VIIRS · 3.82 km",
+    "summary": "VRP 186.26 MW · VIIRS / VIIRS375 · 3.82 km",
     "started_at": "2026-04-10T00:00:00+00:00",
     "updated_at": "2026-04-10T00:00:00+00:00",
     "location_text": "Nyamuragira",
     "lat": null,
     "lon": null,
     "source_primary": "MIROVA",
-    "source_secondary": "VIIRS375 / VIIRS",
+    "source_secondary": "VIIRS / VIIRS375",
     "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
     "country_code": null,
     "payload": {
       "volcano_id": "223020",
@@ -247,21 +247,10 @@
       ],
       "source_page": "https://www.mirovaweb.it/NRT/",
       "sensors": [
-        "VIIRS375",
-        "VIIRS"
+        "VIIRS",
+        "VIIRS375"
       ],
       "reports": [
-        {
-          "volcano_id": "223020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
-          "vrp_mw": 186.26,
-          "distance_km": 4.19,
-          "sensor": "VIIRS375",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        },
         {
           "volcano_id": "223020",
           "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
@@ -272,12 +261,23 @@
             "high"
           ],
           "source_page": "https://www.mirovaweb.it/NRT/"
+        },
+        {
+          "volcano_id": "223020",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
+          "vrp_mw": 186.26,
+          "distance_km": 4.19,
+          "sensor": "VIIRS375",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
         }
       ],
       "merged_count": 2
     },
     "member_event_ids": [
-      6
+      5
     ],
     "occurred_at": "2026-04-10T00:00:00+00:00",
     "published_at": "2026-04-10T00:00:00+00:00",
@@ -331,7 +331,7 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      7
+      6
     ],
     "occurred_at": "2026-04-09T23:40:00+00:00",
     "published_at": "2026-04-09T23:40:00+00:00",
@@ -397,7 +397,7 @@
       "merged_count": 2
     },
     "member_event_ids": [
-      8
+      7
     ],
     "occurred_at": "2026-04-09T22:24:00+00:00",
     "published_at": "2026-04-09T22:24:00+00:00",
@@ -477,42 +477,6 @@
   },
   {
     "id": 10,
-    "group_key": "earthquake|us6000snmv",
-    "event_type": "earthquake",
-    "severity_level": "moderate",
-    "severity_color": "moderate",
-    "title": "M 5.1 - 93 km ENE of Nabire, Indonesia",
-    "summary": "93 km ENE of Nabire, Indonesia",
-    "started_at": "2026-04-09T07:32:21.057000+00:00",
-    "updated_at": "2026-04-09T07:51:01.040000+00:00",
-    "location_text": "93 km ENE of Nabire, Indonesia",
-    "lat": -2.9855,
-    "lon": 136.2579,
-    "source_primary": "USGS",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000snmv",
-    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000snmv",
-    "country_code": null,
-    "payload": {
-      "mag": 5.1,
-      "depth_km": 10.0,
-      "place": "93 km ENE of Nabire, Indonesia",
-      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000snmv.geojson",
-      "alert": null,
-      "sig": 400,
-      "tsunami": 0,
-      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
-    },
-    "member_event_ids": [
-      3
-    ],
-    "occurred_at": "2026-04-09T07:32:21.057000+00:00",
-    "published_at": "2026-04-09T07:32:21.057000+00:00",
-    "fetched_at": "2026-04-09T07:32:21.057000+00:00"
-  },
-  {
-    "id": 11,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -585,14 +549,14 @@
       }
     },
     "member_event_ids": [
-      10
+      9
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",
     "fetched_at": "2026-03-25T01:00:00+00:00"
   },
   {
-    "id": 12,
+    "id": 11,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -665,7 +629,7 @@
       }
     },
     "member_event_ids": [
-      9
+      8
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

@@ -1,6 +1,84 @@
 [
   {
     "id": 1,
+    "dedupe_key": "6796cd10-373d-403a-ae63-7630c69be6f0",
+    "source_primary": "WMO",
+    "title": "Warning, Heavy rain",
+    "summary": "Eastern Region - Al Ahsa : The entire governorate; Eastern Region - Al Udayd : The entire governorate; Eastern Region - Buqayq : The entire governorate",
+    "severity_level": "extreme",
+    "color_level": "extreme",
+    "event_type": "weather",
+    "location_text": "Eastern Region - Al Ahsa : The entire governorate; Eastern Region - Al Udayd : The entire governorate; Eastern Region - Buqayq : The entire governorate",
+    "issued_at": "2026-04-10T16:42:12+00:00",
+    "effective_at": "2026-04-11T03:00:00+00:00",
+    "expires_at": "2026-04-11T17:00:00+00:00",
+    "source_url": "https://severeweather.wmo.int/list.html",
+    "detail_url": "https://severeweather.wmo.int/list.html",
+    "payload": {
+      "id": "6796cd10-373d-403a-ae63-7630c69be6f0",
+      "event": "Heavy rain",
+      "headline": "Warning, Heavy rain",
+      "sent": "2026-04-10 16:42:12",
+      "expires": "2026-04-11 17:00:00",
+      "areaDesc": "Eastern Region - Al Ahsa : The entire governorate; Eastern Region - Al Udayd : The entire governorate; Eastern Region - Buqayq : The entire governorate",
+      "mid": "079",
+      "ra": "2",
+      "s": 4,
+      "u": 3,
+      "c": 2,
+      "capURL": "sa-ncm-en/2026/04/10/16/42/12-44efa7362185b1101d46cd13ec311242.xml",
+      "effective": "2026-04-11 03:00:00",
+      "cap_path": "sa-ncm-en/2026/04/10/16/42/12-44efa7362185b1101d46cd13ec311242.xml",
+      "source_page": "https://severeweather.wmo.int/list.html",
+      "last_updated": "2026-04-10 20:24:08"
+    },
+    "fetched_at": "2026-04-10T20:26:00.400734+00:00",
+    "published_at": "2026-04-10T16:42:12+00:00",
+    "updated_at": "2026-04-10T20:26:00.400734+00:00",
+    "region_text": "Eastern Region - Al Ahsa : The entire governorate; Eastern Region - Al Udayd : The entire governorate; Eastern Region - Buqayq : The entire governorate",
+    "link_url": "https://severeweather.wmo.int/list.html"
+  },
+  {
+    "id": 2,
+    "dedupe_key": "f8a77c25-904a-42c0-97e9-85e4eb717561",
+    "source_primary": "WMO",
+    "title": "Warning, Heavy rain",
+    "summary": "Najran Region - Badr Al Janub : The entire governorate; Najran Region - Thar : The entire governorate; Najran Region - Hubuna : The entire governorate; Najran Region - Khubash : The entire governorate; Najran Region - Najran : The entire governorate; Najran Region - Yadamah : The entire governorate",
+    "severity_level": "extreme",
+    "color_level": "extreme",
+    "event_type": "weather",
+    "location_text": "Najran Region - Badr Al Janub : The entire governorate; Najran Region - Thar : The entire governorate; Najran Region - Hubuna : The entire governorate; Najran Region - Khubash : The entire governorate; Najran Region - Najran : The entire governorate; Najran Region - Yadamah : The entire governorate",
+    "issued_at": "2026-04-10T16:40:42+00:00",
+    "effective_at": "2026-04-11T04:00:00+00:00",
+    "expires_at": "2026-04-11T14:00:00+00:00",
+    "source_url": "https://severeweather.wmo.int/list.html",
+    "detail_url": "https://severeweather.wmo.int/list.html",
+    "payload": {
+      "id": "f8a77c25-904a-42c0-97e9-85e4eb717561",
+      "event": "Heavy rain",
+      "headline": "Warning, Heavy rain",
+      "sent": "2026-04-10 16:40:42",
+      "expires": "2026-04-11 14:00:00",
+      "areaDesc": "Najran Region - Badr Al Janub : The entire governorate; Najran Region - Thar : The entire governorate; Najran Region - Hubuna : The entire governorate; Najran Region - Khubash : The entire governorate; Najran Region - Najran : The entire governorate; Najran Region - Yadamah : The entire governorate",
+      "mid": "079",
+      "ra": "2",
+      "s": 4,
+      "u": 3,
+      "c": 2,
+      "capURL": "sa-ncm-en/2026/04/10/16/40/42-9120e5ba58a24a97ff96f592288e48b7.xml",
+      "effective": "2026-04-11 04:00:00",
+      "cap_path": "sa-ncm-en/2026/04/10/16/40/42-9120e5ba58a24a97ff96f592288e48b7.xml",
+      "source_page": "https://severeweather.wmo.int/list.html",
+      "last_updated": "2026-04-10 20:24:08"
+    },
+    "fetched_at": "2026-04-10T20:26:00.400734+00:00",
+    "published_at": "2026-04-10T16:40:42+00:00",
+    "updated_at": "2026-04-10T20:26:00.400734+00:00",
+    "region_text": "Najran Region - Badr Al Janub : The entire governorate; Najran Region - Thar : The entire governorate; Najran Region - Hubuna : The entire governorate; Najran Region - Khubash : The entire governorate; Najran Region - Najran : The entire governorate; Najran Region - Yadamah : The entire governorate",
+    "link_url": "https://severeweather.wmo.int/list.html"
+  },
+  {
+    "id": 3,
     "dedupe_key": "1a874f75-5846-471d-84c7-053367155f8a",
     "source_primary": "WMO",
     "title": "Warning, Heavy rain",
@@ -30,16 +108,16 @@
       "effective": "2026-04-11 02:00:00",
       "cap_path": "sa-ncm-en/2026/04/10/16/39/00-e1ff952ea55cb6382e05a27306f3b00e.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-10 20:04:09"
+      "last_updated": "2026-04-10 20:24:08"
     },
-    "fetched_at": "2026-04-10T20:05:52.512436+00:00",
+    "fetched_at": "2026-04-10T20:26:00.400734+00:00",
     "published_at": "2026-04-10T16:39:00+00:00",
-    "updated_at": "2026-04-10T20:05:52.512436+00:00",
+    "updated_at": "2026-04-10T20:26:00.400734+00:00",
     "region_text": "Riyadh Region - Ad Diriyah : The entire governorate; Riyadh Region - Ar Riyad : The entire governorate",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 2,
+    "id": 4,
     "dedupe_key": "deb93d41-0fc6-4859-825a-b4f830e441a0",
     "source_primary": "WMO",
     "title": "Warning, Heavy rain",
@@ -69,16 +147,16 @@
       "effective": "2026-04-11 03:00:00",
       "cap_path": "sa-ncm-en/2026/04/10/16/28/12-bcf0d9d2c3b78275269a1d943f9d6e5b.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-10 20:04:09"
+      "last_updated": "2026-04-10 20:24:08"
     },
-    "fetched_at": "2026-04-10T20:05:52.512436+00:00",
+    "fetched_at": "2026-04-10T20:26:00.400734+00:00",
     "published_at": "2026-04-10T16:28:12+00:00",
-    "updated_at": "2026-04-10T20:05:52.512436+00:00",
+    "updated_at": "2026-04-10T20:26:00.400734+00:00",
     "region_text": "Bahah Region - Al Bahah : The entire governorate; Bahah Region - Al Aqiq : The entire governorate; Bahah Region - Al Qara : The entire governorate; Bahah Region - Al Mandaq : The entire governorate; Bahah Region - Baljurashi : The entire governorate; Bahah Region - Bani Hasan : The entire governorate",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 3,
+    "id": 5,
     "dedupe_key": "c72ad1af-b99b-400e-aaf4-25ca710b8ed7",
     "source_primary": "WMO",
     "title": "Warning, Heavy rain",
@@ -108,16 +186,16 @@
       "effective": "2026-04-11 03:00:00",
       "cap_path": "sa-ncm-en/2026/04/10/16/23/25-a85df2ced941749783cbaf465dfc602e.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-10 20:04:09"
+      "last_updated": "2026-04-10 20:24:08"
     },
-    "fetched_at": "2026-04-10T20:05:52.512436+00:00",
+    "fetched_at": "2026-04-10T20:26:00.400734+00:00",
     "published_at": "2026-04-10T16:23:25+00:00",
-    "updated_at": "2026-04-10T20:05:52.512436+00:00",
+    "updated_at": "2026-04-10T20:26:00.400734+00:00",
     "region_text": "Asir Region - Al Amoah : The entire governorate; Asir Region - Al Areen : The entire governorate; Asir Region - Bishah : The entire governorate; Asir Region - Tathlith : The entire governorate; Asir Region - Tarib : The entire governorate",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 4,
+    "id": 6,
     "dedupe_key": "bcf4665c-6fd7-4cde-8fae-bf93dd524559",
     "source_primary": "WMO",
     "title": "Warning, Heavy rain",
@@ -147,16 +225,16 @@
       "effective": "2026-04-10 21:00:00",
       "cap_path": "sa-ncm-en/2026/04/10/16/18/19-978f9279e6ff449ec1b61a22d378ff5b.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-10 20:04:09"
+      "last_updated": "2026-04-10 20:24:08"
     },
-    "fetched_at": "2026-04-10T20:05:52.512436+00:00",
+    "fetched_at": "2026-04-10T20:26:00.400734+00:00",
     "published_at": "2026-04-10T16:18:19+00:00",
-    "updated_at": "2026-04-10T20:05:52.512436+00:00",
+    "updated_at": "2026-04-10T20:26:00.400734+00:00",
     "region_text": "Jazan Region - Ad Darb : The entire governorate; Jazan Region - Baysh : The entire governorate",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 5,
+    "id": 7,
     "dedupe_key": "IN-1775830050525008_8",
     "source_primary": "WMO",
     "title": "Heat Wave is Likely to occur over 16 Mandals. Please follow SDMA guidelines.",
@@ -186,16 +264,16 @@
       "effective": "2026-04-10 14:35:00",
       "cap_path": "in-ndma-xx/2026/04/10/14/37/30-ec106870a957ebb9af9e30b7b07fbcdc.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-10 20:04:09"
+      "last_updated": "2026-04-10 20:24:08"
     },
-    "fetched_at": "2026-04-10T20:05:52.512436+00:00",
+    "fetched_at": "2026-04-10T20:26:00.400734+00:00",
     "published_at": "2026-04-10T14:37:30+00:00",
-    "updated_at": "2026-04-10T20:05:52.512436+00:00",
+    "updated_at": "2026-04-10T20:26:00.400734+00:00",
     "region_text": "16 Mandals",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 6,
+    "id": 8,
     "dedupe_key": "IN-1775829774654008_8",
     "source_primary": "WMO",
     "title": "Heat Wave is Likely to occur over 20 Mandals. Please follow SDMA guidelines.",
@@ -225,16 +303,16 @@
       "effective": "2026-04-10 14:30:00",
       "cap_path": "in-ndma-xx/2026/04/10/14/32/54-2d17dbf396b2fad134e7a221944f9461.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-10 20:04:09"
+      "last_updated": "2026-04-10 20:24:08"
     },
-    "fetched_at": "2026-04-10T20:05:52.512436+00:00",
+    "fetched_at": "2026-04-10T20:26:00.400734+00:00",
     "published_at": "2026-04-10T14:32:54+00:00",
-    "updated_at": "2026-04-10T20:05:52.512436+00:00",
+    "updated_at": "2026-04-10T20:26:00.400734+00:00",
     "region_text": "20 Mandals",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 7,
+    "id": 9,
     "dedupe_key": "IN-1775829255348008_8",
     "source_primary": "WMO",
     "title": "Heat Wave is Likely to occur over 15 Mandals. Please follow SDMA guidelines.",
@@ -264,16 +342,16 @@
       "effective": "2026-04-10 14:20:00",
       "cap_path": "in-ndma-xx/2026/04/10/14/24/15-6d1d6d0e450a595edafa69d581e701fa.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-10 20:04:09"
+      "last_updated": "2026-04-10 20:24:08"
     },
-    "fetched_at": "2026-04-10T20:05:52.512436+00:00",
+    "fetched_at": "2026-04-10T20:26:00.400734+00:00",
     "published_at": "2026-04-10T14:24:15+00:00",
-    "updated_at": "2026-04-10T20:05:52.512436+00:00",
+    "updated_at": "2026-04-10T20:26:00.400734+00:00",
     "region_text": "15 Mandals",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 8,
+    "id": 10,
     "dedupe_key": "IN-1775828683335008_8",
     "source_primary": "WMO",
     "title": "Heat Wave is Likely to occur over 15 Mandals. Please follow SDMA guidelines.",
@@ -303,11 +381,11 @@
       "effective": "2026-04-10 14:15:00",
       "cap_path": "in-ndma-xx/2026/04/10/14/14/43-430db6e07b6cc8f72d0da21c91a7bc83.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-10 20:04:09"
+      "last_updated": "2026-04-10 20:24:08"
     },
-    "fetched_at": "2026-04-10T20:05:52.512436+00:00",
+    "fetched_at": "2026-04-10T20:26:00.400734+00:00",
     "published_at": "2026-04-10T14:14:43+00:00",
-    "updated_at": "2026-04-10T20:05:52.512436+00:00",
+    "updated_at": "2026-04-10T20:26:00.400734+00:00",
     "region_text": "15 Mandals",
     "link_url": "https://severeweather.wmo.int/list.html"
   }

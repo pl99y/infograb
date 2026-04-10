@@ -7,15 +7,15 @@
   "raw_geomag_text": ":Product: Geomagnetic Forecast\n:Issued: 2026 Apr 09 2205 UTC\n# Prepared by the U.S. Dept. of Commerce, NOAA, Space Weather Prediction Center\n#\nNOAA Ap Index Forecast\nObserved Ap 08 Apr 007\nEstimated Ap 09 Apr 010\nPredicted Ap 10 Apr-12 Apr 024-032-017\n\nNOAA Geomagnetic Activity Probabilities 10 Apr-12 Apr\nActive                30/25/35\nMinor storm           50/35/10\nModerate storm        05/20/05\nStrong-Extreme storm  01/05/01\n\nNOAA Kp index forecast 10 Apr - 12 Apr\n             Apr 10    Apr 11    Apr 12\n00-03UT        2.33      5.33      4.33      \n03-06UT        5.00      4.00      3.67      \n06-09UT        4.33      4.00      2.67      \n09-12UT        3.67      3.33      2.33      \n12-15UT        2.67      3.67      3.00      \n15-18UT        2.67      4.00      2.33      \n18-21UT        3.67      4.67      3.00      \n21-00UT        4.33      4.67      3.33      \n",
   "source_name": "SWPC Forecast",
   "source_url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
-  "fetched_at": "2026-04-10T04:00:55.431873+00:00",
-  "created_at": "2026-04-10 04:01:02",
+  "fetched_at": "2026-04-10T12:00:51.189909+00:00",
+  "created_at": "2026-04-10 12:02:26",
   "panel": {
     "forecast_issued_at": "2026-04-10T00:30:00+00:00",
     "geomag_issued_at": "2026-04-09T22:05:00+00:00",
     "geomagnetic": {
       "observed_summary": "过去24小时内观测到的最大3小时Kp指数为2（低于NOAA等级水平）。",
-      "expected_summary": "2026年4月10日至4月12日期间，预计最大3小时Kp指数为5。",
-      "rationale": "受+CH高速太阳风流（HSS）影响，4月10日至11日期间可能会出现G1（轻微）风暴水平。",
+      "expected_summary": "预计2026年4月10日至4月12日期间，最大的3小时Kp指数为5。",
+      "rationale": "受+CH HSS影响，4月10日至11日期间可能出现G1（轻微）风暴水平。",
       "days": [
         "Apr 10",
         "Apr 11",
@@ -50,7 +50,7 @@
       }
     },
     "solar_radiation": {
-      "observed_summary": "根据NOAA GOES-18过去24小时的观测，太阳辐射低于S级风暴水平阈值。",
+      "observed_summary": "根据NOAA GOES-18过去24小时的观测，太阳辐射低于S级风暴阈值。",
       "days": [
         "Apr 10",
         "Apr 11",
@@ -61,7 +61,7 @@
         "1%",
         "1%"
       ],
-      "rationale": "预计不会出现S1（轻微）或更高级别的太阳辐射风暴。预计没有有利于产生辐射风暴的显著活动区活动。"
+      "rationale": "预计不会发生S1（轻微）或更高级别的太阳辐射风暴。预计没有有利于产生辐射风暴的显著活动区活动。"
     },
     "radio_blackout": {
       "observed_summary": "过去24小时内观测到达到R1水平的无线电中断。最大的一次发生在2026年4月9日0845 UTC。2026年4月10日至4月12日的无线电中断预报：4月10日 R1-R2 25%，R3或更高 1%；4月11日 R1-R2 5%，R3或更高 1%；4月12日 R1-R2 5%，R3或更高 1%。理由：4月10日有可能发生R1-R2（轻微至中度）无线电中断。",

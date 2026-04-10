@@ -1,6 +1,45 @@
 [
   {
     "id": 1,
+    "dedupe_key": "urn:oid:2.49.0.1.90.0.2026.4.10.9.16.15",
+    "source_primary": "WMO",
+    "title": "Tropical Cyclone Warning: Red alert",
+    "summary": "Western province",
+    "severity_level": "extreme",
+    "color_level": "extreme",
+    "event_type": "weather",
+    "location_text": "Western province",
+    "issued_at": "2026-04-10T09:16:15+00:00",
+    "effective_at": "2026-04-10T09:16:15+00:00",
+    "expires_at": "2026-04-10T20:00:00+00:00",
+    "source_url": "https://severeweather.wmo.int/list.html",
+    "detail_url": "https://severeweather.wmo.int/list.html",
+    "payload": {
+      "id": "urn:oid:2.49.0.1.90.0.2026.4.10.9.16.15",
+      "event": "Severe Cyclone (Maila Cat 2)",
+      "headline": "Tropical Cyclone Warning: Red alert",
+      "sent": "2026-04-10 09:16:15",
+      "expires": "2026-04-10 20:00:00",
+      "areaDesc": "Western province",
+      "mid": "139",
+      "ra": "5",
+      "s": 4,
+      "u": 3,
+      "c": 3,
+      "capURL": "sb-sims-en/2026/04/10/09/16/15-46b754fcd175d24c25d26db1a634f554.xml",
+      "effective": "",
+      "cap_path": "sb-sims-en/2026/04/10/09/16/15-46b754fcd175d24c25d26db1a634f554.xml",
+      "source_page": "https://severeweather.wmo.int/list.html",
+      "last_updated": "2026-04-10 09:44:07"
+    },
+    "fetched_at": "2026-04-10T09:45:56.961974+00:00",
+    "published_at": "2026-04-10T09:16:15+00:00",
+    "updated_at": "2026-04-10T09:45:56.961974+00:00",
+    "region_text": "Western province",
+    "link_url": "https://severeweather.wmo.int/list.html"
+  },
+  {
+    "id": 2,
     "dedupe_key": "52232741600000_20260410145215",
     "source_primary": "WMO",
     "title": "Ceheng County Meteorological Observatory issues a red alert for high temperatures [Level I/Particularly Severe]",
@@ -30,11 +69,11 @@
       "effective": "2026-04-10 06:52:15",
       "cap_path": "cn-cma-xx/2026/04/10/06/52/15-8fb53487122b34a06875fe42aac0771b.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-10 09:04:08"
+      "last_updated": "2026-04-10 09:44:07"
     },
-    "fetched_at": "2026-04-10T09:25:50.100463+00:00",
+    "fetched_at": "2026-04-10T09:45:56.961974+00:00",
     "published_at": "2026-04-10T06:52:15+00:00",
-    "updated_at": "2026-04-10T09:25:50.100463+00:00",
+    "updated_at": "2026-04-10T09:45:56.961974+00:00",
     "region_text": "Ceheng County",
     "link_url": "https://severeweather.wmo.int/list.html"
   }

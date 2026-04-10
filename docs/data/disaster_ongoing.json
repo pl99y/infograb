@@ -1,6 +1,73 @@
 [
   {
     "id": 1,
+    "group_key": "volcano|ce3ef846902284b9573e39225eeb775619355b93",
+    "event_type": "volcano",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Fournaise Pitondela",
+    "summary": "VRP 121.48 MW · VIIRS375 / VIIRS · 3.75 km",
+    "started_at": "2026-04-10T09:18:00+00:00",
+    "updated_at": "2026-04-10T09:18:00+00:00",
+    "location_text": "Fournaise Pitondela",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "VIIRS375 / VIIRS",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=233020",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=233020",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "233020",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=233020",
+      "vrp_mw": 121.48,
+      "distance_km": 3.75,
+      "sensor": "VIIRS375",
+      "row_class": [
+        "high",
+        "moderate"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "VIIRS375",
+        "VIIRS"
+      ],
+      "reports": [
+        {
+          "volcano_id": "233020",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=233020",
+          "vrp_mw": 121.48,
+          "distance_km": 3.75,
+          "sensor": "VIIRS375",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        },
+        {
+          "volcano_id": "233020",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=233020",
+          "vrp_mw": 51.98,
+          "distance_km": 3.75,
+          "sensor": "VIIRS",
+          "row_class": [
+            "moderate"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 2
+    },
+    "member_event_ids": [
+      3
+    ],
+    "occurred_at": "2026-04-10T09:18:00+00:00",
+    "published_at": "2026-04-10T09:18:00+00:00",
+    "fetched_at": "2026-04-10T09:18:00+00:00"
+  },
+  {
+    "id": 2,
     "group_key": "volcano|a21611874eff4e44119be1a25a9e04ac1df9a262",
     "event_type": "volcano",
     "severity_level": "high",
@@ -47,14 +114,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      3
+      4
     ],
     "occurred_at": "2026-04-10T07:25:00+00:00",
     "published_at": "2026-04-10T07:25:00+00:00",
     "fetched_at": "2026-04-10T07:25:00+00:00"
   },
   {
-    "id": 3,
+    "id": 4,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|western_north_pacific_area|tc_04w|f7e9bcf1e1f7bbfa",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -109,7 +176,7 @@
     "fetched_at": "2026-04-10T06:00:00+00:00"
   },
   {
-    "id": 2,
+    "id": 3,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|tc_30p|8fdaeadfa66af157",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -164,7 +231,7 @@
     "fetched_at": "2026-04-10T06:00:00+00:00"
   },
   {
-    "id": 4,
+    "id": 5,
     "group_key": "volcano|0ddec632377255bab1aad9e006fa20f1be8869f3",
     "event_type": "volcano",
     "severity_level": "high",
@@ -223,14 +290,14 @@
       "merged_count": 2
     },
     "member_event_ids": [
-      4
+      5
     ],
     "occurred_at": "2026-04-10T00:00:00+00:00",
     "published_at": "2026-04-10T00:00:00+00:00",
     "fetched_at": "2026-04-10T00:00:00+00:00"
   },
   {
-    "id": 5,
+    "id": 6,
     "group_key": "volcano|fa9d1d62fe013f9f5bea8783b6956a67acae83e4",
     "event_type": "volcano",
     "severity_level": "very_high",
@@ -277,77 +344,11 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      5
+      6
     ],
     "occurred_at": "2026-04-09T23:40:00+00:00",
     "published_at": "2026-04-09T23:40:00+00:00",
     "fetched_at": "2026-04-09T23:40:00+00:00"
-  },
-  {
-    "id": 6,
-    "group_key": "volcano|0ae2a38ce8cbab56f68e13850625a02e168fd3da",
-    "event_type": "volcano",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "Fournaise Pitondela",
-    "summary": "VRP 677.93 MW · VIIRS375 / VIIRS · 8.08 km",
-    "started_at": "2026-04-09T22:24:00+00:00",
-    "updated_at": "2026-04-09T22:24:00+00:00",
-    "location_text": "Fournaise Pitondela",
-    "lat": null,
-    "lon": null,
-    "source_primary": "MIROVA",
-    "source_secondary": "VIIRS375 / VIIRS",
-    "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=233020",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=233020",
-    "country_code": null,
-    "payload": {
-      "volcano_id": "233020",
-      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=233020",
-      "vrp_mw": 677.93,
-      "distance_km": 8.08,
-      "sensor": "VIIRS375",
-      "row_class": [
-        "high"
-      ],
-      "source_page": "https://www.mirovaweb.it/NRT/",
-      "sensors": [
-        "VIIRS375",
-        "VIIRS"
-      ],
-      "reports": [
-        {
-          "volcano_id": "233020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=233020",
-          "vrp_mw": 677.93,
-          "distance_km": 8.08,
-          "sensor": "VIIRS375",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        },
-        {
-          "volcano_id": "233020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=233020",
-          "vrp_mw": 625.41,
-          "distance_km": 8.75,
-          "sensor": "VIIRS",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        }
-      ],
-      "merged_count": 2
-    },
-    "member_event_ids": [
-      6
-    ],
-    "occurred_at": "2026-04-09T22:24:00+00:00",
-    "published_at": "2026-04-09T22:24:00+00:00",
-    "fetched_at": "2026-04-09T22:24:00+00:00"
   },
   {
     "id": 7,

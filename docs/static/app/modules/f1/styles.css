@@ -80,6 +80,13 @@
   min-width: 0;
 }
 
+.f1-live-updated {
+  font-size: 10px;
+  color: var(--text-muted);
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
 .f1-live-status-inline {
   display: inline-flex;
   align-items: center;
@@ -362,11 +369,4 @@
   .f1-news-time {
     white-space: normal;
   }
-}
-
-.f1-live-updated {
-  font-size: 10px;
-  color: var(--text-muted);
-  line-height: 1.25;
-  white-space: nowrap;
 }

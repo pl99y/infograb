@@ -1,15 +1,62 @@
 {
-  "updated_at": "2026-04-10T02:27:10.725142+00:00",
+  "updated_at": "2026-04-10T02:47:49.175150+00:00",
   "window_hours": 12,
-  "count": 50,
+  "count": 51,
   "source_counts": {
     "zaobao": 27,
-    "mingpao": 8,
-    "hk01": 15
+    "hk01": 15,
+    "mingpao": 9
   },
   "items": [
     {
       "id": 1,
+      "source_key": "zaobao",
+      "source_name": "联合早报",
+      "channel": "中国",
+      "topic": null,
+      "title": "特斯拉中国否认将投产全新小型SUV",
+      "url": "https://www.zaobao.com.sg/news/china/story20260410-8871171",
+      "published_at": "2026-04-10T02:46:00+00:00",
+      "published_text": "2026-04-10 10:46",
+      "list_url": "https://www.zaobao.com.sg/news/china",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
+      "author_names": []
+    },
+    {
+      "id": 2,
+      "source_key": "zaobao",
+      "source_name": "联合早报",
+      "channel": "中国",
+      "topic": null,
+      "title": "中国头部券商华泰证券准备在日本开展证券业务",
+      "url": "https://www.zaobao.com.sg/news/china/story20260410-8871163",
+      "published_at": "2026-04-10T02:43:00+00:00",
+      "published_text": "2026-04-10 10:43",
+      "list_url": "https://www.zaobao.com.sg/news/china",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
+      "author_names": []
+    },
+    {
+      "id": 3,
+      "source_key": "hk01",
+      "source_name": "香港01",
+      "channel": "即時國際",
+      "topic": null,
+      "title": "美國2025年第四季度經濟增速下修至0.5%",
+      "url": "https://www.hk01.com/即時國際/60338861/美國2025年第四季度經濟增速下修至0-5",
+      "published_at": "2026-04-10T02:32:08+00:00",
+      "published_text": "1775788328",
+      "list_url": "https://web-data.api.hk01.com/v2/feed/category/19?bucketId=00000&limit=20",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
+      "author_names": [
+        "聯合早報"
+      ]
+    },
+    {
+      "id": 4,
       "source_key": "zaobao",
       "source_name": "联合早报",
       "channel": "中国",
@@ -19,12 +66,27 @@
       "published_at": "2026-04-10T02:25:00+00:00",
       "published_text": "2026-04-10 10:25",
       "list_url": "https://www.zaobao.com.sg/news/china",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": []
     },
     {
-      "id": 2,
+      "id": 5,
+      "source_key": "mingpao",
+      "source_name": "明报",
+      "channel": "国际",
+      "topic": "美以襲伊朗",
+      "title": "以黎下周於華盛頓舉行停火談判",
+      "url": "https://news.mingpao.com/ins/%e5%9c%8b%e9%9a%9b/article/20260410/s00005/1775786458389/%e4%bb%a5%e9%bb%8e%e4%b8%8b%e5%91%a8%e6%96%bc%e8%8f%af%e7%9b%9b%e9%a0%93%e8%88%89%e8%a1%8c%e5%81%9c%e7%81%ab%e8%ab%87%e5%88%a4",
+      "published_at": "2026-04-10T02:12:30+00:00",
+      "published_text": "Fri, 10 Apr 2026 02:12:30 GMT",
+      "list_url": "https://news.mingpao.com/rss/ins/s00005.xml",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
+      "author_names": []
+    },
+    {
+      "id": 6,
       "source_key": "zaobao",
       "source_name": "联合早报",
       "channel": "国际",
@@ -34,12 +96,12 @@
       "published_at": "2026-04-10T02:12:00+00:00",
       "published_text": "2026-04-10 10:12",
       "list_url": "https://www.zaobao.com.sg/news/world",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": []
     },
     {
-      "id": 3,
+      "id": 7,
       "source_key": "zaobao",
       "source_name": "联合早报",
       "channel": "中国",
@@ -49,12 +111,27 @@
       "published_at": "2026-04-10T02:02:00+00:00",
       "published_text": "2026-04-10 10:02",
       "list_url": "https://www.zaobao.com.sg/news/china",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": []
     },
     {
-      "id": 4,
+      "id": 8,
+      "source_key": "mingpao",
+      "source_name": "明报",
+      "channel": "港闻",
+      "topic": "刑事毁壞",
+      "title": "柴灣夾公仔舖被淋紅油",
+      "url": "https://news.mingpao.com/ins/%e6%b8%af%e8%81%9e/article/20260410/s00001/1775786207018/%e6%9f%b4%e7%81%a3%e5%a4%be%e5%85%ac%e4%bb%94%e8%88%96%e8%a2%ab%e6%b7%8b%e7%b4%85%e6%b2%b9",
+      "published_at": "2026-04-10T02:00:40+00:00",
+      "published_text": "Fri, 10 Apr 2026 02:00:40 GMT",
+      "list_url": "https://news.mingpao.com/rss/ins/s00001.xml",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
+      "author_names": []
+    },
+    {
+      "id": 9,
       "source_key": "zaobao",
       "source_name": "联合早报",
       "channel": "中国",
@@ -64,12 +141,12 @@
       "published_at": "2026-04-10T01:58:00+00:00",
       "published_text": "2026-04-10 09:58",
       "list_url": "https://www.zaobao.com.sg/news/china",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": []
     },
     {
-      "id": 5,
+      "id": 10,
       "source_key": "mingpao",
       "source_name": "明报",
       "channel": "国际",
@@ -79,12 +156,12 @@
       "published_at": "2026-04-10T01:51:02+00:00",
       "published_text": "Fri, 10 Apr 2026 01:51:02 GMT",
       "list_url": "https://news.mingpao.com/rss/ins/s00005.xml",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": []
     },
     {
-      "id": 6,
+      "id": 11,
       "source_key": "mingpao",
       "source_name": "明报",
       "channel": "港闻",
@@ -94,12 +171,12 @@
       "published_at": "2026-04-10T01:48:15+00:00",
       "published_text": "Fri, 10 Apr 2026 01:48:15 GMT",
       "list_url": "https://news.mingpao.com/rss/ins/s00001.xml",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": []
     },
     {
-      "id": 7,
+      "id": 12,
       "source_key": "hk01",
       "source_name": "香港01",
       "channel": "即時國際",
@@ -109,14 +186,14 @@
       "published_at": "2026-04-10T01:38:14+00:00",
       "published_text": "1775785094",
       "list_url": "https://web-data.api.hk01.com/v2/feed/category/19?bucketId=00000&limit=20",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": [
         "聯合早報"
       ]
     },
     {
-      "id": 8,
+      "id": 13,
       "source_key": "zaobao",
       "source_name": "联合早报",
       "channel": "国际",
@@ -126,12 +203,12 @@
       "published_at": "2026-04-10T01:26:00+00:00",
       "published_text": "2026-04-10 09:26",
       "list_url": "https://www.zaobao.com.sg/news/world",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": []
     },
     {
-      "id": 10,
+      "id": 15,
       "source_key": "zaobao",
       "source_name": "联合早报",
       "channel": "国际",
@@ -141,12 +218,12 @@
       "published_at": "2026-04-10T01:09:00+00:00",
       "published_text": "2026-04-10 09:09",
       "list_url": "https://www.zaobao.com.sg/news/world",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": []
     },
     {
-      "id": 9,
+      "id": 14,
       "source_key": "zaobao",
       "source_name": "联合早报",
       "channel": "中国",
@@ -156,12 +233,12 @@
       "published_at": "2026-04-10T01:09:00+00:00",
       "published_text": "2026-04-10 09:09",
       "list_url": "https://www.zaobao.com.sg/news/china",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": []
     },
     {
-      "id": 11,
+      "id": 16,
       "source_key": "zaobao",
       "source_name": "联合早报",
       "channel": "中国",
@@ -171,12 +248,12 @@
       "published_at": "2026-04-10T01:07:00+00:00",
       "published_text": "2026-04-10 09:07",
       "list_url": "https://www.zaobao.com.sg/news/china",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": []
     },
     {
-      "id": 12,
+      "id": 17,
       "source_key": "zaobao",
       "source_name": "联合早报",
       "channel": "国际",
@@ -186,12 +263,12 @@
       "published_at": "2026-04-10T00:52:00+00:00",
       "published_text": "2026-04-10 08:52",
       "list_url": "https://www.zaobao.com.sg/news/world",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": []
     },
     {
-      "id": 13,
+      "id": 18,
       "source_key": "hk01",
       "source_name": "香港01",
       "channel": "即時國際",
@@ -201,8 +278,8 @@
       "published_at": "2026-04-10T00:50:24+00:00",
       "published_text": "1775782224",
       "list_url": "https://web-data.api.hk01.com/v2/feed/category/19?bucketId=00000&limit=20",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": [
         "成依華",
         "張涵語",
@@ -216,7 +293,7 @@
       ]
     },
     {
-      "id": 14,
+      "id": 19,
       "source_key": "zaobao",
       "source_name": "联合早报",
       "channel": "中国",
@@ -226,12 +303,12 @@
       "published_at": "2026-04-10T00:26:00+00:00",
       "published_text": "2026-04-10 08:26",
       "list_url": "https://www.zaobao.com.sg/news/china",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": []
     },
     {
-      "id": 15,
+      "id": 20,
       "source_key": "zaobao",
       "source_name": "联合早报",
       "channel": "中国",
@@ -241,12 +318,12 @@
       "published_at": "2026-04-10T00:24:00+00:00",
       "published_text": "2026-04-10 08:24",
       "list_url": "https://www.zaobao.com.sg/news/china",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": []
     },
     {
-      "id": 16,
+      "id": 21,
       "source_key": "zaobao",
       "source_name": "联合早报",
       "channel": "国际",
@@ -256,12 +333,12 @@
       "published_at": "2026-04-10T00:16:00+00:00",
       "published_text": "2026-04-10 08:16",
       "list_url": "https://www.zaobao.com.sg/news/world",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": []
     },
     {
-      "id": 17,
+      "id": 22,
       "source_key": "zaobao",
       "source_name": "联合早报",
       "channel": "国际",
@@ -271,12 +348,12 @@
       "published_at": "2026-04-10T00:03:00+00:00",
       "published_text": "2026-04-10 08:03",
       "list_url": "https://www.zaobao.com.sg/news/world",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": []
     },
     {
-      "id": 18,
+      "id": 23,
       "source_key": "hk01",
       "source_name": "香港01",
       "channel": "即時國際",
@@ -286,14 +363,14 @@
       "published_at": "2026-04-10T00:00:03+00:00",
       "published_text": "1775779203",
       "list_url": "https://web-data.api.hk01.com/v2/feed/category/19?bucketId=00000&limit=20",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": [
         "聯合新聞網"
       ]
     },
     {
-      "id": 19,
+      "id": 24,
       "source_key": "hk01",
       "source_name": "香港01",
       "channel": "即時國際",
@@ -303,14 +380,14 @@
       "published_at": "2026-04-09T23:29:23+00:00",
       "published_text": "1775777363",
       "list_url": "https://web-data.api.hk01.com/v2/feed/category/19?bucketId=00000&limit=20",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": [
         "洪怡霖"
       ]
     },
     {
-      "id": 20,
+      "id": 25,
       "source_key": "zaobao",
       "source_name": "联合早报",
       "channel": "国际",
@@ -320,12 +397,12 @@
       "published_at": "2026-04-09T23:20:00+00:00",
       "published_text": "2026-04-10 07:20",
       "list_url": "https://www.zaobao.com.sg/news/world",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": []
     },
     {
-      "id": 21,
+      "id": 26,
       "source_key": "zaobao",
       "source_name": "联合早报",
       "channel": "国际",
@@ -335,12 +412,12 @@
       "published_at": "2026-04-09T23:14:00+00:00",
       "published_text": "2026-04-10 07:14",
       "list_url": "https://www.zaobao.com.sg/news/world",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": []
     },
     {
-      "id": 22,
+      "id": 27,
       "source_key": "hk01",
       "source_name": "香港01",
       "channel": "即時國際",
@@ -350,14 +427,14 @@
       "published_at": "2026-04-09T23:08:46+00:00",
       "published_text": "1775776126",
       "list_url": "https://web-data.api.hk01.com/v2/feed/category/19?bucketId=00000&limit=20",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": [
         "洪怡霖"
       ]
     },
     {
-      "id": 23,
+      "id": 28,
       "source_key": "zaobao",
       "source_name": "联合早报",
       "channel": "国际",
@@ -367,12 +444,12 @@
       "published_at": "2026-04-09T22:55:00+00:00",
       "published_text": "2026-04-10 06:55",
       "list_url": "https://www.zaobao.com.sg/news/world",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": []
     },
     {
-      "id": 24,
+      "id": 29,
       "source_key": "zaobao",
       "source_name": "联合早报",
       "channel": "中国",
@@ -382,12 +459,12 @@
       "published_at": "2026-04-09T21:00:00+00:00",
       "published_text": "2026-04-10 05:00",
       "list_url": "https://www.zaobao.com.sg/news/china",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": []
     },
     {
-      "id": 25,
+      "id": 30,
       "source_key": "hk01",
       "source_name": "香港01",
       "channel": "即時國際",
@@ -397,14 +474,14 @@
       "published_at": "2026-04-09T20:22:37+00:00",
       "published_text": "1775766157",
       "list_url": "https://web-data.api.hk01.com/v2/feed/category/19?bucketId=00000&limit=20",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": [
         "蕭通"
       ]
     },
     {
-      "id": 26,
+      "id": 31,
       "source_key": "hk01",
       "source_name": "香港01",
       "channel": "即時國際",
@@ -414,14 +491,14 @@
       "published_at": "2026-04-09T19:42:08+00:00",
       "published_text": "1775763728",
       "list_url": "https://web-data.api.hk01.com/v2/feed/category/19?bucketId=00000&limit=20",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": [
         "蕭通"
       ]
     },
     {
-      "id": 27,
+      "id": 32,
       "source_key": "hk01",
       "source_name": "香港01",
       "channel": "即時國際",
@@ -431,14 +508,14 @@
       "published_at": "2026-04-09T19:32:23+00:00",
       "published_text": "1775763143",
       "list_url": "https://web-data.api.hk01.com/v2/feed/category/19?bucketId=00000&limit=20",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": [
         "洪怡霖"
       ]
     },
     {
-      "id": 28,
+      "id": 33,
       "source_key": "hk01",
       "source_name": "香港01",
       "channel": "即時國際",
@@ -448,14 +525,14 @@
       "published_at": "2026-04-09T19:05:55+00:00",
       "published_text": "1775761555",
       "list_url": "https://web-data.api.hk01.com/v2/feed/category/19?bucketId=00000&limit=20",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": [
         "洪怡霖"
       ]
     },
     {
-      "id": 29,
+      "id": 34,
       "source_key": "hk01",
       "source_name": "香港01",
       "channel": "即時國際",
@@ -465,14 +542,14 @@
       "published_at": "2026-04-09T18:52:27+00:00",
       "published_text": "1775760747",
       "list_url": "https://web-data.api.hk01.com/v2/feed/category/19?bucketId=00000&limit=20",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": [
         "洪怡霖"
       ]
     },
     {
-      "id": 30,
+      "id": 35,
       "source_key": "hk01",
       "source_name": "香港01",
       "channel": "即時國際",
@@ -482,14 +559,14 @@
       "published_at": "2026-04-09T18:41:45+00:00",
       "published_text": "1775760105",
       "list_url": "https://web-data.api.hk01.com/v2/feed/category/19?bucketId=00000&limit=20",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": [
         "洪怡霖"
       ]
     },
     {
-      "id": 31,
+      "id": 36,
       "source_key": "hk01",
       "source_name": "香港01",
       "channel": "即時國際",
@@ -499,14 +576,14 @@
       "published_at": "2026-04-09T18:29:27+00:00",
       "published_text": "1775759367",
       "list_url": "https://web-data.api.hk01.com/v2/feed/category/19?bucketId=00000&limit=20",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": [
         "蕭通"
       ]
     },
     {
-      "id": 32,
+      "id": 37,
       "source_key": "mingpao",
       "source_name": "明报",
       "channel": "两岸国际",
@@ -516,12 +593,12 @@
       "published_at": "2026-04-09T16:06:07+00:00",
       "published_text": "Thu, 09 Apr 2026 16:06:07 GMT",
       "list_url": "https://news.mingpao.com/rss/ins/s00004.xml",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": []
     },
     {
-      "id": 33,
+      "id": 38,
       "source_key": "mingpao",
       "source_name": "明报",
       "channel": "两岸国际",
@@ -531,12 +608,12 @@
       "published_at": "2026-04-09T16:00:00+00:00",
       "published_text": "Thu, 09 Apr 2026 16:00:00 GMT",
       "list_url": "https://news.mingpao.com/rss/ins/s00004.xml",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": []
     },
     {
-      "id": 34,
+      "id": 39,
       "source_key": "zaobao",
       "source_name": "联合早报",
       "channel": "国际",
@@ -546,12 +623,12 @@
       "published_at": "2026-04-09T15:56:00+00:00",
       "published_text": "2026-04-09 23:56",
       "list_url": "https://www.zaobao.com.sg/news/world",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": []
     },
     {
-      "id": 35,
+      "id": 40,
       "source_key": "zaobao",
       "source_name": "联合早报",
       "channel": "国际",
@@ -561,12 +638,12 @@
       "published_at": "2026-04-09T15:52:00+00:00",
       "published_text": "2026-04-09 23:52",
       "list_url": "https://www.zaobao.com.sg/news/world",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": []
     },
     {
-      "id": 36,
+      "id": 41,
       "source_key": "hk01",
       "source_name": "香港01",
       "channel": "即時國際",
@@ -576,14 +653,14 @@
       "published_at": "2026-04-09T15:45:57+00:00",
       "published_text": "1775749557",
       "list_url": "https://web-data.api.hk01.com/v2/feed/category/19?bucketId=00000&limit=20",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": [
         "聯合早報"
       ]
     },
     {
-      "id": 37,
+      "id": 42,
       "source_key": "zaobao",
       "source_name": "联合早报",
       "channel": "中国",
@@ -593,12 +670,12 @@
       "published_at": "2026-04-09T15:44:00+00:00",
       "published_text": "2026-04-09 23:44",
       "list_url": "https://www.zaobao.com.sg/news/china",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": []
     },
     {
-      "id": 38,
+      "id": 43,
       "source_key": "zaobao",
       "source_name": "联合早报",
       "channel": "国际",
@@ -608,12 +685,12 @@
       "published_at": "2026-04-09T15:42:00+00:00",
       "published_text": "2026-04-09 23:42",
       "list_url": "https://www.zaobao.com.sg/news/world",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": []
     },
     {
-      "id": 39,
+      "id": 44,
       "source_key": "mingpao",
       "source_name": "明报",
       "channel": "港闻",
@@ -623,12 +700,12 @@
       "published_at": "2026-04-09T15:41:24+00:00",
       "published_text": "Thu, 09 Apr 2026 15:41:24 GMT",
       "list_url": "https://news.mingpao.com/rss/ins/s00001.xml",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": []
     },
     {
-      "id": 40,
+      "id": 45,
       "source_key": "zaobao",
       "source_name": "联合早报",
       "channel": "中国",
@@ -638,12 +715,12 @@
       "published_at": "2026-04-09T15:40:00+00:00",
       "published_text": "2026-04-09 23:40",
       "list_url": "https://www.zaobao.com.sg/news/china",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": []
     },
     {
-      "id": 41,
+      "id": 46,
       "source_key": "mingpao",
       "source_name": "明报",
       "channel": "港闻",
@@ -653,12 +730,12 @@
       "published_at": "2026-04-09T15:36:48+00:00",
       "published_text": "Thu, 09 Apr 2026 15:36:48 GMT",
       "list_url": "https://news.mingpao.com/rss/ins/s00001.xml",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": []
     },
     {
-      "id": 42,
+      "id": 47,
       "source_key": "zaobao",
       "source_name": "联合早报",
       "channel": "国际",
@@ -668,12 +745,12 @@
       "published_at": "2026-04-09T15:29:00+00:00",
       "published_text": "2026-04-09 23:29",
       "list_url": "https://www.zaobao.com.sg/news/world",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": []
     },
     {
-      "id": 43,
+      "id": 48,
       "source_key": "zaobao",
       "source_name": "联合早报",
       "channel": "国际",
@@ -683,12 +760,12 @@
       "published_at": "2026-04-09T15:17:00+00:00",
       "published_text": "2026-04-09 23:17",
       "list_url": "https://www.zaobao.com.sg/news/world",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": []
     },
     {
-      "id": 44,
+      "id": 49,
       "source_key": "mingpao",
       "source_name": "明报",
       "channel": "港闻",
@@ -698,12 +775,12 @@
       "published_at": "2026-04-09T15:14:09+00:00",
       "published_text": "Thu, 09 Apr 2026 15:14:09 GMT",
       "list_url": "https://news.mingpao.com/rss/ins/s00001.xml",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": []
     },
     {
-      "id": 45,
+      "id": 50,
       "source_key": "zaobao",
       "source_name": "联合早报",
       "channel": "国际",
@@ -713,12 +790,12 @@
       "published_at": "2026-04-09T15:14:00+00:00",
       "published_text": "2026-04-09 23:14",
       "list_url": "https://www.zaobao.com.sg/news/world",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": []
     },
     {
-      "id": 46,
+      "id": 51,
       "source_key": "hk01",
       "source_name": "香港01",
       "channel": "即時國際",
@@ -728,74 +805,12 @@
       "published_at": "2026-04-09T15:01:31+00:00",
       "published_text": "1775746891",
       "list_url": "https://web-data.api.hk01.com/v2/feed/category/19?bucketId=00000&limit=20",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
+      "fetched_at": "2026-04-10T02:47:49.175150+00:00",
+      "created_at": "2026-04-10 02:48:15",
       "author_names": [
         "韓學敏",
         "成依華"
       ]
-    },
-    {
-      "id": 47,
-      "source_key": "mingpao",
-      "source_name": "明报",
-      "channel": "港闻",
-      "topic": "墮樓",
-      "title": "旺角男子疑處理晾曬衣物 失足墮樓受傷",
-      "url": "https://news.mingpao.com/ins/%e6%b8%af%e8%81%9e/article/20260409/s00001/1775747412455/%e6%97%ba%e8%a7%92%e7%94%b7%e5%ad%90%e7%96%91%e8%99%95%e7%90%86%e6%99%be%e6%9b%ac%e8%a1%a3%e7%89%a9-%e5%a4%b1%e8%b6%b3%e5%a2%ae%e6%a8%93%e5%8f%97%e5%82%b7",
-      "published_at": "2026-04-09T14:46:44+00:00",
-      "published_text": "Thu, 09 Apr 2026 14:46:44 GMT",
-      "list_url": "https://news.mingpao.com/rss/ins/s00001.xml",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
-      "author_names": []
-    },
-    {
-      "id": 48,
-      "source_key": "zaobao",
-      "source_name": "联合早报",
-      "channel": "国际",
-      "topic": null,
-      "title": "法国新国家健康计划致力于减少久坐",
-      "url": "https://www.zaobao.com.sg/news/world/story20260409-8869709",
-      "published_at": "2026-04-09T14:46:00+00:00",
-      "published_text": "2026-04-09 22:46",
-      "list_url": "https://www.zaobao.com.sg/news/world",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
-      "author_names": []
-    },
-    {
-      "id": 49,
-      "source_key": "hk01",
-      "source_name": "香港01",
-      "channel": "即時國際",
-      "topic": "即時中國 / 財經快訊",
-      "title": "美國擬禁中國實驗室測試輸美電子產品 北京：阻礙正常經貿往來",
-      "url": "https://www.hk01.com/即時國際/60338766/美國擬禁中國實驗室測試輸美電子產品-北京-阻礙正常經貿往來",
-      "published_at": "2026-04-09T14:30:42+00:00",
-      "published_text": "1775745042",
-      "list_url": "https://web-data.api.hk01.com/v2/feed/category/19?bucketId=00000&limit=20",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
-      "author_names": [
-        "成依華"
-      ]
-    },
-    {
-      "id": 50,
-      "source_key": "zaobao",
-      "source_name": "联合早报",
-      "channel": "国际",
-      "topic": null,
-      "title": "伊朗副外长：伊朗代表团将前往伊斯兰堡参加谈判",
-      "url": "https://www.zaobao.com.sg/news/world/story20260409-8869666",
-      "published_at": "2026-04-09T14:30:00+00:00",
-      "published_text": "2026-04-09 22:30",
-      "list_url": "https://www.zaobao.com.sg/news/world",
-      "fetched_at": "2026-04-10T02:27:10.725142+00:00",
-      "created_at": "2026-04-10 02:27:38",
-      "author_names": []
     }
   ]
 }

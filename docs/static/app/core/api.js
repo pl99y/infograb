@@ -4,7 +4,15 @@ export function createApi() {
     if (!response.ok) {
       throw new Error(`HTTP ${response.status}: ${path}`);
     }
-    return response.json();
+
+    const data = await response.json();
+    return {
+      data,
+      meta: {
+        lastModified: response.headers.get("last-modified") || "",
+        etag: response.headers.get("etag") || "",
+      },
+    };
   }
 
   function mapGet(url) {
@@ -29,6 +37,10 @@ export function createApi() {
 
   return {
     async get(url) {
+      const { data } = await fetchJson(mapGet(url));
+      return data;
+    },
+    async getWithMeta(url) {
       return fetchJson(mapGet(url));
     },
     async post(url) {

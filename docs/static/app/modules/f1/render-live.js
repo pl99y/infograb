@@ -77,7 +77,7 @@ export function getF1GrandPrixName(payload) {
   return cleanGrandPrixName(roundName);
 }
 
-export function getF1LiveStatusMarkup(payload) {
+export function getF1LiveStatusMarkup(payload, options = {}) {
   if (!payload || payload.error) {
     return `<span class="f1-refresh-error">F1 数据不可用</span>`;
   }
@@ -85,11 +85,14 @@ export function getF1LiveStatusMarkup(payload) {
   const gpName = getF1GrandPrixName(payload);
   const statusClass = inferStatusClass(payload);
   const statusLabel = getF1StatusLabel(payload);
+  const updatedText = String(options?.updatedText || "").trim();
+  const updatedTitle = String(options?.updatedTitle || "").trim();
 
   return `
     <span class="f1-live-status-inline">
       <strong class="f1-live-status-name">${esc(gpName)}</strong>
       <span class="f1-live-status-pill f1-live-status-pill-${esc(statusClass)}">${esc(statusLabel)}</span>
+      ${updatedText ? `<span class="f1-live-updated"${updatedTitle ? ` title="${esc(updatedTitle)}"` : ""}>${esc(updatedText)}</span>` : ""}
     </span>
   `;
 }

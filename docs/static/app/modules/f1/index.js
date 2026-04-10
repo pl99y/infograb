@@ -94,30 +94,8 @@ function buildUpdatedLabel(value) {
   return `已更新 ${formatRelativeLocalTime(value)}`;
 }
 
-function resolveLiveUpdatedAt(payload, meta) {
-  return (
-    meta?.lastModified ||
-    payload?.updated_at ||
-    payload?.fetched_at ||
-    payload?.generated_at ||
-    payload?.session?.updated_at ||
-    payload?.session?.fetched_at ||
-    null
-  );
-}
-
-function resolveNewsUpdatedAt(payload, meta) {
-  if (meta?.lastModified) return meta.lastModified;
-  if (!Array.isArray(payload) || payload.length === 0) return null;
-
-  const candidates = payload
-    .map((item) => item?.fetched_at || item?.updated_at || item?.published_at || null)
-    .filter(Boolean)
-    .map((value) => ({ raw: value, ts: new Date(value).getTime() }))
-    .filter((item) => Number.isFinite(item.ts))
-    .sort((a, b) => b.ts - a.ts);
-
-  return candidates[0]?.raw || null;
+function resolveJsonUpdatedAt(meta) {
+  return meta?.lastModified || null;
 }
 
 function applyNewsStatus(statusEl, updatedAt, isError = false) {
@@ -158,20 +136,6 @@ function wireTabs(host) {
 export function createF1Module(ctx) {
   const section = findSectionRoot();
 
-  function updateHeader() {
-    if (!section) return;
-    const host = ensureHost(section);
-    const liveStatusEl = host.querySelector("[data-f1-live-status]");
-    const newsStatusEl = host.querySelector("[data-f1-news-status]");
-
-    if (ctx.state.f1LiveLoaded) {
-      applyLiveStatus(liveStatusEl, ctx.state.f1Live, ctx.state.lastF1LiveFetchedAt || null);
-    }
-    if (ctx.state.f1NewsLoaded) {
-      applyNewsStatus(newsStatusEl, ctx.state.lastF1NewsFetchedAt || null, false);
-    }
-  }
-
   async function refreshLive(host, doBackendRefresh = false) {
     const livePanel = host.querySelector("[data-f1-live-panel]");
     const statusEl = host.querySelector("[data-f1-live-status]");
@@ -186,7 +150,7 @@ export function createF1Module(ctx) {
       : Promise.resolve({ data: await ctx.api.get("/api/f1/live"), meta: {} });
 
     const { data: payload, meta } = await loader;
-    const updatedAt = resolveLiveUpdatedAt(payload, meta);
+    const updatedAt = resolveJsonUpdatedAt(meta);
 
     renderF1Live(livePanel, payload);
     ctx.state.lastF1LiveFetchedAt = updatedAt;
@@ -211,7 +175,7 @@ export function createF1Module(ctx) {
       : Promise.resolve({ data: await ctx.api.get("/api/f1/news?limit=20"), meta: {} });
 
     const { data: payload, meta } = await loader;
-    const updatedAt = resolveNewsUpdatedAt(payload, meta);
+    const updatedAt = resolveJsonUpdatedAt(meta);
 
     renderF1News(ctx, newsPanel, payload);
     ctx.state.lastF1NewsFetchedAt = updatedAt;
@@ -229,8 +193,6 @@ export function createF1Module(ctx) {
       await refreshLive(host, false);
       await refreshNews(host, false);
     },
-
-    updateHeader,
 
     init() {
       if (!section) {

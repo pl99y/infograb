@@ -133,13 +133,6 @@
   background: rgba(139, 92, 246, 0.12);
 }
 
-.f1-live-updated {
-  font-size: 10px;
-  color: var(--text-muted);
-  line-height: 1.25;
-  white-space: nowrap;
-}
-
 .f1-refresh-error {
   color: var(--accent-red);
 }
@@ -369,4 +362,11 @@
   .f1-news-time {
     white-space: normal;
   }
+}
+
+.f1-live-updated {
+  font-size: 10px;
+  color: var(--text-muted);
+  line-height: 1.25;
+  white-space: nowrap;
 }

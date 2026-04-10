@@ -1,5 +1,6 @@
 import { setError, setLoading } from "../../core/dom.js";
 import { formatAbsoluteLocalDateTime, formatRelativeLocalTime } from "../../core/time.js";
+import { getExportProfileGeneratedAt } from "../../core/export-meta.js";
 import { renderWeatherPane } from "./render-weather.js";
 import { renderDisasterPane } from "./render-disaster.js?v=37";
 
@@ -150,10 +151,12 @@ export function createDisasterModule(ctx) {
       renderInstant();
       renderOngoing();
 
-      ctx.state.lastDisasterFetchedAt = pickLatestTimestamp([
+      const exportGeneratedAt = await getExportProfileGeneratedAt("15m");
+      const fallbackUpdatedAt = pickLatestTimestamp([
         ...ctx.state.weatherAlerts,
         ...ctx.state.disasterOngoing,
       ]);
+      ctx.state.lastDisasterFetchedAt = exportGeneratedAt || fallbackUpdatedAt;
       updateHeader();
     } catch (error) {
       console.error("Failed to load disaster module:", error);

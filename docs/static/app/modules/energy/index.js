@@ -1,5 +1,6 @@
 import { clearElement, setEmpty, setError, setLoading } from "../../core/dom.js";
 import { formatAbsoluteLocalDateTime, formatNumber, formatRelativeLocalTime, formatSigned } from "../../core/time.js";
+import { getExportProfileGeneratedAt } from "../../core/export-meta.js";
 
 const energyInfoMap = {
   wti: {
@@ -126,7 +127,9 @@ export function createEnergyModule(ctx) {
         .map((value) => new Date(value).getTime())
         .filter((value) => !Number.isNaN(value));
 
-      ctx.state.lastEnergyFetchedAt = timestamps.length > 0 ? new Date(Math.max(...timestamps)).toISOString() : null;
+      const exportGeneratedAt = await getExportProfileGeneratedAt("15m");
+      const fallbackUpdatedAt = timestamps.length > 0 ? new Date(Math.max(...timestamps)).toISOString() : null;
+      ctx.state.lastEnergyFetchedAt = exportGeneratedAt || fallbackUpdatedAt;
       updateHeader();
     } catch (error) {
       console.error("Failed to load energy data:", error);

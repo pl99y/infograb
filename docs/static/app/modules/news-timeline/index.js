@@ -1,5 +1,6 @@
 import { setError, setLoading } from "../../core/dom.js";
 import { formatAbsoluteLocalDateTime, formatRelativeLocalTime } from "../../core/time.js";
+import { getExportProfileGeneratedAt } from "../../core/export-meta.js";
 import { renderNewsTimeline } from "./render.js";
 
 export function createNewsTimelineModule(ctx) {
@@ -31,7 +32,8 @@ export function createNewsTimelineModule(ctx) {
     try {
       const data = await ctx.api.get("/api/news-timeline/latest?limit=120&window_hours=12");
       ctx.state.newsTimeline = Array.isArray(data?.items) ? data.items : [];
-      ctx.state.lastNewsTimelineFetchedAt = data?.updated_at || null;
+      const exportGeneratedAt = await getExportProfileGeneratedAt("15m");
+      ctx.state.lastNewsTimelineFetchedAt = exportGeneratedAt || data?.updated_at || null;
       renderNewsTimeline(ctx, container, ctx.state.newsTimeline);
       updateHeader();
     } catch (error) {

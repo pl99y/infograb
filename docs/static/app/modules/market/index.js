@@ -1,5 +1,6 @@
 import { clearElement, setEmpty, setError, setLoading } from "../../core/dom.js";
 import { formatAbsoluteLocalDateTime, formatRelativeLocalTime } from "../../core/time.js";
+import { getExportProfileGeneratedAt } from "../../core/export-meta.js";
 
 const marketLabels = {
   nasdaq: { name: "NASDAQ Composite", symbol: "^IXIC" },
@@ -103,9 +104,11 @@ export function createMarketModule(ctx) {
         .map((value) => new Date(value).getTime())
         .filter((value) => !Number.isNaN(value));
 
-      ctx.state.lastMarketFetchedAt = timestamps.length > 0
+      const exportGeneratedAt = await getExportProfileGeneratedAt("15m");
+      const fallbackUpdatedAt = timestamps.length > 0
         ? new Date(Math.max(...timestamps)).toISOString()
         : null;
+      ctx.state.lastMarketFetchedAt = exportGeneratedAt || fallbackUpdatedAt;
       updateHeader();
     } catch (error) {
       console.error("Failed to load market snapshots:", error);

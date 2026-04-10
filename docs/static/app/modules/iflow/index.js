@@ -1,5 +1,6 @@
 import { clearElement, setEmpty, setError, setLoading } from "../../core/dom.js";
 import { formatAbsoluteLocalDateTime, formatRelativeLocalTime } from "../../core/time.js";
+import { getExportProfileGeneratedAt } from "../../core/export-meta.js";
 
 function escapeHtml(value) {
   return String(value ?? "")
@@ -102,7 +103,8 @@ export function createIflowModule(ctx) {
       const data = await ctx.api.get("/api/iflow/latest");
       ctx.state.iflowData = data || { rows: [] };
       render(ctx.state.iflowData);
-      ctx.state.lastIflowFetchedAt = data?.fetched_at || null;
+      const exportGeneratedAt = await getExportProfileGeneratedAt("12h");
+      ctx.state.lastIflowFetchedAt = exportGeneratedAt || data?.fetched_at || null;
       updateHeader();
     } catch (error) {
       console.error("Failed to load iflow data:", error);

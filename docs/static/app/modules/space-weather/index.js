@@ -1,5 +1,6 @@
 import { clearElement, setEmpty, setError, setLoading } from "../../core/dom.js";
 import { formatAbsoluteLocalDateTime, formatRelativeLocalTime } from "../../core/time.js";
+import { getExportProfileGeneratedAt } from "../../core/export-meta.js";
 
 const DEFAULT_DAY_LABELS = ["第 1 天", "第 2 天", "第 3 天"];
 
@@ -260,7 +261,8 @@ export function createSpaceWeatherModule(ctx) {
 
       ctx.state.spaceWeatherAlerts = Array.isArray(alerts) ? alerts : [];
       ctx.state.spaceWeatherForecast = forecast || null;
-      ctx.state.lastSpaceWeatherFetchedAt = pickLatestTimestamp(ctx.state.spaceWeatherAlerts, ctx.state.spaceWeatherForecast);
+      const exportGeneratedAt = await getExportProfileGeneratedAt("12h");
+      ctx.state.lastSpaceWeatherFetchedAt = exportGeneratedAt || pickLatestTimestamp(ctx.state.spaceWeatherAlerts, ctx.state.spaceWeatherForecast);
 
       renderAlerts(alertsContainer, ctx.state.spaceWeatherAlerts);
       renderForecast(forecastContainer, ctx.state.spaceWeatherForecast);

@@ -1,4 +1,5 @@
 import { formatAbsoluteLocalDateTime, formatRelativeLocalTime } from "../../core/time.js";
+import { getExportProfileGeneratedAt } from "../../core/export-meta.js";
 import { renderF1Live, getF1LiveStatusMarkup } from "./render-live.js";
 import { renderF1News } from "./render-news.js";
 
@@ -105,28 +106,23 @@ function pickIsoCandidates(values) {
     .sort((a, b) => b.ts - a.ts);
 }
 
-function resolveLiveUpdatedAt(payload, meta) {
+function resolveLiveUpdatedAt(payload) {
   const candidates = pickIsoCandidates([
     payload?.updated_at,
     payload?.fetched_at,
-    payload?.snapshot_fetched_at,
     payload?.generated_at,
     payload?.session?.updated_at,
     payload?.session?.fetched_at,
-    meta?.lastModified,
   ]);
   return candidates[0]?.value || null;
 }
 
-function resolveNewsUpdatedAt(payload, meta) {
+function resolveNewsUpdatedAt(payload) {
   const itemTimes = Array.isArray(payload)
     ? payload.flatMap((item) => [item?.fetched_at, item?.updated_at, item?.published_at])
     : [];
 
-  const candidates = pickIsoCandidates([
-    ...itemTimes,
-    meta?.lastModified,
-  ]);
+  const candidates = pickIsoCandidates(itemTimes);
   return candidates[0]?.value || null;
 }
 
@@ -201,8 +197,9 @@ export function createF1Module(ctx) {
       ? ctx.api.getWithMeta("/api/f1/live")
       : Promise.resolve({ data: await ctx.api.get("/api/f1/live"), meta: {} });
 
-    const { data: payload, meta } = await loader;
-    const updatedAt = resolveLiveUpdatedAt(payload, meta);
+    const { data: payload } = await loader;
+    const exportGeneratedAt = await getExportProfileGeneratedAt("15m");
+    const updatedAt = exportGeneratedAt || resolveLiveUpdatedAt(payload);
 
     renderF1Live(livePanel, payload);
     ctx.state.lastF1LiveFetchedAt = updatedAt;
@@ -226,8 +223,9 @@ export function createF1Module(ctx) {
       ? ctx.api.getWithMeta("/api/f1/news?limit=20")
       : Promise.resolve({ data: await ctx.api.get("/api/f1/news?limit=20"), meta: {} });
 
-    const { data: payload, meta } = await loader;
-    const updatedAt = resolveNewsUpdatedAt(payload, meta);
+    const { data: payload } = await loader;
+    const exportGeneratedAt = await getExportProfileGeneratedAt("12h");
+    const updatedAt = exportGeneratedAt || resolveNewsUpdatedAt(payload);
 
     renderF1News(ctx, newsPanel, payload);
     ctx.state.lastF1NewsFetchedAt = updatedAt;

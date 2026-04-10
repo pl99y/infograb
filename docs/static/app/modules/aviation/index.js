@@ -1,6 +1,7 @@
 import { setError, setLoading } from "../../core/dom.js";
 import { STORAGE_KEYS } from "../../core/constants.js";
 import { formatAbsoluteLocalDateTime, formatRelativeLocalTime } from "../../core/time.js";
+import { getExportProfileGeneratedAt } from "../../core/export-meta.js";
 import { renderAviationAlerts } from "./render-alerts.js";
 import { renderAviationDisruptions } from "./render-disruptions.js";
 
@@ -74,7 +75,9 @@ export function createAviationModule(ctx) {
         .map((value) => new Date(value).getTime())
         .filter((value) => !Number.isNaN(value));
 
-      ctx.state.lastAviationFetchedAt = timestamps.length > 0 ? new Date(Math.max(...timestamps)).toISOString() : null;
+      const exportGeneratedAt = await getExportProfileGeneratedAt("15m");
+      const fallbackUpdatedAt = timestamps.length > 0 ? new Date(Math.max(...timestamps)).toISOString() : null;
+      ctx.state.lastAviationFetchedAt = exportGeneratedAt || fallbackUpdatedAt;
       updateHeader();
     } catch (error) {
       console.error("Failed to load aviation data:", error);

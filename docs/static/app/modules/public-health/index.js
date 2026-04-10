@@ -1,5 +1,6 @@
 import { setEmpty, setError, setLoading } from "../../core/dom.js";
 import { formatAbsoluteLocalDateTime, formatRelativeLocalTime } from "../../core/time.js";
+import { getExportProfileGeneratedAt } from "../../core/export-meta.js";
 
 function escapeHtml(value) {
   return String(value ?? "")
@@ -135,7 +136,8 @@ export function createPublicHealthModule(ctx) {
       const payload = await ctx.api.get("/api/public-health/latest?limit_early_warning=120&limit_outbreak_events=120");
       ctx.state.publicHealthEarlyWarnings = (payload?.early_warning || []).map(normalizeItem);
       ctx.state.publicHealthOutbreakEvents = (payload?.outbreak_events || []).map(normalizeItem);
-      ctx.state.lastPublicHealthFetchedAt = pickLatestTimestamp(payload);
+      const exportGeneratedAt = await getExportProfileGeneratedAt("12h");
+      ctx.state.lastPublicHealthFetchedAt = exportGeneratedAt || pickLatestTimestamp(payload);
       render();
       updateHeader();
     } catch (error) {

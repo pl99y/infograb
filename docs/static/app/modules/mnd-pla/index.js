@@ -1,5 +1,6 @@
 import { clearElement, setEmpty, setError, setLoading } from "../../core/dom.js";
 import { formatAbsoluteLocalDateTime, formatRelativeLocalTime } from "../../core/time.js";
+import { getExportProfileGeneratedAt } from "../../core/export-meta.js";
 
 function escapeHtml(value) {
   return String(value ?? "")
@@ -229,7 +230,8 @@ export function createMndPlaModule(ctx) {
     try {
       const data = await ctx.api.get("/api/mnd-pla/dashboard?days=7");
       ctx.state.mndPlaData = data || { items: [], summary: {} };
-      ctx.state.lastMndPlaFetchedAt = data?.fetched_at || null;
+      const exportGeneratedAt = await getExportProfileGeneratedAt("12h");
+      ctx.state.lastMndPlaFetchedAt = exportGeneratedAt || data?.fetched_at || null;
       render(ctx.state.mndPlaData);
       updateHeader();
     } catch (error) {

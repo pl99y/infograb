@@ -107,12 +107,13 @@ function pickIsoCandidates(values) {
 
 function resolveLiveUpdatedAt(payload, meta) {
   const candidates = pickIsoCandidates([
-    meta?.lastModified,
     payload?.updated_at,
     payload?.fetched_at,
+    payload?.snapshot_fetched_at,
     payload?.generated_at,
     payload?.session?.updated_at,
     payload?.session?.fetched_at,
+    meta?.lastModified,
   ]);
   return candidates[0]?.value || null;
 }
@@ -123,8 +124,8 @@ function resolveNewsUpdatedAt(payload, meta) {
     : [];
 
   const candidates = pickIsoCandidates([
-    meta?.lastModified,
     ...itemTimes,
+    meta?.lastModified,
   ]);
   return candidates[0]?.value || null;
 }

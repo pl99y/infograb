@@ -1,6 +1,60 @@
 [
   {
     "id": 1,
+    "group_key": "volcano|d86f5f577b8064936e42ea28df4516a76ab93982",
+    "event_type": "volcano",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "San Cristobal",
+    "summary": "VRP 186.03 MW · VIIRS · 9.00 km",
+    "started_at": "2026-04-10T19:00:02+00:00",
+    "updated_at": "2026-04-10T19:00:02+00:00",
+    "location_text": "San Cristobal",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "VIIRS",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=344020",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=344020",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "344020",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=344020",
+      "vrp_mw": 186.03,
+      "distance_km": 9.0,
+      "sensor": "VIIRS",
+      "row_class": [
+        "high"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "VIIRS"
+      ],
+      "reports": [
+        {
+          "volcano_id": "344020",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=344020",
+          "vrp_mw": 186.03,
+          "distance_km": 9.0,
+          "sensor": "VIIRS",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 1
+    },
+    "member_event_ids": [
+      4
+    ],
+    "occurred_at": "2026-04-10T19:00:02+00:00",
+    "published_at": "2026-04-10T19:00:02+00:00",
+    "fetched_at": "2026-04-10T19:00:02+00:00"
+  },
+  {
+    "id": 2,
     "group_key": "volcano|3151df275bf6857c5ba6bfacf39596c50cdce382",
     "event_type": "volcano",
     "severity_level": "high",
@@ -60,14 +114,14 @@
       "merged_count": 2
     },
     "member_event_ids": [
-      4
+      5
     ],
     "occurred_at": "2026-04-10T18:00:02+00:00",
     "published_at": "2026-04-10T18:00:02+00:00",
     "fetched_at": "2026-04-10T18:00:02+00:00"
   },
   {
-    "id": 2,
+    "id": 3,
     "group_key": "earthquake|us6000snxb",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -103,7 +157,7 @@
     "fetched_at": "2026-04-10T12:08:43.066000+00:00"
   },
   {
-    "id": 3,
+    "id": 4,
     "group_key": "earthquake|us6000snwt",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -139,7 +193,7 @@
     "fetched_at": "2026-04-10T11:08:53.559000+00:00"
   },
   {
-    "id": 5,
+    "id": 7,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|western_north_pacific_area|tc_04w|f7e9bcf1e1f7bbfa",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -187,14 +241,14 @@
       }
     },
     "member_event_ids": [
-      7
+      8
     ],
     "occurred_at": "2026-04-10T06:00:00+00:00",
     "published_at": "2026-04-10T06:00:00+00:00",
     "fetched_at": "2026-04-10T06:00:00+00:00"
   },
   {
-    "id": 4,
+    "id": 6,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|tc_30p|8fdaeadfa66af157",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -242,14 +296,66 @@
       }
     },
     "member_event_ids": [
-      8
+      9
     ],
     "occurred_at": "2026-04-10T06:00:00+00:00",
     "published_at": "2026-04-10T06:00:00+00:00",
     "fetched_at": "2026-04-10T06:00:00+00:00"
   },
   {
-    "id": 6,
+    "id": 5,
+    "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|ss_31p|913e0ba609c09264",
+    "event_type": "typhoon",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "SS 31P",
+    "summary": "wind 53-58 kt · 977 mb",
+    "started_at": "2026-04-10T06:00:00+00:00",
+    "updated_at": "2026-04-10T06:00:00+00:00",
+    "location_text": "28.7S 178.5E",
+    "lat": -28.7,
+    "lon": 178.5,
+    "source_primary": "JTWC-ABPW",
+    "source_secondary": "disturbance",
+    "status": "active",
+    "map_url": "https://www.google.com/maps?q=-28.7,178.5",
+    "official_link": "https://www.google.com/maps?q=-28.7,178.5",
+    "country_code": null,
+    "payload": {
+      "item_type": "disturbance",
+      "source": "jtwc_abpw",
+      "source_key": "jtwc_abpw|south_pacific_area|ss_31p",
+      "content_hash": "913e0ba609c09264",
+      "platform_summary": "28.7S 178.5E | winds 53-58 kt | 977 mb",
+      "platform_location": "28.7S 178.5E",
+      "wind": "53-58 kt",
+      "risk_48h": null,
+      "risk_7d": null,
+      "next_update": null,
+      "raw_text": "(1) AN AREA OF CONVECTION (SS 31P) PREVIOUSLY LOCATED NEAR 28.2S \n178.8E IS NOW LOCATED NEAR 28.7S 178.5E, APPROXIMATELY 564 NM \nSOUTHWEST OF TONGA. THE SYSTEM IS CURRENTLY CLASSIFIED AS A \nSUBTROPICAL CYCLONE, GENERALLY CHARACTERIZED AS HAVING BOTH TROPICAL \nAND MIDLATITUDE CYCLONE FEATURES. MULTISPECTRAL SATELLITE IMAGERY \n(MSI) DEPICTS A VERY WELL-DEFINED LOW LEVEL CIRCULATION CENTER (LLCC) \nEMBEDDED WITHIN A TIGHT SWIRL OF MID-LEVEL CLOUD BANDS, ABSENT OF ANY \nDEEP CONVECTION. ENVIRONMENTAL ANALYSIS REVEALS UNFAVORABLE \nCONDITIONS FOR DEVELOPMENT CHARACTERIZED BY HIGH VERTICAL WIND SHEAR \n(20-30 KNOTS), MODERATE UPPER LEVEL POLEWARD OUTFLOW, AND COLD SEA \nSURFACE TEMPERATURES (23-24 C). GLOBAL MODELS AGREE ON A \nSOUTHWESTWARD TRACK OVER THE NEXT 24-48 HOURS. FOR HAZARDS AND \nWARNINGS, REFERENCE THE FLEET WEATHER CENTER SAN DIEGO HIGH WINDS AND \nSEAS PRODUCT OR REFER TO LOCAL WMO DESIGNATED FORECAST AUTHORITY. \nMAXIMUM SUSTAINED SURFACE WINDS ARE ESTIMATED AT 53 TO 58 KNOTS. \nMINIMUM SEA LEVEL PRESSURE IS ESTIMATED TO BE NEAR 977 MB. THE \nPOTENTIAL FOR THE DEVELOPMENT OF A SIGNIFICANT TROPICAL CYCLONE \nWITHIN THE NEXT 24 HOURS IS LOW.",
+      "metadata": {
+        "basin_section": "SOUTH PACIFIC AREA (WEST COAST OF SOUTH AMERICA TO 135 EAST)",
+        "system_prefix": "SS",
+        "system_id": "31P",
+        "system_class": "SUBTROPICAL CYCLONE",
+        "lat": -28.7,
+        "lon": 178.5,
+        "wind_kt_min": 53,
+        "wind_kt_max": 58,
+        "wind_kt": 58,
+        "pressure_mb": 977,
+        "bulletin_issue_at": "2026-04-10T06:00:00+00:00"
+      }
+    },
+    "member_event_ids": [
+      10
+    ],
+    "occurred_at": "2026-04-10T06:00:00+00:00",
+    "published_at": "2026-04-10T06:00:00+00:00",
+    "fetched_at": "2026-04-10T06:00:00+00:00"
+  },
+  {
+    "id": 8,
     "group_key": "earthquake|us6000sntm",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -285,7 +391,7 @@
     "fetched_at": "2026-04-09T21:59:20.634000+00:00"
   },
   {
-    "id": 7,
+    "id": 9,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -358,14 +464,14 @@
       }
     },
     "member_event_ids": [
-      6
+      7
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",
     "fetched_at": "2026-03-25T01:00:00+00:00"
   },
   {
-    "id": 8,
+    "id": 10,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -438,7 +544,7 @@
       }
     },
     "member_event_ids": [
-      5
+      6
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

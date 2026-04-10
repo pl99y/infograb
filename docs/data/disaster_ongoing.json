@@ -1,70 +1,39 @@
 [
   {
     "id": 1,
-    "group_key": "volcano|ce3ef846902284b9573e39225eeb775619355b93",
-    "event_type": "volcano",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "Fournaise Pitondela",
-    "summary": "VRP 121.48 MW · VIIRS375 / VIIRS · 3.75 km",
-    "started_at": "2026-04-10T09:18:00+00:00",
-    "updated_at": "2026-04-10T09:18:00+00:00",
-    "location_text": "Fournaise Pitondela",
-    "lat": null,
-    "lon": null,
-    "source_primary": "MIROVA",
-    "source_secondary": "VIIRS375 / VIIRS",
+    "group_key": "earthquake|us6000snwt",
+    "event_type": "earthquake",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "M 5.1 - 20 km NW of Curup, Indonesia",
+    "summary": "20 km NW of Curup, Indonesia",
+    "started_at": "2026-04-10T11:08:53.559000+00:00",
+    "updated_at": "2026-04-10T11:35:43.848000+00:00",
+    "location_text": "20 km NW of Curup, Indonesia",
+    "lat": -3.3432,
+    "lon": 102.382,
+    "source_primary": "USGS",
+    "source_secondary": null,
     "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=233020",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=233020",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000snwt",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000snwt",
     "country_code": null,
     "payload": {
-      "volcano_id": "233020",
-      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=233020",
-      "vrp_mw": 121.48,
-      "distance_km": 3.75,
-      "sensor": "VIIRS375",
-      "row_class": [
-        "high",
-        "moderate"
-      ],
-      "source_page": "https://www.mirovaweb.it/NRT/",
-      "sensors": [
-        "VIIRS375",
-        "VIIRS"
-      ],
-      "reports": [
-        {
-          "volcano_id": "233020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=233020",
-          "vrp_mw": 121.48,
-          "distance_km": 3.75,
-          "sensor": "VIIRS375",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        },
-        {
-          "volcano_id": "233020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=233020",
-          "vrp_mw": 51.98,
-          "distance_km": 3.75,
-          "sensor": "VIIRS",
-          "row_class": [
-            "moderate"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        }
-      ],
-      "merged_count": 2
+      "mag": 5.1,
+      "depth_km": 107.404,
+      "place": "20 km NW of Curup, Indonesia",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000snwt.geojson",
+      "alert": null,
+      "sig": 401,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      3
+      1
     ],
-    "occurred_at": "2026-04-10T09:18:00+00:00",
-    "published_at": "2026-04-10T09:18:00+00:00",
-    "fetched_at": "2026-04-10T09:18:00+00:00"
+    "occurred_at": "2026-04-10T11:08:53.559000+00:00",
+    "published_at": "2026-04-10T11:08:53.559000+00:00",
+    "fetched_at": "2026-04-10T11:08:53.559000+00:00"
   },
   {
     "id": 2,
@@ -380,7 +349,7 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      1
+      2
     ],
     "occurred_at": "2026-04-09T21:59:20.634000+00:00",
     "published_at": "2026-04-09T21:59:20.634000+00:00",
@@ -416,7 +385,7 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      2
+      3
     ],
     "occurred_at": "2026-04-09T18:54:24.963000+00:00",
     "published_at": "2026-04-09T18:54:24.963000+00:00",

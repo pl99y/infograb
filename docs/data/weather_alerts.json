@@ -1,6 +1,45 @@
 [
   {
     "id": 1,
+    "dedupe_key": "urn:oid:2.49.0.1.840.0.056d730843e3b55609f05dd5fd91e9616eb55e90.001.1",
+    "source_primary": "WMO",
+    "title": "Tornado Warning issued April 9 at 5:38PM PDT until April 9 at 6:15PM PDT by NWS Hanford CA",
+    "summary": "Fresno, CA; Madera, CA",
+    "severity_level": "extreme",
+    "color_level": "extreme",
+    "event_type": "weather",
+    "location_text": "Fresno, CA; Madera, CA",
+    "issued_at": "2026-04-10T00:38:00+00:00",
+    "effective_at": "2026-04-10T00:38:00+00:00",
+    "expires_at": "2026-04-10T01:15:00+00:00",
+    "source_url": "https://severeweather.wmo.int/list.html",
+    "detail_url": "https://severeweather.wmo.int/list.html",
+    "payload": {
+      "id": "urn:oid:2.49.0.1.840.0.056d730843e3b55609f05dd5fd91e9616eb55e90.001.1",
+      "event": "Tornado Warning",
+      "headline": "Tornado Warning issued April 9 at 5:38PM PDT until April 9 at 6:15PM PDT by NWS Hanford CA",
+      "sent": "2026-04-10 00:38:00",
+      "expires": "2026-04-10 01:15:00",
+      "areaDesc": "Fresno, CA; Madera, CA",
+      "mid": "093",
+      "ra": "4",
+      "s": 4,
+      "u": 4,
+      "c": 4,
+      "capURL": "us-noaa-nws-en/2026/04/10/00/38/00-cc28a05aee2e96e0f01a79a470c66354.xml",
+      "effective": "2026-04-10 00:38:00",
+      "cap_path": "us-noaa-nws-en/2026/04/10/00/38/00-cc28a05aee2e96e0f01a79a470c66354.xml",
+      "source_page": "https://severeweather.wmo.int/list.html",
+      "last_updated": "2026-04-10 00:55:12"
+    },
+    "fetched_at": "2026-04-10T01:05:49.790218+00:00",
+    "published_at": "2026-04-10T00:38:00+00:00",
+    "updated_at": "2026-04-10T01:05:49.790218+00:00",
+    "region_text": "Fresno, CA; Madera, CA",
+    "link_url": "https://severeweather.wmo.int/list.html"
+  },
+  {
+    "id": 2,
     "dedupe_key": "urn:oid:2.49.0.1.90.0.2026.4.9.21.20.37",
     "source_primary": "WMO",
     "title": "Tropical Cyclone Warning",
@@ -30,11 +69,11 @@
       "effective": "",
       "cap_path": "sb-sims-en/2026/04/09/21/20/37-f6436061229c5b31169841f0821201b1.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-10 00:44:10"
+      "last_updated": "2026-04-10 00:55:12"
     },
-    "fetched_at": "2026-04-10T00:45:57.971362+00:00",
+    "fetched_at": "2026-04-10T01:05:49.790218+00:00",
     "published_at": "2026-04-09T21:20:37+00:00",
-    "updated_at": "2026-04-10T00:45:57.971362+00:00",
+    "updated_at": "2026-04-10T01:05:49.790218+00:00",
     "region_text": "Western province",
     "link_url": "https://severeweather.wmo.int/list.html"
   }

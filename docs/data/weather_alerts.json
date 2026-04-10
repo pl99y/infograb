@@ -1,6 +1,45 @@
 [
   {
     "id": 1,
+    "dedupe_key": "52232741600000_20260410145215",
+    "source_primary": "WMO",
+    "title": "Ceheng County Meteorological Observatory issues a red alert for high temperatures [Level I/Particularly Severe]",
+    "summary": "Ceheng County",
+    "severity_level": "extreme",
+    "color_level": "extreme",
+    "event_type": "weather",
+    "location_text": "Ceheng County",
+    "issued_at": "2026-04-10T06:52:15+00:00",
+    "effective_at": "2026-04-10T06:52:15+00:00",
+    "expires_at": "2026-04-11T06:52:15+00:00",
+    "source_url": "https://severeweather.wmo.int/list.html",
+    "detail_url": "https://severeweather.wmo.int/list.html",
+    "payload": {
+      "id": "52232741600000_20260410145215",
+      "event": "high temperature",
+      "headline": "Ceheng County Meteorological Observatory issues a red alert for high temperatures [Level I/Particularly Severe]",
+      "sent": "2026-04-10 06:52:15",
+      "expires": "2026-04-11 06:52:15",
+      "areaDesc": "Ceheng County",
+      "mid": "001",
+      "ra": "2",
+      "s": 4,
+      "u": 0,
+      "c": 0,
+      "url": "cn-cma-xx/2026/04/10/06/52/15-8fb53487122b34a06875fe42aac0771b.xml",
+      "effective": "2026-04-10 06:52:15",
+      "cap_path": "cn-cma-xx/2026/04/10/06/52/15-8fb53487122b34a06875fe42aac0771b.xml",
+      "source_page": "https://severeweather.wmo.int/list.html",
+      "last_updated": "2026-04-10 07:25:08"
+    },
+    "fetched_at": "2026-04-10T07:26:25.377149+00:00",
+    "published_at": "2026-04-10T06:52:15+00:00",
+    "updated_at": "2026-04-10T07:26:25.377149+00:00",
+    "region_text": "Ceheng County",
+    "link_url": "https://severeweather.wmo.int/list.html"
+  },
+  {
+    "id": 2,
     "dedupe_key": "urn:oid:2.49.0.1.90.0.2026.4.10.3.1.53",
     "source_primary": "WMO",
     "title": "Tropical Cyclone Warning: Red alert",
@@ -30,11 +69,11 @@
       "effective": "",
       "cap_path": "sb-sims-en/2026/04/10/03/01/53-677be7b4e2a4b93439638a5669c219e5.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-10 07:05:07"
+      "last_updated": "2026-04-10 07:25:08"
     },
-    "fetched_at": "2026-04-10T07:06:13.749231+00:00",
+    "fetched_at": "2026-04-10T07:26:25.377149+00:00",
     "published_at": "2026-04-10T03:01:53+00:00",
-    "updated_at": "2026-04-10T07:06:13.749231+00:00",
+    "updated_at": "2026-04-10T07:26:25.377149+00:00",
     "region_text": "Western province",
     "link_url": "https://severeweather.wmo.int/list.html"
   }

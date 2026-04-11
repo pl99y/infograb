@@ -161,61 +161,74 @@
     "fetched_at": "2026-04-11T05:00:00+00:00"
   },
   {
-    "id": 6,
-    "group_key": "volcano|0748004af004b356d2d48a0977fdd230e9afdb04",
+    "id": 4,
+    "group_key": "volcano|33b11d1538b15f0b3d7152f0ca5cd865c7da3a85",
     "event_type": "volcano",
     "severity_level": "high",
     "severity_color": "high",
-    "title": "Fuego",
-    "summary": "VRP 118.22 MW · MODIS · 4.00 km",
-    "started_at": "2026-04-11T02:20:00+00:00",
-    "updated_at": "2026-04-11T02:20:00+00:00",
-    "location_text": "Fuego",
+    "title": "Krasheninnikov",
+    "summary": "VRP 108.14 MW · VIIRS375 / VIIRS · 4.37 km",
+    "started_at": "2026-04-11T02:54:01+00:00",
+    "updated_at": "2026-04-11T02:54:01+00:00",
+    "location_text": "Krasheninnikov",
     "lat": null,
     "lon": null,
     "source_primary": "MIROVA",
-    "source_secondary": "MODIS",
+    "source_secondary": "VIIRS375 / VIIRS",
     "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=342090",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=342090",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=300190",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=300190",
     "country_code": null,
     "payload": {
-      "volcano_id": "342090",
-      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=342090",
-      "vrp_mw": 118.22,
-      "distance_km": 4.0,
-      "sensor": "MODIS",
+      "volcano_id": "300190",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=300190",
+      "vrp_mw": 108.14,
+      "distance_km": 4.8,
+      "sensor": "VIIRS375",
       "row_class": [
-        "high"
+        "high",
+        "moderate"
       ],
       "source_page": "https://www.mirovaweb.it/NRT/",
       "sensors": [
-        "MODIS"
+        "VIIRS375",
+        "VIIRS"
       ],
       "reports": [
         {
-          "volcano_id": "342090",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=342090",
-          "vrp_mw": 118.22,
-          "distance_km": 4.0,
-          "sensor": "MODIS",
+          "volcano_id": "300190",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=300190",
+          "vrp_mw": 108.14,
+          "distance_km": 4.8,
+          "sensor": "VIIRS375",
           "row_class": [
             "high"
           ],
           "source_page": "https://www.mirovaweb.it/NRT/"
+        },
+        {
+          "volcano_id": "300190",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=300190",
+          "vrp_mw": 92.76,
+          "distance_km": 4.37,
+          "sensor": "VIIRS",
+          "row_class": [
+            "moderate"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
         }
       ],
-      "merged_count": 1
+      "merged_count": 2
     },
     "member_event_ids": [
       3
     ],
-    "occurred_at": "2026-04-11T02:20:00+00:00",
-    "published_at": "2026-04-11T02:20:00+00:00",
-    "fetched_at": "2026-04-11T02:20:00+00:00"
+    "occurred_at": "2026-04-11T02:54:01+00:00",
+    "published_at": "2026-04-11T02:54:01+00:00",
+    "fetched_at": "2026-04-11T02:54:01+00:00"
   },
   {
-    "id": 5,
+    "id": 7,
     "group_key": "volcano|e6c2a75f7a3d8fcda5a2fc5061b04d5904e16ebc",
     "event_type": "volcano",
     "severity_level": "high",
@@ -269,7 +282,61 @@
     "fetched_at": "2026-04-11T02:20:00+00:00"
   },
   {
-    "id": 4,
+    "id": 6,
+    "group_key": "volcano|0748004af004b356d2d48a0977fdd230e9afdb04",
+    "event_type": "volcano",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Fuego",
+    "summary": "VRP 118.22 MW · MODIS · 4.00 km",
+    "started_at": "2026-04-11T02:20:00+00:00",
+    "updated_at": "2026-04-11T02:20:00+00:00",
+    "location_text": "Fuego",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "MODIS",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=342090",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=342090",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "342090",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=342090",
+      "vrp_mw": 118.22,
+      "distance_km": 4.0,
+      "sensor": "MODIS",
+      "row_class": [
+        "high"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "MODIS"
+      ],
+      "reports": [
+        {
+          "volcano_id": "342090",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=342090",
+          "vrp_mw": 118.22,
+          "distance_km": 4.0,
+          "sensor": "MODIS",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 1
+    },
+    "member_event_ids": [
+      5
+    ],
+    "occurred_at": "2026-04-11T02:20:00+00:00",
+    "published_at": "2026-04-11T02:20:00+00:00",
+    "fetched_at": "2026-04-11T02:20:00+00:00"
+  },
+  {
+    "id": 5,
     "group_key": "volcano|e7f9ad4c279754938bfec975d15ef59d3eacdc65",
     "event_type": "volcano",
     "severity_level": "high",
@@ -316,78 +383,11 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      5
+      6
     ],
     "occurred_at": "2026-04-11T02:20:00+00:00",
     "published_at": "2026-04-11T02:20:00+00:00",
     "fetched_at": "2026-04-11T02:20:00+00:00"
-  },
-  {
-    "id": 7,
-    "group_key": "volcano|cf8b9598ae1a1f937b9e0f3dcc5571445310b5a3",
-    "event_type": "volcano",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "Krasheninnikov",
-    "summary": "VRP 153.05 MW · VIIRS / VIIRS375 · 4.24 km",
-    "started_at": "2026-04-11T02:00:02+00:00",
-    "updated_at": "2026-04-11T02:00:02+00:00",
-    "location_text": "Krasheninnikov",
-    "lat": null,
-    "lon": null,
-    "source_primary": "MIROVA",
-    "source_secondary": "VIIRS / VIIRS375",
-    "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=300190",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=300190",
-    "country_code": null,
-    "payload": {
-      "volcano_id": "300190",
-      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=300190",
-      "vrp_mw": 153.05,
-      "distance_km": 4.24,
-      "sensor": "VIIRS",
-      "row_class": [
-        "high",
-        "moderate"
-      ],
-      "source_page": "https://www.mirovaweb.it/NRT/",
-      "sensors": [
-        "VIIRS",
-        "VIIRS375"
-      ],
-      "reports": [
-        {
-          "volcano_id": "300190",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=300190",
-          "vrp_mw": 153.05,
-          "distance_km": 4.24,
-          "sensor": "VIIRS",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        },
-        {
-          "volcano_id": "300190",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=300190",
-          "vrp_mw": 43.03,
-          "distance_km": 4.52,
-          "sensor": "VIIRS375",
-          "row_class": [
-            "moderate"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        }
-      ],
-      "merged_count": 2
-    },
-    "member_event_ids": [
-      6
-    ],
-    "occurred_at": "2026-04-11T02:00:02+00:00",
-    "published_at": "2026-04-11T02:00:02+00:00",
-    "fetched_at": "2026-04-11T02:00:02+00:00"
   },
   {
     "id": 8,
@@ -450,17 +450,17 @@
     "severity_level": "high",
     "severity_color": "high",
     "title": "Nyamuragira",
-    "summary": "VRP 194.18 MW · VIIRS / VIIRS375 · 3.82 km",
+    "summary": "VRP 194.18 MW · VIIRS375 / VIIRS · 3.82 km",
     "started_at": "2026-04-11T00:06:01+00:00",
     "updated_at": "2026-04-11T00:06:01+00:00",
     "location_text": "Nyamuragira",
     "lat": null,
     "lon": null,
     "source_primary": "MIROVA",
-    "source_secondary": "VIIRS / VIIRS375",
+    "source_secondary": "VIIRS375 / VIIRS",
     "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
     "country_code": null,
     "payload": {
       "volcano_id": "223020",
@@ -473,16 +473,16 @@
       ],
       "source_page": "https://www.mirovaweb.it/NRT/",
       "sensors": [
-        "VIIRS",
-        "VIIRS375"
+        "VIIRS375",
+        "VIIRS"
       ],
       "reports": [
         {
           "volcano_id": "223020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
-          "vrp_mw": 137.82,
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
+          "vrp_mw": 194.18,
           "distance_km": 3.82,
-          "sensor": "VIIRS",
+          "sensor": "VIIRS375",
           "row_class": [
             "high"
           ],
@@ -490,10 +490,10 @@
         },
         {
           "volcano_id": "223020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
-          "vrp_mw": 194.18,
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
+          "vrp_mw": 137.82,
           "distance_km": 3.82,
-          "sensor": "VIIRS375",
+          "sensor": "VIIRS",
           "row_class": [
             "high"
           ],

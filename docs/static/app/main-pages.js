@@ -7,7 +7,6 @@ import { createLightboxModule } from "./modules/lightbox/index.js";
 import { createLayoutModule } from "./modules/layout/index.js";
 import { createEnergyModule } from "./modules/energy/index.js";
 import { createMarketModule } from "./modules/market/index.js";
-import { createIflowModule } from "./modules/iflow/index.js";
 import { createAviationModule } from "./modules/aviation/index.js";
 import { createDisasterModule } from "./modules/disaster/index.js";
 import { createPublicHealthModule } from "./modules/public-health/index.js";
@@ -29,7 +28,6 @@ function createContext() {
       layoutEditMode: false,
       energy: [],
       marketSnapshots: [],
-      iflowData: null,
       aviationAlerts: [],
       aviationDisruptions: [],
       disasterInstant: [],
@@ -47,7 +45,6 @@ function createContext() {
       translationCache: new Map(),
       lastEnergyFetchedAt: null,
       lastMarketFetchedAt: null,
-      lastIflowFetchedAt: null,
       lastAviationFetchedAt: null,
       lastDisasterFetchedAt: null,
       lastPublicHealthFetchedAt: null,
@@ -88,7 +85,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   ctx.marketModule = safeInit("market", createMarketModule, ctx, modules);
   ctx.spaceWeatherModule = safeInit("space-weather", createSpaceWeatherModule, ctx, modules);
   ctx.mndPlaModule = safeInit("mnd-pla", createMndPlaModule, ctx, modules);
-  ctx.iflowModule = safeInit("iflow", createIflowModule, ctx, modules);
   ctx.aviationModule = safeInit("aviation", createAviationModule, ctx, modules);
   ctx.disasterModule = safeInit("disaster", createDisasterModule, ctx, modules);
   ctx.publicHealthModule = safeInit("public-health", createPublicHealthModule, ctx, modules);
@@ -105,7 +101,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     try { ctx.marketModule?.updateHeader?.(); } catch (error) { console.error("[relative update failed] market", error); }
     try { ctx.spaceWeatherModule?.updateHeader?.(); } catch (error) { console.error("[relative update failed] space-weather", error); }
     try { ctx.mndPlaModule?.updateHeader?.(); } catch (error) { console.error("[relative update failed] mnd-pla", error); }
-    try { ctx.iflowModule?.updateHeader?.(); } catch (error) { console.error("[relative update failed] iflow", error); }
     try { ctx.aviationModule?.updateHeader?.(); } catch (error) { console.error("[relative update failed] aviation", error); }
     try { ctx.disasterModule?.updateHeader?.(); } catch (error) { console.error("[relative update failed] disaster", error); }
     try { ctx.publicHealthModule?.updateHeader?.(); } catch (error) { console.error("[relative update failed] public-health", error); }

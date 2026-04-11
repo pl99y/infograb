@@ -1,22 +1,184 @@
 [
   {
+    "id": 3,
+    "group_key": "volcano|e7f9ad4c279754938bfec975d15ef59d3eacdc65",
+    "event_type": "volcano",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Telica",
+    "summary": "VRP 227.46 MW · MODIS · 18.60 km",
+    "started_at": "2026-04-11T02:20:00+00:00",
+    "updated_at": "2026-04-11T02:20:00+00:00",
+    "location_text": "Telica",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "MODIS",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=344040",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=344040",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "344040",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=344040",
+      "vrp_mw": 227.46,
+      "distance_km": 18.6,
+      "sensor": "MODIS",
+      "row_class": [
+        "high"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "MODIS"
+      ],
+      "reports": [
+        {
+          "volcano_id": "344040",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=344040",
+          "vrp_mw": 227.46,
+          "distance_km": 18.6,
+          "sensor": "MODIS",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 1
+    },
+    "member_event_ids": [
+      3
+    ],
+    "occurred_at": "2026-04-11T02:20:00+00:00",
+    "published_at": "2026-04-11T02:20:00+00:00",
+    "fetched_at": "2026-04-11T02:20:00+00:00"
+  },
+  {
+    "id": 2,
+    "group_key": "volcano|e6c2a75f7a3d8fcda5a2fc5061b04d5904e16ebc",
+    "event_type": "volcano",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "San Cristobal",
+    "summary": "VRP 222.87 MW · MODIS · 23.54 km",
+    "started_at": "2026-04-11T02:20:00+00:00",
+    "updated_at": "2026-04-11T02:20:00+00:00",
+    "location_text": "San Cristobal",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "MODIS",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=344020",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=344020",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "344020",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=344020",
+      "vrp_mw": 222.87,
+      "distance_km": 23.54,
+      "sensor": "MODIS",
+      "row_class": [
+        "high"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "MODIS"
+      ],
+      "reports": [
+        {
+          "volcano_id": "344020",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=344020",
+          "vrp_mw": 222.87,
+          "distance_km": 23.54,
+          "sensor": "MODIS",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 1
+    },
+    "member_event_ids": [
+      4
+    ],
+    "occurred_at": "2026-04-11T02:20:00+00:00",
+    "published_at": "2026-04-11T02:20:00+00:00",
+    "fetched_at": "2026-04-11T02:20:00+00:00"
+  },
+  {
     "id": 1,
+    "group_key": "volcano|0748004af004b356d2d48a0977fdd230e9afdb04",
+    "event_type": "volcano",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Fuego",
+    "summary": "VRP 118.22 MW · MODIS · 4.00 km",
+    "started_at": "2026-04-11T02:20:00+00:00",
+    "updated_at": "2026-04-11T02:20:00+00:00",
+    "location_text": "Fuego",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "MODIS",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=342090",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=342090",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "342090",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=342090",
+      "vrp_mw": 118.22,
+      "distance_km": 4.0,
+      "sensor": "MODIS",
+      "row_class": [
+        "high"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "MODIS"
+      ],
+      "reports": [
+        {
+          "volcano_id": "342090",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=342090",
+          "vrp_mw": 118.22,
+          "distance_km": 4.0,
+          "sensor": "MODIS",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 1
+    },
+    "member_event_ids": [
+      5
+    ],
+    "occurred_at": "2026-04-11T02:20:00+00:00",
+    "published_at": "2026-04-11T02:20:00+00:00",
+    "fetched_at": "2026-04-11T02:20:00+00:00"
+  },
+  {
+    "id": 4,
     "group_key": "volcano|cf8b9598ae1a1f937b9e0f3dcc5571445310b5a3",
     "event_type": "volcano",
     "severity_level": "high",
     "severity_color": "high",
     "title": "Krasheninnikov",
-    "summary": "VRP 153.05 MW · VIIRS375 / VIIRS · 4.24 km",
+    "summary": "VRP 153.05 MW · VIIRS / VIIRS375 · 4.24 km",
     "started_at": "2026-04-11T02:00:02+00:00",
     "updated_at": "2026-04-11T02:00:02+00:00",
     "location_text": "Krasheninnikov",
     "lat": null,
     "lon": null,
     "source_primary": "MIROVA",
-    "source_secondary": "VIIRS375 / VIIRS",
+    "source_secondary": "VIIRS / VIIRS375",
     "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=300190",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=300190",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=300190",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=300190",
     "country_code": null,
     "payload": {
       "volcano_id": "300190",
@@ -25,26 +187,15 @@
       "distance_km": 4.24,
       "sensor": "VIIRS",
       "row_class": [
-        "moderate",
-        "high"
+        "high",
+        "moderate"
       ],
       "source_page": "https://www.mirovaweb.it/NRT/",
       "sensors": [
-        "VIIRS375",
-        "VIIRS"
+        "VIIRS",
+        "VIIRS375"
       ],
       "reports": [
-        {
-          "volcano_id": "300190",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=300190",
-          "vrp_mw": 43.03,
-          "distance_km": 4.52,
-          "sensor": "VIIRS375",
-          "row_class": [
-            "moderate"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        },
         {
           "volcano_id": "300190",
           "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=300190",
@@ -55,19 +206,30 @@
             "high"
           ],
           "source_page": "https://www.mirovaweb.it/NRT/"
+        },
+        {
+          "volcano_id": "300190",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=300190",
+          "vrp_mw": 43.03,
+          "distance_km": 4.52,
+          "sensor": "VIIRS375",
+          "row_class": [
+            "moderate"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
         }
       ],
       "merged_count": 2
     },
     "member_event_ids": [
-      3
+      6
     ],
     "occurred_at": "2026-04-11T02:00:02+00:00",
     "published_at": "2026-04-11T02:00:02+00:00",
     "fetched_at": "2026-04-11T02:00:02+00:00"
   },
   {
-    "id": 2,
+    "id": 5,
     "group_key": "volcano|64bfc9d641954e4e29b04a94b901518d3937aba8",
     "event_type": "volcano",
     "severity_level": "high",
@@ -114,14 +276,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      4
+      7
     ],
     "occurred_at": "2026-04-11T01:50:00+00:00",
     "published_at": "2026-04-11T01:50:00+00:00",
     "fetched_at": "2026-04-11T01:50:00+00:00"
   },
   {
-    "id": 3,
+    "id": 6,
     "group_key": "volcano|6cd1b9b3893bc2ea0369e357c8b6d1962f50ed7d",
     "event_type": "volcano",
     "severity_level": "high",
@@ -180,14 +342,14 @@
       "merged_count": 2
     },
     "member_event_ids": [
-      5
+      8
     ],
     "occurred_at": "2026-04-11T00:06:01+00:00",
     "published_at": "2026-04-11T00:06:01+00:00",
     "fetched_at": "2026-04-11T00:06:01+00:00"
   },
   {
-    "id": 4,
+    "id": 7,
     "group_key": "volcano|3151df275bf6857c5ba6bfacf39596c50cdce382",
     "event_type": "volcano",
     "severity_level": "high",
@@ -247,14 +409,14 @@
       "merged_count": 2
     },
     "member_event_ids": [
-      6
+      9
     ],
     "occurred_at": "2026-04-10T18:00:02+00:00",
     "published_at": "2026-04-10T18:00:02+00:00",
     "fetched_at": "2026-04-10T18:00:02+00:00"
   },
   {
-    "id": 5,
+    "id": 8,
     "group_key": "earthquake|us6000snxb",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -290,7 +452,7 @@
     "fetched_at": "2026-04-10T12:08:43.066000+00:00"
   },
   {
-    "id": 6,
+    "id": 9,
     "group_key": "earthquake|us6000snwt",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -324,168 +486,6 @@
     "occurred_at": "2026-04-10T11:08:53.559000+00:00",
     "published_at": "2026-04-10T11:08:53.559000+00:00",
     "fetched_at": "2026-04-10T11:08:53.559000+00:00"
-  },
-  {
-    "id": 9,
-    "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|western_north_pacific_area|tc_04w|f7e9bcf1e1f7bbfa",
-    "event_type": "typhoon",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "Tropical Storm 04W (Sinlaku)",
-    "summary": "wind 40 kt (gust 50)",
-    "started_at": "2026-04-10T06:00:00+00:00",
-    "updated_at": "2026-04-10T06:00:00+00:00",
-    "location_text": "8.2N 151.2E",
-    "lat": 8.2,
-    "lon": 151.2,
-    "source_primary": "JTWC-ABPW",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://www.google.com/maps?q=8.2,151.2",
-    "official_link": "https://www.google.com/maps?q=8.2,151.2",
-    "country_code": null,
-    "payload": {
-      "item_type": "warning",
-      "source": "jtwc_abpw",
-      "source_key": "jtwc_abpw|western_north_pacific_area|tc_04w",
-      "content_hash": "f7e9bcf1e1f7bbfa",
-      "platform_summary": "8.2N 151.2E | wind 40 kt (gust 50)",
-      "platform_location": "8.2N 151.2E",
-      "wind": "40 kt (gust 50)",
-      "risk_48h": null,
-      "risk_7d": null,
-      "next_update": null,
-      "raw_text": "(1) AT 10APR26 0000Z, TROPICAL STORM 04W (SINLAKU) WAS LOCATED \nNEAR 8.2N 151.2E, APPROXIMATELY 496 NM SOUTHEAST OF ANDERSEN AFB, AND \nHAD TRACKED WEST-SOUTHWESTWARD AT 03 KNOTS OVER THE PAST SIX HOURS. \nMAXIMUM SUSTAINED SURFACE WINDS WERE ESTIMATED AT 40 KNOTS GUSTING TO \n50 KNOTS. SEE REF A (WTPN31 PGTW 100300) FOR FURTHER DETAILS.",
-      "metadata": {
-        "basin_section": "WESTERN NORTH PACIFIC AREA (180 TO MALAY PENINSULA)",
-        "storm_class": "TROPICAL STORM",
-        "storm_id": "04W",
-        "storm_name": "SINLAKU",
-        "fix_date": "10APR26",
-        "fix_time": "10APR26 0000Z",
-        "lat": 8.2,
-        "lon": 151.2,
-        "movement_text": "WEST-SOUTHWESTWARD",
-        "movement_kt": 3,
-        "wind_kt": 40,
-        "gust_kt": 50,
-        "warning_reference": "WTPN31 PGTW 100300",
-        "bulletin_issue_at": "2026-04-10T06:00:00+00:00"
-      }
-    },
-    "member_event_ids": [
-      9
-    ],
-    "occurred_at": "2026-04-10T06:00:00+00:00",
-    "published_at": "2026-04-10T06:00:00+00:00",
-    "fetched_at": "2026-04-10T06:00:00+00:00"
-  },
-  {
-    "id": 8,
-    "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|tc_30p|8fdaeadfa66af157",
-    "event_type": "typhoon",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "Tropical Cyclone 30P (Maila)",
-    "summary": "wind 70 kt (gust 85)",
-    "started_at": "2026-04-10T06:00:00+00:00",
-    "updated_at": "2026-04-10T06:00:00+00:00",
-    "location_text": "8.1S 154.6E",
-    "lat": -8.1,
-    "lon": 154.6,
-    "source_primary": "JTWC-ABPW",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://www.google.com/maps?q=-8.1,154.6",
-    "official_link": "https://www.google.com/maps?q=-8.1,154.6",
-    "country_code": null,
-    "payload": {
-      "item_type": "warning",
-      "source": "jtwc_abpw",
-      "source_key": "jtwc_abpw|south_pacific_area|tc_30p",
-      "content_hash": "8fdaeadfa66af157",
-      "platform_summary": "8.1S 154.6E | wind 70 kt (gust 85)",
-      "platform_location": "8.1S 154.6E",
-      "wind": "70 kt (gust 85)",
-      "risk_48h": null,
-      "risk_7d": null,
-      "next_update": null,
-      "raw_text": "(1) AT 10APR26 0000Z, TROPICAL CYCLONE 30P (MAILA) WAS LOCATED \nNEAR 8.1S 154.6E, APPROXIMATELY 737 NM NORTHEAST OF CAIRNS, \nAUSTRALIA, AND HAD TRACKED EAST-NORTHEASTWARD AT 02 KNOTS OVER THE \nPAST SIX HOURS. MAXIMUM SUSTAINED SURFACE WINDS WERE ESTIMATED AT 70 \nKNOTS GUSTING TO 85 KNOTS. SEE REF B (WTPS31 PGTW 100300) FOR FURTHER \nDETAILS.",
-      "metadata": {
-        "basin_section": "SOUTH PACIFIC AREA (WEST COAST OF SOUTH AMERICA TO 135 EAST)",
-        "storm_class": "TROPICAL CYCLONE",
-        "storm_id": "30P",
-        "storm_name": "MAILA",
-        "fix_date": "10APR26",
-        "fix_time": "10APR26 0000Z",
-        "lat": -8.1,
-        "lon": 154.6,
-        "movement_text": "EAST-NORTHEASTWARD",
-        "movement_kt": 2,
-        "wind_kt": 70,
-        "gust_kt": 85,
-        "warning_reference": "WTPS31 PGTW 100300",
-        "bulletin_issue_at": "2026-04-10T06:00:00+00:00"
-      }
-    },
-    "member_event_ids": [
-      10
-    ],
-    "occurred_at": "2026-04-10T06:00:00+00:00",
-    "published_at": "2026-04-10T06:00:00+00:00",
-    "fetched_at": "2026-04-10T06:00:00+00:00"
-  },
-  {
-    "id": 7,
-    "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|ss_31p|913e0ba609c09264",
-    "event_type": "typhoon",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "SS 31P",
-    "summary": "wind 53-58 kt · 977 mb",
-    "started_at": "2026-04-10T06:00:00+00:00",
-    "updated_at": "2026-04-10T06:00:00+00:00",
-    "location_text": "28.7S 178.5E",
-    "lat": -28.7,
-    "lon": 178.5,
-    "source_primary": "JTWC-ABPW",
-    "source_secondary": "disturbance",
-    "status": "active",
-    "map_url": "https://www.google.com/maps?q=-28.7,178.5",
-    "official_link": "https://www.google.com/maps?q=-28.7,178.5",
-    "country_code": null,
-    "payload": {
-      "item_type": "disturbance",
-      "source": "jtwc_abpw",
-      "source_key": "jtwc_abpw|south_pacific_area|ss_31p",
-      "content_hash": "913e0ba609c09264",
-      "platform_summary": "28.7S 178.5E | winds 53-58 kt | 977 mb",
-      "platform_location": "28.7S 178.5E",
-      "wind": "53-58 kt",
-      "risk_48h": null,
-      "risk_7d": null,
-      "next_update": null,
-      "raw_text": "(1) AN AREA OF CONVECTION (SS 31P) PREVIOUSLY LOCATED NEAR 28.2S \n178.8E IS NOW LOCATED NEAR 28.7S 178.5E, APPROXIMATELY 564 NM \nSOUTHWEST OF TONGA. THE SYSTEM IS CURRENTLY CLASSIFIED AS A \nSUBTROPICAL CYCLONE, GENERALLY CHARACTERIZED AS HAVING BOTH TROPICAL \nAND MIDLATITUDE CYCLONE FEATURES. MULTISPECTRAL SATELLITE IMAGERY \n(MSI) DEPICTS A VERY WELL-DEFINED LOW LEVEL CIRCULATION CENTER (LLCC) \nEMBEDDED WITHIN A TIGHT SWIRL OF MID-LEVEL CLOUD BANDS, ABSENT OF ANY \nDEEP CONVECTION. ENVIRONMENTAL ANALYSIS REVEALS UNFAVORABLE \nCONDITIONS FOR DEVELOPMENT CHARACTERIZED BY HIGH VERTICAL WIND SHEAR \n(20-30 KNOTS), MODERATE UPPER LEVEL POLEWARD OUTFLOW, AND COLD SEA \nSURFACE TEMPERATURES (23-24 C). GLOBAL MODELS AGREE ON A \nSOUTHWESTWARD TRACK OVER THE NEXT 24-48 HOURS. FOR HAZARDS AND \nWARNINGS, REFERENCE THE FLEET WEATHER CENTER SAN DIEGO HIGH WINDS AND \nSEAS PRODUCT OR REFER TO LOCAL WMO DESIGNATED FORECAST AUTHORITY. \nMAXIMUM SUSTAINED SURFACE WINDS ARE ESTIMATED AT 53 TO 58 KNOTS. \nMINIMUM SEA LEVEL PRESSURE IS ESTIMATED TO BE NEAR 977 MB. THE \nPOTENTIAL FOR THE DEVELOPMENT OF A SIGNIFICANT TROPICAL CYCLONE \nWITHIN THE NEXT 24 HOURS IS LOW.",
-      "metadata": {
-        "basin_section": "SOUTH PACIFIC AREA (WEST COAST OF SOUTH AMERICA TO 135 EAST)",
-        "system_prefix": "SS",
-        "system_id": "31P",
-        "system_class": "SUBTROPICAL CYCLONE",
-        "lat": -28.7,
-        "lon": 178.5,
-        "wind_kt_min": 53,
-        "wind_kt_max": 58,
-        "wind_kt": 58,
-        "pressure_mb": 977,
-        "bulletin_issue_at": "2026-04-10T06:00:00+00:00"
-      }
-    },
-    "member_event_ids": [
-      11
-    ],
-    "occurred_at": "2026-04-10T06:00:00+00:00",
-    "published_at": "2026-04-10T06:00:00+00:00",
-    "fetched_at": "2026-04-10T06:00:00+00:00"
   },
   {
     "id": 10,
@@ -561,7 +561,7 @@
       }
     },
     "member_event_ids": [
-      8
+      11
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",
@@ -641,7 +641,7 @@
       }
     },
     "member_event_ids": [
-      7
+      10
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

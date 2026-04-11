@@ -174,7 +174,6 @@ export function createDisasterModule(ctx) {
       }
     }
   }
-  }
 
   return {
     refresh,

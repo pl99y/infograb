@@ -19,6 +19,7 @@ const MESSAGE_TYPE_LABELS = {
 };
 
 const TAB_LABELS = {
+  launches: "发射动态",
   alerts: "NOAA Alerts",
   forecast: "3-Day Forecast",
 };
@@ -28,23 +29,17 @@ function escapeHtml(value) {
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
+    .replace(/\"/g, "&quot;")
     .replace(/'/g, "&#39;");
 }
 
 function normalizeDayLabels(panel) {
   const days = panel?.geomagnetic?.days;
-  if (Array.isArray(days) && days.length >= 3) {
-    return days.slice(0, 3);
-  }
+  if (Array.isArray(days) && days.length >= 3) return days.slice(0, 3);
   const solarDays = panel?.solar_radiation?.days;
-  if (Array.isArray(solarDays) && solarDays.length >= 3) {
-    return solarDays.slice(0, 3);
-  }
+  if (Array.isArray(solarDays) && solarDays.length >= 3) return solarDays.slice(0, 3);
   const radioDays = panel?.radio_blackout?.days;
-  if (Array.isArray(radioDays) && radioDays.length >= 3) {
-    return radioDays.slice(0, 3);
-  }
+  if (Array.isArray(radioDays) && radioDays.length >= 3) return radioDays.slice(0, 3);
   return DEFAULT_DAY_LABELS;
 }
 
@@ -61,7 +56,114 @@ function formatIssueTime(value) {
   return formatAbsoluteLocalDateTime(value);
 }
 
-function pickLatestTimestamp(alerts, forecast) {
+function hasLaunchValue(value) {
+  const text = compactSingleLine(value);
+  if (!text) return false;
+  const lowered = text.toLowerCase();
+  return text !== "—" && lowered !== "null" && lowered !== "undefined";
+}
+
+function formatLaunchValue(value) {
+  return hasLaunchValue(value) ? compactSingleLine(value) : "—";
+}
+
+function formatLaunchDateParts(value) {
+  const text = compactSingleLine(value);
+  if (!text) return { month: "--", day: "--" };
+
+  const match = text.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if (match) {
+    return { month: match[2], day: match[3] };
+  }
+
+  const date = new Date(text);
+  if (!Number.isNaN(date.getTime())) {
+    return {
+      month: String(date.getMonth() + 1).padStart(2, "0"),
+      day: String(date.getDate()).padStart(2, "0"),
+    };
+  }
+
+  return { month: "--", day: text.slice(-2).padStart(2, "0") };
+}
+
+function normalizeOutcome(value) {
+  const text = compactSingleLine(value);
+  if (!text) return null;
+
+  const lowered = text.toLowerCase();
+  if (["success", "successful", "succeeded", "成功"].includes(lowered)) {
+    return { label: "成功", tone: "success" };
+  }
+  if (["failure", "failed", "fail", "失败"].includes(lowered)) {
+    return { label: "失败", tone: "failure" };
+  }
+  if (
+    [
+      "partial success",
+      "partially successful",
+      "partial failure",
+      "partially failed",
+      "部分成功",
+      "部分失败",
+    ].includes(lowered)
+  ) {
+    return { label: "部分成功", tone: "partial" };
+  }
+  return { label: text, tone: "neutral" };
+}
+
+function cleanPayloadLine(value) {
+  if (!hasLaunchValue(value)) return "";
+  return compactSingleLine(value).replace(/^载荷\/运力\s*[·:：-]\s*/u, "");
+}
+
+function translateLaunchCategory(value) {
+  const text = compactSingleLine(value);
+  if (!text) return "";
+  const lowered = text.toLowerCase();
+  if (lowered === "orbital") return "轨道";
+  if (lowered === "deep space") return "深空";
+  if (lowered === "suborbital") return "亚轨道";
+  return text;
+}
+
+function parseLaunchMetrics(value) {
+  const text = cleanPayloadLine(value);
+  if (!text) return [];
+
+  const parts = text
+    .split(/\s*[·•|｜]\s*/u)
+    .map((part) => compactSingleLine(part))
+    .filter(Boolean);
+
+  const metrics = [];
+  for (const part of parts) {
+    const match = part.match(/^(载荷|payload|LEO|SSO|近地轨道|太阳同步)\s*(.+)$/i);
+    if (!match) continue;
+    const rawLabel = compactSingleLine(match[1]);
+    const rawValue = compactSingleLine(match[2]).replace(/\s+t$/i, "t");
+    const lowered = rawLabel.toLowerCase();
+    let label = rawLabel;
+    if (rawLabel === "载荷" || lowered === "payload") label = "载荷";
+    else if (lowered === "leo" || rawLabel === "近地轨道") label = "近地轨道";
+    else if (lowered === "sso" || rawLabel === "太阳同步") label = "太阳同步";
+    metrics.push({ label, value: rawValue });
+  }
+  return metrics;
+}
+
+function renderLaunchMetricTag(metric) {
+  if (!metric?.label || !metric?.value) return "";
+  return `
+    <span class="space-launch-metric-tag">
+      <span class="space-launch-metric-tag-label">${escapeHtml(metric.label)}</span>
+      <span class="space-launch-metric-tag-value">${escapeHtml(metric.value)}</span>
+    </span>
+  `;
+}
+
+function pickLatestTimestamp(alerts, forecast, launches) {
   const values = [];
 
   for (const item of Array.isArray(alerts) ? alerts : []) {
@@ -72,6 +174,8 @@ function pickLatestTimestamp(alerts, forecast) {
   for (const key of ["fetched_at", "forecast_issued_at", "geomag_issued_at"]) {
     if (forecast?.[key]) values.push(new Date(forecast[key]).getTime());
   }
+
+  if (launches?.fetched_at) values.push(new Date(launches.fetched_at).getTime());
 
   const valid = values.filter((value) => !Number.isNaN(value));
   if (!valid.length) return null;
@@ -198,7 +302,67 @@ function renderForecast(container, forecastPayload) {
   `;
 }
 
+function renderLaunchMetaChip(text, tone = "default") {
+  if (!hasLaunchValue(text)) return "";
+  const toneClass = tone ? ` space-launch-meta-chip-${tone}` : "";
+  return `<span class="space-launch-meta-chip${toneClass}">${escapeHtml(compactSingleLine(text))}</span>`;
+}
+
+function renderLaunches(container, payload) {
+  if (!container) return;
+  const items = Array.isArray(payload?.items) ? payload.items : [];
+  if (!items.length) {
+    setEmpty(container, "暂无发射动态数据。");
+    return;
+  }
+
+  clearElement(container);
+
+  items.forEach((item) => {
+    const card = document.createElement("article");
+    card.className = "space-launch-row";
+
+    const dateParts = formatLaunchDateParts(item?.date);
+    const vehicle = hasLaunchValue(item?.vehicle) ? compactSingleLine(item.vehicle) : "型号待补";
+    const site = formatLaunchValue(item?.launch_site);
+    const outcome = normalizeOutcome(item?.outcome);
+    const country = hasLaunchValue(item?.country) ? compactSingleLine(item.country) : "国家未知";
+    const category = translateLaunchCategory(item?.category);
+    const metrics = parseLaunchMetrics(item?.actual_payload_capacity);
+    const starlink = compactSingleLine(item?.starlink_mission || "");
+    const showStarlink = /^(yes|true|是|星链|starlink)$/i.test(starlink);
+
+    card.innerHTML = `
+      <div class="space-launch-row-aside">
+        <div class="space-launch-date-card">
+          <div class="space-launch-date-month">${escapeHtml(dateParts.month)}月</div>
+          <div class="space-launch-date-day">${escapeHtml(dateParts.day)}</div>
+        </div>
+      </div>
+      <div class="space-launch-row-main">
+        <div class="space-launch-row-head">
+          <div class="space-launch-row-title">${escapeHtml(vehicle)}</div>
+          ${outcome ? `<span class="space-launch-outcome-badge space-launch-outcome-${escapeHtml(outcome.tone)}">${escapeHtml(outcome.label)}</span>` : ""}
+        </div>
+        <div class="space-launch-row-site">${escapeHtml(site)}</div>
+        <div class="space-launch-row-meta">
+          ${renderLaunchMetaChip(country, "country")}
+          ${renderLaunchMetaChip(category, "category")}
+          ${showStarlink ? '<span class="space-launch-meta-chip space-launch-meta-chip-starlink">Starlink</span>' : ""}
+        </div>
+        ${metrics.length ? `
+          <div class="space-launch-row-metrics">
+            ${metrics.map(renderLaunchMetricTag).join("")}
+          </div>
+        ` : ""}
+      </div>
+    `;
+    container.appendChild(card);
+  });
+}
+
 export function createSpaceWeatherModule(ctx) {
+  const launchesContainer = document.getElementById("spaceLaunchesContainer");
   const alertsContainer = document.getElementById("spaceWeatherAlertsContainer");
   const forecastContainer = document.getElementById("spaceWeatherForecastContainer");
   const updatedAt = document.getElementById("spaceWeatherUpdatedAt");
@@ -206,7 +370,7 @@ export function createSpaceWeatherModule(ctx) {
   const tabButtons = Array.from(document.querySelectorAll("[data-space-weather-tab]"));
   const tabPanels = Array.from(document.querySelectorAll("[data-space-weather-panel]"));
 
-  let activeTab = "alerts";
+  let activeTab = tabButtons.find((button) => button.classList.contains("active"))?.getAttribute("data-space-weather-tab") || "launches";
 
   function setActiveTab(tabName) {
     activeTab = tabName;
@@ -228,10 +392,8 @@ export function createSpaceWeatherModule(ctx) {
     if (!tabButtons.length || !tabPanels.length) return;
 
     tabButtons.forEach((button) => {
-      const tabName = button.getAttribute("data-space-weather-tab") || "alerts";
-      if (!button.textContent?.trim()) {
-        button.textContent = TAB_LABELS[tabName] || tabName;
-      }
+      const tabName = button.getAttribute("data-space-weather-tab") || "launches";
+      if (!button.textContent?.trim()) button.textContent = TAB_LABELS[tabName] || tabName;
       button.addEventListener("click", () => setActiveTab(tabName));
     });
 
@@ -250,20 +412,23 @@ export function createSpaceWeatherModule(ctx) {
   }
 
   async function refresh() {
+    if (launchesContainer) setLoading(launchesContainer, "正在加载发射动态...");
     if (alertsContainer) setLoading(alertsContainer, "正在加载 NOAA Alerts...");
     if (forecastContainer) setLoading(forecastContainer, "正在加载 3-Day Forecast...");
 
     try {
-      const [alerts, forecast] = await Promise.all([
+      const [launches, alerts, forecast] = await Promise.all([
+        ctx.api.get("/api/space-weather/launches"),
         ctx.api.get("/api/space-weather/alerts?limit=30"),
         ctx.api.get("/api/space-weather/forecast"),
       ]);
 
+      ctx.state.spaceLaunches = launches || { items: [] };
       ctx.state.spaceWeatherAlerts = Array.isArray(alerts) ? alerts : [];
       ctx.state.spaceWeatherForecast = forecast || null;
       const exportGeneratedAt = await getExportProfileGeneratedAt("12h");
-      ctx.state.lastSpaceWeatherFetchedAt = exportGeneratedAt || pickLatestTimestamp(ctx.state.spaceWeatherAlerts, ctx.state.spaceWeatherForecast);
-
+      ctx.state.lastSpaceWeatherFetchedAt = exportGeneratedAt || pickLatestTimestamp(ctx.state.spaceWeatherAlerts, ctx.state.spaceWeatherForecast, ctx.state.spaceLaunches);
+      renderLaunches(launchesContainer, ctx.state.spaceLaunches);
       renderAlerts(alertsContainer, ctx.state.spaceWeatherAlerts);
       renderForecast(forecastContainer, ctx.state.spaceWeatherForecast);
       updateHeader();
@@ -271,6 +436,7 @@ export function createSpaceWeatherModule(ctx) {
       console.error("Failed to load space weather data:", error);
       ctx.state.lastSpaceWeatherFetchedAt = null;
       updateHeader();
+      setError(launchesContainer, "发射动态加载失败。");
       setError(alertsContainer, "NOAA Alerts 加载失败。");
       setError(forecastContainer, "NOAA Forecast 加载失败。");
     }
@@ -285,7 +451,7 @@ export function createSpaceWeatherModule(ctx) {
       await refresh();
     } catch (error) {
       console.error("Manual space weather refresh failed:", error);
-      alert("太空天气模块手动刷新失败。");
+      alert("空间监控模块手动刷新失败。");
     } finally {
       if (refreshBtn) refreshBtn.disabled = false;
       if (label) label.textContent = "刷新";

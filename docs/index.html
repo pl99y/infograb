@@ -7,7 +7,7 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <link rel="stylesheet" href="./static/dashboard.css?v=41">
+    <link rel="stylesheet" href="./static/dashboard.css?v=43">
 </head>
 <body>
     <header class="top-nav">
@@ -151,8 +151,8 @@
             <div
                 class="grid-stack-item"
                 gs-id="space-weather"
-                data-panel-title="太空天气"
-                data-mobile-nav-title="太空"
+                data-panel-title="空间监控"
+                data-mobile-nav-title="空间"
                 data-default-w="8"
                 data-default-h="620"
                 data-min-w="4"
@@ -164,7 +164,7 @@
                         <div class="section-header">
                             <div class="section-header-row">
                                 <div class="section-header-text">
-                                    <h3>太空天气</h3>
+                                    <h3>空间监控</h3>
                                     <div class="section-updated" id="spaceWeatherUpdatedAt">（加载中）</div>
                                 </div>
                             </div>
@@ -172,11 +172,18 @@
 
                         <div class="space-weather-wrap">
                             <div class="space-weather-tabs" id="spaceWeatherTabs">
-                                <button class="space-weather-tab-btn active" type="button" data-space-weather-tab="alerts">NOAA Alerts</button>
+                                <button class="space-weather-tab-btn active" type="button" data-space-weather-tab="launches">发射动态</button>
+                                <button class="space-weather-tab-btn" type="button" data-space-weather-tab="alerts">NOAA Alerts</button>
                                 <button class="space-weather-tab-btn" type="button" data-space-weather-tab="forecast">3-Day Forecast</button>
                             </div>
 
-                            <div class="space-weather-tab-panel active" id="spaceWeatherAlertsPanel" data-space-weather-panel="alerts">
+                            <div class="space-weather-tab-panel active" id="spaceLaunchesPanel" data-space-weather-panel="launches">
+                                <div class="space-weather-launches" id="spaceLaunchesContainer">
+                                    <div class="loading-state">正在加载发射动态...</div>
+                                </div>
+                            </div>
+
+                            <div class="space-weather-tab-panel" id="spaceWeatherAlertsPanel" data-space-weather-panel="alerts">
                                 <div class="space-weather-alerts" id="spaceWeatherAlertsContainer">
                                     <div class="loading-state">正在加载 NOAA Alerts...</div>
                                 </div>
@@ -466,6 +473,6 @@
         <img class="lightbox-content" id="lightbox-img" alt="Expanded media">
     </div>
 
-    <script type="module" src="./static/app/main-pages.js?v=41"></script>
+    <script type="module" src="./static/app/main-pages.js?v=42"></script>
 </body>
 </html>

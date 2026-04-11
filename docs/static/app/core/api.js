@@ -25,6 +25,7 @@ export function createApi() {
     if (clean.startsWith("/api/weather/alerts")) return "./data/weather_alerts.json";
     if (clean.startsWith("/api/disaster/ongoing")) return "./data/disaster_ongoing.json";
     if (clean.startsWith("/api/public-health/latest")) return "./data/public_health_latest.json";
+    if (clean.startsWith("/api/space-weather/launches")) return "./data/space_launches_latest.json";
     if (clean.startsWith("/api/space-weather/alerts")) return "./data/space_weather_alerts.json";
     if (clean.startsWith("/api/space-weather/forecast")) return "./data/space_weather_forecast.json";
     if (clean.startsWith("/api/mnd-pla/dashboard")) return "./data/mnd_pla_dashboard.json";

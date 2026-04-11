@@ -11,7 +11,7 @@ import { createIflowModule } from "./modules/iflow/index.js";
 import { createAviationModule } from "./modules/aviation/index.js";
 import { createDisasterModule } from "./modules/disaster/index.js";
 import { createPublicHealthModule } from "./modules/public-health/index.js";
-import { createSpaceWeatherModule } from "./modules/space-weather/index.js";
+import { createSpaceWeatherModule } from "./modules/space-weather/index.js?v=43";
 import { createMndPlaModule } from "./modules/mnd-pla/index.js";
 import { createF1Module } from "./modules/f1/index.js";
 import { createFeedModule } from "./modules/feed/index.js";
@@ -37,6 +37,8 @@ function createContext() {
       publicHealthOutbreakEvents: [],
       telegram: [],
       newsTimeline: [],
+      spaceWeatherLaunches: null,
+      spaceLaunches: null,
       spaceWeatherAlerts: [],
       spaceWeatherForecast: null,
       mndPlaData: null,

@@ -18,4 +18,5 @@ services/     shared processing utilities
 scripts/      export scripts
 docs/         static frontend + exported JSON
 
-A low-cost imitation of a well-known project in this space — partly born out of frustration with how commercial it has become.
+A low-cost imitation of a well-known project in this space
+— partly born out of frustration with how commercial it has become.

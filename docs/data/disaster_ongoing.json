@@ -1,72 +1,6 @@
 [
   {
     "id": 1,
-    "group_key": "volcano|0e951a66ef8f67298dbc66ae42eca4da5933e20a",
-    "event_type": "volcano",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "Fournaise Pitondela",
-    "summary": "VRP 240.64 MW · VIIRS375 / VIIRS · 4.58 km",
-    "started_at": "2026-04-12T09:00:01+00:00",
-    "updated_at": "2026-04-12T09:00:01+00:00",
-    "location_text": "Fournaise Pitondela",
-    "lat": null,
-    "lon": null,
-    "source_primary": "MIROVA",
-    "source_secondary": "VIIRS375 / VIIRS",
-    "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=233020",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=233020",
-    "country_code": null,
-    "payload": {
-      "volcano_id": "233020",
-      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=233020",
-      "vrp_mw": 240.64,
-      "distance_km": 5.41,
-      "sensor": "VIIRS",
-      "row_class": [
-        "high"
-      ],
-      "source_page": "https://www.mirovaweb.it/NRT/",
-      "sensors": [
-        "VIIRS375",
-        "VIIRS"
-      ],
-      "reports": [
-        {
-          "volcano_id": "233020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=233020",
-          "vrp_mw": 221.51,
-          "distance_km": 4.58,
-          "sensor": "VIIRS375",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        },
-        {
-          "volcano_id": "233020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=233020",
-          "vrp_mw": 240.64,
-          "distance_km": 5.41,
-          "sensor": "VIIRS",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        }
-      ],
-      "merged_count": 2
-    },
-    "member_event_ids": [
-      3
-    ],
-    "occurred_at": "2026-04-12T09:00:01+00:00",
-    "published_at": "2026-04-12T09:00:01+00:00",
-    "fetched_at": "2026-04-12T09:00:01+00:00"
-  },
-  {
-    "id": 2,
     "group_key": "volcano|75fad93a4db43de5170144c245bafe2634fafa78",
     "event_type": "volcano",
     "severity_level": "high",
@@ -113,14 +47,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      4
+      3
     ],
     "occurred_at": "2026-04-12T06:40:00+00:00",
     "published_at": "2026-04-12T06:40:00+00:00",
     "fetched_at": "2026-04-12T06:40:00+00:00"
   },
   {
-    "id": 4,
+    "id": 3,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|western_north_pacific_area|tc_04w|13601e02d8eea0f8",
     "event_type": "typhoon",
     "severity_level": "extreme",
@@ -168,14 +102,14 @@
       }
     },
     "member_event_ids": [
-      9
+      8
     ],
     "occurred_at": "2026-04-12T06:00:00+00:00",
     "published_at": "2026-04-12T06:00:00+00:00",
     "fetched_at": "2026-04-12T06:00:00+00:00"
   },
   {
-    "id": 3,
+    "id": 2,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|invest_31p|1a48abe934774ebd",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -221,14 +155,14 @@
       }
     },
     "member_event_ids": [
-      10
+      9
     ],
     "occurred_at": "2026-04-12T06:00:00+00:00",
     "published_at": "2026-04-12T06:00:00+00:00",
     "fetched_at": "2026-04-12T06:00:00+00:00"
   },
   {
-    "id": 5,
+    "id": 4,
     "group_key": "volcano|1b283dfe7834b19424c8efa9db04c9ed0dea6c8b",
     "event_type": "volcano",
     "severity_level": "very_high",
@@ -275,14 +209,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      5
+      4
     ],
     "occurred_at": "2026-04-12T05:30:00+00:00",
     "published_at": "2026-04-12T05:30:00+00:00",
     "fetched_at": "2026-04-12T05:30:00+00:00"
   },
   {
-    "id": 6,
+    "id": 5,
     "group_key": "earthquake|us6000spea",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -318,7 +252,7 @@
     "fetched_at": "2026-04-12T02:40:36.099000+00:00"
   },
   {
-    "id": 7,
+    "id": 6,
     "group_key": "earthquake|us6000spe2",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -354,20 +288,20 @@
     "fetched_at": "2026-04-12T01:09:42.258000+00:00"
   },
   {
-    "id": 8,
+    "id": 7,
     "group_key": "volcano|643a31df973590be8699978b30661e37cbd9ad52",
     "event_type": "volcano",
     "severity_level": "high",
     "severity_color": "high",
     "title": "Nyamuragira",
-    "summary": "VRP 910.90 MW · VIIRS / VIIRS375 · 8.23 km",
+    "summary": "VRP 910.90 MW · VIIRS · 8.39 km",
     "started_at": "2026-04-11T23:42:01+00:00",
     "updated_at": "2026-04-11T23:42:01+00:00",
     "location_text": "Nyamuragira",
     "lat": null,
     "lon": null,
     "source_primary": "MIROVA",
-    "source_secondary": "VIIRS / VIIRS375",
+    "source_secondary": "VIIRS",
     "status": "active",
     "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
     "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
@@ -383,8 +317,7 @@
       ],
       "source_page": "https://www.mirovaweb.it/NRT/",
       "sensors": [
-        "VIIRS",
-        "VIIRS375"
+        "VIIRS"
       ],
       "reports": [
         {
@@ -397,30 +330,19 @@
             "high"
           ],
           "source_page": "https://www.mirovaweb.it/NRT/"
-        },
-        {
-          "volcano_id": "223020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
-          "vrp_mw": 148.5,
-          "distance_km": 8.23,
-          "sensor": "VIIRS375",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
         }
       ],
-      "merged_count": 2
+      "merged_count": 1
     },
     "member_event_ids": [
-      6
+      5
     ],
     "occurred_at": "2026-04-11T23:42:01+00:00",
     "published_at": "2026-04-11T23:42:01+00:00",
     "fetched_at": "2026-04-11T23:42:01+00:00"
   },
   {
-    "id": 9,
+    "id": 8,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -493,14 +415,14 @@
       }
     },
     "member_event_ids": [
-      8
+      7
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",
     "fetched_at": "2026-03-25T01:00:00+00:00"
   },
   {
-    "id": 10,
+    "id": 9,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -573,7 +495,7 @@
       }
     },
     "member_event_ids": [
-      7
+      6
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

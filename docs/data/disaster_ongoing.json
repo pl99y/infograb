@@ -1,6 +1,78 @@
 [
   {
     "id": 1,
+    "group_key": "earthquake|us6000spjb",
+    "event_type": "earthquake",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "M 5.1 - 97 km S of King Cove, Alaska",
+    "summary": "97 km S of King Cove, Alaska",
+    "started_at": "2026-04-12T20:14:10.340000+00:00",
+    "updated_at": "2026-04-12T20:40:59.969000+00:00",
+    "location_text": "97 km S of King Cove, Alaska",
+    "lat": 54.1877,
+    "lon": -162.3868,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000spjb",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000spjb",
+    "country_code": null,
+    "payload": {
+      "mag": 5.1,
+      "depth_km": 35.0,
+      "place": "97 km S of King Cove, Alaska",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000spjb.geojson",
+      "alert": null,
+      "sig": 401,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      1
+    ],
+    "occurred_at": "2026-04-12T20:14:10.340000+00:00",
+    "published_at": "2026-04-12T20:14:10.340000+00:00",
+    "fetched_at": "2026-04-12T20:14:10.340000+00:00"
+  },
+  {
+    "id": 2,
+    "group_key": "earthquake|us6000spj7",
+    "event_type": "earthquake",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "M 5.0 - 106 km SSW of Severo-Kuril’sk, Russia",
+    "summary": "106 km SSW of Severo-Kuril’sk, Russia",
+    "started_at": "2026-04-12T20:05:06.816000+00:00",
+    "updated_at": "2026-04-12T20:33:19.040000+00:00",
+    "location_text": "106 km SSW of Severo-Kuril’sk, Russia",
+    "lat": 49.7449,
+    "lon": 155.7719,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000spj7",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000spj7",
+    "country_code": null,
+    "payload": {
+      "mag": 5.0,
+      "depth_km": 10.0,
+      "place": "106 km SSW of Severo-Kuril’sk, Russia",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000spj7.geojson",
+      "alert": null,
+      "sig": 385,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      2
+    ],
+    "occurred_at": "2026-04-12T20:05:06.816000+00:00",
+    "published_at": "2026-04-12T20:05:06.816000+00:00",
+    "fetched_at": "2026-04-12T20:05:06.816000+00:00"
+  },
+  {
+    "id": 3,
     "group_key": "volcano|9b7c78a7ba1ff17844fc564697edf90cb81d18a9",
     "event_type": "volcano",
     "severity_level": "very_high",
@@ -47,14 +119,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      3
+      5
     ],
     "occurred_at": "2026-04-12T17:40:00+00:00",
     "published_at": "2026-04-12T17:40:00+00:00",
     "fetched_at": "2026-04-12T17:40:00+00:00"
   },
   {
-    "id": 2,
+    "id": 4,
     "group_key": "volcano|001cc4e9cc5fac5e3684548afedb223096b2e6b6",
     "event_type": "volcano",
     "severity_level": "high",
@@ -114,14 +186,14 @@
       "merged_count": 2
     },
     "member_event_ids": [
-      4
+      6
     ],
     "occurred_at": "2026-04-12T17:24:02+00:00",
     "published_at": "2026-04-12T17:24:02+00:00",
     "fetched_at": "2026-04-12T17:24:02+00:00"
   },
   {
-    "id": 4,
+    "id": 6,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|western_north_pacific_area|tc_04w|1bdfb9fd706e887d",
     "event_type": "typhoon",
     "severity_level": "extreme",
@@ -169,14 +241,14 @@
       }
     },
     "member_event_ids": [
-      8
+      10
     ],
     "occurred_at": "2026-04-12T13:30:00+00:00",
     "published_at": "2026-04-12T13:30:00+00:00",
     "fetched_at": "2026-04-12T13:30:00+00:00"
   },
   {
-    "id": 3,
+    "id": 5,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|invest_31p|439508b0b10896ac",
     "event_type": "typhoon",
     "severity_level": "low",
@@ -216,14 +288,14 @@
       }
     },
     "member_event_ids": [
-      9
+      11
     ],
     "occurred_at": "2026-04-12T13:30:00+00:00",
     "published_at": "2026-04-12T13:30:00+00:00",
     "fetched_at": "2026-04-12T13:30:00+00:00"
   },
   {
-    "id": 5,
+    "id": 7,
     "group_key": "volcano|51879a0ac40916582986299d213f5934f566710a",
     "event_type": "volcano",
     "severity_level": "very_high",
@@ -283,14 +355,14 @@
       "merged_count": 2
     },
     "member_event_ids": [
-      5
+      7
     ],
     "occurred_at": "2026-04-12T10:36:01+00:00",
     "published_at": "2026-04-12T10:36:01+00:00",
     "fetched_at": "2026-04-12T10:36:01+00:00"
   },
   {
-    "id": 6,
+    "id": 8,
     "group_key": "earthquake|us6000spea",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -319,14 +391,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      1
+      3
     ],
     "occurred_at": "2026-04-12T02:40:36.099000+00:00",
     "published_at": "2026-04-12T02:40:36.099000+00:00",
     "fetched_at": "2026-04-12T02:40:36.099000+00:00"
   },
   {
-    "id": 7,
+    "id": 9,
     "group_key": "earthquake|us6000spe2",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -355,14 +427,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      2
+      4
     ],
     "occurred_at": "2026-04-12T01:09:42.258000+00:00",
     "published_at": "2026-04-12T01:09:42.258000+00:00",
     "fetched_at": "2026-04-12T01:09:42.258000+00:00"
   },
   {
-    "id": 8,
+    "id": 10,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -435,14 +507,14 @@
       }
     },
     "member_event_ids": [
-      7
+      9
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",
     "fetched_at": "2026-03-25T01:00:00+00:00"
   },
   {
-    "id": 9,
+    "id": 11,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -515,7 +587,7 @@
       }
     },
     "member_event_ids": [
-      6
+      8
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

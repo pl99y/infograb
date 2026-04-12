@@ -1,1 +1,41 @@
-[]
+[
+  {
+    "id": 1,
+    "dedupe_key": "urn:oid:2.49.0.1.840.0.1a18c9721553591a20cd94d51f91c9d842b6bbf4.002.2",
+    "source_primary": "WMO",
+    "title": "Typhoon Warning issued April 12 at 3:56PM ChST by NWS Tiyan GU",
+    "summary": "Rota; Tinian; Saipan",
+    "severity_level": "extreme",
+    "color_level": "extreme",
+    "event_type": "weather",
+    "location_text": "Rota; Tinian; Saipan",
+    "issued_at": "2026-04-12T05:56:00+00:00",
+    "effective_at": "2026-04-12T05:56:00+00:00",
+    "expires_at": "2026-04-12T14:00:00+00:00",
+    "source_url": "https://severeweather.wmo.int/list.html",
+    "detail_url": "https://severeweather.wmo.int/list.html",
+    "payload": {
+      "id": "urn:oid:2.49.0.1.840.0.1a18c9721553591a20cd94d51f91c9d842b6bbf4.002.2",
+      "event": "Typhoon Warning",
+      "headline": "Typhoon Warning issued April 12 at 3:56PM ChST by NWS Tiyan GU",
+      "sent": "2026-04-12 05:56:00",
+      "expires": "2026-04-12 14:00:00",
+      "areaDesc": "Rota; Tinian; Saipan",
+      "mid": "093",
+      "ra": "4",
+      "s": 4,
+      "u": 4,
+      "c": 3,
+      "capURL": "us-noaa-nws-en/2026/04/12/05/56/00-91538c5f2e4fe56a87adf1b3b292aca1.xml",
+      "effective": "2026-04-12 05:56:00",
+      "cap_path": "us-noaa-nws-en/2026/04/12/05/56/00-91538c5f2e4fe56a87adf1b3b292aca1.xml",
+      "source_page": "https://severeweather.wmo.int/list.html",
+      "last_updated": "2026-04-12 06:24:09"
+    },
+    "fetched_at": "2026-04-12T06:25:22.623580+00:00",
+    "published_at": "2026-04-12T05:56:00+00:00",
+    "updated_at": "2026-04-12T06:25:22.623580+00:00",
+    "region_text": "Rota; Tinian; Saipan",
+    "link_url": "https://severeweather.wmo.int/list.html"
+  }
+]

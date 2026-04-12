@@ -1,6 +1,45 @@
 [
   {
     "id": 1,
+    "dedupe_key": "urn:oid:2.49.0.1.840.0.7d242045615044b694fd3f1fd6bdd85f3b9dc002.001.1",
+    "source_primary": "WMO",
+    "title": "Typhoon Warning issued April 13 at 4:13AM ChST by NWS Tiyan GU",
+    "summary": "Rota Coastal Waters; Tinian Coastal Waters; Saipan Coastal Waters",
+    "severity_level": "extreme",
+    "color_level": "extreme",
+    "event_type": "weather",
+    "location_text": "Rota Coastal Waters; Tinian Coastal Waters; Saipan Coastal Waters",
+    "issued_at": "2026-04-12T18:13:00+00:00",
+    "effective_at": "2026-04-12T18:13:00+00:00",
+    "expires_at": "2026-04-13T09:15:00+00:00",
+    "source_url": "https://severeweather.wmo.int/list.html",
+    "detail_url": "https://severeweather.wmo.int/list.html",
+    "payload": {
+      "id": "urn:oid:2.49.0.1.840.0.7d242045615044b694fd3f1fd6bdd85f3b9dc002.001.1",
+      "event": "Typhoon Warning",
+      "headline": "Typhoon Warning issued April 13 at 4:13AM ChST by NWS Tiyan GU",
+      "sent": "2026-04-12 18:13:00",
+      "expires": "2026-04-13 09:15:00",
+      "areaDesc": "Rota Coastal Waters; Tinian Coastal Waters; Saipan Coastal Waters",
+      "mid": "093",
+      "ra": "4",
+      "s": 4,
+      "u": 4,
+      "c": 3,
+      "capURL": "us-noaa-nws-en-marine/2026/04/12/18/13/00-ea69ea2ea4960aa66870dd2f1be7146e.xml",
+      "effective": "2026-04-12 18:13:00",
+      "cap_path": "us-noaa-nws-en-marine/2026/04/12/18/13/00-ea69ea2ea4960aa66870dd2f1be7146e.xml",
+      "source_page": "https://severeweather.wmo.int/list.html",
+      "last_updated": "2026-04-12 18:24:09"
+    },
+    "fetched_at": "2026-04-12T18:25:23.998312+00:00",
+    "published_at": "2026-04-12T18:13:00+00:00",
+    "updated_at": "2026-04-12T18:25:23.998312+00:00",
+    "region_text": "Rota Coastal Waters; Tinian Coastal Waters; Saipan Coastal Waters",
+    "link_url": "https://severeweather.wmo.int/list.html"
+  },
+  {
+    "id": 2,
     "dedupe_key": "urn:oid:2.49.0.1.840.0.0d73edb2a8e7b247f13705f9089044c97a1ebf4b.002.1",
     "source_primary": "WMO",
     "title": "Typhoon Warning issued April 13 at 3:42AM ChST by NWS Tiyan GU",
@@ -30,16 +69,16 @@
       "effective": "2026-04-12 17:42:00",
       "cap_path": "us-noaa-nws-en/2026/04/12/17/42/00-654e1a6bbc2416d795bd44ce7562eb66.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-12 18:01:10"
+      "last_updated": "2026-04-12 18:24:09"
     },
-    "fetched_at": "2026-04-12T18:05:27.447378+00:00",
+    "fetched_at": "2026-04-12T18:25:23.998312+00:00",
     "published_at": "2026-04-12T17:42:00+00:00",
-    "updated_at": "2026-04-12T18:05:27.447378+00:00",
+    "updated_at": "2026-04-12T18:25:23.998312+00:00",
     "region_text": "Rota; Tinian; Saipan",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 2,
+    "id": 3,
     "dedupe_key": "IN-1776001276049008_8",
     "source_primary": "WMO",
     "title": "Heat Wave is Likely to occur over 21 Mandals. Please follow SDMA guidelines.",
@@ -69,16 +108,16 @@
       "effective": "2026-04-12 14:10:00",
       "cap_path": "in-ndma-xx/2026/04/12/14/11/16-aa8dd0ca17250bbb09db07ed668e72dd.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-12 18:01:10"
+      "last_updated": "2026-04-12 18:24:09"
     },
-    "fetched_at": "2026-04-12T18:05:27.447378+00:00",
+    "fetched_at": "2026-04-12T18:25:23.998312+00:00",
     "published_at": "2026-04-12T14:11:16+00:00",
-    "updated_at": "2026-04-12T18:05:27.447378+00:00",
+    "updated_at": "2026-04-12T18:25:23.998312+00:00",
     "region_text": "21 Mandals",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 3,
+    "id": 4,
     "dedupe_key": "IN-1776000730306008_8",
     "source_primary": "WMO",
     "title": "Heat Wave is Likely to occur over 30 Mandals. Please follow SDMA guidelines.",
@@ -108,16 +147,16 @@
       "effective": "2026-04-12 14:00:00",
       "cap_path": "in-ndma-xx/2026/04/12/14/02/10-b11a485f828bc0e61e0b0c5ce1064224.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-12 18:01:10"
+      "last_updated": "2026-04-12 18:24:09"
     },
-    "fetched_at": "2026-04-12T18:05:27.447378+00:00",
+    "fetched_at": "2026-04-12T18:25:23.998312+00:00",
     "published_at": "2026-04-12T14:02:10+00:00",
-    "updated_at": "2026-04-12T18:05:27.447378+00:00",
+    "updated_at": "2026-04-12T18:25:23.998312+00:00",
     "region_text": "30 Mandals",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 4,
+    "id": 5,
     "dedupe_key": "9bc5e113-9482-4cb6-9843-716ef167cabc",
     "source_primary": "WMO",
     "title": "Warning, Thick Fog",
@@ -147,51 +186,12 @@
       "effective": "2026-04-12 17:00:00",
       "cap_path": "sa-ncm-en/2026/04/12/11/11/29-be044fd11c580d9cbd6aa261548d1974.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-12 18:01:10"
+      "last_updated": "2026-04-12 18:24:09"
     },
-    "fetched_at": "2026-04-12T18:05:27.447378+00:00",
+    "fetched_at": "2026-04-12T18:25:23.998312+00:00",
     "published_at": "2026-04-12T11:11:29+00:00",
-    "updated_at": "2026-04-12T18:05:27.447378+00:00",
+    "updated_at": "2026-04-12T18:25:23.998312+00:00",
     "region_text": "Eastern Region - Al Khafji : The entire governorate; Eastern Region - An Nuayriyah : The entire governorate; Eastern Region - Qaryah Al Ulya : The entire governorate",
-    "link_url": "https://severeweather.wmo.int/list.html"
-  },
-  {
-    "id": 5,
-    "dedupe_key": "urn:oid:2.49.0.1.840.0.89f0fd6d4c2cc77e37e4a8d2c1bed33a00848cc8.001.1",
-    "source_primary": "WMO",
-    "title": "Typhoon Warning issued April 12 at 8:56PM ChST by NWS Tiyan GU",
-    "summary": "Rota Coastal Waters; Tinian Coastal Waters; Saipan Coastal Waters",
-    "severity_level": "extreme",
-    "color_level": "extreme",
-    "event_type": "weather",
-    "location_text": "Rota Coastal Waters; Tinian Coastal Waters; Saipan Coastal Waters",
-    "issued_at": "2026-04-12T10:56:00+00:00",
-    "effective_at": "2026-04-12T10:56:00+00:00",
-    "expires_at": "2026-04-13T01:00:00+00:00",
-    "source_url": "https://severeweather.wmo.int/list.html",
-    "detail_url": "https://severeweather.wmo.int/list.html",
-    "payload": {
-      "id": "urn:oid:2.49.0.1.840.0.89f0fd6d4c2cc77e37e4a8d2c1bed33a00848cc8.001.1",
-      "event": "Typhoon Warning",
-      "headline": "Typhoon Warning issued April 12 at 8:56PM ChST by NWS Tiyan GU",
-      "sent": "2026-04-12 10:56:00",
-      "expires": "2026-04-13 01:00:00",
-      "areaDesc": "Rota Coastal Waters; Tinian Coastal Waters; Saipan Coastal Waters",
-      "mid": "093",
-      "ra": "4",
-      "s": 4,
-      "u": 4,
-      "c": 3,
-      "capURL": "us-noaa-nws-en-marine/2026/04/12/10/56/00-5363c471b44e6013e4f5c0144b60cf48.xml",
-      "effective": "2026-04-12 10:56:00",
-      "cap_path": "us-noaa-nws-en-marine/2026/04/12/10/56/00-5363c471b44e6013e4f5c0144b60cf48.xml",
-      "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-12 18:01:10"
-    },
-    "fetched_at": "2026-04-12T18:05:27.447378+00:00",
-    "published_at": "2026-04-12T10:56:00+00:00",
-    "updated_at": "2026-04-12T18:05:27.447378+00:00",
-    "region_text": "Rota Coastal Waters; Tinian Coastal Waters; Saipan Coastal Waters",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
@@ -225,11 +225,11 @@
       "effective": "2026-04-12 14:00:00",
       "cap_path": "sa-ncm-en/2026/04/12/09/41/45-aa24b4e39a7be51b3e47099d0ee3e82f.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-12 18:01:10"
+      "last_updated": "2026-04-12 18:24:09"
     },
-    "fetched_at": "2026-04-12T18:05:27.447378+00:00",
+    "fetched_at": "2026-04-12T18:25:23.998312+00:00",
     "published_at": "2026-04-12T09:41:45+00:00",
-    "updated_at": "2026-04-12T18:05:27.447378+00:00",
+    "updated_at": "2026-04-12T18:25:23.998312+00:00",
     "region_text": "Asir Region - Al Namas : The entire governorate; Asir Region - Balqarn : The entire governorate; Asir Region - Tanumah : The entire governorate",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
@@ -264,11 +264,11 @@
       "effective": "2026-04-12 14:00:00",
       "cap_path": "sa-ncm-en/2026/04/12/09/40/01-25bcf3e18b5095ec5673fa8687116611.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-12 18:01:10"
+      "last_updated": "2026-04-12 18:24:09"
     },
-    "fetched_at": "2026-04-12T18:05:27.447378+00:00",
+    "fetched_at": "2026-04-12T18:25:23.998312+00:00",
     "published_at": "2026-04-12T09:40:01+00:00",
-    "updated_at": "2026-04-12T18:05:27.447378+00:00",
+    "updated_at": "2026-04-12T18:25:23.998312+00:00",
     "region_text": "Asir Region - Abha : The entire governorate; Asir Region - Ahad Rufaydah : The entire governorate; Asir Region - Al Farshah : The entire governorate; Asir Region - Khamis Mushayt : The entire governorate; Asir Region - Sarat Abidah : The entire governorate",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
@@ -303,11 +303,11 @@
       "effective": "2026-04-12 14:00:00",
       "cap_path": "sa-ncm-en/2026/04/12/09/31/45-5262983e6a42c5be8851a7e3b6959a98.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-12 18:01:10"
+      "last_updated": "2026-04-12 18:24:09"
     },
-    "fetched_at": "2026-04-12T18:05:27.447378+00:00",
+    "fetched_at": "2026-04-12T18:25:23.998312+00:00",
     "published_at": "2026-04-12T09:31:45+00:00",
-    "updated_at": "2026-04-12T18:05:27.447378+00:00",
+    "updated_at": "2026-04-12T18:25:23.998312+00:00",
     "region_text": "Bahah Region - Al Bahah : The entire governorate; Bahah Region - Al Qara : The entire governorate; Bahah Region - Al Mandaq : The entire governorate; Bahah Region - Baljurashi : The entire governorate; Bahah Region - Bani Hasan : The entire governorate",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
@@ -342,11 +342,11 @@
       "effective": "2026-04-12 14:00:00",
       "cap_path": "sa-ncm-en/2026/04/12/09/30/18-ff562154bc49139e4e689b171208307b.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-12 18:01:10"
+      "last_updated": "2026-04-12 18:24:09"
     },
-    "fetched_at": "2026-04-12T18:05:27.447378+00:00",
+    "fetched_at": "2026-04-12T18:25:23.998312+00:00",
     "published_at": "2026-04-12T09:30:18+00:00",
-    "updated_at": "2026-04-12T18:05:27.447378+00:00",
+    "updated_at": "2026-04-12T18:25:23.998312+00:00",
     "region_text": "Makkah Region - Adam : The entire governorate; Makkah Region - Maysan : The entire governorate",
     "link_url": "https://severeweather.wmo.int/list.html"
   }

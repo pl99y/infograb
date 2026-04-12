@@ -1,6 +1,60 @@
 [
   {
-    "id": 2,
+    "id": 1,
+    "group_key": "volcano|75fad93a4db43de5170144c245bafe2634fafa78",
+    "event_type": "volcano",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Mayon",
+    "summary": "VRP 147.93 MW · MODIS · 2.24 km",
+    "started_at": "2026-04-12T06:40:00+00:00",
+    "updated_at": "2026-04-12T06:40:00+00:00",
+    "location_text": "Mayon",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "MODIS",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=273030",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=273030",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "273030",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=273030",
+      "vrp_mw": 147.93,
+      "distance_km": 2.24,
+      "sensor": "MODIS",
+      "row_class": [
+        "high"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "MODIS"
+      ],
+      "reports": [
+        {
+          "volcano_id": "273030",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=273030",
+          "vrp_mw": 147.93,
+          "distance_km": 2.24,
+          "sensor": "MODIS",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 1
+    },
+    "member_event_ids": [
+      4
+    ],
+    "occurred_at": "2026-04-12T06:40:00+00:00",
+    "published_at": "2026-04-12T06:40:00+00:00",
+    "fetched_at": "2026-04-12T06:40:00+00:00"
+  },
+  {
+    "id": 3,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|western_north_pacific_area|tc_04w|13601e02d8eea0f8",
     "event_type": "typhoon",
     "severity_level": "extreme",
@@ -48,14 +102,14 @@
       }
     },
     "member_event_ids": [
-      11
+      9
     ],
     "occurred_at": "2026-04-12T06:00:00+00:00",
     "published_at": "2026-04-12T06:00:00+00:00",
     "fetched_at": "2026-04-12T06:00:00+00:00"
   },
   {
-    "id": 1,
+    "id": 2,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|invest_31p|1a48abe934774ebd",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -101,14 +155,14 @@
       }
     },
     "member_event_ids": [
-      12
+      10
     ],
     "occurred_at": "2026-04-12T06:00:00+00:00",
     "published_at": "2026-04-12T06:00:00+00:00",
     "fetched_at": "2026-04-12T06:00:00+00:00"
   },
   {
-    "id": 3,
+    "id": 4,
     "group_key": "volcano|1b283dfe7834b19424c8efa9db04c9ed0dea6c8b",
     "event_type": "volcano",
     "severity_level": "very_high",
@@ -155,65 +209,11 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      4
+      5
     ],
     "occurred_at": "2026-04-12T05:30:00+00:00",
     "published_at": "2026-04-12T05:30:00+00:00",
     "fetched_at": "2026-04-12T05:30:00+00:00"
-  },
-  {
-    "id": 4,
-    "group_key": "volcano|d596c84d74ea826b5dd0b0a430674ee9ab289f4a",
-    "event_type": "volcano",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "Mayon",
-    "summary": "VRP 133.07 MW · VIIRS · 1.50 km",
-    "started_at": "2026-04-12T05:24:00+00:00",
-    "updated_at": "2026-04-12T05:24:00+00:00",
-    "location_text": "Mayon",
-    "lat": null,
-    "lon": null,
-    "source_primary": "MIROVA",
-    "source_secondary": "VIIRS",
-    "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
-    "country_code": null,
-    "payload": {
-      "volcano_id": "273030",
-      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
-      "vrp_mw": 133.07,
-      "distance_km": 1.5,
-      "sensor": "VIIRS",
-      "row_class": [
-        "high"
-      ],
-      "source_page": "https://www.mirovaweb.it/NRT/",
-      "sensors": [
-        "VIIRS"
-      ],
-      "reports": [
-        {
-          "volcano_id": "273030",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
-          "vrp_mw": 133.07,
-          "distance_km": 1.5,
-          "sensor": "VIIRS",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        }
-      ],
-      "merged_count": 1
-    },
-    "member_event_ids": [
-      5
-    ],
-    "occurred_at": "2026-04-12T05:24:00+00:00",
-    "published_at": "2026-04-12T05:24:00+00:00",
-    "fetched_at": "2026-04-12T05:24:00+00:00"
   },
   {
     "id": 5,
@@ -289,114 +289,6 @@
   },
   {
     "id": 7,
-    "group_key": "volcano|88334549f7b072cd4ea7997db905db42e8528f93",
-    "event_type": "volcano",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "Nyamuragira",
-    "summary": "VRP 683.96 MW · MODIS · 4.47 km",
-    "started_at": "2026-04-12T00:50:00+00:00",
-    "updated_at": "2026-04-12T00:50:00+00:00",
-    "location_text": "Nyamuragira",
-    "lat": null,
-    "lon": null,
-    "source_primary": "MIROVA",
-    "source_secondary": "MODIS",
-    "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=223020",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=223020",
-    "country_code": null,
-    "payload": {
-      "volcano_id": "223020",
-      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=223020",
-      "vrp_mw": 683.96,
-      "distance_km": 4.47,
-      "sensor": "MODIS",
-      "row_class": [
-        "high"
-      ],
-      "source_page": "https://www.mirovaweb.it/NRT/",
-      "sensors": [
-        "MODIS"
-      ],
-      "reports": [
-        {
-          "volcano_id": "223020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=223020",
-          "vrp_mw": 683.96,
-          "distance_km": 4.47,
-          "sensor": "MODIS",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        }
-      ],
-      "merged_count": 1
-    },
-    "member_event_ids": [
-      6
-    ],
-    "occurred_at": "2026-04-12T00:50:00+00:00",
-    "published_at": "2026-04-12T00:50:00+00:00",
-    "fetched_at": "2026-04-12T00:50:00+00:00"
-  },
-  {
-    "id": 8,
-    "group_key": "volcano|2cdc620d6c470ff8fed813e77faec53508ab79d5",
-    "event_type": "volcano",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "Mayon",
-    "summary": "VRP 150.36 MW · MODIS · 1.41 km",
-    "started_at": "2026-04-12T00:25:00+00:00",
-    "updated_at": "2026-04-12T00:25:00+00:00",
-    "location_text": "Mayon",
-    "lat": null,
-    "lon": null,
-    "source_primary": "MIROVA",
-    "source_secondary": "MODIS",
-    "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=273030",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=273030",
-    "country_code": null,
-    "payload": {
-      "volcano_id": "273030",
-      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=273030",
-      "vrp_mw": 150.36,
-      "distance_km": 1.41,
-      "sensor": "MODIS",
-      "row_class": [
-        "high"
-      ],
-      "source_page": "https://www.mirovaweb.it/NRT/",
-      "sensors": [
-        "MODIS"
-      ],
-      "reports": [
-        {
-          "volcano_id": "273030",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=273030",
-          "vrp_mw": 150.36,
-          "distance_km": 1.41,
-          "sensor": "MODIS",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        }
-      ],
-      "merged_count": 1
-    },
-    "member_event_ids": [
-      7
-    ],
-    "occurred_at": "2026-04-12T00:25:00+00:00",
-    "published_at": "2026-04-12T00:25:00+00:00",
-    "fetched_at": "2026-04-12T00:25:00+00:00"
-  },
-  {
-    "id": 9,
     "group_key": "volcano|643a31df973590be8699978b30661e37cbd9ad52",
     "event_type": "volcano",
     "severity_level": "high",
@@ -455,14 +347,14 @@
       "merged_count": 2
     },
     "member_event_ids": [
-      8
+      6
     ],
     "occurred_at": "2026-04-11T23:42:01+00:00",
     "published_at": "2026-04-11T23:42:01+00:00",
     "fetched_at": "2026-04-11T23:42:01+00:00"
   },
   {
-    "id": 10,
+    "id": 8,
     "group_key": "earthquake|us6000spac",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -498,7 +390,7 @@
     "fetched_at": "2026-04-11T09:49:51.545000+00:00"
   },
   {
-    "id": 11,
+    "id": 9,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -571,14 +463,14 @@
       }
     },
     "member_event_ids": [
-      10
+      8
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",
     "fetched_at": "2026-03-25T01:00:00+00:00"
   },
   {
-    "id": 12,
+    "id": 10,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -651,7 +543,7 @@
       }
     },
     "member_event_ids": [
-      9
+      7
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

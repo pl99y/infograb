@@ -8,7 +8,7 @@
     "title": "M 5.0 - Pagan region, Northern Mariana Islands",
     "summary": "Pagan region, Northern Mariana Islands",
     "started_at": "2026-04-12T01:09:42.258000+00:00",
-    "updated_at": "2026-04-12T01:29:51.446000+00:00",
+    "updated_at": "2026-04-12T01:49:53.585000+00:00",
     "location_text": "Pagan region, Northern Mariana Islands",
     "lat": 18.5002,
     "lon": 145.5867,
@@ -204,14 +204,14 @@
     "severity_level": "high",
     "severity_color": "high",
     "title": "Nyamuragira",
-    "summary": "VRP 763.55 MW · VIIRS · 7.72 km",
+    "summary": "VRP 763.55 MW · VIIRS / VIIRS375 · 7.72 km",
     "started_at": "2026-04-11T22:54:02+00:00",
     "updated_at": "2026-04-11T22:54:02+00:00",
     "location_text": "Nyamuragira",
     "lat": null,
     "lon": null,
     "source_primary": "MIROVA",
-    "source_secondary": "VIIRS",
+    "source_secondary": "VIIRS / VIIRS375",
     "status": "active",
     "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
     "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
@@ -227,7 +227,8 @@
       ],
       "source_page": "https://www.mirovaweb.it/NRT/",
       "sensors": [
-        "VIIRS"
+        "VIIRS",
+        "VIIRS375"
       ],
       "reports": [
         {
@@ -240,9 +241,20 @@
             "high"
           ],
           "source_page": "https://www.mirovaweb.it/NRT/"
+        },
+        {
+          "volcano_id": "223020",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
+          "vrp_mw": 184.57,
+          "distance_km": 8.05,
+          "sensor": "VIIRS375",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
         }
       ],
-      "merged_count": 1
+      "merged_count": 2
     },
     "member_event_ids": [
       4

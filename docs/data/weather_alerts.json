@@ -30,11 +30,11 @@
       "effective": "2026-04-12 18:13:00",
       "cap_path": "us-noaa-nws-en-marine/2026/04/12/18/13/00-ea69ea2ea4960aa66870dd2f1be7146e.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-12 19:24:10"
+      "last_updated": "2026-04-12 19:44:09"
     },
-    "fetched_at": "2026-04-12T19:25:23.771582+00:00",
+    "fetched_at": "2026-04-12T19:45:23.316772+00:00",
     "published_at": "2026-04-12T18:13:00+00:00",
-    "updated_at": "2026-04-12T19:25:23.771582+00:00",
+    "updated_at": "2026-04-12T19:45:23.316772+00:00",
     "region_text": "Rota Coastal Waters; Tinian Coastal Waters; Saipan Coastal Waters",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
@@ -69,11 +69,11 @@
       "effective": "2026-04-12 17:42:00",
       "cap_path": "us-noaa-nws-en/2026/04/12/17/42/00-654e1a6bbc2416d795bd44ce7562eb66.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-12 19:24:10"
+      "last_updated": "2026-04-12 19:44:09"
     },
-    "fetched_at": "2026-04-12T19:25:23.771582+00:00",
+    "fetched_at": "2026-04-12T19:45:23.316772+00:00",
     "published_at": "2026-04-12T17:42:00+00:00",
-    "updated_at": "2026-04-12T19:25:23.771582+00:00",
+    "updated_at": "2026-04-12T19:45:23.316772+00:00",
     "region_text": "Rota; Tinian; Saipan",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
@@ -108,16 +108,133 @@
       "effective": "2026-04-13 06:00:00",
       "cap_path": "sa-ncm-en/2026/04/12/15/59/09-208f262939df9f73395712edfbee347a.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-12 19:24:10"
+      "last_updated": "2026-04-12 19:44:09"
     },
-    "fetched_at": "2026-04-12T19:25:23.771582+00:00",
+    "fetched_at": "2026-04-12T19:45:23.316772+00:00",
     "published_at": "2026-04-12T15:59:09+00:00",
-    "updated_at": "2026-04-12T19:25:23.771582+00:00",
+    "updated_at": "2026-04-12T19:45:23.316772+00:00",
     "region_text": "Makkah Region - Al Khurma : The entire governorate; Makkah Region - Turabah : The entire governorate; Makkah Region - Ranyah : The entire governorate",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
     "id": 4,
+    "dedupe_key": "31e1de3a-c83d-4677-a11e-aa9a5e706e7e",
+    "source_primary": "WMO",
+    "title": "Warning, Heavy rain",
+    "summary": "Riyadh Region - Al Rayn : The entire governorate; Riyadh Region - Al Quwayiyah : The entire governorate",
+    "severity_level": "extreme",
+    "color_level": "extreme",
+    "event_type": "weather",
+    "location_text": "Riyadh Region - Al Rayn : The entire governorate; Riyadh Region - Al Quwayiyah : The entire governorate",
+    "issued_at": "2026-04-12T15:57:19+00:00",
+    "effective_at": "2026-04-13T06:00:00+00:00",
+    "expires_at": "2026-04-13T15:00:00+00:00",
+    "source_url": "https://severeweather.wmo.int/list.html",
+    "detail_url": "https://severeweather.wmo.int/list.html",
+    "payload": {
+      "id": "31e1de3a-c83d-4677-a11e-aa9a5e706e7e",
+      "event": "Heavy rain",
+      "headline": "Warning, Heavy rain",
+      "sent": "2026-04-12 15:57:19",
+      "expires": "2026-04-13 15:00:00",
+      "areaDesc": "Riyadh Region - Al Rayn : The entire governorate; Riyadh Region - Al Quwayiyah : The entire governorate",
+      "mid": "079",
+      "ra": "2",
+      "s": 4,
+      "u": 3,
+      "c": 2,
+      "capURL": "sa-ncm-en/2026/04/12/15/57/19-4a1196cd46adfccde49ce76b5bcc07c8.xml",
+      "effective": "2026-04-13 06:00:00",
+      "cap_path": "sa-ncm-en/2026/04/12/15/57/19-4a1196cd46adfccde49ce76b5bcc07c8.xml",
+      "source_page": "https://severeweather.wmo.int/list.html",
+      "last_updated": "2026-04-12 19:44:09"
+    },
+    "fetched_at": "2026-04-12T19:45:23.316772+00:00",
+    "published_at": "2026-04-12T15:57:19+00:00",
+    "updated_at": "2026-04-12T19:45:23.316772+00:00",
+    "region_text": "Riyadh Region - Al Rayn : The entire governorate; Riyadh Region - Al Quwayiyah : The entire governorate",
+    "link_url": "https://severeweather.wmo.int/list.html"
+  },
+  {
+    "id": 5,
+    "dedupe_key": "52bbbc70-cc2c-4ce8-9fdb-8441256b6a95",
+    "source_primary": "WMO",
+    "title": "Warning, Heavy rain",
+    "summary": "Riyadh Region - Al Hariq : The entire governorate; Riyadh Region - Al Kharj : The entire governorate; Riyadh Region - Ad Dilam : The entire governorate; Riyadh Region - Al Muzahimiyah : The entire governorate; Riyadh Region - Hawtat Bani Tamim : The entire governorate",
+    "severity_level": "extreme",
+    "color_level": "extreme",
+    "event_type": "weather",
+    "location_text": "Riyadh Region - Al Hariq : The entire governorate; Riyadh Region - Al Kharj : The entire governorate; Riyadh Region - Ad Dilam : The entire governorate; Riyadh Region - Al Muzahimiyah : The entire governorate; Riyadh Region - Hawtat Bani Tamim : The entire governorate",
+    "issued_at": "2026-04-12T15:57:13+00:00",
+    "effective_at": "2026-04-13T06:00:00+00:00",
+    "expires_at": "2026-04-13T15:00:00+00:00",
+    "source_url": "https://severeweather.wmo.int/list.html",
+    "detail_url": "https://severeweather.wmo.int/list.html",
+    "payload": {
+      "id": "52bbbc70-cc2c-4ce8-9fdb-8441256b6a95",
+      "event": "Heavy rain",
+      "headline": "Warning, Heavy rain",
+      "sent": "2026-04-12 15:57:13",
+      "expires": "2026-04-13 15:00:00",
+      "areaDesc": "Riyadh Region - Al Hariq : The entire governorate; Riyadh Region - Al Kharj : The entire governorate; Riyadh Region - Ad Dilam : The entire governorate; Riyadh Region - Al Muzahimiyah : The entire governorate; Riyadh Region - Hawtat Bani Tamim : The entire governorate",
+      "mid": "079",
+      "ra": "2",
+      "s": 4,
+      "u": 3,
+      "c": 2,
+      "capURL": "sa-ncm-en/2026/04/12/15/57/13-c5e9e5005ec919a1c44a4571727ea63e.xml",
+      "effective": "2026-04-13 06:00:00",
+      "cap_path": "sa-ncm-en/2026/04/12/15/57/13-c5e9e5005ec919a1c44a4571727ea63e.xml",
+      "source_page": "https://severeweather.wmo.int/list.html",
+      "last_updated": "2026-04-12 19:44:09"
+    },
+    "fetched_at": "2026-04-12T19:45:23.316772+00:00",
+    "published_at": "2026-04-12T15:57:13+00:00",
+    "updated_at": "2026-04-12T19:45:23.316772+00:00",
+    "region_text": "Riyadh Region - Al Hariq : The entire governorate; Riyadh Region - Al Kharj : The entire governorate; Riyadh Region - Ad Dilam : The entire governorate; Riyadh Region - Al Muzahimiyah : The entire governorate; Riyadh Region - Hawtat Bani Tamim : The entire governorate",
+    "link_url": "https://severeweather.wmo.int/list.html"
+  },
+  {
+    "id": 6,
+    "dedupe_key": "90776ad3-0fef-4997-a846-b57ddf4f36f3",
+    "source_primary": "WMO",
+    "title": "Warning, Heavy rain",
+    "summary": "Riyadh Region - Al Aflaj : The entire governorate; Riyadh Region - Al Sulayyil : The entire governorate; Riyadh Region - Wadi Ad Dawasir : The entire governorate",
+    "severity_level": "extreme",
+    "color_level": "extreme",
+    "event_type": "weather",
+    "location_text": "Riyadh Region - Al Aflaj : The entire governorate; Riyadh Region - Al Sulayyil : The entire governorate; Riyadh Region - Wadi Ad Dawasir : The entire governorate",
+    "issued_at": "2026-04-12T15:55:37+00:00",
+    "effective_at": "2026-04-13T06:00:00+00:00",
+    "expires_at": "2026-04-13T15:00:00+00:00",
+    "source_url": "https://severeweather.wmo.int/list.html",
+    "detail_url": "https://severeweather.wmo.int/list.html",
+    "payload": {
+      "id": "90776ad3-0fef-4997-a846-b57ddf4f36f3",
+      "event": "Heavy rain",
+      "headline": "Warning, Heavy rain",
+      "sent": "2026-04-12 15:55:37",
+      "expires": "2026-04-13 15:00:00",
+      "areaDesc": "Riyadh Region - Al Aflaj : The entire governorate; Riyadh Region - Al Sulayyil : The entire governorate; Riyadh Region - Wadi Ad Dawasir : The entire governorate",
+      "mid": "079",
+      "ra": "2",
+      "s": 4,
+      "u": 3,
+      "c": 2,
+      "capURL": "sa-ncm-en/2026/04/12/15/55/37-9053431ad3434a2ca09555977a1c1167.xml",
+      "effective": "2026-04-13 06:00:00",
+      "cap_path": "sa-ncm-en/2026/04/12/15/55/37-9053431ad3434a2ca09555977a1c1167.xml",
+      "source_page": "https://severeweather.wmo.int/list.html",
+      "last_updated": "2026-04-12 19:44:09"
+    },
+    "fetched_at": "2026-04-12T19:45:23.316772+00:00",
+    "published_at": "2026-04-12T15:55:37+00:00",
+    "updated_at": "2026-04-12T19:45:23.316772+00:00",
+    "region_text": "Riyadh Region - Al Aflaj : The entire governorate; Riyadh Region - Al Sulayyil : The entire governorate; Riyadh Region - Wadi Ad Dawasir : The entire governorate",
+    "link_url": "https://severeweather.wmo.int/list.html"
+  },
+  {
+    "id": 7,
     "dedupe_key": "23c112a1-45b4-40a2-a1ca-4adf197ea56e",
     "source_primary": "WMO",
     "title": "Warning, Heavy rain",
@@ -147,16 +264,16 @@
       "effective": "2026-04-13 04:00:00",
       "cap_path": "sa-ncm-en/2026/04/12/15/48/27-a657ab4f34f31f1efb6aaa05b582f021.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-12 19:24:10"
+      "last_updated": "2026-04-12 19:44:09"
     },
-    "fetched_at": "2026-04-12T19:25:23.771582+00:00",
+    "fetched_at": "2026-04-12T19:45:23.316772+00:00",
     "published_at": "2026-04-12T15:48:27+00:00",
-    "updated_at": "2026-04-12T19:25:23.771582+00:00",
+    "updated_at": "2026-04-12T19:45:23.316772+00:00",
     "region_text": "Jazan Region - Al Harth : The entire governorate; Jazan Region - Ad Dair : The entire governorate; Jazan Region - Ar Rayth : The entire governorate; Jazan Region - Al Aridah : The entire governorate; Jazan Region - Al Aydabi : The entire governorate; Jazan Region - Fayfa : The entire governorate; Jazan Region - Harub : The entire governorate",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 5,
+    "id": 8,
     "dedupe_key": "db8772fe-e652-4df4-8aec-b1ca15e382c3",
     "source_primary": "WMO",
     "title": "Warning, Heavy rain",
@@ -186,16 +303,16 @@
       "effective": "2026-04-13 04:00:00",
       "cap_path": "sa-ncm-en/2026/04/12/15/44/29-ceafa6857309c8f529c3c05913620b1c.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-12 19:24:10"
+      "last_updated": "2026-04-12 19:44:09"
     },
-    "fetched_at": "2026-04-12T19:25:23.771582+00:00",
+    "fetched_at": "2026-04-12T19:45:23.316772+00:00",
     "published_at": "2026-04-12T15:44:29+00:00",
-    "updated_at": "2026-04-12T19:25:23.771582+00:00",
+    "updated_at": "2026-04-12T19:45:23.316772+00:00",
     "region_text": "Asir Region - Al Harjah : The entire governorate; Asir Region - Al Raboaa : The entire governorate; Asir Region - Al Farshah : The entire governorate; Asir Region - Sarat Abidah : The entire governorate; Asir Region - Zahran Al Janub : The entire governorate",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 6,
+    "id": 9,
     "dedupe_key": "IN-1776001276049008_8",
     "source_primary": "WMO",
     "title": "Heat Wave is Likely to occur over 21 Mandals. Please follow SDMA guidelines.",
@@ -225,16 +342,16 @@
       "effective": "2026-04-12 14:10:00",
       "cap_path": "in-ndma-xx/2026/04/12/14/11/16-aa8dd0ca17250bbb09db07ed668e72dd.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-12 19:24:10"
+      "last_updated": "2026-04-12 19:44:09"
     },
-    "fetched_at": "2026-04-12T19:25:23.771582+00:00",
+    "fetched_at": "2026-04-12T19:45:23.316772+00:00",
     "published_at": "2026-04-12T14:11:16+00:00",
-    "updated_at": "2026-04-12T19:25:23.771582+00:00",
+    "updated_at": "2026-04-12T19:45:23.316772+00:00",
     "region_text": "21 Mandals",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 7,
+    "id": 10,
     "dedupe_key": "IN-1776000730306008_8",
     "source_primary": "WMO",
     "title": "Heat Wave is Likely to occur over 30 Mandals. Please follow SDMA guidelines.",
@@ -264,16 +381,16 @@
       "effective": "2026-04-12 14:00:00",
       "cap_path": "in-ndma-xx/2026/04/12/14/02/10-b11a485f828bc0e61e0b0c5ce1064224.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-12 19:24:10"
+      "last_updated": "2026-04-12 19:44:09"
     },
-    "fetched_at": "2026-04-12T19:25:23.771582+00:00",
+    "fetched_at": "2026-04-12T19:45:23.316772+00:00",
     "published_at": "2026-04-12T14:02:10+00:00",
-    "updated_at": "2026-04-12T19:25:23.771582+00:00",
+    "updated_at": "2026-04-12T19:45:23.316772+00:00",
     "region_text": "30 Mandals",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 8,
+    "id": 11,
     "dedupe_key": "9bc5e113-9482-4cb6-9843-716ef167cabc",
     "source_primary": "WMO",
     "title": "Warning, Thick Fog",
@@ -303,16 +420,16 @@
       "effective": "2026-04-12 17:00:00",
       "cap_path": "sa-ncm-en/2026/04/12/11/11/29-be044fd11c580d9cbd6aa261548d1974.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-12 19:24:10"
+      "last_updated": "2026-04-12 19:44:09"
     },
-    "fetched_at": "2026-04-12T19:25:23.771582+00:00",
+    "fetched_at": "2026-04-12T19:45:23.316772+00:00",
     "published_at": "2026-04-12T11:11:29+00:00",
-    "updated_at": "2026-04-12T19:25:23.771582+00:00",
+    "updated_at": "2026-04-12T19:45:23.316772+00:00",
     "region_text": "Eastern Region - Al Khafji : The entire governorate; Eastern Region - An Nuayriyah : The entire governorate; Eastern Region - Qaryah Al Ulya : The entire governorate",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 9,
+    "id": 12,
     "dedupe_key": "638623f8-84ee-42f4-b68c-7db0c55e5ccf",
     "source_primary": "WMO",
     "title": "Warning, Thick Fog",
@@ -342,16 +459,16 @@
       "effective": "2026-04-12 14:00:00",
       "cap_path": "sa-ncm-en/2026/04/12/09/41/45-aa24b4e39a7be51b3e47099d0ee3e82f.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-12 19:24:10"
+      "last_updated": "2026-04-12 19:44:09"
     },
-    "fetched_at": "2026-04-12T19:25:23.771582+00:00",
+    "fetched_at": "2026-04-12T19:45:23.316772+00:00",
     "published_at": "2026-04-12T09:41:45+00:00",
-    "updated_at": "2026-04-12T19:25:23.771582+00:00",
+    "updated_at": "2026-04-12T19:45:23.316772+00:00",
     "region_text": "Asir Region - Al Namas : The entire governorate; Asir Region - Balqarn : The entire governorate; Asir Region - Tanumah : The entire governorate",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 10,
+    "id": 13,
     "dedupe_key": "6087378f-cdd5-4eea-a5a0-24b0e8fd9303",
     "source_primary": "WMO",
     "title": "Warning, Thick Fog",
@@ -381,16 +498,16 @@
       "effective": "2026-04-12 14:00:00",
       "cap_path": "sa-ncm-en/2026/04/12/09/40/01-25bcf3e18b5095ec5673fa8687116611.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-12 19:24:10"
+      "last_updated": "2026-04-12 19:44:09"
     },
-    "fetched_at": "2026-04-12T19:25:23.771582+00:00",
+    "fetched_at": "2026-04-12T19:45:23.316772+00:00",
     "published_at": "2026-04-12T09:40:01+00:00",
-    "updated_at": "2026-04-12T19:25:23.771582+00:00",
+    "updated_at": "2026-04-12T19:45:23.316772+00:00",
     "region_text": "Asir Region - Abha : The entire governorate; Asir Region - Ahad Rufaydah : The entire governorate; Asir Region - Al Farshah : The entire governorate; Asir Region - Khamis Mushayt : The entire governorate; Asir Region - Sarat Abidah : The entire governorate",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 11,
+    "id": 14,
     "dedupe_key": "e83dacfa-7b32-49c3-9177-a1dd63a68c36",
     "source_primary": "WMO",
     "title": "Warning, Thick Fog",
@@ -420,16 +537,16 @@
       "effective": "2026-04-12 14:00:00",
       "cap_path": "sa-ncm-en/2026/04/12/09/31/45-5262983e6a42c5be8851a7e3b6959a98.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-12 19:24:10"
+      "last_updated": "2026-04-12 19:44:09"
     },
-    "fetched_at": "2026-04-12T19:25:23.771582+00:00",
+    "fetched_at": "2026-04-12T19:45:23.316772+00:00",
     "published_at": "2026-04-12T09:31:45+00:00",
-    "updated_at": "2026-04-12T19:25:23.771582+00:00",
+    "updated_at": "2026-04-12T19:45:23.316772+00:00",
     "region_text": "Bahah Region - Al Bahah : The entire governorate; Bahah Region - Al Qara : The entire governorate; Bahah Region - Al Mandaq : The entire governorate; Bahah Region - Baljurashi : The entire governorate; Bahah Region - Bani Hasan : The entire governorate",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 12,
+    "id": 15,
     "dedupe_key": "96def2ea-8d33-4b1f-87bc-8d773d623342",
     "source_primary": "WMO",
     "title": "Warning, Thick Fog",
@@ -459,11 +576,11 @@
       "effective": "2026-04-12 14:00:00",
       "cap_path": "sa-ncm-en/2026/04/12/09/30/18-ff562154bc49139e4e689b171208307b.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-12 19:24:10"
+      "last_updated": "2026-04-12 19:44:09"
     },
-    "fetched_at": "2026-04-12T19:25:23.771582+00:00",
+    "fetched_at": "2026-04-12T19:45:23.316772+00:00",
     "published_at": "2026-04-12T09:30:18+00:00",
-    "updated_at": "2026-04-12T19:25:23.771582+00:00",
+    "updated_at": "2026-04-12T19:45:23.316772+00:00",
     "region_text": "Makkah Region - Adam : The entire governorate; Makkah Region - Maysan : The entire governorate",
     "link_url": "https://severeweather.wmo.int/list.html"
   }

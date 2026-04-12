@@ -1,6 +1,168 @@
 [
   {
+    "id": 2,
+    "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|western_north_pacific_area|tc_04w|c4fb0bac26c39729",
+    "event_type": "typhoon",
+    "severity_level": "extreme",
+    "severity_color": "extreme",
+    "title": "Typhoon 04W (Sinlaku)",
+    "summary": "wind 95 kt (gust 115)",
+    "started_at": "2026-04-12T00:00:00+00:00",
+    "updated_at": "2026-04-12T00:00:00+00:00",
+    "location_text": "9.3N 151.5E",
+    "lat": 9.3,
+    "lon": 151.5,
+    "source_primary": "JTWC-ABPW",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://www.google.com/maps?q=9.3,151.5",
+    "official_link": "https://www.google.com/maps?q=9.3,151.5",
+    "country_code": null,
+    "payload": {
+      "item_type": "warning",
+      "source": "jtwc_abpw",
+      "source_key": "jtwc_abpw|western_north_pacific_area|tc_04w",
+      "content_hash": "c4fb0bac26c39729",
+      "platform_summary": "9.3N 151.5E | wind 95 kt (gust 115)",
+      "platform_location": "9.3N 151.5E",
+      "wind": "95 kt (gust 115)",
+      "risk_48h": null,
+      "risk_7d": null,
+      "next_update": null,
+      "raw_text": "(1) AT 11APR26 1800Z, TYPHOON 04W (SINLAKU) WAS LOCATED NEAR 9.3N \n151.5E, APPROXIMATELY 475 NM EAST-SOUTHEAST OF NAVSTA GUAM, AND HAD \nTRACKED NORTH-NORTHEASTWARD AT 04 KNOTS OVER THE PAST SIX HOURS. MAXIMUM \nSUSTAINED SURFACE WINDS WERE ESTIMATED AT 95 KNOTS GUSTING TO 115 KNOTS. \nSEE REF A (WTPN31 PGTW 112100) FOR FURTHER DETAILS.",
+      "metadata": {
+        "basin_section": "WESTERN NORTH PACIFIC AREA (180 TO MALAY PENINSULA)",
+        "storm_class": "TYPHOON",
+        "storm_id": "04W",
+        "storm_name": "SINLAKU",
+        "fix_date": "11APR26",
+        "fix_time": "11APR26 1800Z",
+        "lat": 9.3,
+        "lon": 151.5,
+        "movement_text": "NORTH-NORTHEASTWARD",
+        "movement_kt": 4,
+        "wind_kt": 95,
+        "gust_kt": 115,
+        "warning_reference": "WTPN31 PGTW 112100",
+        "bulletin_issue_at": "2026-04-12T00:00:00+00:00"
+      }
+    },
+    "member_event_ids": [
+      8
+    ],
+    "occurred_at": "2026-04-12T00:00:00+00:00",
+    "published_at": "2026-04-12T00:00:00+00:00",
+    "fetched_at": "2026-04-12T00:00:00+00:00"
+  },
+  {
     "id": 1,
+    "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|invest_31p|03e9da22086faeed",
+    "event_type": "typhoon",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "INVEST 31P",
+    "summary": "wind 33-38 kt · 989 mb · Low",
+    "started_at": "2026-04-12T00:00:00+00:00",
+    "updated_at": "2026-04-12T00:00:00+00:00",
+    "location_text": "34.9S 176.9E",
+    "lat": -34.9,
+    "lon": 176.9,
+    "source_primary": "JTWC-ABPW",
+    "source_secondary": "disturbance",
+    "status": "active",
+    "map_url": "https://www.google.com/maps?q=-34.9,176.9",
+    "official_link": "https://www.google.com/maps?q=-34.9,176.9",
+    "country_code": null,
+    "payload": {
+      "item_type": "disturbance",
+      "source": "jtwc_abpw",
+      "source_key": "jtwc_abpw|south_pacific_area|invest_31p",
+      "content_hash": "03e9da22086faeed",
+      "platform_summary": "34.9S 176.9E | winds 33-38 kt | 989 mb | LOW",
+      "platform_location": "34.9S 176.9E",
+      "wind": "33-38 kt",
+      "risk_48h": null,
+      "risk_7d": null,
+      "next_update": null,
+      "raw_text": "(1) THE AREA OF CONVECTION (INVEST 31P) PREVIOUSLY LOCATED NEAR \n28.2S 178.8E IS NOW LOCATED NEAR 34.9S 176.9E, APPROXIMATELY 141 NM \nNORTH-NORTHEAST OF AUCKLAND, NEW ZEALAND. THE SYSTEM IS CURRENTLY \nCLASSIFIED AS A SUBTROPICAL CYCLONE, GENERALLY CHARACTERIZED AS HAVING \nBOTH TROPICAL AND MIDLATITUDE CYCLONE FEATURES. ANIMATED ENHANCED \nINFRARED SATELLITE IMAGERY (MSI) DEPICTS A VERY WELL-DEFINED LOW-LEVEL \nCIRCULATION CENTER (LLCC) EMBEDDED WITHIN A TIGHT SWIRL OF MID-LEVEL \nCLOUD BANDS, ABSENT OF ANY DEEP CONVECTION. ENVIRONMENTAL ANALYSIS \nREVEALS UNFAVORABLE CONDITIONS FOR DEVELOPMENT CHARACTERIZED BY HIGH \nVERTICAL WIND SHEAR (20-30 KNOTS), MODERATE UPPER LEVEL POLEWARD \nOUTFLOW, AND COLD SEA SURFACE TEMPERATURES (23-24 C). GLOBAL MODELS \nAGREE ON A SOUTHWESTWARD TRACK OVER THE NEXT 24-48 HOURS. FOR HAZARDS \nAND WARNINGS, REFERENCE THE FLEET WEATHER CENTER SAN DIEGO HIGH WINDS \nAND SEAS PRODUCT OR REFER TO LOCAL WMO DESIGNATED FORECAST AUTHORITY. \nMAXIMUM SUSTAINED SURFACE WINDS ARE ESTIMATED AT 33 TO 38 KNOTS. MINIMUM \nSEA LEVEL PRESSURE IS ESTIMATED TO BE NEAR 989 MB. THE POTENTIAL FOR THE \nDEVELOPMENT OF A SIGNIFICANT TROPICAL CYCLONE WITHIN THE NEXT 24 HOURS \nREMAINS LOW.",
+      "metadata": {
+        "basin_section": "SOUTH PACIFIC AREA (WEST COAST OF SOUTH AMERICA TO 135 EAST)",
+        "invest_id": "31P",
+        "system_class": "SUBTROPICAL CYCLONE",
+        "lat": -34.9,
+        "lon": 176.9,
+        "wind_kt_min": 33,
+        "wind_kt_max": 38,
+        "wind_kt": 38,
+        "pressure_mb": 989,
+        "development_phrase": "REMAINS",
+        "development_level": "LOW",
+        "bulletin_issue_at": "2026-04-12T00:00:00+00:00"
+      }
+    },
+    "member_event_ids": [
+      9
+    ],
+    "occurred_at": "2026-04-12T00:00:00+00:00",
+    "published_at": "2026-04-12T00:00:00+00:00",
+    "fetched_at": "2026-04-12T00:00:00+00:00"
+  },
+  {
+    "id": 3,
+    "group_key": "volcano|5bab15af0173bf013693d7f1fc61ad9642da7f0f",
+    "event_type": "volcano",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Fournaise Pitondela",
+    "summary": "VRP 195.65 MW · VIIRS375 · 8.46 km",
+    "started_at": "2026-04-11T21:18:02+00:00",
+    "updated_at": "2026-04-11T21:18:02+00:00",
+    "location_text": "Fournaise Pitondela",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "VIIRS375",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=233020",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=233020",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "233020",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=233020",
+      "vrp_mw": 195.65,
+      "distance_km": 8.46,
+      "sensor": "VIIRS375",
+      "row_class": [
+        "high"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "VIIRS375"
+      ],
+      "reports": [
+        {
+          "volcano_id": "233020",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=233020",
+          "vrp_mw": 195.65,
+          "distance_km": 8.46,
+          "sensor": "VIIRS375",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 1
+    },
+    "member_event_ids": [
+      2
+    ],
+    "occurred_at": "2026-04-11T21:18:02+00:00",
+    "published_at": "2026-04-11T21:18:02+00:00",
+    "fetched_at": "2026-04-11T21:18:02+00:00"
+  },
+  {
+    "id": 4,
     "group_key": "volcano|0616e6a343ec00191def804a8dcbff53b89a93a6",
     "event_type": "volcano",
     "severity_level": "high",
@@ -47,68 +209,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      2
+      3
     ],
     "occurred_at": "2026-04-11T20:50:00+00:00",
     "published_at": "2026-04-11T20:50:00+00:00",
     "fetched_at": "2026-04-11T20:50:00+00:00"
   },
   {
-    "id": 2,
-    "group_key": "volcano|e024bbd7b874f7549b195bdcabe65780b4cf8536",
-    "event_type": "volcano",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "Fournaise Pitondela",
-    "summary": "VRP 363.20 MW · VIIRS375 · 5.82 km",
-    "started_at": "2026-04-11T20:30:01+00:00",
-    "updated_at": "2026-04-11T20:30:01+00:00",
-    "location_text": "Fournaise Pitondela",
-    "lat": null,
-    "lon": null,
-    "source_primary": "MIROVA",
-    "source_secondary": "VIIRS375",
-    "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=233020",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=233020",
-    "country_code": null,
-    "payload": {
-      "volcano_id": "233020",
-      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=233020",
-      "vrp_mw": 363.2,
-      "distance_km": 5.82,
-      "sensor": "VIIRS375",
-      "row_class": [
-        "high"
-      ],
-      "source_page": "https://www.mirovaweb.it/NRT/",
-      "sensors": [
-        "VIIRS375"
-      ],
-      "reports": [
-        {
-          "volcano_id": "233020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=233020",
-          "vrp_mw": 363.2,
-          "distance_km": 5.82,
-          "sensor": "VIIRS375",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        }
-      ],
-      "merged_count": 1
-    },
-    "member_event_ids": [
-      3
-    ],
-    "occurred_at": "2026-04-11T20:30:01+00:00",
-    "published_at": "2026-04-11T20:30:01+00:00",
-    "fetched_at": "2026-04-11T20:30:01+00:00"
-  },
-  {
-    "id": 3,
+    "id": 5,
     "group_key": "volcano|986e751e7048edbae178724e752117afe41ec025",
     "event_type": "volcano",
     "severity_level": "high",
@@ -162,7 +270,7 @@
     "fetched_at": "2026-04-11T18:45:00+00:00"
   },
   {
-    "id": 4,
+    "id": 6,
     "group_key": "volcano|05513dcddcbbe5d27a5874202a5bbcbb5048abc5",
     "event_type": "volcano",
     "severity_level": "very_high",
@@ -216,7 +324,7 @@
     "fetched_at": "2026-04-11T17:00:00+00:00"
   },
   {
-    "id": 5,
+    "id": 7,
     "group_key": "earthquake|us6000spac",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -253,169 +361,6 @@
   },
   {
     "id": 8,
-    "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|western_north_pacific_area|tc_04w|bc121a6996e072d7",
-    "event_type": "typhoon",
-    "severity_level": "extreme",
-    "severity_color": "extreme",
-    "title": "Typhoon 04W (Sinlaku)",
-    "summary": "wind 75 kt (gust 90)",
-    "started_at": "2026-04-11T06:00:00+00:00",
-    "updated_at": "2026-04-11T06:00:00+00:00",
-    "location_text": "8.5N 151.5E",
-    "lat": 8.5,
-    "lon": 151.5,
-    "source_primary": "JTWC-ABPW",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://www.google.com/maps?q=8.5,151.5",
-    "official_link": "https://www.google.com/maps?q=8.5,151.5",
-    "country_code": null,
-    "payload": {
-      "item_type": "warning",
-      "source": "jtwc_abpw",
-      "source_key": "jtwc_abpw|western_north_pacific_area|tc_04w",
-      "content_hash": "bc121a6996e072d7",
-      "platform_summary": "8.5N 151.5E | wind 75 kt (gust 90)",
-      "platform_location": "8.5N 151.5E",
-      "wind": "75 kt (gust 90)",
-      "risk_48h": null,
-      "risk_7d": null,
-      "next_update": null,
-      "raw_text": "(1) AT 11APR26 0000Z, TYPHOON 04W (SINLAKU) WAS LOCATED NEAR\n8.5N 151.5E, APPROXIMATELY 502 NM SOUTHEAST OF NAVSTA GUAM, AND HAD\nTRACKED NORTH-NORTHEASTWARD AT 04 KNOTS OVER THE PAST SIX HOURS.\nMAXIMUM SUSTAINED SURFACE WINDS WERE ESTIMATED AT 75 KNOTS GUSTING TO\n90 KNOTS. SEE REF A (WTPN31 PGTW 110300) FOR FURTHER DETAILS.",
-      "metadata": {
-        "basin_section": "WESTERN NORTH PACIFIC AREA (180 TO MALAY PENINSULA)",
-        "storm_class": "TYPHOON",
-        "storm_id": "04W",
-        "storm_name": "SINLAKU",
-        "fix_date": "11APR26",
-        "fix_time": "11APR26 0000Z",
-        "lat": 8.5,
-        "lon": 151.5,
-        "movement_text": "NORTH-NORTHEASTWARD",
-        "movement_kt": 4,
-        "wind_kt": 75,
-        "gust_kt": 90,
-        "warning_reference": "WTPN31 PGTW 110300",
-        "bulletin_issue_at": "2026-04-11T06:00:00+00:00"
-      }
-    },
-    "member_event_ids": [
-      8
-    ],
-    "occurred_at": "2026-04-11T06:00:00+00:00",
-    "published_at": "2026-04-11T06:00:00+00:00",
-    "fetched_at": "2026-04-11T06:00:00+00:00"
-  },
-  {
-    "id": 7,
-    "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|tc_30p|1f195d71374a4a17",
-    "event_type": "typhoon",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "Tropical Cyclone 30P (Maila)",
-    "summary": "wind 35 kt (gust 45)",
-    "started_at": "2026-04-11T06:00:00+00:00",
-    "updated_at": "2026-04-11T06:00:00+00:00",
-    "location_text": "7.8S 154.6E",
-    "lat": -7.8,
-    "lon": 154.6,
-    "source_primary": "JTWC-ABPW",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://www.google.com/maps?q=-7.8,154.6",
-    "official_link": "https://www.google.com/maps?q=-7.8,154.6",
-    "country_code": null,
-    "payload": {
-      "item_type": "warning",
-      "source": "jtwc_abpw",
-      "source_key": "jtwc_abpw|south_pacific_area|tc_30p",
-      "content_hash": "1f195d71374a4a17",
-      "platform_summary": "7.8S 154.6E | wind 35 kt (gust 45)",
-      "platform_location": "7.8S 154.6E",
-      "wind": "35 kt (gust 45)",
-      "risk_48h": null,
-      "risk_7d": null,
-      "next_update": null,
-      "raw_text": "(1) AT 11APR26 0000Z, TROPICAL CYCLONE 30P (MAILA) WAS LOCATED\nNEAR 7.8S 154.6E, APPROXIMATELY 534 NM SOUTH OF KAPINGAMARANGI, AND\nHAD TRACKED NORTHEASTWARD AT 06 KNOTS OVER THE PAST SIX HOURS. MAXIMUM\nSUSTAINED SURFACE WINDS WERE ESTIMATED AT 35 KNOTS GUSTING TO 45\nKNOTS. SEE REF B (WTPS31 PGTW 110300) FOR THE FINAL WARNING ON THIS\nSYSTEM.",
-      "metadata": {
-        "basin_section": "SOUTH PACIFIC AREA (WEST COAST OF SOUTH AMERICA TO 135 EAST)",
-        "storm_class": "TROPICAL CYCLONE",
-        "storm_id": "30P",
-        "storm_name": "MAILA",
-        "fix_date": "11APR26",
-        "fix_time": "11APR26 0000Z",
-        "lat": -7.8,
-        "lon": 154.6,
-        "movement_text": "NORTHEASTWARD",
-        "movement_kt": 6,
-        "wind_kt": 35,
-        "gust_kt": 45,
-        "warning_reference": "WTPS31 PGTW 110300",
-        "bulletin_issue_at": "2026-04-11T06:00:00+00:00"
-      }
-    },
-    "member_event_ids": [
-      9
-    ],
-    "occurred_at": "2026-04-11T06:00:00+00:00",
-    "published_at": "2026-04-11T06:00:00+00:00",
-    "fetched_at": "2026-04-11T06:00:00+00:00"
-  },
-  {
-    "id": 6,
-    "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|invest_31p|d552673d5faa2816",
-    "event_type": "typhoon",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "INVEST 31P",
-    "summary": "wind 42-48 kt · 989 mb · Low",
-    "started_at": "2026-04-11T06:00:00+00:00",
-    "updated_at": "2026-04-11T06:00:00+00:00",
-    "location_text": "31.3S 177.0E",
-    "lat": -31.3,
-    "lon": 177.0,
-    "source_primary": "JTWC-ABPW",
-    "source_secondary": "disturbance",
-    "status": "active",
-    "map_url": "https://www.google.com/maps?q=-31.3,177.0",
-    "official_link": "https://www.google.com/maps?q=-31.3,177.0",
-    "country_code": null,
-    "payload": {
-      "item_type": "disturbance",
-      "source": "jtwc_abpw",
-      "source_key": "jtwc_abpw|south_pacific_area|invest_31p",
-      "content_hash": "d552673d5faa2816",
-      "platform_summary": "31.3S 177.0E | winds 42-48 kt | 989 mb | LOW",
-      "platform_location": "31.3S 177.0E",
-      "wind": "42-48 kt",
-      "risk_48h": null,
-      "risk_7d": null,
-      "next_update": null,
-      "raw_text": "(1) THE AREA OF CONVECTION (INVEST 31P) PREVIOUSLY LOCATED NEAR\n28.2S 178.8E IS NOW LOCATED NEAR 31.3S 177.0E, APPROXIMATELY 382 NM\nNORTH-NORTHEAST OF AUCKLAND, NEW ZEALAND. THE SYSTEM IS CURRENTLY\nCLASSIFIED AS A SUBTROPICAL CYCLONE, GENERALLY CHARACTERIZED AS HAVING\nBOTH TROPICAL AND MIDLATITUDE CYCLONE FEATURES. ANIMATED ENHANCED \nINFRARED SATELLITE IMAGERY (MSI) DEPICTS A VERY WELL-DEFINED LOW-LEVEL\nCIRCULATION CENTER (LLCC) EMBEDDED WITHIN A TIGHT SWIRL OF MID-LEVEL\nCLOUD BANDS, ABSENT OF ANY DEEP CONVECTION. ENVIRONMENTAL ANALYSIS\nREVEALS UNFAVORABLE CONDITIONS FOR DEVELOPMENT CHARACTERIZED BY HIGH\nVERTICAL WIND SHEAR (20-30 KNOTS), MODERATE UPPER LEVEL POLEWARD\nOUTFLOW, AND COLD SEA SURFACE TEMPERATURES (23-24 C). GLOBAL MODELS\nAGREE ON A SOUTHWESTWARD TRACK OVER THE NEXT 24-48 HOURS. FOR HAZARDS\nAND WARNINGS, REFERENCE THE FLEET WEATHER CENTER SAN DIEGO HIGH WINDS\nAND SEAS PRODUCT OR REFER TO LOCAL WMO DESIGNATED FORECAST AUTHORITY.\nMAXIMUM SUSTAINED SURFACE WINDS ARE ESTIMATED AT 42 TO 48 KNOTS.\nMINIMUM SEA LEVEL PRESSURE IS ESTIMATED TO BE NEAR 989 MB. THE\nPOTENTIAL FOR THE DEVELOPMENT OF A SIGNIFICANT TROPICAL CYCLONE WITHIN\nTHE NEXT 24 HOURS REMAINS LOW.",
-      "metadata": {
-        "basin_section": "SOUTH PACIFIC AREA (WEST COAST OF SOUTH AMERICA TO 135 EAST)",
-        "invest_id": "31P",
-        "system_class": "SUBTROPICAL CYCLONE",
-        "lat": -31.3,
-        "lon": 177.0,
-        "wind_kt_min": 42,
-        "wind_kt_max": 48,
-        "wind_kt": 48,
-        "pressure_mb": 989,
-        "development_phrase": "REMAINS",
-        "development_level": "LOW",
-        "bulletin_issue_at": "2026-04-11T06:00:00+00:00"
-      }
-    },
-    "member_event_ids": [
-      10
-    ],
-    "occurred_at": "2026-04-11T06:00:00+00:00",
-    "published_at": "2026-04-11T06:00:00+00:00",
-    "fetched_at": "2026-04-11T06:00:00+00:00"
-  },
-  {
-    "id": 9,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -495,7 +440,7 @@
     "fetched_at": "2026-03-25T01:00:00+00:00"
   },
   {
-    "id": 10,
+    "id": 9,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",

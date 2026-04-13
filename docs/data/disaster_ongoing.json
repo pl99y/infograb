@@ -47,7 +47,7 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      7
+      5
     ],
     "occurred_at": "2026-04-13T18:25:00+00:00",
     "published_at": "2026-04-13T18:25:00+00:00",
@@ -60,17 +60,17 @@
     "severity_level": "high",
     "severity_color": "high",
     "title": "Nyamuragira",
-    "summary": "VRP 219.69 MW · VIIRS / VIIRS375 · 3.82 km",
+    "summary": "VRP 219.69 MW · VIIRS375 / VIIRS · 3.82 km",
     "started_at": "2026-04-13T12:06:01+00:00",
     "updated_at": "2026-04-13T12:06:01+00:00",
     "location_text": "Nyamuragira",
     "lat": null,
     "lon": null,
     "source_primary": "MIROVA",
-    "source_secondary": "VIIRS / VIIRS375",
+    "source_secondary": "VIIRS375 / VIIRS",
     "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
     "country_code": null,
     "payload": {
       "volcano_id": "223020",
@@ -83,21 +83,10 @@
       ],
       "source_page": "https://www.mirovaweb.it/NRT/",
       "sensors": [
-        "VIIRS",
-        "VIIRS375"
+        "VIIRS375",
+        "VIIRS"
       ],
       "reports": [
-        {
-          "volcano_id": "223020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
-          "vrp_mw": 219.69,
-          "distance_km": 3.82,
-          "sensor": "VIIRS",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        },
         {
           "volcano_id": "223020",
           "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
@@ -108,12 +97,23 @@
             "high"
           ],
           "source_page": "https://www.mirovaweb.it/NRT/"
+        },
+        {
+          "volcano_id": "223020",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
+          "vrp_mw": 219.69,
+          "distance_km": 3.82,
+          "sensor": "VIIRS",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
         }
       ],
       "merged_count": 2
     },
     "member_event_ids": [
-      8
+      6
     ],
     "occurred_at": "2026-04-13T12:06:01+00:00",
     "published_at": "2026-04-13T12:06:01+00:00",
@@ -240,7 +240,7 @@
       }
     },
     "member_event_ids": [
-      11
+      9
     ],
     "occurred_at": "2026-04-13T06:00:00+00:00",
     "published_at": "2026-04-13T06:00:00+00:00",
@@ -320,78 +320,6 @@
   },
   {
     "id": 8,
-    "group_key": "earthquake|us6000spjb",
-    "event_type": "earthquake",
-    "severity_level": "moderate",
-    "severity_color": "moderate",
-    "title": "M 5.1 - 97 km S of King Cove, Alaska",
-    "summary": "97 km S of King Cove, Alaska",
-    "started_at": "2026-04-12T20:14:10.340000+00:00",
-    "updated_at": "2026-04-13T14:24:14.968000+00:00",
-    "location_text": "97 km S of King Cove, Alaska",
-    "lat": 54.1877,
-    "lon": -162.3868,
-    "source_primary": "USGS",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000spjb",
-    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000spjb",
-    "country_code": null,
-    "payload": {
-      "mag": 5.1,
-      "depth_km": 35.0,
-      "place": "97 km S of King Cove, Alaska",
-      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000spjb.geojson",
-      "alert": null,
-      "sig": 402,
-      "tsunami": 0,
-      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
-    },
-    "member_event_ids": [
-      5
-    ],
-    "occurred_at": "2026-04-12T20:14:10.340000+00:00",
-    "published_at": "2026-04-12T20:14:10.340000+00:00",
-    "fetched_at": "2026-04-12T20:14:10.340000+00:00"
-  },
-  {
-    "id": 9,
-    "group_key": "earthquake|us6000spj7",
-    "event_type": "earthquake",
-    "severity_level": "moderate",
-    "severity_color": "moderate",
-    "title": "M 5.0 - 106 km SSW of Severo-Kuril’sk, Russia",
-    "summary": "106 km SSW of Severo-Kuril’sk, Russia",
-    "started_at": "2026-04-12T20:05:06.816000+00:00",
-    "updated_at": "2026-04-12T20:33:19.040000+00:00",
-    "location_text": "106 km SSW of Severo-Kuril’sk, Russia",
-    "lat": 49.7449,
-    "lon": 155.7719,
-    "source_primary": "USGS",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000spj7",
-    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000spj7",
-    "country_code": null,
-    "payload": {
-      "mag": 5.0,
-      "depth_km": 10.0,
-      "place": "106 km SSW of Severo-Kuril’sk, Russia",
-      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000spj7.geojson",
-      "alert": null,
-      "sig": 385,
-      "tsunami": 0,
-      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
-    },
-    "member_event_ids": [
-      6
-    ],
-    "occurred_at": "2026-04-12T20:05:06.816000+00:00",
-    "published_at": "2026-04-12T20:05:06.816000+00:00",
-    "fetched_at": "2026-04-12T20:05:06.816000+00:00"
-  },
-  {
-    "id": 10,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -464,14 +392,14 @@
       }
     },
     "member_event_ids": [
-      10
+      8
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",
     "fetched_at": "2026-03-25T01:00:00+00:00"
   },
   {
-    "id": 11,
+    "id": 9,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -544,7 +472,7 @@
       }
     },
     "member_event_ids": [
-      9
+      7
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

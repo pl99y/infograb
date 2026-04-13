@@ -120,7 +120,7 @@
       }
     },
     "member_event_ids": [
-      12
+      11
     ],
     "occurred_at": "2026-04-13T06:00:00+00:00",
     "published_at": "2026-04-13T06:00:00+00:00",
@@ -308,72 +308,6 @@
   },
   {
     "id": 8,
-    "group_key": "volcano|6a21828c9ec3c86b9eef28e4e4cbcebc29bf49db",
-    "event_type": "volcano",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "Fournaise Pitondela",
-    "summary": "VRP 500.58 MW · VIIRS / VIIRS375 · 9.12 km",
-    "started_at": "2026-04-12T21:48:01+00:00",
-    "updated_at": "2026-04-12T21:48:01+00:00",
-    "location_text": "Fournaise Pitondela",
-    "lat": null,
-    "lon": null,
-    "source_primary": "MIROVA",
-    "source_secondary": "VIIRS / VIIRS375",
-    "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=233020",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=233020",
-    "country_code": null,
-    "payload": {
-      "volcano_id": "233020",
-      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=233020",
-      "vrp_mw": 500.58,
-      "distance_km": 9.12,
-      "sensor": "VIIRS",
-      "row_class": [
-        "high"
-      ],
-      "source_page": "https://www.mirovaweb.it/NRT/",
-      "sensors": [
-        "VIIRS",
-        "VIIRS375"
-      ],
-      "reports": [
-        {
-          "volcano_id": "233020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=233020",
-          "vrp_mw": 500.58,
-          "distance_km": 9.12,
-          "sensor": "VIIRS",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        },
-        {
-          "volcano_id": "233020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=233020",
-          "vrp_mw": 115.28,
-          "distance_km": 9.44,
-          "sensor": "VIIRS375",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        }
-      ],
-      "merged_count": 2
-    },
-    "member_event_ids": [
-      9
-    ],
-    "occurred_at": "2026-04-12T21:48:01+00:00",
-    "published_at": "2026-04-12T21:48:01+00:00",
-    "fetched_at": "2026-04-12T21:48:01+00:00"
-  },
-  {
-    "id": 9,
     "group_key": "earthquake|us6000spjb",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -381,7 +315,7 @@
     "title": "M 5.1 - 97 km S of King Cove, Alaska",
     "summary": "97 km S of King Cove, Alaska",
     "started_at": "2026-04-12T20:14:10.340000+00:00",
-    "updated_at": "2026-04-13T08:24:15.064000+00:00",
+    "updated_at": "2026-04-13T14:24:14.968000+00:00",
     "location_text": "97 km S of King Cove, Alaska",
     "lat": 54.1877,
     "lon": -162.3868,
@@ -409,7 +343,7 @@
     "fetched_at": "2026-04-12T20:14:10.340000+00:00"
   },
   {
-    "id": 10,
+    "id": 9,
     "group_key": "earthquake|us6000spj7",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -445,7 +379,7 @@
     "fetched_at": "2026-04-12T20:05:06.816000+00:00"
   },
   {
-    "id": 11,
+    "id": 10,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -518,14 +452,14 @@
       }
     },
     "member_event_ids": [
-      11
+      10
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",
     "fetched_at": "2026-03-25T01:00:00+00:00"
   },
   {
-    "id": 12,
+    "id": 11,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -598,7 +532,7 @@
       }
     },
     "member_event_ids": [
-      10
+      9
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

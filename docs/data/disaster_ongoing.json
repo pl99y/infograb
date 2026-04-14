@@ -73,32 +73,44 @@
     "severity_level": "high",
     "severity_color": "high",
     "title": "Krasheninnikov",
-    "summary": "VRP 137.42 MW · VIIRS · 5.03 km",
+    "summary": "VRP 234.20 MW · VIIRS375 / VIIRS · 4.80 km",
     "started_at": "2026-04-14T17:06:00+00:00",
     "updated_at": "2026-04-14T17:06:00+00:00",
     "location_text": "Krasheninnikov",
     "lat": null,
     "lon": null,
     "source_primary": "MIROVA",
-    "source_secondary": "VIIRS",
+    "source_secondary": "VIIRS375 / VIIRS",
     "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=300190",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=300190",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=300190",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=300190",
     "country_code": null,
     "payload": {
       "volcano_id": "300190",
-      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=300190",
-      "vrp_mw": 137.42,
-      "distance_km": 5.03,
-      "sensor": "VIIRS",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=300190",
+      "vrp_mw": 234.2,
+      "distance_km": 4.8,
+      "sensor": "VIIRS375",
       "row_class": [
         "high"
       ],
       "source_page": "https://www.mirovaweb.it/NRT/",
       "sensors": [
+        "VIIRS375",
         "VIIRS"
       ],
       "reports": [
+        {
+          "volcano_id": "300190",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=300190",
+          "vrp_mw": 234.2,
+          "distance_km": 4.8,
+          "sensor": "VIIRS375",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        },
         {
           "volcano_id": "300190",
           "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=300190",
@@ -111,7 +123,7 @@
           "source_page": "https://www.mirovaweb.it/NRT/"
         }
       ],
-      "merged_count": 1
+      "merged_count": 2
     },
     "member_event_ids": [
       5
@@ -122,60 +134,6 @@
   },
   {
     "id": 3,
-    "group_key": "volcano|1385b6cda62fe4e9b6c6d2e263c4e1e170a87ec7",
-    "event_type": "volcano",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "Krasheninnikov",
-    "summary": "VRP 105.68 MW · VIIRS375 · 4.80 km",
-    "started_at": "2026-04-14T16:36:02+00:00",
-    "updated_at": "2026-04-14T16:36:02+00:00",
-    "location_text": "Krasheninnikov",
-    "lat": null,
-    "lon": null,
-    "source_primary": "MIROVA",
-    "source_secondary": "VIIRS375",
-    "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=300190",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=300190",
-    "country_code": null,
-    "payload": {
-      "volcano_id": "300190",
-      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=300190",
-      "vrp_mw": 105.68,
-      "distance_km": 4.8,
-      "sensor": "VIIRS375",
-      "row_class": [
-        "high"
-      ],
-      "source_page": "https://www.mirovaweb.it/NRT/",
-      "sensors": [
-        "VIIRS375"
-      ],
-      "reports": [
-        {
-          "volcano_id": "300190",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=300190",
-          "vrp_mw": 105.68,
-          "distance_km": 4.8,
-          "sensor": "VIIRS375",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        }
-      ],
-      "merged_count": 1
-    },
-    "member_event_ids": [
-      6
-    ],
-    "occurred_at": "2026-04-14T16:36:02+00:00",
-    "published_at": "2026-04-14T16:36:02+00:00",
-    "fetched_at": "2026-04-14T16:36:02+00:00"
-  },
-  {
-    "id": 4,
     "group_key": "earthquake|us6000spye",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -211,7 +169,7 @@
     "fetched_at": "2026-04-14T10:13:16.728000+00:00"
   },
   {
-    "id": 5,
+    "id": 4,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|western_north_pacific_area|tc_04w|f1dcd3e7469ed7cb",
     "event_type": "typhoon",
     "severity_level": "extreme",
@@ -259,14 +217,14 @@
       }
     },
     "member_event_ids": [
-      9
+      8
     ],
     "occurred_at": "2026-04-14T06:00:00+00:00",
     "published_at": "2026-04-14T06:00:00+00:00",
     "fetched_at": "2026-04-14T06:00:00+00:00"
   },
   {
-    "id": 6,
+    "id": 5,
     "group_key": "earthquake|us6000spva",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -302,7 +260,7 @@
     "fetched_at": "2026-04-14T03:04:21.202000+00:00"
   },
   {
-    "id": 7,
+    "id": 6,
     "group_key": "earthquake|nn00914068",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -310,7 +268,7 @@
     "title": "M 5.7 - 20 km ESE of Silver Springs, Nevada",
     "summary": "20 km ESE of Silver Springs, Nevada",
     "started_at": "2026-04-14T01:29:12.123000+00:00",
-    "updated_at": "2026-04-14T21:16:18.866000+00:00",
+    "updated_at": "2026-04-14T21:28:27.283000+00:00",
     "location_text": "20 km ESE of Silver Springs, Nevada",
     "lat": 39.3345,
     "lon": -119.0075,
@@ -338,7 +296,7 @@
     "fetched_at": "2026-04-14T01:29:12.123000+00:00"
   },
   {
-    "id": 8,
+    "id": 7,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -411,14 +369,14 @@
       }
     },
     "member_event_ids": [
-      8
+      7
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",
     "fetched_at": "2026-03-25T01:00:00+00:00"
   },
   {
-    "id": 9,
+    "id": 8,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -491,7 +449,7 @@
       }
     },
     "member_event_ids": [
-      7
+      6
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

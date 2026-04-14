@@ -1,6 +1,42 @@
 [
   {
     "id": 1,
+    "group_key": "earthquake|us6000spye",
+    "event_type": "earthquake",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "M 5.7 - south of Africa",
+    "summary": "south of Africa",
+    "started_at": "2026-04-14T10:13:16.728000+00:00",
+    "updated_at": "2026-04-14T10:31:47.040000+00:00",
+    "location_text": "south of Africa",
+    "lat": -49.3093,
+    "lon": 30.3996,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000spye",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000spye",
+    "country_code": null,
+    "payload": {
+      "mag": 5.7,
+      "depth_km": 10.0,
+      "place": "south of Africa",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000spye.geojson",
+      "alert": null,
+      "sig": 500,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      1
+    ],
+    "occurred_at": "2026-04-14T10:13:16.728000+00:00",
+    "published_at": "2026-04-14T10:13:16.728000+00:00",
+    "fetched_at": "2026-04-14T10:13:16.728000+00:00"
+  },
+  {
+    "id": 2,
     "group_key": "volcano|6edf5da1e5ffbc79dd8fade693d1aa9e507a93d0",
     "event_type": "volcano",
     "severity_level": "high",
@@ -47,14 +83,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      3
+      4
     ],
     "occurred_at": "2026-04-14T06:45:00+00:00",
     "published_at": "2026-04-14T06:45:00+00:00",
     "fetched_at": "2026-04-14T06:45:00+00:00"
   },
   {
-    "id": 2,
+    "id": 3,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|western_north_pacific_area|tc_04w|f1dcd3e7469ed7cb",
     "event_type": "typhoon",
     "severity_level": "extreme",
@@ -102,14 +138,14 @@
       }
     },
     "member_event_ids": [
-      7
+      8
     ],
     "occurred_at": "2026-04-14T06:00:00+00:00",
     "published_at": "2026-04-14T06:00:00+00:00",
     "fetched_at": "2026-04-14T06:00:00+00:00"
   },
   {
-    "id": 3,
+    "id": 4,
     "group_key": "earthquake|us6000spva",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -138,14 +174,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      1
+      2
     ],
     "occurred_at": "2026-04-14T03:04:21.202000+00:00",
     "published_at": "2026-04-14T03:04:21.202000+00:00",
     "fetched_at": "2026-04-14T03:04:21.202000+00:00"
   },
   {
-    "id": 4,
+    "id": 5,
     "group_key": "earthquake|nn00914068",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -153,7 +189,7 @@
     "title": "M 5.7 - 20 km ESE of Silver Springs, Nevada",
     "summary": "20 km ESE of Silver Springs, Nevada",
     "started_at": "2026-04-14T01:29:12.123000+00:00",
-    "updated_at": "2026-04-14T10:17:45.288000+00:00",
+    "updated_at": "2026-04-14T10:30:50.832000+00:00",
     "location_text": "20 km ESE of Silver Springs, Nevada",
     "lat": 39.3345,
     "lon": -119.0075,
@@ -174,14 +210,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      2
+      3
     ],
     "occurred_at": "2026-04-14T01:29:12.123000+00:00",
     "published_at": "2026-04-14T01:29:12.123000+00:00",
     "fetched_at": "2026-04-14T01:29:12.123000+00:00"
   },
   {
-    "id": 5,
+    "id": 6,
     "group_key": "volcano|9d3ddcfe56b2c383b2d2478b8d68196b9221dc34",
     "event_type": "volcano",
     "severity_level": "high",
@@ -240,14 +276,14 @@
       "merged_count": 2
     },
     "member_event_ids": [
-      4
+      5
     ],
     "occurred_at": "2026-04-13T23:54:02+00:00",
     "published_at": "2026-04-13T23:54:02+00:00",
     "fetched_at": "2026-04-13T23:54:02+00:00"
   },
   {
-    "id": 6,
+    "id": 7,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -320,14 +356,14 @@
       }
     },
     "member_event_ids": [
-      6
+      7
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",
     "fetched_at": "2026-03-25T01:00:00+00:00"
   },
   {
-    "id": 7,
+    "id": 8,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -400,7 +436,7 @@
       }
     },
     "member_event_ids": [
-      5
+      6
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

@@ -37,6 +37,60 @@
   },
   {
     "id": 2,
+    "group_key": "volcano|5a348e4f9119756180efb9d8433a3c43056c4efa",
+    "event_type": "volcano",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Krasheninnikov",
+    "summary": "VRP 141.14 MW · MODIS · 4.47 km",
+    "started_at": "2026-04-14T09:25:00+00:00",
+    "updated_at": "2026-04-14T09:25:00+00:00",
+    "location_text": "Krasheninnikov",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "MODIS",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=300190",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=300190",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "300190",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=300190",
+      "vrp_mw": 141.14,
+      "distance_km": 4.47,
+      "sensor": "MODIS",
+      "row_class": [
+        "high"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "MODIS"
+      ],
+      "reports": [
+        {
+          "volcano_id": "300190",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=300190",
+          "vrp_mw": 141.14,
+          "distance_km": 4.47,
+          "sensor": "MODIS",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 1
+    },
+    "member_event_ids": [
+      4
+    ],
+    "occurred_at": "2026-04-14T09:25:00+00:00",
+    "published_at": "2026-04-14T09:25:00+00:00",
+    "fetched_at": "2026-04-14T09:25:00+00:00"
+  },
+  {
+    "id": 3,
     "group_key": "volcano|6edf5da1e5ffbc79dd8fade693d1aa9e507a93d0",
     "event_type": "volcano",
     "severity_level": "high",
@@ -83,14 +137,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      4
+      5
     ],
     "occurred_at": "2026-04-14T06:45:00+00:00",
     "published_at": "2026-04-14T06:45:00+00:00",
     "fetched_at": "2026-04-14T06:45:00+00:00"
   },
   {
-    "id": 3,
+    "id": 4,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|western_north_pacific_area|tc_04w|f1dcd3e7469ed7cb",
     "event_type": "typhoon",
     "severity_level": "extreme",
@@ -138,14 +192,14 @@
       }
     },
     "member_event_ids": [
-      8
+      9
     ],
     "occurred_at": "2026-04-14T06:00:00+00:00",
     "published_at": "2026-04-14T06:00:00+00:00",
     "fetched_at": "2026-04-14T06:00:00+00:00"
   },
   {
-    "id": 4,
+    "id": 5,
     "group_key": "earthquake|us6000spva",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -181,7 +235,7 @@
     "fetched_at": "2026-04-14T03:04:21.202000+00:00"
   },
   {
-    "id": 5,
+    "id": 6,
     "group_key": "earthquake|nn00914068",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -189,7 +243,7 @@
     "title": "M 5.7 - 20 km ESE of Silver Springs, Nevada",
     "summary": "20 km ESE of Silver Springs, Nevada",
     "started_at": "2026-04-14T01:29:12.123000+00:00",
-    "updated_at": "2026-04-14T11:02:19.310000+00:00",
+    "updated_at": "2026-04-14T11:18:12.347000+00:00",
     "location_text": "20 km ESE of Silver Springs, Nevada",
     "lat": 39.3345,
     "lon": -119.0075,
@@ -217,7 +271,7 @@
     "fetched_at": "2026-04-14T01:29:12.123000+00:00"
   },
   {
-    "id": 6,
+    "id": 7,
     "group_key": "volcano|9d3ddcfe56b2c383b2d2478b8d68196b9221dc34",
     "event_type": "volcano",
     "severity_level": "high",
@@ -276,14 +330,14 @@
       "merged_count": 2
     },
     "member_event_ids": [
-      5
+      6
     ],
     "occurred_at": "2026-04-13T23:54:02+00:00",
     "published_at": "2026-04-13T23:54:02+00:00",
     "fetched_at": "2026-04-13T23:54:02+00:00"
   },
   {
-    "id": 7,
+    "id": 8,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -356,14 +410,14 @@
       }
     },
     "member_event_ids": [
-      7
+      8
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",
     "fetched_at": "2026-03-25T01:00:00+00:00"
   },
   {
-    "id": 8,
+    "id": 9,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -436,7 +490,7 @@
       }
     },
     "member_event_ids": [
-      6
+      7
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

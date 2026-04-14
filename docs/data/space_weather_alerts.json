@@ -1,6 +1,33 @@
 [
   {
     "id": 1,
+    "dedupe_key": "EF3A|2026-04-14 11:37:10.323|3675",
+    "product_id": "EF3A",
+    "message_code": "ALTEF3",
+    "serial_number": "3675",
+    "issue_datetime": "2026-04-14T11:37:10.323000+00:00",
+    "issue_time_text": "2026-04-14T11:37:00+00:00",
+    "headline": "CONTINUED ALERT: Electron 2MeV Integral Flux exceeded 1000pfu",
+    "message_type": "continued_alert",
+    "noaa_scale": null,
+    "impacts_text": "Satellite systems may experience significant charging resulting in increased risk to satellite systems.",
+    "description_text": "",
+    "message_raw": "Space Weather Message Code: ALTEF3\r\nSerial Number: 3675\r\nIssue Time: 2026 Apr 14 1137 UTC\r\n\r\nCONTINUED ALERT: Electron 2MeV Integral Flux exceeded 1000pfu\r\nContinuation of Serial Number: 3674\r\nBegin Time: 2026 Apr 03 0920 UTC\r\nYesterday Maximum 2MeV Flux: 1650 pfu\r\n\r\n\r\n\r\nPotential Impacts: Satellite systems may experience significant charging resulting in increased risk to satellite systems.",
+    "source_name": "SWPC Alerts",
+    "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
+    "fetched_at": "2026-04-14T16:00:26.056040+00:00",
+    "created_at": "2026-04-14 16:00:34",
+    "details": {
+      "space_weather_message_code": "ALTEF3",
+      "serial_number": "3675",
+      "issue_time": "2026 Apr 14 1137 UTC",
+      "continuation_of_serial_number": "3674",
+      "begin_time": "2026 Apr 03 0920 UTC",
+      "yesterday_maximum_2mev_flux": "1650 pfu"
+    }
+  },
+  {
+    "id": 2,
     "dedupe_key": "EF3A|2026-04-13 11:01:31.880|3674",
     "product_id": "EF3A",
     "message_code": "ALTEF3",
@@ -15,8 +42,8 @@
     "message_raw": "Space Weather Message Code: ALTEF3\r\nSerial Number: 3674\r\nIssue Time: 2026 Apr 13 1101 UTC\r\n\r\nCONTINUED ALERT: Electron 2MeV Integral Flux exceeded 1000pfu\r\nContinuation of Serial Number: 3673\r\nBegin Time: 2026 Apr 03 0920 UTC\r\nYesterday Maximum 2MeV Flux: 1610 pfu\r\n\r\n\r\n\r\nPotential Impacts: Satellite systems may experience significant charging resulting in increased risk to satellite systems.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-14T10:00:19.322364+00:00",
-    "created_at": "2026-04-14 10:00:31",
+    "fetched_at": "2026-04-14T16:00:26.056040+00:00",
+    "created_at": "2026-04-14 16:00:34",
     "details": {
       "space_weather_message_code": "ALTEF3",
       "serial_number": "3674",
@@ -27,7 +54,7 @@
     }
   },
   {
-    "id": 2,
+    "id": 3,
     "dedupe_key": "EF3A|2026-04-12 13:17:14.360|3673",
     "product_id": "EF3A",
     "message_code": "ALTEF3",
@@ -42,8 +69,8 @@
     "message_raw": "Space Weather Message Code: ALTEF3\r\nSerial Number: 3673\r\nIssue Time: 2026 Apr 12 1317 UTC\r\n\r\nCONTINUED ALERT: Electron 2MeV Integral Flux exceeded 1000pfu\r\nContinuation of Serial Number: 3672\r\nBegin Time: 2026 Apr 03 0920 UTC\r\nYesterday Maximum 2MeV Flux: 1082 pfu\r\n\r\n\r\n\r\nPotential Impacts: Satellite systems may experience significant charging resulting in increased risk to satellite systems.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-14T10:00:19.322364+00:00",
-    "created_at": "2026-04-14 10:00:31",
+    "fetched_at": "2026-04-14T16:00:26.056040+00:00",
+    "created_at": "2026-04-14 16:00:34",
     "details": {
       "space_weather_message_code": "ALTEF3",
       "serial_number": "3673",
@@ -54,7 +81,7 @@
     }
   },
   {
-    "id": 3,
+    "id": 4,
     "dedupe_key": "K04W|2026-04-12 09:45:25.183|5317",
     "product_id": "K04W",
     "message_code": "WARK04",
@@ -69,8 +96,8 @@
     "message_raw": "Space Weather Message Code: WARK04\r\nSerial Number: 5317\r\nIssue Time: 2026 Apr 12 0945 UTC\r\n\r\nCANCEL WARNING: Geomagnetic K-index of 4 expected\r\nCancel Serial Number: 5316\r\nOriginal Issue Time: 2026 Apr 10 0143 UTC\r\n\r\nComment: Active conditions (Kp=4) are no longer expected to occur. \r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact primarily poleward of 65 degrees Geomagnetic Latitude.\r\nInduced Currents - Weak power grid fluctuations can occur.\r\nAurora - Aurora may be visible at high latitudes such as Canada and Alaska.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-14T10:00:19.322364+00:00",
-    "created_at": "2026-04-14 10:00:31",
+    "fetched_at": "2026-04-14T16:00:26.056040+00:00",
+    "created_at": "2026-04-14 16:00:34",
     "details": {
       "space_weather_message_code": "WARK04",
       "serial_number": "5317",
@@ -81,7 +108,7 @@
     }
   },
   {
-    "id": 4,
+    "id": 5,
     "dedupe_key": "K04W|2026-04-11 17:56:04.477|5316",
     "product_id": "K04W",
     "message_code": "WARK04",
@@ -96,8 +123,8 @@
     "message_raw": "Space Weather Message Code: WARK04\r\nSerial Number: 5316\r\nIssue Time: 2026 Apr 11 1756 UTC\r\n\r\nEXTENDED WARNING: Geomagnetic K-index of 4 expected\r\nExtension to Serial Number: 5315\r\nValid From: 2026 Apr 10 0145 UTC\r\nNow Valid Until: 2026 Apr 12 1500 UTC\r\nWarning Condition: Persistence\r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact primarily poleward of 65 degrees Geomagnetic Latitude.\r\nInduced Currents - Weak power grid fluctuations can occur.\r\nAurora - Aurora may be visible at high latitudes such as Canada and Alaska.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-14T10:00:19.322364+00:00",
-    "created_at": "2026-04-14 10:00:31",
+    "fetched_at": "2026-04-14T16:00:26.056040+00:00",
+    "created_at": "2026-04-14 16:00:34",
     "details": {
       "space_weather_message_code": "WARK04",
       "serial_number": "5316",
@@ -109,7 +136,7 @@
     }
   },
   {
-    "id": 5,
+    "id": 6,
     "dedupe_key": "EF3A|2026-04-11 13:06:43.880|3672",
     "product_id": "EF3A",
     "message_code": "ALTEF3",
@@ -124,8 +151,8 @@
     "message_raw": "Space Weather Message Code: ALTEF3\r\nSerial Number: 3672\r\nIssue Time: 2026 Apr 11 1306 UTC\r\n\r\nCONTINUED ALERT: Electron 2MeV Integral Flux exceeded 1000pfu\r\nContinuation of Serial Number: 3671\r\nBegin Time: 2026 Apr 03 0920 UTC\r\nYesterday Maximum 2MeV Flux: 1714 pfu\r\n\r\n\r\n\r\nPotential Impacts: Satellite systems may experience significant charging resulting in increased risk to satellite systems.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-14T10:00:19.322364+00:00",
-    "created_at": "2026-04-14 10:00:31",
+    "fetched_at": "2026-04-14T16:00:26.056040+00:00",
+    "created_at": "2026-04-14 16:00:34",
     "details": {
       "space_weather_message_code": "ALTEF3",
       "serial_number": "3672",
@@ -136,7 +163,7 @@
     }
   },
   {
-    "id": 6,
+    "id": 7,
     "dedupe_key": "K05W|2026-04-10 14:26:04.470|2223",
     "product_id": "K05W",
     "message_code": "WARK05",
@@ -151,8 +178,8 @@
     "message_raw": "Space Weather Message Code: WARK05\r\nSerial Number: 2223\r\nIssue Time: 2026 Apr 10 1426 UTC\r\n\r\nWARNING: Geomagnetic K-index of 5 expected\r\nValid From: 2026 Apr 10 1425 UTC\r\nValid To: 2026 Apr 11 0900 UTC\r\nWarning Condition: Onset\r\nNOAA Scale: G1 - Minor\r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact primarily poleward of 60 degrees Geomagnetic Latitude.\r\nInduced Currents - Weak power grid fluctuations can occur.\r\nSpacecraft - Minor impact on satellite operations possible.\r\nAurora - Aurora may be visible at high latitudes, i.e., northern tier of the U.S. such as northern Michigan and Maine.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-14T10:00:19.322364+00:00",
-    "created_at": "2026-04-14 10:00:31",
+    "fetched_at": "2026-04-14T16:00:26.056040+00:00",
+    "created_at": "2026-04-14 16:00:34",
     "details": {
       "space_weather_message_code": "WARK05",
       "serial_number": "2223",
@@ -164,7 +191,7 @@
     }
   },
   {
-    "id": 7,
+    "id": 8,
     "dedupe_key": "EF3A|2026-04-10 14:07:21.717|3671",
     "product_id": "EF3A",
     "message_code": "ALTEF3",
@@ -179,8 +206,8 @@
     "message_raw": "Space Weather Message Code: ALTEF3\r\nSerial Number: 3671\r\nIssue Time: 2026 Apr 10 1407 UTC\r\n\r\nCONTINUED ALERT: Electron 2MeV Integral Flux exceeded 1000pfu\r\nContinuation of Serial Number: 3670\r\nBegin Time: 2026 Apr 03 0920 UTC\r\nYesterday Maximum 2MeV Flux: 10680 pfu\r\n\r\n\r\n\r\nPotential Impacts: Satellite systems may experience significant charging resulting in increased risk to satellite systems.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-14T10:00:19.322364+00:00",
-    "created_at": "2026-04-14 10:00:31",
+    "fetched_at": "2026-04-14T16:00:26.056040+00:00",
+    "created_at": "2026-04-14 16:00:34",
     "details": {
       "space_weather_message_code": "ALTEF3",
       "serial_number": "3671",
@@ -191,7 +218,7 @@
     }
   },
   {
-    "id": 8,
+    "id": 9,
     "dedupe_key": "K04W|2026-04-10 13:50:17.650|5315",
     "product_id": "K04W",
     "message_code": "WARK04",
@@ -206,8 +233,8 @@
     "message_raw": "Space Weather Message Code: WARK04\r\nSerial Number: 5315\r\nIssue Time: 2026 Apr 10 1350 UTC\r\n\r\nEXTENDED WARNING: Geomagnetic K-index of 4 expected\r\nExtension to Serial Number: 5314\r\nValid From: 2026 Apr 10 0145 UTC\r\nNow Valid Until: 2026 Apr 11 1800 UTC\r\nWarning Condition: Persistence\r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact primarily poleward of 65 degrees Geomagnetic Latitude.\r\nInduced Currents - Weak power grid fluctuations can occur.\r\nAurora - Aurora may be visible at high latitudes such as Canada and Alaska.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-14T10:00:19.322364+00:00",
-    "created_at": "2026-04-14 10:00:31",
+    "fetched_at": "2026-04-14T16:00:26.056040+00:00",
+    "created_at": "2026-04-14 16:00:34",
     "details": {
       "space_weather_message_code": "WARK04",
       "serial_number": "5315",
@@ -219,7 +246,7 @@
     }
   },
   {
-    "id": 9,
+    "id": 10,
     "dedupe_key": "K04A|2026-04-10 02:08:32.690|2649",
     "product_id": "K04A",
     "message_code": "ALTK04",
@@ -234,8 +261,8 @@
     "message_raw": "Space Weather Message Code: ALTK04\r\nSerial Number: 2649\r\nIssue Time: 2026 Apr 10 0208 UTC\r\n\r\nALERT: Geomagnetic K-index of 4\r\n Threshold Reached: 2026 Apr 10 0205 UTC\r\nSynoptic Period: 0000-0300 UTC\r\n \r\nActive Warning: Yes\r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact primarily poleward of 65 degrees Geomagnetic Latitude.\r\nInduced Currents - Weak power grid fluctuations can occur.\r\nAurora - Aurora may be visible at high latitudes such as Canada and Alaska.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-14T10:00:19.322364+00:00",
-    "created_at": "2026-04-14 10:00:31",
+    "fetched_at": "2026-04-14T16:00:26.056040+00:00",
+    "created_at": "2026-04-14 16:00:34",
     "details": {
       "space_weather_message_code": "ALTK04",
       "serial_number": "2649",
@@ -246,7 +273,7 @@
     }
   },
   {
-    "id": 10,
+    "id": 11,
     "dedupe_key": "K04W|2026-04-10 01:43:15.303|5314",
     "product_id": "K04W",
     "message_code": "WARK04",
@@ -261,8 +288,8 @@
     "message_raw": "Space Weather Message Code: WARK04\r\nSerial Number: 5314\r\nIssue Time: 2026 Apr 10 0143 UTC\r\n\r\nWARNING: Geomagnetic K-index of 4 expected\r\nValid From: 2026 Apr 10 0145 UTC\r\nValid To: 2026 Apr 10 1500 UTC\r\nWarning Condition: Onset\r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact primarily poleward of 65 degrees Geomagnetic Latitude.\r\nInduced Currents - Weak power grid fluctuations can occur.\r\nAurora - Aurora may be visible at high latitudes such as Canada and Alaska.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-14T10:00:19.322364+00:00",
-    "created_at": "2026-04-14 10:00:31",
+    "fetched_at": "2026-04-14T16:00:26.056040+00:00",
+    "created_at": "2026-04-14 16:00:34",
     "details": {
       "space_weather_message_code": "WARK04",
       "serial_number": "5314",

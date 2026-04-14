@@ -8,7 +8,7 @@
     "title": "M 5.7 - 20 km ESE of Silver Springs, Nevada",
     "summary": "20 km ESE of Silver Springs, Nevada",
     "started_at": "2026-04-14T01:29:11.454000+00:00",
-    "updated_at": "2026-04-14T01:34:45.682000+00:00",
+    "updated_at": "2026-04-14T01:49:18.326000+00:00",
     "location_text": "20 km ESE of Silver Springs, Nevada",
     "lat": 39.3296,
     "lon": -119.0147,
@@ -23,7 +23,7 @@
       "depth_km": 10.0,
       "place": "20 km ESE of Silver Springs, Nevada",
       "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000sptw.geojson",
-      "alert": null,
+      "alert": "green",
       "sig": 500,
       "tsunami": 0,
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
@@ -42,17 +42,17 @@
     "severity_level": "high",
     "severity_color": "high",
     "title": "Nyamuragira",
-    "summary": "VRP 928.80 MW · VIIRS / VIIRS375 · 2.37 km",
+    "summary": "VRP 928.80 MW · VIIRS375 / VIIRS · 2.37 km",
     "started_at": "2026-04-13T23:06:01+00:00",
     "updated_at": "2026-04-13T23:06:01+00:00",
     "location_text": "Nyamuragira",
     "lat": null,
     "lon": null,
     "source_primary": "MIROVA",
-    "source_secondary": "VIIRS / VIIRS375",
+    "source_secondary": "VIIRS375 / VIIRS",
     "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
     "country_code": null,
     "payload": {
       "volcano_id": "223020",
@@ -65,16 +65,16 @@
       ],
       "source_page": "https://www.mirovaweb.it/NRT/",
       "sensors": [
-        "VIIRS",
-        "VIIRS375"
+        "VIIRS375",
+        "VIIRS"
       ],
       "reports": [
         {
           "volcano_id": "223020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
-          "vrp_mw": 928.8,
-          "distance_km": 7.72,
-          "sensor": "VIIRS",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
+          "vrp_mw": 142.31,
+          "distance_km": 2.37,
+          "sensor": "VIIRS375",
           "row_class": [
             "high"
           ],
@@ -82,10 +82,10 @@
         },
         {
           "volcano_id": "223020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
-          "vrp_mw": 142.31,
-          "distance_km": 2.37,
-          "sensor": "VIIRS375",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
+          "vrp_mw": 928.8,
+          "distance_km": 7.72,
+          "sensor": "VIIRS",
           "row_class": [
             "high"
           ],

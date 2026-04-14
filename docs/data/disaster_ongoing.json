@@ -8,7 +8,7 @@
     "title": "M 5.5 - Pagan region, Northern Mariana Islands",
     "summary": "Pagan region, Northern Mariana Islands",
     "started_at": "2026-04-14T03:04:21.202000+00:00",
-    "updated_at": "2026-04-14T03:16:41.040000+00:00",
+    "updated_at": "2026-04-14T03:24:22.356000+00:00",
     "location_text": "Pagan region, Northern Mariana Islands",
     "lat": 18.9342,
     "lon": 145.4987,
@@ -23,7 +23,7 @@
       "depth_km": 219.991,
       "place": "Pagan region, Northern Mariana Islands",
       "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000spva.geojson",
-      "alert": null,
+      "alert": "green",
       "sig": 465,
       "tsunami": 0,
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
@@ -44,7 +44,7 @@
     "title": "M 5.7 - 20 km ESE of Silver Springs, Nevada",
     "summary": "20 km ESE of Silver Springs, Nevada",
     "started_at": "2026-04-14T01:29:12.123000+00:00",
-    "updated_at": "2026-04-14T03:19:37.055000+00:00",
+    "updated_at": "2026-04-14T03:31:54.191000+00:00",
     "location_text": "20 km ESE of Silver Springs, Nevada",
     "lat": 39.3345,
     "lon": -119.0075,
@@ -78,17 +78,17 @@
     "severity_level": "high",
     "severity_color": "high",
     "title": "Nyamuragira",
-    "summary": "VRP 353.89 MW · VIIRS / VIIRS375 · 4.14 km",
+    "summary": "VRP 353.89 MW · VIIRS375 / VIIRS · 4.14 km",
     "started_at": "2026-04-13T23:54:02+00:00",
     "updated_at": "2026-04-13T23:54:02+00:00",
     "location_text": "Nyamuragira",
     "lat": null,
     "lon": null,
     "source_primary": "MIROVA",
-    "source_secondary": "VIIRS / VIIRS375",
+    "source_secondary": "VIIRS375 / VIIRS",
     "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
     "country_code": null,
     "payload": {
       "volcano_id": "223020",
@@ -101,16 +101,16 @@
       ],
       "source_page": "https://www.mirovaweb.it/NRT/",
       "sensors": [
-        "VIIRS",
-        "VIIRS375"
+        "VIIRS375",
+        "VIIRS"
       ],
       "reports": [
         {
           "volcano_id": "223020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
-          "vrp_mw": 353.89,
-          "distance_km": 4.56,
-          "sensor": "VIIRS",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
+          "vrp_mw": 315.07,
+          "distance_km": 4.14,
+          "sensor": "VIIRS375",
           "row_class": [
             "high"
           ],
@@ -118,10 +118,10 @@
         },
         {
           "volcano_id": "223020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
-          "vrp_mw": 315.07,
-          "distance_km": 4.14,
-          "sensor": "VIIRS375",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
+          "vrp_mw": 353.89,
+          "distance_km": 4.56,
+          "sensor": "VIIRS",
           "row_class": [
             "high"
           ],
@@ -198,17 +198,17 @@
     "severity_level": "high",
     "severity_color": "high",
     "title": "Mayon",
-    "summary": "VRP 112.24 MW · VIIRS375 / VIIRS · 2.86 km",
+    "summary": "VRP 112.24 MW · VIIRS / VIIRS375 · 2.86 km",
     "started_at": "2026-04-13T18:00:01+00:00",
     "updated_at": "2026-04-13T18:00:01+00:00",
     "location_text": "Mayon",
     "lat": null,
     "lon": null,
     "source_primary": "MIROVA",
-    "source_secondary": "VIIRS375 / VIIRS",
+    "source_secondary": "VIIRS / VIIRS375",
     "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
     "country_code": null,
     "payload": {
       "volcano_id": "273030",
@@ -217,26 +217,15 @@
       "distance_km": 2.86,
       "sensor": "VIIRS375",
       "row_class": [
-        "high",
-        "moderate"
+        "moderate",
+        "high"
       ],
       "source_page": "https://www.mirovaweb.it/NRT/",
       "sensors": [
-        "VIIRS375",
-        "VIIRS"
+        "VIIRS",
+        "VIIRS375"
       ],
       "reports": [
-        {
-          "volcano_id": "273030",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
-          "vrp_mw": 112.24,
-          "distance_km": 2.86,
-          "sensor": "VIIRS375",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        },
         {
           "volcano_id": "273030",
           "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
@@ -245,6 +234,17 @@
           "sensor": "VIIRS",
           "row_class": [
             "moderate"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        },
+        {
+          "volcano_id": "273030",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
+          "vrp_mw": 112.24,
+          "distance_km": 2.86,
+          "sensor": "VIIRS375",
+          "row_class": [
+            "high"
           ],
           "source_page": "https://www.mirovaweb.it/NRT/"
         }

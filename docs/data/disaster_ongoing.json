@@ -1,50 +1,50 @@
 [
   {
     "id": 1,
-    "group_key": "earthquake|us6000sptw",
+    "group_key": "earthquake|nn00914068",
     "event_type": "earthquake",
     "severity_level": "moderate",
     "severity_color": "moderate",
-    "title": "M 5.7 - 20 km ESE of Silver Springs, Nevada",
+    "title": "M 5.5 - 20 km ESE of Silver Springs, Nevada",
     "summary": "20 km ESE of Silver Springs, Nevada",
-    "started_at": "2026-04-14T01:29:11.454000+00:00",
-    "updated_at": "2026-04-14T01:49:18.326000+00:00",
+    "started_at": "2026-04-14T01:29:12.123000+00:00",
+    "updated_at": "2026-04-14T02:03:01.248000+00:00",
     "location_text": "20 km ESE of Silver Springs, Nevada",
-    "lat": 39.3296,
-    "lon": -119.0147,
+    "lat": 39.3345,
+    "lon": -119.0075,
     "source_primary": "USGS",
     "source_secondary": null,
     "status": "active",
-    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sptw",
-    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sptw",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/nn00914068",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/nn00914068",
     "country_code": null,
     "payload": {
-      "mag": 5.7,
-      "depth_km": 10.0,
+      "mag": 5.49,
+      "depth_km": 13.1149,
       "place": "20 km ESE of Silver Springs, Nevada",
-      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000sptw.geojson",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/nn00914068.geojson",
       "alert": "green",
-      "sig": 500,
+      "sig": 1144,
       "tsunami": 0,
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
       1
     ],
-    "occurred_at": "2026-04-14T01:29:11.454000+00:00",
-    "published_at": "2026-04-14T01:29:11.454000+00:00",
-    "fetched_at": "2026-04-14T01:29:11.454000+00:00"
+    "occurred_at": "2026-04-14T01:29:12.123000+00:00",
+    "published_at": "2026-04-14T01:29:12.123000+00:00",
+    "fetched_at": "2026-04-14T01:29:12.123000+00:00"
   },
   {
     "id": 2,
-    "group_key": "volcano|831e3121eab6a03d06e9155b5bb3dcbb5d18f398",
+    "group_key": "volcano|9d3ddcfe56b2c383b2d2478b8d68196b9221dc34",
     "event_type": "volcano",
     "severity_level": "high",
     "severity_color": "high",
     "title": "Nyamuragira",
-    "summary": "VRP 928.80 MW · VIIRS375 / VIIRS · 2.37 km",
-    "started_at": "2026-04-13T23:06:01+00:00",
-    "updated_at": "2026-04-13T23:06:01+00:00",
+    "summary": "VRP 353.89 MW · VIIRS375 / VIIRS · 4.14 km",
+    "started_at": "2026-04-13T23:54:02+00:00",
+    "updated_at": "2026-04-13T23:54:02+00:00",
     "location_text": "Nyamuragira",
     "lat": null,
     "lon": null,
@@ -57,8 +57,8 @@
     "payload": {
       "volcano_id": "223020",
       "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
-      "vrp_mw": 928.8,
-      "distance_km": 7.72,
+      "vrp_mw": 353.89,
+      "distance_km": 4.56,
       "sensor": "VIIRS",
       "row_class": [
         "high"
@@ -72,8 +72,8 @@
         {
           "volcano_id": "223020",
           "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
-          "vrp_mw": 142.31,
-          "distance_km": 2.37,
+          "vrp_mw": 315.07,
+          "distance_km": 4.14,
           "sensor": "VIIRS375",
           "row_class": [
             "high"
@@ -83,8 +83,8 @@
         {
           "volcano_id": "223020",
           "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
-          "vrp_mw": 928.8,
-          "distance_km": 7.72,
+          "vrp_mw": 353.89,
+          "distance_km": 4.56,
           "sensor": "VIIRS",
           "row_class": [
             "high"
@@ -97,9 +97,9 @@
     "member_event_ids": [
       6
     ],
-    "occurred_at": "2026-04-13T23:06:01+00:00",
-    "published_at": "2026-04-13T23:06:01+00:00",
-    "fetched_at": "2026-04-13T23:06:01+00:00"
+    "occurred_at": "2026-04-13T23:54:02+00:00",
+    "published_at": "2026-04-13T23:54:02+00:00",
+    "fetched_at": "2026-04-13T23:54:02+00:00"
   },
   {
     "id": 3,

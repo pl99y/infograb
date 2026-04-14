@@ -8,7 +8,7 @@
     "title": "M 5.7 - 20 km ESE of Silver Springs, Nevada",
     "summary": "20 km ESE of Silver Springs, Nevada",
     "started_at": "2026-04-14T01:29:12.123000+00:00",
-    "updated_at": "2026-04-14T02:46:35.498000+00:00",
+    "updated_at": "2026-04-14T03:04:54.394000+00:00",
     "location_text": "20 km ESE of Silver Springs, Nevada",
     "lat": 39.3345,
     "lon": -119.0075,
@@ -95,7 +95,7 @@
       "merged_count": 2
     },
     "member_event_ids": [
-      5
+      4
     ],
     "occurred_at": "2026-04-13T23:54:02+00:00",
     "published_at": "2026-04-13T23:54:02+00:00",
@@ -149,7 +149,7 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      6
+      5
     ],
     "occurred_at": "2026-04-13T18:25:00+00:00",
     "published_at": "2026-04-13T18:25:00+00:00",
@@ -216,7 +216,7 @@
       "merged_count": 2
     },
     "member_event_ids": [
-      7
+      6
     ],
     "occurred_at": "2026-04-13T18:00:01+00:00",
     "published_at": "2026-04-13T18:00:01+00:00",
@@ -343,7 +343,7 @@
       }
     },
     "member_event_ids": [
-      10
+      9
     ],
     "occurred_at": "2026-04-13T06:00:00+00:00",
     "published_at": "2026-04-13T06:00:00+00:00",
@@ -351,42 +351,6 @@
   },
   {
     "id": 8,
-    "group_key": "earthquake|us6000spka",
-    "event_type": "earthquake",
-    "severity_level": "moderate",
-    "severity_color": "moderate",
-    "title": "M 5.3 - 174 km ESE of Kokopo, Papua New Guinea",
-    "summary": "174 km ESE of Kokopo, Papua New Guinea",
-    "started_at": "2026-04-13T02:56:01.421000+00:00",
-    "updated_at": "2026-04-13T03:09:21.040000+00:00",
-    "location_text": "174 km ESE of Kokopo, Papua New Guinea",
-    "lat": -5.1908,
-    "lon": 153.593,
-    "source_primary": "USGS",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000spka",
-    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000spka",
-    "country_code": null,
-    "payload": {
-      "mag": 5.3,
-      "depth_km": 68.012,
-      "place": "174 km ESE of Kokopo, Papua New Guinea",
-      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000spka.geojson",
-      "alert": null,
-      "sig": 432,
-      "tsunami": 0,
-      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
-    },
-    "member_event_ids": [
-      4
-    ],
-    "occurred_at": "2026-04-13T02:56:01.421000+00:00",
-    "published_at": "2026-04-13T02:56:01.421000+00:00",
-    "fetched_at": "2026-04-13T02:56:01.421000+00:00"
-  },
-  {
-    "id": 9,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -459,14 +423,14 @@
       }
     },
     "member_event_ids": [
-      9
+      8
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",
     "fetched_at": "2026-03-25T01:00:00+00:00"
   },
   {
-    "id": 10,
+    "id": 9,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -539,7 +503,7 @@
       }
     },
     "member_event_ids": [
-      8
+      7
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

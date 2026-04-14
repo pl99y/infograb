@@ -48,7 +48,7 @@
       }
     },
     "member_event_ids": [
-      10
+      8
     ],
     "occurred_at": "2026-04-14T06:00:00+00:00",
     "published_at": "2026-04-14T06:00:00+00:00",
@@ -99,7 +99,7 @@
     "title": "M 5.7 - 20 km ESE of Silver Springs, Nevada",
     "summary": "20 km ESE of Silver Springs, Nevada",
     "started_at": "2026-04-14T01:29:12.123000+00:00",
-    "updated_at": "2026-04-14T06:16:22.723000+00:00",
+    "updated_at": "2026-04-14T06:33:20.100000+00:00",
     "location_text": "20 km ESE of Silver Springs, Nevada",
     "lat": 39.3345,
     "lon": -119.0075,
@@ -186,7 +186,7 @@
       "merged_count": 2
     },
     "member_event_ids": [
-      5
+      3
     ],
     "occurred_at": "2026-04-13T23:54:02+00:00",
     "published_at": "2026-04-13T23:54:02+00:00",
@@ -240,7 +240,7 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      6
+      4
     ],
     "occurred_at": "2026-04-13T18:25:00+00:00",
     "published_at": "2026-04-13T18:25:00+00:00",
@@ -307,7 +307,7 @@
       "merged_count": 2
     },
     "member_event_ids": [
-      7
+      5
     ],
     "occurred_at": "2026-04-13T18:00:01+00:00",
     "published_at": "2026-04-13T18:00:01+00:00",
@@ -315,78 +315,6 @@
   },
   {
     "id": 7,
-    "group_key": "earthquake|us6000splc",
-    "event_type": "earthquake",
-    "severity_level": "moderate",
-    "severity_color": "moderate",
-    "title": "M 5.2 - 88 km WNW of Ternate, Indonesia",
-    "summary": "88 km WNW of Ternate, Indonesia",
-    "started_at": "2026-04-13T06:23:22.828000+00:00",
-    "updated_at": "2026-04-13T07:11:50.040000+00:00",
-    "location_text": "88 km WNW of Ternate, Indonesia",
-    "lat": 1.0241,
-    "lon": 126.6223,
-    "source_primary": "USGS",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000splc",
-    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000splc",
-    "country_code": null,
-    "payload": {
-      "mag": 5.2,
-      "depth_km": 55.253,
-      "place": "88 km WNW of Ternate, Indonesia",
-      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000splc.geojson",
-      "alert": null,
-      "sig": 416,
-      "tsunami": 0,
-      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
-    },
-    "member_event_ids": [
-      3
-    ],
-    "occurred_at": "2026-04-13T06:23:22.828000+00:00",
-    "published_at": "2026-04-13T06:23:22.828000+00:00",
-    "fetched_at": "2026-04-13T06:23:22.828000+00:00"
-  },
-  {
-    "id": 8,
-    "group_key": "earthquake|us6000spl2",
-    "event_type": "earthquake",
-    "severity_level": "moderate",
-    "severity_color": "moderate",
-    "title": "M 5.0 - 105 km WNW of Ternate, Indonesia",
-    "summary": "105 km WNW of Ternate, Indonesia",
-    "started_at": "2026-04-13T06:21:39.975000+00:00",
-    "updated_at": "2026-04-13T06:38:11.040000+00:00",
-    "location_text": "105 km WNW of Ternate, Indonesia",
-    "lat": 1.0367,
-    "lon": 126.4706,
-    "source_primary": "USGS",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000spl2",
-    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000spl2",
-    "country_code": null,
-    "payload": {
-      "mag": 5.0,
-      "depth_km": 43.741,
-      "place": "105 km WNW of Ternate, Indonesia",
-      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000spl2.geojson",
-      "alert": null,
-      "sig": 385,
-      "tsunami": 0,
-      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
-    },
-    "member_event_ids": [
-      4
-    ],
-    "occurred_at": "2026-04-13T06:21:39.975000+00:00",
-    "published_at": "2026-04-13T06:21:39.975000+00:00",
-    "fetched_at": "2026-04-13T06:21:39.975000+00:00"
-  },
-  {
-    "id": 9,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -459,14 +387,14 @@
       }
     },
     "member_event_ids": [
-      9
+      7
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",
     "fetched_at": "2026-03-25T01:00:00+00:00"
   },
   {
-    "id": 10,
+    "id": 8,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -539,7 +467,7 @@
       }
     },
     "member_event_ids": [
-      8
+      6
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

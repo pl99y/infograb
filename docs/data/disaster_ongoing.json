@@ -1,6 +1,42 @@
 [
   {
     "id": 1,
+    "group_key": "earthquake|us6000sq6d",
+    "event_type": "earthquake",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "M 5.4 - 229 km SSE of Isangel, Vanuatu",
+    "summary": "229 km SSE of Isangel, Vanuatu",
+    "started_at": "2026-04-15T07:59:41.365000+00:00",
+    "updated_at": "2026-04-15T08:15:41.040000+00:00",
+    "location_text": "229 km SSE of Isangel, Vanuatu",
+    "lat": -21.3603,
+    "lon": 170.3357,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sq6d",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sq6d",
+    "country_code": null,
+    "payload": {
+      "mag": 5.4,
+      "depth_km": 166.688,
+      "place": "229 km SSE of Isangel, Vanuatu",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000sq6d.geojson",
+      "alert": null,
+      "sig": 449,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      1
+    ],
+    "occurred_at": "2026-04-15T07:59:41.365000+00:00",
+    "published_at": "2026-04-15T07:59:41.365000+00:00",
+    "fetched_at": "2026-04-15T07:59:41.365000+00:00"
+  },
+  {
+    "id": 2,
     "group_key": "earthquake|us6000sq5z",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -29,14 +65,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      1
+      2
     ],
     "occurred_at": "2026-04-15T06:56:02.781000+00:00",
     "published_at": "2026-04-15T06:56:02.781000+00:00",
     "fetched_at": "2026-04-15T06:56:02.781000+00:00"
   },
   {
-    "id": 2,
+    "id": 3,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|western_north_pacific_area|tc_04w|a0a7e4fe4e706c38",
     "event_type": "typhoon",
     "severity_level": "extreme",
@@ -89,60 +125,6 @@
     "fetched_at": "2026-04-15T06:00:00+00:00"
   },
   {
-    "id": 3,
-    "group_key": "volcano|fe9198764ea258b640f7dbbc6c0ff838906b0675",
-    "event_type": "volcano",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "Mayon",
-    "summary": "VRP 165.28 MW · VIIRS · 2.70 km",
-    "started_at": "2026-04-15T04:48:01+00:00",
-    "updated_at": "2026-04-15T04:48:01+00:00",
-    "location_text": "Mayon",
-    "lat": null,
-    "lon": null,
-    "source_primary": "MIROVA",
-    "source_secondary": "VIIRS",
-    "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
-    "country_code": null,
-    "payload": {
-      "volcano_id": "273030",
-      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
-      "vrp_mw": 165.28,
-      "distance_km": 2.7,
-      "sensor": "VIIRS",
-      "row_class": [
-        "high"
-      ],
-      "source_page": "https://www.mirovaweb.it/NRT/",
-      "sensors": [
-        "VIIRS"
-      ],
-      "reports": [
-        {
-          "volcano_id": "273030",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
-          "vrp_mw": 165.28,
-          "distance_km": 2.7,
-          "sensor": "VIIRS",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        }
-      ],
-      "merged_count": 1
-    },
-    "member_event_ids": [
-      4
-    ],
-    "occurred_at": "2026-04-15T04:48:01+00:00",
-    "published_at": "2026-04-15T04:48:01+00:00",
-    "fetched_at": "2026-04-15T04:48:01+00:00"
-  },
-  {
     "id": 4,
     "group_key": "earthquake|us6000sq4t",
     "event_type": "earthquake",
@@ -172,7 +154,7 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      2
+      3
     ],
     "occurred_at": "2026-04-15T02:38:25.666000+00:00",
     "published_at": "2026-04-15T02:38:25.666000+00:00",
@@ -383,7 +365,7 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      3
+      4
     ],
     "occurred_at": "2026-04-14T10:13:16.728000+00:00",
     "published_at": "2026-04-14T10:13:16.728000+00:00",

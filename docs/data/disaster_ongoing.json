@@ -44,7 +44,7 @@
     "title": "M 5.7 - 72 km SW of Tamarindo, Costa Rica",
     "summary": "72 km SW of Tamarindo, Costa Rica",
     "started_at": "2026-04-15T06:56:02.781000+00:00",
-    "updated_at": "2026-04-15T08:32:51.801000+00:00",
+    "updated_at": "2026-04-15T08:57:22.308000+00:00",
     "location_text": "72 km SW of Tamarindo, Costa Rica",
     "lat": 9.9151,
     "lon": -86.3803,
@@ -221,17 +221,17 @@
     "severity_level": "high",
     "severity_color": "high",
     "title": "Nyamuragira",
-    "summary": "VRP 121.26 MW · VIIRS / VIIRS375 · 7.72 km",
+    "summary": "VRP 121.26 MW · VIIRS375 / VIIRS · 7.72 km",
     "started_at": "2026-04-15T00:12:00+00:00",
     "updated_at": "2026-04-15T00:12:00+00:00",
     "location_text": "Nyamuragira",
     "lat": null,
     "lon": null,
     "source_primary": "MIROVA",
-    "source_secondary": "VIIRS / VIIRS375",
+    "source_secondary": "VIIRS375 / VIIRS",
     "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
     "country_code": null,
     "payload": {
       "volcano_id": "223020",
@@ -240,26 +240,15 @@
       "distance_km": 8.11,
       "sensor": "VIIRS",
       "row_class": [
-        "high",
-        "moderate"
+        "moderate",
+        "high"
       ],
       "source_page": "https://www.mirovaweb.it/NRT/",
       "sensors": [
-        "VIIRS",
-        "VIIRS375"
+        "VIIRS375",
+        "VIIRS"
       ],
       "reports": [
-        {
-          "volcano_id": "223020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
-          "vrp_mw": 121.26,
-          "distance_km": 8.11,
-          "sensor": "VIIRS",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        },
         {
           "volcano_id": "223020",
           "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
@@ -268,6 +257,17 @@
           "sensor": "VIIRS375",
           "row_class": [
             "moderate"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        },
+        {
+          "volcano_id": "223020",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
+          "vrp_mw": 121.26,
+          "distance_km": 8.11,
+          "sensor": "VIIRS",
+          "row_class": [
+            "high"
           ],
           "source_page": "https://www.mirovaweb.it/NRT/"
         }

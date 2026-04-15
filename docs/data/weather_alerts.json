@@ -1,6 +1,45 @@
 [
   {
     "id": 1,
+    "dedupe_key": "urn:oid:2.49.0.1.840.0.b5539e777fcffbd3588231039d983f7b12e59139.001.1",
+    "source_primary": "WMO",
+    "title": "Typhoon Warning issued April 15 at 9:48PM ChST by NWS Tiyan GU",
+    "summary": "Rota Coastal Waters; Tinian Coastal Waters; Saipan Coastal Waters",
+    "severity_level": "extreme",
+    "color_level": "extreme",
+    "event_type": "weather",
+    "location_text": "Rota Coastal Waters; Tinian Coastal Waters; Saipan Coastal Waters",
+    "issued_at": "2026-04-15T11:48:00+00:00",
+    "effective_at": "2026-04-15T11:48:00+00:00",
+    "expires_at": "2026-04-16T02:00:00+00:00",
+    "source_url": "https://severeweather.wmo.int/list.html",
+    "detail_url": "https://severeweather.wmo.int/list.html",
+    "payload": {
+      "id": "urn:oid:2.49.0.1.840.0.b5539e777fcffbd3588231039d983f7b12e59139.001.1",
+      "event": "Typhoon Warning",
+      "headline": "Typhoon Warning issued April 15 at 9:48PM ChST by NWS Tiyan GU",
+      "sent": "2026-04-15 11:48:00",
+      "expires": "2026-04-16 02:00:00",
+      "areaDesc": "Rota Coastal Waters; Tinian Coastal Waters; Saipan Coastal Waters",
+      "mid": "093",
+      "ra": "4",
+      "s": 4,
+      "u": 4,
+      "c": 3,
+      "capURL": "us-noaa-nws-en-marine/2026/04/15/11/48/00-5a4160bb08671c0d147d1d3cc03488dc.xml",
+      "effective": "2026-04-15 11:48:00",
+      "cap_path": "us-noaa-nws-en-marine/2026/04/15/11/48/00-5a4160bb08671c0d147d1d3cc03488dc.xml",
+      "source_page": "https://severeweather.wmo.int/list.html",
+      "last_updated": "2026-04-15 12:34:08"
+    },
+    "fetched_at": "2026-04-15T12:35:51.016444+00:00",
+    "published_at": "2026-04-15T11:48:00+00:00",
+    "updated_at": "2026-04-15T12:35:51.016444+00:00",
+    "region_text": "Rota Coastal Waters; Tinian Coastal Waters; Saipan Coastal Waters",
+    "link_url": "https://severeweather.wmo.int/list.html"
+  },
+  {
+    "id": 2,
     "dedupe_key": "IN-1776251849069012_50",
     "source_primary": "WMO",
     "title": "Severe Thunderstorms,Rain,Lightning,and Hail with wind speed 60-70kmph is very likely to occur at a few places over Anugul, Cuttack, Dhenkanal in next 3 hours.",
@@ -30,16 +69,16 @@
       "effective": "2026-04-15 11:46:00",
       "cap_path": "in-ndma-xx/2026/04/15/11/47/04-dc73a517a1dabfb98f8b3a94a8f4b5ef.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-15 12:02:12"
+      "last_updated": "2026-04-15 12:34:08"
     },
-    "fetched_at": "2026-04-15T12:20:30.958623+00:00",
+    "fetched_at": "2026-04-15T12:35:51.016444+00:00",
     "published_at": "2026-04-15T11:47:04+00:00",
-    "updated_at": "2026-04-15T12:20:30.958623+00:00",
+    "updated_at": "2026-04-15T12:35:51.016444+00:00",
     "region_text": "DHENKANAL",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 2,
+    "id": 3,
     "dedupe_key": "urn:oid:2.49.0.1.840.0.b8afb27cc3f8ec666cc3c6ab4b329ceeb533d00e.002.1",
     "source_primary": "WMO",
     "title": "Typhoon Warning issued April 15 at 8:58PM ChST by NWS Tiyan GU",
@@ -69,16 +108,16 @@
       "effective": "2026-04-15 10:58:00",
       "cap_path": "us-noaa-nws-en/2026/04/15/10/58/00-579059e9e0a911ff12b4ebc41975b94c.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-15 12:02:12"
+      "last_updated": "2026-04-15 12:34:08"
     },
-    "fetched_at": "2026-04-15T12:20:30.958623+00:00",
+    "fetched_at": "2026-04-15T12:35:51.016444+00:00",
     "published_at": "2026-04-15T10:58:00+00:00",
-    "updated_at": "2026-04-15T12:20:30.958623+00:00",
+    "updated_at": "2026-04-15T12:35:51.016444+00:00",
     "region_text": "Rota; Tinian; Saipan",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 3,
+    "id": 4,
     "dedupe_key": "IN-1776248246209012_50",
     "source_primary": "WMO",
     "title": "Severe Thunderstorms,Rain,Lightning and Hail with wind speed 60-70kmph is very likely to occur at a few places over Anugul in next 3 hours.",
@@ -108,16 +147,16 @@
       "effective": "2026-04-15 10:45:00",
       "cap_path": "in-ndma-xx/2026/04/15/10/47/06-175dccff03bb5510e1d0d1dd60b65def.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-15 12:02:12"
+      "last_updated": "2026-04-15 12:34:08"
     },
-    "fetched_at": "2026-04-15T12:20:30.958623+00:00",
+    "fetched_at": "2026-04-15T12:35:51.016444+00:00",
     "published_at": "2026-04-15T10:47:06+00:00",
-    "updated_at": "2026-04-15T12:20:30.958623+00:00",
+    "updated_at": "2026-04-15T12:35:51.016444+00:00",
     "region_text": "ANGUL",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 4,
+    "id": 5,
     "dedupe_key": "IN-1776247171357012_50",
     "source_primary": "WMO",
     "title": "Severe Thunderstorms,Rain,Lightning and Hail with wind speed 60-70 kmph is very likely to occur at a few places over Anugul in next 3 hours.",
@@ -147,51 +186,12 @@
       "effective": "2026-04-15 10:27:00",
       "cap_path": "in-ndma-xx/2026/04/15/10/29/10-dee1fd7346c3683ad8a3ca4823cfeaeb.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-15 12:02:12"
+      "last_updated": "2026-04-15 12:34:08"
     },
-    "fetched_at": "2026-04-15T12:20:30.958623+00:00",
+    "fetched_at": "2026-04-15T12:35:51.016444+00:00",
     "published_at": "2026-04-15T10:29:10+00:00",
-    "updated_at": "2026-04-15T12:20:30.958623+00:00",
+    "updated_at": "2026-04-15T12:35:51.016444+00:00",
     "region_text": "ANGUL",
-    "link_url": "https://severeweather.wmo.int/list.html"
-  },
-  {
-    "id": 5,
-    "dedupe_key": "urn:oid:2.49.0.1.840.0.77cf2270126a0bdec33ddaff6669827239246444.001.1",
-    "source_primary": "WMO",
-    "title": "Typhoon Warning issued April 15 at 3:39PM ChST by NWS Tiyan GU",
-    "summary": "Rota Coastal Waters; Tinian Coastal Waters; Saipan Coastal Waters",
-    "severity_level": "extreme",
-    "color_level": "extreme",
-    "event_type": "weather",
-    "location_text": "Rota Coastal Waters; Tinian Coastal Waters; Saipan Coastal Waters",
-    "issued_at": "2026-04-15T05:39:00+00:00",
-    "effective_at": "2026-04-15T05:39:00+00:00",
-    "expires_at": "2026-04-15T19:45:00+00:00",
-    "source_url": "https://severeweather.wmo.int/list.html",
-    "detail_url": "https://severeweather.wmo.int/list.html",
-    "payload": {
-      "id": "urn:oid:2.49.0.1.840.0.77cf2270126a0bdec33ddaff6669827239246444.001.1",
-      "event": "Typhoon Warning",
-      "headline": "Typhoon Warning issued April 15 at 3:39PM ChST by NWS Tiyan GU",
-      "sent": "2026-04-15 05:39:00",
-      "expires": "2026-04-15 19:45:00",
-      "areaDesc": "Rota Coastal Waters; Tinian Coastal Waters; Saipan Coastal Waters",
-      "mid": "093",
-      "ra": "4",
-      "s": 4,
-      "u": 4,
-      "c": 3,
-      "capURL": "us-noaa-nws-en-marine/2026/04/15/05/39/00-643651545890652d597c1ca9ebc26873.xml",
-      "effective": "2026-04-15 05:39:00",
-      "cap_path": "us-noaa-nws-en-marine/2026/04/15/05/39/00-643651545890652d597c1ca9ebc26873.xml",
-      "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-15 12:02:12"
-    },
-    "fetched_at": "2026-04-15T12:20:30.958623+00:00",
-    "published_at": "2026-04-15T05:39:00+00:00",
-    "updated_at": "2026-04-15T12:20:30.958623+00:00",
-    "region_text": "Rota Coastal Waters; Tinian Coastal Waters; Saipan Coastal Waters",
     "link_url": "https://severeweather.wmo.int/list.html"
   }
 ]

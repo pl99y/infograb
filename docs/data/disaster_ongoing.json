@@ -1,6 +1,60 @@
 [
   {
     "id": 1,
+    "group_key": "volcano|ac9a12a7f8f25ab66adef5b9c7b2c5f2d16beaf8",
+    "event_type": "volcano",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Aoba",
+    "summary": "VRP 167.23 MW · MODIS · 2.24 km",
+    "started_at": "2026-04-15T16:00:00+00:00",
+    "updated_at": "2026-04-15T16:00:00+00:00",
+    "location_text": "Aoba",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "MODIS",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=257030",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=257030",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "257030",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=257030",
+      "vrp_mw": 167.23,
+      "distance_km": 2.24,
+      "sensor": "MODIS",
+      "row_class": [
+        "high"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "MODIS"
+      ],
+      "reports": [
+        {
+          "volcano_id": "257030",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=257030",
+          "vrp_mw": 167.23,
+          "distance_km": 2.24,
+          "sensor": "MODIS",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 1
+    },
+    "member_event_ids": [
+      4
+    ],
+    "occurred_at": "2026-04-15T16:00:00+00:00",
+    "published_at": "2026-04-15T16:00:00+00:00",
+    "fetched_at": "2026-04-15T16:00:00+00:00"
+  },
+  {
+    "id": 2,
     "group_key": "volcano|7abc066821c456d9423c6c8cbfcf8052beb6c1a6",
     "event_type": "volcano",
     "severity_level": "high",
@@ -47,65 +101,11 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      4
+      5
     ],
     "occurred_at": "2026-04-15T11:30:01+00:00",
     "published_at": "2026-04-15T11:30:01+00:00",
     "fetched_at": "2026-04-15T11:30:01+00:00"
-  },
-  {
-    "id": 2,
-    "group_key": "volcano|5dba69aab1cf02634b26ed51404b74f2bdf3943b",
-    "event_type": "volcano",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "Aoba",
-    "summary": "VRP 100.73 MW · MODIS · 2.24 km",
-    "started_at": "2026-04-15T09:45:00+00:00",
-    "updated_at": "2026-04-15T09:45:00+00:00",
-    "location_text": "Aoba",
-    "lat": null,
-    "lon": null,
-    "source_primary": "MIROVA",
-    "source_secondary": "MODIS",
-    "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=257030",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=257030",
-    "country_code": null,
-    "payload": {
-      "volcano_id": "257030",
-      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=257030",
-      "vrp_mw": 100.73,
-      "distance_km": 2.24,
-      "sensor": "MODIS",
-      "row_class": [
-        "high"
-      ],
-      "source_page": "https://www.mirovaweb.it/NRT/",
-      "sensors": [
-        "MODIS"
-      ],
-      "reports": [
-        {
-          "volcano_id": "257030",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=257030",
-          "vrp_mw": 100.73,
-          "distance_km": 2.24,
-          "sensor": "MODIS",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        }
-      ],
-      "merged_count": 1
-    },
-    "member_event_ids": [
-      5
-    ],
-    "occurred_at": "2026-04-15T09:45:00+00:00",
-    "published_at": "2026-04-15T09:45:00+00:00",
-    "fetched_at": "2026-04-15T09:45:00+00:00"
   },
   {
     "id": 3,

@@ -1,6 +1,45 @@
 [
   {
     "id": 1,
+    "dedupe_key": "urn:oid:2.49.0.1.124.0350698403.2026",
+    "source_primary": "WMO",
+    "title": "red warning - tornado - in effect",
+    "summary": "Windsor - Leamington - Essex County",
+    "severity_level": "extreme",
+    "color_level": "extreme",
+    "event_type": "weather",
+    "location_text": "Windsor - Leamington - Essex County",
+    "issued_at": "2026-04-15T06:18:26+00:00",
+    "effective_at": "2026-04-15T06:16:17+00:00",
+    "expires_at": "2026-04-15T07:44:17+00:00",
+    "source_url": "https://severeweather.wmo.int/list.html",
+    "detail_url": "https://severeweather.wmo.int/list.html",
+    "payload": {
+      "id": "urn:oid:2.49.0.1.124.0350698403.2026",
+      "event": "tornado",
+      "headline": "red warning - tornado - in effect",
+      "sent": "2026-04-15 06:18:26",
+      "expires": "2026-04-15 07:44:17",
+      "areaDesc": "Windsor - Leamington - Essex County",
+      "mid": "056",
+      "ra": "4",
+      "s": 4,
+      "u": 4,
+      "c": 4,
+      "capURL": "ca-msc-xx/2026/04/15/06/18/26-b8403c15bdc0115b41753937116b0b04.xml",
+      "effective": "2026-04-15 06:16:17",
+      "cap_path": "ca-msc-xx/2026/04/15/06/18/26-b8403c15bdc0115b41753937116b0b04.xml",
+      "source_page": "https://severeweather.wmo.int/list.html",
+      "last_updated": "2026-04-15 06:34:09"
+    },
+    "fetched_at": "2026-04-15T07:05:25.203775+00:00",
+    "published_at": "2026-04-15T06:18:26+00:00",
+    "updated_at": "2026-04-15T07:05:25.203775+00:00",
+    "region_text": "Windsor - Leamington - Essex County",
+    "link_url": "https://severeweather.wmo.int/list.html"
+  },
+  {
+    "id": 2,
     "dedupe_key": "urn:oid:2.49.0.1.840.0.01e1445c460798f7979c10443c669ca629ffe418.001.1",
     "source_primary": "WMO",
     "title": "Tornado Warning issued April 15 at 2:12AM EDT until April 15 at 2:45AM EDT by NWS Detroit/Pontiac MI",
@@ -30,16 +69,16 @@
       "effective": "2026-04-15 06:12:00",
       "cap_path": "us-noaa-nws-en/2026/04/15/06/12/00-4bfacf2f78cb0c0b8d87c3915f082ad5.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-15 06:44:11"
+      "last_updated": "2026-04-15 06:34:09"
     },
-    "fetched_at": "2026-04-15T06:50:26.909865+00:00",
+    "fetched_at": "2026-04-15T07:05:25.203775+00:00",
     "published_at": "2026-04-15T06:12:00+00:00",
-    "updated_at": "2026-04-15T06:50:26.909865+00:00",
+    "updated_at": "2026-04-15T07:05:25.203775+00:00",
     "region_text": "Monroe, MI",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 2,
+    "id": 3,
     "dedupe_key": "urn:oid:2.49.0.1.840.0.9d612bdc06d8137fdd2a07229c4669cd594ed1be.002.1",
     "source_primary": "WMO",
     "title": "Typhoon Warning issued April 15 at 3:57PM ChST by NWS Tiyan GU",
@@ -69,16 +108,16 @@
       "effective": "2026-04-15 05:57:00",
       "cap_path": "us-noaa-nws-en/2026/04/15/05/57/00-5d147442c5179e925faad6f7a59c11d8.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-15 06:44:11"
+      "last_updated": "2026-04-15 06:34:09"
     },
-    "fetched_at": "2026-04-15T06:50:26.909865+00:00",
+    "fetched_at": "2026-04-15T07:05:25.203775+00:00",
     "published_at": "2026-04-15T05:57:00+00:00",
-    "updated_at": "2026-04-15T06:50:26.909865+00:00",
+    "updated_at": "2026-04-15T07:05:25.203775+00:00",
     "region_text": "Rota; Tinian; Saipan",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 3,
+    "id": 4,
     "dedupe_key": "urn:oid:2.49.0.1.840.0.77cf2270126a0bdec33ddaff6669827239246444.001.1",
     "source_primary": "WMO",
     "title": "Typhoon Warning issued April 15 at 3:39PM ChST by NWS Tiyan GU",
@@ -108,16 +147,16 @@
       "effective": "2026-04-15 05:39:00",
       "cap_path": "us-noaa-nws-en-marine/2026/04/15/05/39/00-643651545890652d597c1ca9ebc26873.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-15 06:44:11"
+      "last_updated": "2026-04-15 06:34:09"
     },
-    "fetched_at": "2026-04-15T06:50:26.909865+00:00",
+    "fetched_at": "2026-04-15T07:05:25.203775+00:00",
     "published_at": "2026-04-15T05:39:00+00:00",
-    "updated_at": "2026-04-15T06:50:26.909865+00:00",
+    "updated_at": "2026-04-15T07:05:25.203775+00:00",
     "region_text": "Rota Coastal Waters; Tinian Coastal Waters; Saipan Coastal Waters",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 5,
+    "id": 6,
     "dedupe_key": "urn:oid:2.49.0.1.840.0.ec528636860a0022c0d78ba3bb79c8f81744c471.003.1",
     "source_primary": "WMO",
     "title": "Tornado Watch issued April 15 at 12:29AM EDT until April 15 at 4:00AM EDT by NWS Detroit/Pontiac MI",
@@ -147,16 +186,16 @@
       "effective": "2026-04-15 04:29:00",
       "cap_path": "us-noaa-nws-en/2026/04/15/04/29/00-c30c523f938b4f29ec8f4c728c425d29.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-15 06:44:11"
+      "last_updated": "2026-04-15 06:34:09"
     },
-    "fetched_at": "2026-04-15T06:50:26.909865+00:00",
+    "fetched_at": "2026-04-15T07:05:25.203775+00:00",
     "published_at": "2026-04-15T04:29:00+00:00",
-    "updated_at": "2026-04-15T06:50:26.909865+00:00",
+    "updated_at": "2026-04-15T07:05:25.203775+00:00",
     "region_text": "Genesee, MI; Huron, MI; Lapeer, MI; Lenawee, MI; Livingston, MI; Macomb, MI; Monroe, MI; Oakland, MI; St. Clair, MI; Sanilac, MI; Shiawassee, MI; Tuscola, MI; Washtenaw, MI; Wayne, MI",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 4,
+    "id": 5,
     "dedupe_key": "urn:oid:2.49.0.1.840.0.ec528636860a0022c0d78ba3bb79c8f81744c471.004.1",
     "source_primary": "WMO",
     "title": "Tornado Watch issued April 15 at 12:29AM EDT until April 15 at 4:00AM EDT by NWS Detroit/Pontiac MI",
@@ -186,11 +225,11 @@
       "effective": "2026-04-15 04:29:00",
       "cap_path": "us-noaa-nws-en-marine/2026/04/15/04/29/00-5657a9cc46f3fe474c524940f8971db1.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-15 06:44:11"
+      "last_updated": "2026-04-15 06:34:09"
     },
-    "fetched_at": "2026-04-15T06:50:26.909865+00:00",
+    "fetched_at": "2026-04-15T07:05:25.203775+00:00",
     "published_at": "2026-04-15T04:29:00+00:00",
-    "updated_at": "2026-04-15T06:50:26.909865+00:00",
+    "updated_at": "2026-04-15T07:05:25.203775+00:00",
     "region_text": "St. Clair River; Detroit River; Lake St. Clair Open Lake (U.S. Portion); Michigan Waters of Lake Erie from Detroit River to North Cape MI; Port Austin to Harbor Beach MI; Harbor Beach to Port Sanilac MI; Port Sanilac to Port Huron MI",
     "link_url": "https://severeweather.wmo.int/list.html"
   }

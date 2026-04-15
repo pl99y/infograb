@@ -8,7 +8,7 @@
     "title": "M 5.7 - 72 km SW of Tamarindo, Costa Rica",
     "summary": "72 km SW of Tamarindo, Costa Rica",
     "started_at": "2026-04-15T06:56:02.781000+00:00",
-    "updated_at": "2026-04-15T07:47:53.776000+00:00",
+    "updated_at": "2026-04-15T08:01:46.938000+00:00",
     "location_text": "72 km SW of Tamarindo, Costa Rica",
     "lat": 9.9151,
     "lon": -86.3803,
@@ -90,6 +90,60 @@
   },
   {
     "id": 3,
+    "group_key": "volcano|fe9198764ea258b640f7dbbc6c0ff838906b0675",
+    "event_type": "volcano",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Mayon",
+    "summary": "VRP 165.28 MW · VIIRS · 2.70 km",
+    "started_at": "2026-04-15T04:48:01+00:00",
+    "updated_at": "2026-04-15T04:48:01+00:00",
+    "location_text": "Mayon",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "VIIRS",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "273030",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
+      "vrp_mw": 165.28,
+      "distance_km": 2.7,
+      "sensor": "VIIRS",
+      "row_class": [
+        "high"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "VIIRS"
+      ],
+      "reports": [
+        {
+          "volcano_id": "273030",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
+          "vrp_mw": 165.28,
+          "distance_km": 2.7,
+          "sensor": "VIIRS",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 1
+    },
+    "member_event_ids": [
+      4
+    ],
+    "occurred_at": "2026-04-15T04:48:01+00:00",
+    "published_at": "2026-04-15T04:48:01+00:00",
+    "fetched_at": "2026-04-15T04:48:01+00:00"
+  },
+  {
+    "id": 4,
     "group_key": "earthquake|us6000sq4t",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -125,7 +179,7 @@
     "fetched_at": "2026-04-15T02:38:25.666000+00:00"
   },
   {
-    "id": 4,
+    "id": 5,
     "group_key": "volcano|39295a86c9adaac16f6fb9c26ff822f83021a581",
     "event_type": "volcano",
     "severity_level": "very_high",
@@ -172,14 +226,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      4
+      5
     ],
     "occurred_at": "2026-04-15T01:05:00+00:00",
     "published_at": "2026-04-15T01:05:00+00:00",
     "fetched_at": "2026-04-15T01:05:00+00:00"
   },
   {
-    "id": 5,
+    "id": 6,
     "group_key": "volcano|fa3e9560319e380742bad5f8b968adde26bd9af6",
     "event_type": "volcano",
     "severity_level": "high",
@@ -226,14 +280,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      5
+      6
     ],
     "occurred_at": "2026-04-15T00:45:00+00:00",
     "published_at": "2026-04-15T00:45:00+00:00",
     "fetched_at": "2026-04-15T00:45:00+00:00"
   },
   {
-    "id": 6,
+    "id": 7,
     "group_key": "volcano|4d47b2718741cb51e8613f772aa1048a247919f5",
     "event_type": "volcano",
     "severity_level": "high",
@@ -293,78 +347,11 @@
       "merged_count": 2
     },
     "member_event_ids": [
-      6
+      7
     ],
     "occurred_at": "2026-04-15T00:12:00+00:00",
     "published_at": "2026-04-15T00:12:00+00:00",
     "fetched_at": "2026-04-15T00:12:00+00:00"
-  },
-  {
-    "id": 7,
-    "group_key": "volcano|4030bacae65e2e530b0387310728aea9f1b03833",
-    "event_type": "volcano",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "Mayon",
-    "summary": "VRP 117.65 MW · VIIRS375 / VIIRS · 2.70 km",
-    "started_at": "2026-04-14T17:42:01+00:00",
-    "updated_at": "2026-04-14T17:42:01+00:00",
-    "location_text": "Mayon",
-    "lat": null,
-    "lon": null,
-    "source_primary": "MIROVA",
-    "source_secondary": "VIIRS375 / VIIRS",
-    "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
-    "country_code": null,
-    "payload": {
-      "volcano_id": "273030",
-      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
-      "vrp_mw": 117.65,
-      "distance_km": 3.18,
-      "sensor": "VIIRS",
-      "row_class": [
-        "moderate",
-        "high"
-      ],
-      "source_page": "https://www.mirovaweb.it/NRT/",
-      "sensors": [
-        "VIIRS375",
-        "VIIRS"
-      ],
-      "reports": [
-        {
-          "volcano_id": "273030",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
-          "vrp_mw": 38.07,
-          "distance_km": 2.7,
-          "sensor": "VIIRS375",
-          "row_class": [
-            "moderate"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        },
-        {
-          "volcano_id": "273030",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
-          "vrp_mw": 117.65,
-          "distance_km": 3.18,
-          "sensor": "VIIRS",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        }
-      ],
-      "merged_count": 2
-    },
-    "member_event_ids": [
-      7
-    ],
-    "occurred_at": "2026-04-14T17:42:01+00:00",
-    "published_at": "2026-04-14T17:42:01+00:00",
-    "fetched_at": "2026-04-14T17:42:01+00:00"
   },
   {
     "id": 8,

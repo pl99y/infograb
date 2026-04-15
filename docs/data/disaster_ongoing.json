@@ -1,6 +1,59 @@
 [
   {
     "id": 1,
+    "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|western_north_pacific_area|tc_04w|a0a7e4fe4e706c38",
+    "event_type": "typhoon",
+    "severity_level": "extreme",
+    "severity_color": "extreme",
+    "title": "Typhoon 04W (Sinlaku)",
+    "summary": "wind 110 kt (gust 135)",
+    "started_at": "2026-04-15T06:00:00+00:00",
+    "updated_at": "2026-04-15T06:00:00+00:00",
+    "location_text": "15.6N 145.2E",
+    "lat": 15.6,
+    "lon": 145.2,
+    "source_primary": "JTWC-ABPW",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://www.google.com/maps?q=15.6,145.2",
+    "official_link": "https://www.google.com/maps?q=15.6,145.2",
+    "country_code": null,
+    "payload": {
+      "item_type": "warning",
+      "source": "jtwc_abpw",
+      "source_key": "jtwc_abpw|western_north_pacific_area|tc_04w",
+      "content_hash": "a0a7e4fe4e706c38",
+      "platform_summary": "15.6N 145.2E | wind 110 kt (gust 135)",
+      "platform_location": "15.6N 145.2E",
+      "wind": "110 kt (gust 135)",
+      "risk_48h": null,
+      "risk_7d": null,
+      "next_update": null,
+      "raw_text": "(1) AT 15APR26 0000Z, TYPHOON 04W (SINLAKU) WAS LOCATED NEAR 15.6N \n145.2E, APPROXIMATELY 42 NM NORTHWEST OF SAIPAN, AND HAD TRACKED NORTH-\nNORTHWESTWARD AT 04 KNOTS OVER THE PAST SIX HOURS. MAXIMUM SUSTAINED \nSURFACE WINDS WERE ESTIMATED AT 110 KNOTS GUSTING TO 135 KNOTS. SEE REF \nA (WTPN31 PGTW 150300) FOR FURTHER DETAILS.",
+      "metadata": {
+        "basin_section": "WESTERN NORTH PACIFIC AREA (180 TO MALAY PENINSULA)",
+        "storm_class": "TYPHOON",
+        "storm_id": "04W",
+        "storm_name": "SINLAKU",
+        "fix_date": "15APR26",
+        "fix_time": "15APR26 0000Z",
+        "lat": 15.6,
+        "lon": 145.2,
+        "wind_kt": 110,
+        "gust_kt": 135,
+        "warning_reference": "WTPN31 PGTW 150300",
+        "bulletin_issue_at": "2026-04-15T06:00:00+00:00"
+      }
+    },
+    "member_event_ids": [
+      9
+    ],
+    "occurred_at": "2026-04-15T06:00:00+00:00",
+    "published_at": "2026-04-15T06:00:00+00:00",
+    "fetched_at": "2026-04-15T06:00:00+00:00"
+  },
+  {
+    "id": 2,
     "group_key": "earthquake|us6000sq4t",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -36,7 +89,7 @@
     "fetched_at": "2026-04-15T02:38:25.666000+00:00"
   },
   {
-    "id": 2,
+    "id": 3,
     "group_key": "volcano|39295a86c9adaac16f6fb9c26ff822f83021a581",
     "event_type": "volcano",
     "severity_level": "very_high",
@@ -90,7 +143,7 @@
     "fetched_at": "2026-04-15T01:05:00+00:00"
   },
   {
-    "id": 3,
+    "id": 4,
     "group_key": "volcano|fa3e9560319e380742bad5f8b968adde26bd9af6",
     "event_type": "volcano",
     "severity_level": "high",
@@ -144,23 +197,23 @@
     "fetched_at": "2026-04-15T00:45:00+00:00"
   },
   {
-    "id": 4,
+    "id": 5,
     "group_key": "volcano|4d47b2718741cb51e8613f772aa1048a247919f5",
     "event_type": "volcano",
     "severity_level": "high",
     "severity_color": "high",
     "title": "Nyamuragira",
-    "summary": "VRP 121.26 MW · VIIRS · 8.11 km",
+    "summary": "VRP 121.26 MW · VIIRS375 / VIIRS · 7.72 km",
     "started_at": "2026-04-15T00:12:00+00:00",
     "updated_at": "2026-04-15T00:12:00+00:00",
     "location_text": "Nyamuragira",
     "lat": null,
     "lon": null,
     "source_primary": "MIROVA",
-    "source_secondary": "VIIRS",
+    "source_secondary": "VIIRS375 / VIIRS",
     "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
     "country_code": null,
     "payload": {
       "volcano_id": "223020",
@@ -169,13 +222,26 @@
       "distance_km": 8.11,
       "sensor": "VIIRS",
       "row_class": [
+        "moderate",
         "high"
       ],
       "source_page": "https://www.mirovaweb.it/NRT/",
       "sensors": [
+        "VIIRS375",
         "VIIRS"
       ],
       "reports": [
+        {
+          "volcano_id": "223020",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
+          "vrp_mw": 73.29,
+          "distance_km": 7.72,
+          "sensor": "VIIRS375",
+          "row_class": [
+            "moderate"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        },
         {
           "volcano_id": "223020",
           "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
@@ -188,7 +254,7 @@
           "source_page": "https://www.mirovaweb.it/NRT/"
         }
       ],
-      "merged_count": 1
+      "merged_count": 2
     },
     "member_event_ids": [
       5
@@ -198,7 +264,7 @@
     "fetched_at": "2026-04-15T00:12:00+00:00"
   },
   {
-    "id": 5,
+    "id": 6,
     "group_key": "volcano|4030bacae65e2e530b0387310728aea9f1b03833",
     "event_type": "volcano",
     "severity_level": "high",
@@ -265,7 +331,7 @@
     "fetched_at": "2026-04-14T17:42:01+00:00"
   },
   {
-    "id": 6,
+    "id": 7,
     "group_key": "earthquake|us6000spye",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -301,7 +367,7 @@
     "fetched_at": "2026-04-14T10:13:16.728000+00:00"
   },
   {
-    "id": 7,
+    "id": 8,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -379,59 +445,6 @@
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",
     "fetched_at": "2026-03-25T01:00:00+00:00"
-  },
-  {
-    "id": 8,
-    "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|western_north_pacific_area|tc_04w|a0a7e4fe4e706c38",
-    "event_type": "typhoon",
-    "severity_level": "extreme",
-    "severity_color": "extreme",
-    "title": "Typhoon 04W (Sinlaku)",
-    "summary": "wind 110 kt (gust 135)",
-    "started_at": "2026-03-15T06:00:00+00:00",
-    "updated_at": "2026-03-15T06:00:00+00:00",
-    "location_text": "15.6N 145.2E",
-    "lat": 15.6,
-    "lon": 145.2,
-    "source_primary": "JTWC-ABPW",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://www.google.com/maps?q=15.6,145.2",
-    "official_link": "https://www.google.com/maps?q=15.6,145.2",
-    "country_code": null,
-    "payload": {
-      "item_type": "warning",
-      "source": "jtwc_abpw",
-      "source_key": "jtwc_abpw|western_north_pacific_area|tc_04w",
-      "content_hash": "a0a7e4fe4e706c38",
-      "platform_summary": "15.6N 145.2E | wind 110 kt (gust 135)",
-      "platform_location": "15.6N 145.2E",
-      "wind": "110 kt (gust 135)",
-      "risk_48h": null,
-      "risk_7d": null,
-      "next_update": null,
-      "raw_text": "(1) AT 15APR26 0000Z, TYPHOON 04W (SINLAKU) WAS LOCATED NEAR 15.6N \n145.2E, APPROXIMATELY 42 NM NORTHWEST OF SAIPAN, AND HAD TRACKED NORTH-\nNORTHWESTWARD AT 04 KNOTS OVER THE PAST SIX HOURS. MAXIMUM SUSTAINED \nSURFACE WINDS WERE ESTIMATED AT 110 KNOTS GUSTING TO 135 KNOTS. SEE REF \nA (WTPN31 PGTW 150300) FOR FURTHER DETAILS.",
-      "metadata": {
-        "basin_section": "WESTERN NORTH PACIFIC AREA (180 TO MALAY PENINSULA)",
-        "storm_class": "TYPHOON",
-        "storm_id": "04W",
-        "storm_name": "SINLAKU",
-        "fix_date": "15APR26",
-        "fix_time": "15APR26 0000Z",
-        "lat": 15.6,
-        "lon": 145.2,
-        "wind_kt": 110,
-        "gust_kt": 135,
-        "warning_reference": "WTPN31 PGTW 150300",
-        "bulletin_issue_at": "2026-03-15T06:00:00+00:00"
-      }
-    },
-    "member_event_ids": [
-      9
-    ],
-    "occurred_at": "2026-03-15T06:00:00+00:00",
-    "published_at": "2026-03-15T06:00:00+00:00",
-    "fetched_at": "2026-03-15T06:00:00+00:00"
   },
   {
     "id": 9,

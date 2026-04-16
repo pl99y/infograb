@@ -1,6 +1,61 @@
 [
   {
-    "id": 243,
+    "id": 250,
+    "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|western_north_pacific_area|tc_04w|63f862748b0ac5da",
+    "event_type": "typhoon",
+    "severity_level": "extreme",
+    "severity_color": "extreme",
+    "title": "Typhoon 04W (Sinlaku)",
+    "summary": "wind 100 kt (gust 125)",
+    "started_at": "2026-04-16T06:00:00+00:00",
+    "updated_at": "2026-04-16T06:00:00+00:00",
+    "location_text": "17.1N 144.4E",
+    "lat": 17.1,
+    "lon": 144.4,
+    "source_primary": "JTWC-ABPW",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://www.google.com/maps?q=17.1,144.4",
+    "official_link": "https://www.google.com/maps?q=17.1,144.4",
+    "country_code": null,
+    "payload": {
+      "item_type": "warning",
+      "source": "jtwc_abpw",
+      "source_key": "jtwc_abpw|western_north_pacific_area|tc_04w",
+      "content_hash": "63f862748b0ac5da",
+      "platform_summary": "17.1N 144.4E | wind 100 kt (gust 125)",
+      "platform_location": "17.1N 144.4E",
+      "wind": "100 kt (gust 125)",
+      "risk_48h": null,
+      "risk_7d": null,
+      "next_update": null,
+      "raw_text": "(1) AT 16APR26 0000Z, TYPHOON 04W (SINLAKU) WAS LOCATED NEAR 17.1N \n144.4E, APPROXIMATELY 222 NM NORTH OF NAVSTA GUAM, AND HAD TRACKED \nNORTH-NORTHWESTWARD AT 04 KNOTS OVER THE PAST SIX HOURS. MAXIMUM \nSUSTAINED SURFACE WINDS WERE ESTIMATED AT 100 KNOTS GUSTING TO 125 \nKNOTS. SEE REF A (WTPN31 PGTW 160300) FOR FURTHER DETAILS.",
+      "metadata": {
+        "basin_section": "WESTERN NORTH PACIFIC AREA (180 TO MALAY PENINSULA)",
+        "storm_class": "TYPHOON",
+        "storm_id": "04W",
+        "storm_name": "SINLAKU",
+        "fix_date": "16APR26",
+        "fix_time": "16APR26 0000Z",
+        "lat": 17.1,
+        "lon": 144.4,
+        "movement_text": "NORTH-NORTHWESTWARD",
+        "movement_kt": 4,
+        "wind_kt": 100,
+        "gust_kt": 125,
+        "warning_reference": "WTPN31 PGTW 160300",
+        "bulletin_issue_at": "2026-04-16T06:00:00+00:00"
+      }
+    },
+    "member_event_ids": [
+      256
+    ],
+    "occurred_at": "2026-04-16T06:00:00+00:00",
+    "published_at": "2026-04-16T06:00:00+00:00",
+    "fetched_at": "2026-04-16T06:00:00+00:00"
+  },
+  {
+    "id": 251,
     "group_key": "earthquake|us6000sqh2",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -29,14 +84,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      243
+      250
     ],
     "occurred_at": "2026-04-16T05:01:30.716000+00:00",
     "published_at": "2026-04-16T05:01:30.716000+00:00",
     "fetched_at": "2026-04-16T05:01:30.716000+00:00"
   },
   {
-    "id": 244,
+    "id": 252,
     "group_key": "volcano|10e6183f1b18a6b505d47a6bb57056daf49fa40f",
     "event_type": "volcano",
     "severity_level": "high",
@@ -83,14 +138,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      246
+      253
     ],
     "occurred_at": "2026-04-16T01:45:00+00:00",
     "published_at": "2026-04-16T01:45:00+00:00",
     "fetched_at": "2026-04-16T01:45:00+00:00"
   },
   {
-    "id": 245,
+    "id": 253,
     "group_key": "earthquake|us6000sq6d",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -119,14 +174,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      244
+      251
     ],
     "occurred_at": "2026-04-15T07:59:41.365000+00:00",
     "published_at": "2026-04-15T07:59:41.365000+00:00",
     "fetched_at": "2026-04-15T07:59:41.365000+00:00"
   },
   {
-    "id": 246,
+    "id": 254,
     "group_key": "earthquake|us6000sq5z",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -155,67 +210,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      245
+      252
     ],
     "occurred_at": "2026-04-15T06:56:02.781000+00:00",
     "published_at": "2026-04-15T06:56:02.781000+00:00",
     "fetched_at": "2026-04-15T06:56:02.781000+00:00"
   },
   {
-    "id": 247,
-    "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|western_north_pacific_area|tc_04w|a0a7e4fe4e706c38",
-    "event_type": "typhoon",
-    "severity_level": "extreme",
-    "severity_color": "extreme",
-    "title": "Typhoon 04W (Sinlaku)",
-    "summary": "wind 110 kt (gust 135)",
-    "started_at": "2026-04-15T06:00:00+00:00",
-    "updated_at": "2026-04-15T06:00:00+00:00",
-    "location_text": "15.6N 145.2E",
-    "lat": 15.6,
-    "lon": 145.2,
-    "source_primary": "JTWC-ABPW",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://www.google.com/maps?q=15.6,145.2",
-    "official_link": "https://www.google.com/maps?q=15.6,145.2",
-    "country_code": null,
-    "payload": {
-      "item_type": "warning",
-      "source": "jtwc_abpw",
-      "source_key": "jtwc_abpw|western_north_pacific_area|tc_04w",
-      "content_hash": "a0a7e4fe4e706c38",
-      "platform_summary": "15.6N 145.2E | wind 110 kt (gust 135)",
-      "platform_location": "15.6N 145.2E",
-      "wind": "110 kt (gust 135)",
-      "risk_48h": null,
-      "risk_7d": null,
-      "next_update": null,
-      "raw_text": "(1) AT 15APR26 0000Z, TYPHOON 04W (SINLAKU) WAS LOCATED NEAR 15.6N \n145.2E, APPROXIMATELY 42 NM NORTHWEST OF SAIPAN, AND HAD TRACKED NORTH-\nNORTHWESTWARD AT 04 KNOTS OVER THE PAST SIX HOURS. MAXIMUM SUSTAINED \nSURFACE WINDS WERE ESTIMATED AT 110 KNOTS GUSTING TO 135 KNOTS. SEE REF \nA (WTPN31 PGTW 150300) FOR FURTHER DETAILS.",
-      "metadata": {
-        "basin_section": "WESTERN NORTH PACIFIC AREA (180 TO MALAY PENINSULA)",
-        "storm_class": "TYPHOON",
-        "storm_id": "04W",
-        "storm_name": "SINLAKU",
-        "fix_date": "15APR26",
-        "fix_time": "15APR26 0000Z",
-        "lat": 15.6,
-        "lon": 145.2,
-        "wind_kt": 110,
-        "gust_kt": 135,
-        "warning_reference": "WTPN31 PGTW 150300",
-        "bulletin_issue_at": "2026-04-15T06:00:00+00:00"
-      }
-    },
-    "member_event_ids": [
-      249
-    ],
-    "occurred_at": "2026-04-15T06:00:00+00:00",
-    "published_at": "2026-04-15T06:00:00+00:00",
-    "fetched_at": "2026-04-15T06:00:00+00:00"
-  },
-  {
-    "id": 248,
+    "id": 255,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -288,14 +290,14 @@
       }
     },
     "member_event_ids": [
-      248
+      255
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",
     "fetched_at": "2026-03-25T01:00:00+00:00"
   },
   {
-    "id": 249,
+    "id": 256,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -368,7 +370,7 @@
       }
     },
     "member_event_ids": [
-      247
+      254
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

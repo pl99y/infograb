@@ -1,60 +1,6 @@
 [
   {
-    "id": 168,
-    "group_key": "volcano|b1a07b2f517c0e0af53984b48722518664dea800",
-    "event_type": "volcano",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "Mayon",
-    "summary": "VRP 145.94 MW · MODIS · 2.83 km",
-    "started_at": "2026-04-15T19:05:00+00:00",
-    "updated_at": "2026-04-15T19:05:00+00:00",
-    "location_text": "Mayon",
-    "lat": null,
-    "lon": null,
-    "source_primary": "MIROVA",
-    "source_secondary": "MODIS",
-    "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=273030",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=273030",
-    "country_code": null,
-    "payload": {
-      "volcano_id": "273030",
-      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=273030",
-      "vrp_mw": 145.94,
-      "distance_km": 2.83,
-      "sensor": "MODIS",
-      "row_class": [
-        "high"
-      ],
-      "source_page": "https://www.mirovaweb.it/NRT/",
-      "sensors": [
-        "MODIS"
-      ],
-      "reports": [
-        {
-          "volcano_id": "273030",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=273030",
-          "vrp_mw": 145.94,
-          "distance_km": 2.83,
-          "sensor": "MODIS",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        }
-      ],
-      "merged_count": 1
-    },
-    "member_event_ids": [
-      171
-    ],
-    "occurred_at": "2026-04-15T19:05:00+00:00",
-    "published_at": "2026-04-15T19:05:00+00:00",
-    "fetched_at": "2026-04-15T19:05:00+00:00"
-  },
-  {
-    "id": 169,
+    "id": 175,
     "group_key": "earthquake|us6000sq6d",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -83,14 +29,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      168
+      175
     ],
     "occurred_at": "2026-04-15T07:59:41.365000+00:00",
     "published_at": "2026-04-15T07:59:41.365000+00:00",
     "fetched_at": "2026-04-15T07:59:41.365000+00:00"
   },
   {
-    "id": 170,
+    "id": 176,
     "group_key": "earthquake|us6000sq5z",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -119,14 +65,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      169
+      176
     ],
     "occurred_at": "2026-04-15T06:56:02.781000+00:00",
     "published_at": "2026-04-15T06:56:02.781000+00:00",
     "fetched_at": "2026-04-15T06:56:02.781000+00:00"
   },
   {
-    "id": 171,
+    "id": 177,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|western_north_pacific_area|tc_04w|a0a7e4fe4e706c38",
     "event_type": "typhoon",
     "severity_level": "extreme",
@@ -172,50 +118,14 @@
       }
     },
     "member_event_ids": [
-      174
+      179
     ],
     "occurred_at": "2026-04-15T06:00:00+00:00",
     "published_at": "2026-04-15T06:00:00+00:00",
     "fetched_at": "2026-04-15T06:00:00+00:00"
   },
   {
-    "id": 172,
-    "group_key": "earthquake|us6000sq4t",
-    "event_type": "earthquake",
-    "severity_level": "moderate",
-    "severity_color": "moderate",
-    "title": "M 5.0 - 200 km W of Puerto Natales, Chile",
-    "summary": "200 km W of Puerto Natales, Chile",
-    "started_at": "2026-04-15T02:38:25.666000+00:00",
-    "updated_at": "2026-04-15T03:16:44.040000+00:00",
-    "location_text": "200 km W of Puerto Natales, Chile",
-    "lat": -51.7032,
-    "lon": -75.4046,
-    "source_primary": "USGS",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sq4t",
-    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sq4t",
-    "country_code": null,
-    "payload": {
-      "mag": 5.0,
-      "depth_km": 36.578,
-      "place": "200 km W of Puerto Natales, Chile",
-      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000sq4t.geojson",
-      "alert": null,
-      "sig": 385,
-      "tsunami": 0,
-      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
-    },
-    "member_event_ids": [
-      170
-    ],
-    "occurred_at": "2026-04-15T02:38:25.666000+00:00",
-    "published_at": "2026-04-15T02:38:25.666000+00:00",
-    "fetched_at": "2026-04-15T02:38:25.666000+00:00"
-  },
-  {
-    "id": 173,
+    "id": 178,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -288,14 +198,14 @@
       }
     },
     "member_event_ids": [
-      173
+      178
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",
     "fetched_at": "2026-03-25T01:00:00+00:00"
   },
   {
-    "id": 174,
+    "id": 179,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -368,7 +278,7 @@
       }
     },
     "member_event_ids": [
-      172
+      177
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

@@ -1,6 +1,42 @@
 [
   {
-    "id": 434,
+    "id": 441,
+    "group_key": "earthquake|us6000sqjb",
+    "event_type": "earthquake",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "M 6.0 - south of the Kermadec Islands",
+    "summary": "south of the Kermadec Islands",
+    "started_at": "2026-04-16T13:30:01.088000+00:00",
+    "updated_at": "2026-04-16T13:45:07.040000+00:00",
+    "location_text": "south of the Kermadec Islands",
+    "lat": -32.2098,
+    "lon": -178.0541,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sqjb",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sqjb",
+    "country_code": null,
+    "payload": {
+      "mag": 6.0,
+      "depth_km": 10.0,
+      "place": "south of the Kermadec Islands",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000sqjb.geojson",
+      "alert": null,
+      "sig": 554,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      441
+    ],
+    "occurred_at": "2026-04-16T13:30:01.088000+00:00",
+    "published_at": "2026-04-16T13:30:01.088000+00:00",
+    "fetched_at": "2026-04-16T13:30:01.088000+00:00"
+  },
+  {
+    "id": 442,
     "group_key": "volcano|984e7503cfb9cb90ffa102d6431fabc93856bd92",
     "event_type": "volcano",
     "severity_level": "high",
@@ -47,14 +83,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      436
+      444
     ],
     "occurred_at": "2026-04-16T12:10:00+00:00",
     "published_at": "2026-04-16T12:10:00+00:00",
     "fetched_at": "2026-04-16T12:10:00+00:00"
   },
   {
-    "id": 435,
+    "id": 443,
     "group_key": "earthquake|us6000sqib",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -83,14 +119,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      434
+      442
     ],
     "occurred_at": "2026-04-16T08:09:02.443000+00:00",
     "published_at": "2026-04-16T08:09:02.443000+00:00",
     "fetched_at": "2026-04-16T08:09:02.443000+00:00"
   },
   {
-    "id": 436,
+    "id": 444,
     "group_key": "volcano|08c6e5cad4a6e0c09addc55a475f30dcbdc2bef9",
     "event_type": "volcano",
     "severity_level": "high",
@@ -137,14 +173,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      437
+      445
     ],
     "occurred_at": "2026-04-16T06:25:00+00:00",
     "published_at": "2026-04-16T06:25:00+00:00",
     "fetched_at": "2026-04-16T06:25:00+00:00"
   },
   {
-    "id": 437,
+    "id": 445,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|western_north_pacific_area|tc_04w|63f862748b0ac5da",
     "event_type": "typhoon",
     "severity_level": "extreme",
@@ -192,14 +228,14 @@
       }
     },
     "member_event_ids": [
-      440
+      448
     ],
     "occurred_at": "2026-04-16T06:00:00+00:00",
     "published_at": "2026-04-16T06:00:00+00:00",
     "fetched_at": "2026-04-16T06:00:00+00:00"
   },
   {
-    "id": 438,
+    "id": 446,
     "group_key": "earthquake|us6000sqh2",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -228,14 +264,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      435
+      443
     ],
     "occurred_at": "2026-04-16T05:01:30.716000+00:00",
     "published_at": "2026-04-16T05:01:30.716000+00:00",
     "fetched_at": "2026-04-16T05:01:30.716000+00:00"
   },
   {
-    "id": 439,
+    "id": 447,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -308,14 +344,14 @@
       }
     },
     "member_event_ids": [
-      439
+      447
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",
     "fetched_at": "2026-03-25T01:00:00+00:00"
   },
   {
-    "id": 440,
+    "id": 448,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -388,7 +424,7 @@
       }
     },
     "member_event_ids": [
-      438
+      446
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

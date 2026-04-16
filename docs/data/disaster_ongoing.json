@@ -1,6 +1,42 @@
 [
   {
-    "id": 309,
+    "id": 314,
+    "group_key": "earthquake|us6000sqib",
+    "event_type": "earthquake",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "M 5.2 - 102 km SSW of Paracas, Peru",
+    "summary": "102 km SSW of Paracas, Peru",
+    "started_at": "2026-04-16T08:09:02.443000+00:00",
+    "updated_at": "2026-04-16T08:28:51.040000+00:00",
+    "location_text": "102 km SSW of Paracas, Peru",
+    "lat": -14.6589,
+    "lon": -76.767,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sqib",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sqib",
+    "country_code": null,
+    "payload": {
+      "mag": 5.2,
+      "depth_km": 10.0,
+      "place": "102 km SSW of Paracas, Peru",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000sqib.geojson",
+      "alert": null,
+      "sig": 416,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      314
+    ],
+    "occurred_at": "2026-04-16T08:09:02.443000+00:00",
+    "published_at": "2026-04-16T08:09:02.443000+00:00",
+    "fetched_at": "2026-04-16T08:09:02.443000+00:00"
+  },
+  {
+    "id": 315,
     "group_key": "volcano|08c6e5cad4a6e0c09addc55a475f30dcbdc2bef9",
     "event_type": "volcano",
     "severity_level": "high",
@@ -47,14 +83,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      310
+      316
     ],
     "occurred_at": "2026-04-16T06:25:00+00:00",
     "published_at": "2026-04-16T06:25:00+00:00",
     "fetched_at": "2026-04-16T06:25:00+00:00"
   },
   {
-    "id": 310,
+    "id": 316,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|western_north_pacific_area|tc_04w|63f862748b0ac5da",
     "event_type": "typhoon",
     "severity_level": "extreme",
@@ -102,14 +138,14 @@
       }
     },
     "member_event_ids": [
-      313
+      319
     ],
     "occurred_at": "2026-04-16T06:00:00+00:00",
     "published_at": "2026-04-16T06:00:00+00:00",
     "fetched_at": "2026-04-16T06:00:00+00:00"
   },
   {
-    "id": 311,
+    "id": 317,
     "group_key": "earthquake|us6000sqh2",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -138,14 +174,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      309
+      315
     ],
     "occurred_at": "2026-04-16T05:01:30.716000+00:00",
     "published_at": "2026-04-16T05:01:30.716000+00:00",
     "fetched_at": "2026-04-16T05:01:30.716000+00:00"
   },
   {
-    "id": 312,
+    "id": 318,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -218,14 +254,14 @@
       }
     },
     "member_event_ids": [
-      312
+      318
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",
     "fetched_at": "2026-03-25T01:00:00+00:00"
   },
   {
-    "id": 313,
+    "id": 319,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -298,7 +334,7 @@
       }
     },
     "member_event_ids": [
-      311
+      317
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

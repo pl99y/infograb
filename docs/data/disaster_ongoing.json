@@ -1,6 +1,6 @@
 [
   {
-    "id": 94,
+    "id": 101,
     "group_key": "volcano|b1a07b2f517c0e0af53984b48722518664dea800",
     "event_type": "volcano",
     "severity_level": "high",
@@ -47,14 +47,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      97
+      104
     ],
     "occurred_at": "2026-04-15T19:05:00+00:00",
     "published_at": "2026-04-15T19:05:00+00:00",
     "fetched_at": "2026-04-15T19:05:00+00:00"
   },
   {
-    "id": 95,
+    "id": 102,
     "group_key": "earthquake|us6000sq6d",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -83,14 +83,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      94
+      101
     ],
     "occurred_at": "2026-04-15T07:59:41.365000+00:00",
     "published_at": "2026-04-15T07:59:41.365000+00:00",
     "fetched_at": "2026-04-15T07:59:41.365000+00:00"
   },
   {
-    "id": 96,
+    "id": 103,
     "group_key": "earthquake|us6000sq5z",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -98,7 +98,7 @@
     "title": "M 5.7 - 72 km SW of Tamarindo, Costa Rica",
     "summary": "72 km SW of Tamarindo, Costa Rica",
     "started_at": "2026-04-15T06:56:02.781000+00:00",
-    "updated_at": "2026-04-15T20:15:53.425000+00:00",
+    "updated_at": "2026-04-15T23:56:03.985000+00:00",
     "location_text": "72 km SW of Tamarindo, Costa Rica",
     "lat": 9.9151,
     "lon": -86.3803,
@@ -114,19 +114,19 @@
       "place": "72 km SW of Tamarindo, Costa Rica",
       "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000sq5z.geojson",
       "alert": "green",
-      "sig": 512,
+      "sig": 513,
       "tsunami": 0,
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      95
+      102
     ],
     "occurred_at": "2026-04-15T06:56:02.781000+00:00",
     "published_at": "2026-04-15T06:56:02.781000+00:00",
     "fetched_at": "2026-04-15T06:56:02.781000+00:00"
   },
   {
-    "id": 97,
+    "id": 104,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|western_north_pacific_area|tc_04w|a0a7e4fe4e706c38",
     "event_type": "typhoon",
     "severity_level": "extreme",
@@ -172,14 +172,14 @@
       }
     },
     "member_event_ids": [
-      100
+      107
     ],
     "occurred_at": "2026-04-15T06:00:00+00:00",
     "published_at": "2026-04-15T06:00:00+00:00",
     "fetched_at": "2026-04-15T06:00:00+00:00"
   },
   {
-    "id": 98,
+    "id": 105,
     "group_key": "earthquake|us6000sq4t",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -208,14 +208,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      96
+      103
     ],
     "occurred_at": "2026-04-15T02:38:25.666000+00:00",
     "published_at": "2026-04-15T02:38:25.666000+00:00",
     "fetched_at": "2026-04-15T02:38:25.666000+00:00"
   },
   {
-    "id": 99,
+    "id": 106,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -288,14 +288,14 @@
       }
     },
     "member_event_ids": [
-      99
+      106
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",
     "fetched_at": "2026-03-25T01:00:00+00:00"
   },
   {
-    "id": 100,
+    "id": 107,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -368,7 +368,7 @@
       }
     },
     "member_event_ids": [
-      98
+      105
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

@@ -1,6 +1,6 @@
 [
   {
-    "id": 1669,
+    "id": 1678,
     "group_key": "volcano|64b268c8f44f3a118dc54246ac0bd589fff8d57c",
     "event_type": "volcano",
     "severity_level": "high",
@@ -47,14 +47,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      1672
+      1680
     ],
     "occurred_at": "2026-04-17T18:45:00+00:00",
     "published_at": "2026-04-17T18:45:00+00:00",
     "fetched_at": "2026-04-17T18:45:00+00:00"
   },
   {
-    "id": 1670,
+    "id": 1679,
     "group_key": "volcano|69ce646c4c76d30bf1572b1408c7a12abff5dc61",
     "event_type": "volcano",
     "severity_level": "high",
@@ -101,14 +101,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      1673
+      1681
     ],
     "occurred_at": "2026-04-17T17:30:02+00:00",
     "published_at": "2026-04-17T17:30:02+00:00",
     "fetched_at": "2026-04-17T17:30:02+00:00"
   },
   {
-    "id": 1671,
+    "id": 1680,
     "group_key": "volcano|b1b4f20a4dddc26bc665c5fcd077aeaa8133e55e",
     "event_type": "volcano",
     "severity_level": "high",
@@ -155,14 +155,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      1674
+      1682
     ],
     "occurred_at": "2026-04-17T16:42:01+00:00",
     "published_at": "2026-04-17T16:42:01+00:00",
     "fetched_at": "2026-04-17T16:42:01+00:00"
   },
   {
-    "id": 1672,
+    "id": 1681,
     "group_key": "earthquake|us6000sqta",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -191,14 +191,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      1669
+      1678
     ],
     "occurred_at": "2026-04-17T12:39:26.641000+00:00",
     "published_at": "2026-04-17T12:39:26.641000+00:00",
     "fetched_at": "2026-04-17T12:39:26.641000+00:00"
   },
   {
-    "id": 1673,
+    "id": 1682,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|western_north_pacific_area|tc_04w|34fea900871f7ff2",
     "event_type": "typhoon",
     "severity_level": "extreme",
@@ -246,14 +246,14 @@
       }
     },
     "member_event_ids": [
-      1677
+      1685
     ],
     "occurred_at": "2026-04-17T06:00:00+00:00",
     "published_at": "2026-04-17T06:00:00+00:00",
     "fetched_at": "2026-04-17T06:00:00+00:00"
   },
   {
-    "id": 1674,
+    "id": 1683,
     "group_key": "earthquake|us6000sqn6",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -282,50 +282,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      1670
+      1679
     ],
     "occurred_at": "2026-04-16T21:46:25.134000+00:00",
     "published_at": "2026-04-16T21:46:25.134000+00:00",
     "fetched_at": "2026-04-16T21:46:25.134000+00:00"
   },
   {
-    "id": 1675,
-    "group_key": "earthquake|us6000sqml",
-    "event_type": "earthquake",
-    "severity_level": "moderate",
-    "severity_color": "moderate",
-    "title": "M 5.2 - north of Ascension Island",
-    "summary": "north of Ascension Island",
-    "started_at": "2026-04-16T20:36:42.256000+00:00",
-    "updated_at": "2026-04-17T17:19:27.040000+00:00",
-    "location_text": "north of Ascension Island",
-    "lat": 0.0245,
-    "lon": -16.4939,
-    "source_primary": "USGS",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sqml",
-    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sqml",
-    "country_code": null,
-    "payload": {
-      "mag": 5.2,
-      "depth_km": 10.0,
-      "place": "north of Ascension Island",
-      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000sqml.geojson",
-      "alert": null,
-      "sig": 416,
-      "tsunami": 0,
-      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
-    },
-    "member_event_ids": [
-      1671
-    ],
-    "occurred_at": "2026-04-16T20:36:42.256000+00:00",
-    "published_at": "2026-04-16T20:36:42.256000+00:00",
-    "fetched_at": "2026-04-16T20:36:42.256000+00:00"
-  },
-  {
-    "id": 1676,
+    "id": 1684,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -398,14 +362,14 @@
       }
     },
     "member_event_ids": [
-      1676
+      1684
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",
     "fetched_at": "2026-03-25T01:00:00+00:00"
   },
   {
-    "id": 1677,
+    "id": 1685,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -478,7 +442,7 @@
       }
     },
     "member_event_ids": [
-      1675
+      1683
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

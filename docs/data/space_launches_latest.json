@@ -1,11 +1,21 @@
 {
-  "id": 9,
+  "id": 10,
   "snapshot_key": "space_launches_default",
   "source_name": "AEI Launch Records API",
   "source_url": "https://space-data-api-46930537539.us-central1.run.app/api/public/launches/records",
-  "fetched_at": "2026-04-17T12:08:09.811896+00:00",
-  "created_at": "2026-04-17 12:08:10",
+  "fetched_at": "2026-04-17T18:07:29.994704+00:00",
+  "created_at": "2026-04-17 18:07:30",
   "items": [
+    {
+      "date": "2026-04-16",
+      "vehicle": "Soyuz-2-1B",
+      "launch_site": "Plesetsk Kosmodrome, Russia",
+      "country": "Russia/Soviet Union",
+      "category": "Orbital",
+      "outcome": "Success",
+      "actual_payload_capacity": "载荷 0 t · LEO 4.8 t · SSO 4.4 t",
+      "starlink_mission": "否"
+    },
     {
       "date": "2026-04-15",
       "vehicle": "Falcon 9 FT5",
@@ -94,16 +104,6 @@
       "category": "Orbital",
       "outcome": "Success",
       "actual_payload_capacity": "载荷 0.6 t · LEO 1.6 t · SSO 1.2 t",
-      "starlink_mission": "否"
-    },
-    {
-      "date": "2026-04-07",
-      "vehicle": "Chang Zheng 8",
-      "launch_site": "Hainan Shangye Hangtian Fashe Chang (Hainan Commercial Space Launch Site)",
-      "country": "China",
-      "category": "Orbital",
-      "outcome": "Success",
-      "actual_payload_capacity": "载荷 4.8 t · LEO 7.6 t · SSO 4.5 t",
       "starlink_mission": "否"
     }
   ]

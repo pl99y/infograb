@@ -1,74 +1,74 @@
 {
-  "id": 10,
+  "id": 11,
   "forecast_key": "swpc_default",
   "forecast_issued_at": "2026-04-17T12:30:00+00:00",
-  "geomag_issued_at": "2026-04-16T22:05:00+00:00",
+  "geomag_issued_at": "2026-04-17T22:05:00+00:00",
   "raw_forecast_text": ":Product: 3-Day Forecast\n:Issued: 2026 Apr 17 1230 UTC\n# Prepared by the U.S. Dept. of Commerce, NOAA, Space Weather Prediction Center\n#\nA. NOAA Geomagnetic Activity Observation and Forecast\n\nThe greatest observed 3 hr Kp over the past 24 hours was 1 (below NOAA\nScale levels).\nThe greatest expected 3 hr Kp for Apr 17-Apr 19 2026 is 6.00 (NOAA Scale\nG2).\n\nNOAA Kp index breakdown Apr 17-Apr 19 2026\n\n             Apr 17       Apr 18       Apr 19\n00-03UT       0.67         6.00 (G2)    5.00 (G1)\n03-06UT       0.67         6.00 (G2)    4.67 (G1)\n06-09UT       2.67         5.00 (G1)    4.00     \n09-12UT       2.00         4.00         3.33     \n12-15UT       1.33         3.67         3.67     \n15-18UT       2.67         3.33         3.00     \n18-21UT       4.33         3.00         3.00     \n21-00UT       5.67 (G2)    4.33         3.33     \n\nRationale: G2 (Moderate) geomagnetic storms are likely on 17-18 Apr due\nto the anticipated CH HSS influences. G1 (Minor) storming levels are\nlikely on 19 Apr as the CH HSS influences wanes.\n\nB. NOAA Solar Radiation Activity Observation and Forecast\n\nSolar radiation, as observed by NOAA GOES-18 over the past 24 hours, was\nbelow S-scale storm level thresholds.\n\nSolar Radiation Storm Forecast for Apr 17-Apr 19 2026\n\n              Apr 17  Apr 18  Apr 19\nS1 or greater    1%      1%      1%\n\nRationale: No S1 (Minor) or greater solar radiation storms are expected.\nNo significant active region activity favorable for radiation storm\nproduction is forecast.\n\nC. NOAA Radio Blackout Activity and Forecast\n\nNo radio blackouts were observed over the past 24 hours.\n\nRadio Blackout Forecast for Apr 17-Apr 19 2026\n\n              Apr 17        Apr 18        Apr 19\nR1-R2           25%           25%           25%\nR3 or greater    5%            5%            5%\n\nRationale: There is a chance for R1-R2 (Minor-Moderate) radio blackouts\nthrough the 19 Apr mostly due to the flaring potential of Region 4419.\n",
-  "raw_geomag_text": ":Product: Geomagnetic Forecast\n:Issued: 2026 Apr 16 2205 UTC\n# Prepared by the U.S. Dept. of Commerce, NOAA, Space Weather Prediction Center\n#\nNOAA Ap Index Forecast\nObserved Ap 15 Apr 004\nEstimated Ap 16 Apr 004\nPredicted Ap 17 Apr-19 Apr 020-040-025\n\nNOAA Geomagnetic Activity Probabilities 17 Apr-19 Apr\nActive                15/10/20\nMinor storm           30/35/40\nModerate storm        35/35/25\nStrong-Extreme storm  20/20/05\n\nNOAA Kp index forecast 17 Apr - 19 Apr\n             Apr 17    Apr 18    Apr 19\n00-03UT        2.33      6.00      5.00      \n03-06UT        2.67      6.00      4.67      \n06-09UT        2.67      5.00      4.00      \n09-12UT        2.00      4.00      3.33      \n12-15UT        1.33      3.67      3.67      \n15-18UT        2.67      3.33      3.00      \n18-21UT        4.33      3.00      3.00      \n21-00UT        5.67      4.33      3.33      \n",
+  "raw_geomag_text": ":Product: Geomagnetic Forecast\n:Issued: 2026 Apr 17 2205 UTC\n# Prepared by the U.S. Dept. of Commerce, NOAA, Space Weather Prediction Center\n#\nNOAA Ap Index Forecast\nObserved Ap 16 Apr 003\nEstimated Ap 17 Apr 005\nPredicted Ap 18 Apr-20 Apr 040-025-018\n\nNOAA Geomagnetic Activity Probabilities 18 Apr-20 Apr\nActive                10/20/45\nMinor storm           35/40/15\nModerate storm        35/25/05\nStrong-Extreme storm  20/05/01\n\nNOAA Kp index forecast 18 Apr - 20 Apr\n             Apr 18    Apr 19    Apr 20\n00-03UT        6.00      5.00      3.67      \n03-06UT        6.00      4.67      3.67      \n06-09UT        5.00      4.00      3.33      \n09-12UT        4.00      3.33      3.33      \n12-15UT        3.67      3.67      3.33      \n15-18UT        3.33      3.00      2.00      \n18-21UT        3.00      3.00      3.33      \n21-00UT        4.33      3.33      3.33      \n",
   "source_name": "SWPC Forecast",
   "source_url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
-  "fetched_at": "2026-04-17T18:07:06.836821+00:00",
-  "created_at": "2026-04-17 18:07:29",
+  "fetched_at": "2026-04-18T00:07:05.883782+00:00",
+  "created_at": "2026-04-18 00:07:21",
   "panel": {
     "forecast_issued_at": "2026-04-17T12:30:00+00:00",
-    "geomag_issued_at": "2026-04-16T22:05:00+00:00",
+    "geomag_issued_at": "2026-04-17T22:05:00+00:00",
     "geomagnetic": {
-      "observed_summary": "过去24小时内观测到的最大3小时Kp指数为1（低于NOAA等级水平）。",
-      "expected_summary": "预计2026年4月17日至4月19日期间的最大3小时Kp指数为6。",
-      "rationale": "受预期的冕洞高速流（CH HSS）影响，4月17日至18日可能出现G2（中等）地磁风暴。随着冕洞高速流影响减弱，4月19日可能出现G1（微弱）风暴水平。",
+      "observed_summary": "The greatest observed 3 hr Kp over the past 24 hours was 1 (below NOAA Scale levels).",
+      "expected_summary": "The greatest expected 3 hr Kp for Apr 17-Apr 19 2026 is 6.",
+      "rationale": "G2 (Moderate) geomagnetic storms are likely on 17-18 Apr due to the anticipated CH HSS influences. G1 (Minor) storming levels are likely on 19 Apr as the CH HSS influences wanes.",
       "days": [
-        "Apr 17",
         "Apr 18",
-        "Apr 19"
+        "Apr 19",
+        "Apr 20"
       ],
       "ap_index": {
-        "observed": "15 Apr 004 Estimated Ap 16 Apr 004 Predicted Ap 17 Apr-19 Apr 020-040-025 NOAA Geomagnetic Activity Probabilities 17 Apr-19 Apr Active 15/10/20 Minor storm 30/35/40 Moderate storm 35/35/25 Strong-Extreme storm 20/20/05 NOAA Kp index forecast 17 Apr - 19 Apr Apr 17 Apr 18 Apr 19 00-03UT 2.33 6.00 5.00 03-06UT 2.67 6.00 4.67 06-09UT 2.67 5.00 4.00 09-12UT 2.00 4.00 3.33 12-15UT 1.33 3.67 3.67 15-18UT 2.67 3.33 3.00 18-21UT 4.33 3.00 3.00 21-00UT 5.67 4.33 3.33",
-        "estimated": "16 Apr 004 Predicted Ap 17 Apr-19 Apr 020-040-025 NOAA Geomagnetic Activity Probabilities 17 Apr-19 Apr Active 15/10/20 Minor storm 30/35/40 Moderate storm 35/35/25 Strong-Extreme storm 20/20/05 NOAA Kp index forecast 17 Apr - 19 Apr Apr 17 Apr 18 Apr 19 00-03UT 2.33 6.00 5.00 03-06UT 2.67 6.00 4.67 06-09UT 2.67 5.00 4.00 09-12UT 2.00 4.00 3.33 12-15UT 1.33 3.67 3.67 15-18UT 2.67 3.33 3.00 18-21UT 4.33 3.00 3.00 21-00UT 5.67 4.33 3.33",
-        "predicted": "17 Apr-19 Apr 020-040-025 NOAA Geomagnetic Activity Probabilities 17 Apr-19 Apr Active 15/10/20 Minor storm 30/35/40 Moderate storm 35/35/25 Strong-Extreme storm 20/20/05 NOAA Kp index forecast 17 Apr - 19 Apr Apr 17 Apr 18 Apr 19 00-03UT 2.33 6.00 5.00 03-06UT 2.67 6.00 4.67 06-09UT 2.67 5.00 4.00 09-12UT 2.00 4.00 3.33 12-15UT 1.33 3.67 3.67 15-18UT 2.67 3.33 3.00 18-21UT 4.33 3.00 3.00 21-00UT 5.67 4.33 3.33"
+        "observed": "16 Apr 003 Estimated Ap 17 Apr 005 Predicted Ap 18 Apr-20 Apr 040-025-018 NOAA Geomagnetic Activity Probabilities 18 Apr-20 Apr Active 10/20/45 Minor storm 35/40/15 Moderate storm 35/25/05 Strong-Extreme storm 20/05/01 NOAA Kp index forecast 18 Apr - 20 Apr Apr 18 Apr 19 Apr 20 00-03UT 6.00 5.00 3.67 03-06UT 6.00 4.67 3.67 06-09UT 5.00 4.00 3.33 09-12UT 4.00 3.33 3.33 12-15UT 3.67 3.67 3.33 15-18UT 3.33 3.00 2.00 18-21UT 3.00 3.00 3.33 21-00UT 4.33 3.33 3.33",
+        "estimated": "17 Apr 005 Predicted Ap 18 Apr-20 Apr 040-025-018 NOAA Geomagnetic Activity Probabilities 18 Apr-20 Apr Active 10/20/45 Minor storm 35/40/15 Moderate storm 35/25/05 Strong-Extreme storm 20/05/01 NOAA Kp index forecast 18 Apr - 20 Apr Apr 18 Apr 19 Apr 20 00-03UT 6.00 5.00 3.67 03-06UT 6.00 4.67 3.67 06-09UT 5.00 4.00 3.33 09-12UT 4.00 3.33 3.33 12-15UT 3.67 3.67 3.33 15-18UT 3.33 3.00 2.00 18-21UT 3.00 3.00 3.33 21-00UT 4.33 3.33 3.33",
+        "predicted": "18 Apr-20 Apr 040-025-018 NOAA Geomagnetic Activity Probabilities 18 Apr-20 Apr Active 10/20/45 Minor storm 35/40/15 Moderate storm 35/25/05 Strong-Extreme storm 20/05/01 NOAA Kp index forecast 18 Apr - 20 Apr Apr 18 Apr 19 Apr 20 00-03UT 6.00 5.00 3.67 03-06UT 6.00 4.67 3.67 06-09UT 5.00 4.00 3.33 09-12UT 4.00 3.33 3.33 12-15UT 3.67 3.67 3.33 15-18UT 3.33 3.00 2.00 18-21UT 3.00 3.00 3.33 21-00UT 4.33 3.33 3.33"
       },
       "probabilities": {
         "active": [
-          15,
           10,
-          20
+          20,
+          45
         ],
         "minor_storm": [
-          30,
           35,
-          40
+          40,
+          15
         ],
         "moderate_storm": [
           35,
-          35,
-          25
+          25,
+          5
         ],
         "strong_extreme_storm": [
           20,
-          20,
-          5
+          5,
+          1
         ]
       }
     },
     "solar_radiation": {
-      "observed_summary": "根据NOAA GOES-18卫星过去24小时的观测，太阳辐射低于S级风暴阈值。",
+      "observed_summary": "Solar radiation, as observed by NOAA GOES-18 over the past 24 hours, was below S-scale storm level thresholds.",
       "days": [
-        "Apr 17",
         "Apr 18",
-        "Apr 19"
+        "Apr 19",
+        "Apr 20"
       ],
       "s1_or_greater": [
         "1%",
         "1%",
         "1%"
       ],
-      "rationale": "预计不会出现S1（微弱）或更高级别的太阳辐射风暴。预计没有利于产生辐射风暴的显著活动区活动。"
+      "rationale": "No S1 (Minor) or greater solar radiation storms are expected. No significant active region activity favorable for radiation storm production is forecast."
     },
     "radio_blackout": {
-      "observed_summary": "过去24小时内未观测到无线电中断。",
+      "observed_summary": "No radio blackouts were observed over the past 24 hours.",
       "days": [
-        "Apr 17",
         "Apr 18",
-        "Apr 19"
+        "Apr 19",
+        "Apr 20"
       ],
       "r1_r2": [
         "25%",
@@ -80,9 +80,9 @@
         "5%",
         "5%"
       ],
-      "rationale": "受4419活动区耀斑潜力的影响，4月19日前仍有可能出现R1-R2（微弱至中等）级别的无线电中断。"
+      "rationale": "There is a chance for R1-R2 (Minor-Moderate) radio blackouts through the 19 Apr mostly due to the flaring potential of Region 4419."
     },
     "raw_forecast_text": ":Product: 3-Day Forecast\n:Issued: 2026 Apr 17 1230 UTC\n# Prepared by the U.S. Dept. of Commerce, NOAA, Space Weather Prediction Center\n#\nA. NOAA Geomagnetic Activity Observation and Forecast\n\nThe greatest observed 3 hr Kp over the past 24 hours was 1 (below NOAA\nScale levels).\nThe greatest expected 3 hr Kp for Apr 17-Apr 19 2026 is 6.00 (NOAA Scale\nG2).\n\nNOAA Kp index breakdown Apr 17-Apr 19 2026\n\n             Apr 17       Apr 18       Apr 19\n00-03UT       0.67         6.00 (G2)    5.00 (G1)\n03-06UT       0.67         6.00 (G2)    4.67 (G1)\n06-09UT       2.67         5.00 (G1)    4.00     \n09-12UT       2.00         4.00         3.33     \n12-15UT       1.33         3.67         3.67     \n15-18UT       2.67         3.33         3.00     \n18-21UT       4.33         3.00         3.00     \n21-00UT       5.67 (G2)    4.33         3.33     \n\nRationale: G2 (Moderate) geomagnetic storms are likely on 17-18 Apr due\nto the anticipated CH HSS influences. G1 (Minor) storming levels are\nlikely on 19 Apr as the CH HSS influences wanes.\n\nB. NOAA Solar Radiation Activity Observation and Forecast\n\nSolar radiation, as observed by NOAA GOES-18 over the past 24 hours, was\nbelow S-scale storm level thresholds.\n\nSolar Radiation Storm Forecast for Apr 17-Apr 19 2026\n\n              Apr 17  Apr 18  Apr 19\nS1 or greater    1%      1%      1%\n\nRationale: No S1 (Minor) or greater solar radiation storms are expected.\nNo significant active region activity favorable for radiation storm\nproduction is forecast.\n\nC. NOAA Radio Blackout Activity and Forecast\n\nNo radio blackouts were observed over the past 24 hours.\n\nRadio Blackout Forecast for Apr 17-Apr 19 2026\n\n              Apr 17        Apr 18        Apr 19\nR1-R2           25%           25%           25%\nR3 or greater    5%            5%            5%\n\nRationale: There is a chance for R1-R2 (Minor-Moderate) radio blackouts\nthrough the 19 Apr mostly due to the flaring potential of Region 4419.\n",
-    "raw_geomag_text": ":Product: Geomagnetic Forecast\n:Issued: 2026 Apr 16 2205 UTC\n# Prepared by the U.S. Dept. of Commerce, NOAA, Space Weather Prediction Center\n#\nNOAA Ap Index Forecast\nObserved Ap 15 Apr 004\nEstimated Ap 16 Apr 004\nPredicted Ap 17 Apr-19 Apr 020-040-025\n\nNOAA Geomagnetic Activity Probabilities 17 Apr-19 Apr\nActive                15/10/20\nMinor storm           30/35/40\nModerate storm        35/35/25\nStrong-Extreme storm  20/20/05\n\nNOAA Kp index forecast 17 Apr - 19 Apr\n             Apr 17    Apr 18    Apr 19\n00-03UT        2.33      6.00      5.00      \n03-06UT        2.67      6.00      4.67      \n06-09UT        2.67      5.00      4.00      \n09-12UT        2.00      4.00      3.33      \n12-15UT        1.33      3.67      3.67      \n15-18UT        2.67      3.33      3.00      \n18-21UT        4.33      3.00      3.00      \n21-00UT        5.67      4.33      3.33      \n"
+    "raw_geomag_text": ":Product: Geomagnetic Forecast\n:Issued: 2026 Apr 17 2205 UTC\n# Prepared by the U.S. Dept. of Commerce, NOAA, Space Weather Prediction Center\n#\nNOAA Ap Index Forecast\nObserved Ap 16 Apr 003\nEstimated Ap 17 Apr 005\nPredicted Ap 18 Apr-20 Apr 040-025-018\n\nNOAA Geomagnetic Activity Probabilities 18 Apr-20 Apr\nActive                10/20/45\nMinor storm           35/40/15\nModerate storm        35/25/05\nStrong-Extreme storm  20/05/01\n\nNOAA Kp index forecast 18 Apr - 20 Apr\n             Apr 18    Apr 19    Apr 20\n00-03UT        6.00      5.00      3.67      \n03-06UT        6.00      4.67      3.67      \n06-09UT        5.00      4.00      3.33      \n09-12UT        4.00      3.33      3.33      \n12-15UT        3.67      3.67      3.33      \n15-18UT        3.33      3.00      2.00      \n18-21UT        3.00      3.00      3.33      \n21-00UT        4.33      3.33      3.33      \n"
   }
 }

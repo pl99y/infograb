@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-04-18T05:03:01.535491+00:00",
+  "updated_at": "2026-04-18T05:17:38.250537+00:00",
   "window_hours": 12,
-  "count": 54,
+  "count": 59,
   "source_counts": {
     "zaobao": 33,
     "hk01": 16,
-    "mingpao": 5
+    "mingpao": 10
   },
   "items": [
     {
@@ -19,7 +19,7 @@
       "published_at": "2026-04-18T05:02:00+00:00",
       "published_text": "2026-04-18 13:02",
       "list_url": "https://www.zaobao.com.sg/news/china",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-18 05:03:22",
       "author_names": []
     },
@@ -34,7 +34,7 @@
       "published_at": "2026-04-18T05:01:00+00:00",
       "published_text": "2026-04-18 13:01",
       "list_url": "https://www.zaobao.com.sg/news/world",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-18 05:03:22",
       "author_names": []
     },
@@ -49,7 +49,7 @@
       "published_at": "2026-04-18T05:00:39+00:00",
       "published_text": "1776488439",
       "list_url": "https://web-data.api.hk01.com/v2/feed/category/19?bucketId=00000&limit=20",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-18 05:03:22",
       "author_names": [
         "官祿倡"
@@ -66,7 +66,7 @@
       "published_at": "2026-04-18T04:30:36+00:00",
       "published_text": "1776486636",
       "list_url": "https://web-data.api.hk01.com/v2/feed/category/19?bucketId=00000&limit=20",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-18 04:33:33",
       "author_names": [
         "陳楚遙"
@@ -83,8 +83,53 @@
       "published_at": "2026-04-18T04:30:00+00:00",
       "published_text": "2026-04-18 12:30",
       "list_url": "https://www.zaobao.com.sg/news/china",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-18 04:33:33",
+      "author_names": []
+    },
+    {
+      "id": 19222,
+      "source_key": "mingpao",
+      "source_name": "明报",
+      "channel": "港闻",
+      "topic": null,
+      "title": "荃錦公路小巴輕型貨車相撞13人傷",
+      "url": "https://news.mingpao.com/ins/%e6%b8%af%e8%81%9e/article/20260418/s00001/1776486550689/%e8%8d%83%e9%8c%a6%e5%85%ac%e8%b7%af%e5%b0%8f%e5%b7%b4%e8%bc%95%e5%9e%8b%e8%b2%a8%e8%bb%8a%e7%9b%b8%e6%92%9e13%e4%ba%ba%e5%82%b7",
+      "published_at": "2026-04-18T04:27:27+00:00",
+      "published_text": "Sat, 18 Apr 2026 04:27:27 GMT",
+      "list_url": "https://news.mingpao.com/rss/ins/s00001.xml",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
+      "created_at": "2026-04-18 05:17:57",
+      "author_names": []
+    },
+    {
+      "id": 19223,
+      "source_key": "mingpao",
+      "source_name": "明报",
+      "channel": "港闻",
+      "topic": "香港國際七人欖球賽",
+      "title": "鄭泳舜倡推「賽事票尾經濟」 商戶憑賽事票尾提供優惠以帶動消費",
+      "url": "https://news.mingpao.com/ins/%e6%b8%af%e8%81%9e/article/20260418/s00001/1776486413144/%e9%84%ad%e6%b3%b3%e8%88%9c%e5%80%a1%e6%8e%a8%e3%80%8c%e8%b3%bd%e4%ba%8b%e7%a5%a8%e5%b0%be%e7%b6%93%e6%bf%9f%e3%80%8d-%e5%95%86%e6%88%b6%e6%86%91%e8%b3%bd%e4%ba%8b%e7%a5%a8%e5%b0%be%e6%8f%90%e4%be%9b%e5%84%aa%e6%83%a0%e4%bb%a5%e5%b8%b6%e5%8b%95%e6%b6%88%e8%b2%bb",
+      "published_at": "2026-04-18T04:26:50+00:00",
+      "published_text": "Sat, 18 Apr 2026 04:26:50 GMT",
+      "list_url": "https://news.mingpao.com/rss/ins/s00001.xml",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
+      "created_at": "2026-04-18 05:17:57",
+      "author_names": []
+    },
+    {
+      "id": 19224,
+      "source_key": "mingpao",
+      "source_name": "明报",
+      "channel": "港闻",
+      "topic": "編輯推介",
+      "title": "凌嘉勤：房協優先發展東涌樂建居項目 資金回籠始重啟油柑頭首置項目",
+      "url": "https://news.mingpao.com/ins/%e6%b8%af%e8%81%9e/article/20260418/s00001/1776486733771/%e5%87%8c%e5%98%89%e5%8b%a4-%e6%88%bf%e5%8d%94%e5%84%aa%e5%85%88%e7%99%bc%e5%b1%95%e6%9d%b1%e6%b6%8c%e6%a8%82%e5%bb%ba%e5%b1%85%e9%a0%85%e7%9b%ae-%e8%b3%87%e9%87%91%e5%9b%9e%e7%b1%a0%e5%a7%8b%e9%87%8d%e5%95%9f%e6%b2%b9%e6%9f%91%e9%a0%ad%e9%a6%96%e7%bd%ae%e9%a0%85%e7%9b%ae",
+      "published_at": "2026-04-18T04:21:22+00:00",
+      "published_text": "Sat, 18 Apr 2026 04:21:22 GMT",
+      "list_url": "https://news.mingpao.com/rss/ins/s00001.xml",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
+      "created_at": "2026-04-18 05:17:57",
       "author_names": []
     },
     {
@@ -98,7 +143,7 @@
       "published_at": "2026-04-18T04:19:09+00:00",
       "published_text": "Sat, 18 Apr 2026 04:19:09 GMT",
       "list_url": "https://news.mingpao.com/rss/ins/s00005.xml",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-18 05:03:22",
       "author_names": []
     },
@@ -113,7 +158,7 @@
       "published_at": "2026-04-18T04:16:00+00:00",
       "published_text": "2026-04-18 12:16",
       "list_url": "https://www.zaobao.com.sg/news/china",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-18 04:19:25",
       "author_names": []
     },
@@ -128,7 +173,7 @@
       "published_at": "2026-04-18T04:00:50+00:00",
       "published_text": "1776484850",
       "list_url": "https://web-data.api.hk01.com/v2/feed/category/19?bucketId=00000&limit=20",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-18 04:03:12",
       "author_names": [
         "聯合新聞網"
@@ -145,7 +190,7 @@
       "published_at": "2026-04-18T03:54:00+00:00",
       "published_text": "2026-04-18 11:54",
       "list_url": "https://www.zaobao.com.sg/news/world",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-18 04:03:12",
       "author_names": []
     },
@@ -160,7 +205,7 @@
       "published_at": "2026-04-18T03:51:00+00:00",
       "published_text": "2026-04-18 11:51",
       "list_url": "https://www.zaobao.com.sg/news/china",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-18 04:03:12",
       "author_names": []
     },
@@ -175,7 +220,7 @@
       "published_at": "2026-04-18T03:49:28+00:00",
       "published_text": "Sat, 18 Apr 2026 03:49:28 GMT",
       "list_url": "https://news.mingpao.com/rss/ins/s00001.xml",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-18 04:48:16",
       "author_names": []
     },
@@ -190,7 +235,7 @@
       "published_at": "2026-04-18T03:44:00+00:00",
       "published_text": "2026-04-18 11:44",
       "list_url": "https://www.zaobao.com.sg/news/china",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-18 03:48:19",
       "author_names": []
     },
@@ -205,7 +250,7 @@
       "published_at": "2026-04-18T03:30:51+00:00",
       "published_text": "1776483051",
       "list_url": "https://web-data.api.hk01.com/v2/feed/category/364?bucketId=00000&limit=20",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-18 03:34:20",
       "author_names": [
         "盛昀"
@@ -222,7 +267,7 @@
       "published_at": "2026-04-18T03:29:00+00:00",
       "published_text": "2026-04-18 11:29",
       "list_url": "https://www.zaobao.com.sg/news/china",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-18 03:34:20",
       "author_names": []
     },
@@ -237,7 +282,7 @@
       "published_at": "2026-04-18T03:28:33+00:00",
       "published_text": "1776482913",
       "list_url": "https://web-data.api.hk01.com/v2/feed/category/19?bucketId=00000&limit=20",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-18 03:34:20",
       "author_names": [
         "官祿倡"
@@ -254,7 +299,7 @@
       "published_at": "2026-04-18T03:25:00+00:00",
       "published_text": "2026-04-18 11:25",
       "list_url": "https://www.zaobao.com.sg/news/world",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-18 03:34:20",
       "author_names": []
     },
@@ -269,7 +314,7 @@
       "published_at": "2026-04-18T03:22:00+00:00",
       "published_text": "2026-04-18 11:22",
       "list_url": "https://www.zaobao.com.sg/news/world",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-18 03:34:20",
       "author_names": []
     },
@@ -284,7 +329,7 @@
       "published_at": "2026-04-18T03:19:40+00:00",
       "published_text": "1776482380",
       "list_url": "https://web-data.api.hk01.com/v2/feed/category/19?bucketId=00000&limit=20",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-16 07:33:05",
       "author_names": [
         "成依華",
@@ -309,7 +354,7 @@
       "published_at": "2026-04-18T03:15:42+00:00",
       "published_text": "Sat, 18 Apr 2026 03:15:42 GMT",
       "list_url": "https://news.mingpao.com/rss/ins/s00005.xml",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-18 03:48:19",
       "author_names": []
     },
@@ -324,7 +369,7 @@
       "published_at": "2026-04-18T03:10:00+00:00",
       "published_text": "2026-04-18 11:10",
       "list_url": "https://www.zaobao.com.sg/news/china",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-18 03:18:15",
       "author_names": []
     },
@@ -339,11 +384,26 @@
       "published_at": "2026-04-18T03:03:54+00:00",
       "published_text": "1776481434",
       "list_url": "https://web-data.api.hk01.com/v2/feed/category/19?bucketId=00000&limit=20",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-18 03:18:15",
       "author_names": [
         "陳楚遙"
       ]
+    },
+    {
+      "id": 19241,
+      "source_key": "mingpao",
+      "source_name": "明报",
+      "channel": "港闻",
+      "topic": null,
+      "title": "葵涌21歲女子遭前男友毆打 31歲男子涉兩罪被捕",
+      "url": "https://news.mingpao.com/ins/%e6%b8%af%e8%81%9e/article/20260418/s00001/1776481464402/%e8%91%b5%e6%b6%8c21%e6%ad%b2%e5%a5%b3%e5%ad%90%e9%81%ad%e5%89%8d%e7%94%b7%e5%8f%8b%e6%af%86%e6%89%93-31%e6%ad%b2%e7%94%b7%e5%ad%90%e6%b6%89%e5%85%a9%e7%bd%aa%e8%a2%ab%e6%8d%95",
+      "published_at": "2026-04-18T03:01:59+00:00",
+      "published_text": "Sat, 18 Apr 2026 03:01:59 GMT",
+      "list_url": "https://news.mingpao.com/rss/ins/s00001.xml",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
+      "created_at": "2026-04-18 05:17:57",
+      "author_names": []
     },
     {
       "id": 18776,
@@ -356,7 +416,7 @@
       "published_at": "2026-04-18T02:54:00+00:00",
       "published_text": "2026-04-18 10:54",
       "list_url": "https://www.zaobao.com.sg/news/world",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-18 03:04:01",
       "author_names": []
     },
@@ -371,7 +431,7 @@
       "published_at": "2026-04-18T02:51:00+00:00",
       "published_text": "2026-04-18 10:51",
       "list_url": "https://www.zaobao.com.sg/news/china",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-18 03:04:01",
       "author_names": []
     },
@@ -386,8 +446,23 @@
       "published_at": "2026-04-18T02:43:00+00:00",
       "published_text": "2026-04-18 10:43",
       "list_url": "https://www.zaobao.com.sg/news/china",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-18 02:49:10",
+      "author_names": []
+    },
+    {
+      "id": 19245,
+      "source_key": "mingpao",
+      "source_name": "明报",
+      "channel": "港闻",
+      "topic": null,
+      "title": "荔枝角運菜車撞石壆翻側車頭擱對面線 男司機一度被困清醒獲救拒送院",
+      "url": "https://news.mingpao.com/ins/%e6%b8%af%e8%81%9e/article/20260418/s00001/1776480104231/%e8%8d%94%e6%9e%9d%e8%a7%92%e9%81%8b%e8%8f%9c%e8%bb%8a%e6%92%9e%e7%9f%b3%e5%a3%86%e7%bf%bb%e5%81%b4%e8%bb%8a%e9%a0%ad%e6%93%b1%e5%b0%8d%e9%9d%a2%e7%b7%9a-%e7%94%b7%e5%8f%b8%e6%a9%9f%e4%b8%80%e5%ba%a6%e8%a2%ab%e5%9b%b0%e6%b8%85%e9%86%92%e7%8d%b2%e6%95%91%e6%8b%92%e9%80%81%e9%99%a2",
+      "published_at": "2026-04-18T02:31:26+00:00",
+      "published_text": "Sat, 18 Apr 2026 02:31:26 GMT",
+      "list_url": "https://news.mingpao.com/rss/ins/s00001.xml",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
+      "created_at": "2026-04-18 05:17:57",
       "author_names": []
     },
     {
@@ -401,7 +476,7 @@
       "published_at": "2026-04-18T02:23:33+00:00",
       "published_text": "1776479013",
       "list_url": "https://web-data.api.hk01.com/v2/feed/category/364?bucketId=00000&limit=20",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-18 02:33:25",
       "author_names": [
         "許祺安"
@@ -418,7 +493,7 @@
       "published_at": "2026-04-18T02:21:07+00:00",
       "published_text": "1776478867",
       "list_url": "https://web-data.api.hk01.com/v2/feed/category/19?bucketId=00000&limit=20",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-18 02:33:25",
       "author_names": [
         "王海"
@@ -435,7 +510,7 @@
       "published_at": "2026-04-18T02:19:00+00:00",
       "published_text": "2026-04-18 10:19",
       "list_url": "https://www.zaobao.com.sg/news/china",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-18 02:33:25",
       "author_names": []
     },
@@ -450,7 +525,7 @@
       "published_at": "2026-04-18T01:57:19+00:00",
       "published_text": "1776477439",
       "list_url": "https://web-data.api.hk01.com/v2/feed/category/19?bucketId=00000&limit=20",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-18 02:02:57",
       "author_names": [
         "官祿倡"
@@ -467,7 +542,7 @@
       "published_at": "2026-04-18T01:54:00+00:00",
       "published_text": "2026-04-18 09:54",
       "list_url": "https://www.zaobao.com.sg/news/world",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-18 02:02:57",
       "author_names": []
     },
@@ -482,7 +557,7 @@
       "published_at": "2026-04-18T01:51:00+00:00",
       "published_text": "2026-04-18 09:51",
       "list_url": "https://www.zaobao.com.sg/news/china",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-18 02:02:57",
       "author_names": []
     },
@@ -497,7 +572,7 @@
       "published_at": "2026-04-18T01:31:00+00:00",
       "published_text": "2026-04-18 09:31",
       "list_url": "https://www.zaobao.com.sg/news/world",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-18 01:34:12",
       "author_names": []
     },
@@ -512,7 +587,7 @@
       "published_at": "2026-04-18T01:28:11+00:00",
       "published_text": "Sat, 18 Apr 2026 01:28:11 GMT",
       "list_url": "https://news.mingpao.com/rss/ins/s00001.xml",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-18 02:17:58",
       "author_names": []
     },
@@ -527,7 +602,7 @@
       "published_at": "2026-04-18T01:27:17+00:00",
       "published_text": "1776475637",
       "list_url": "https://web-data.api.hk01.com/v2/feed/category/19?bucketId=00000&limit=20",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-18 01:34:12",
       "author_names": [
         "聯合早報"
@@ -544,7 +619,7 @@
       "published_at": "2026-04-18T01:18:00+00:00",
       "published_text": "2026-04-18 09:18",
       "list_url": "https://www.zaobao.com.sg/news/china",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-18 01:18:30",
       "author_names": []
     },
@@ -559,7 +634,7 @@
       "published_at": "2026-04-18T01:02:00+00:00",
       "published_text": "2026-04-18 09:02",
       "list_url": "https://www.zaobao.com.sg/news/china",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-18 01:02:56",
       "author_names": []
     },
@@ -574,7 +649,7 @@
       "published_at": "2026-04-18T01:00:00+00:00",
       "published_text": "2026-04-18 09:00",
       "list_url": "https://www.zaobao.com.sg/news/world",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-18 01:02:56",
       "author_names": []
     },
@@ -589,7 +664,7 @@
       "published_at": "2026-04-18T00:56:00+00:00",
       "published_text": "2026-04-18 08:56",
       "list_url": "https://www.zaobao.com.sg/news/china",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-18 01:02:56",
       "author_names": []
     },
@@ -604,7 +679,7 @@
       "published_at": "2026-04-18T00:54:44+00:00",
       "published_text": "Sat, 18 Apr 2026 00:54:44 GMT",
       "list_url": "https://news.mingpao.com/rss/ins/s00001.xml",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-18 01:48:36",
       "author_names": []
     },
@@ -619,7 +694,7 @@
       "published_at": "2026-04-18T00:48:00+00:00",
       "published_text": "2026-04-18 08:48",
       "list_url": "https://www.zaobao.com.sg/news/china",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-18 00:48:47",
       "author_names": []
     },
@@ -634,7 +709,7 @@
       "published_at": "2026-04-18T00:39:00+00:00",
       "published_text": "2026-04-18 08:39",
       "list_url": "https://www.zaobao.com.sg/news/world",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-18 00:48:47",
       "author_names": []
     },
@@ -649,7 +724,7 @@
       "published_at": "2026-04-18T00:00:00+00:00",
       "published_text": "2026-04-18 08:00",
       "list_url": "https://www.zaobao.com.sg/news/world",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-18 00:03:22",
       "author_names": []
     },
@@ -664,7 +739,7 @@
       "published_at": "2026-04-17T23:50:00+00:00",
       "published_text": "2026-04-18 07:50",
       "list_url": "https://www.zaobao.com.sg/news/china",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-18 00:03:22",
       "author_names": []
     },
@@ -679,7 +754,7 @@
       "published_at": "2026-04-17T23:41:02+00:00",
       "published_text": "1776469262",
       "list_url": "https://web-data.api.hk01.com/v2/feed/category/19?bucketId=00000&limit=20",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-17 23:48:18",
       "author_names": [
         "洪怡霖"
@@ -696,7 +771,7 @@
       "published_at": "2026-04-17T23:38:00+00:00",
       "published_text": "2026-04-18 07:38",
       "list_url": "https://www.zaobao.com.sg/news/world",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-17 23:48:18",
       "author_names": []
     },
@@ -711,7 +786,7 @@
       "published_at": "2026-04-17T23:23:00+00:00",
       "published_text": "2026-04-18 07:23",
       "list_url": "https://www.zaobao.com.sg/news/china",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-18 00:03:22",
       "author_names": []
     },
@@ -726,7 +801,7 @@
       "published_at": "2026-04-17T23:11:00+00:00",
       "published_text": "2026-04-18 07:11",
       "list_url": "https://www.zaobao.com.sg/news/world",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-17 23:18:08",
       "author_names": []
     },
@@ -741,7 +816,7 @@
       "published_at": "2026-04-17T23:07:00+00:00",
       "published_text": "2026-04-18 07:07",
       "list_url": "https://www.zaobao.com.sg/news/world",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-17 23:18:08",
       "author_names": []
     },
@@ -756,7 +831,7 @@
       "published_at": "2026-04-17T23:03:00+00:00",
       "published_text": "2026-04-18 07:03",
       "list_url": "https://www.zaobao.com.sg/news/world",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-17 23:18:08",
       "author_names": []
     },
@@ -771,7 +846,7 @@
       "published_at": "2026-04-17T21:55:13+00:00",
       "published_text": "1776462913",
       "list_url": "https://web-data.api.hk01.com/v2/feed/category/19?bucketId=00000&limit=20",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-17 22:03:28",
       "author_names": [
         "洪怡霖"
@@ -788,7 +863,7 @@
       "published_at": "2026-04-17T21:00:00+00:00",
       "published_text": "2026-04-18 05:00",
       "list_url": "https://www.zaobao.com.sg/news/china",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-17 21:03:16",
       "author_names": []
     },
@@ -803,7 +878,7 @@
       "published_at": "2026-04-17T21:00:00+00:00",
       "published_text": "2026-04-18 05:00",
       "list_url": "https://www.zaobao.com.sg/news/china",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-17 21:03:16",
       "author_names": []
     },
@@ -818,7 +893,7 @@
       "published_at": "2026-04-17T20:45:50+00:00",
       "published_text": "1776458750",
       "list_url": "https://web-data.api.hk01.com/v2/feed/category/19?bucketId=00000&limit=20",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-17 20:48:26",
       "author_names": [
         "洪怡霖"
@@ -835,7 +910,7 @@
       "published_at": "2026-04-17T18:28:23+00:00",
       "published_text": "1776450503",
       "list_url": "https://web-data.api.hk01.com/v2/feed/category/19?bucketId=00000&limit=20",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-17 18:33:03",
       "author_names": [
         "洪怡霖"
@@ -852,7 +927,7 @@
       "published_at": "2026-04-17T17:22:36+00:00",
       "published_text": "1776446556",
       "list_url": "https://web-data.api.hk01.com/v2/feed/category/19?bucketId=00000&limit=20",
-      "fetched_at": "2026-04-18T05:03:01.535491+00:00",
+      "fetched_at": "2026-04-18T05:17:38.250537+00:00",
       "created_at": "2026-04-17 17:33:16",
       "author_names": [
         "洪怡霖"

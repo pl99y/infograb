@@ -1,6 +1,6 @@
 [
   {
-    "id": 2974,
+    "id": 2993,
     "group_key": "earthquake|us6000sr5n",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -29,14 +29,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      2974
+      2993
     ],
     "occurred_at": "2026-04-18T18:29:58.948000+00:00",
     "published_at": "2026-04-18T18:29:58.948000+00:00",
     "fetched_at": "2026-04-18T18:29:58.948000+00:00"
   },
   {
-    "id": 2975,
+    "id": 2994,
     "group_key": "volcano|e78c0770de7fac1e0f8138873e5e763da4e94318",
     "event_type": "volcano",
     "severity_level": "high",
@@ -83,81 +83,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      2988
+      3007
     ],
     "occurred_at": "2026-04-18T18:25:00+00:00",
     "published_at": "2026-04-18T18:25:00+00:00",
     "fetched_at": "2026-04-18T18:25:00+00:00"
   },
   {
-    "id": 2976,
-    "group_key": "volcano|47fe38293bd5ee6f287da867fa1288a8b6740bab",
-    "event_type": "volcano",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "Mayon",
-    "summary": "VRP 223.96 MW · VIIRS375 / VIIRS · 5.10 km",
-    "started_at": "2026-04-18T17:12:02+00:00",
-    "updated_at": "2026-04-18T17:12:02+00:00",
-    "location_text": "Mayon",
-    "lat": null,
-    "lon": null,
-    "source_primary": "MIROVA",
-    "source_secondary": "VIIRS375 / VIIRS",
-    "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
-    "country_code": null,
-    "payload": {
-      "volcano_id": "273030",
-      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
-      "vrp_mw": 223.96,
-      "distance_km": 5.41,
-      "sensor": "VIIRS",
-      "row_class": [
-        "moderate",
-        "high"
-      ],
-      "source_page": "https://www.mirovaweb.it/NRT/",
-      "sensors": [
-        "VIIRS375",
-        "VIIRS"
-      ],
-      "reports": [
-        {
-          "volcano_id": "273030",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=273030",
-          "vrp_mw": 57.13,
-          "distance_km": 5.1,
-          "sensor": "VIIRS375",
-          "row_class": [
-            "moderate"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        },
-        {
-          "volcano_id": "273030",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=273030",
-          "vrp_mw": 223.96,
-          "distance_km": 5.41,
-          "sensor": "VIIRS",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        }
-      ],
-      "merged_count": 2
-    },
-    "member_event_ids": [
-      2989
-    ],
-    "occurred_at": "2026-04-18T17:12:02+00:00",
-    "published_at": "2026-04-18T17:12:02+00:00",
-    "fetched_at": "2026-04-18T17:12:02+00:00"
-  },
-  {
-    "id": 2977,
+    "id": 2995,
     "group_key": "earthquake|us6000sr4y",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -186,14 +119,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      2975
+      2994
     ],
     "occurred_at": "2026-04-18T16:03:48.162000+00:00",
     "published_at": "2026-04-18T16:03:48.162000+00:00",
     "fetched_at": "2026-04-18T16:03:48.162000+00:00"
   },
   {
-    "id": 2978,
+    "id": 2996,
     "group_key": "earthquake|us6000sr4k",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -222,14 +155,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      2976
+      2995
     ],
     "occurred_at": "2026-04-18T15:03:00.197000+00:00",
     "published_at": "2026-04-18T15:03:00.197000+00:00",
     "fetched_at": "2026-04-18T15:03:00.197000+00:00"
   },
   {
-    "id": 2979,
+    "id": 2997,
     "group_key": "earthquake|us6000sr43",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -258,14 +191,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      2977
+      2996
     ],
     "occurred_at": "2026-04-18T13:15:09.117000+00:00",
     "published_at": "2026-04-18T13:15:09.117000+00:00",
     "fetched_at": "2026-04-18T13:15:09.117000+00:00"
   },
   {
-    "id": 2980,
+    "id": 2998,
     "group_key": "earthquake|us6000sr3w",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -294,14 +227,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      2978
+      2997
     ],
     "occurred_at": "2026-04-18T12:16:26.188000+00:00",
     "published_at": "2026-04-18T12:16:26.188000+00:00",
     "fetched_at": "2026-04-18T12:16:26.188000+00:00"
   },
   {
-    "id": 2981,
+    "id": 2999,
     "group_key": "earthquake|us6000sr3p",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -330,14 +263,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      2979
+      2998
     ],
     "occurred_at": "2026-04-18T11:04:56.276000+00:00",
     "published_at": "2026-04-18T11:04:56.276000+00:00",
     "fetched_at": "2026-04-18T11:04:56.276000+00:00"
   },
   {
-    "id": 2982,
+    "id": 3000,
     "group_key": "earthquake|us6000sr3l",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -366,14 +299,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      2980
+      2999
     ],
     "occurred_at": "2026-04-18T10:47:54.936000+00:00",
     "published_at": "2026-04-18T10:47:54.936000+00:00",
     "fetched_at": "2026-04-18T10:47:54.936000+00:00"
   },
   {
-    "id": 2983,
+    "id": 3001,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|western_north_pacific_area|tc_04w|d8ff5982db3331cf",
     "event_type": "typhoon",
     "severity_level": "extreme",
@@ -421,14 +354,14 @@
       }
     },
     "member_event_ids": [
-      2992
+      3010
     ],
     "occurred_at": "2026-04-18T06:00:00+00:00",
     "published_at": "2026-04-18T06:00:00+00:00",
     "fetched_at": "2026-04-18T06:00:00+00:00"
   },
   {
-    "id": 2984,
+    "id": 3002,
     "group_key": "earthquake|us6000sr2n",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -457,14 +390,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      2981
+      3000
     ],
     "occurred_at": "2026-04-18T05:59:58.199000+00:00",
     "published_at": "2026-04-18T05:59:58.199000+00:00",
     "fetched_at": "2026-04-18T05:59:58.199000+00:00"
   },
   {
-    "id": 2985,
+    "id": 3003,
     "group_key": "earthquake|us6000sr27",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -493,14 +426,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      2982
+      3001
     ],
     "occurred_at": "2026-04-18T04:40:12.867000+00:00",
     "published_at": "2026-04-18T04:40:12.867000+00:00",
     "fetched_at": "2026-04-18T04:40:12.867000+00:00"
   },
   {
-    "id": 2986,
+    "id": 3004,
     "group_key": "earthquake|us6000sr1e",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -529,14 +462,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      2983
+      3002
     ],
     "occurred_at": "2026-04-18T02:54:20.073000+00:00",
     "published_at": "2026-04-18T02:54:20.073000+00:00",
     "fetched_at": "2026-04-18T02:54:20.073000+00:00"
   },
   {
-    "id": 2987,
+    "id": 3005,
     "group_key": "earthquake|us6000sr09",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -565,14 +498,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      2984
+      3003
     ],
     "occurred_at": "2026-04-18T00:28:21.763000+00:00",
     "published_at": "2026-04-18T00:28:21.763000+00:00",
     "fetched_at": "2026-04-18T00:28:21.763000+00:00"
   },
   {
-    "id": 2988,
+    "id": 3006,
     "group_key": "earthquake|us6000sqzn",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -601,14 +534,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      2985
+      3004
     ],
     "occurred_at": "2026-04-17T23:29:37.922000+00:00",
     "published_at": "2026-04-17T23:29:37.922000+00:00",
     "fetched_at": "2026-04-17T23:29:37.922000+00:00"
   },
   {
-    "id": 2989,
+    "id": 3007,
     "group_key": "earthquake|us6000sqzl",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -637,14 +570,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      2986
+      3005
     ],
     "occurred_at": "2026-04-17T23:21:27.293000+00:00",
     "published_at": "2026-04-17T23:21:27.293000+00:00",
     "fetched_at": "2026-04-17T23:21:27.293000+00:00"
   },
   {
-    "id": 2990,
+    "id": 3008,
     "group_key": "earthquake|us6000sqz1",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -673,14 +606,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      2987
+      3006
     ],
     "occurred_at": "2026-04-17T21:46:30.836000+00:00",
     "published_at": "2026-04-17T21:46:30.836000+00:00",
     "fetched_at": "2026-04-17T21:46:30.836000+00:00"
   },
   {
-    "id": 2991,
+    "id": 3009,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -753,14 +686,14 @@
       }
     },
     "member_event_ids": [
-      2991
+      3009
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",
     "fetched_at": "2026-03-25T01:00:00+00:00"
   },
   {
-    "id": 2992,
+    "id": 3010,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -833,7 +766,7 @@
       }
     },
     "member_event_ids": [
-      2990
+      3008
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

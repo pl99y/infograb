@@ -1,6 +1,6 @@
 [
   {
-    "id": 4369,
+    "id": 4379,
     "group_key": "volcano|4b09e13b3390bd5c539926ab40fb5dceaca209cd",
     "event_type": "volcano",
     "severity_level": "very_high",
@@ -47,14 +47,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      4371
+      4381
     ],
     "occurred_at": "2026-04-19T19:00:00+00:00",
     "published_at": "2026-04-19T19:00:00+00:00",
     "fetched_at": "2026-04-19T19:00:00+00:00"
   },
   {
-    "id": 4370,
+    "id": 4380,
     "group_key": "earthquake|us6000sred",
     "event_type": "earthquake",
     "severity_level": "high",
@@ -83,14 +83,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      4369
+      4379
     ],
     "occurred_at": "2026-04-19T17:34:47.472000+00:00",
     "published_at": "2026-04-19T17:34:47.472000+00:00",
     "fetched_at": "2026-04-19T17:34:47.472000+00:00"
   },
   {
-    "id": 4371,
+    "id": 4381,
     "group_key": "volcano|da9b6a35db56fc8bc45953e0736d1b236f347b8b",
     "event_type": "volcano",
     "severity_level": "high",
@@ -137,14 +137,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      4372
+      4382
     ],
     "occurred_at": "2026-04-19T16:54:02+00:00",
     "published_at": "2026-04-19T16:54:02+00:00",
     "fetched_at": "2026-04-19T16:54:02+00:00"
   },
   {
-    "id": 4372,
+    "id": 4382,
     "group_key": "volcano|547405e49efef1ca3688b44af4af5fc130434e3d",
     "event_type": "volcano",
     "severity_level": "high",
@@ -191,14 +191,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      4373
+      4383
     ],
     "occurred_at": "2026-04-19T16:35:00+00:00",
     "published_at": "2026-04-19T16:35:00+00:00",
     "fetched_at": "2026-04-19T16:35:00+00:00"
   },
   {
-    "id": 4373,
+    "id": 4383,
     "group_key": "volcano|49a94eeaccab932aac5a7354a5ab1db9dd3871bc",
     "event_type": "volcano",
     "severity_level": "high",
@@ -258,14 +258,14 @@
       "merged_count": 2
     },
     "member_event_ids": [
-      4374
+      4384
     ],
     "occurred_at": "2026-04-19T14:30:01+00:00",
     "published_at": "2026-04-19T14:30:01+00:00",
     "fetched_at": "2026-04-19T14:30:01+00:00"
   },
   {
-    "id": 4374,
+    "id": 4384,
     "group_key": "volcano|1638e88947c7e73ef39b65f27469a20ffe170f7a",
     "event_type": "volcano",
     "severity_level": "high",
@@ -312,69 +312,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      4375
+      4385
     ],
     "occurred_at": "2026-04-19T12:30:00+00:00",
     "published_at": "2026-04-19T12:30:00+00:00",
     "fetched_at": "2026-04-19T12:30:00+00:00"
   },
   {
-    "id": 4375,
-    "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|western_north_pacific_area|tc_04w|b870e5c9eac97956",
-    "event_type": "typhoon",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "Tropical Storm 04W (Sinlaku)",
-    "summary": "wind 55 kt (gust 70)",
-    "started_at": "2026-04-19T06:00:00+00:00",
-    "updated_at": "2026-04-19T06:00:00+00:00",
-    "location_text": "26.5N 149.5E",
-    "lat": 26.5,
-    "lon": 149.5,
-    "source_primary": "JTWC-ABPW",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://www.google.com/maps?q=26.5,149.5",
-    "official_link": "https://www.google.com/maps?q=26.5,149.5",
-    "country_code": null,
-    "payload": {
-      "item_type": "warning",
-      "source": "jtwc_abpw",
-      "source_key": "jtwc_abpw|western_north_pacific_area|tc_04w",
-      "content_hash": "b870e5c9eac97956",
-      "platform_summary": "26.5N 149.5E | wind 55 kt (gust 70)",
-      "platform_location": "26.5N 149.5E",
-      "wind": "55 kt (gust 70)",
-      "risk_48h": null,
-      "risk_7d": null,
-      "next_update": null,
-      "raw_text": "(1) AT 19APR26 0000Z, TROPICAL STORM 04W (SINLAKU) WAS LOCATED \nNEAR 26.5N 149.5E, APPROXIMATELY 455 NM EAST-NORTHEAST OF IWO TO, AND \nHAD TRACKED NORTHEASTWARD AT 16 KNOTS OVER THE PAST SIX HOURS. MAXIMUM \nSUSTAINED SURFACE WINDS WERE ESTIMATED AT 55 KNOTS GUSTING TO 70 KNOTS. \nSEE REF A (WTPN31 PGTW 190300) FOR FURTHER DETAILS.",
-      "metadata": {
-        "basin_section": "WESTERN NORTH PACIFIC AREA (180 TO MALAY PENINSULA)",
-        "storm_class": "TROPICAL STORM",
-        "storm_id": "04W",
-        "storm_name": "SINLAKU",
-        "fix_date": "19APR26",
-        "fix_time": "19APR26 0000Z",
-        "lat": 26.5,
-        "lon": 149.5,
-        "movement_text": "NORTHEASTWARD",
-        "movement_kt": 16,
-        "wind_kt": 55,
-        "gust_kt": 70,
-        "warning_reference": "WTPN31 PGTW 190300",
-        "bulletin_issue_at": "2026-04-19T06:00:00+00:00"
-      }
-    },
-    "member_event_ids": [
-      4378
-    ],
-    "occurred_at": "2026-04-19T06:00:00+00:00",
-    "published_at": "2026-04-19T06:00:00+00:00",
-    "fetched_at": "2026-04-19T06:00:00+00:00"
-  },
-  {
-    "id": 4376,
+    "id": 4385,
     "group_key": "earthquake|us6000sr9c",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -403,14 +348,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      4370
+      4380
     ],
     "occurred_at": "2026-04-19T05:35:16.689000+00:00",
     "published_at": "2026-04-19T05:35:16.689000+00:00",
     "fetched_at": "2026-04-19T05:35:16.689000+00:00"
   },
   {
-    "id": 4377,
+    "id": 4386,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -483,14 +428,69 @@
       }
     },
     "member_event_ids": [
-      4377
+      4387
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",
     "fetched_at": "2026-03-25T01:00:00+00:00"
   },
   {
-    "id": 4378,
+    "id": 4387,
+    "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|western_north_pacific_area|tc_04w|2f6c94fb0813acbf",
+    "event_type": "typhoon",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Tropical Storm 04W (Sinlaku)",
+    "summary": "wind 50 kt (gust 65)",
+    "started_at": "2026-03-19T21:00:00+00:00",
+    "updated_at": "2026-03-19T21:00:00+00:00",
+    "location_text": "28.7N 156.1E",
+    "lat": 28.7,
+    "lon": 156.1,
+    "source_primary": "JTWC-ABPW",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://www.google.com/maps?q=28.7,156.1",
+    "official_link": "https://www.google.com/maps?q=28.7,156.1",
+    "country_code": null,
+    "payload": {
+      "item_type": "warning",
+      "source": "jtwc_abpw",
+      "source_key": "jtwc_abpw|western_north_pacific_area|tc_04w",
+      "content_hash": "2f6c94fb0813acbf",
+      "platform_summary": "28.7N 156.1E | wind 50 kt (gust 65)",
+      "platform_location": "28.7N 156.1E",
+      "wind": "50 kt (gust 65)",
+      "risk_48h": null,
+      "risk_7d": null,
+      "next_update": null,
+      "raw_text": "(1) AT 19APR26 1800Z, TROPICAL STORM 04W (SINLAKU) WAS LOCATED \nNEAR 28.7N 156.1E, APPROXIMATELY 805 NM NORTHWEST OF WAKE ISLAND, AND \nHAD TRACKED EASTWARD AT 21 KNOTS OVER THE PAST SIX HOURS. MAXIMUM \nSUSTAINED SURFACE WINDS WERE ESTIMATED AT 50 KNOTS GUSTING TO 65 KNOTS. \nSEE REF A (WTPN31 PGTW 192100) FOR THE FINAL WARNING ON THIS SYSTEM.",
+      "metadata": {
+        "basin_section": "WESTERN NORTH PACIFIC AREA (180 TO MALAY PENINSULA)",
+        "storm_class": "TROPICAL STORM",
+        "storm_id": "04W",
+        "storm_name": "SINLAKU",
+        "fix_date": "19APR26",
+        "fix_time": "19APR26 1800Z",
+        "lat": 28.7,
+        "lon": 156.1,
+        "movement_text": "EASTWARD",
+        "movement_kt": 21,
+        "wind_kt": 50,
+        "gust_kt": 65,
+        "warning_reference": "WTPN31 PGTW 192100",
+        "bulletin_issue_at": "2026-03-19T21:00:00+00:00"
+      }
+    },
+    "member_event_ids": [
+      4388
+    ],
+    "occurred_at": "2026-03-19T21:00:00+00:00",
+    "published_at": "2026-03-19T21:00:00+00:00",
+    "fetched_at": "2026-03-19T21:00:00+00:00"
+  },
+  {
+    "id": 4388,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -563,7 +563,7 @@
       }
     },
     "member_event_ids": [
-      4376
+      4386
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

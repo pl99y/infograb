@@ -1,6 +1,6 @@
 [
   {
-    "id": 4207,
+    "id": 4216,
     "group_key": "volcano|1638e88947c7e73ef39b65f27469a20ffe170f7a",
     "event_type": "volcano",
     "severity_level": "high",
@@ -47,68 +47,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      4211
+      4219
     ],
     "occurred_at": "2026-04-19T12:30:00+00:00",
     "published_at": "2026-04-19T12:30:00+00:00",
     "fetched_at": "2026-04-19T12:30:00+00:00"
   },
   {
-    "id": 4208,
-    "group_key": "volcano|d93e1cbc00f84445539ac95fb21e64c8eb55bdbb",
-    "event_type": "volcano",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "Stromboli",
-    "summary": "VRP 268.74 MW · MODIS · 1.41 km",
-    "started_at": "2026-04-19T08:10:00+00:00",
-    "updated_at": "2026-04-19T08:10:00+00:00",
-    "location_text": "Stromboli",
-    "lat": null,
-    "lon": null,
-    "source_primary": "MIROVA",
-    "source_secondary": "MODIS",
-    "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=211040",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=211040",
-    "country_code": null,
-    "payload": {
-      "volcano_id": "211040",
-      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=211040",
-      "vrp_mw": 268.74,
-      "distance_km": 1.41,
-      "sensor": "MODIS",
-      "row_class": [
-        "high"
-      ],
-      "source_page": "https://www.mirovaweb.it/NRT/",
-      "sensors": [
-        "MODIS"
-      ],
-      "reports": [
-        {
-          "volcano_id": "211040",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=211040",
-          "vrp_mw": 268.74,
-          "distance_km": 1.41,
-          "sensor": "MODIS",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        }
-      ],
-      "merged_count": 1
-    },
-    "member_event_ids": [
-      4212
-    ],
-    "occurred_at": "2026-04-19T08:10:00+00:00",
-    "published_at": "2026-04-19T08:10:00+00:00",
-    "fetched_at": "2026-04-19T08:10:00+00:00"
-  },
-  {
-    "id": 4209,
+    "id": 4217,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|western_north_pacific_area|tc_04w|b870e5c9eac97956",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -156,14 +102,14 @@
       }
     },
     "member_event_ids": [
-      4215
+      4222
     ],
     "occurred_at": "2026-04-19T06:00:00+00:00",
     "published_at": "2026-04-19T06:00:00+00:00",
     "fetched_at": "2026-04-19T06:00:00+00:00"
   },
   {
-    "id": 4210,
+    "id": 4218,
     "group_key": "earthquake|us6000sr9c",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -192,14 +138,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      4207
+      4216
     ],
     "occurred_at": "2026-04-19T05:35:16.689000+00:00",
     "published_at": "2026-04-19T05:35:16.689000+00:00",
     "fetched_at": "2026-04-19T05:35:16.689000+00:00"
   },
   {
-    "id": 4211,
+    "id": 4219,
     "group_key": "earthquake|us6000sr5z",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -228,14 +174,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      4208
+      4217
     ],
     "occurred_at": "2026-04-18T20:06:51.170000+00:00",
     "published_at": "2026-04-18T20:06:51.170000+00:00",
     "fetched_at": "2026-04-18T20:06:51.170000+00:00"
   },
   {
-    "id": 4212,
+    "id": 4220,
     "group_key": "earthquake|us6000sr5n",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -264,50 +210,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      4209
+      4218
     ],
     "occurred_at": "2026-04-18T18:29:58.948000+00:00",
     "published_at": "2026-04-18T18:29:58.948000+00:00",
     "fetched_at": "2026-04-18T18:29:58.948000+00:00"
   },
   {
-    "id": 4213,
-    "group_key": "earthquake|us6000sr4y",
-    "event_type": "earthquake",
-    "severity_level": "moderate",
-    "severity_color": "moderate",
-    "title": "M 5.3 - south of the Kermadec Islands",
-    "summary": "south of the Kermadec Islands",
-    "started_at": "2026-04-18T16:03:48.162000+00:00",
-    "updated_at": "2026-04-18T16:23:47.040000+00:00",
-    "location_text": "south of the Kermadec Islands",
-    "lat": -32.0646,
-    "lon": -178.1403,
-    "source_primary": "USGS",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sr4y",
-    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sr4y",
-    "country_code": null,
-    "payload": {
-      "mag": 5.3,
-      "depth_km": 34.735,
-      "place": "south of the Kermadec Islands",
-      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000sr4y.geojson",
-      "alert": null,
-      "sig": 432,
-      "tsunami": 0,
-      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
-    },
-    "member_event_ids": [
-      4210
-    ],
-    "occurred_at": "2026-04-18T16:03:48.162000+00:00",
-    "published_at": "2026-04-18T16:03:48.162000+00:00",
-    "fetched_at": "2026-04-18T16:03:48.162000+00:00"
-  },
-  {
-    "id": 4214,
+    "id": 4221,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -380,14 +290,14 @@
       }
     },
     "member_event_ids": [
-      4214
+      4221
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",
     "fetched_at": "2026-03-25T01:00:00+00:00"
   },
   {
-    "id": 4215,
+    "id": 4222,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -460,7 +370,7 @@
       }
     },
     "member_event_ids": [
-      4213
+      4220
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

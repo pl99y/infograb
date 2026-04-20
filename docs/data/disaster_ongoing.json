@@ -1,6 +1,6 @@
 [
   {
-    "id": 4549,
+    "id": 4561,
     "group_key": "earthquake|us6000srg6",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -29,14 +29,68 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      4549
+      4561
     ],
     "occurred_at": "2026-04-19T23:52:30+00:00",
     "published_at": "2026-04-19T23:52:30+00:00",
     "fetched_at": "2026-04-19T23:52:30+00:00"
   },
   {
-    "id": 4550,
+    "id": 4562,
+    "group_key": "volcano|6b846753dcd127e25f6fcf8e8968b64f29dcab69",
+    "event_type": "volcano",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Krasheninnikov",
+    "summary": "VRP 162.62 MW · MODIS · 3.61 km",
+    "started_at": "2026-04-19T22:55:00+00:00",
+    "updated_at": "2026-04-19T22:55:00+00:00",
+    "location_text": "Krasheninnikov",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "MODIS",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=300190",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=300190",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "300190",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=300190",
+      "vrp_mw": 162.62,
+      "distance_km": 3.61,
+      "sensor": "MODIS",
+      "row_class": [
+        "high"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "MODIS"
+      ],
+      "reports": [
+        {
+          "volcano_id": "300190",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=300190",
+          "vrp_mw": 162.62,
+          "distance_km": 3.61,
+          "sensor": "MODIS",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 1
+    },
+    "member_event_ids": [
+      4564
+    ],
+    "occurred_at": "2026-04-19T22:55:00+00:00",
+    "published_at": "2026-04-19T22:55:00+00:00",
+    "fetched_at": "2026-04-19T22:55:00+00:00"
+  },
+  {
+    "id": 4563,
     "group_key": "volcano|3afd5b0fb747857a115abcef999acd829c08ebfe",
     "event_type": "volcano",
     "severity_level": "high",
@@ -83,14 +137,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      4552
+      4565
     ],
     "occurred_at": "2026-04-19T21:35:00+00:00",
     "published_at": "2026-04-19T21:35:00+00:00",
     "fetched_at": "2026-04-19T21:35:00+00:00"
   },
   {
-    "id": 4551,
+    "id": 4564,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|western_north_pacific_area|tc_04w|2f6c94fb0813acbf",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -138,14 +192,14 @@
       }
     },
     "member_event_ids": [
-      4560
+      4573
     ],
     "occurred_at": "2026-04-19T21:00:00+00:00",
     "published_at": "2026-04-19T21:00:00+00:00",
     "fetched_at": "2026-04-19T21:00:00+00:00"
   },
   {
-    "id": 4552,
+    "id": 4565,
     "group_key": "volcano|4b09e13b3390bd5c539926ab40fb5dceaca209cd",
     "event_type": "volcano",
     "severity_level": "very_high",
@@ -192,14 +246,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      4553
+      4566
     ],
     "occurred_at": "2026-04-19T19:00:00+00:00",
     "published_at": "2026-04-19T19:00:00+00:00",
     "fetched_at": "2026-04-19T19:00:00+00:00"
   },
   {
-    "id": 4553,
+    "id": 4566,
     "group_key": "volcano|292a0e1913e24fea3fae95b42d2ea664e04ddc1a",
     "event_type": "volcano",
     "severity_level": "high",
@@ -259,14 +313,14 @@
       "merged_count": 2
     },
     "member_event_ids": [
-      4554
+      4567
     ],
     "occurred_at": "2026-04-19T17:48:01+00:00",
     "published_at": "2026-04-19T17:48:01+00:00",
     "fetched_at": "2026-04-19T17:48:01+00:00"
   },
   {
-    "id": 4554,
+    "id": 4567,
     "group_key": "earthquake|us6000sred",
     "event_type": "earthquake",
     "severity_level": "high",
@@ -295,30 +349,30 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      4550
+      4562
     ],
     "occurred_at": "2026-04-19T17:34:47.472000+00:00",
     "published_at": "2026-04-19T17:34:47.472000+00:00",
     "fetched_at": "2026-04-19T17:34:47.472000+00:00"
   },
   {
-    "id": 4555,
+    "id": 4568,
     "group_key": "volcano|8f255799589a966b28083ec4424b4834246e3b3e",
     "event_type": "volcano",
     "severity_level": "high",
     "severity_color": "high",
     "title": "Krasheninnikov",
-    "summary": "VRP 126.71 MW · VIIRS375 / VIIRS · 4.04 km",
+    "summary": "VRP 126.71 MW · VIIRS / VIIRS375 · 4.04 km",
     "started_at": "2026-04-19T17:12:00+00:00",
     "updated_at": "2026-04-19T17:12:00+00:00",
     "location_text": "Krasheninnikov",
     "lat": null,
     "lon": null,
     "source_primary": "MIROVA",
-    "source_secondary": "VIIRS375 / VIIRS",
+    "source_secondary": "VIIRS / VIIRS375",
     "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=300190",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=300190",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=300190",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=300190",
     "country_code": null,
     "payload": {
       "volcano_id": "300190",
@@ -327,26 +381,15 @@
       "distance_km": 4.8,
       "sensor": "VIIRS375",
       "row_class": [
-        "high",
-        "moderate"
+        "moderate",
+        "high"
       ],
       "source_page": "https://www.mirovaweb.it/NRT/",
       "sensors": [
-        "VIIRS375",
-        "VIIRS"
+        "VIIRS",
+        "VIIRS375"
       ],
       "reports": [
-        {
-          "volcano_id": "300190",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=300190",
-          "vrp_mw": 126.71,
-          "distance_km": 4.8,
-          "sensor": "VIIRS375",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        },
         {
           "volcano_id": "300190",
           "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=300190",
@@ -357,35 +400,46 @@
             "moderate"
           ],
           "source_page": "https://www.mirovaweb.it/NRT/"
+        },
+        {
+          "volcano_id": "300190",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=300190",
+          "vrp_mw": 126.71,
+          "distance_km": 4.8,
+          "sensor": "VIIRS375",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
         }
       ],
       "merged_count": 2
     },
     "member_event_ids": [
-      4555
+      4568
     ],
     "occurred_at": "2026-04-19T17:12:00+00:00",
     "published_at": "2026-04-19T17:12:00+00:00",
     "fetched_at": "2026-04-19T17:12:00+00:00"
   },
   {
-    "id": 4556,
+    "id": 4569,
     "group_key": "volcano|49a94eeaccab932aac5a7354a5ab1db9dd3871bc",
     "event_type": "volcano",
     "severity_level": "high",
     "severity_color": "high",
     "title": "Aoba",
-    "summary": "VRP 104.57 MW · VIIRS / VIIRS375 · 2.37 km",
+    "summary": "VRP 104.57 MW · VIIRS375 / VIIRS · 2.37 km",
     "started_at": "2026-04-19T14:30:01+00:00",
     "updated_at": "2026-04-19T14:30:01+00:00",
     "location_text": "Aoba",
     "lat": null,
     "lon": null,
     "source_primary": "MIROVA",
-    "source_secondary": "VIIRS / VIIRS375",
+    "source_secondary": "VIIRS375 / VIIRS",
     "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=257030",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=257030",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=257030",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=257030",
     "country_code": null,
     "payload": {
       "volcano_id": "257030",
@@ -394,26 +448,15 @@
       "distance_km": 2.37,
       "sensor": "VIIRS",
       "row_class": [
-        "high",
-        "moderate"
+        "moderate",
+        "high"
       ],
       "source_page": "https://www.mirovaweb.it/NRT/",
       "sensors": [
-        "VIIRS",
-        "VIIRS375"
+        "VIIRS375",
+        "VIIRS"
       ],
       "reports": [
-        {
-          "volcano_id": "257030",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=257030",
-          "vrp_mw": 104.57,
-          "distance_km": 2.37,
-          "sensor": "VIIRS",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        },
         {
           "volcano_id": "257030",
           "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=257030",
@@ -424,19 +467,30 @@
             "moderate"
           ],
           "source_page": "https://www.mirovaweb.it/NRT/"
+        },
+        {
+          "volcano_id": "257030",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=257030",
+          "vrp_mw": 104.57,
+          "distance_km": 2.37,
+          "sensor": "VIIRS",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
         }
       ],
       "merged_count": 2
     },
     "member_event_ids": [
-      4556
+      4569
     ],
     "occurred_at": "2026-04-19T14:30:01+00:00",
     "published_at": "2026-04-19T14:30:01+00:00",
     "fetched_at": "2026-04-19T14:30:01+00:00"
   },
   {
-    "id": 4557,
+    "id": 4570,
     "group_key": "volcano|1638e88947c7e73ef39b65f27469a20ffe170f7a",
     "event_type": "volcano",
     "severity_level": "high",
@@ -483,14 +537,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      4557
+      4570
     ],
     "occurred_at": "2026-04-19T12:30:00+00:00",
     "published_at": "2026-04-19T12:30:00+00:00",
     "fetched_at": "2026-04-19T12:30:00+00:00"
   },
   {
-    "id": 4558,
+    "id": 4571,
     "group_key": "earthquake|us6000sr9c",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -519,14 +573,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      4551
+      4563
     ],
     "occurred_at": "2026-04-19T05:35:16.689000+00:00",
     "published_at": "2026-04-19T05:35:16.689000+00:00",
     "fetched_at": "2026-04-19T05:35:16.689000+00:00"
   },
   {
-    "id": 4559,
+    "id": 4572,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -599,14 +653,14 @@
       }
     },
     "member_event_ids": [
-      4559
+      4572
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",
     "fetched_at": "2026-03-25T01:00:00+00:00"
   },
   {
-    "id": 4560,
+    "id": 4573,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -679,7 +733,7 @@
       }
     },
     "member_event_ids": [
-      4558
+      4571
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

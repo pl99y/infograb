@@ -1,27 +1,27 @@
 [
   {
-    "id": 2917,
+    "id": 2923,
     "quote_key": "wti",
     "name": "WTI Crude",
-    "price": 86.49,
+    "price": 86.33,
     "unit": "USD/bbl",
-    "change": -0.93,
-    "change_percent": -1.06,
+    "change": -1.09,
+    "change_percent": -1.25,
     "timestamp_text": null,
     "source_name": "OilPrice.com",
     "source_url": "https://oilprice.com/oil-price-charts/",
     "provider_used": "oilprice_charts",
     "is_delayed": 1,
     "delay_note": "10-Minute Delay",
-    "fetched_at": "2026-04-20T23:32:05.390523+00:00",
-    "created_at": "2026-04-20 23:32:05",
+    "fetched_at": "2026-04-20T23:47:05.986988+00:00",
+    "created_at": "2026-04-20 23:47:05",
     "extra": {
       "matched_name": "WTI Crude",
       "parsed_from": "oilprice_table_row"
     }
   },
   {
-    "id": 2918,
+    "id": 2924,
     "quote_key": "brent",
     "name": "Brent Crude",
     "price": 95.48,
@@ -34,15 +34,15 @@
     "provider_used": "oilprice_charts",
     "is_delayed": 1,
     "delay_note": "1-Hour Delay",
-    "fetched_at": "2026-04-20T23:32:05.390523+00:00",
-    "created_at": "2026-04-20 23:32:05",
+    "fetched_at": "2026-04-20T23:47:05.986988+00:00",
+    "created_at": "2026-04-20 23:47:05",
     "extra": {
       "matched_name": "Brent Crude",
       "parsed_from": "oilprice_table_row"
     }
   },
   {
-    "id": 2919,
+    "id": 2925,
     "quote_key": "murban",
     "name": "Murban Crude",
     "price": 93.04,
@@ -55,57 +55,57 @@
     "provider_used": "oilprice_charts",
     "is_delayed": 1,
     "delay_note": "16-Minute Delay",
-    "fetched_at": "2026-04-20T23:32:05.390523+00:00",
-    "created_at": "2026-04-20 23:32:05",
+    "fetched_at": "2026-04-20T23:47:05.986988+00:00",
+    "created_at": "2026-04-20 23:47:06",
     "extra": {
       "matched_name": "Murban Crude",
       "parsed_from": "oilprice_table_row"
     }
   },
   {
-    "id": 2920,
+    "id": 2926,
     "quote_key": "natural_gas",
     "name": "Natural Gas",
-    "price": 2.665,
+    "price": 2.666,
     "unit": "USD/MMBtu",
-    "change": -0.024,
-    "change_percent": -0.89,
+    "change": -0.023,
+    "change_percent": -0.86,
     "timestamp_text": null,
     "source_name": "OilPrice.com",
     "source_url": "https://oilprice.com/oil-price-charts/",
     "provider_used": "oilprice_charts",
     "is_delayed": 1,
-    "delay_note": "11-Minute Delay",
-    "fetched_at": "2026-04-20T23:32:05.390523+00:00",
-    "created_at": "2026-04-20 23:32:05",
+    "delay_note": "10-Minute Delay",
+    "fetched_at": "2026-04-20T23:47:05.986988+00:00",
+    "created_at": "2026-04-20 23:47:06",
     "extra": {
       "matched_name": "Natural Gas",
       "parsed_from": "oilprice_table_row"
     }
   },
   {
-    "id": 2921,
+    "id": 2927,
     "quote_key": "gasoline",
     "name": "Gasoline (RBOB)",
-    "price": 3.0944,
+    "price": 3.0916,
     "unit": "USD/gal",
-    "change": -0.022,
-    "change_percent": -0.72,
+    "change": -0.025,
+    "change_percent": -0.81,
     "timestamp_text": null,
     "source_name": "OilPrice.com",
     "source_url": "https://oilprice.com/oil-price-charts/",
     "provider_used": "oilprice_charts",
     "is_delayed": 1,
-    "delay_note": "13-Minute Delay",
-    "fetched_at": "2026-04-20T23:32:05.390523+00:00",
-    "created_at": "2026-04-20 23:32:05",
+    "delay_note": "12-Minute Delay",
+    "fetched_at": "2026-04-20T23:47:05.986988+00:00",
+    "created_at": "2026-04-20 23:47:06",
     "extra": {
       "matched_name": "Gasoline",
       "parsed_from": "oilprice_table_row"
     }
   },
   {
-    "id": 2922,
+    "id": 2928,
     "quote_key": "china",
     "name": "China Crude Oil Futures (INE SC)",
     "price": 616.5,
@@ -118,8 +118,8 @@
     "provider_used": "sina_hq_direct",
     "is_delayed": 1,
     "delay_note": "Parsed from direct Sina HQ quote response.",
-    "fetched_at": "2026-04-20T23:32:06.012092+00:00",
-    "created_at": "2026-04-20 23:32:06",
+    "fetched_at": "2026-04-20T23:47:06.857267+00:00",
+    "created_at": "2026-04-20 23:47:06",
     "extra": {
       "parsed_from": "sina_hq_direct",
       "raw_parts": [

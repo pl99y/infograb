@@ -1,6 +1,6 @@
 [
   {
-    "id": 4968,
+    "id": 4982,
     "group_key": "earthquake|us6000sri7",
     "event_type": "earthquake",
     "severity_level": "critical",
@@ -8,7 +8,7 @@
     "title": "M 7.4 - 100 km ENE of Miyako, Japan",
     "summary": "100 km ENE of Miyako, Japan",
     "started_at": "2026-04-20T07:53:00.185000+00:00",
-    "updated_at": "2026-04-20T08:17:00.141000+00:00",
+    "updated_at": "2026-04-20T08:28:52.430000+00:00",
     "location_text": "100 km ENE of Miyako, Japan",
     "lat": 39.9532,
     "lon": 143.0462,
@@ -23,20 +23,20 @@
       "depth_km": 35.0,
       "place": "100 km ENE of Miyako, Japan",
       "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000sri7.geojson",
-      "alert": null,
-      "sig": 855,
+      "alert": "green",
+      "sig": 862,
       "tsunami": 1,
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      4968
+      4982
     ],
     "occurred_at": "2026-04-20T07:53:00.185000+00:00",
     "published_at": "2026-04-20T07:53:00.185000+00:00",
     "fetched_at": "2026-04-20T07:53:00.185000+00:00"
   },
   {
-    "id": 4969,
+    "id": 4983,
     "group_key": "tsunami|802fd5bebce67ce7840e89ad66a6c52a18aea487",
     "event_type": "tsunami",
     "severity_level": "critical",
@@ -71,14 +71,14 @@
       "raw_block": "Center (ITIC) ITIC Caribbean Office Tsunami Research National Tsunami Hazard Mitigation Program UNESCO-IOC Tsunami Programme Tsunami Warning Centers About the Warning Centers Warning Guides Canada/US except Hawaii American Samoa Guam/CNMI Puerto Rico/Virgin Islands International Pacific International Caribbean Visit a Warning Center Follow Us! National Tsunami Warning Center Twitter Facebook Atom CAP File Pacific Tsunami Warning Center Twitter Facebook YouTube Atom CAP File Please enable JavaScript. This page needs Javascript to function properly. Event Magnitude 7.4 (Mwp) Depth 10 (kilometers) Lat: 39.881 Lon: 143.25 Origin Time: 2026-04-20T07:52:56Z view bulletin Information Tsunami Threat Earthquake : Magnitude: 7.4 Origin Time: Depth: 6 mi. Lat: 39.9° N Lon: 143.3° E Location: OFF THE EAST COAST OF HONSHU JAPAN Note: Times are local to your browser, unless otherwise indicated See the map or table below for more information"
     },
     "member_event_ids": [
-      4980
+      4994
     ],
     "occurred_at": "2026-04-20T07:52:56+00:00",
     "published_at": "2026-04-20T07:52:56+00:00",
     "fetched_at": "2026-04-20T07:52:56+00:00"
   },
   {
-    "id": 4970,
+    "id": 4984,
     "group_key": "earthquake|us6000srhw",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -107,14 +107,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      4969
+      4983
     ],
     "occurred_at": "2026-04-20T07:04:23.455000+00:00",
     "published_at": "2026-04-20T07:04:23.455000+00:00",
     "fetched_at": "2026-04-20T07:04:23.455000+00:00"
   },
   {
-    "id": 4971,
+    "id": 4985,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|western_north_pacific_area|tc_04w|2f6c94fb0813acbf",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -162,14 +162,14 @@
       }
     },
     "member_event_ids": [
-      4981
+      4995
     ],
     "occurred_at": "2026-04-20T06:00:00+00:00",
     "published_at": "2026-04-20T06:00:00+00:00",
     "fetched_at": "2026-04-20T06:00:00+00:00"
   },
   {
-    "id": 4972,
+    "id": 4986,
     "group_key": "earthquake|us6000srhi",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -198,14 +198,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      4970
+      4984
     ],
     "occurred_at": "2026-04-20T05:19:35.993000+00:00",
     "published_at": "2026-04-20T05:19:35.993000+00:00",
     "fetched_at": "2026-04-20T05:19:35.993000+00:00"
   },
   {
-    "id": 4973,
+    "id": 4987,
     "group_key": "earthquake|us6000srgj",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -234,14 +234,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      4971
+      4985
     ],
     "occurred_at": "2026-04-20T01:21:17.359000+00:00",
     "published_at": "2026-04-20T01:21:17.359000+00:00",
     "fetched_at": "2026-04-20T01:21:17.359000+00:00"
   },
   {
-    "id": 4974,
+    "id": 4988,
     "group_key": "volcano|7751412e237293ee30aed96e3ac6d9112ae146e0",
     "event_type": "volcano",
     "severity_level": "high",
@@ -288,14 +288,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      4974
+      4988
     ],
     "occurred_at": "2026-04-20T01:00:00+00:00",
     "published_at": "2026-04-20T01:00:00+00:00",
     "fetched_at": "2026-04-20T01:00:00+00:00"
   },
   {
-    "id": 4975,
+    "id": 4989,
     "group_key": "volcano|9b785663249d2877e7d07ef5c9b7c2278f15ca3c",
     "event_type": "volcano",
     "severity_level": "high",
@@ -342,14 +342,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      4975
+      4989
     ],
     "occurred_at": "2026-04-20T00:45:00+00:00",
     "published_at": "2026-04-20T00:45:00+00:00",
     "fetched_at": "2026-04-20T00:45:00+00:00"
   },
   {
-    "id": 4976,
+    "id": 4990,
     "group_key": "volcano|16e3130625efb6cbd5b44ee334db8ced91777cfe",
     "event_type": "volcano",
     "severity_level": "high",
@@ -408,14 +408,14 @@
       "merged_count": 2
     },
     "member_event_ids": [
-      4976
+      4990
     ],
     "occurred_at": "2026-04-20T00:18:00+00:00",
     "published_at": "2026-04-20T00:18:00+00:00",
     "fetched_at": "2026-04-20T00:18:00+00:00"
   },
   {
-    "id": 4977,
+    "id": 4991,
     "group_key": "earthquake|us6000srg6",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -444,14 +444,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      4972
+      4986
     ],
     "occurred_at": "2026-04-19T23:52:30+00:00",
     "published_at": "2026-04-19T23:52:30+00:00",
     "fetched_at": "2026-04-19T23:52:30+00:00"
   },
   {
-    "id": 4978,
+    "id": 4992,
     "group_key": "volcano|3afd5b0fb747857a115abcef999acd829c08ebfe",
     "event_type": "volcano",
     "severity_level": "high",
@@ -498,14 +498,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      4977
+      4991
     ],
     "occurred_at": "2026-04-19T21:35:00+00:00",
     "published_at": "2026-04-19T21:35:00+00:00",
     "fetched_at": "2026-04-19T21:35:00+00:00"
   },
   {
-    "id": 4979,
+    "id": 4993,
     "group_key": "earthquake|us6000sred",
     "event_type": "earthquake",
     "severity_level": "high",
@@ -534,14 +534,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      4973
+      4987
     ],
     "occurred_at": "2026-04-19T17:34:47.472000+00:00",
     "published_at": "2026-04-19T17:34:47.472000+00:00",
     "fetched_at": "2026-04-19T17:34:47.472000+00:00"
   },
   {
-    "id": 4980,
+    "id": 4994,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -614,14 +614,14 @@
       }
     },
     "member_event_ids": [
-      4979
+      4993
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",
     "fetched_at": "2026-03-25T01:00:00+00:00"
   },
   {
-    "id": 4981,
+    "id": 4995,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -694,7 +694,7 @@
       }
     },
     "member_event_ids": [
-      4978
+      4992
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

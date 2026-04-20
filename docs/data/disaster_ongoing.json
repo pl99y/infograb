@@ -1,6 +1,6 @@
 [
   {
-    "id": 5024,
+    "id": 5038,
     "group_key": "earthquake|us6000srih",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -8,7 +8,7 @@
     "title": "M 5.6 - 113 km E of Miyako, Japan",
     "summary": "113 km E of Miyako, Japan",
     "started_at": "2026-04-20T08:32:46.679000+00:00",
-    "updated_at": "2026-04-20T08:55:40.020000+00:00",
+    "updated_at": "2026-04-20T09:19:35.977000+00:00",
     "location_text": "113 km E of Miyako, Japan",
     "lat": 39.6393,
     "lon": 143.2591,
@@ -24,19 +24,19 @@
       "place": "113 km E of Miyako, Japan",
       "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000srih.geojson",
       "alert": "green",
-      "sig": 482,
+      "sig": 483,
       "tsunami": 0,
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      5024
+      5038
     ],
     "occurred_at": "2026-04-20T08:32:46.679000+00:00",
     "published_at": "2026-04-20T08:32:46.679000+00:00",
     "fetched_at": "2026-04-20T08:32:46.679000+00:00"
   },
   {
-    "id": 5025,
+    "id": 5039,
     "group_key": "earthquake|us6000sri7",
     "event_type": "earthquake",
     "severity_level": "critical",
@@ -44,7 +44,7 @@
     "title": "M 7.4 - 100 km ENE of Miyako, Japan",
     "summary": "100 km ENE of Miyako, Japan",
     "started_at": "2026-04-20T07:53:00.185000+00:00",
-    "updated_at": "2026-04-20T09:15:59.039000+00:00",
+    "updated_at": "2026-04-20T09:27:47.795000+00:00",
     "location_text": "100 km ENE of Miyako, Japan",
     "lat": 39.9532,
     "lon": 143.0462,
@@ -60,61 +60,19 @@
       "place": "100 km ENE of Miyako, Japan",
       "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000sri7.geojson",
       "alert": "green",
-      "sig": 885,
+      "sig": 888,
       "tsunami": 1,
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      5025
+      5039
     ],
     "occurred_at": "2026-04-20T07:53:00.185000+00:00",
     "published_at": "2026-04-20T07:53:00.185000+00:00",
     "fetched_at": "2026-04-20T07:53:00.185000+00:00"
   },
   {
-    "id": 5026,
-    "group_key": "tsunami|802fd5bebce67ce7840e89ad66a6c52a18aea487",
-    "event_type": "tsunami",
-    "severity_level": "critical",
-    "severity_color": "critical",
-    "title": "Tsunami Warning Centers",
-    "summary": "About the Warning Centers",
-    "started_at": "2026-04-20T07:52:56+00:00",
-    "updated_at": "2026-04-20T07:52:56+00:00",
-    "location_text": "OFF THE EAST COAST OF HONSHU JAPAN",
-    "lat": 39.9,
-    "lon": 143.3,
-    "source_primary": "Tsunami.gov",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://www.tsunami.gov/events/PHEB/2026/04/20/26110000/2/WEHW42//WEHW42.txt",
-    "official_link": "https://www.tsunami.gov/events/PHEB/2026/04/20/26110000/2/WEHW42//WEHW42.txt",
-    "country_code": null,
-    "payload": {
-      "message_level": "warning",
-      "headline": "Tsunami Warning Centers",
-      "description": "About the Warning Centers",
-      "source_page": "https://www.tsunami.gov/",
-      "bulletin_url": "https://www.tsunami.gov/events/PHEB/2026/04/20/26110000/2/WEHW42//WEHW42.txt",
-      "related_earthquake": {
-        "mag": 7.4,
-        "origin_time": "2026-04-20T07:52:56+00:00",
-        "depth": 6.0,
-        "lat": 39.9,
-        "lon": 143.3,
-        "location": "OFF THE EAST COAST OF HONSHU JAPAN"
-      },
-      "raw_block": "Center (ITIC) ITIC Caribbean Office Tsunami Research National Tsunami Hazard Mitigation Program UNESCO-IOC Tsunami Programme Tsunami Warning Centers About the Warning Centers Warning Guides Canada/US except Hawaii American Samoa Guam/CNMI Puerto Rico/Virgin Islands International Pacific International Caribbean Visit a Warning Center Follow Us! National Tsunami Warning Center Twitter Facebook Atom CAP File Pacific Tsunami Warning Center Twitter Facebook YouTube Atom CAP File Please enable JavaScript. This page needs Javascript to function properly. Event Magnitude 7.4 (Mwp) Depth 10 (kilometers) Lat: 39.881 Lon: 143.25 Origin Time: 2026-04-20T07:52:56Z view bulletin Information <![CDATA[ ...TSUNAMI INFORMATION STATEMENT... ]]> Tsunami Threat Earthquake : Magnitude: 7.4 Origin Time: Depth: 6 mi. Lat: 39.9° N Lon: 143.3° E Location: OFF THE EAST COAST OF HONSHU JAPAN Note: Times are local to your browser, unless otherwise indicated See the map or table below for more information"
-    },
-    "member_event_ids": [
-      5036
-    ],
-    "occurred_at": "2026-04-20T07:52:56+00:00",
-    "published_at": "2026-04-20T07:52:56+00:00",
-    "fetched_at": "2026-04-20T07:52:56+00:00"
-  },
-  {
-    "id": 5027,
+    "id": 5040,
     "group_key": "earthquake|us6000srhw",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -143,14 +101,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      5026
+      5040
     ],
     "occurred_at": "2026-04-20T07:04:23.455000+00:00",
     "published_at": "2026-04-20T07:04:23.455000+00:00",
     "fetched_at": "2026-04-20T07:04:23.455000+00:00"
   },
   {
-    "id": 5028,
+    "id": 5041,
     "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|western_north_pacific_area|tc_04w|2f6c94fb0813acbf",
     "event_type": "typhoon",
     "severity_level": "high",
@@ -198,14 +156,14 @@
       }
     },
     "member_event_ids": [
-      5037
+      5050
     ],
     "occurred_at": "2026-04-20T06:00:00+00:00",
     "published_at": "2026-04-20T06:00:00+00:00",
     "fetched_at": "2026-04-20T06:00:00+00:00"
   },
   {
-    "id": 5029,
+    "id": 5042,
     "group_key": "earthquake|us6000srhi",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -234,14 +192,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      5027
+      5041
     ],
     "occurred_at": "2026-04-20T05:19:35.993000+00:00",
     "published_at": "2026-04-20T05:19:35.993000+00:00",
     "fetched_at": "2026-04-20T05:19:35.993000+00:00"
   },
   {
-    "id": 5030,
+    "id": 5043,
     "group_key": "earthquake|us6000srgj",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -270,14 +228,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      5028
+      5042
     ],
     "occurred_at": "2026-04-20T01:21:17.359000+00:00",
     "published_at": "2026-04-20T01:21:17.359000+00:00",
     "fetched_at": "2026-04-20T01:21:17.359000+00:00"
   },
   {
-    "id": 5031,
+    "id": 5044,
     "group_key": "volcano|7751412e237293ee30aed96e3ac6d9112ae146e0",
     "event_type": "volcano",
     "severity_level": "high",
@@ -324,30 +282,30 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      5031
+      5045
     ],
     "occurred_at": "2026-04-20T01:00:00+00:00",
     "published_at": "2026-04-20T01:00:00+00:00",
     "fetched_at": "2026-04-20T01:00:00+00:00"
   },
   {
-    "id": 5032,
+    "id": 5045,
     "group_key": "volcano|16e3130625efb6cbd5b44ee334db8ced91777cfe",
     "event_type": "volcano",
     "severity_level": "high",
     "severity_color": "high",
     "title": "Nyamuragira",
-    "summary": "VRP 119.00 MW · VIIRS / VIIRS375 · 3.09 km",
+    "summary": "VRP 119.00 MW · VIIRS375 / VIIRS · 3.09 km",
     "started_at": "2026-04-20T00:18:00+00:00",
     "updated_at": "2026-04-20T00:18:00+00:00",
     "location_text": "Nyamuragira",
     "lat": null,
     "lon": null,
     "source_primary": "MIROVA",
-    "source_secondary": "VIIRS / VIIRS375",
+    "source_secondary": "VIIRS375 / VIIRS",
     "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
     "country_code": null,
     "payload": {
       "volcano_id": "223020",
@@ -360,21 +318,10 @@
       ],
       "source_page": "https://www.mirovaweb.it/NRT/",
       "sensors": [
-        "VIIRS",
-        "VIIRS375"
+        "VIIRS375",
+        "VIIRS"
       ],
       "reports": [
-        {
-          "volcano_id": "223020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
-          "vrp_mw": 103.75,
-          "distance_km": 3.09,
-          "sensor": "VIIRS",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        },
         {
           "volcano_id": "223020",
           "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
@@ -385,19 +332,30 @@
             "high"
           ],
           "source_page": "https://www.mirovaweb.it/NRT/"
+        },
+        {
+          "volcano_id": "223020",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
+          "vrp_mw": 103.75,
+          "distance_km": 3.09,
+          "sensor": "VIIRS",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
         }
       ],
       "merged_count": 2
     },
     "member_event_ids": [
-      5032
+      5046
     ],
     "occurred_at": "2026-04-20T00:18:00+00:00",
     "published_at": "2026-04-20T00:18:00+00:00",
     "fetched_at": "2026-04-20T00:18:00+00:00"
   },
   {
-    "id": 5033,
+    "id": 5046,
     "group_key": "earthquake|us6000srg6",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -426,14 +384,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      5029
+      5043
     ],
     "occurred_at": "2026-04-19T23:52:30+00:00",
     "published_at": "2026-04-19T23:52:30+00:00",
     "fetched_at": "2026-04-19T23:52:30+00:00"
   },
   {
-    "id": 5034,
+    "id": 5047,
     "group_key": "volcano|3afd5b0fb747857a115abcef999acd829c08ebfe",
     "event_type": "volcano",
     "severity_level": "high",
@@ -480,14 +438,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      5033
+      5047
     ],
     "occurred_at": "2026-04-19T21:35:00+00:00",
     "published_at": "2026-04-19T21:35:00+00:00",
     "fetched_at": "2026-04-19T21:35:00+00:00"
   },
   {
-    "id": 5035,
+    "id": 5048,
     "group_key": "earthquake|us6000sred",
     "event_type": "earthquake",
     "severity_level": "high",
@@ -516,14 +474,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      5030
+      5044
     ],
     "occurred_at": "2026-04-19T17:34:47.472000+00:00",
     "published_at": "2026-04-19T17:34:47.472000+00:00",
     "fetched_at": "2026-04-19T17:34:47.472000+00:00"
   },
   {
-    "id": 5036,
+    "id": 5049,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -596,14 +554,14 @@
       }
     },
     "member_event_ids": [
-      5035
+      5049
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",
     "fetched_at": "2026-03-25T01:00:00+00:00"
   },
   {
-    "id": 5037,
+    "id": 5050,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -676,7 +634,7 @@
       }
     },
     "member_event_ids": [
-      5034
+      5048
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

@@ -1,6 +1,42 @@
 [
   {
-    "id": 4831,
+    "id": 4844,
+    "group_key": "earthquake|us6000srhi",
+    "event_type": "earthquake",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "M 5.2 - 122 km NW of Maubara, Timor Leste",
+    "summary": "122 km NW of Maubara, Timor Leste",
+    "started_at": "2026-04-20T05:19:35.993000+00:00",
+    "updated_at": "2026-04-20T05:33:05.040000+00:00",
+    "location_text": "122 km NW of Maubara, Timor Leste",
+    "lat": -7.9677,
+    "lon": 124.3047,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000srhi",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000srhi",
+    "country_code": null,
+    "payload": {
+      "mag": 5.2,
+      "depth_km": 183.138,
+      "place": "122 km NW of Maubara, Timor Leste",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000srhi.geojson",
+      "alert": null,
+      "sig": 416,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      4844
+    ],
+    "occurred_at": "2026-04-20T05:19:35.993000+00:00",
+    "published_at": "2026-04-20T05:19:35.993000+00:00",
+    "fetched_at": "2026-04-20T05:19:35.993000+00:00"
+  },
+  {
+    "id": 4845,
     "group_key": "earthquake|us6000srgj",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -29,14 +65,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      4831
+      4845
     ],
     "occurred_at": "2026-04-20T01:21:17.359000+00:00",
     "published_at": "2026-04-20T01:21:17.359000+00:00",
     "fetched_at": "2026-04-20T01:21:17.359000+00:00"
   },
   {
-    "id": 4832,
+    "id": 4846,
     "group_key": "volcano|7751412e237293ee30aed96e3ac6d9112ae146e0",
     "event_type": "volcano",
     "severity_level": "high",
@@ -83,14 +119,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      4835
+      4848
     ],
     "occurred_at": "2026-04-20T01:00:00+00:00",
     "published_at": "2026-04-20T01:00:00+00:00",
     "fetched_at": "2026-04-20T01:00:00+00:00"
   },
   {
-    "id": 4833,
+    "id": 4847,
     "group_key": "volcano|9b785663249d2877e7d07ef5c9b7c2278f15ca3c",
     "event_type": "volcano",
     "severity_level": "high",
@@ -137,14 +173,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      4836
+      4849
     ],
     "occurred_at": "2026-04-20T00:45:00+00:00",
     "published_at": "2026-04-20T00:45:00+00:00",
     "fetched_at": "2026-04-20T00:45:00+00:00"
   },
   {
-    "id": 4834,
+    "id": 4848,
     "group_key": "volcano|16e3130625efb6cbd5b44ee334db8ced91777cfe",
     "event_type": "volcano",
     "severity_level": "high",
@@ -203,14 +239,14 @@
       "merged_count": 2
     },
     "member_event_ids": [
-      4837
+      4850
     ],
     "occurred_at": "2026-04-20T00:18:00+00:00",
     "published_at": "2026-04-20T00:18:00+00:00",
     "fetched_at": "2026-04-20T00:18:00+00:00"
   },
   {
-    "id": 4835,
+    "id": 4849,
     "group_key": "earthquake|us6000srg6",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -239,14 +275,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      4832
+      4846
     ],
     "occurred_at": "2026-04-19T23:52:30+00:00",
     "published_at": "2026-04-19T23:52:30+00:00",
     "fetched_at": "2026-04-19T23:52:30+00:00"
   },
   {
-    "id": 4836,
+    "id": 4850,
     "group_key": "volcano|6b846753dcd127e25f6fcf8e8968b64f29dcab69",
     "event_type": "volcano",
     "severity_level": "high",
@@ -293,14 +329,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      4838
+      4851
     ],
     "occurred_at": "2026-04-19T22:55:00+00:00",
     "published_at": "2026-04-19T22:55:00+00:00",
     "fetched_at": "2026-04-19T22:55:00+00:00"
   },
   {
-    "id": 4837,
+    "id": 4851,
     "group_key": "volcano|3afd5b0fb747857a115abcef999acd829c08ebfe",
     "event_type": "volcano",
     "severity_level": "high",
@@ -347,69 +383,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      4839
+      4852
     ],
     "occurred_at": "2026-04-19T21:35:00+00:00",
     "published_at": "2026-04-19T21:35:00+00:00",
     "fetched_at": "2026-04-19T21:35:00+00:00"
   },
   {
-    "id": 4838,
-    "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|western_north_pacific_area|tc_04w|2f6c94fb0813acbf",
-    "event_type": "typhoon",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "Tropical Storm 04W (Sinlaku)",
-    "summary": "wind 50 kt (gust 65)",
-    "started_at": "2026-04-19T21:00:00+00:00",
-    "updated_at": "2026-04-19T21:00:00+00:00",
-    "location_text": "28.7N 156.1E",
-    "lat": 28.7,
-    "lon": 156.1,
-    "source_primary": "JTWC-ABPW",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://www.google.com/maps?q=28.7,156.1",
-    "official_link": "https://www.google.com/maps?q=28.7,156.1",
-    "country_code": null,
-    "payload": {
-      "item_type": "warning",
-      "source": "jtwc_abpw",
-      "source_key": "jtwc_abpw|western_north_pacific_area|tc_04w",
-      "content_hash": "2f6c94fb0813acbf",
-      "platform_summary": "28.7N 156.1E | wind 50 kt (gust 65)",
-      "platform_location": "28.7N 156.1E",
-      "wind": "50 kt (gust 65)",
-      "risk_48h": null,
-      "risk_7d": null,
-      "next_update": null,
-      "raw_text": "(1) AT 19APR26 1800Z, TROPICAL STORM 04W (SINLAKU) WAS LOCATED \nNEAR 28.7N 156.1E, APPROXIMATELY 805 NM NORTHWEST OF WAKE ISLAND, AND \nHAD TRACKED EASTWARD AT 21 KNOTS OVER THE PAST SIX HOURS. MAXIMUM \nSUSTAINED SURFACE WINDS WERE ESTIMATED AT 50 KNOTS GUSTING TO 65 KNOTS. \nSEE REF A (WTPN31 PGTW 192100) FOR THE FINAL WARNING ON THIS SYSTEM.",
-      "metadata": {
-        "basin_section": "WESTERN NORTH PACIFIC AREA (180 TO MALAY PENINSULA)",
-        "storm_class": "TROPICAL STORM",
-        "storm_id": "04W",
-        "storm_name": "SINLAKU",
-        "fix_date": "19APR26",
-        "fix_time": "19APR26 1800Z",
-        "lat": 28.7,
-        "lon": 156.1,
-        "movement_text": "EASTWARD",
-        "movement_kt": 21,
-        "wind_kt": 50,
-        "gust_kt": 65,
-        "warning_reference": "WTPN31 PGTW 192100",
-        "bulletin_issue_at": "2026-04-19T21:00:00+00:00"
-      }
-    },
-    "member_event_ids": [
-      4843
-    ],
-    "occurred_at": "2026-04-19T21:00:00+00:00",
-    "published_at": "2026-04-19T21:00:00+00:00",
-    "fetched_at": "2026-04-19T21:00:00+00:00"
-  },
-  {
-    "id": 4839,
+    "id": 4852,
     "group_key": "volcano|292a0e1913e24fea3fae95b42d2ea664e04ddc1a",
     "event_type": "volcano",
     "severity_level": "high",
@@ -469,14 +450,14 @@
       "merged_count": 2
     },
     "member_event_ids": [
-      4840
+      4853
     ],
     "occurred_at": "2026-04-19T17:48:01+00:00",
     "published_at": "2026-04-19T17:48:01+00:00",
     "fetched_at": "2026-04-19T17:48:01+00:00"
   },
   {
-    "id": 4840,
+    "id": 4853,
     "group_key": "earthquake|us6000sred",
     "event_type": "earthquake",
     "severity_level": "high",
@@ -505,50 +486,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      4833
+      4847
     ],
     "occurred_at": "2026-04-19T17:34:47.472000+00:00",
     "published_at": "2026-04-19T17:34:47.472000+00:00",
     "fetched_at": "2026-04-19T17:34:47.472000+00:00"
   },
   {
-    "id": 4841,
-    "group_key": "earthquake|us6000sr9c",
-    "event_type": "earthquake",
-    "severity_level": "moderate",
-    "severity_color": "moderate",
-    "title": "M 5.2 - south of the Kermadec Islands",
-    "summary": "south of the Kermadec Islands",
-    "started_at": "2026-04-19T05:35:16.689000+00:00",
-    "updated_at": "2026-04-19T05:53:38.040000+00:00",
-    "location_text": "south of the Kermadec Islands",
-    "lat": -32.1851,
-    "lon": -178.2523,
-    "source_primary": "USGS",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sr9c",
-    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sr9c",
-    "country_code": null,
-    "payload": {
-      "mag": 5.2,
-      "depth_km": 10.0,
-      "place": "south of the Kermadec Islands",
-      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000sr9c.geojson",
-      "alert": null,
-      "sig": 416,
-      "tsunami": 0,
-      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
-    },
-    "member_event_ids": [
-      4834
-    ],
-    "occurred_at": "2026-04-19T05:35:16.689000+00:00",
-    "published_at": "2026-04-19T05:35:16.689000+00:00",
-    "fetched_at": "2026-04-19T05:35:16.689000+00:00"
-  },
-  {
-    "id": 4842,
+    "id": 4854,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -621,14 +566,69 @@
       }
     },
     "member_event_ids": [
-      4842
+      4855
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",
     "fetched_at": "2026-03-25T01:00:00+00:00"
   },
   {
-    "id": 4843,
+    "id": 4855,
+    "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|western_north_pacific_area|tc_04w|2f6c94fb0813acbf",
+    "event_type": "typhoon",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Tropical Storm 04W (Sinlaku)",
+    "summary": "wind 50 kt (gust 65)",
+    "started_at": "2026-03-20T06:00:00+00:00",
+    "updated_at": "2026-03-20T06:00:00+00:00",
+    "location_text": "28.7N 156.1E",
+    "lat": 28.7,
+    "lon": 156.1,
+    "source_primary": "JTWC-ABPW",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://www.google.com/maps?q=28.7,156.1",
+    "official_link": "https://www.google.com/maps?q=28.7,156.1",
+    "country_code": null,
+    "payload": {
+      "item_type": "warning",
+      "source": "jtwc_abpw",
+      "source_key": "jtwc_abpw|western_north_pacific_area|tc_04w",
+      "content_hash": "2f6c94fb0813acbf",
+      "platform_summary": "28.7N 156.1E | wind 50 kt (gust 65)",
+      "platform_location": "28.7N 156.1E",
+      "wind": "50 kt (gust 65)",
+      "risk_48h": null,
+      "risk_7d": null,
+      "next_update": null,
+      "raw_text": "(1) AT 19APR26 1800Z, TROPICAL STORM 04W (SINLAKU) WAS LOCATED \nNEAR 28.7N 156.1E, APPROXIMATELY 805 NM NORTHWEST OF WAKE ISLAND, AND \nHAD TRACKED EASTWARD AT 21 KNOTS OVER THE PAST SIX HOURS. MAXIMUM \nSUSTAINED SURFACE WINDS WERE ESTIMATED AT 50 KNOTS GUSTING TO 65 KNOTS. \nSEE REF A (WTPN31 PGTW 192100) FOR THE FINAL WARNING ON THIS SYSTEM.",
+      "metadata": {
+        "basin_section": "WESTERN NORTH PACIFIC AREA (180 TO MALAY PENINSULA)",
+        "storm_class": "TROPICAL STORM",
+        "storm_id": "04W",
+        "storm_name": "SINLAKU",
+        "fix_date": "19APR26",
+        "fix_time": "19APR26 1800Z",
+        "lat": 28.7,
+        "lon": 156.1,
+        "movement_text": "EASTWARD",
+        "movement_kt": 21,
+        "wind_kt": 50,
+        "gust_kt": 65,
+        "warning_reference": "WTPN31 PGTW 192100",
+        "bulletin_issue_at": "2026-03-20T06:00:00+00:00"
+      }
+    },
+    "member_event_ids": [
+      4856
+    ],
+    "occurred_at": "2026-03-20T06:00:00+00:00",
+    "published_at": "2026-03-20T06:00:00+00:00",
+    "fetched_at": "2026-03-20T06:00:00+00:00"
+  },
+  {
+    "id": 4856,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -701,7 +701,7 @@
       }
     },
     "member_event_ids": [
-      4841
+      4854
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

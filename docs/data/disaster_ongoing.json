@@ -1,6 +1,6 @@
 [
   {
-    "id": 6494,
+    "id": 6504,
     "group_key": "volcano|236e2c7148fd87e5b5c5d1b031a8b4e6de05e915",
     "event_type": "volcano",
     "severity_level": "high",
@@ -47,14 +47,68 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      6500
+      6510
     ],
     "occurred_at": "2026-04-21T12:10:00+00:00",
     "published_at": "2026-04-21T12:10:00+00:00",
     "fetched_at": "2026-04-21T12:10:00+00:00"
   },
   {
-    "id": 6495,
+    "id": 6505,
+    "group_key": "volcano|60ffea56b198d056d65cdcb902ba400db2ef47b6",
+    "event_type": "volcano",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Nyamuragira",
+    "summary": "VRP 222.13 MW · VIIRS · 2.37 km",
+    "started_at": "2026-04-21T12:06:02+00:00",
+    "updated_at": "2026-04-21T12:06:02+00:00",
+    "location_text": "Nyamuragira",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "VIIRS",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "223020",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
+      "vrp_mw": 222.13,
+      "distance_km": 2.37,
+      "sensor": "VIIRS",
+      "row_class": [
+        "high"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "VIIRS"
+      ],
+      "reports": [
+        {
+          "volcano_id": "223020",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
+          "vrp_mw": 222.13,
+          "distance_km": 2.37,
+          "sensor": "VIIRS",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 1
+    },
+    "member_event_ids": [
+      6511
+    ],
+    "occurred_at": "2026-04-21T12:06:02+00:00",
+    "published_at": "2026-04-21T12:06:02+00:00",
+    "fetched_at": "2026-04-21T12:06:02+00:00"
+  },
+  {
+    "id": 6506,
     "group_key": "earthquake|us6000srtd",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -83,14 +137,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      6494
+      6504
     ],
     "occurred_at": "2026-04-21T10:30:27.397000+00:00",
     "published_at": "2026-04-21T10:30:27.397000+00:00",
     "fetched_at": "2026-04-21T10:30:27.397000+00:00"
   },
   {
-    "id": 6496,
+    "id": 6507,
     "group_key": "volcano|ea3ea4eae1b94511bcc3a9c0ecee047471bed035",
     "event_type": "volcano",
     "severity_level": "high",
@@ -137,14 +191,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      6501
+      6512
     ],
     "occurred_at": "2026-04-21T09:05:00+00:00",
     "published_at": "2026-04-21T09:05:00+00:00",
     "fetched_at": "2026-04-21T09:05:00+00:00"
   },
   {
-    "id": 6497,
+    "id": 6508,
     "group_key": "earthquake|us6000srs6",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -173,14 +227,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      6495
+      6505
     ],
     "occurred_at": "2026-04-21T05:29:09.335000+00:00",
     "published_at": "2026-04-21T05:29:09.335000+00:00",
     "fetched_at": "2026-04-21T05:29:09.335000+00:00"
   },
   {
-    "id": 6498,
+    "id": 6509,
     "group_key": "earthquake|us6000srrc",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -209,14 +263,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      6496
+      6506
     ],
     "occurred_at": "2026-04-21T03:17:07.811000+00:00",
     "published_at": "2026-04-21T03:17:07.811000+00:00",
     "fetched_at": "2026-04-21T03:17:07.811000+00:00"
   },
   {
-    "id": 6499,
+    "id": 6510,
     "group_key": "earthquake|us6000srr2",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -245,14 +299,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      6497
+      6507
     ],
     "occurred_at": "2026-04-21T02:22:21.410000+00:00",
     "published_at": "2026-04-21T02:22:21.410000+00:00",
     "fetched_at": "2026-04-21T02:22:21.410000+00:00"
   },
   {
-    "id": 6500,
+    "id": 6511,
     "group_key": "earthquake|us6000srqj",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -281,14 +335,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      6498
+      6508
     ],
     "occurred_at": "2026-04-21T00:29:35.894000+00:00",
     "published_at": "2026-04-21T00:29:35.894000+00:00",
     "fetched_at": "2026-04-21T00:29:35.894000+00:00"
   },
   {
-    "id": 6501,
+    "id": 6512,
     "group_key": "earthquake|us6000srn6",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -317,14 +371,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      6499
+      6509
     ],
     "occurred_at": "2026-04-20T18:47:05.797000+00:00",
     "published_at": "2026-04-20T18:47:05.797000+00:00",
     "fetched_at": "2026-04-20T18:47:05.797000+00:00"
   },
   {
-    "id": 6502,
+    "id": 6513,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -397,14 +451,14 @@
       }
     },
     "member_event_ids": [
-      6503
+      6514
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",
     "fetched_at": "2026-03-25T01:00:00+00:00"
   },
   {
-    "id": 6503,
+    "id": 6514,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -477,7 +531,7 @@
       }
     },
     "member_event_ids": [
-      6502
+      6513
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

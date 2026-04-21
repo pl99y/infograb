@@ -1,6 +1,6 @@
 [
   {
-    "id": 5877,
+    "id": 5892,
     "group_key": "earthquake|us6000srqj",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -29,22 +29,22 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      5877
+      5892
     ],
     "occurred_at": "2026-04-21T00:29:32.679000+00:00",
     "published_at": "2026-04-21T00:29:32.679000+00:00",
     "fetched_at": "2026-04-21T00:29:32.679000+00:00"
   },
   {
-    "id": 5878,
-    "group_key": "volcano|9b702ad45232ceb80cdf71cbb5e7724589f629fc",
+    "id": 5893,
+    "group_key": "volcano|3cbfe46005ed635c371bc0cb65b6aebca80a95fe",
     "event_type": "volcano",
     "severity_level": "high",
     "severity_color": "high",
     "title": "Nyamuragira",
-    "summary": "VRP 267.84 MW · VIIRS · 2.70 km",
-    "started_at": "2026-04-20T22:36:01+00:00",
-    "updated_at": "2026-04-20T22:36:01+00:00",
+    "summary": "VRP 393.80 MW · VIIRS · 3.35 km",
+    "started_at": "2026-04-20T23:24:02+00:00",
+    "updated_at": "2026-04-20T23:24:02+00:00",
     "location_text": "Nyamuragira",
     "lat": null,
     "lon": null,
@@ -57,8 +57,8 @@
     "payload": {
       "volcano_id": "223020",
       "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
-      "vrp_mw": 267.84,
-      "distance_km": 2.7,
+      "vrp_mw": 393.8,
+      "distance_km": 3.35,
       "sensor": "VIIRS",
       "row_class": [
         "high"
@@ -71,8 +71,8 @@
         {
           "volcano_id": "223020",
           "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
-          "vrp_mw": 267.84,
-          "distance_km": 2.7,
+          "vrp_mw": 393.8,
+          "distance_km": 3.35,
           "sensor": "VIIRS",
           "row_class": [
             "high"
@@ -83,14 +83,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      5887
+      5901
     ],
-    "occurred_at": "2026-04-20T22:36:01+00:00",
-    "published_at": "2026-04-20T22:36:01+00:00",
-    "fetched_at": "2026-04-20T22:36:01+00:00"
+    "occurred_at": "2026-04-20T23:24:02+00:00",
+    "published_at": "2026-04-20T23:24:02+00:00",
+    "fetched_at": "2026-04-20T23:24:02+00:00"
   },
   {
-    "id": 5879,
+    "id": 5894,
     "group_key": "volcano|8a6e4549c40823f6ddb0ec9f63dbd128471e2c3d",
     "event_type": "volcano",
     "severity_level": "high",
@@ -137,14 +137,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      5888
+      5902
     ],
     "occurred_at": "2026-04-20T19:00:00+00:00",
     "published_at": "2026-04-20T19:00:00+00:00",
     "fetched_at": "2026-04-20T19:00:00+00:00"
   },
   {
-    "id": 5880,
+    "id": 5895,
     "group_key": "earthquake|us6000srn6",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -173,30 +173,30 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      5878
+      5893
     ],
     "occurred_at": "2026-04-20T18:47:05.797000+00:00",
     "published_at": "2026-04-20T18:47:05.797000+00:00",
     "fetched_at": "2026-04-20T18:47:05.797000+00:00"
   },
   {
-    "id": 5881,
+    "id": 5896,
     "group_key": "volcano|c613ab2be680acab4e6f38deff054f37a3cb9390",
     "event_type": "volcano",
     "severity_level": "high",
     "severity_color": "high",
     "title": "Aoba",
-    "summary": "VRP 271.89 MW · VIIRS / VIIRS375 · 2.37 km",
+    "summary": "VRP 271.89 MW · VIIRS375 / VIIRS · 2.37 km",
     "started_at": "2026-04-20T14:12:01+00:00",
     "updated_at": "2026-04-20T14:12:01+00:00",
     "location_text": "Aoba",
     "lat": null,
     "lon": null,
     "source_primary": "MIROVA",
-    "source_secondary": "VIIRS / VIIRS375",
+    "source_secondary": "VIIRS375 / VIIRS",
     "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=257030",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=257030",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=257030",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=257030",
     "country_code": null,
     "payload": {
       "volcano_id": "257030",
@@ -205,26 +205,15 @@
       "distance_km": 2.37,
       "sensor": "VIIRS",
       "row_class": [
-        "high",
-        "moderate"
+        "moderate",
+        "high"
       ],
       "source_page": "https://www.mirovaweb.it/NRT/",
       "sensors": [
-        "VIIRS",
-        "VIIRS375"
+        "VIIRS375",
+        "VIIRS"
       ],
       "reports": [
-        {
-          "volcano_id": "257030",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=257030",
-          "vrp_mw": 271.89,
-          "distance_km": 2.37,
-          "sensor": "VIIRS",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        },
         {
           "volcano_id": "257030",
           "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=257030",
@@ -235,19 +224,30 @@
             "moderate"
           ],
           "source_page": "https://www.mirovaweb.it/NRT/"
+        },
+        {
+          "volcano_id": "257030",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=257030",
+          "vrp_mw": 271.89,
+          "distance_km": 2.37,
+          "sensor": "VIIRS",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
         }
       ],
       "merged_count": 2
     },
     "member_event_ids": [
-      5889
+      5903
     ],
     "occurred_at": "2026-04-20T14:12:01+00:00",
     "published_at": "2026-04-20T14:12:01+00:00",
     "fetched_at": "2026-04-20T14:12:01+00:00"
   },
   {
-    "id": 5882,
+    "id": 5897,
     "group_key": "earthquake|us6000srjx",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -276,14 +276,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      5879
+      5894
     ],
     "occurred_at": "2026-04-20T12:56:45.171000+00:00",
     "published_at": "2026-04-20T12:56:45.171000+00:00",
     "fetched_at": "2026-04-20T12:56:45.171000+00:00"
   },
   {
-    "id": 5883,
+    "id": 5898,
     "group_key": "earthquake|us6000srj9",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -312,14 +312,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      5880
+      5895
     ],
     "occurred_at": "2026-04-20T10:44:16.040000+00:00",
     "published_at": "2026-04-20T10:44:16.040000+00:00",
     "fetched_at": "2026-04-20T10:44:16.040000+00:00"
   },
   {
-    "id": 5884,
+    "id": 5899,
     "group_key": "earthquake|us6000sriv",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -348,14 +348,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      5881
+      5896
     ],
     "occurred_at": "2026-04-20T09:49:43.363000+00:00",
     "published_at": "2026-04-20T09:49:43.363000+00:00",
     "fetched_at": "2026-04-20T09:49:43.363000+00:00"
   },
   {
-    "id": 5885,
+    "id": 5900,
     "group_key": "earthquake|us6000srih",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -384,14 +384,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      5882
+      5897
     ],
     "occurred_at": "2026-04-20T08:32:46.679000+00:00",
     "published_at": "2026-04-20T08:32:46.679000+00:00",
     "fetched_at": "2026-04-20T08:32:46.679000+00:00"
   },
   {
-    "id": 5886,
+    "id": 5901,
     "group_key": "earthquake|us6000sri7",
     "event_type": "earthquake",
     "severity_level": "critical",
@@ -399,7 +399,7 @@
     "title": "M 7.4 - 100 km ENE of Miyako, Japan",
     "summary": "100 km ENE of Miyako, Japan",
     "started_at": "2026-04-20T07:53:00.185000+00:00",
-    "updated_at": "2026-04-21T00:00:48.651000+00:00",
+    "updated_at": "2026-04-21T01:28:24.281000+00:00",
     "location_text": "100 km ENE of Miyako, Japan",
     "lat": 39.9532,
     "lon": 143.0462,
@@ -420,14 +420,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      5883
+      5898
     ],
     "occurred_at": "2026-04-20T07:53:00.185000+00:00",
     "published_at": "2026-04-20T07:53:00.185000+00:00",
     "fetched_at": "2026-04-20T07:53:00.185000+00:00"
   },
   {
-    "id": 5887,
+    "id": 5902,
     "group_key": "earthquake|us6000srhw",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -456,14 +456,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      5884
+      5899
     ],
     "occurred_at": "2026-04-20T07:04:23.455000+00:00",
     "published_at": "2026-04-20T07:04:23.455000+00:00",
     "fetched_at": "2026-04-20T07:04:23.455000+00:00"
   },
   {
-    "id": 5888,
+    "id": 5903,
     "group_key": "earthquake|us6000srhi",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -492,50 +492,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      5885
+      5900
     ],
     "occurred_at": "2026-04-20T05:19:35.993000+00:00",
     "published_at": "2026-04-20T05:19:35.993000+00:00",
     "fetched_at": "2026-04-20T05:19:35.993000+00:00"
   },
   {
-    "id": 5889,
-    "group_key": "earthquake|us6000srgj",
-    "event_type": "earthquake",
-    "severity_level": "moderate",
-    "severity_color": "moderate",
-    "title": "M 5.4 - western Indian-Antarctic Ridge",
-    "summary": "western Indian-Antarctic Ridge",
-    "started_at": "2026-04-20T01:21:17.359000+00:00",
-    "updated_at": "2026-04-20T04:06:49.040000+00:00",
-    "location_text": "western Indian-Antarctic Ridge",
-    "lat": -49.6804,
-    "lon": 117.3139,
-    "source_primary": "USGS",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000srgj",
-    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000srgj",
-    "country_code": null,
-    "payload": {
-      "mag": 5.4,
-      "depth_km": 10.0,
-      "place": "western Indian-Antarctic Ridge",
-      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000srgj.geojson",
-      "alert": "green",
-      "sig": 449,
-      "tsunami": 0,
-      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
-    },
-    "member_event_ids": [
-      5886
-    ],
-    "occurred_at": "2026-04-20T01:21:17.359000+00:00",
-    "published_at": "2026-04-20T01:21:17.359000+00:00",
-    "fetched_at": "2026-04-20T01:21:17.359000+00:00"
-  },
-  {
-    "id": 5890,
+    "id": 5904,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -608,14 +572,14 @@
       }
     },
     "member_event_ids": [
-      5891
+      5905
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",
     "fetched_at": "2026-03-25T01:00:00+00:00"
   },
   {
-    "id": 5891,
+    "id": 5905,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -688,7 +652,7 @@
       }
     },
     "member_event_ids": [
-      5890
+      5904
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

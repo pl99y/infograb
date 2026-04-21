@@ -1,19 +1,49 @@
 {
-  "id": 25,
+  "id": 26,
   "snapshot_key": "space_launches_default",
   "source_name": "AEI Launch Records API",
   "source_url": "https://space-data-api-46930537539.us-central1.run.app/api/public/launches/records",
-  "fetched_at": "2026-04-21T12:07:06.664164+00:00",
-  "created_at": "2026-04-21 12:07:12",
+  "fetched_at": "2026-04-21T18:07:16.822251+00:00",
+  "created_at": "2026-04-21 18:07:17",
   "items": [
     {
+      "date": "2026-04-19",
+      "vehicle": "New Glenn 7x2 1",
+      "launch_site": "Kennedy / Cape Canaveral, Florida",
+      "country": "United States",
+      "category": "Orbital",
+      "outcome": "Failure",
+      "actual_payload_capacity": "载荷 5.8 t",
+      "starlink_mission": "否"
+    },
+    {
+      "date": "2026-04-19",
+      "vehicle": "Falcon 9 FT5",
+      "launch_site": "Vandenberg Space Force Base, California",
+      "country": "United States",
+      "category": "Orbital",
+      "outcome": "Success",
+      "actual_payload_capacity": "载荷 0 t · LEO 17.4 t · SSO 9.1 t",
+      "starlink_mission": "否"
+    },
+    {
+      "date": "2026-04-17",
+      "vehicle": "Chang Zheng 4C",
+      "launch_site": "Jiuquan Space Center, Nei Monggol Zizhiqu, China",
+      "country": "China",
+      "category": "Orbital",
+      "outcome": "Success",
+      "actual_payload_capacity": "载荷 2.6 t · LEO 4.2 t · SSO 2.8 t",
+      "starlink_mission": "否"
+    },
+    {
       "date": "2026-04-16",
-      "vehicle": "Soyuz-2-1B",
+      "vehicle": "Soyuz-2-1B Volga",
       "launch_site": "Plesetsk Kosmodrome, Russia",
       "country": "Russia/Soviet Union",
       "category": "Orbital",
       "outcome": "Success",
-      "actual_payload_capacity": "载荷 8.3 t · LEO 4.8 t · SSO 4.4 t",
+      "actual_payload_capacity": "载荷 5.1 t",
       "starlink_mission": "否"
     },
     {
@@ -33,7 +63,7 @@
       "country": "China",
       "category": "Orbital",
       "outcome": "Success",
-      "actual_payload_capacity": "载荷 0.4 t · LEO 2 t · SSO 1.5 t",
+      "actual_payload_capacity": "载荷 0 t · LEO 2 t · SSO 1.5 t",
       "starlink_mission": "否"
     },
     {
@@ -74,36 +104,6 @@
       "category": "Orbital",
       "outcome": "Success",
       "actual_payload_capacity": "载荷 2.5 t · LEO 17.4 t · SSO 9.1 t",
-      "starlink_mission": "否"
-    },
-    {
-      "date": "2026-04-08",
-      "vehicle": "Chang Zheng 6A",
-      "launch_site": "Taiyuan weixing fashe zhongxin",
-      "country": "China",
-      "category": "Orbital",
-      "outcome": "Success",
-      "actual_payload_capacity": "载荷 4 t · LEO 5 t · SSO 4 t",
-      "starlink_mission": "否"
-    },
-    {
-      "date": "2026-04-07",
-      "vehicle": "Falcon 9 FT5",
-      "launch_site": "Vandenberg Space Force Base, California",
-      "country": "United States",
-      "category": "Orbital",
-      "outcome": "Success",
-      "actual_payload_capacity": "载荷 14.4 t · LEO 17.4 t · SSO 9.1 t",
-      "starlink_mission": "是"
-    },
-    {
-      "date": "2026-04-07",
-      "vehicle": "Minotaur IV",
-      "launch_site": "Vandenberg Space Force Base, California",
-      "country": "United States",
-      "category": "Orbital",
-      "outcome": "Success",
-      "actual_payload_capacity": "载荷 0.7 t · LEO 1.6 t · SSO 1.2 t",
       "starlink_mission": "否"
     }
   ]

@@ -1,6 +1,42 @@
 [
   {
-    "id": 6759,
+    "id": 6772,
+    "group_key": "earthquake|us6000srvu",
+    "event_type": "earthquake",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "M 5.6 - 140 km E of Noda, Japan",
+    "summary": "140 km E of Noda, Japan",
+    "started_at": "2026-04-21T18:44:12.001000+00:00",
+    "updated_at": "2026-04-21T19:13:03.893000+00:00",
+    "location_text": "140 km E of Noda, Japan",
+    "lat": 40.1562,
+    "lon": 143.4599,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000srvu",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000srvu",
+    "country_code": null,
+    "payload": {
+      "mag": 5.6,
+      "depth_km": 35.0,
+      "place": "140 km E of Noda, Japan",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000srvu.geojson",
+      "alert": "green",
+      "sig": 482,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      6772
+    ],
+    "occurred_at": "2026-04-21T18:44:12.001000+00:00",
+    "published_at": "2026-04-21T18:44:12.001000+00:00",
+    "fetched_at": "2026-04-21T18:44:12.001000+00:00"
+  },
+  {
+    "id": 6773,
     "group_key": "volcano|cc524230ce3660cd1a7c22391a97318e89c3c992",
     "event_type": "volcano",
     "severity_level": "high",
@@ -60,14 +96,14 @@
       "merged_count": 2
     },
     "member_event_ids": [
-      6765
+      6779
     ],
     "occurred_at": "2026-04-21T15:12:01+00:00",
     "published_at": "2026-04-21T15:12:01+00:00",
     "fetched_at": "2026-04-21T15:12:01+00:00"
   },
   {
-    "id": 6760,
+    "id": 6774,
     "group_key": "earthquake|us6000sru5",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -96,14 +132,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      6759
+      6773
     ],
     "occurred_at": "2026-04-21T14:52:17.411000+00:00",
     "published_at": "2026-04-21T14:52:17.411000+00:00",
     "fetched_at": "2026-04-21T14:52:17.411000+00:00"
   },
   {
-    "id": 6761,
+    "id": 6775,
     "group_key": "volcano|4f23ac20fc9a6816cda45ec1a207824754151ca2",
     "event_type": "volcano",
     "severity_level": "high",
@@ -150,14 +186,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      6766
+      6780
     ],
     "occurred_at": "2026-04-21T14:10:00+00:00",
     "published_at": "2026-04-21T14:10:00+00:00",
     "fetched_at": "2026-04-21T14:10:00+00:00"
   },
   {
-    "id": 6762,
+    "id": 6776,
     "group_key": "volcano|236e2c7148fd87e5b5c5d1b031a8b4e6de05e915",
     "event_type": "volcano",
     "severity_level": "high",
@@ -204,14 +240,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      6767
+      6781
     ],
     "occurred_at": "2026-04-21T12:10:00+00:00",
     "published_at": "2026-04-21T12:10:00+00:00",
     "fetched_at": "2026-04-21T12:10:00+00:00"
   },
   {
-    "id": 6763,
+    "id": 6777,
     "group_key": "volcano|60ffea56b198d056d65cdcb902ba400db2ef47b6",
     "event_type": "volcano",
     "severity_level": "high",
@@ -270,14 +306,14 @@
       "merged_count": 2
     },
     "member_event_ids": [
-      6768
+      6782
     ],
     "occurred_at": "2026-04-21T12:06:02+00:00",
     "published_at": "2026-04-21T12:06:02+00:00",
     "fetched_at": "2026-04-21T12:06:02+00:00"
   },
   {
-    "id": 6764,
+    "id": 6778,
     "group_key": "earthquake|us6000srtd",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -306,14 +342,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      6760
+      6774
     ],
     "occurred_at": "2026-04-21T10:30:27.397000+00:00",
     "published_at": "2026-04-21T10:30:27.397000+00:00",
     "fetched_at": "2026-04-21T10:30:27.397000+00:00"
   },
   {
-    "id": 6765,
+    "id": 6779,
     "group_key": "volcano|ea3ea4eae1b94511bcc3a9c0ecee047471bed035",
     "event_type": "volcano",
     "severity_level": "high",
@@ -360,14 +396,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      6769
+      6783
     ],
     "occurred_at": "2026-04-21T09:05:00+00:00",
     "published_at": "2026-04-21T09:05:00+00:00",
     "fetched_at": "2026-04-21T09:05:00+00:00"
   },
   {
-    "id": 6766,
+    "id": 6780,
     "group_key": "earthquake|us6000srs6",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -396,14 +432,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      6761
+      6775
     ],
     "occurred_at": "2026-04-21T05:29:09.335000+00:00",
     "published_at": "2026-04-21T05:29:09.335000+00:00",
     "fetched_at": "2026-04-21T05:29:09.335000+00:00"
   },
   {
-    "id": 6767,
+    "id": 6781,
     "group_key": "earthquake|us6000srrc",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -432,14 +468,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      6762
+      6776
     ],
     "occurred_at": "2026-04-21T03:17:07.811000+00:00",
     "published_at": "2026-04-21T03:17:07.811000+00:00",
     "fetched_at": "2026-04-21T03:17:07.811000+00:00"
   },
   {
-    "id": 6768,
+    "id": 6782,
     "group_key": "earthquake|us6000srr2",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -468,14 +504,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      6763
+      6777
     ],
     "occurred_at": "2026-04-21T02:22:21.410000+00:00",
     "published_at": "2026-04-21T02:22:21.410000+00:00",
     "fetched_at": "2026-04-21T02:22:21.410000+00:00"
   },
   {
-    "id": 6769,
+    "id": 6783,
     "group_key": "earthquake|us6000srqj",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -504,14 +540,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      6764
+      6778
     ],
     "occurred_at": "2026-04-21T00:29:35.894000+00:00",
     "published_at": "2026-04-21T00:29:35.894000+00:00",
     "fetched_at": "2026-04-21T00:29:35.894000+00:00"
   },
   {
-    "id": 6770,
+    "id": 6784,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -584,14 +620,14 @@
       }
     },
     "member_event_ids": [
-      6771
+      6785
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",
     "fetched_at": "2026-03-25T01:00:00+00:00"
   },
   {
-    "id": 6771,
+    "id": 6785,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -664,7 +700,7 @@
       }
     },
     "member_event_ids": [
-      6770
+      6784
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

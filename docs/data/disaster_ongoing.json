@@ -1,6 +1,6 @@
 [
   {
-    "id": 6365,
+    "id": 6375,
     "group_key": "volcano|ea3ea4eae1b94511bcc3a9c0ecee047471bed035",
     "event_type": "volcano",
     "severity_level": "high",
@@ -47,14 +47,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      6372
+      6381
     ],
     "occurred_at": "2026-04-21T09:05:00+00:00",
     "published_at": "2026-04-21T09:05:00+00:00",
     "fetched_at": "2026-04-21T09:05:00+00:00"
   },
   {
-    "id": 6366,
+    "id": 6376,
     "group_key": "earthquake|us6000srs6",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -83,14 +83,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      6365
+      6375
     ],
     "occurred_at": "2026-04-21T05:29:09.335000+00:00",
     "published_at": "2026-04-21T05:29:09.335000+00:00",
     "fetched_at": "2026-04-21T05:29:09.335000+00:00"
   },
   {
-    "id": 6367,
+    "id": 6377,
     "group_key": "earthquake|us6000srrc",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -119,14 +119,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      6366
+      6376
     ],
     "occurred_at": "2026-04-21T03:17:07.811000+00:00",
     "published_at": "2026-04-21T03:17:07.811000+00:00",
     "fetched_at": "2026-04-21T03:17:07.811000+00:00"
   },
   {
-    "id": 6368,
+    "id": 6378,
     "group_key": "earthquake|us6000srr2",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -155,14 +155,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      6367
+      6377
     ],
     "occurred_at": "2026-04-21T02:22:21.410000+00:00",
     "published_at": "2026-04-21T02:22:21.410000+00:00",
     "fetched_at": "2026-04-21T02:22:21.410000+00:00"
   },
   {
-    "id": 6369,
+    "id": 6379,
     "group_key": "earthquake|us6000srqj",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -191,14 +191,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      6368
+      6378
     ],
     "occurred_at": "2026-04-21T00:29:35.894000+00:00",
     "published_at": "2026-04-21T00:29:35.894000+00:00",
     "fetched_at": "2026-04-21T00:29:35.894000+00:00"
   },
   {
-    "id": 6370,
+    "id": 6380,
     "group_key": "earthquake|us6000srn6",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -227,14 +227,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      6369
+      6379
     ],
     "occurred_at": "2026-04-20T18:47:05.797000+00:00",
     "published_at": "2026-04-20T18:47:05.797000+00:00",
     "fetched_at": "2026-04-20T18:47:05.797000+00:00"
   },
   {
-    "id": 6371,
+    "id": 6381,
     "group_key": "earthquake|us6000srjx",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -263,50 +263,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      6370
+      6380
     ],
     "occurred_at": "2026-04-20T12:56:45.171000+00:00",
     "published_at": "2026-04-20T12:56:45.171000+00:00",
     "fetched_at": "2026-04-20T12:56:45.171000+00:00"
   },
   {
-    "id": 6372,
-    "group_key": "earthquake|us6000srj9",
-    "event_type": "earthquake",
-    "severity_level": "moderate",
-    "severity_color": "moderate",
-    "title": "M 5.0 - 111 km E of Yamada, Japan",
-    "summary": "111 km E of Yamada, Japan",
-    "started_at": "2026-04-20T10:44:16.040000+00:00",
-    "updated_at": "2026-04-20T10:59:48.040000+00:00",
-    "location_text": "111 km E of Yamada, Japan",
-    "lat": 39.4819,
-    "lon": 143.2471,
-    "source_primary": "USGS",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000srj9",
-    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000srj9",
-    "country_code": null,
-    "payload": {
-      "mag": 5.0,
-      "depth_km": 47.565,
-      "place": "111 km E of Yamada, Japan",
-      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000srj9.geojson",
-      "alert": null,
-      "sig": 385,
-      "tsunami": 0,
-      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
-    },
-    "member_event_ids": [
-      6371
-    ],
-    "occurred_at": "2026-04-20T10:44:16.040000+00:00",
-    "published_at": "2026-04-20T10:44:16.040000+00:00",
-    "fetched_at": "2026-04-20T10:44:16.040000+00:00"
-  },
-  {
-    "id": 6373,
+    "id": 6382,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -379,14 +343,14 @@
       }
     },
     "member_event_ids": [
-      6374
+      6383
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",
     "fetched_at": "2026-03-25T01:00:00+00:00"
   },
   {
-    "id": 6374,
+    "id": 6383,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -459,7 +423,7 @@
       }
     },
     "member_event_ids": [
-      6373
+      6382
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

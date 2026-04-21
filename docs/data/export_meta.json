@@ -1,52 +1,40 @@
 {
   "version": 2,
-  "generated_at": "2026-04-21T06:03:26.020456+00:00",
-  "last_profile": "15m",
-  "profile": "15m",
+  "generated_at": "2026-04-21T06:09:00.259310+00:00",
+  "last_profile": "12h",
+  "profile": "12h",
   "steps": [
     {
-      "name": "energy",
+      "name": "space_weather",
       "ok": true
     },
     {
-      "name": "market",
+      "name": "space_launches",
       "ok": true
     },
     {
-      "name": "aviation",
+      "name": "mnd_pla",
       "ok": true
     },
     {
-      "name": "weather_alerts",
+      "name": "public_health",
       "ok": true
     },
     {
-      "name": "disaster",
-      "ok": true
-    },
-    {
-      "name": "telegram",
-      "ok": true
-    },
-    {
-      "name": "f1_live",
-      "ok": true
-    },
-    {
-      "name": "news_timeline",
+      "name": "f1_news",
       "ok": true
     }
   ],
   "profiles": {
     "12h": {
-      "generated_at": "2026-04-21T00:07:28.379057+00:00",
+      "generated_at": "2026-04-21T06:09:00.259310+00:00",
       "files": {
-        "space_weather_alerts.json": "2026-04-21T00:07:28.379057+00:00",
-        "space_weather_forecast.json": "2026-04-21T00:07:28.379057+00:00",
-        "space_launches_latest.json": "2026-04-21T00:07:28.379057+00:00",
-        "mnd_pla_dashboard.json": "2026-04-21T00:07:28.379057+00:00",
-        "public_health_latest.json": "2026-04-21T00:07:28.379057+00:00",
-        "f1_news.json": "2026-04-21T00:07:28.379057+00:00"
+        "space_weather_alerts.json": "2026-04-21T06:09:00.259310+00:00",
+        "space_weather_forecast.json": "2026-04-21T06:09:00.259310+00:00",
+        "space_launches_latest.json": "2026-04-21T06:09:00.259310+00:00",
+        "mnd_pla_dashboard.json": "2026-04-21T06:09:00.259310+00:00",
+        "public_health_latest.json": "2026-04-21T06:09:00.259310+00:00",
+        "f1_news.json": "2026-04-21T06:09:00.259310+00:00"
       },
       "steps": [
         {

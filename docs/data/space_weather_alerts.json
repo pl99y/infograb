@@ -1,6 +1,146 @@
 [
   {
-    "id": 306,
+    "id": 336,
+    "dedupe_key": "K04W|2026-04-21 05:45:40.253|5325",
+    "product_id": "K04W",
+    "message_code": "WARK04",
+    "serial_number": "5325",
+    "issue_datetime": "2026-04-21T05:45:40.253000+00:00",
+    "issue_time_text": "2026-04-21T05:45:00+00:00",
+    "headline": "延长预警：预计地磁K指数为4",
+    "message_type": "extended_warning",
+    "noaa_scale": null,
+    "impacts_text": "影响区域主要在磁纬65度以北。感应电流 - 可能出现微弱的电网波动。极光 - 在加拿大和阿拉斯加等高纬度地区可能可见极光。",
+    "description_text": "",
+    "message_raw": "Space Weather Message Code: WARK04\r\nSerial Number: 5325\r\nIssue Time: 2026 Apr 21 0545 UTC\r\n\r\nEXTENDED WARNING: Geomagnetic K-index of 4 expected\r\nExtension to Serial Number: 5324\r\nValid From: 2026 Apr 20 0805 UTC\r\nNow Valid Until: 2026 Apr 21 1800 UTC\r\nWarning Condition: Persistence\r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact primarily poleward of 65 degrees Geomagnetic Latitude.\r\nInduced Currents - Weak power grid fluctuations can occur.\r\nAurora - Aurora may be visible at high latitudes such as Canada and Alaska.",
+    "source_name": "SWPC Alerts",
+    "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
+    "fetched_at": "2026-04-21T06:07:07.217546+00:00",
+    "created_at": "2026-04-21 06:07:29",
+    "details": {
+      "space_weather_message_code": "WARK04",
+      "serial_number": "5325",
+      "issue_time": "2026 Apr 21 0545 UTC",
+      "extension_to_serial_number": "5324",
+      "valid_from": "2026 Apr 20 0805 UTC",
+      "now_valid_until": "2026 Apr 21 1800 UTC",
+      "warning_condition": "Persistence"
+    }
+  },
+  {
+    "id": 337,
+    "dedupe_key": "K05W|2026-04-21 05:44:46.137|2229",
+    "product_id": "K05W",
+    "message_code": "WARK05",
+    "serial_number": "2229",
+    "issue_datetime": "2026-04-21T05:44:46.137000+00:00",
+    "issue_time_text": "2026-04-21T05:44:00+00:00",
+    "headline": "延长预警：预计地磁K指数为5",
+    "message_type": "extended_warning",
+    "noaa_scale": null,
+    "impacts_text": "影响区域主要在磁纬60度以北。感应电流 - 可能出现微弱的电网波动。航天器 - 可能对卫星运行产生轻微影响。极光 - 在高纬度地区（即美国北部，如密歇根州北部和缅因州）可能可见极光。",
+    "description_text": "",
+    "message_raw": "Space Weather Message Code: WARK05\r\nSerial Number: 2229\r\nIssue Time: 2026 Apr 21 0544 UTC\r\n\r\nEXTENDED WARNING: Geomagnetic K-index of 5 expected\r\nExtension to Serial Number: 2228\r\nValid From: 2026 Apr 21 0110 UTC\r\nNow Valid Until: 2026 Apr 21 1500 UTC\r\nWarning Condition: Persistence\r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact primarily poleward of 60 degrees Geomagnetic Latitude.\r\nInduced Currents - Weak power grid fluctuations can occur.\r\nSpacecraft - Minor impact on satellite operations possible.\r\nAurora - Aurora may be visible at high latitudes, i.e., northern tier of the U.S. such as northern Michigan and Maine.",
+    "source_name": "SWPC Alerts",
+    "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
+    "fetched_at": "2026-04-21T06:07:07.217546+00:00",
+    "created_at": "2026-04-21 06:07:29",
+    "details": {
+      "space_weather_message_code": "WARK05",
+      "serial_number": "2229",
+      "issue_time": "2026 Apr 21 0544 UTC",
+      "extension_to_serial_number": "2228",
+      "valid_from": "2026 Apr 21 0110 UTC",
+      "now_valid_until": "2026 Apr 21 1500 UTC",
+      "warning_condition": "Persistence"
+    }
+  },
+  {
+    "id": 338,
+    "dedupe_key": "K05A|2026-04-21 01:53:51.080|2012",
+    "product_id": "K05A",
+    "message_code": "ALTK05",
+    "serial_number": "2012",
+    "issue_datetime": "2026-04-21T01:53:51.080000+00:00",
+    "issue_time_text": "2026-04-21T01:53:00+00:00",
+    "headline": "警报：地磁K指数为5",
+    "message_type": "alert",
+    "noaa_scale": "G1 - Minor",
+    "impacts_text": "影响区域主要在磁纬60度以北。感应电流 - 可能出现微弱的电网波动。航天器 - 可能对卫星运行产生轻微影响。极光 - 在高纬度地区（即美国北部，如密歇根州北部和缅因州）可能可见极光。",
+    "description_text": "",
+    "message_raw": "Space Weather Message Code: ALTK05\r\nSerial Number: 2012\r\nIssue Time: 2026 Apr 21 0153 UTC\r\n\r\nALERT: Geomagnetic K-index of 5\r\n Threshold Reached: 2026 Apr 21 0148 UTC\r\nSynoptic Period: 0000-0300 UTC\r\n \r\nActive Warning: Yes\r\nNOAA Scale: G1 - Minor\r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact primarily poleward of 60 degrees Geomagnetic Latitude.\r\nInduced Currents - Weak power grid fluctuations can occur.\r\nSpacecraft - Minor impact on satellite operations possible.\r\nAurora - Aurora may be visible at high latitudes, i.e., northern tier of the U.S. such as northern Michigan and Maine.",
+    "source_name": "SWPC Alerts",
+    "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
+    "fetched_at": "2026-04-21T06:07:07.217546+00:00",
+    "created_at": "2026-04-21 06:07:29",
+    "details": {
+      "space_weather_message_code": "ALTK05",
+      "serial_number": "2012",
+      "issue_time": "2026 Apr 21 0153 UTC",
+      "threshold_reached": "2026 Apr 21 0148 UTC",
+      "synoptic_period": "0000-0300 UTC",
+      "active_warning": "Yes",
+      "noaa_scale": "G1 - Minor"
+    }
+  },
+  {
+    "id": 340,
+    "dedupe_key": "K05W|2026-04-21 01:10:21.733|2228",
+    "product_id": "K05W",
+    "message_code": "WARK05",
+    "serial_number": "2228",
+    "issue_datetime": "2026-04-21T01:10:21.733000+00:00",
+    "issue_time_text": "2026-04-21T01:10:00+00:00",
+    "headline": "预警：预计地磁K指数为5",
+    "message_type": "warning",
+    "noaa_scale": "G1 - Minor",
+    "impacts_text": "影响区域主要在磁纬60度以北。感应电流 - 可能出现微弱的电网波动。航天器 - 可能对卫星运行产生轻微影响。极光 - 在高纬度地区（即美国北部，如密歇根州北部和缅因州）可能可见极光。",
+    "description_text": "",
+    "message_raw": "Space Weather Message Code: WARK05\r\nSerial Number: 2228\r\nIssue Time: 2026 Apr 21 0110 UTC\r\n\r\nWARNING: Geomagnetic K-index of 5 expected\r\nValid From: 2026 Apr 21 0110 UTC\r\nValid To: 2026 Apr 21 0600 UTC\r\nWarning Condition: Persistence\r\nNOAA Scale: G1 - Minor\r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact primarily poleward of 60 degrees Geomagnetic Latitude.\r\nInduced Currents - Weak power grid fluctuations can occur.\r\nSpacecraft - Minor impact on satellite operations possible.\r\nAurora - Aurora may be visible at high latitudes, i.e., northern tier of the U.S. such as northern Michigan and Maine.",
+    "source_name": "SWPC Alerts",
+    "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
+    "fetched_at": "2026-04-21T06:07:07.217546+00:00",
+    "created_at": "2026-04-21 06:07:29",
+    "details": {
+      "space_weather_message_code": "WARK05",
+      "serial_number": "2228",
+      "issue_time": "2026 Apr 21 0110 UTC",
+      "valid_from": "2026 Apr 21 0110 UTC",
+      "valid_to": "2026 Apr 21 0600 UTC",
+      "warning_condition": "Persistence",
+      "noaa_scale": "G1 - Minor"
+    }
+  },
+  {
+    "id": 339,
+    "dedupe_key": "K04W|2026-04-21 01:10:21.750|5324",
+    "product_id": "K04W",
+    "message_code": "WARK04",
+    "serial_number": "5324",
+    "issue_datetime": "2026-04-21T01:10:21.750000+00:00",
+    "issue_time_text": "2026-04-21T01:10:00+00:00",
+    "headline": "延长预警：预计地磁K指数为4",
+    "message_type": "extended_warning",
+    "noaa_scale": null,
+    "impacts_text": "影响区域主要在磁纬65度以北。感应电流 - 可能出现微弱的电网波动。极光 - 在加拿大和阿拉斯加等高纬度地区可能可见极光。",
+    "description_text": "",
+    "message_raw": "Space Weather Message Code: WARK04\r\nSerial Number: 5324\r\nIssue Time: 2026 Apr 21 0110 UTC\r\n\r\nEXTENDED WARNING: Geomagnetic K-index of 4 expected\r\nExtension to Serial Number: 5323\r\nValid From: 2026 Apr 20 0805 UTC\r\nNow Valid Until: 2026 Apr 21 1200 UTC\r\nWarning Condition: Persistence\r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact primarily poleward of 65 degrees Geomagnetic Latitude.\r\nInduced Currents - Weak power grid fluctuations can occur.\r\nAurora - Aurora may be visible at high latitudes such as Canada and Alaska.",
+    "source_name": "SWPC Alerts",
+    "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
+    "fetched_at": "2026-04-21T06:07:07.217546+00:00",
+    "created_at": "2026-04-21 06:07:29",
+    "details": {
+      "space_weather_message_code": "WARK04",
+      "serial_number": "5324",
+      "issue_time": "2026 Apr 21 0110 UTC",
+      "extension_to_serial_number": "5323",
+      "valid_from": "2026 Apr 20 0805 UTC",
+      "now_valid_until": "2026 Apr 21 1200 UTC",
+      "warning_condition": "Persistence"
+    }
+  },
+  {
+    "id": 341,
     "dedupe_key": "EF3A|2026-04-20 20:23:35.100|3680",
     "product_id": "EF3A",
     "message_code": "ALTEF3",
@@ -15,8 +155,8 @@
     "message_raw": "Space Weather Message Code: ALTEF3\r\nSerial Number: 3680\r\nIssue Time: 2026 Apr 20 2023 UTC\r\n\r\nCONTINUED ALERT: Electron 2MeV Integral Flux exceeded 1000pfu\r\nContinuation of Serial Number: 3679\r\nBegin Time: 2026 Apr 19 1920 UTC\r\nYesterday Maximum 2MeV Flux: 1297 pfu\r\n\r\n\r\n\r\nPotential Impacts: Satellite systems may experience significant charging resulting in increased risk to satellite systems.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-21T00:07:05.460231+00:00",
-    "created_at": "2026-04-21 00:07:07",
+    "fetched_at": "2026-04-21T06:07:07.217546+00:00",
+    "created_at": "2026-04-21 06:07:29",
     "details": {
       "space_weather_message_code": "ALTEF3",
       "serial_number": "3680",
@@ -27,7 +167,7 @@
     }
   },
   {
-    "id": 307,
+    "id": 342,
     "dedupe_key": "K05A|2026-04-20 19:34:54.467|1783",
     "product_id": "K05A",
     "message_code": "ALTK05",
@@ -42,8 +182,8 @@
     "message_raw": "\n    Space Weather Message Code: ALTK05\n\n    Serial Number: 1783\n\n    Issue Time: 2026-04-20T19:34:00\n\n    \n\n    ALERT: Geomagnetic K-index of 5 \nTHRESHOLD: 2026-04-20 19:34 UTC\nISSUED BY: Forecaster User\nSYNOPTIC PERIOD: 1800-2100\nACTIVE WARNING: YES\nNOAA SCALE: G1 - Minor\nCOMMENT: \n\n    \n\n    \n    G1 - Minor",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-21T00:07:05.460231+00:00",
-    "created_at": "2026-04-21 00:07:07",
+    "fetched_at": "2026-04-21T06:07:07.217546+00:00",
+    "created_at": "2026-04-21 06:07:29",
     "details": {
       "space_weather_message_code": "ALTK05",
       "serial_number": "1783",
@@ -57,7 +197,7 @@
     }
   },
   {
-    "id": 308,
+    "id": 343,
     "dedupe_key": "K05A|2026-04-20 17:36:08.423|1782",
     "product_id": "K05A",
     "message_code": "ALTK05",
@@ -72,8 +212,8 @@
     "message_raw": "\n    Space Weather Message Code: ALTK05\n\n    Serial Number: 1782\n\n    Issue Time: 2026-04-20T17:36:00\n\n    \n\n    ALERT: Geomagnetic K-index of 5 \nTHRESHOLD: 2026-04-20 17:34 UTC\nISSUED BY: Forecaster User\nSYNOPTIC PERIOD: 1500-1800\nACTIVE WARNING: YES\nNOAA SCALE: G1 - Minor\nCOMMENT: \n\n    \n\n    \n    G1 - Minor",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-21T00:07:05.460231+00:00",
-    "created_at": "2026-04-21 00:07:07",
+    "fetched_at": "2026-04-21T06:07:07.217546+00:00",
+    "created_at": "2026-04-21 06:07:29",
     "details": {
       "space_weather_message_code": "ALTK05",
       "serial_number": "1782",
@@ -87,7 +227,7 @@
     }
   },
   {
-    "id": 309,
+    "id": 344,
     "dedupe_key": "K04W|2026-04-20 17:21:37.853|5001",
     "product_id": "K04W",
     "message_code": "WARK04",
@@ -102,8 +242,8 @@
     "message_raw": "\n    Space Weather Message Code: WARK04\n\n    Serial Number: 5001\n\n    Issue Time: 2026-04-20T17:21:00\n\n    \n\n    EXTENDED WARNING: Geomagnetic K-index of 4 expected\nExtension to Serial Number: 5323\nValid From: 2026-04-20T08:05:00\nNow Valid Until: 2026-04-21 03:00\nWarning Condition: Persistence\nExtended 2026-04-20 17:21 by Forecaster User \n\n    \n\n    Extended 2026-04-20 17:21 by Forecaster User \n    ",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-21T00:07:05.460231+00:00",
-    "created_at": "2026-04-21 00:07:07",
+    "fetched_at": "2026-04-21T06:07:07.217546+00:00",
+    "created_at": "2026-04-21 06:07:29",
     "details": {
       "space_weather_message_code": "WARK04",
       "serial_number": "5001",
@@ -116,7 +256,7 @@
     }
   },
   {
-    "id": 310,
+    "id": 345,
     "dedupe_key": "K05W|2026-04-20 17:20:34.170|2065",
     "product_id": "K05W",
     "message_code": "WARK05",
@@ -131,8 +271,8 @@
     "message_raw": "\n    Space Weather Message Code: WARK05\n\n    Serial Number: 2065\n\n    Issue Time: 2026-04-20T17:20:00\n\n    \n\n    WARNING: Geomagnetic K-index of 5 expected \nISSUED BY: Forecaster User\nVALID FROM: 2026-04-20 17:20 UTC\nVALID TO: 2026-04-20 23:59 UTC\nWARNING CONDITIONS: Onset\nNOAA SCALE: G1 - Minor\nCOMMENT: \n\n    \n\n    \n    G1 - Minor",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-21T00:07:05.460231+00:00",
-    "created_at": "2026-04-21 00:07:07",
+    "fetched_at": "2026-04-21T06:07:07.217546+00:00",
+    "created_at": "2026-04-21 06:07:29",
     "details": {
       "space_weather_message_code": "WARK05",
       "serial_number": "2065",
@@ -146,7 +286,7 @@
     }
   },
   {
-    "id": 311,
+    "id": 346,
     "dedupe_key": "K04W|2026-04-20 14:20:35.673|5323",
     "product_id": "K04W",
     "message_code": "WARK04",
@@ -161,8 +301,8 @@
     "message_raw": "Space Weather Message Code: WARK04\r\nSerial Number: 5323\r\nIssue Time: 2026 Apr 20 1420 UTC\r\n\r\nEXTENDED WARNING: Geomagnetic K-index of 4 expected\r\nExtension to Serial Number: 5322\r\nValid From: 2026 Apr 20 0805 UTC\r\nNow Valid Until: 2026 Apr 20 2100 UTC\r\nWarning Condition: Onset\r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact primarily poleward of 65 degrees Geomagnetic Latitude.\r\nInduced Currents - Weak power grid fluctuations can occur.\r\nAurora - Aurora may be visible at high latitudes such as Canada and Alaska.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-21T00:07:05.460231+00:00",
-    "created_at": "2026-04-21 00:07:07",
+    "fetched_at": "2026-04-21T06:07:07.217546+00:00",
+    "created_at": "2026-04-21 06:07:29",
     "details": {
       "space_weather_message_code": "WARK04",
       "serial_number": "5323",
@@ -174,7 +314,7 @@
     }
   },
   {
-    "id": 312,
+    "id": 347,
     "dedupe_key": "K04A|2026-04-20 08:19:55.567|2651",
     "product_id": "K04A",
     "message_code": "ALTK04",
@@ -189,8 +329,8 @@
     "message_raw": "Space Weather Message Code: ALTK04\r\nSerial Number: 2651\r\nIssue Time: 2026 Apr 20 0819 UTC\r\n\r\nALERT: Geomagnetic K-index of 4\r\n Threshold Reached: 2026 Apr 20 0820 UTC\r\nSynoptic Period: 0600-0900 UTC\r\n \r\nActive Warning: Yes\r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact primarily poleward of 65 degrees Geomagnetic Latitude.\r\nInduced Currents - Weak power grid fluctuations can occur.\r\nAurora - Aurora may be visible at high latitudes such as Canada and Alaska.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-21T00:07:05.460231+00:00",
-    "created_at": "2026-04-21 00:07:07",
+    "fetched_at": "2026-04-21T06:07:07.217546+00:00",
+    "created_at": "2026-04-21 06:07:29",
     "details": {
       "space_weather_message_code": "ALTK04",
       "serial_number": "2651",
@@ -201,7 +341,7 @@
     }
   },
   {
-    "id": 313,
+    "id": 348,
     "dedupe_key": "K04W|2026-04-20 08:05:35.553|5322",
     "product_id": "K04W",
     "message_code": "WARK04",
@@ -216,8 +356,8 @@
     "message_raw": "Space Weather Message Code: WARK04\r\nSerial Number: 5322\r\nIssue Time: 2026 Apr 20 0805 UTC\r\n\r\nWARNING: Geomagnetic K-index of 4 expected\r\nValid From: 2026 Apr 20 0805 UTC\r\nValid To: 2026 Apr 20 1500 UTC\r\nWarning Condition: Onset\r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact primarily poleward of 65 degrees Geomagnetic Latitude.\r\nInduced Currents - Weak power grid fluctuations can occur.\r\nAurora - Aurora may be visible at high latitudes such as Canada and Alaska.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-21T00:07:05.460231+00:00",
-    "created_at": "2026-04-21 00:07:07",
+    "fetched_at": "2026-04-21T06:07:07.217546+00:00",
+    "created_at": "2026-04-21 06:07:29",
     "details": {
       "space_weather_message_code": "WARK04",
       "serial_number": "5322",
@@ -228,7 +368,7 @@
     }
   },
   {
-    "id": 314,
+    "id": 349,
     "dedupe_key": "EF3A|2026-04-19 19:47:15.250|3679",
     "product_id": "EF3A",
     "message_code": "ALTEF3",
@@ -243,8 +383,8 @@
     "message_raw": "Space Weather Message Code: ALTEF3\r\nSerial Number: 3679\r\nIssue Time: 2026 Apr 19 1947 UTC\r\n\r\nALERT: Electron 2MeV Integral Flux exceeded 1000pfu\r\nThreshold Reached: 2026 Apr 19 1920 UTC\r\nStation: GOES19\r\n \r\n\r\n\r\n\r\nPotential Impacts: Satellite systems may experience significant charging resulting in increased risk to satellite systems.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-21T00:07:05.460231+00:00",
-    "created_at": "2026-04-21 00:07:07",
+    "fetched_at": "2026-04-21T06:07:07.217546+00:00",
+    "created_at": "2026-04-21 06:07:29",
     "details": {
       "space_weather_message_code": "ALTEF3",
       "serial_number": "3679",
@@ -254,7 +394,7 @@
     }
   },
   {
-    "id": 315,
+    "id": 350,
     "dedupe_key": "K06A|2026-04-19 09:00:54.210|714",
     "product_id": "K06A",
     "message_code": "ALTK06",
@@ -269,8 +409,8 @@
     "message_raw": "Space Weather Message Code: ALTK06\r\nSerial Number: 714\r\nIssue Time: 2026 Apr 19 0900 UTC\r\n\r\nALERT: Geomagnetic K-index of 6\r\n Threshold Reached: 2026 Apr 19 0859 UTC\r\nSynoptic Period: 0600-0900 UTC\r\n \r\nActive Warning: Yes\r\nNOAA Scale: G2 - Moderate\r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact primarily poleward of 55 degrees Geomagnetic Latitude.\r\nInduced Currents - Power grid fluctuations can occur. High-latitude power systems may experience voltage alarms.\r\nSpacecraft - Satellite orientation irregularities may occur; increased drag on low Earth-orbit satellites is possible.\r\nRadio - HF (high frequency) radio propagation can fade at higher latitudes.\r\nAurora - Aurora may be seen as low as New York to Wisconsin to Washington state.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-21T00:07:05.460231+00:00",
-    "created_at": "2026-04-21 00:07:07",
+    "fetched_at": "2026-04-21T06:07:07.217546+00:00",
+    "created_at": "2026-04-21 06:07:29",
     "details": {
       "space_weather_message_code": "ALTK06",
       "serial_number": "714",
@@ -282,7 +422,7 @@
     }
   },
   {
-    "id": 318,
+    "id": 353,
     "dedupe_key": "K04W|2026-04-19 08:49:33.510|5321",
     "product_id": "K04W",
     "message_code": "WARK04",
@@ -297,8 +437,8 @@
     "message_raw": "Space Weather Message Code: WARK04\r\nSerial Number: 5321\r\nIssue Time: 2026 Apr 19 0849 UTC\r\n\r\nEXTENDED WARNING: Geomagnetic K-index of 4 expected\r\nExtension to Serial Number: 5320\r\nValid From: 2026 Apr 18 0157 UTC\r\nNow Valid Until: 2026 Apr 19 2359 UTC\r\nWarning Condition: Persistence\r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact primarily poleward of 65 degrees Geomagnetic Latitude.\r\nInduced Currents - Weak power grid fluctuations can occur.\r\nAurora - Aurora may be visible at high latitudes such as Canada and Alaska.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-21T00:07:05.460231+00:00",
-    "created_at": "2026-04-21 00:07:07",
+    "fetched_at": "2026-04-21T06:07:07.217546+00:00",
+    "created_at": "2026-04-21 06:07:29",
     "details": {
       "space_weather_message_code": "WARK04",
       "serial_number": "5321",
@@ -310,7 +450,7 @@
     }
   },
   {
-    "id": 317,
+    "id": 352,
     "dedupe_key": "K06W|2026-04-19 08:49:33.517|655",
     "product_id": "K06W",
     "message_code": "WARK06",
@@ -325,8 +465,8 @@
     "message_raw": "Space Weather Message Code: WARK06\r\nSerial Number: 655\r\nIssue Time: 2026 Apr 19 0849 UTC\r\n\r\nWARNING: Geomagnetic K-Index of 6 expected\r\nValid From: 2026 Apr 19 0848 UTC\r\nValid To: 2026 Apr 19 1500 UTC\r\nWarning Condition: Onset\r\nNOAA Scale: G2 - Moderate\r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact primarily poleward of 55 degrees Geomagnetic Latitude.\r\nInduced Currents - Power grid fluctuations can occur. High-latitude power systems may experience voltage alarms.\r\nSpacecraft - Satellite orientation irregularities may occur; increased drag on low Earth-orbit satellites is possible.\r\nRadio - HF (high frequency) radio propagation can fade at higher latitudes.\r\nAurora - Aurora may be seen as low as New York to Wisconsin to Washington state.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-21T00:07:05.460231+00:00",
-    "created_at": "2026-04-21 00:07:07",
+    "fetched_at": "2026-04-21T06:07:07.217546+00:00",
+    "created_at": "2026-04-21 06:07:29",
     "details": {
       "space_weather_message_code": "WARK06",
       "serial_number": "655",
@@ -338,7 +478,7 @@
     }
   },
   {
-    "id": 316,
+    "id": 351,
     "dedupe_key": "K05W|2026-04-19 08:49:33.523|2227",
     "product_id": "K05W",
     "message_code": "WARK05",
@@ -353,8 +493,8 @@
     "message_raw": "Space Weather Message Code: WARK05\r\nSerial Number: 2227\r\nIssue Time: 2026 Apr 19 0849 UTC\r\n\r\nEXTENDED WARNING: Geomagnetic K-index of 5 expected\r\nExtension to Serial Number: 2226\r\nValid From: 2026 Apr 18 2348 UTC\r\nNow Valid Until: 2026 Apr 19 1800 UTC\r\nWarning Condition: Persistence\r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact primarily poleward of 60 degrees Geomagnetic Latitude.\r\nInduced Currents - Weak power grid fluctuations can occur.\r\nSpacecraft - Minor impact on satellite operations possible.\r\nAurora - Aurora may be visible at high latitudes, i.e., northern tier of the U.S. such as northern Michigan and Maine.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-21T00:07:05.460231+00:00",
-    "created_at": "2026-04-21 00:07:07",
+    "fetched_at": "2026-04-21T06:07:07.217546+00:00",
+    "created_at": "2026-04-21 06:07:29",
     "details": {
       "space_weather_message_code": "WARK05",
       "serial_number": "2227",
@@ -366,7 +506,7 @@
     }
   },
   {
-    "id": 319,
+    "id": 354,
     "dedupe_key": "K05A|2026-04-19 06:50:21.947|2011",
     "product_id": "K05A",
     "message_code": "ALTK05",
@@ -381,8 +521,8 @@
     "message_raw": "Space Weather Message Code: ALTK05\r\nSerial Number: 2011\r\nIssue Time: 2026 Apr 19 0650 UTC\r\n\r\nALERT: Geomagnetic K-index of 5\r\n Threshold Reached: 2026 Apr 19 0650 UTC\r\nSynoptic Period: 0600-0900 UTC\r\n \r\nActive Warning: Yes\r\nNOAA Scale: G1 - Minor\r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact primarily poleward of 60 degrees Geomagnetic Latitude.\r\nInduced Currents - Weak power grid fluctuations can occur.\r\nSpacecraft - Minor impact on satellite operations possible.\r\nAurora - Aurora may be visible at high latitudes, i.e., northern tier of the U.S. such as northern Michigan and Maine.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-21T00:07:05.460231+00:00",
-    "created_at": "2026-04-21 00:07:07",
+    "fetched_at": "2026-04-21T06:07:07.217546+00:00",
+    "created_at": "2026-04-21 06:07:29",
     "details": {
       "space_weather_message_code": "ALTK05",
       "serial_number": "2011",
@@ -394,7 +534,7 @@
     }
   },
   {
-    "id": 322,
+    "id": 357,
     "dedupe_key": "K04W|2026-04-19 06:04:37.580|5320",
     "product_id": "K04W",
     "message_code": "WARK04",
@@ -409,8 +549,8 @@
     "message_raw": "Space Weather Message Code: WARK04\r\nSerial Number: 5320\r\nIssue Time: 2026 Apr 19 0604 UTC\r\n\r\nEXTENDED WARNING: Geomagnetic K-index of 4 expected\r\nExtension to Serial Number: 5319\r\nValid From: 2026 Apr 18 0157 UTC\r\nNow Valid Until: 2026 Apr 19 1500 UTC\r\nWarning Condition: Persistence\r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact primarily poleward of 65 degrees Geomagnetic Latitude.\r\nInduced Currents - Weak power grid fluctuations can occur.\r\nAurora - Aurora may be visible at high latitudes such as Canada and Alaska.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-21T00:07:05.460231+00:00",
-    "created_at": "2026-04-21 00:07:07",
+    "fetched_at": "2026-04-21T06:07:07.217546+00:00",
+    "created_at": "2026-04-21 06:07:29",
     "details": {
       "space_weather_message_code": "WARK04",
       "serial_number": "5320",
@@ -422,7 +562,7 @@
     }
   },
   {
-    "id": 321,
+    "id": 356,
     "dedupe_key": "K05W|2026-04-19 06:04:37.590|2226",
     "product_id": "K05W",
     "message_code": "WARK05",
@@ -437,8 +577,8 @@
     "message_raw": "Space Weather Message Code: WARK05\r\nSerial Number: 2226\r\nIssue Time: 2026 Apr 19 0604 UTC\r\n\r\nEXTENDED WARNING: Geomagnetic K-index of 5 expected\r\nExtension to Serial Number: 2225\r\nValid From: 2026 Apr 18 2348 UTC\r\nNow Valid Until: 2026 Apr 19 1200 UTC\r\nWarning Condition: Persistence\r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact primarily poleward of 60 degrees Geomagnetic Latitude.\r\nInduced Currents - Weak power grid fluctuations can occur.\r\nSpacecraft - Minor impact on satellite operations possible.\r\nAurora - Aurora may be visible at high latitudes, i.e., northern tier of the U.S. such as northern Michigan and Maine.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-21T00:07:05.460231+00:00",
-    "created_at": "2026-04-21 00:07:07",
+    "fetched_at": "2026-04-21T06:07:07.217546+00:00",
+    "created_at": "2026-04-21 06:07:29",
     "details": {
       "space_weather_message_code": "WARK05",
       "serial_number": "2226",
@@ -450,7 +590,7 @@
     }
   },
   {
-    "id": 320,
+    "id": 355,
     "dedupe_key": "K05A|2026-04-19 06:04:37.593|2010",
     "product_id": "K05A",
     "message_code": "ALTK05",
@@ -465,8 +605,8 @@
     "message_raw": "Space Weather Message Code: ALTK05\r\nSerial Number: 2010\r\nIssue Time: 2026 Apr 19 0604 UTC\r\n\r\nALERT: Geomagnetic K-index of 5\r\n Threshold Reached: 2026 Apr 19 0559 UTC\r\nSynoptic Period: 0300-0600 UTC\r\n \r\nActive Warning: Yes\r\nNOAA Scale: G1 - Minor\r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact primarily poleward of 60 degrees Geomagnetic Latitude.\r\nInduced Currents - Weak power grid fluctuations can occur.\r\nSpacecraft - Minor impact on satellite operations possible.\r\nAurora - Aurora may be visible at high latitudes, i.e., northern tier of the U.S. such as northern Michigan and Maine.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-21T00:07:05.460231+00:00",
-    "created_at": "2026-04-21 00:07:07",
+    "fetched_at": "2026-04-21T06:07:07.217546+00:00",
+    "created_at": "2026-04-21 06:07:29",
     "details": {
       "space_weather_message_code": "ALTK05",
       "serial_number": "2010",
@@ -478,7 +618,7 @@
     }
   },
   {
-    "id": 323,
+    "id": 358,
     "dedupe_key": "K05W|2026-04-18 23:50:14.537|2225",
     "product_id": "K05W",
     "message_code": "WARK05",
@@ -493,8 +633,8 @@
     "message_raw": "Space Weather Message Code: WARK05\r\nSerial Number: 2225\r\nIssue Time: 2026 Apr 18 2350 UTC\r\n\r\nWARNING: Geomagnetic K-index of 5 expected\r\nValid From: 2026 Apr 18 2348 UTC\r\nValid To: 2026 Apr 19 0900 UTC\r\nWarning Condition: Onset\r\nNOAA Scale: G1 - Minor\r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact primarily poleward of 60 degrees Geomagnetic Latitude.\r\nInduced Currents - Weak power grid fluctuations can occur.\r\nSpacecraft - Minor impact on satellite operations possible.\r\nAurora - Aurora may be visible at high latitudes, i.e., northern tier of the U.S. such as northern Michigan and Maine.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-21T00:07:05.460231+00:00",
-    "created_at": "2026-04-21 00:07:07",
+    "fetched_at": "2026-04-21T06:07:07.217546+00:00",
+    "created_at": "2026-04-21 06:07:29",
     "details": {
       "space_weather_message_code": "WARK05",
       "serial_number": "2225",
@@ -506,7 +646,7 @@
     }
   },
   {
-    "id": 324,
+    "id": 359,
     "dedupe_key": "K04W|2026-04-18 22:46:07.617|5319",
     "product_id": "K04W",
     "message_code": "WARK04",
@@ -521,8 +661,8 @@
     "message_raw": "Space Weather Message Code: WARK04\r\nSerial Number: 5319\r\nIssue Time: 2026 Apr 18 2246 UTC\r\n\r\nEXTENDED WARNING: Geomagnetic K-index of 4 expected\r\nExtension to Serial Number: 5318\r\nValid From: 2026 Apr 18 0157 UTC\r\nNow Valid Until: 2026 Apr 19 1200 UTC\r\nWarning Condition: Persistence\r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact primarily poleward of 65 degrees Geomagnetic Latitude.\r\nInduced Currents - Weak power grid fluctuations can occur.\r\nAurora - Aurora may be visible at high latitudes such as Canada and Alaska.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-21T00:07:05.460231+00:00",
-    "created_at": "2026-04-21 00:07:07",
+    "fetched_at": "2026-04-21T06:07:07.217546+00:00",
+    "created_at": "2026-04-21 06:07:29",
     "details": {
       "space_weather_message_code": "WARK04",
       "serial_number": "5319",
@@ -534,7 +674,7 @@
     }
   },
   {
-    "id": 325,
+    "id": 360,
     "dedupe_key": "K05A|2026-04-18 11:24:53.590|2009",
     "product_id": "K05A",
     "message_code": "ALTK05",
@@ -549,8 +689,8 @@
     "message_raw": "Space Weather Message Code: ALTK05\r\nSerial Number: 2009\r\nIssue Time: 2026 Apr 18 1124 UTC\r\n\r\nALERT: Geomagnetic K-index of 5\r\n Threshold Reached: 2026 Apr 18 1124 UTC\r\nSynoptic Period: 0900-1200 UTC\r\n \r\nActive Warning: Yes\r\nNOAA Scale: G1 - Minor\r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact primarily poleward of 60 degrees Geomagnetic Latitude.\r\nInduced Currents - Weak power grid fluctuations can occur.\r\nSpacecraft - Minor impact on satellite operations possible.\r\nAurora - Aurora may be visible at high latitudes, i.e., northern tier of the U.S. such as northern Michigan and Maine.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-21T00:07:05.460231+00:00",
-    "created_at": "2026-04-21 00:07:07",
+    "fetched_at": "2026-04-21T06:07:07.217546+00:00",
+    "created_at": "2026-04-21 06:07:29",
     "details": {
       "space_weather_message_code": "ALTK05",
       "serial_number": "2009",
@@ -562,7 +702,7 @@
     }
   },
   {
-    "id": 326,
+    "id": 361,
     "dedupe_key": "K06A|2026-04-18 08:25:57.307|713",
     "product_id": "K06A",
     "message_code": "ALTK06",
@@ -577,8 +717,8 @@
     "message_raw": "Space Weather Message Code: ALTK06\r\nSerial Number: 713\r\nIssue Time: 2026 Apr 18 0825 UTC\r\n\r\nALERT: Geomagnetic K-index of 6\r\n Threshold Reached: 2026 Apr 18 0825 UTC\r\nSynoptic Period: 0600-0900 UTC\r\n \r\nActive Warning: Yes\r\nNOAA Scale: G2 - Moderate\r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact primarily poleward of 55 degrees Geomagnetic Latitude.\r\nInduced Currents - Power grid fluctuations can occur. High-latitude power systems may experience voltage alarms.\r\nSpacecraft - Satellite orientation irregularities may occur; increased drag on low Earth-orbit satellites is possible.\r\nRadio - HF (high frequency) radio propagation can fade at higher latitudes.\r\nAurora - Aurora may be seen as low as New York to Wisconsin to Washington state.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-21T00:07:05.460231+00:00",
-    "created_at": "2026-04-21 00:07:07",
+    "fetched_at": "2026-04-21T06:07:07.217546+00:00",
+    "created_at": "2026-04-21 06:07:29",
     "details": {
       "space_weather_message_code": "ALTK06",
       "serial_number": "713",
@@ -590,7 +730,7 @@
     }
   },
   {
-    "id": 327,
+    "id": 362,
     "dedupe_key": "K06W|2026-04-18 07:52:01.750|654",
     "product_id": "K06W",
     "message_code": "WARK06",
@@ -605,8 +745,8 @@
     "message_raw": "Space Weather Message Code: WARK06\r\nSerial Number: 654\r\nIssue Time: 2026 Apr 18 0752 UTC\r\n\r\nWARNING: Geomagnetic K-Index of 6 expected\r\nValid From: 2026 Apr 18 0751 UTC\r\nValid To: 2026 Apr 18 1500 UTC\r\nWarning Condition: Onset\r\nNOAA Scale: G2 - Moderate\r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact primarily poleward of 55 degrees Geomagnetic Latitude.\r\nInduced Currents - Power grid fluctuations can occur. High-latitude power systems may experience voltage alarms.\r\nSpacecraft - Satellite orientation irregularities may occur; increased drag on low Earth-orbit satellites is possible.\r\nRadio - HF (high frequency) radio propagation can fade at higher latitudes.\r\nAurora - Aurora may be seen as low as New York to Wisconsin to Washington state.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-21T00:07:05.460231+00:00",
-    "created_at": "2026-04-21 00:07:07",
+    "fetched_at": "2026-04-21T06:07:07.217546+00:00",
+    "created_at": "2026-04-21 06:07:29",
     "details": {
       "space_weather_message_code": "WARK06",
       "serial_number": "654",
@@ -618,7 +758,7 @@
     }
   },
   {
-    "id": 328,
+    "id": 363,
     "dedupe_key": "K05A|2026-04-18 07:41:23.010|2008",
     "product_id": "K05A",
     "message_code": "ALTK05",
@@ -633,8 +773,8 @@
     "message_raw": "Space Weather Message Code: ALTK05\r\nSerial Number: 2008\r\nIssue Time: 2026 Apr 18 0741 UTC\r\n\r\nALERT: Geomagnetic K-index of 5\r\n Threshold Reached: 2026 Apr 18 0740 UTC\r\nSynoptic Period: 0600-0900 UTC\r\n \r\nActive Warning: Yes\r\nNOAA Scale: G1 - Minor\r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact primarily poleward of 60 degrees Geomagnetic Latitude.\r\nInduced Currents - Weak power grid fluctuations can occur.\r\nSpacecraft - Minor impact on satellite operations possible.\r\nAurora - Aurora may be visible at high latitudes, i.e., northern tier of the U.S. such as northern Michigan and Maine.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-21T00:07:05.460231+00:00",
-    "created_at": "2026-04-21 00:07:07",
+    "fetched_at": "2026-04-21T06:07:07.217546+00:00",
+    "created_at": "2026-04-21 06:07:29",
     "details": {
       "space_weather_message_code": "ALTK05",
       "serial_number": "2008",
@@ -646,7 +786,7 @@
     }
   },
   {
-    "id": 329,
+    "id": 364,
     "dedupe_key": "K05A|2026-04-18 05:28:34.430|2007",
     "product_id": "K05A",
     "message_code": "ALTK05",
@@ -661,8 +801,8 @@
     "message_raw": "Space Weather Message Code: ALTK05\r\nSerial Number: 2007\r\nIssue Time: 2026 Apr 18 0528 UTC\r\n\r\nALERT: Geomagnetic K-index of 5\r\n Threshold Reached: 2026 Apr 18 0525 UTC\r\nSynoptic Period: 0300-0600 UTC\r\n \r\nActive Warning: Yes\r\nNOAA Scale: G1 - Minor\r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact primarily poleward of 60 degrees Geomagnetic Latitude.\r\nInduced Currents - Weak power grid fluctuations can occur.\r\nSpacecraft - Minor impact on satellite operations possible.\r\nAurora - Aurora may be visible at high latitudes, i.e., northern tier of the U.S. such as northern Michigan and Maine.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-21T00:07:05.460231+00:00",
-    "created_at": "2026-04-21 00:07:07",
+    "fetched_at": "2026-04-21T06:07:07.217546+00:00",
+    "created_at": "2026-04-21 06:07:29",
     "details": {
       "space_weather_message_code": "ALTK05",
       "serial_number": "2007",
@@ -674,7 +814,7 @@
     }
   },
   {
-    "id": 330,
+    "id": 365,
     "dedupe_key": "K04A|2026-04-18 04:14:45.980|2650",
     "product_id": "K04A",
     "message_code": "ALTK04",
@@ -689,8 +829,8 @@
     "message_raw": "Space Weather Message Code: ALTK04\r\nSerial Number: 2650\r\nIssue Time: 2026 Apr 18 0414 UTC\r\n\r\nALERT: Geomagnetic K-index of 4\r\n Threshold Reached: 2026 Apr 18 0414 UTC\r\nSynoptic Period: 0300-0600 UTC\r\n \r\nActive Warning: Yes\r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact primarily poleward of 65 degrees Geomagnetic Latitude.\r\nInduced Currents - Weak power grid fluctuations can occur.\r\nAurora - Aurora may be visible at high latitudes such as Canada and Alaska.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-21T00:07:05.460231+00:00",
-    "created_at": "2026-04-21 00:07:07",
+    "fetched_at": "2026-04-21T06:07:07.217546+00:00",
+    "created_at": "2026-04-21 06:07:29",
     "details": {
       "space_weather_message_code": "ALTK04",
       "serial_number": "2650",
@@ -698,141 +838,6 @@
       "threshold_reached": "2026 Apr 18 0414 UTC",
       "synoptic_period": "0300-0600 UTC",
       "active_warning": "Yes"
-    }
-  },
-  {
-    "id": 331,
-    "dedupe_key": "K05W|2026-04-18 03:17:54.987|2224",
-    "product_id": "K05W",
-    "message_code": "WARK05",
-    "serial_number": "2224",
-    "issue_datetime": "2026-04-18T03:17:54.987000+00:00",
-    "issue_time_text": "2026-04-18T03:17:00+00:00",
-    "headline": "WARNING: Geomagnetic K-index of 5 expected",
-    "message_type": "warning",
-    "noaa_scale": "G1 - Minor",
-    "impacts_text": "Area of impact primarily poleward of 60 degrees Geomagnetic Latitude. Induced Currents - Weak power grid fluctuations can occur. Spacecraft - Minor impact on satellite operations possible. Aurora - Aurora may be visible at high latitudes, i.e., northern tier of the U.S. such as northern Michigan and Maine.",
-    "description_text": "",
-    "message_raw": "Space Weather Message Code: WARK05\r\nSerial Number: 2224\r\nIssue Time: 2026 Apr 18 0317 UTC\r\n\r\nWARNING: Geomagnetic K-index of 5 expected\r\nValid From: 2026 Apr 18 0317 UTC\r\nValid To: 2026 Apr 18 1800 UTC\r\nWarning Condition: Onset\r\nNOAA Scale: G1 - Minor\r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact primarily poleward of 60 degrees Geomagnetic Latitude.\r\nInduced Currents - Weak power grid fluctuations can occur.\r\nSpacecraft - Minor impact on satellite operations possible.\r\nAurora - Aurora may be visible at high latitudes, i.e., northern tier of the U.S. such as northern Michigan and Maine.",
-    "source_name": "SWPC Alerts",
-    "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-21T00:07:05.460231+00:00",
-    "created_at": "2026-04-21 00:07:07",
-    "details": {
-      "space_weather_message_code": "WARK05",
-      "serial_number": "2224",
-      "issue_time": "2026 Apr 18 0317 UTC",
-      "valid_from": "2026 Apr 18 0317 UTC",
-      "valid_to": "2026 Apr 18 1800 UTC",
-      "warning_condition": "Onset",
-      "noaa_scale": "G1 - Minor"
-    }
-  },
-  {
-    "id": 332,
-    "dedupe_key": "K04W|2026-04-18 01:58:19.460|5318",
-    "product_id": "K04W",
-    "message_code": "WARK04",
-    "serial_number": "5318",
-    "issue_datetime": "2026-04-18T01:58:19.460000+00:00",
-    "issue_time_text": "2026-04-18T01:58:00+00:00",
-    "headline": "WARNING: Geomagnetic K-index of 4 expected",
-    "message_type": "warning",
-    "noaa_scale": null,
-    "impacts_text": "Area of impact primarily poleward of 65 degrees Geomagnetic Latitude. Induced Currents - Weak power grid fluctuations can occur. Aurora - Aurora may be visible at high latitudes such as Canada and Alaska.",
-    "description_text": "",
-    "message_raw": "Space Weather Message Code: WARK04\r\nSerial Number: 5318\r\nIssue Time: 2026 Apr 18 0158 UTC\r\n\r\nWARNING: Geomagnetic K-index of 4 expected\r\nValid From: 2026 Apr 18 0157 UTC\r\nValid To: 2026 Apr 18 2359 UTC\r\nWarning Condition: Onset\r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact primarily poleward of 65 degrees Geomagnetic Latitude.\r\nInduced Currents - Weak power grid fluctuations can occur.\r\nAurora - Aurora may be visible at high latitudes such as Canada and Alaska.",
-    "source_name": "SWPC Alerts",
-    "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-21T00:07:05.460231+00:00",
-    "created_at": "2026-04-21 00:07:07",
-    "details": {
-      "space_weather_message_code": "WARK04",
-      "serial_number": "5318",
-      "issue_time": "2026 Apr 18 0158 UTC",
-      "valid_from": "2026 Apr 18 0157 UTC",
-      "valid_to": "2026 Apr 18 2359 UTC",
-      "warning_condition": "Onset"
-    }
-  },
-  {
-    "id": 333,
-    "dedupe_key": "EF3A|2026-04-17 07:31:42.253|3678",
-    "product_id": "EF3A",
-    "message_code": "ALTEF3",
-    "serial_number": "3678",
-    "issue_datetime": "2026-04-17T07:31:42.253000+00:00",
-    "issue_time_text": "2026-04-17T07:31:00+00:00",
-    "headline": "持续警报：电子 2MeV 积分通量超过 1000pfu",
-    "message_type": "continued_alert",
-    "noaa_scale": null,
-    "impacts_text": "卫星系统可能会经历显著充电，导致卫星系统风险增加。",
-    "description_text": "",
-    "message_raw": "Space Weather Message Code: ALTEF3\r\nSerial Number: 3678\r\nIssue Time: 2026 Apr 17 0731 UTC\r\n\r\nCONTINUED ALERT: Electron 2MeV Integral Flux exceeded 1000pfu\r\nContinuation of Serial Number: 3677\r\nBegin Time: 2026 Apr 03 0920 UTC\r\nYesterday Maximum 2MeV Flux: 2407 pfu\r\n\r\n\r\n\r\nPotential Impacts: Satellite systems may experience significant charging resulting in increased risk to satellite systems.",
-    "source_name": "SWPC Alerts",
-    "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-21T00:07:05.460231+00:00",
-    "created_at": "2026-04-21 00:07:07",
-    "details": {
-      "space_weather_message_code": "ALTEF3",
-      "serial_number": "3678",
-      "issue_time": "2026 Apr 17 0731 UTC",
-      "continuation_of_serial_number": "3677",
-      "begin_time": "2026 Apr 03 0920 UTC",
-      "yesterday_maximum_2mev_flux": "2407 pfu"
-    }
-  },
-  {
-    "id": 334,
-    "dedupe_key": "A20F|2026-04-16 22:09:52.840|1108",
-    "product_id": "A20F",
-    "message_code": "WATA20",
-    "serial_number": "1108",
-    "issue_datetime": "2026-04-16T22:09:52.840000+00:00",
-    "issue_time_text": "2026-04-16T22:09:00+00:00",
-    "headline": "观看：预计将出现G1级地磁风暴",
-    "message_type": "watch",
-    "noaa_scale": null,
-    "impacts_text": "影响区域主要在磁纬60度以北。感应电流 - 可能出现微弱的电网波动。航天器 - 可能对卫星运行产生轻微影响。极光 - 在高纬度地区（例如美国北部地区，如密歇根州北部和缅因州）可能可见极光。",
-    "description_text": "",
-    "message_raw": "Space Weather Message Code: WATA20\r\nSerial Number: 1108\r\nIssue Time: 2026 Apr 16 2209 UTC\r\n\r\nWATCH: Geomagnetic Storm Category G1 Predicted\r\n\r\nHighest Storm Level Predicted by Day:\r\nApr 17:  G2 (Moderate)   Apr 18:  G2 (Moderate)   Apr 19:  G1 (Minor)\r\n\r\nTHIS SUPERSEDES ANY/ALL PRIOR WATCHES IN EFFECT\r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact primarily poleward of 60 degrees Geomagnetic Latitude.\r\nInduced Currents - Weak power grid fluctuations can occur.\r\nSpacecraft - Minor impact on satellite operations possible.\r\nAurora - Aurora may be visible at high latitudes, i.e., northern tier of the U.S. such as northern Michigan and Maine.",
-    "source_name": "SWPC Alerts",
-    "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-21T00:07:05.460231+00:00",
-    "created_at": "2026-04-21 00:07:07",
-    "details": {
-      "space_weather_message_code": "WATA20",
-      "serial_number": "1108",
-      "issue_time": "2026 Apr 16 2209 UTC",
-      "highest_storm_level_predicted_by_day": "",
-      "apr_17": "G2 (Moderate)   Apr 18:  G2 (Moderate)   Apr 19:  G1 (Minor)"
-    }
-  },
-  {
-    "id": 335,
-    "dedupe_key": "EF3A|2026-04-16 13:23:26.330|3677",
-    "product_id": "EF3A",
-    "message_code": "ALTEF3",
-    "serial_number": "3677",
-    "issue_datetime": "2026-04-16T13:23:26.330000+00:00",
-    "issue_time_text": "2026-04-16T13:23:00+00:00",
-    "headline": "持续警报：2MeV电子积分通量超过1000pfu",
-    "message_type": "continued_alert",
-    "noaa_scale": null,
-    "impacts_text": "卫星系统可能会经历显著充电，导致卫星系统风险增加。",
-    "description_text": "",
-    "message_raw": "Space Weather Message Code: ALTEF3\r\nSerial Number: 3677\r\nIssue Time: 2026 Apr 16 1323 UTC\r\n\r\nCONTINUED ALERT: Electron 2MeV Integral Flux exceeded 1000pfu\r\nContinuation of Serial Number: 3676\r\nBegin Time: 2026 Apr 03 0920 UTC\r\nYesterday Maximum 2MeV Flux: 3248 pfu\r\n\r\n\r\n\r\nPotential Impacts: Satellite systems may experience significant charging resulting in increased risk to satellite systems.",
-    "source_name": "SWPC Alerts",
-    "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-21T00:07:05.460231+00:00",
-    "created_at": "2026-04-21 00:07:07",
-    "details": {
-      "space_weather_message_code": "ALTEF3",
-      "serial_number": "3677",
-      "issue_time": "2026 Apr 16 1323 UTC",
-      "continuation_of_serial_number": "3676",
-      "begin_time": "2026 Apr 03 0920 UTC",
-      "yesterday_maximum_2mev_flux": "3248 pfu"
     }
   }
 ]

@@ -1,48 +1,48 @@
 [
   {
-    "id": 3961,
+    "id": 3967,
     "quote_key": "wti",
     "name": "WTI Crude",
-    "price": 92.89,
+    "price": 92.97,
     "unit": "USD/bbl",
-    "change": 3.22,
-    "change_percent": 3.59,
+    "change": 3.3,
+    "change_percent": 3.68,
     "timestamp_text": null,
     "source_name": "OilPrice.com",
     "source_url": "https://oilprice.com/oil-price-charts/",
     "provider_used": "oilprice_charts",
     "is_delayed": 1,
     "delay_note": "10-Minute Delay",
-    "fetched_at": "2026-04-22T19:02:05.224389+00:00",
-    "created_at": "2026-04-22 19:02:05",
+    "fetched_at": "2026-04-22T19:17:05.696678+00:00",
+    "created_at": "2026-04-22 19:17:05",
     "extra": {
       "matched_name": "WTI Crude",
       "parsed_from": "oilprice_table_row"
     }
   },
   {
-    "id": 3962,
+    "id": 3968,
     "quote_key": "brent",
     "name": "Brent Crude",
-    "price": 101.88,
+    "price": 101.96,
     "unit": "USD/bbl",
-    "change": 3.4,
-    "change_percent": 3.45,
+    "change": 3.48,
+    "change_percent": 3.53,
     "timestamp_text": null,
     "source_name": "OilPrice.com",
     "source_url": "https://oilprice.com/oil-price-charts/",
     "provider_used": "oilprice_charts",
     "is_delayed": 1,
     "delay_note": "10-Minute Delay",
-    "fetched_at": "2026-04-22T19:02:05.224389+00:00",
-    "created_at": "2026-04-22 19:02:05",
+    "fetched_at": "2026-04-22T19:17:05.696678+00:00",
+    "created_at": "2026-04-22 19:17:05",
     "extra": {
       "matched_name": "Brent Crude",
       "parsed_from": "oilprice_table_row"
     }
   },
   {
-    "id": 3963,
+    "id": 3969,
     "quote_key": "murban",
     "name": "Murban Crude",
     "price": 100.99,
@@ -54,37 +54,37 @@
     "source_url": "https://oilprice.com/oil-price-charts/",
     "provider_used": "oilprice_charts",
     "is_delayed": 1,
-    "delay_note": "15-Minute Delay",
-    "fetched_at": "2026-04-22T19:02:05.224389+00:00",
-    "created_at": "2026-04-22 19:02:05",
+    "delay_note": "16-Minute Delay",
+    "fetched_at": "2026-04-22T19:17:05.696678+00:00",
+    "created_at": "2026-04-22 19:17:05",
     "extra": {
       "matched_name": "Murban Crude",
       "parsed_from": "oilprice_table_row"
     }
   },
   {
-    "id": 3964,
+    "id": 3970,
     "quote_key": "natural_gas",
     "name": "Natural Gas",
-    "price": 2.713,
+    "price": 2.712,
     "unit": "USD/MMBtu",
-    "change": 0.016,
-    "change_percent": 0.59,
+    "change": 0.015,
+    "change_percent": 0.56,
     "timestamp_text": null,
     "source_name": "OilPrice.com",
     "source_url": "https://oilprice.com/oil-price-charts/",
     "provider_used": "oilprice_charts",
     "is_delayed": 1,
     "delay_note": "10-Minute Delay",
-    "fetched_at": "2026-04-22T19:02:05.224389+00:00",
-    "created_at": "2026-04-22 19:02:05",
+    "fetched_at": "2026-04-22T19:17:05.696678+00:00",
+    "created_at": "2026-04-22 19:17:05",
     "extra": {
       "matched_name": "Natural Gas",
       "parsed_from": "oilprice_table_row"
     }
   },
   {
-    "id": 3965,
+    "id": 3971,
     "quote_key": "gasoline",
     "name": "Gasoline (RBOB)",
     "price": 3.3525,
@@ -96,16 +96,16 @@
     "source_url": "https://oilprice.com/oil-price-charts/",
     "provider_used": "oilprice_charts",
     "is_delayed": 1,
-    "delay_note": "11-Minute Delay",
-    "fetched_at": "2026-04-22T19:02:05.224389+00:00",
-    "created_at": "2026-04-22 19:02:05",
+    "delay_note": "12-Minute Delay",
+    "fetched_at": "2026-04-22T19:17:05.696678+00:00",
+    "created_at": "2026-04-22 19:17:05",
     "extra": {
       "matched_name": "Gasoline",
       "parsed_from": "oilprice_table_row"
     }
   },
   {
-    "id": 3966,
+    "id": 3972,
     "quote_key": "china",
     "name": "China Crude Oil Futures (INE SC)",
     "price": 630.0,
@@ -118,8 +118,8 @@
     "provider_used": "sina_hq_direct",
     "is_delayed": 1,
     "delay_note": "Parsed from direct Sina HQ quote response.",
-    "fetched_at": "2026-04-22T19:02:05.978952+00:00",
-    "created_at": "2026-04-22 19:02:05",
+    "fetched_at": "2026-04-22T19:17:06.562884+00:00",
+    "created_at": "2026-04-22 19:17:06",
     "extra": {
       "parsed_from": "sina_hq_direct",
       "raw_parts": [

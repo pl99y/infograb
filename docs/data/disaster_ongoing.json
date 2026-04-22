@@ -1,6 +1,6 @@
 [
   {
-    "id": 7597,
+    "id": 7607,
     "group_key": "volcano|50887140f65c7c42ab41d1525c7a790442fafab0",
     "event_type": "volcano",
     "severity_level": "high",
@@ -47,14 +47,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      7601
+      7610
     ],
     "occurred_at": "2026-04-22T07:00:00+00:00",
     "published_at": "2026-04-22T07:00:00+00:00",
     "fetched_at": "2026-04-22T07:00:00+00:00"
   },
   {
-    "id": 7598,
+    "id": 7608,
     "group_key": "volcano|8d9eccddabc04911b5f6bbbaa81b0e81eda142ba",
     "event_type": "volcano",
     "severity_level": "high",
@@ -101,14 +101,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      7602
+      7611
     ],
     "occurred_at": "2026-04-22T04:40:00+00:00",
     "published_at": "2026-04-22T04:40:00+00:00",
     "fetched_at": "2026-04-22T04:40:00+00:00"
   },
   {
-    "id": 7599,
+    "id": 7609,
     "group_key": "volcano|f0a42a419a5d3bec6da142fe09bd6e309fb35f18",
     "event_type": "volcano",
     "severity_level": "high",
@@ -167,14 +167,14 @@
       "merged_count": 2
     },
     "member_event_ids": [
-      7603
+      7612
     ],
     "occurred_at": "2026-04-22T03:12:02+00:00",
     "published_at": "2026-04-22T03:12:02+00:00",
     "fetched_at": "2026-04-22T03:12:02+00:00"
   },
   {
-    "id": 7600,
+    "id": 7610,
     "group_key": "earthquake|us6000srxu",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -203,30 +203,30 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      7597
+      7607
     ],
     "occurred_at": "2026-04-22T00:01:12.294000+00:00",
     "published_at": "2026-04-22T00:01:12.294000+00:00",
     "fetched_at": "2026-04-22T00:01:12.294000+00:00"
   },
   {
-    "id": 7601,
+    "id": 7611,
     "group_key": "volcano|a0fe563528751c98f5207e7308a302a32ec3b235",
     "event_type": "volcano",
     "severity_level": "high",
     "severity_color": "high",
     "title": "Nyamuragira",
-    "summary": "VRP 664.17 MW · VIIRS375 / VIIRS · 2.40 km",
+    "summary": "VRP 664.17 MW · VIIRS / VIIRS375 · 2.40 km",
     "started_at": "2026-04-22T00:00:01+00:00",
     "updated_at": "2026-04-22T00:00:01+00:00",
     "location_text": "Nyamuragira",
     "lat": null,
     "lon": null,
     "source_primary": "MIROVA",
-    "source_secondary": "VIIRS375 / VIIRS",
+    "source_secondary": "VIIRS / VIIRS375",
     "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
     "country_code": null,
     "payload": {
       "volcano_id": "223020",
@@ -239,21 +239,10 @@
       ],
       "source_page": "https://www.mirovaweb.it/NRT/",
       "sensors": [
-        "VIIRS375",
-        "VIIRS"
+        "VIIRS",
+        "VIIRS375"
       ],
       "reports": [
-        {
-          "volcano_id": "223020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
-          "vrp_mw": 105.4,
-          "distance_km": 2.4,
-          "sensor": "VIIRS375",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        },
         {
           "volcano_id": "223020",
           "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
@@ -264,19 +253,30 @@
             "high"
           ],
           "source_page": "https://www.mirovaweb.it/NRT/"
+        },
+        {
+          "volcano_id": "223020",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
+          "vrp_mw": 105.4,
+          "distance_km": 2.4,
+          "sensor": "VIIRS375",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
         }
       ],
       "merged_count": 2
     },
     "member_event_ids": [
-      7604
+      7613
     ],
     "occurred_at": "2026-04-22T00:00:01+00:00",
     "published_at": "2026-04-22T00:00:01+00:00",
     "fetched_at": "2026-04-22T00:00:01+00:00"
   },
   {
-    "id": 7602,
+    "id": 7612,
     "group_key": "earthquake|us6000srvu",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -305,14 +305,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      7598
+      7608
     ],
     "occurred_at": "2026-04-21T18:44:12.001000+00:00",
     "published_at": "2026-04-21T18:44:12.001000+00:00",
     "fetched_at": "2026-04-21T18:44:12.001000+00:00"
   },
   {
-    "id": 7603,
+    "id": 7613,
     "group_key": "earthquake|us6000sru5",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -341,50 +341,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      7599
+      7609
     ],
     "occurred_at": "2026-04-21T14:52:17.411000+00:00",
     "published_at": "2026-04-21T14:52:17.411000+00:00",
     "fetched_at": "2026-04-21T14:52:17.411000+00:00"
   },
   {
-    "id": 7604,
-    "group_key": "earthquake|us6000srtd",
-    "event_type": "earthquake",
-    "severity_level": "moderate",
-    "severity_color": "moderate",
-    "title": "M 5.7 - Balleny Islands region",
-    "summary": "Balleny Islands region",
-    "started_at": "2026-04-21T10:30:27.397000+00:00",
-    "updated_at": "2026-04-21T12:59:10.925000+00:00",
-    "location_text": "Balleny Islands region",
-    "lat": -62.0123,
-    "lon": 164.998,
-    "source_primary": "USGS",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000srtd",
-    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000srtd",
-    "country_code": null,
-    "payload": {
-      "mag": 5.7,
-      "depth_km": 10.0,
-      "place": "Balleny Islands region",
-      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000srtd.geojson",
-      "alert": "green",
-      "sig": 500,
-      "tsunami": 0,
-      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
-    },
-    "member_event_ids": [
-      7600
-    ],
-    "occurred_at": "2026-04-21T10:30:27.397000+00:00",
-    "published_at": "2026-04-21T10:30:27.397000+00:00",
-    "fetched_at": "2026-04-21T10:30:27.397000+00:00"
-  },
-  {
-    "id": 7605,
+    "id": 7614,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -457,14 +421,14 @@
       }
     },
     "member_event_ids": [
-      7606
+      7615
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",
     "fetched_at": "2026-03-25T01:00:00+00:00"
   },
   {
-    "id": 7606,
+    "id": 7615,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -537,7 +501,7 @@
       }
     },
     "member_event_ids": [
-      7605
+      7614
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

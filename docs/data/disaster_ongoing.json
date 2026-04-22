@@ -1,6 +1,42 @@
 [
   {
-    "id": 7747,
+    "id": 7757,
+    "group_key": "earthquake|us6000ss20",
+    "event_type": "earthquake",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "M 5.0 - 31 km ENE of Luganville, Vanuatu",
+    "summary": "31 km ENE of Luganville, Vanuatu",
+    "started_at": "2026-04-22T13:20:45.869000+00:00",
+    "updated_at": "2026-04-22T14:08:22.040000+00:00",
+    "location_text": "31 km ENE of Luganville, Vanuatu",
+    "lat": -15.4409,
+    "lon": 167.4412,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ss20",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ss20",
+    "country_code": null,
+    "payload": {
+      "mag": 5.0,
+      "depth_km": 120.214,
+      "place": "31 km ENE of Luganville, Vanuatu",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000ss20.geojson",
+      "alert": null,
+      "sig": 385,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      7757
+    ],
+    "occurred_at": "2026-04-22T13:20:45.869000+00:00",
+    "published_at": "2026-04-22T13:20:45.869000+00:00",
+    "fetched_at": "2026-04-22T13:20:45.869000+00:00"
+  },
+  {
+    "id": 7758,
     "group_key": "earthquake|us6000ss1u",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -29,14 +65,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      7747
+      7758
     ],
     "occurred_at": "2026-04-22T12:18:37.573000+00:00",
     "published_at": "2026-04-22T12:18:37.573000+00:00",
     "fetched_at": "2026-04-22T12:18:37.573000+00:00"
   },
   {
-    "id": 7748,
+    "id": 7759,
     "group_key": "volcano|22cc6513d23e0216a3648341d5b74f78b552dddf",
     "event_type": "volcano",
     "severity_level": "high",
@@ -83,14 +119,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      7751
+      7762
     ],
     "occurred_at": "2026-04-22T09:45:00+00:00",
     "published_at": "2026-04-22T09:45:00+00:00",
     "fetched_at": "2026-04-22T09:45:00+00:00"
   },
   {
-    "id": 7749,
+    "id": 7760,
     "group_key": "volcano|703169d96ad40af9a1cf29b3bd8d8a71c6363944",
     "event_type": "volcano",
     "severity_level": "high",
@@ -149,14 +185,14 @@
       "merged_count": 2
     },
     "member_event_ids": [
-      7752
+      7763
     ],
     "occurred_at": "2026-04-22T08:18:01+00:00",
     "published_at": "2026-04-22T08:18:01+00:00",
     "fetched_at": "2026-04-22T08:18:01+00:00"
   },
   {
-    "id": 7750,
+    "id": 7761,
     "group_key": "volcano|50887140f65c7c42ab41d1525c7a790442fafab0",
     "event_type": "volcano",
     "severity_level": "high",
@@ -203,14 +239,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      7753
+      7764
     ],
     "occurred_at": "2026-04-22T07:00:00+00:00",
     "published_at": "2026-04-22T07:00:00+00:00",
     "fetched_at": "2026-04-22T07:00:00+00:00"
   },
   {
-    "id": 7751,
+    "id": 7762,
     "group_key": "volcano|f0a42a419a5d3bec6da142fe09bd6e309fb35f18",
     "event_type": "volcano",
     "severity_level": "high",
@@ -269,14 +305,14 @@
       "merged_count": 2
     },
     "member_event_ids": [
-      7754
+      7765
     ],
     "occurred_at": "2026-04-22T03:12:02+00:00",
     "published_at": "2026-04-22T03:12:02+00:00",
     "fetched_at": "2026-04-22T03:12:02+00:00"
   },
   {
-    "id": 7752,
+    "id": 7763,
     "group_key": "earthquake|us6000srxu",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -305,14 +341,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      7748
+      7759
     ],
     "occurred_at": "2026-04-22T00:01:12.294000+00:00",
     "published_at": "2026-04-22T00:01:12.294000+00:00",
     "fetched_at": "2026-04-22T00:01:12.294000+00:00"
   },
   {
-    "id": 7753,
+    "id": 7764,
     "group_key": "earthquake|us6000srvu",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -341,14 +377,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      7749
+      7760
     ],
     "occurred_at": "2026-04-21T18:44:12.001000+00:00",
     "published_at": "2026-04-21T18:44:12.001000+00:00",
     "fetched_at": "2026-04-21T18:44:12.001000+00:00"
   },
   {
-    "id": 7754,
+    "id": 7765,
     "group_key": "earthquake|us6000sru5",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -377,14 +413,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      7750
+      7761
     ],
     "occurred_at": "2026-04-21T14:52:17.411000+00:00",
     "published_at": "2026-04-21T14:52:17.411000+00:00",
     "fetched_at": "2026-04-21T14:52:17.411000+00:00"
   },
   {
-    "id": 7755,
+    "id": 7766,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -457,14 +493,14 @@
       }
     },
     "member_event_ids": [
-      7756
+      7767
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",
     "fetched_at": "2026-03-25T01:00:00+00:00"
   },
   {
-    "id": 7756,
+    "id": 7767,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -537,7 +573,7 @@
       }
     },
     "member_event_ids": [
-      7755
+      7766
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

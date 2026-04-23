@@ -1,6 +1,6 @@
 [
   {
-    "id": 8720,
+    "id": 8730,
     "group_key": "volcano|35300bf32237b7905b1d7829acf495de42051814",
     "event_type": "volcano",
     "severity_level": "extreme",
@@ -47,14 +47,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      8723
+      8733
     ],
     "occurred_at": "2026-04-23T14:20:00+00:00",
     "published_at": "2026-04-23T14:20:00+00:00",
     "fetched_at": "2026-04-23T14:20:00+00:00"
   },
   {
-    "id": 8721,
+    "id": 8731,
     "group_key": "volcano|d64bda1f1102cf0d36a79c72518efbe60683b474",
     "event_type": "volcano",
     "severity_level": "high",
@@ -101,14 +101,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      8724
+      8734
     ],
     "occurred_at": "2026-04-23T13:35:00+00:00",
     "published_at": "2026-04-23T13:35:00+00:00",
     "fetched_at": "2026-04-23T13:35:00+00:00"
   },
   {
-    "id": 8722,
+    "id": 8732,
     "group_key": "volcano|1ffac3858c7368112732b6f899ee896d531d10e9",
     "event_type": "volcano",
     "severity_level": "high",
@@ -155,14 +155,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      8725
+      8735
     ],
     "occurred_at": "2026-04-23T12:42:00+00:00",
     "published_at": "2026-04-23T12:42:00+00:00",
     "fetched_at": "2026-04-23T12:42:00+00:00"
   },
   {
-    "id": 8723,
+    "id": 8733,
     "group_key": "volcano|d97436b2133466699f5295513c668950dcbe068d",
     "event_type": "volcano",
     "severity_level": "extreme",
@@ -209,14 +209,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      8726
+      8736
     ],
     "occurred_at": "2026-04-23T12:12:02+00:00",
     "published_at": "2026-04-23T12:12:02+00:00",
     "fetched_at": "2026-04-23T12:12:02+00:00"
   },
   {
-    "id": 8724,
+    "id": 8734,
     "group_key": "earthquake|us6000ss9m",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -245,14 +245,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      8720
+      8730
     ],
     "occurred_at": "2026-04-23T10:07:48.736000+00:00",
     "published_at": "2026-04-23T10:07:48.736000+00:00",
     "fetched_at": "2026-04-23T10:07:48.736000+00:00"
   },
   {
-    "id": 8725,
+    "id": 8735,
     "group_key": "earthquake|us6000ss90",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -281,14 +281,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      8721
+      8731
     ],
     "occurred_at": "2026-04-23T06:31:10.762000+00:00",
     "published_at": "2026-04-23T06:31:10.762000+00:00",
     "fetched_at": "2026-04-23T06:31:10.762000+00:00"
   },
   {
-    "id": 8726,
+    "id": 8736,
     "group_key": "earthquake|us6000ss8w",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -317,81 +317,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      8722
+      8732
     ],
     "occurred_at": "2026-04-23T05:30:59.775000+00:00",
     "published_at": "2026-04-23T05:30:59.775000+00:00",
     "fetched_at": "2026-04-23T05:30:59.775000+00:00"
   },
   {
-    "id": 8727,
-    "group_key": "volcano|a9f846059c6750bfbb58dc0cc5c909f73820083f",
-    "event_type": "volcano",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "Krasheninnikov",
-    "summary": "VRP 110.17 MW · VIIRS / VIIRS375 · 4.37 km",
-    "started_at": "2026-04-23T03:18:02+00:00",
-    "updated_at": "2026-04-23T03:18:02+00:00",
-    "location_text": "Krasheninnikov",
-    "lat": null,
-    "lon": null,
-    "source_primary": "MIROVA",
-    "source_secondary": "VIIRS / VIIRS375",
-    "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=300190",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=300190",
-    "country_code": null,
-    "payload": {
-      "volcano_id": "300190",
-      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=300190",
-      "vrp_mw": 110.17,
-      "distance_km": 4.37,
-      "sensor": "VIIRS375",
-      "row_class": [
-        "moderate",
-        "high"
-      ],
-      "source_page": "https://www.mirovaweb.it/NRT/",
-      "sensors": [
-        "VIIRS",
-        "VIIRS375"
-      ],
-      "reports": [
-        {
-          "volcano_id": "300190",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=300190",
-          "vrp_mw": 46.47,
-          "distance_km": 4.8,
-          "sensor": "VIIRS",
-          "row_class": [
-            "moderate"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        },
-        {
-          "volcano_id": "300190",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=300190",
-          "vrp_mw": 110.17,
-          "distance_km": 4.37,
-          "sensor": "VIIRS375",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        }
-      ],
-      "merged_count": 2
-    },
-    "member_event_ids": [
-      8727
-    ],
-    "occurred_at": "2026-04-23T03:18:02+00:00",
-    "published_at": "2026-04-23T03:18:02+00:00",
-    "fetched_at": "2026-04-23T03:18:02+00:00"
-  },
-  {
-    "id": 8728,
+    "id": 8737,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -464,14 +397,14 @@
       }
     },
     "member_event_ids": [
-      8729
+      8738
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",
     "fetched_at": "2026-03-25T01:00:00+00:00"
   },
   {
-    "id": 8729,
+    "id": 8738,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -544,7 +477,7 @@
       }
     },
     "member_event_ids": [
-      8728
+      8737
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

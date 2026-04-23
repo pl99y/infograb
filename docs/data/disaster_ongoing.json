@@ -1,6 +1,6 @@
 [
   {
-    "id": 8370,
+    "id": 8381,
     "group_key": "earthquake|us6000ss90",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -29,14 +29,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      8370
+      8381
     ],
     "occurred_at": "2026-04-23T06:31:10.762000+00:00",
     "published_at": "2026-04-23T06:31:10.762000+00:00",
     "fetched_at": "2026-04-23T06:31:10.762000+00:00"
   },
   {
-    "id": 8371,
+    "id": 8382,
     "group_key": "earthquake|us6000ss8w",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -65,30 +65,30 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      8371
+      8382
     ],
     "occurred_at": "2026-04-23T05:30:59.775000+00:00",
     "published_at": "2026-04-23T05:30:59.775000+00:00",
     "fetched_at": "2026-04-23T05:30:59.775000+00:00"
   },
   {
-    "id": 8372,
+    "id": 8383,
     "group_key": "volcano|a9f846059c6750bfbb58dc0cc5c909f73820083f",
     "event_type": "volcano",
     "severity_level": "high",
     "severity_color": "high",
     "title": "Krasheninnikov",
-    "summary": "VRP 110.17 MW · VIIRS / VIIRS375 · 4.37 km",
+    "summary": "VRP 110.17 MW · VIIRS375 / VIIRS · 4.37 km",
     "started_at": "2026-04-23T03:18:02+00:00",
     "updated_at": "2026-04-23T03:18:02+00:00",
     "location_text": "Krasheninnikov",
     "lat": null,
     "lon": null,
     "source_primary": "MIROVA",
-    "source_secondary": "VIIRS / VIIRS375",
+    "source_secondary": "VIIRS375 / VIIRS",
     "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=300190",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=300190",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=300190",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=300190",
     "country_code": null,
     "payload": {
       "volcano_id": "300190",
@@ -97,26 +97,15 @@
       "distance_km": 4.37,
       "sensor": "VIIRS375",
       "row_class": [
-        "moderate",
-        "high"
+        "high",
+        "moderate"
       ],
       "source_page": "https://www.mirovaweb.it/NRT/",
       "sensors": [
-        "VIIRS",
-        "VIIRS375"
+        "VIIRS375",
+        "VIIRS"
       ],
       "reports": [
-        {
-          "volcano_id": "300190",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=300190",
-          "vrp_mw": 46.47,
-          "distance_km": 4.8,
-          "sensor": "VIIRS",
-          "row_class": [
-            "moderate"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        },
         {
           "volcano_id": "300190",
           "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=300190",
@@ -127,19 +116,30 @@
             "high"
           ],
           "source_page": "https://www.mirovaweb.it/NRT/"
+        },
+        {
+          "volcano_id": "300190",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=300190",
+          "vrp_mw": 46.47,
+          "distance_km": 4.8,
+          "sensor": "VIIRS",
+          "row_class": [
+            "moderate"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
         }
       ],
       "merged_count": 2
     },
     "member_event_ids": [
-      8374
+      8385
     ],
     "occurred_at": "2026-04-23T03:18:02+00:00",
     "published_at": "2026-04-23T03:18:02+00:00",
     "fetched_at": "2026-04-23T03:18:02+00:00"
   },
   {
-    "id": 8373,
+    "id": 8384,
     "group_key": "volcano|3bae77ef8612270f4c6203da8f8e0485325d09e3",
     "event_type": "volcano",
     "severity_level": "high",
@@ -198,68 +198,14 @@
       "merged_count": 2
     },
     "member_event_ids": [
-      8375
+      8386
     ],
     "occurred_at": "2026-04-22T23:36:01+00:00",
     "published_at": "2026-04-22T23:36:01+00:00",
     "fetched_at": "2026-04-22T23:36:01+00:00"
   },
   {
-    "id": 8375,
-    "group_key": "volcano|9559b649e6d52b94567797d45f28cd86ede20b33",
-    "event_type": "volcano",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "Momotombo",
-    "summary": "VRP 233.67 MW · MODIS · 18.60 km",
-    "started_at": "2026-04-22T21:15:00+00:00",
-    "updated_at": "2026-04-22T21:15:00+00:00",
-    "location_text": "Momotombo",
-    "lat": null,
-    "lon": null,
-    "source_primary": "MIROVA",
-    "source_secondary": "MODIS",
-    "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=344090",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=344090",
-    "country_code": null,
-    "payload": {
-      "volcano_id": "344090",
-      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=344090",
-      "vrp_mw": 233.67,
-      "distance_km": 18.6,
-      "sensor": "MODIS",
-      "row_class": [
-        "high"
-      ],
-      "source_page": "https://www.mirovaweb.it/NRT/",
-      "sensors": [
-        "MODIS"
-      ],
-      "reports": [
-        {
-          "volcano_id": "344090",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=344090",
-          "vrp_mw": 233.67,
-          "distance_km": 18.6,
-          "sensor": "MODIS",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        }
-      ],
-      "merged_count": 1
-    },
-    "member_event_ids": [
-      8376
-    ],
-    "occurred_at": "2026-04-22T21:15:00+00:00",
-    "published_at": "2026-04-22T21:15:00+00:00",
-    "fetched_at": "2026-04-22T21:15:00+00:00"
-  },
-  {
-    "id": 8374,
+    "id": 8386,
     "group_key": "volcano|0222cc9214ba255302054d72350085293e896bc4",
     "event_type": "volcano",
     "severity_level": "high",
@@ -306,14 +252,68 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      8377
+      8387
     ],
     "occurred_at": "2026-04-22T21:15:00+00:00",
     "published_at": "2026-04-22T21:15:00+00:00",
     "fetched_at": "2026-04-22T21:15:00+00:00"
   },
   {
-    "id": 8376,
+    "id": 8385,
+    "group_key": "volcano|9559b649e6d52b94567797d45f28cd86ede20b33",
+    "event_type": "volcano",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Momotombo",
+    "summary": "VRP 233.67 MW · MODIS · 18.60 km",
+    "started_at": "2026-04-22T21:15:00+00:00",
+    "updated_at": "2026-04-22T21:15:00+00:00",
+    "location_text": "Momotombo",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "MODIS",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=344090",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=344090",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "344090",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=344090",
+      "vrp_mw": 233.67,
+      "distance_km": 18.6,
+      "sensor": "MODIS",
+      "row_class": [
+        "high"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "MODIS"
+      ],
+      "reports": [
+        {
+          "volcano_id": "344090",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=344090",
+          "vrp_mw": 233.67,
+          "distance_km": 18.6,
+          "sensor": "MODIS",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 1
+    },
+    "member_event_ids": [
+      8388
+    ],
+    "occurred_at": "2026-04-22T21:15:00+00:00",
+    "published_at": "2026-04-22T21:15:00+00:00",
+    "fetched_at": "2026-04-22T21:15:00+00:00"
+  },
+  {
+    "id": 8387,
     "group_key": "volcano|3548b2f0f50aca446f0f6573a4aadb8d1aba6b4e",
     "event_type": "volcano",
     "severity_level": "high",
@@ -360,14 +360,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      8378
+      8389
     ],
     "occurred_at": "2026-04-22T19:20:00+00:00",
     "published_at": "2026-04-22T19:20:00+00:00",
     "fetched_at": "2026-04-22T19:20:00+00:00"
   },
   {
-    "id": 8377,
+    "id": 8388,
     "group_key": "earthquake|us6000ss20",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -396,14 +396,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      8372
+      8383
     ],
     "occurred_at": "2026-04-22T13:20:45.869000+00:00",
     "published_at": "2026-04-22T13:20:45.869000+00:00",
     "fetched_at": "2026-04-22T13:20:45.869000+00:00"
   },
   {
-    "id": 8378,
+    "id": 8389,
     "group_key": "earthquake|us6000ss1u",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -432,14 +432,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      8373
+      8384
     ],
     "occurred_at": "2026-04-22T12:18:37.573000+00:00",
     "published_at": "2026-04-22T12:18:37.573000+00:00",
     "fetched_at": "2026-04-22T12:18:37.573000+00:00"
   },
   {
-    "id": 8379,
+    "id": 8390,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -512,14 +512,14 @@
       }
     },
     "member_event_ids": [
-      8380
+      8391
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",
     "fetched_at": "2026-03-25T01:00:00+00:00"
   },
   {
-    "id": 8380,
+    "id": 8391,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -592,7 +592,7 @@
       }
     },
     "member_event_ids": [
-      8379
+      8390
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

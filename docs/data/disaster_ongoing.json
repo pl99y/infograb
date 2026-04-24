@@ -1,6 +1,42 @@
 [
   {
-    "id": 9139,
+    "id": 9150,
+    "group_key": "earthquake|us6000sshk",
+    "event_type": "earthquake",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "M 5.3 - 119 km WNW of Ternate, Indonesia",
+    "summary": "119 km WNW of Ternate, Indonesia",
+    "started_at": "2026-04-24T04:45:20.134000+00:00",
+    "updated_at": "2026-04-24T05:01:26.040000+00:00",
+    "location_text": "119 km WNW of Ternate, Indonesia",
+    "lat": 1.1341,
+    "lon": 126.3665,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sshk",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sshk",
+    "country_code": null,
+    "payload": {
+      "mag": 5.3,
+      "depth_km": 29.011,
+      "place": "119 km WNW of Ternate, Indonesia",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000sshk.geojson",
+      "alert": null,
+      "sig": 432,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      9150
+    ],
+    "occurred_at": "2026-04-24T04:45:20.134000+00:00",
+    "published_at": "2026-04-24T04:45:20.134000+00:00",
+    "fetched_at": "2026-04-24T04:45:20.134000+00:00"
+  },
+  {
+    "id": 9151,
     "group_key": "earthquake|us6000sshc",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -8,7 +44,7 @@
     "title": "M 5.8 - 11 km SE of Ierápetra, Greece",
     "summary": "11 km SE of Ierápetra, Greece",
     "started_at": "2026-04-24T03:18:53.476000+00:00",
-    "updated_at": "2026-04-24T04:46:40.758000+00:00",
+    "updated_at": "2026-04-24T05:00:39.729000+00:00",
     "location_text": "11 km SE of Ierápetra, Greece",
     "lat": 34.9345,
     "lon": 25.8274,
@@ -24,19 +60,19 @@
       "place": "11 km SE of Ierápetra, Greece",
       "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000sshc.geojson",
       "alert": "green",
-      "sig": 527,
+      "sig": 528,
       "tsunami": 0,
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      9139
+      9151
     ],
     "occurred_at": "2026-04-24T03:18:53.476000+00:00",
     "published_at": "2026-04-24T03:18:53.476000+00:00",
     "fetched_at": "2026-04-24T03:18:53.476000+00:00"
   },
   {
-    "id": 9140,
+    "id": 9152,
     "group_key": "volcano|b38ed06c31c0814531727186feb63fb301218de6",
     "event_type": "volcano",
     "severity_level": "high",
@@ -83,14 +119,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      9145
+      9157
     ],
     "occurred_at": "2026-04-24T01:55:00+00:00",
     "published_at": "2026-04-24T01:55:00+00:00",
     "fetched_at": "2026-04-24T01:55:00+00:00"
   },
   {
-    "id": 9141,
+    "id": 9153,
     "group_key": "earthquake|us6000ssgv",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -119,14 +155,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      9140
+      9152
     ],
     "occurred_at": "2026-04-24T01:51:59.835000+00:00",
     "published_at": "2026-04-24T01:51:59.835000+00:00",
     "fetched_at": "2026-04-24T01:51:59.835000+00:00"
   },
   {
-    "id": 9142,
+    "id": 9154,
     "group_key": "volcano|c7a569dbc7aab0e393022d0d895c9c6fc27c2298",
     "event_type": "volcano",
     "severity_level": "high",
@@ -185,14 +221,14 @@
       "merged_count": 2
     },
     "member_event_ids": [
-      9146
+      9158
     ],
     "occurred_at": "2026-04-24T00:06:02+00:00",
     "published_at": "2026-04-24T00:06:02+00:00",
     "fetched_at": "2026-04-24T00:06:02+00:00"
   },
   {
-    "id": 9143,
+    "id": 9155,
     "group_key": "earthquake|us6000ssga",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -221,14 +257,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      9141
+      9153
     ],
     "occurred_at": "2026-04-23T22:52:54.569000+00:00",
     "published_at": "2026-04-23T22:52:54.569000+00:00",
     "fetched_at": "2026-04-23T22:52:54.569000+00:00"
   },
   {
-    "id": 9144,
+    "id": 9156,
     "group_key": "volcano|e6cfbf428724615f94e3bfe04fdf63369d1c4643",
     "event_type": "volcano",
     "severity_level": "high",
@@ -275,14 +311,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      9147
+      9159
     ],
     "occurred_at": "2026-04-23T20:10:00+00:00",
     "published_at": "2026-04-23T20:10:00+00:00",
     "fetched_at": "2026-04-23T20:10:00+00:00"
   },
   {
-    "id": 9145,
+    "id": 9157,
     "group_key": "earthquake|us6000ss9m",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -311,14 +347,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      9142
+      9154
     ],
     "occurred_at": "2026-04-23T10:07:48.736000+00:00",
     "published_at": "2026-04-23T10:07:48.736000+00:00",
     "fetched_at": "2026-04-23T10:07:48.736000+00:00"
   },
   {
-    "id": 9146,
+    "id": 9158,
     "group_key": "earthquake|us6000ss90",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -347,14 +383,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      9143
+      9155
     ],
     "occurred_at": "2026-04-23T06:31:10.762000+00:00",
     "published_at": "2026-04-23T06:31:10.762000+00:00",
     "fetched_at": "2026-04-23T06:31:10.762000+00:00"
   },
   {
-    "id": 9147,
+    "id": 9159,
     "group_key": "earthquake|us6000ss8w",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -383,14 +419,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      9144
+      9156
     ],
     "occurred_at": "2026-04-23T05:30:59.775000+00:00",
     "published_at": "2026-04-23T05:30:59.775000+00:00",
     "fetched_at": "2026-04-23T05:30:59.775000+00:00"
   },
   {
-    "id": 9148,
+    "id": 9160,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -463,14 +499,14 @@
       }
     },
     "member_event_ids": [
-      9149
+      9161
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",
     "fetched_at": "2026-03-25T01:00:00+00:00"
   },
   {
-    "id": 9149,
+    "id": 9161,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -543,7 +579,7 @@
       }
     },
     "member_event_ids": [
-      9148
+      9160
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

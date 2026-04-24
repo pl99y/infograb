@@ -1,11 +1,41 @@
 {
-  "id": 36,
+  "id": 37,
   "snapshot_key": "space_launches_default",
   "source_name": "AEI Launch Records API",
   "source_url": "https://space-data-api-46930537539.us-central1.run.app/api/public/launches/records",
-  "fetched_at": "2026-04-24T06:07:33.078509+00:00",
-  "created_at": "2026-04-24 06:07:38",
+  "fetched_at": "2026-04-24T12:09:17.885964+00:00",
+  "created_at": "2026-04-24 12:09:18",
   "items": [
+    {
+      "date": "2026-04-23",
+      "vehicle": "Electron",
+      "launch_site": "Rocket Lab Launch Complex 1, Onenui Station, Mahia Peninsula",
+      "country": "New Zealand",
+      "category": "Orbital",
+      "outcome": "Success",
+      "actual_payload_capacity": "载荷 0 t · LEO 0.2 t · SSO 0.1 t",
+      "starlink_mission": "否"
+    },
+    {
+      "date": "2026-04-23",
+      "vehicle": "Falcon 9 FT5",
+      "launch_site": "Vandenberg Space Force Base, California",
+      "country": "United States",
+      "category": "Orbital",
+      "outcome": "Success",
+      "actual_payload_capacity": "载荷 0 t · LEO 17.4 t · SSO 9.1 t",
+      "starlink_mission": "否"
+    },
+    {
+      "date": "2026-04-23",
+      "vehicle": "Angara-1.2",
+      "launch_site": "Plesetsk Kosmodrome, Russia",
+      "country": "Russia/Soviet Union",
+      "category": "Orbital",
+      "outcome": "Success",
+      "actual_payload_capacity": "载荷 0 t · LEO 2 t · SSO 3 t",
+      "starlink_mission": "否"
+    },
     {
       "date": "2026-04-21",
       "vehicle": "Falcon 9 FT5",
@@ -63,8 +93,8 @@
       "country": "United States",
       "category": "Orbital",
       "outcome": "Success",
-      "actual_payload_capacity": "载荷 0 t · LEO 17.4 t · SSO 9.1 t",
-      "starlink_mission": "否"
+      "actual_payload_capacity": "载荷 14.4 t · LEO 17.4 t · SSO 9.1 t",
+      "starlink_mission": "是"
     },
     {
       "date": "2026-04-14",
@@ -74,36 +104,6 @@
       "category": "Orbital",
       "outcome": "Success",
       "actual_payload_capacity": "载荷 0 t · LEO 2 t · SSO 1.5 t",
-      "starlink_mission": "否"
-    },
-    {
-      "date": "2026-04-14",
-      "vehicle": "Falcon 9 FT5",
-      "launch_site": "Kennedy / Cape Canaveral, Florida",
-      "country": "United States",
-      "category": "Orbital",
-      "outcome": "Success",
-      "actual_payload_capacity": "载荷 0 t · LEO 17.4 t · SSO 9.1 t",
-      "starlink_mission": "否"
-    },
-    {
-      "date": "2026-04-11",
-      "vehicle": "Falcon 9 FT5",
-      "launch_site": "Vandenberg Space Force Base, California",
-      "country": "United States",
-      "category": "Orbital",
-      "outcome": "Success",
-      "actual_payload_capacity": "载荷 14.4 t · LEO 17.4 t · SSO 9.1 t",
-      "starlink_mission": "是"
-    },
-    {
-      "date": "2026-04-11",
-      "vehicle": "Jielong-3",
-      "launch_site": "Yangjiang launch area",
-      "country": "China",
-      "category": "Orbital",
-      "outcome": "Success",
-      "actual_payload_capacity": "载荷 0.3 t · LEO 1.5 t · SSO 1.5 t",
       "starlink_mission": "否"
     }
   ]

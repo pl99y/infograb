@@ -1,6 +1,42 @@
 [
   {
-    "id": 9162,
+    "id": 9174,
+    "group_key": "earthquake|us6000sshp",
+    "event_type": "earthquake",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "M 5.0 - 86 km E of Noda, Japan",
+    "summary": "86 km E of Noda, Japan",
+    "started_at": "2026-04-24T05:13:10.736000+00:00",
+    "updated_at": "2026-04-24T05:26:41.040000+00:00",
+    "location_text": "86 km E of Noda, Japan",
+    "lat": 40.095,
+    "lon": 142.8333,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sshp",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sshp",
+    "country_code": null,
+    "payload": {
+      "mag": 5.0,
+      "depth_km": 35.0,
+      "place": "86 km E of Noda, Japan",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000sshp.geojson",
+      "alert": null,
+      "sig": 385,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      9174
+    ],
+    "occurred_at": "2026-04-24T05:13:10.736000+00:00",
+    "published_at": "2026-04-24T05:13:10.736000+00:00",
+    "fetched_at": "2026-04-24T05:13:10.736000+00:00"
+  },
+  {
+    "id": 9175,
     "group_key": "earthquake|us6000sshk",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -29,14 +65,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      9162
+      9175
     ],
     "occurred_at": "2026-04-24T04:45:20.134000+00:00",
     "published_at": "2026-04-24T04:45:20.134000+00:00",
     "fetched_at": "2026-04-24T04:45:20.134000+00:00"
   },
   {
-    "id": 9163,
+    "id": 9176,
     "group_key": "earthquake|us6000sshc",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -44,7 +80,7 @@
     "title": "M 5.8 - 11 km SE of Ierápetra, Greece",
     "summary": "11 km SE of Ierápetra, Greece",
     "started_at": "2026-04-24T03:18:53.476000+00:00",
-    "updated_at": "2026-04-24T05:05:55.963000+00:00",
+    "updated_at": "2026-04-24T05:30:15.031000+00:00",
     "location_text": "11 km SE of Ierápetra, Greece",
     "lat": 34.9345,
     "lon": 25.8274,
@@ -60,19 +96,19 @@
       "place": "11 km SE of Ierápetra, Greece",
       "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000sshc.geojson",
       "alert": "green",
-      "sig": 529,
+      "sig": 531,
       "tsunami": 0,
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      9163
+      9176
     ],
     "occurred_at": "2026-04-24T03:18:53.476000+00:00",
     "published_at": "2026-04-24T03:18:53.476000+00:00",
     "fetched_at": "2026-04-24T03:18:53.476000+00:00"
   },
   {
-    "id": 9164,
+    "id": 9177,
     "group_key": "volcano|b38ed06c31c0814531727186feb63fb301218de6",
     "event_type": "volcano",
     "severity_level": "high",
@@ -119,14 +155,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      9169
+      9181
     ],
     "occurred_at": "2026-04-24T01:55:00+00:00",
     "published_at": "2026-04-24T01:55:00+00:00",
     "fetched_at": "2026-04-24T01:55:00+00:00"
   },
   {
-    "id": 9165,
+    "id": 9178,
     "group_key": "earthquake|us6000ssgv",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -155,14 +191,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      9164
+      9177
     ],
     "occurred_at": "2026-04-24T01:51:59.835000+00:00",
     "published_at": "2026-04-24T01:51:59.835000+00:00",
     "fetched_at": "2026-04-24T01:51:59.835000+00:00"
   },
   {
-    "id": 9166,
+    "id": 9179,
     "group_key": "volcano|c7a569dbc7aab0e393022d0d895c9c6fc27c2298",
     "event_type": "volcano",
     "severity_level": "high",
@@ -221,14 +257,14 @@
       "merged_count": 2
     },
     "member_event_ids": [
-      9170
+      9182
     ],
     "occurred_at": "2026-04-24T00:06:02+00:00",
     "published_at": "2026-04-24T00:06:02+00:00",
     "fetched_at": "2026-04-24T00:06:02+00:00"
   },
   {
-    "id": 9167,
+    "id": 9180,
     "group_key": "earthquake|us6000ssga",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -257,14 +293,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      9165
+      9178
     ],
     "occurred_at": "2026-04-23T22:52:54.569000+00:00",
     "published_at": "2026-04-23T22:52:54.569000+00:00",
     "fetched_at": "2026-04-23T22:52:54.569000+00:00"
   },
   {
-    "id": 9168,
+    "id": 9181,
     "group_key": "volcano|e6cfbf428724615f94e3bfe04fdf63369d1c4643",
     "event_type": "volcano",
     "severity_level": "high",
@@ -311,14 +347,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      9171
+      9183
     ],
     "occurred_at": "2026-04-23T20:10:00+00:00",
     "published_at": "2026-04-23T20:10:00+00:00",
     "fetched_at": "2026-04-23T20:10:00+00:00"
   },
   {
-    "id": 9169,
+    "id": 9182,
     "group_key": "earthquake|us6000ss9m",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -347,14 +383,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      9166
+      9179
     ],
     "occurred_at": "2026-04-23T10:07:48.736000+00:00",
     "published_at": "2026-04-23T10:07:48.736000+00:00",
     "fetched_at": "2026-04-23T10:07:48.736000+00:00"
   },
   {
-    "id": 9170,
+    "id": 9183,
     "group_key": "earthquake|us6000ss90",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -383,50 +419,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      9167
+      9180
     ],
     "occurred_at": "2026-04-23T06:31:10.762000+00:00",
     "published_at": "2026-04-23T06:31:10.762000+00:00",
     "fetched_at": "2026-04-23T06:31:10.762000+00:00"
   },
   {
-    "id": 9171,
-    "group_key": "earthquake|us6000ss8w",
-    "event_type": "earthquake",
-    "severity_level": "moderate",
-    "severity_color": "moderate",
-    "title": "M 5.0 - South Sandwich Islands region",
-    "summary": "South Sandwich Islands region",
-    "started_at": "2026-04-23T05:30:59.775000+00:00",
-    "updated_at": "2026-04-23T06:12:34.040000+00:00",
-    "location_text": "South Sandwich Islands region",
-    "lat": -57.1,
-    "lon": -24.5095,
-    "source_primary": "USGS",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ss8w",
-    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ss8w",
-    "country_code": null,
-    "payload": {
-      "mag": 5.0,
-      "depth_km": 10.0,
-      "place": "South Sandwich Islands region",
-      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000ss8w.geojson",
-      "alert": null,
-      "sig": 385,
-      "tsunami": 0,
-      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
-    },
-    "member_event_ids": [
-      9168
-    ],
-    "occurred_at": "2026-04-23T05:30:59.775000+00:00",
-    "published_at": "2026-04-23T05:30:59.775000+00:00",
-    "fetched_at": "2026-04-23T05:30:59.775000+00:00"
-  },
-  {
-    "id": 9172,
+    "id": 9184,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -499,14 +499,14 @@
       }
     },
     "member_event_ids": [
-      9173
+      9185
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",
     "fetched_at": "2026-03-25T01:00:00+00:00"
   },
   {
-    "id": 9173,
+    "id": 9185,
     "group_key": "flood|583fcf18f6f6aca5a6479139cb6cedf977c490c9",
     "event_type": "flood",
     "severity_level": "orange",
@@ -579,7 +579,7 @@
       }
     },
     "member_event_ids": [
-      9172
+      9184
     ],
     "occurred_at": "2026-02-11T01:00:00+00:00",
     "published_at": "2026-02-11T01:00:00+00:00",

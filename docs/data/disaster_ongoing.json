@@ -1,6 +1,42 @@
 [
   {
-    "id": 9317,
+    "id": 9328,
+    "group_key": "earthquake|us6000ssik",
+    "event_type": "earthquake",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "M 5.3 - 167 km E of Petropavlovsk-Kamchatsky, Russia",
+    "summary": "167 km E of Petropavlovsk-Kamchatsky, Russia",
+    "started_at": "2026-04-24T08:59:28.540000+00:00",
+    "updated_at": "2026-04-24T09:19:33.040000+00:00",
+    "location_text": "167 km E of Petropavlovsk-Kamchatsky, Russia",
+    "lat": 52.9231,
+    "lon": 161.1117,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ssik",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ssik",
+    "country_code": null,
+    "payload": {
+      "mag": 5.3,
+      "depth_km": 10.0,
+      "place": "167 km E of Petropavlovsk-Kamchatsky, Russia",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000ssik.geojson",
+      "alert": null,
+      "sig": 432,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      9328
+    ],
+    "occurred_at": "2026-04-24T08:59:28.540000+00:00",
+    "published_at": "2026-04-24T08:59:28.540000+00:00",
+    "fetched_at": "2026-04-24T08:59:28.540000+00:00"
+  },
+  {
+    "id": 9329,
     "group_key": "earthquake|us6000ssij",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -8,7 +44,7 @@
     "title": "M 5.0 - 24 km S of Sitia, Greece",
     "summary": "24 km S of Sitia, Greece",
     "started_at": "2026-04-24T08:58:17.508000+00:00",
-    "updated_at": "2026-04-24T09:14:16.040000+00:00",
+    "updated_at": "2026-04-24T09:31:59.017000+00:00",
     "location_text": "24 km S of Sitia, Greece",
     "lat": 34.9902,
     "lon": 26.1319,
@@ -29,14 +65,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      9317
+      9329
     ],
     "occurred_at": "2026-04-24T08:58:17.508000+00:00",
     "published_at": "2026-04-24T08:58:17.508000+00:00",
     "fetched_at": "2026-04-24T08:58:17.508000+00:00"
   },
   {
-    "id": 9318,
+    "id": 9330,
     "group_key": "volcano|1be5aa6d1800bb809b5cd91d1d5a20fec24f1a46",
     "event_type": "volcano",
     "severity_level": "high",
@@ -83,14 +119,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      9324
+      9336
     ],
     "occurred_at": "2026-04-24T07:35:00+00:00",
     "published_at": "2026-04-24T07:35:00+00:00",
     "fetched_at": "2026-04-24T07:35:00+00:00"
   },
   {
-    "id": 9319,
+    "id": 9331,
     "group_key": "volcano|810c5639af2a786a5dcf617a84f5040d6d8b3314",
     "event_type": "volcano",
     "severity_level": "high",
@@ -137,14 +173,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      9325
+      9337
     ],
     "occurred_at": "2026-04-24T06:40:00+00:00",
     "published_at": "2026-04-24T06:40:00+00:00",
     "fetched_at": "2026-04-24T06:40:00+00:00"
   },
   {
-    "id": 9320,
+    "id": 9332,
     "group_key": "earthquake|us6000sshp",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -173,14 +209,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      9318
+      9330
     ],
     "occurred_at": "2026-04-24T05:13:10.736000+00:00",
     "published_at": "2026-04-24T05:13:10.736000+00:00",
     "fetched_at": "2026-04-24T05:13:10.736000+00:00"
   },
   {
-    "id": 9321,
+    "id": 9333,
     "group_key": "earthquake|us6000sshk",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -209,14 +245,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      9319
+      9331
     ],
     "occurred_at": "2026-04-24T04:45:20.134000+00:00",
     "published_at": "2026-04-24T04:45:20.134000+00:00",
     "fetched_at": "2026-04-24T04:45:20.134000+00:00"
   },
   {
-    "id": 9322,
+    "id": 9334,
     "group_key": "earthquake|us6000sshc",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -245,14 +281,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      9320
+      9332
     ],
     "occurred_at": "2026-04-24T03:18:53.476000+00:00",
     "published_at": "2026-04-24T03:18:53.476000+00:00",
     "fetched_at": "2026-04-24T03:18:53.476000+00:00"
   },
   {
-    "id": 9323,
+    "id": 9335,
     "group_key": "earthquake|us6000ssgv",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -281,30 +317,30 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      9321
+      9333
     ],
     "occurred_at": "2026-04-24T01:51:59.835000+00:00",
     "published_at": "2026-04-24T01:51:59.835000+00:00",
     "fetched_at": "2026-04-24T01:51:59.835000+00:00"
   },
   {
-    "id": 9324,
+    "id": 9336,
     "group_key": "volcano|c7a569dbc7aab0e393022d0d895c9c6fc27c2298",
     "event_type": "volcano",
     "severity_level": "high",
     "severity_color": "high",
     "title": "Nyamuragira",
-    "summary": "VRP 237.70 MW · VIIRS375 / VIIRS · 3.82 km",
+    "summary": "VRP 237.70 MW · VIIRS / VIIRS375 · 3.82 km",
     "started_at": "2026-04-24T00:06:02+00:00",
     "updated_at": "2026-04-24T00:06:02+00:00",
     "location_text": "Nyamuragira",
     "lat": null,
     "lon": null,
     "source_primary": "MIROVA",
-    "source_secondary": "VIIRS375 / VIIRS",
+    "source_secondary": "VIIRS / VIIRS375",
     "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
     "country_code": null,
     "payload": {
       "volcano_id": "223020",
@@ -317,21 +353,10 @@
       ],
       "source_page": "https://www.mirovaweb.it/NRT/",
       "sensors": [
-        "VIIRS375",
-        "VIIRS"
+        "VIIRS",
+        "VIIRS375"
       ],
       "reports": [
-        {
-          "volcano_id": "223020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
-          "vrp_mw": 237.7,
-          "distance_km": 6.05,
-          "sensor": "VIIRS375",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        },
         {
           "volcano_id": "223020",
           "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
@@ -342,19 +367,30 @@
             "high"
           ],
           "source_page": "https://www.mirovaweb.it/NRT/"
+        },
+        {
+          "volcano_id": "223020",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=223020",
+          "vrp_mw": 237.7,
+          "distance_km": 6.05,
+          "sensor": "VIIRS375",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
         }
       ],
       "merged_count": 2
     },
     "member_event_ids": [
-      9326
+      9338
     ],
     "occurred_at": "2026-04-24T00:06:02+00:00",
     "published_at": "2026-04-24T00:06:02+00:00",
     "fetched_at": "2026-04-24T00:06:02+00:00"
   },
   {
-    "id": 9325,
+    "id": 9337,
     "group_key": "earthquake|us6000ssga",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -383,14 +419,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      9322
+      9334
     ],
     "occurred_at": "2026-04-23T22:52:54.569000+00:00",
     "published_at": "2026-04-23T22:52:54.569000+00:00",
     "fetched_at": "2026-04-23T22:52:54.569000+00:00"
   },
   {
-    "id": 9326,
+    "id": 9338,
     "group_key": "earthquake|us6000ss9m",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -419,14 +455,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      9323
+      9335
     ],
     "occurred_at": "2026-04-23T10:07:48.736000+00:00",
     "published_at": "2026-04-23T10:07:48.736000+00:00",
     "fetched_at": "2026-04-23T10:07:48.736000+00:00"
   },
   {
-    "id": 9327,
+    "id": 9339,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -499,7 +535,7 @@
       }
     },
     "member_event_ids": [
-      9327
+      9339
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",

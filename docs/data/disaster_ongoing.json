@@ -1,6 +1,6 @@
 [
   {
-    "id": 10685,
+    "id": 10690,
     "group_key": "earthquake|us6000sst4",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -29,30 +29,30 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      10685
+      10690
     ],
     "occurred_at": "2026-04-25T10:20:21.431000+00:00",
     "published_at": "2026-04-25T10:20:21.431000+00:00",
     "fetched_at": "2026-04-25T10:20:21.431000+00:00"
   },
   {
-    "id": 10686,
+    "id": 10691,
     "group_key": "volcano|f66268bd1db1ba992dc39b5828b811c55ef0b551",
     "event_type": "volcano",
     "severity_level": "high",
     "severity_color": "high",
     "title": "Fuego",
-    "summary": "VRP 150.18 MW · VIIRS375 / VIIRS · 3.02 km",
+    "summary": "VRP 150.18 MW · VIIRS / VIIRS375 · 3.02 km",
     "started_at": "2026-04-25T08:12:02+00:00",
     "updated_at": "2026-04-25T08:12:02+00:00",
     "location_text": "Fuego",
     "lat": null,
     "lon": null,
     "source_primary": "MIROVA",
-    "source_secondary": "VIIRS375 / VIIRS",
+    "source_secondary": "VIIRS / VIIRS375",
     "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=342090",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=342090",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=342090",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=342090",
     "country_code": null,
     "payload": {
       "volcano_id": "342090",
@@ -61,26 +61,15 @@
       "distance_km": 3.82,
       "sensor": "VIIRS",
       "row_class": [
-        "moderate",
-        "high"
+        "high",
+        "moderate"
       ],
       "source_page": "https://www.mirovaweb.it/NRT/",
       "sensors": [
-        "VIIRS375",
-        "VIIRS"
+        "VIIRS",
+        "VIIRS375"
       ],
       "reports": [
-        {
-          "volcano_id": "342090",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=342090",
-          "vrp_mw": 87.77,
-          "distance_km": 3.02,
-          "sensor": "VIIRS375",
-          "row_class": [
-            "moderate"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        },
         {
           "volcano_id": "342090",
           "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=342090",
@@ -91,19 +80,30 @@
             "high"
           ],
           "source_page": "https://www.mirovaweb.it/NRT/"
+        },
+        {
+          "volcano_id": "342090",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=342090",
+          "vrp_mw": 87.77,
+          "distance_km": 3.02,
+          "sensor": "VIIRS375",
+          "row_class": [
+            "moderate"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
         }
       ],
       "merged_count": 2
     },
     "member_event_ids": [
-      10687
+      10692
     ],
     "occurred_at": "2026-04-25T08:12:02+00:00",
     "published_at": "2026-04-25T08:12:02+00:00",
     "fetched_at": "2026-04-25T08:12:02+00:00"
   },
   {
-    "id": 10687,
+    "id": 10692,
     "group_key": "earthquake|us6000sssg",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -111,7 +111,7 @@
     "title": "M 5.4 - 83 km SE of Akutan, Alaska",
     "summary": "83 km SE of Akutan, Alaska",
     "started_at": "2026-04-25T08:05:56.204000+00:00",
-    "updated_at": "2026-04-25T12:16:00.403000+00:00",
+    "updated_at": "2026-04-25T14:15:58.417000+00:00",
     "location_text": "83 km SE of Akutan, Alaska",
     "lat": 53.5884,
     "lon": -164.9144,
@@ -132,14 +132,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      10686
+      10691
     ],
     "occurred_at": "2026-04-25T08:05:56.204000+00:00",
     "published_at": "2026-04-25T08:05:56.204000+00:00",
     "fetched_at": "2026-04-25T08:05:56.204000+00:00"
   },
   {
-    "id": 10688,
+    "id": 10693,
     "group_key": "volcano|bdb5d57725711ecbd1a6ff7cb74b9dbf4d258716",
     "event_type": "volcano",
     "severity_level": "high",
@@ -186,14 +186,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      10688
+      10693
     ],
     "occurred_at": "2026-04-25T06:35:00+00:00",
     "published_at": "2026-04-25T06:35:00+00:00",
     "fetched_at": "2026-04-25T06:35:00+00:00"
   },
   {
-    "id": 10689,
+    "id": 10694,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -266,7 +266,7 @@
       }
     },
     "member_event_ids": [
-      10689
+      10694
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",

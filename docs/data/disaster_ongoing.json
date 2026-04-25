@@ -1,6 +1,6 @@
 [
   {
-    "id": 10544,
+    "id": 10552,
     "group_key": "earthquake|us6000sssg",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -8,7 +8,7 @@
     "title": "M 5.4 - 83 km SE of Akutan, Alaska",
     "summary": "83 km SE of Akutan, Alaska",
     "started_at": "2026-04-25T08:05:56.204000+00:00",
-    "updated_at": "2026-04-25T08:17:36.374000+00:00",
+    "updated_at": "2026-04-25T08:29:46.607000+00:00",
     "location_text": "83 km SE of Akutan, Alaska",
     "lat": 53.5884,
     "lon": -164.9144,
@@ -23,20 +23,20 @@
       "depth_km": 35.0,
       "place": "83 km SE of Akutan, Alaska",
       "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000sssg.geojson",
-      "alert": null,
-      "sig": 450,
+      "alert": "green",
+      "sig": 452,
       "tsunami": 0,
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      10544
+      10552
     ],
     "occurred_at": "2026-04-25T08:05:56.204000+00:00",
     "published_at": "2026-04-25T08:05:56.204000+00:00",
     "fetched_at": "2026-04-25T08:05:56.204000+00:00"
   },
   {
-    "id": 10545,
+    "id": 10553,
     "group_key": "volcano|fac922de611ef220cf5193ad583ec2b78132270f",
     "event_type": "volcano",
     "severity_level": "very_high",
@@ -83,14 +83,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      10550
+      10558
     ],
     "occurred_at": "2026-04-25T00:55:00+00:00",
     "published_at": "2026-04-25T00:55:00+00:00",
     "fetched_at": "2026-04-25T00:55:00+00:00"
   },
   {
-    "id": 10546,
+    "id": 10554,
     "group_key": "earthquake|us6000ssjg",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -119,14 +119,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      10545
+      10553
     ],
     "occurred_at": "2026-04-24T13:49:41.138000+00:00",
     "published_at": "2026-04-24T13:49:41.138000+00:00",
     "fetched_at": "2026-04-24T13:49:41.138000+00:00"
   },
   {
-    "id": 10547,
+    "id": 10555,
     "group_key": "earthquake|us6000ssja",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -155,14 +155,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      10546
+      10554
     ],
     "occurred_at": "2026-04-24T12:49:37.014000+00:00",
     "published_at": "2026-04-24T12:49:37.014000+00:00",
     "fetched_at": "2026-04-24T12:49:37.014000+00:00"
   },
   {
-    "id": 10548,
+    "id": 10556,
     "group_key": "earthquake|us6000ssiy",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -191,14 +191,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      10547
+      10555
     ],
     "occurred_at": "2026-04-24T10:04:37.607000+00:00",
     "published_at": "2026-04-24T10:04:37.607000+00:00",
     "fetched_at": "2026-04-24T10:04:37.607000+00:00"
   },
   {
-    "id": 10549,
+    "id": 10557,
     "group_key": "earthquake|us6000ssik",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -227,14 +227,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      10548
+      10556
     ],
     "occurred_at": "2026-04-24T08:59:28.540000+00:00",
     "published_at": "2026-04-24T08:59:28.540000+00:00",
     "fetched_at": "2026-04-24T08:59:28.540000+00:00"
   },
   {
-    "id": 10550,
+    "id": 10558,
     "group_key": "earthquake|us6000ssij",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -263,14 +263,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      10549
+      10557
     ],
     "occurred_at": "2026-04-24T08:58:17.508000+00:00",
     "published_at": "2026-04-24T08:58:17.508000+00:00",
     "fetched_at": "2026-04-24T08:58:17.508000+00:00"
   },
   {
-    "id": 10551,
+    "id": 10559,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -343,7 +343,7 @@
       }
     },
     "member_event_ids": [
-      10551
+      10559
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",

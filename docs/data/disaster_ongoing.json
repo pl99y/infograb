@@ -1,6 +1,42 @@
 [
   {
-    "id": 10605,
+    "id": 10610,
+    "group_key": "earthquake|us6000sst4",
+    "event_type": "earthquake",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "M 5.2 - 34 km SE of Vilyuchinsk, Russia",
+    "summary": "34 km SE of Vilyuchinsk, Russia",
+    "started_at": "2026-04-25T10:20:21.431000+00:00",
+    "updated_at": "2026-04-25T10:39:03.780000+00:00",
+    "location_text": "34 km SE of Vilyuchinsk, Russia",
+    "lat": 52.6755,
+    "lon": 158.6924,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sst4",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sst4",
+    "country_code": null,
+    "payload": {
+      "mag": 5.2,
+      "depth_km": 87.83,
+      "place": "34 km SE of Vilyuchinsk, Russia",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000sst4.geojson",
+      "alert": null,
+      "sig": 416,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      10610
+    ],
+    "occurred_at": "2026-04-25T10:20:21.431000+00:00",
+    "published_at": "2026-04-25T10:20:21.431000+00:00",
+    "fetched_at": "2026-04-25T10:20:21.431000+00:00"
+  },
+  {
+    "id": 10611,
     "group_key": "earthquake|us6000sssg",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -29,14 +65,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      10605
+      10611
     ],
     "occurred_at": "2026-04-25T08:05:56.204000+00:00",
     "published_at": "2026-04-25T08:05:56.204000+00:00",
     "fetched_at": "2026-04-25T08:05:56.204000+00:00"
   },
   {
-    "id": 10606,
+    "id": 10612,
     "group_key": "volcano|bdb5d57725711ecbd1a6ff7cb74b9dbf4d258716",
     "event_type": "volcano",
     "severity_level": "high",
@@ -83,14 +119,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      10608
+      10614
     ],
     "occurred_at": "2026-04-25T06:35:00+00:00",
     "published_at": "2026-04-25T06:35:00+00:00",
     "fetched_at": "2026-04-25T06:35:00+00:00"
   },
   {
-    "id": 10607,
+    "id": 10613,
     "group_key": "earthquake|us6000ssjg",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -119,14 +155,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      10606
+      10612
     ],
     "occurred_at": "2026-04-24T13:49:41.138000+00:00",
     "published_at": "2026-04-24T13:49:41.138000+00:00",
     "fetched_at": "2026-04-24T13:49:41.138000+00:00"
   },
   {
-    "id": 10608,
+    "id": 10614,
     "group_key": "earthquake|us6000ssja",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -155,14 +191,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      10607
+      10613
     ],
     "occurred_at": "2026-04-24T12:49:37.014000+00:00",
     "published_at": "2026-04-24T12:49:37.014000+00:00",
     "fetched_at": "2026-04-24T12:49:37.014000+00:00"
   },
   {
-    "id": 10609,
+    "id": 10615,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -235,7 +271,7 @@
       }
     },
     "member_event_ids": [
-      10609
+      10615
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",

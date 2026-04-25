@@ -1,11 +1,21 @@
 {
-  "id": 41,
+  "id": 42,
   "snapshot_key": "space_launches_default",
   "source_name": "AEI Launch Records API",
   "source_url": "https://space-data-api-46930537539.us-central1.run.app/api/public/launches/records",
-  "fetched_at": "2026-04-25T12:07:05.547290+00:00",
-  "created_at": "2026-04-25 12:07:09",
+  "fetched_at": "2026-04-25T18:07:07.416068+00:00",
+  "created_at": "2026-04-25 18:07:12",
   "items": [
+    {
+      "date": "2026-04-24",
+      "vehicle": "Chang Zheng 2D",
+      "launch_site": "Xichang Space Center (Songlin), Sichuan, China",
+      "country": "China",
+      "category": "Orbital",
+      "outcome": "Success",
+      "actual_payload_capacity": "载荷 1.2 t · LEO 3.5 t · SSO 1.3 t",
+      "starlink_mission": "否"
+    },
     {
       "date": "2026-04-23",
       "vehicle": "Electron",
@@ -95,16 +105,6 @@
       "outcome": "Success",
       "actual_payload_capacity": "载荷 14.4 t · LEO 17.4 t · SSO 9.1 t",
       "starlink_mission": "是"
-    },
-    {
-      "date": "2026-04-14",
-      "vehicle": "Lijian-1",
-      "launch_site": "Jiuquan Space Center, Nei Monggol Zizhiqu, China",
-      "country": "China",
-      "category": "Orbital",
-      "outcome": "Success",
-      "actual_payload_capacity": "载荷 0 t · LEO 2 t · SSO 1.5 t",
-      "starlink_mission": "否"
     }
   ]
 }

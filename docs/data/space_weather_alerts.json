@@ -1,6 +1,88 @@
 [
   {
-    "id": 756,
+    "id": 786,
+    "dedupe_key": "A20F|2026-04-24 23:50:43.280|1109",
+    "product_id": "A20F",
+    "message_code": "WATA20",
+    "serial_number": "1109",
+    "issue_datetime": "2026-04-24T23:50:43.280000+00:00",
+    "issue_time_text": "2026-04-24T23:50:00+00:00",
+    "headline": "观看：预计将出现G1级地磁风暴",
+    "message_type": "watch",
+    "noaa_scale": null,
+    "impacts_text": "影响区域主要位于地磁纬度60度以北。感应电流 - 可能出现微弱的电网波动。航天器 - 可能对卫星运行产生轻微影响。极光 - 在高纬度地区（如美国北部，例如密歇根州北部和缅因州）可能可见极光。",
+    "description_text": "",
+    "message_raw": "Space Weather Message Code: WATA20\r\nSerial Number: 1109\r\nIssue Time: 2026 Apr 24 2350 UTC\r\n\r\nWATCH: Geomagnetic Storm Category G1 Predicted\r\n\r\nHighest Storm Level Predicted by Day:\r\nApr 25:  G1 (Minor)   Apr 26:  G1 (Minor)   Apr 27:  None (Below G1)\r\n\r\nTHIS SUPERSEDES ANY/ALL PRIOR WATCHES IN EFFECT\r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact primarily poleward of 60 degrees Geomagnetic Latitude.\r\nInduced Currents - Weak power grid fluctuations can occur.\r\nSpacecraft - Minor impact on satellite operations possible.\r\nAurora - Aurora may be visible at high latitudes, i.e., northern tier of the U.S. such as northern Michigan and Maine.",
+    "source_name": "SWPC Alerts",
+    "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
+    "fetched_at": "2026-04-25T00:07:05.584071+00:00",
+    "created_at": "2026-04-25 00:07:09",
+    "details": {
+      "space_weather_message_code": "WATA20",
+      "serial_number": "1109",
+      "issue_time": "2026 Apr 24 2350 UTC",
+      "highest_storm_level_predicted_by_day": "",
+      "apr_25": "G1 (Minor)   Apr 26:  G1 (Minor)   Apr 27:  None (Below G1)"
+    }
+  },
+  {
+    "id": 787,
+    "dedupe_key": "XM5S|2026-04-24 18:35:25.930|313",
+    "product_id": "XM5S",
+    "message_code": "SUMXM5",
+    "serial_number": "313",
+    "issue_datetime": "2026-04-24T18:35:25.930000+00:00",
+    "issue_time_text": "2026-04-24T18:35:00+00:00",
+    "headline": "摘要：X射线事件超过M5级",
+    "message_type": "summary",
+    "noaa_scale": "R2 - Moderate",
+    "impacts_text": "影响区域主要集中在地球向阳面的太阳直射点。无线电 - 高频（HF）无线电通信出现持续数十分钟的有限中断。",
+    "description_text": "",
+    "message_raw": "Space Weather Message Code: SUMXM5\r\nSerial Number: 313\r\nIssue Time: 2026 Apr 24 1835 UTC\r\n\r\nSUMMARY: X-ray Event exceeded M5\r\nBegin Time: 2026 Apr 24 1754 UTC\r\nMaximum Time: 2026 Apr 24 1815 UTC\r\nEnd Time: 2026 Apr 24 1830 UTC\r\nX-ray Class: M6.4\r\nLocation: N19W90\r\nNOAA Scale: R2 - Moderate\r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact centered primarily on sub-solar point on the sunlit side of Earth.\r\nRadio - Limited blackout of HF (high frequency) radio communication for tens of minutes.",
+    "source_name": "SWPC Alerts",
+    "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
+    "fetched_at": "2026-04-25T00:07:05.584071+00:00",
+    "created_at": "2026-04-25 00:07:09",
+    "details": {
+      "space_weather_message_code": "SUMXM5",
+      "serial_number": "313",
+      "issue_time": "2026 Apr 24 1835 UTC",
+      "begin_time": "2026 Apr 24 1754 UTC",
+      "maximum_time": "2026 Apr 24 1815 UTC",
+      "end_time": "2026 Apr 24 1830 UTC",
+      "x_ray_class": "M6.4",
+      "location": "N19W90",
+      "noaa_scale": "R2 - Moderate"
+    }
+  },
+  {
+    "id": 788,
+    "dedupe_key": "XM5A|2026-04-24 18:12:55.427|525",
+    "product_id": "XM5A",
+    "message_code": "ALTXMF",
+    "serial_number": "525",
+    "issue_datetime": "2026-04-24T18:12:55.427000+00:00",
+    "issue_time_text": "2026-04-24T18:12:00+00:00",
+    "headline": "警报：X射线通量超过M5级",
+    "message_type": "alert",
+    "noaa_scale": "R2 - Moderate",
+    "impacts_text": "影响区域集中在地球向阳面的太阳直射点。高频（HF）无线电通信中断的范围取决于当前的X射线通量强度。有关受影响区域和预期持续时间的实时信息，请访问 http://www.swpc.noaa.gov/products/d-region-absorption-predictions-d-rap。",
+    "description_text": "",
+    "message_raw": "Space Weather Message Code: ALTXMF\r\nSerial Number: 525\r\nIssue Time: 2026 Apr 24 1812 UTC\r\n\r\nALERT: X-Ray Flux exceeded M5\r\nThreshold Reached: 2026 Apr 24 1812 UTC\r\nNOAA Scale: R2 - Moderate\r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact centered on sub-solar point on the sunlit side of Earth. Extent of blackout of HF (high frequency) radio communication dependent upon current X-ray Flux intensity. For real-time information on affected area and expected duration please see http://www.swpc.noaa.gov/products/d-region-absorption-predictions-d-rap.",
+    "source_name": "SWPC Alerts",
+    "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
+    "fetched_at": "2026-04-25T00:07:05.584071+00:00",
+    "created_at": "2026-04-25 00:07:09",
+    "details": {
+      "space_weather_message_code": "ALTXMF",
+      "serial_number": "525",
+      "issue_time": "2026 Apr 24 1812 UTC",
+      "threshold_reached": "2026 Apr 24 1812 UTC",
+      "noaa_scale": "R2 - Moderate"
+    }
+  },
+  {
+    "id": 789,
     "dedupe_key": "TIVA|2026-04-24 10:42:00.107|707",
     "product_id": "TIVA",
     "message_code": "ALTTP4",
@@ -15,8 +97,8 @@
     "message_raw": "Space Weather Message Code: ALTTP4\r\nSerial Number: 707\r\nIssue Time: 2026 Apr 24 1041 UTC\r\n\r\nALERT: Type IV Radio Emission\r\nBegin Time: 2026 Apr 24 0840 UTC\r\n\r\n\r\n\r\nDescription: Type IV emissions occur in association with major eruptions on the sun and are typically associated with strong coronal mass ejections and solar radiation storms.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-24T18:07:05.943674+00:00",
-    "created_at": "2026-04-24 18:07:08",
+    "fetched_at": "2026-04-25T00:07:05.584071+00:00",
+    "created_at": "2026-04-25 00:07:09",
     "details": {
       "space_weather_message_code": "ALTTP4",
       "serial_number": "707",
@@ -25,7 +107,7 @@
     }
   },
   {
-    "id": 757,
+    "id": 790,
     "dedupe_key": "TIIA|2026-04-24 09:28:15.750|1479",
     "product_id": "TIIA",
     "message_code": "ALTTP2",
@@ -40,8 +122,8 @@
     "message_raw": "Space Weather Message Code: ALTTP2\r\nSerial Number: 1479\r\nIssue Time: 2026 Apr 24 0928 UTC\r\n\r\nALERT: Type II Radio Emission\r\nBegin Time: 2026 Apr 24 0815 UTC\r\nEstimated Velocity: 1293 km/s\r\n\r\nComment: Reissued with adjusted shock speed.\r\n\r\n\r\n\r\nDescription: Type II emissions occur in association with eruptions on the sun and typically indicate a coronal mass ejection is associated with a flare event.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-24T18:07:05.943674+00:00",
-    "created_at": "2026-04-24 18:07:08",
+    "fetched_at": "2026-04-25T00:07:05.584071+00:00",
+    "created_at": "2026-04-25 00:07:09",
     "details": {
       "space_weather_message_code": "ALTTP2",
       "serial_number": "1479",
@@ -52,7 +134,7 @@
     }
   },
   {
-    "id": 758,
+    "id": 791,
     "dedupe_key": "TIIA|2026-04-24 09:27:04.090|1478",
     "product_id": "TIIA",
     "message_code": "ALTTP2",
@@ -67,8 +149,8 @@
     "message_raw": "Space Weather Message Code: ALTTP2\r\nSerial Number: 1478\r\nIssue Time: 2026 Apr 24 0927 UTC\r\n\r\nCANCEL ALERT: Type II Radio Emission\r\nCancel Serial Number: 1477\r\nOriginal Issue Time: 2026 Apr 24 0857 UTC\r\n\r\nComment: Reissuing with corrected shock speed.\r\n\r\n\r\n\r\nDescription: Type II emissions occur in association with eruptions on the sun and typically indicate a coronal mass ejection is associated with a flare event.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-24T18:07:05.943674+00:00",
-    "created_at": "2026-04-24 18:07:08",
+    "fetched_at": "2026-04-25T00:07:05.584071+00:00",
+    "created_at": "2026-04-25 00:07:09",
     "details": {
       "space_weather_message_code": "ALTTP2",
       "serial_number": "1478",
@@ -79,7 +161,7 @@
     }
   },
   {
-    "id": 759,
+    "id": 792,
     "dedupe_key": "TIIA|2026-04-24 08:57:09.113|1477",
     "product_id": "TIIA",
     "message_code": "ALTTP2",
@@ -94,8 +176,8 @@
     "message_raw": "Space Weather Message Code: ALTTP2\r\nSerial Number: 1477\r\nIssue Time: 2026 Apr 24 0857 UTC\r\n\r\nALERT: Type II Radio Emission\r\nBegin Time: 2026 Apr 24 0815 UTC\r\nEstimated Velocity: 1869 km/s\r\n\r\n\r\n\r\nDescription: Type II emissions occur in association with eruptions on the sun and typically indicate a coronal mass ejection is associated with a flare event.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-24T18:07:05.943674+00:00",
-    "created_at": "2026-04-24 18:07:08",
+    "fetched_at": "2026-04-25T00:07:05.584071+00:00",
+    "created_at": "2026-04-25 00:07:09",
     "details": {
       "space_weather_message_code": "ALTTP2",
       "serial_number": "1477",
@@ -105,7 +187,7 @@
     }
   },
   {
-    "id": 760,
+    "id": 793,
     "dedupe_key": "BHIS|2026-04-24 08:38:12.513|908",
     "product_id": "BHIS",
     "message_code": "SUM10R",
@@ -120,8 +202,8 @@
     "message_raw": "Space Weather Message Code: SUM10R\r\nSerial Number: 908\r\nIssue Time: 2026 Apr 24 0838 UTC\r\n\r\nSUMMARY: 10cm Radio Burst\r\nBegin Time: 2026 Apr 24 0809 UTC\r\nMaximum Time: 2026 Apr 24 0811 UTC\r\nEnd Time: 2026 Apr 24 0815 UTC\r\nDuration: 6 minutes\r\nPeak Flux: 570 sfu\r\nLatest Penticton Noon Flux: 128 sfu\r\n\r\n\r\n\r\nDescription: A 10cm radio burst indicates that the electromagnetic burst associated with a solar flare at the 10cm wavelength was double or greater than the initial 10cm radio background. This can be indicative of significant radio noise in association with a solar flare. This noise is generally short-lived but can cause interference for sensitive receivers including radar, GPS, and satellite communications.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-24T18:07:05.943674+00:00",
-    "created_at": "2026-04-24 18:07:08",
+    "fetched_at": "2026-04-25T00:07:05.584071+00:00",
+    "created_at": "2026-04-25 00:07:09",
     "details": {
       "space_weather_message_code": "SUM10R",
       "serial_number": "908",
@@ -135,7 +217,7 @@
     }
   },
   {
-    "id": 761,
+    "id": 794,
     "dedupe_key": "XX0S|2026-04-24 08:26:42.683|216",
     "product_id": "XX0S",
     "message_code": "SUMX01",
@@ -150,8 +232,8 @@
     "message_raw": "Space Weather Message Code: SUMX01\r\nSerial Number: 216\r\nIssue Time: 2026 Apr 24 0826 UTC\r\n\r\nSUMMARY: X-ray Event exceeded X1\r\nBegin Time: 2026 Apr 24 0801 UTC\r\nMaximum Time: 2026 Apr 24 0813 UTC\r\nEnd Time: 2026 Apr 24 0818 UTC\r\nX-ray Class: X2.5\r\nOptical Class: 2b\r\nLocation: N20W90\r\nNOAA Scale: R3 - Strong\r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact consists of large portions of the sunlit side of Earth, strongest at the sub-solar point.\r\nRadio - Wide area blackout of HF (high frequency) radio communication for about an hour.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-24T18:07:05.943674+00:00",
-    "created_at": "2026-04-24 18:07:08",
+    "fetched_at": "2026-04-25T00:07:05.584071+00:00",
+    "created_at": "2026-04-25 00:07:09",
     "details": {
       "space_weather_message_code": "SUMX01",
       "serial_number": "216",
@@ -166,7 +248,7 @@
     }
   },
   {
-    "id": 762,
+    "id": 795,
     "dedupe_key": "XM5A|2026-04-24 08:12:47.817|524",
     "product_id": "XM5A",
     "message_code": "ALTXMF",
@@ -181,8 +263,8 @@
     "message_raw": "Space Weather Message Code: ALTXMF\r\nSerial Number: 524\r\nIssue Time: 2026 Apr 24 0812 UTC\r\n\r\nALERT: X-Ray Flux exceeded M5\r\nThreshold Reached: 2026 Apr 24 0812 UTC\r\nNOAA Scale: R2 - Moderate\r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact centered on sub-solar point on the sunlit side of Earth. Extent of blackout of HF (high frequency) radio communication dependent upon current X-ray Flux intensity. For real-time information on affected area and expected duration please see http://www.swpc.noaa.gov/products/d-region-absorption-predictions-d-rap.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-24T18:07:05.943674+00:00",
-    "created_at": "2026-04-24 18:07:08",
+    "fetched_at": "2026-04-25T00:07:05.584071+00:00",
+    "created_at": "2026-04-25 00:07:09",
     "details": {
       "space_weather_message_code": "ALTXMF",
       "serial_number": "524",
@@ -192,7 +274,7 @@
     }
   },
   {
-    "id": 763,
+    "id": 796,
     "dedupe_key": "EF3A|2026-04-24 05:05:30.867|3684",
     "product_id": "EF3A",
     "message_code": "ALTEF3",
@@ -207,8 +289,8 @@
     "message_raw": "Space Weather Message Code: ALTEF3\r\nSerial Number: 3684\r\nIssue Time: 2026 Apr 24 0505 UTC\r\n\r\nCONTINUED ALERT: Electron 2MeV Integral Flux exceeded 1000pfu\r\nContinuation of Serial Number: 3683\r\nBegin Time: 2026 Apr 19 1920 UTC\r\nYesterday Maximum 2MeV Flux: 3446 pfu\r\n\r\n\r\n\r\nPotential Impacts: Satellite systems may experience significant charging resulting in increased risk to satellite systems.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-24T18:07:05.943674+00:00",
-    "created_at": "2026-04-24 18:07:08",
+    "fetched_at": "2026-04-25T00:07:05.584071+00:00",
+    "created_at": "2026-04-25 00:07:09",
     "details": {
       "space_weather_message_code": "ALTEF3",
       "serial_number": "3684",
@@ -219,7 +301,7 @@
     }
   },
   {
-    "id": 764,
+    "id": 797,
     "dedupe_key": "XX0S|2026-04-24 01:31:02.040|215",
     "product_id": "XX0S",
     "message_code": "SUMX01",
@@ -234,8 +316,8 @@
     "message_raw": "Space Weather Message Code: SUMX01\r\nSerial Number: 215\r\nIssue Time: 2026 Apr 24 0131 UTC\r\n\r\nSUMMARY: X-ray Event exceeded X1\r\nBegin Time: 2026 Apr 24 0051 UTC\r\nMaximum Time: 2026 Apr 24 0107 UTC\r\nEnd Time: 2026 Apr 24 0113 UTC\r\nX-ray Class: X2.4\r\nLocation: N17W71\r\nNOAA Scale: R3 - Strong\r\n\r\nComment: Accompanied by a tenflare with a castelli-U signature. No radio observations currently available. \r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact consists of large portions of the sunlit side of Earth, strongest at the sub-solar point.\r\nRadio - Wide area blackout of HF (high frequency) radio communication for about an hour.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-24T18:07:05.943674+00:00",
-    "created_at": "2026-04-24 18:07:08",
+    "fetched_at": "2026-04-25T00:07:05.584071+00:00",
+    "created_at": "2026-04-25 00:07:09",
     "details": {
       "space_weather_message_code": "SUMX01",
       "serial_number": "215",
@@ -250,7 +332,7 @@
     }
   },
   {
-    "id": 765,
+    "id": 798,
     "dedupe_key": "BHIS|2026-04-24 01:29:47.753|907",
     "product_id": "BHIS",
     "message_code": "SUM10R",
@@ -265,8 +347,8 @@
     "message_raw": "Space Weather Message Code: SUM10R\r\nSerial Number: 907\r\nIssue Time: 2026 Apr 24 0129 UTC\r\n\r\nSUMMARY: 10cm Radio Burst\r\nBegin Time: 2026 Apr 24 0103 UTC\r\nMaximum Time: 2026 Apr 24 0104 UTC\r\nEnd Time: 2026 Apr 24 0109 UTC\r\nDuration: 6 minutes\r\nPeak Flux: 570 sfu\r\nLatest Penticton Noon Flux: 128 sfu\r\n\r\n\r\n\r\nDescription: A 10cm radio burst indicates that the electromagnetic burst associated with a solar flare at the 10cm wavelength was double or greater than the initial 10cm radio background. This can be indicative of significant radio noise in association with a solar flare. This noise is generally short-lived but can cause interference for sensitive receivers including radar, GPS, and satellite communications.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-24T18:07:05.943674+00:00",
-    "created_at": "2026-04-24 18:07:08",
+    "fetched_at": "2026-04-25T00:07:05.584071+00:00",
+    "created_at": "2026-04-25 00:07:09",
     "details": {
       "space_weather_message_code": "SUM10R",
       "serial_number": "907",
@@ -280,7 +362,7 @@
     }
   },
   {
-    "id": 766,
+    "id": 799,
     "dedupe_key": "XM5A|2026-04-24 01:08:12.750|523",
     "product_id": "XM5A",
     "message_code": "ALTXMF",
@@ -295,8 +377,8 @@
     "message_raw": "Space Weather Message Code: ALTXMF\r\nSerial Number: 523\r\nIssue Time: 2026 Apr 24 0108 UTC\r\n\r\nALERT: X-Ray Flux exceeded M5\r\nThreshold Reached: 2026 Apr 24 0105 UTC\r\nNOAA Scale: R2 - Moderate\r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact centered on sub-solar point on the sunlit side of Earth. Extent of blackout of HF (high frequency) radio communication dependent upon current X-ray Flux intensity. For real-time information on affected area and expected duration please see http://www.swpc.noaa.gov/products/d-region-absorption-predictions-d-rap.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-24T18:07:05.943674+00:00",
-    "created_at": "2026-04-24 18:07:08",
+    "fetched_at": "2026-04-25T00:07:05.584071+00:00",
+    "created_at": "2026-04-25 00:07:09",
     "details": {
       "space_weather_message_code": "ALTXMF",
       "serial_number": "523",
@@ -306,7 +388,7 @@
     }
   },
   {
-    "id": 767,
+    "id": 800,
     "dedupe_key": "BHIS|2026-04-23 17:23:51.643|906",
     "product_id": "BHIS",
     "message_code": "SUM10R",
@@ -321,8 +403,8 @@
     "message_raw": "Space Weather Message Code: SUM10R\r\nSerial Number: 906\r\nIssue Time: 2026 Apr 23 1723 UTC\r\n\r\nSUMMARY: 10cm Radio Burst\r\nBegin Time: 2026 Apr 23 1703 UTC\r\nMaximum Time: 2026 Apr 23 1705 UTC\r\nEnd Time: 2026 Apr 23 1707 UTC\r\nDuration: 4 minutes\r\nPeak Flux: 220 sfu\r\nLatest Penticton Noon Flux: 116 sfu\r\n\r\n\r\n\r\nDescription: A 10cm radio burst indicates that the electromagnetic burst associated with a solar flare at the 10cm wavelength was double or greater than the initial 10cm radio background. This can be indicative of significant radio noise in association with a solar flare. This noise is generally short-lived but can cause interference for sensitive receivers including radar, GPS, and satellite communications.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-24T18:07:05.943674+00:00",
-    "created_at": "2026-04-24 18:07:08",
+    "fetched_at": "2026-04-25T00:07:05.584071+00:00",
+    "created_at": "2026-04-25 00:07:09",
     "details": {
       "space_weather_message_code": "SUM10R",
       "serial_number": "906",
@@ -336,7 +418,7 @@
     }
   },
   {
-    "id": 768,
+    "id": 801,
     "dedupe_key": "BHIS|2026-04-23 14:52:44.433|905",
     "product_id": "BHIS",
     "message_code": "SUM10R",
@@ -351,8 +433,8 @@
     "message_raw": "Space Weather Message Code: SUM10R\r\nSerial Number: 905\r\nIssue Time: 2026 Apr 23 1452 UTC\r\n\r\nSUMMARY: 10cm Radio Burst\r\nBegin Time: 2026 Apr 23 1355 UTC\r\nMaximum Time: 2026 Apr 23 1356 UTC\r\nEnd Time: 2026 Apr 23 1357 UTC\r\nDuration: 2 minutes\r\nPeak Flux: 170 sfu\r\nLatest Penticton Noon Flux: 116 sfu\r\n\r\n\r\n\r\nDescription: A 10cm radio burst indicates that the electromagnetic burst associated with a solar flare at the 10cm wavelength was double or greater than the initial 10cm radio background. This can be indicative of significant radio noise in association with a solar flare. This noise is generally short-lived but can cause interference for sensitive receivers including radar, GPS, and satellite communications.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-24T18:07:05.943674+00:00",
-    "created_at": "2026-04-24 18:07:08",
+    "fetched_at": "2026-04-25T00:07:05.584071+00:00",
+    "created_at": "2026-04-25 00:07:09",
     "details": {
       "space_weather_message_code": "SUM10R",
       "serial_number": "905",
@@ -366,7 +448,7 @@
     }
   },
   {
-    "id": 769,
+    "id": 802,
     "dedupe_key": "TIIA|2026-04-23 09:14:17.857|1476",
     "product_id": "TIIA",
     "message_code": "ALTTP2",
@@ -381,8 +463,8 @@
     "message_raw": "Space Weather Message Code: ALTTP2\r\nSerial Number: 1476\r\nIssue Time: 2026 Apr 23 0914 UTC\r\n\r\nALERT: Type II Radio Emission\r\nBegin Time: 2026 Apr 23 0859 UTC\r\nEstimated Velocity: 722 km/s\r\n\r\nComment: Report from San Vito\r\n\r\n\r\n\r\nDescription: Type II emissions occur in association with eruptions on the sun and typically indicate a coronal mass ejection is associated with a flare event.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-24T18:07:05.943674+00:00",
-    "created_at": "2026-04-24 18:07:08",
+    "fetched_at": "2026-04-25T00:07:05.584071+00:00",
+    "created_at": "2026-04-25 00:07:09",
     "details": {
       "space_weather_message_code": "ALTTP2",
       "serial_number": "1476",
@@ -393,7 +475,7 @@
     }
   },
   {
-    "id": 770,
+    "id": 803,
     "dedupe_key": "BHIS|2026-04-23 08:59:36.940|904",
     "product_id": "BHIS",
     "message_code": "SUM10R",
@@ -408,8 +490,8 @@
     "message_raw": "Space Weather Message Code: SUM10R\r\nSerial Number: 904\r\nIssue Time: 2026 Apr 23 0859 UTC\r\n\r\nSUMMARY: 10cm Radio Burst\r\nBegin Time: 2026 Apr 23 0844 UTC\r\nMaximum Time: 2026 Apr 23 0844 UTC\r\nEnd Time: 2026 Apr 23 0844 UTC\r\nDuration: 1 minutes\r\nPeak Flux: 130 sfu\r\nLatest Penticton Noon Flux: 116 sfu\r\n\r\n\r\n\r\nDescription: A 10cm radio burst indicates that the electromagnetic burst associated with a solar flare at the 10cm wavelength was double or greater than the initial 10cm radio background. This can be indicative of significant radio noise in association with a solar flare. This noise is generally short-lived but can cause interference for sensitive receivers including radar, GPS, and satellite communications.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-24T18:07:05.943674+00:00",
-    "created_at": "2026-04-24 18:07:08",
+    "fetched_at": "2026-04-25T00:07:05.584071+00:00",
+    "created_at": "2026-04-25 00:07:09",
     "details": {
       "space_weather_message_code": "SUM10R",
       "serial_number": "904",
@@ -423,7 +505,7 @@
     }
   },
   {
-    "id": 771,
+    "id": 804,
     "dedupe_key": "TIVA|2026-04-23 05:35:08.410|706",
     "product_id": "TIVA",
     "message_code": "ALTTP4",
@@ -438,8 +520,8 @@
     "message_raw": "Space Weather Message Code: ALTTP4\r\nSerial Number: 706\r\nIssue Time: 2026 Apr 23 0535 UTC\r\n\r\nALERT: Type IV Radio Emission\r\nBegin Time: 2026 Apr 23 0513 UTC\r\n\r\nComment: Report from San Vito\r\n\r\n\r\n\r\nDescription: Type IV emissions occur in association with major eruptions on the sun and are typically associated with strong coronal mass ejections and solar radiation storms.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-24T18:07:05.943674+00:00",
-    "created_at": "2026-04-24 18:07:08",
+    "fetched_at": "2026-04-25T00:07:05.584071+00:00",
+    "created_at": "2026-04-25 00:07:09",
     "details": {
       "space_weather_message_code": "ALTTP4",
       "serial_number": "706",
@@ -449,7 +531,7 @@
     }
   },
   {
-    "id": 772,
+    "id": 805,
     "dedupe_key": "TIIA|2026-04-23 05:10:18.543|1475",
     "product_id": "TIIA",
     "message_code": "ALTTP2",
@@ -464,8 +546,8 @@
     "message_raw": "Space Weather Message Code: ALTTP2\r\nSerial Number: 1475\r\nIssue Time: 2026 Apr 23 0510 UTC\r\n\r\nALERT: Type II Radio Emission\r\nBegin Time: 2026 Apr 23 0450 UTC\r\nEstimated Velocity: 1033 km/s\r\n\r\nComment: Report from San Vito\r\n\r\n\r\n\r\nDescription: Type II emissions occur in association with eruptions on the sun and typically indicate a coronal mass ejection is associated with a flare event.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-24T18:07:05.943674+00:00",
-    "created_at": "2026-04-24 18:07:08",
+    "fetched_at": "2026-04-25T00:07:05.584071+00:00",
+    "created_at": "2026-04-25 00:07:09",
     "details": {
       "space_weather_message_code": "ALTTP2",
       "serial_number": "1475",
@@ -476,7 +558,7 @@
     }
   },
   {
-    "id": 773,
+    "id": 806,
     "dedupe_key": "EF3A|2026-04-23 04:59:16.577|3683",
     "product_id": "EF3A",
     "message_code": "ALTEF3",
@@ -491,8 +573,8 @@
     "message_raw": "Space Weather Message Code: ALTEF3\r\nSerial Number: 3683\r\nIssue Time: 2026 Apr 23 0459 UTC\r\n\r\nCONTINUED ALERT: Electron 2MeV Integral Flux exceeded 1000pfu\r\nContinuation of Serial Number: 3682\r\nBegin Time: 2026 Apr 19 1920 UTC\r\nYesterday Maximum 2MeV Flux: 4922 pfu\r\n\r\n\r\n\r\nPotential Impacts: Satellite systems may experience significant charging resulting in increased risk to satellite systems.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-24T18:07:05.943674+00:00",
-    "created_at": "2026-04-24 18:07:08",
+    "fetched_at": "2026-04-25T00:07:05.584071+00:00",
+    "created_at": "2026-04-25 00:07:09",
     "details": {
       "space_weather_message_code": "ALTEF3",
       "serial_number": "3683",
@@ -503,7 +585,7 @@
     }
   },
   {
-    "id": 774,
+    "id": 807,
     "dedupe_key": "EF3A|2026-04-22 05:03:09.480|3682",
     "product_id": "EF3A",
     "message_code": "ALTEF3",
@@ -518,8 +600,8 @@
     "message_raw": "Space Weather Message Code: ALTEF3\r\nSerial Number: 3682\r\nIssue Time: 2026 Apr 22 0503 UTC\r\n\r\nCONTINUED ALERT: Electron 2MeV Integral Flux exceeded 1000pfu\r\nContinuation of Serial Number: 3681\r\nBegin Time: 2026 Apr 19 1920 UTC\r\nYesterday Maximum 2MeV Flux: 4987 pfu\r\n\r\n\r\n\r\nPotential Impacts: Satellite systems may experience significant charging resulting in increased risk to satellite systems.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-24T18:07:05.943674+00:00",
-    "created_at": "2026-04-24 18:07:08",
+    "fetched_at": "2026-04-25T00:07:05.584071+00:00",
+    "created_at": "2026-04-25 00:07:09",
     "details": {
       "space_weather_message_code": "ALTEF3",
       "serial_number": "3682",
@@ -530,7 +612,7 @@
     }
   },
   {
-    "id": 775,
+    "id": 808,
     "dedupe_key": "K04W|2026-04-21 16:51:46.397|5326",
     "product_id": "K04W",
     "message_code": "WARK04",
@@ -545,8 +627,8 @@
     "message_raw": "Space Weather Message Code: WARK04\r\nSerial Number: 5326\r\nIssue Time: 2026 Apr 21 1651 UTC\r\n\r\nEXTENDED WARNING: Geomagnetic K-index of 4 expected\r\nExtension to Serial Number: 5325\r\nValid From: 2026 Apr 20 0805 UTC\r\nNow Valid Until: 2026 Apr 21 2359 UTC\r\nWarning Condition: Persistence\r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact primarily poleward of 65 degrees Geomagnetic Latitude.\r\nInduced Currents - Weak power grid fluctuations can occur.\r\nAurora - Aurora may be visible at high latitudes such as Canada and Alaska.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-24T18:07:05.943674+00:00",
-    "created_at": "2026-04-24 18:07:08",
+    "fetched_at": "2026-04-25T00:07:05.584071+00:00",
+    "created_at": "2026-04-25 00:07:09",
     "details": {
       "space_weather_message_code": "WARK04",
       "serial_number": "5326",
@@ -558,7 +640,7 @@
     }
   },
   {
-    "id": 776,
+    "id": 809,
     "dedupe_key": "EF3A|2026-04-21 13:41:49.383|3681",
     "product_id": "EF3A",
     "message_code": "ALTEF3",
@@ -573,8 +655,8 @@
     "message_raw": "Space Weather Message Code: ALTEF3\r\nSerial Number: 3681\r\nIssue Time: 2026 Apr 21 1341 UTC\r\n\r\nCONTINUED ALERT: Electron 2MeV Integral Flux exceeded 1000pfu\r\nContinuation of Serial Number: 3680\r\nBegin Time: 2026 Apr 19 1920 UTC\r\nYesterday Maximum 2MeV Flux: 1344 pfu\r\n\r\n\r\n\r\nPotential Impacts: Satellite systems may experience significant charging resulting in increased risk to satellite systems.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-24T18:07:05.943674+00:00",
-    "created_at": "2026-04-24 18:07:08",
+    "fetched_at": "2026-04-25T00:07:05.584071+00:00",
+    "created_at": "2026-04-25 00:07:09",
     "details": {
       "space_weather_message_code": "ALTEF3",
       "serial_number": "3681",
@@ -585,7 +667,7 @@
     }
   },
   {
-    "id": 777,
+    "id": 810,
     "dedupe_key": "K04W|2026-04-21 05:45:40.253|5325",
     "product_id": "K04W",
     "message_code": "WARK04",
@@ -600,8 +682,8 @@
     "message_raw": "Space Weather Message Code: WARK04\r\nSerial Number: 5325\r\nIssue Time: 2026 Apr 21 0545 UTC\r\n\r\nEXTENDED WARNING: Geomagnetic K-index of 4 expected\r\nExtension to Serial Number: 5324\r\nValid From: 2026 Apr 20 0805 UTC\r\nNow Valid Until: 2026 Apr 21 1800 UTC\r\nWarning Condition: Persistence\r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact primarily poleward of 65 degrees Geomagnetic Latitude.\r\nInduced Currents - Weak power grid fluctuations can occur.\r\nAurora - Aurora may be visible at high latitudes such as Canada and Alaska.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-24T18:07:05.943674+00:00",
-    "created_at": "2026-04-24 18:07:08",
+    "fetched_at": "2026-04-25T00:07:05.584071+00:00",
+    "created_at": "2026-04-25 00:07:09",
     "details": {
       "space_weather_message_code": "WARK04",
       "serial_number": "5325",
@@ -613,7 +695,7 @@
     }
   },
   {
-    "id": 778,
+    "id": 811,
     "dedupe_key": "K05W|2026-04-21 05:44:46.137|2229",
     "product_id": "K05W",
     "message_code": "WARK05",
@@ -628,8 +710,8 @@
     "message_raw": "Space Weather Message Code: WARK05\r\nSerial Number: 2229\r\nIssue Time: 2026 Apr 21 0544 UTC\r\n\r\nEXTENDED WARNING: Geomagnetic K-index of 5 expected\r\nExtension to Serial Number: 2228\r\nValid From: 2026 Apr 21 0110 UTC\r\nNow Valid Until: 2026 Apr 21 1500 UTC\r\nWarning Condition: Persistence\r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact primarily poleward of 60 degrees Geomagnetic Latitude.\r\nInduced Currents - Weak power grid fluctuations can occur.\r\nSpacecraft - Minor impact on satellite operations possible.\r\nAurora - Aurora may be visible at high latitudes, i.e., northern tier of the U.S. such as northern Michigan and Maine.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-24T18:07:05.943674+00:00",
-    "created_at": "2026-04-24 18:07:08",
+    "fetched_at": "2026-04-25T00:07:05.584071+00:00",
+    "created_at": "2026-04-25 00:07:09",
     "details": {
       "space_weather_message_code": "WARK05",
       "serial_number": "2229",
@@ -641,7 +723,7 @@
     }
   },
   {
-    "id": 779,
+    "id": 812,
     "dedupe_key": "K05A|2026-04-21 01:53:51.080|2012",
     "product_id": "K05A",
     "message_code": "ALTK05",
@@ -656,8 +738,8 @@
     "message_raw": "Space Weather Message Code: ALTK05\r\nSerial Number: 2012\r\nIssue Time: 2026 Apr 21 0153 UTC\r\n\r\nALERT: Geomagnetic K-index of 5\r\n Threshold Reached: 2026 Apr 21 0148 UTC\r\nSynoptic Period: 0000-0300 UTC\r\n \r\nActive Warning: Yes\r\nNOAA Scale: G1 - Minor\r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact primarily poleward of 60 degrees Geomagnetic Latitude.\r\nInduced Currents - Weak power grid fluctuations can occur.\r\nSpacecraft - Minor impact on satellite operations possible.\r\nAurora - Aurora may be visible at high latitudes, i.e., northern tier of the U.S. such as northern Michigan and Maine.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-24T18:07:05.943674+00:00",
-    "created_at": "2026-04-24 18:07:08",
+    "fetched_at": "2026-04-25T00:07:05.584071+00:00",
+    "created_at": "2026-04-25 00:07:09",
     "details": {
       "space_weather_message_code": "ALTK05",
       "serial_number": "2012",
@@ -669,7 +751,7 @@
     }
   },
   {
-    "id": 781,
+    "id": 814,
     "dedupe_key": "K05W|2026-04-21 01:10:21.733|2228",
     "product_id": "K05W",
     "message_code": "WARK05",
@@ -684,8 +766,8 @@
     "message_raw": "Space Weather Message Code: WARK05\r\nSerial Number: 2228\r\nIssue Time: 2026 Apr 21 0110 UTC\r\n\r\nWARNING: Geomagnetic K-index of 5 expected\r\nValid From: 2026 Apr 21 0110 UTC\r\nValid To: 2026 Apr 21 0600 UTC\r\nWarning Condition: Persistence\r\nNOAA Scale: G1 - Minor\r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact primarily poleward of 60 degrees Geomagnetic Latitude.\r\nInduced Currents - Weak power grid fluctuations can occur.\r\nSpacecraft - Minor impact on satellite operations possible.\r\nAurora - Aurora may be visible at high latitudes, i.e., northern tier of the U.S. such as northern Michigan and Maine.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-24T18:07:05.943674+00:00",
-    "created_at": "2026-04-24 18:07:08",
+    "fetched_at": "2026-04-25T00:07:05.584071+00:00",
+    "created_at": "2026-04-25 00:07:09",
     "details": {
       "space_weather_message_code": "WARK05",
       "serial_number": "2228",
@@ -697,7 +779,7 @@
     }
   },
   {
-    "id": 780,
+    "id": 813,
     "dedupe_key": "K04W|2026-04-21 01:10:21.750|5324",
     "product_id": "K04W",
     "message_code": "WARK04",
@@ -712,8 +794,8 @@
     "message_raw": "Space Weather Message Code: WARK04\r\nSerial Number: 5324\r\nIssue Time: 2026 Apr 21 0110 UTC\r\n\r\nEXTENDED WARNING: Geomagnetic K-index of 4 expected\r\nExtension to Serial Number: 5323\r\nValid From: 2026 Apr 20 0805 UTC\r\nNow Valid Until: 2026 Apr 21 1200 UTC\r\nWarning Condition: Persistence\r\n\r\nNOAA Space Weather Scale descriptions can be found at\r\nwww.swpc.noaa.gov/noaa-scales-explanation\r\n\r\nPotential Impacts: Area of impact primarily poleward of 65 degrees Geomagnetic Latitude.\r\nInduced Currents - Weak power grid fluctuations can occur.\r\nAurora - Aurora may be visible at high latitudes such as Canada and Alaska.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-24T18:07:05.943674+00:00",
-    "created_at": "2026-04-24 18:07:08",
+    "fetched_at": "2026-04-25T00:07:05.584071+00:00",
+    "created_at": "2026-04-25 00:07:09",
     "details": {
       "space_weather_message_code": "WARK04",
       "serial_number": "5324",
@@ -725,7 +807,7 @@
     }
   },
   {
-    "id": 782,
+    "id": 815,
     "dedupe_key": "EF3A|2026-04-20 20:23:35.100|3680",
     "product_id": "EF3A",
     "message_code": "ALTEF3",
@@ -740,8 +822,8 @@
     "message_raw": "Space Weather Message Code: ALTEF3\r\nSerial Number: 3680\r\nIssue Time: 2026 Apr 20 2023 UTC\r\n\r\nCONTINUED ALERT: Electron 2MeV Integral Flux exceeded 1000pfu\r\nContinuation of Serial Number: 3679\r\nBegin Time: 2026 Apr 19 1920 UTC\r\nYesterday Maximum 2MeV Flux: 1297 pfu\r\n\r\n\r\n\r\nPotential Impacts: Satellite systems may experience significant charging resulting in increased risk to satellite systems.",
     "source_name": "SWPC Alerts",
     "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-24T18:07:05.943674+00:00",
-    "created_at": "2026-04-24 18:07:08",
+    "fetched_at": "2026-04-25T00:07:05.584071+00:00",
+    "created_at": "2026-04-25 00:07:09",
     "details": {
       "space_weather_message_code": "ALTEF3",
       "serial_number": "3680",
@@ -749,95 +831,6 @@
       "continuation_of_serial_number": "3679",
       "begin_time": "2026 Apr 19 1920 UTC",
       "yesterday_maximum_2mev_flux": "1297 pfu"
-    }
-  },
-  {
-    "id": 783,
-    "dedupe_key": "K05A|2026-04-20 19:34:54.467|1783",
-    "product_id": "K05A",
-    "message_code": "ALTK05",
-    "serial_number": "1783",
-    "issue_datetime": "2026-04-20T19:34:54.467000+00:00",
-    "issue_time_text": "2026-04-20T19:34:00",
-    "headline": "警报：地磁K指数为5",
-    "message_type": "alert",
-    "noaa_scale": "G1 - Minor",
-    "impacts_text": "",
-    "description_text": "",
-    "message_raw": "\n    Space Weather Message Code: ALTK05\n\n    Serial Number: 1783\n\n    Issue Time: 2026-04-20T19:34:00\n\n    \n\n    ALERT: Geomagnetic K-index of 5 \nTHRESHOLD: 2026-04-20 19:34 UTC\nISSUED BY: Forecaster User\nSYNOPTIC PERIOD: 1800-2100\nACTIVE WARNING: YES\nNOAA SCALE: G1 - Minor\nCOMMENT: \n\n    \n\n    \n    G1 - Minor",
-    "source_name": "SWPC Alerts",
-    "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-24T18:07:05.943674+00:00",
-    "created_at": "2026-04-24 18:07:08",
-    "details": {
-      "space_weather_message_code": "ALTK05",
-      "serial_number": "1783",
-      "issue_time": "2026-04-20T19:34:00",
-      "threshold": "2026-04-20 19:34 UTC",
-      "issued_by": "Forecaster User",
-      "synoptic_period": "1800-2100",
-      "active_warning": "YES",
-      "noaa_scale": "G1 - Minor",
-      "comment": ""
-    }
-  },
-  {
-    "id": 784,
-    "dedupe_key": "K05A|2026-04-20 17:36:08.423|1782",
-    "product_id": "K05A",
-    "message_code": "ALTK05",
-    "serial_number": "1782",
-    "issue_datetime": "2026-04-20T17:36:08.423000+00:00",
-    "issue_time_text": "2026-04-20T17:36:00",
-    "headline": "警报：地磁K指数为5",
-    "message_type": "alert",
-    "noaa_scale": "G1 - Minor",
-    "impacts_text": "",
-    "description_text": "",
-    "message_raw": "\n    Space Weather Message Code: ALTK05\n\n    Serial Number: 1782\n\n    Issue Time: 2026-04-20T17:36:00\n\n    \n\n    ALERT: Geomagnetic K-index of 5 \nTHRESHOLD: 2026-04-20 17:34 UTC\nISSUED BY: Forecaster User\nSYNOPTIC PERIOD: 1500-1800\nACTIVE WARNING: YES\nNOAA SCALE: G1 - Minor\nCOMMENT: \n\n    \n\n    \n    G1 - Minor",
-    "source_name": "SWPC Alerts",
-    "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-24T18:07:05.943674+00:00",
-    "created_at": "2026-04-24 18:07:08",
-    "details": {
-      "space_weather_message_code": "ALTK05",
-      "serial_number": "1782",
-      "issue_time": "2026-04-20T17:36:00",
-      "threshold": "2026-04-20 17:34 UTC",
-      "issued_by": "Forecaster User",
-      "synoptic_period": "1500-1800",
-      "active_warning": "YES",
-      "noaa_scale": "G1 - Minor",
-      "comment": ""
-    }
-  },
-  {
-    "id": 785,
-    "dedupe_key": "K04W|2026-04-20 17:21:37.853|5001",
-    "product_id": "K04W",
-    "message_code": "WARK04",
-    "serial_number": "5001",
-    "issue_datetime": "2026-04-20T17:21:37.853000+00:00",
-    "issue_time_text": "2026-04-20T17:21:00",
-    "headline": "延长预警：预计地磁K指数为4",
-    "message_type": "extended_warning",
-    "noaa_scale": null,
-    "impacts_text": "",
-    "description_text": "",
-    "message_raw": "\n    Space Weather Message Code: WARK04\n\n    Serial Number: 5001\n\n    Issue Time: 2026-04-20T17:21:00\n\n    \n\n    EXTENDED WARNING: Geomagnetic K-index of 4 expected\nExtension to Serial Number: 5323\nValid From: 2026-04-20T08:05:00\nNow Valid Until: 2026-04-21 03:00\nWarning Condition: Persistence\nExtended 2026-04-20 17:21 by Forecaster User \n\n    \n\n    Extended 2026-04-20 17:21 by Forecaster User \n    ",
-    "source_name": "SWPC Alerts",
-    "source_url": "https://services.swpc.noaa.gov/products/alerts.json",
-    "fetched_at": "2026-04-24T18:07:05.943674+00:00",
-    "created_at": "2026-04-24 18:07:08",
-    "details": {
-      "space_weather_message_code": "WARK04",
-      "serial_number": "5001",
-      "issue_time": "2026-04-20T17:21:00",
-      "extension_to_serial_number": "5323",
-      "valid_from": "2026-04-20T08:05:00",
-      "now_valid_until": "2026-04-21 03:00",
-      "warning_condition": "Persistence",
-      "extended_2026_04_20_17": "21 by Forecaster User"
     }
   }
 ]

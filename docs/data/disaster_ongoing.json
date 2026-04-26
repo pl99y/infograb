@@ -1,6 +1,6 @@
 [
   {
-    "id": 11165,
+    "id": 11171,
     "group_key": "volcano|f3d0307882e0dd61d5c4d1d44a7bffa45e8131b8",
     "event_type": "volcano",
     "severity_level": "high",
@@ -47,14 +47,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      11169
+      11174
     ],
     "occurred_at": "2026-04-26T06:20:00+00:00",
     "published_at": "2026-04-26T06:20:00+00:00",
     "fetched_at": "2026-04-26T06:20:00+00:00"
   },
   {
-    "id": 11166,
+    "id": 11172,
     "group_key": "earthquake|us6000ssxt",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -62,7 +62,7 @@
     "title": "M 5.9 - 168 km SE of Khovd, Mongolia",
     "summary": "168 km SE of Khovd, Mongolia",
     "started_at": "2026-04-26T04:23:24.102000+00:00",
-    "updated_at": "2026-04-26T06:54:03.643000+00:00",
+    "updated_at": "2026-04-26T08:05:43.278000+00:00",
     "location_text": "168 km SE of Khovd, Mongolia",
     "lat": 46.7887,
     "lon": 92.9681,
@@ -83,14 +83,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      11165
+      11171
     ],
     "occurred_at": "2026-04-26T04:23:24.102000+00:00",
     "published_at": "2026-04-26T04:23:24.102000+00:00",
     "fetched_at": "2026-04-26T04:23:24.102000+00:00"
   },
   {
-    "id": 11167,
+    "id": 11173,
     "group_key": "earthquake|us6000ssvq",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -119,14 +119,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      11166
+      11172
     ],
     "occurred_at": "2026-04-25T20:14:39.279000+00:00",
     "published_at": "2026-04-25T20:14:39.279000+00:00",
     "fetched_at": "2026-04-25T20:14:39.279000+00:00"
   },
   {
-    "id": 11168,
+    "id": 11174,
     "group_key": "earthquake|us6000sst4",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -155,50 +155,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      11167
+      11173
     ],
     "occurred_at": "2026-04-25T10:20:21.431000+00:00",
     "published_at": "2026-04-25T10:20:21.431000+00:00",
     "fetched_at": "2026-04-25T10:20:21.431000+00:00"
   },
   {
-    "id": 11169,
-    "group_key": "earthquake|us6000sssg",
-    "event_type": "earthquake",
-    "severity_level": "moderate",
-    "severity_color": "moderate",
-    "title": "M 5.4 - 83 km SE of Akutan, Alaska",
-    "summary": "83 km SE of Akutan, Alaska",
-    "started_at": "2026-04-25T08:05:56.204000+00:00",
-    "updated_at": "2026-04-26T07:16:00.135000+00:00",
-    "location_text": "83 km SE of Akutan, Alaska",
-    "lat": 53.5884,
-    "lon": -164.9144,
-    "source_primary": "USGS",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sssg",
-    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sssg",
-    "country_code": null,
-    "payload": {
-      "mag": 5.4,
-      "depth_km": 35.0,
-      "place": "83 km SE of Akutan, Alaska",
-      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000sssg.geojson",
-      "alert": "green",
-      "sig": 453,
-      "tsunami": 0,
-      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
-    },
-    "member_event_ids": [
-      11168
-    ],
-    "occurred_at": "2026-04-25T08:05:56.204000+00:00",
-    "published_at": "2026-04-25T08:05:56.204000+00:00",
-    "fetched_at": "2026-04-25T08:05:56.204000+00:00"
-  },
-  {
-    "id": 11170,
+    "id": 11175,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -271,7 +235,7 @@
       }
     },
     "member_event_ids": [
-      11170
+      11175
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",

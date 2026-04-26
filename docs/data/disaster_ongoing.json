@@ -1,6 +1,6 @@
 [
   {
-    "id": 11330,
+    "id": 11336,
     "group_key": "volcano|c645e73fd0e3654c041792e61c427c3a93f50793",
     "event_type": "volcano",
     "severity_level": "high",
@@ -47,14 +47,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      11332
+      11338
     ],
     "occurred_at": "2026-04-26T12:06:01+00:00",
     "published_at": "2026-04-26T12:06:01+00:00",
     "fetched_at": "2026-04-26T12:06:01+00:00"
   },
   {
-    "id": 11331,
+    "id": 11337,
     "group_key": "volcano|043d0d3adf0f62b3123ff97de26cf3f2a740e3ef",
     "event_type": "volcano",
     "severity_level": "high",
@@ -101,14 +101,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      11333
+      11339
     ],
     "occurred_at": "2026-04-26T10:25:00+00:00",
     "published_at": "2026-04-26T10:25:00+00:00",
     "fetched_at": "2026-04-26T10:25:00+00:00"
   },
   {
-    "id": 11332,
+    "id": 11338,
     "group_key": "volcano|17e9441f28203782ad05402748c1bc54b1c94b4c",
     "event_type": "volcano",
     "severity_level": "high",
@@ -155,25 +155,25 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      11334
+      11340
     ],
     "occurred_at": "2026-04-26T08:24:00+00:00",
     "published_at": "2026-04-26T08:24:00+00:00",
     "fetched_at": "2026-04-26T08:24:00+00:00"
   },
   {
-    "id": 11333,
+    "id": 11339,
     "group_key": "earthquake|us6000ssxt",
     "event_type": "earthquake",
     "severity_level": "moderate",
     "severity_color": "moderate",
-    "title": "M 5.9 - 168 km SE of Khovd, Mongolia",
-    "summary": "168 km SE of Khovd, Mongolia",
-    "started_at": "2026-04-26T04:23:24.102000+00:00",
-    "updated_at": "2026-04-26T08:05:43.278000+00:00",
-    "location_text": "168 km SE of Khovd, Mongolia",
-    "lat": 46.7887,
-    "lon": 92.9681,
+    "title": "M 5.5 - 163 km SE of Khovd, Mongolia",
+    "summary": "163 km SE of Khovd, Mongolia",
+    "started_at": "2026-04-26T04:23:24.394000+00:00",
+    "updated_at": "2026-04-26T15:45:26.747000+00:00",
+    "location_text": "163 km SE of Khovd, Mongolia",
+    "lat": 46.8638,
+    "lon": 93.0122,
     "source_primary": "USGS",
     "source_secondary": null,
     "status": "active",
@@ -181,24 +181,24 @@
     "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ssxt",
     "country_code": null,
     "payload": {
-      "mag": 5.9,
-      "depth_km": 10.0,
-      "place": "168 km SE of Khovd, Mongolia",
+      "mag": 5.5,
+      "depth_km": 11.0,
+      "place": "163 km SE of Khovd, Mongolia",
       "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000ssxt.geojson",
       "alert": "green",
-      "sig": 536,
+      "sig": 466,
       "tsunami": 0,
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      11330
+      11336
     ],
-    "occurred_at": "2026-04-26T04:23:24.102000+00:00",
-    "published_at": "2026-04-26T04:23:24.102000+00:00",
-    "fetched_at": "2026-04-26T04:23:24.102000+00:00"
+    "occurred_at": "2026-04-26T04:23:24.394000+00:00",
+    "published_at": "2026-04-26T04:23:24.394000+00:00",
+    "fetched_at": "2026-04-26T04:23:24.394000+00:00"
   },
   {
-    "id": 11334,
+    "id": 11340,
     "group_key": "earthquake|us6000ssvq",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -227,14 +227,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      11331
+      11337
     ],
     "occurred_at": "2026-04-25T20:14:39.279000+00:00",
     "published_at": "2026-04-25T20:14:39.279000+00:00",
     "fetched_at": "2026-04-25T20:14:39.279000+00:00"
   },
   {
-    "id": 11335,
+    "id": 11341,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -307,7 +307,7 @@
       }
     },
     "member_event_ids": [
-      11335
+      11341
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",

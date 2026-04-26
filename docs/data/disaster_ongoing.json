@@ -1,6 +1,60 @@
 [
   {
-    "id": 11342,
+    "id": 11348,
+    "group_key": "volcano|aed527fae7b13c2e3cf091b77391f34f8c9077eb",
+    "event_type": "volcano",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Aoba",
+    "summary": "VRP 209.57 MW · VIIRS · 2.37 km",
+    "started_at": "2026-04-26T14:00:01+00:00",
+    "updated_at": "2026-04-26T14:00:01+00:00",
+    "location_text": "Aoba",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "VIIRS",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=257030",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=257030",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "257030",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=257030",
+      "vrp_mw": 209.57,
+      "distance_km": 2.37,
+      "sensor": "VIIRS",
+      "row_class": [
+        "high"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "VIIRS"
+      ],
+      "reports": [
+        {
+          "volcano_id": "257030",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=257030",
+          "vrp_mw": 209.57,
+          "distance_km": 2.37,
+          "sensor": "VIIRS",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 1
+    },
+    "member_event_ids": [
+      11350
+    ],
+    "occurred_at": "2026-04-26T14:00:01+00:00",
+    "published_at": "2026-04-26T14:00:01+00:00",
+    "fetched_at": "2026-04-26T14:00:01+00:00"
+  },
+  {
+    "id": 11349,
     "group_key": "volcano|c645e73fd0e3654c041792e61c427c3a93f50793",
     "event_type": "volcano",
     "severity_level": "high",
@@ -47,14 +101,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      11344
+      11351
     ],
     "occurred_at": "2026-04-26T12:06:01+00:00",
     "published_at": "2026-04-26T12:06:01+00:00",
     "fetched_at": "2026-04-26T12:06:01+00:00"
   },
   {
-    "id": 11343,
+    "id": 11350,
     "group_key": "volcano|043d0d3adf0f62b3123ff97de26cf3f2a740e3ef",
     "event_type": "volcano",
     "severity_level": "high",
@@ -101,14 +155,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      11345
+      11352
     ],
     "occurred_at": "2026-04-26T10:25:00+00:00",
     "published_at": "2026-04-26T10:25:00+00:00",
     "fetched_at": "2026-04-26T10:25:00+00:00"
   },
   {
-    "id": 11344,
+    "id": 11351,
     "group_key": "volcano|17e9441f28203782ad05402748c1bc54b1c94b4c",
     "event_type": "volcano",
     "severity_level": "high",
@@ -155,14 +209,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      11346
+      11353
     ],
     "occurred_at": "2026-04-26T08:24:00+00:00",
     "published_at": "2026-04-26T08:24:00+00:00",
     "fetched_at": "2026-04-26T08:24:00+00:00"
   },
   {
-    "id": 11345,
+    "id": 11352,
     "group_key": "earthquake|us6000ssxt",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -191,14 +245,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      11342
+      11348
     ],
     "occurred_at": "2026-04-26T04:23:24.394000+00:00",
     "published_at": "2026-04-26T04:23:24.394000+00:00",
     "fetched_at": "2026-04-26T04:23:24.394000+00:00"
   },
   {
-    "id": 11346,
+    "id": 11353,
     "group_key": "earthquake|us6000ssvq",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -227,14 +281,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      11343
+      11349
     ],
     "occurred_at": "2026-04-25T20:14:39.279000+00:00",
     "published_at": "2026-04-25T20:14:39.279000+00:00",
     "fetched_at": "2026-04-25T20:14:39.279000+00:00"
   },
   {
-    "id": 11347,
+    "id": 11354,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -307,7 +361,7 @@
       }
     },
     "member_event_ids": [
-      11347
+      11354
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",

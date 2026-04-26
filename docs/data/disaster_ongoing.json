@@ -1,6 +1,42 @@
 [
   {
-    "id": 11089,
+    "id": 11094,
+    "group_key": "earthquake|us6000ssxt",
+    "event_type": "earthquake",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "M 5.9 - 168 km SE of Khovd, Mongolia",
+    "summary": "168 km SE of Khovd, Mongolia",
+    "started_at": "2026-04-26T04:23:24.102000+00:00",
+    "updated_at": "2026-04-26T04:45:08.208000+00:00",
+    "location_text": "168 km SE of Khovd, Mongolia",
+    "lat": 46.7887,
+    "lon": 92.9681,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ssxt",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ssxt",
+    "country_code": null,
+    "payload": {
+      "mag": 5.9,
+      "depth_km": 10.0,
+      "place": "168 km SE of Khovd, Mongolia",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000ssxt.geojson",
+      "alert": null,
+      "sig": 536,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      11094
+    ],
+    "occurred_at": "2026-04-26T04:23:24.102000+00:00",
+    "published_at": "2026-04-26T04:23:24.102000+00:00",
+    "fetched_at": "2026-04-26T04:23:24.102000+00:00"
+  },
+  {
+    "id": 11095,
     "group_key": "volcano|c19e8a7782147ffecdc8eb01f083cd2b0e23f58b",
     "event_type": "volcano",
     "severity_level": "high",
@@ -47,14 +83,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      11092
+      11098
     ],
     "occurred_at": "2026-04-26T02:18:02+00:00",
     "published_at": "2026-04-26T02:18:02+00:00",
     "fetched_at": "2026-04-26T02:18:02+00:00"
   },
   {
-    "id": 11090,
+    "id": 11096,
     "group_key": "earthquake|us6000ssvq",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -83,14 +119,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      11089
+      11095
     ],
     "occurred_at": "2026-04-25T20:14:39.279000+00:00",
     "published_at": "2026-04-25T20:14:39.279000+00:00",
     "fetched_at": "2026-04-25T20:14:39.279000+00:00"
   },
   {
-    "id": 11091,
+    "id": 11097,
     "group_key": "earthquake|us6000sst4",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -119,14 +155,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      11090
+      11096
     ],
     "occurred_at": "2026-04-25T10:20:21.431000+00:00",
     "published_at": "2026-04-25T10:20:21.431000+00:00",
     "fetched_at": "2026-04-25T10:20:21.431000+00:00"
   },
   {
-    "id": 11092,
+    "id": 11098,
     "group_key": "earthquake|us6000sssg",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -155,14 +191,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      11091
+      11097
     ],
     "occurred_at": "2026-04-25T08:05:56.204000+00:00",
     "published_at": "2026-04-25T08:05:56.204000+00:00",
     "fetched_at": "2026-04-25T08:05:56.204000+00:00"
   },
   {
-    "id": 11093,
+    "id": 11099,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -235,7 +271,7 @@
       }
     },
     "member_event_ids": [
-      11093
+      11099
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",

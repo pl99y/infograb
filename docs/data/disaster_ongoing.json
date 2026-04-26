@@ -1,6 +1,6 @@
 [
   {
-    "id": 11028,
+    "id": 11034,
     "group_key": "earthquake|us6000ssvq",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -29,14 +29,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      11028
+      11034
     ],
     "occurred_at": "2026-04-25T20:14:39.279000+00:00",
     "published_at": "2026-04-25T20:14:39.279000+00:00",
     "fetched_at": "2026-04-25T20:14:39.279000+00:00"
   },
   {
-    "id": 11029,
+    "id": 11035,
     "group_key": "volcano|34719b34c21692b067710ea93765718dd708ec48",
     "event_type": "volcano",
     "severity_level": "high",
@@ -96,57 +96,45 @@
       "merged_count": 2
     },
     "member_event_ids": [
-      11031
+      11037
     ],
     "occurred_at": "2026-04-25T14:18:01+00:00",
     "published_at": "2026-04-25T14:18:01+00:00",
     "fetched_at": "2026-04-25T14:18:01+00:00"
   },
   {
-    "id": 11030,
+    "id": 11036,
     "group_key": "volcano|d5c134b9318b03c70fb18e4c3f7f8ca38821d209",
     "event_type": "volcano",
     "severity_level": "high",
     "severity_color": "high",
     "title": "Kilauea",
-    "summary": "VRP 115.84 MW · VIIRS / VIIRS375 · 10.98 km",
+    "summary": "VRP 101.40 MW · VIIRS375 · 10.98 km",
     "started_at": "2026-04-25T12:24:01+00:00",
     "updated_at": "2026-04-25T12:24:01+00:00",
     "location_text": "Kilauea",
     "lat": null,
     "lon": null,
     "source_primary": "MIROVA",
-    "source_secondary": "VIIRS / VIIRS375",
+    "source_secondary": "VIIRS375",
     "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=332010",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=332010",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=332010",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=332010",
     "country_code": null,
     "payload": {
       "volcano_id": "332010",
-      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=332010",
-      "vrp_mw": 115.84,
-      "distance_km": 11.35,
-      "sensor": "VIIRS",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=332010",
+      "vrp_mw": 101.4,
+      "distance_km": 10.98,
+      "sensor": "VIIRS375",
       "row_class": [
         "high"
       ],
       "source_page": "https://www.mirovaweb.it/NRT/",
       "sensors": [
-        "VIIRS",
         "VIIRS375"
       ],
       "reports": [
-        {
-          "volcano_id": "332010",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=332010",
-          "vrp_mw": 115.84,
-          "distance_km": 11.35,
-          "sensor": "VIIRS",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        },
         {
           "volcano_id": "332010",
           "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=332010",
@@ -159,17 +147,17 @@
           "source_page": "https://www.mirovaweb.it/NRT/"
         }
       ],
-      "merged_count": 2
+      "merged_count": 1
     },
     "member_event_ids": [
-      11032
+      11038
     ],
     "occurred_at": "2026-04-25T12:24:01+00:00",
     "published_at": "2026-04-25T12:24:01+00:00",
     "fetched_at": "2026-04-25T12:24:01+00:00"
   },
   {
-    "id": 11031,
+    "id": 11037,
     "group_key": "earthquake|us6000sst4",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -198,14 +186,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      11029
+      11035
     ],
     "occurred_at": "2026-04-25T10:20:21.431000+00:00",
     "published_at": "2026-04-25T10:20:21.431000+00:00",
     "fetched_at": "2026-04-25T10:20:21.431000+00:00"
   },
   {
-    "id": 11032,
+    "id": 11038,
     "group_key": "earthquake|us6000sssg",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -213,7 +201,7 @@
     "title": "M 5.4 - 83 km SE of Akutan, Alaska",
     "summary": "83 km SE of Akutan, Alaska",
     "started_at": "2026-04-25T08:05:56.204000+00:00",
-    "updated_at": "2026-04-25T20:16:03.781000+00:00",
+    "updated_at": "2026-04-26T02:15:58.631000+00:00",
     "location_text": "83 km SE of Akutan, Alaska",
     "lat": 53.5884,
     "lon": -164.9144,
@@ -234,14 +222,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      11030
+      11036
     ],
     "occurred_at": "2026-04-25T08:05:56.204000+00:00",
     "published_at": "2026-04-25T08:05:56.204000+00:00",
     "fetched_at": "2026-04-25T08:05:56.204000+00:00"
   },
   {
-    "id": 11033,
+    "id": 11039,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -314,7 +302,7 @@
       }
     },
     "member_event_ids": [
-      11033
+      11039
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",

@@ -1,6 +1,6 @@
 [
   {
-    "id": 11951,
+    "id": 11955,
     "group_key": "volcano|f499fecfe9023ee73bff3ecead33abba0e2ae3b4",
     "event_type": "volcano",
     "severity_level": "high",
@@ -47,14 +47,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      11953
+      11956
     ],
     "occurred_at": "2026-04-27T16:45:00+00:00",
     "published_at": "2026-04-27T16:45:00+00:00",
     "fetched_at": "2026-04-27T16:45:00+00:00"
   },
   {
-    "id": 11952,
+    "id": 11956,
     "group_key": "earthquake|us6000st3s",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -83,50 +83,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      11951
+      11955
     ],
     "occurred_at": "2026-04-27T06:46:08.014000+00:00",
     "published_at": "2026-04-27T06:46:08.014000+00:00",
     "fetched_at": "2026-04-27T06:46:08.014000+00:00"
   },
   {
-    "id": 11953,
-    "group_key": "earthquake|us6000st1m",
-    "event_type": "earthquake",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "M 6.1 - 18 km W of Sarabetsu, Japan",
-    "summary": "18 km W of Sarabetsu, Japan",
-    "started_at": "2026-04-26T20:23:55.561000+00:00",
-    "updated_at": "2026-04-27T08:34:24.635000+00:00",
-    "location_text": "18 km W of Sarabetsu, Japan",
-    "lat": 42.6311,
-    "lon": 142.9615,
-    "source_primary": "USGS",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000st1m",
-    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000st1m",
-    "country_code": null,
-    "payload": {
-      "mag": 6.1,
-      "depth_km": 81.0,
-      "place": "18 km W of Sarabetsu, Japan",
-      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000st1m.geojson",
-      "alert": "green",
-      "sig": 581,
-      "tsunami": 0,
-      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
-    },
-    "member_event_ids": [
-      11952
-    ],
-    "occurred_at": "2026-04-26T20:23:55.561000+00:00",
-    "published_at": "2026-04-26T20:23:55.561000+00:00",
-    "fetched_at": "2026-04-26T20:23:55.561000+00:00"
-  },
-  {
-    "id": 11954,
+    "id": 11957,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -199,7 +163,7 @@
       }
     },
     "member_event_ids": [
-      11954
+      11957
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",

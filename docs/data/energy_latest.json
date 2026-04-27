@@ -1,27 +1,27 @@
 [
   {
-    "id": 6931,
+    "id": 6937,
     "quote_key": "wti",
     "name": "WTI Crude",
-    "price": 96.62,
+    "price": 96.65,
     "unit": "USD/bbl",
-    "change": 0.25,
-    "change_percent": 0.26,
+    "change": 0.28,
+    "change_percent": 0.29,
     "timestamp_text": null,
     "source_name": "OilPrice.com",
     "source_url": "https://oilprice.com/oil-price-charts/",
     "provider_used": "oilprice_charts",
     "is_delayed": 1,
-    "delay_note": "12-Minute Delay",
-    "fetched_at": "2026-04-27T23:32:06.251989+00:00",
-    "created_at": "2026-04-27 23:32:06",
+    "delay_note": "11-Minute Delay",
+    "fetched_at": "2026-04-27T23:47:05.652039+00:00",
+    "created_at": "2026-04-27 23:47:05",
     "extra": {
       "matched_name": "WTI Crude",
       "parsed_from": "oilprice_table_row"
     }
   },
   {
-    "id": 6932,
+    "id": 6938,
     "quote_key": "brent",
     "name": "Brent Crude",
     "price": 108.23,
@@ -34,15 +34,15 @@
     "provider_used": "oilprice_charts",
     "is_delayed": 1,
     "delay_note": "1-Hour Delay",
-    "fetched_at": "2026-04-27T23:32:06.251989+00:00",
-    "created_at": "2026-04-27 23:32:06",
+    "fetched_at": "2026-04-27T23:47:05.652039+00:00",
+    "created_at": "2026-04-27 23:47:05",
     "extra": {
       "matched_name": "Brent Crude",
       "parsed_from": "oilprice_table_row"
     }
   },
   {
-    "id": 6933,
+    "id": 6939,
     "quote_key": "murban",
     "name": "Murban Crude",
     "price": 104.19,
@@ -55,15 +55,15 @@
     "provider_used": "oilprice_charts",
     "is_delayed": 1,
     "delay_note": "16-Minute Delay",
-    "fetched_at": "2026-04-27T23:32:06.251989+00:00",
-    "created_at": "2026-04-27 23:32:06",
+    "fetched_at": "2026-04-27T23:47:05.652039+00:00",
+    "created_at": "2026-04-27 23:47:05",
     "extra": {
       "matched_name": "Murban Crude",
       "parsed_from": "oilprice_table_row"
     }
   },
   {
-    "id": 6934,
+    "id": 6940,
     "quote_key": "natural_gas",
     "name": "Natural Gas",
     "price": 2.506,
@@ -75,16 +75,16 @@
     "source_url": "https://oilprice.com/oil-price-charts/",
     "provider_used": "oilprice_charts",
     "is_delayed": 1,
-    "delay_note": "31-Minute Delay",
-    "fetched_at": "2026-04-27T23:32:06.251989+00:00",
-    "created_at": "2026-04-27 23:32:06",
+    "delay_note": "46-Minute Delay",
+    "fetched_at": "2026-04-27T23:47:05.652039+00:00",
+    "created_at": "2026-04-27 23:47:05",
     "extra": {
       "matched_name": "Natural Gas",
       "parsed_from": "oilprice_table_row"
     }
   },
   {
-    "id": 6935,
+    "id": 6941,
     "quote_key": "gasoline",
     "name": "Gasoline (RBOB)",
     "price": 3.495,
@@ -97,15 +97,15 @@
     "provider_used": "oilprice_charts",
     "is_delayed": 1,
     "delay_note": "1-Hour Delay",
-    "fetched_at": "2026-04-27T23:32:06.251989+00:00",
-    "created_at": "2026-04-27 23:32:06",
+    "fetched_at": "2026-04-27T23:47:05.652039+00:00",
+    "created_at": "2026-04-27 23:47:05",
     "extra": {
       "matched_name": "Gasoline",
       "parsed_from": "oilprice_table_row"
     }
   },
   {
-    "id": 6936,
+    "id": 6942,
     "quote_key": "china",
     "name": "China Crude Oil Futures (INE SC)",
     "price": 654.5,
@@ -118,8 +118,8 @@
     "provider_used": "sina_hq_direct",
     "is_delayed": 1,
     "delay_note": "Parsed from direct Sina HQ quote response.",
-    "fetched_at": "2026-04-27T23:32:07.117896+00:00",
-    "created_at": "2026-04-27 23:32:07",
+    "fetched_at": "2026-04-27T23:47:06.295862+00:00",
+    "created_at": "2026-04-27 23:47:06",
     "extra": {
       "parsed_from": "sina_hq_direct",
       "raw_parts": [

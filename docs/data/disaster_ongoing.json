@@ -1,60 +1,6 @@
 [
   {
-    "id": 11970,
-    "group_key": "volcano|f499fecfe9023ee73bff3ecead33abba0e2ae3b4",
-    "event_type": "volcano",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "Krasheninnikov",
-    "summary": "VRP 133.63 MW · MODIS · 5.00 km",
-    "started_at": "2026-04-27T16:45:00+00:00",
-    "updated_at": "2026-04-27T16:45:00+00:00",
-    "location_text": "Krasheninnikov",
-    "lat": null,
-    "lon": null,
-    "source_primary": "MIROVA",
-    "source_secondary": "MODIS",
-    "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=300190",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=300190",
-    "country_code": null,
-    "payload": {
-      "volcano_id": "300190",
-      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=300190",
-      "vrp_mw": 133.63,
-      "distance_km": 5.0,
-      "sensor": "MODIS",
-      "row_class": [
-        "high"
-      ],
-      "source_page": "https://www.mirovaweb.it/NRT/",
-      "sensors": [
-        "MODIS"
-      ],
-      "reports": [
-        {
-          "volcano_id": "300190",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=300190",
-          "vrp_mw": 133.63,
-          "distance_km": 5.0,
-          "sensor": "MODIS",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        }
-      ],
-      "merged_count": 1
-    },
-    "member_event_ids": [
-      11971
-    ],
-    "occurred_at": "2026-04-27T16:45:00+00:00",
-    "published_at": "2026-04-27T16:45:00+00:00",
-    "fetched_at": "2026-04-27T16:45:00+00:00"
-  },
-  {
-    "id": 11971,
+    "id": 11973,
     "group_key": "earthquake|us6000st3s",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -83,14 +29,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      11970
+      11973
     ],
     "occurred_at": "2026-04-27T06:46:08.014000+00:00",
     "published_at": "2026-04-27T06:46:08.014000+00:00",
     "fetched_at": "2026-04-27T06:46:08.014000+00:00"
   },
   {
-    "id": 11972,
+    "id": 11974,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -163,7 +109,7 @@
       }
     },
     "member_event_ids": [
-      11972
+      11974
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",

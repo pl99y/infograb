@@ -1,6 +1,45 @@
 [
   {
-    "id": 13102,
+    "id": 13113,
+    "dedupe_key": "urn:oid:2.49.0.1.214.0.2026.4.27.20.21.49",
+    "source_primary": "WMO",
+    "title": "ALERTA meteorológica ante el riesgo de inundaciones urbanas, asi como crecidas de rios, arrollos y canadas. (Samanà)",
+    "summary": "La Vega",
+    "severity_level": "extreme",
+    "color_level": "extreme",
+    "event_type": "weather",
+    "location_text": "La Vega",
+    "issued_at": "2026-04-27T20:21:49+00:00",
+    "effective_at": "2026-04-27T20:21:49+00:00",
+    "expires_at": "2026-04-30T01:19:12+00:00",
+    "source_url": "https://severeweather.wmo.int/list.html",
+    "detail_url": "https://severeweather.wmo.int/list.html",
+    "payload": {
+      "id": "urn:oid:2.49.0.1.214.0.2026.4.27.20.21.49",
+      "event": "inundación",
+      "headline": "ALERTA meteorológica ante el riesgo de inundaciones urbanas, asi como crecidas de rios, arrollos y canadas. (Samanà)",
+      "sent": "2026-04-27 20:21:49",
+      "expires": "2026-04-30 01:19:12",
+      "areaDesc": "La Vega",
+      "mid": "132",
+      "ra": "4",
+      "s": 4,
+      "u": 3,
+      "c": 3,
+      "capURL": "do-indomet-es/2026/04/27/20/21/49-cdbc6ec90657f2385646fbca7442719b.xml",
+      "effective": "",
+      "cap_path": "do-indomet-es/2026/04/27/20/21/49-cdbc6ec90657f2385646fbca7442719b.xml",
+      "source_page": "https://severeweather.wmo.int/list.html",
+      "last_updated": "2026-04-27 20:31:06"
+    },
+    "fetched_at": "2026-04-27T20:47:15.608708+00:00",
+    "published_at": "2026-04-27T20:21:49+00:00",
+    "updated_at": "2026-04-27T20:47:15.608708+00:00",
+    "region_text": "La Vega",
+    "link_url": "https://severeweather.wmo.int/list.html"
+  },
+  {
+    "id": 13114,
     "dedupe_key": "urn:oid:2.49.0.1.840.0.975a66dcd9ace5ca41c9e5906828b58701b1e15d.001.1",
     "source_primary": "WMO",
     "title": "Tornado Warning issued April 27 at 1:50PM CDT until April 27 at 2:00PM CDT by NWS St Louis MO",
@@ -30,16 +69,16 @@
       "effective": "2026-04-27 18:50:00",
       "cap_path": "us-noaa-nws-en/2026/04/27/18/50/00-7b5e3a6b884c4db89dd07633109588b1.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-27 20:01:06"
+      "last_updated": "2026-04-27 20:31:06"
     },
-    "fetched_at": "2026-04-27T20:32:15.272646+00:00",
+    "fetched_at": "2026-04-27T20:47:15.608708+00:00",
     "published_at": "2026-04-27T18:50:00+00:00",
-    "updated_at": "2026-04-27T20:32:15.272646+00:00",
+    "updated_at": "2026-04-27T20:47:15.608708+00:00",
     "region_text": "Madison, IL",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 13103,
+    "id": 13115,
     "dedupe_key": "urn:oid:2.49.0.1.840.0.4e3563164efa2c2964d4c36eeaa4be4f417871ce.001.1",
     "source_primary": "WMO",
     "title": "Tornado Warning issued April 27 at 1:49PM CDT until April 27 at 2:45PM CDT by NWS St Louis MO",
@@ -69,16 +108,16 @@
       "effective": "2026-04-27 18:49:00",
       "cap_path": "us-noaa-nws-en/2026/04/27/18/49/00-264bc153391581d6d77ceaa9dcae2946.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-27 20:01:06"
+      "last_updated": "2026-04-27 20:31:06"
     },
-    "fetched_at": "2026-04-27T20:32:15.272646+00:00",
+    "fetched_at": "2026-04-27T20:47:15.608708+00:00",
     "published_at": "2026-04-27T18:49:00+00:00",
-    "updated_at": "2026-04-27T20:32:15.272646+00:00",
+    "updated_at": "2026-04-27T20:47:15.608708+00:00",
     "region_text": "Bond, IL; Madison, IL",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 13105,
+    "id": 13117,
     "dedupe_key": "urn:oid:2.49.0.1.840.0.006c1da8ba8bc0fda0f838e8b1304fa466c9548d.001.1",
     "source_primary": "WMO",
     "title": "Tornado Watch issued April 27 at 12:51PM CDT until April 27 at 9:00PM CDT by NWS Springfield MO",
@@ -108,16 +147,16 @@
       "effective": "2026-04-27 17:51:00",
       "cap_path": "us-noaa-nws-en/2026/04/27/17/51/00-e941a4d8b40d5f0b97e389ac567a6b0a.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-27 20:01:06"
+      "last_updated": "2026-04-27 20:31:06"
     },
-    "fetched_at": "2026-04-27T20:32:15.272646+00:00",
+    "fetched_at": "2026-04-27T20:47:15.608708+00:00",
     "published_at": "2026-04-27T17:51:00+00:00",
-    "updated_at": "2026-04-27T20:32:15.272646+00:00",
+    "updated_at": "2026-04-27T20:47:15.608708+00:00",
     "region_text": "Benton, MO; Camden, MO; Christian, MO; Dallas, MO; Dent, MO; Douglas, MO; Greene, MO; Hickory, MO; Howell, MO; Laclede, MO; Maries, MO; Miller, MO; Morgan, MO; Oregon, MO; Ozark, MO; Phelps, MO; Polk, MO; Pulaski, MO; Shannon, MO; Taney, MO; Texas, MO; Webster, MO; Wright, MO",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 13104,
+    "id": 13116,
     "dedupe_key": "urn:oid:2.49.0.1.840.0.59445fbcfe92139b9b4906925072ea8190c4b4f2.001.2",
     "source_primary": "WMO",
     "title": "Tornado Watch issued April 27 at 12:51PM CDT until April 27 at 9:00PM CDT by NWS Lincoln IL",
@@ -147,16 +186,16 @@
       "effective": "2026-04-27 17:51:00",
       "cap_path": "us-noaa-nws-en/2026/04/27/17/51/00-9ffcbe74d754ee1ca15713e7c8a93bd1.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-27 20:01:06"
+      "last_updated": "2026-04-27 20:31:06"
     },
-    "fetched_at": "2026-04-27T20:32:15.272646+00:00",
+    "fetched_at": "2026-04-27T20:47:15.608708+00:00",
     "published_at": "2026-04-27T17:51:00+00:00",
-    "updated_at": "2026-04-27T20:32:15.272646+00:00",
+    "updated_at": "2026-04-27T20:47:15.608708+00:00",
     "region_text": "Clay, IL; Crawford, IL; Effingham, IL; Jasper, IL; Lawrence, IL; Richland, IL",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 13108,
+    "id": 13120,
     "dedupe_key": "urn:oid:2.49.0.1.840.0.e1bf23a45afe80788447fb93b6035253de71af06.003.1",
     "source_primary": "WMO",
     "title": "Tornado Watch issued April 27 at 12:50PM CDT until April 27 at 9:00PM CDT by NWS St Louis MO",
@@ -186,16 +225,16 @@
       "effective": "2026-04-27 17:50:00",
       "cap_path": "us-noaa-nws-en/2026/04/27/17/50/00-d1b4858042bf9aea9b45456f36c45799.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-27 20:01:06"
+      "last_updated": "2026-04-27 20:31:06"
     },
-    "fetched_at": "2026-04-27T20:32:15.272646+00:00",
+    "fetched_at": "2026-04-27T20:47:15.608708+00:00",
     "published_at": "2026-04-27T17:50:00+00:00",
-    "updated_at": "2026-04-27T20:32:15.272646+00:00",
+    "updated_at": "2026-04-27T20:47:15.608708+00:00",
     "region_text": "Calhoun, IL; Jersey, IL; Madison, IL; Monroe, IL; Randolph, IL; St. Clair, IL; Callaway, MO; Cole, MO; Crawford, MO; Franklin, MO; Gasconade, MO; Iron, MO; Jefferson, MO; Lincoln, MO; Madison, MO; Moniteau, MO; Montgomery, MO; Osage, MO; Reynolds, MO; St. Charles, MO; Ste. Genevieve, MO; St. Francois, MO; St. Louis, MO; Warren, MO; Washington, MO; St. Louis City, MO",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 13107,
+    "id": 13119,
     "dedupe_key": "urn:oid:2.49.0.1.840.0.e1bf23a45afe80788447fb93b6035253de71af06.001.2",
     "source_primary": "WMO",
     "title": "Tornado Watch issued April 27 at 12:50PM CDT until April 27 at 9:00PM CDT by NWS St Louis MO",
@@ -225,16 +264,16 @@
       "effective": "2026-04-27 17:50:00",
       "cap_path": "us-noaa-nws-en/2026/04/27/17/50/00-a7c60ad82a59604265ec5c584bb1a3cc.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-27 20:01:06"
+      "last_updated": "2026-04-27 20:31:06"
     },
-    "fetched_at": "2026-04-27T20:32:15.272646+00:00",
+    "fetched_at": "2026-04-27T20:47:15.608708+00:00",
     "published_at": "2026-04-27T17:50:00+00:00",
-    "updated_at": "2026-04-27T20:32:15.272646+00:00",
+    "updated_at": "2026-04-27T20:47:15.608708+00:00",
     "region_text": "Bond, IL; Clinton, IL; Fayette, IL; Macoupin, IL; Marion, IL; Montgomery, IL; Washington, IL",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 13106,
+    "id": 13118,
     "dedupe_key": "urn:oid:2.49.0.1.840.0.de7b83f8e3977c35908248822b868ff7afdd39ef.001.1",
     "source_primary": "WMO",
     "title": "Tornado Watch issued April 27 at 12:50PM CDT until April 27 at 9:00PM CDT by NWS Paducah KY",
@@ -264,16 +303,16 @@
       "effective": "2026-04-27 17:50:00",
       "cap_path": "us-noaa-nws-en/2026/04/27/17/50/00-f82e469c4bb1c735c2f18239fb61ce77.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-27 20:01:06"
+      "last_updated": "2026-04-27 20:31:06"
     },
-    "fetched_at": "2026-04-27T20:32:15.272646+00:00",
+    "fetched_at": "2026-04-27T20:47:15.608708+00:00",
     "published_at": "2026-04-27T17:50:00+00:00",
-    "updated_at": "2026-04-27T20:32:15.272646+00:00",
+    "updated_at": "2026-04-27T20:47:15.608708+00:00",
     "region_text": "Edwards, IL; Franklin, IL; Hamilton, IL; Jackson, IL; Jefferson, IL; Perry, IL; Wayne, IL; White, IL; Perry, MO",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 13109,
+    "id": 13121,
     "dedupe_key": "52262841600000_20260427235401",
     "source_primary": "WMO",
     "title": "Jinping County Meteorological Station issued rainstorm red warning [Level I/especially serious]",
@@ -303,16 +342,16 @@
       "effective": "2026-04-27 15:54:01",
       "cap_path": "cn-cma-xx/2026/04/27/15/54/01-7d4d45916e7aef7f3bf74135013d883d.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-27 20:01:06"
+      "last_updated": "2026-04-27 20:31:06"
     },
-    "fetched_at": "2026-04-27T20:32:15.272646+00:00",
+    "fetched_at": "2026-04-27T20:47:15.608708+00:00",
     "published_at": "2026-04-27T15:54:01+00:00",
-    "updated_at": "2026-04-27T20:32:15.272646+00:00",
+    "updated_at": "2026-04-27T20:47:15.608708+00:00",
     "region_text": "Jinping County",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 13110,
+    "id": 13122,
     "dedupe_key": "768d462e-bdf1-4a92-adb3-09efcc0856a2",
     "source_primary": "WMO",
     "title": "Warning, Heavy rain",
@@ -342,16 +381,16 @@
       "effective": "2026-04-27 06:00:00",
       "cap_path": "sa-ncm-en/2026/04/27/12/42/02-7d6ef2900a6e53c1a4a37aefa79653b.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-27 20:01:06"
+      "last_updated": "2026-04-27 20:31:06"
     },
-    "fetched_at": "2026-04-27T20:32:15.272646+00:00",
+    "fetched_at": "2026-04-27T20:47:15.608708+00:00",
     "published_at": "2026-04-27T12:42:02+00:00",
-    "updated_at": "2026-04-27T20:32:15.272646+00:00",
+    "updated_at": "2026-04-27T20:47:15.608708+00:00",
     "region_text": "Eastern Region - Al Khafji : The entire governorate; Eastern Region - An Nuayriyah : The entire governorate; Eastern Region - Qaryah Al Ulya : The entire governorate",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 13112,
+    "id": 13124,
     "dedupe_key": "2.49.0.0.398.0-20260427-104701-0422257-00-EN",
     "source_primary": "WMO",
     "title": "Forestfire",
@@ -381,16 +420,16 @@
       "effective": "",
       "cap_path": "kz-kazhydromet-en/2026/04/27/10/47/01-eec3120914f0c2cda153305fab1b5512.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-27 20:01:06"
+      "last_updated": "2026-04-27 20:31:06"
     },
-    "fetched_at": "2026-04-27T20:32:15.272646+00:00",
+    "fetched_at": "2026-04-27T20:47:15.608708+00:00",
     "published_at": "2026-04-27T10:47:01+00:00",
-    "updated_at": "2026-04-27T20:32:15.272646+00:00",
+    "updated_at": "2026-04-27T20:47:15.608708+00:00",
     "region_text": "Alakol district (Jetısu oblysy)",
     "link_url": "https://severeweather.wmo.int/list.html"
   },
   {
-    "id": 13111,
+    "id": 13123,
     "dedupe_key": "2.49.0.0.398.0-20260427-104701-0422258-00-EN",
     "source_primary": "WMO",
     "title": "Forestfire",
@@ -420,11 +459,11 @@
       "effective": "",
       "cap_path": "kz-kazhydromet-en/2026/04/27/10/47/01-b9710aa42fbccf5c42481bd2eafbde48.xml",
       "source_page": "https://severeweather.wmo.int/list.html",
-      "last_updated": "2026-04-27 20:01:06"
+      "last_updated": "2026-04-27 20:31:06"
     },
-    "fetched_at": "2026-04-27T20:32:15.272646+00:00",
+    "fetched_at": "2026-04-27T20:47:15.608708+00:00",
     "published_at": "2026-04-27T10:47:01+00:00",
-    "updated_at": "2026-04-27T20:32:15.272646+00:00",
+    "updated_at": "2026-04-27T20:47:15.608708+00:00",
     "region_text": "Panfilov district (Jetısu oblysy)",
     "link_url": "https://severeweather.wmo.int/list.html"
   }

@@ -1,6 +1,6 @@
 [
   {
-    "id": 11886,
+    "id": 11892,
     "group_key": "volcano|120cb209a1b7118085de374ef016f30d0c2da73d",
     "event_type": "volcano",
     "severity_level": "high",
@@ -47,68 +47,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      11889
+      11894
     ],
     "occurred_at": "2026-04-27T13:42:01+00:00",
     "published_at": "2026-04-27T13:42:01+00:00",
     "fetched_at": "2026-04-27T13:42:01+00:00"
   },
   {
-    "id": 11887,
-    "group_key": "volcano|44e60e519769efdaa96a18e9ba318be4fae08244",
-    "event_type": "volcano",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "Kilauea",
-    "summary": "VRP 100.23 MW · VIIRS375 · 10.98 km",
-    "started_at": "2026-04-27T11:48:01+00:00",
-    "updated_at": "2026-04-27T11:48:01+00:00",
-    "location_text": "Kilauea",
-    "lat": null,
-    "lon": null,
-    "source_primary": "MIROVA",
-    "source_secondary": "VIIRS375",
-    "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=332010",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=332010",
-    "country_code": null,
-    "payload": {
-      "volcano_id": "332010",
-      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=332010",
-      "vrp_mw": 100.23,
-      "distance_km": 10.98,
-      "sensor": "VIIRS375",
-      "row_class": [
-        "high"
-      ],
-      "source_page": "https://www.mirovaweb.it/NRT/",
-      "sensors": [
-        "VIIRS375"
-      ],
-      "reports": [
-        {
-          "volcano_id": "332010",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=332010",
-          "vrp_mw": 100.23,
-          "distance_km": 10.98,
-          "sensor": "VIIRS375",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        }
-      ],
-      "merged_count": 1
-    },
-    "member_event_ids": [
-      11890
-    ],
-    "occurred_at": "2026-04-27T11:48:01+00:00",
-    "published_at": "2026-04-27T11:48:01+00:00",
-    "fetched_at": "2026-04-27T11:48:01+00:00"
-  },
-  {
-    "id": 11888,
+    "id": 11893,
     "group_key": "earthquake|us6000st3s",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -137,14 +83,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      11886
+      11892
     ],
     "occurred_at": "2026-04-27T06:46:08.014000+00:00",
     "published_at": "2026-04-27T06:46:08.014000+00:00",
     "fetched_at": "2026-04-27T06:46:08.014000+00:00"
   },
   {
-    "id": 11889,
+    "id": 11894,
     "group_key": "earthquake|us6000st1m",
     "event_type": "earthquake",
     "severity_level": "high",
@@ -173,50 +119,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      11887
+      11893
     ],
     "occurred_at": "2026-04-26T20:23:55.561000+00:00",
     "published_at": "2026-04-26T20:23:55.561000+00:00",
     "fetched_at": "2026-04-26T20:23:55.561000+00:00"
   },
   {
-    "id": 11890,
-    "group_key": "earthquake|us6000st11",
-    "event_type": "earthquake",
-    "severity_level": "moderate",
-    "severity_color": "moderate",
-    "title": "M 5.0 - 77 km ENE of Miyako, Japan",
-    "summary": "77 km ENE of Miyako, Japan",
-    "started_at": "2026-04-26T16:57:22.275000+00:00",
-    "updated_at": "2026-04-26T17:14:01.040000+00:00",
-    "location_text": "77 km ENE of Miyako, Japan",
-    "lat": 39.9892,
-    "lon": 142.7328,
-    "source_primary": "USGS",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000st11",
-    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000st11",
-    "country_code": null,
-    "payload": {
-      "mag": 5.0,
-      "depth_km": 35.0,
-      "place": "77 km ENE of Miyako, Japan",
-      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000st11.geojson",
-      "alert": null,
-      "sig": 385,
-      "tsunami": 0,
-      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
-    },
-    "member_event_ids": [
-      11888
-    ],
-    "occurred_at": "2026-04-26T16:57:22.275000+00:00",
-    "published_at": "2026-04-26T16:57:22.275000+00:00",
-    "fetched_at": "2026-04-26T16:57:22.275000+00:00"
-  },
-  {
-    "id": 11891,
+    "id": 11895,
     "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
     "event_type": "flood",
     "severity_level": "orange",
@@ -289,7 +199,7 @@
       }
     },
     "member_event_ids": [
-      11891
+      11895
     ],
     "occurred_at": "2026-03-25T01:00:00+00:00",
     "published_at": "2026-03-25T01:00:00+00:00",

@@ -1,6 +1,60 @@
 [
   {
-    "id": 12101,
+    "id": 12102,
+    "group_key": "volcano|077d322efb6e22c80a0b07f682ad869fa1472386",
+    "event_type": "volcano",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Krasheninnikov",
+    "summary": "VRP 126.20 MW · MODIS · 4.47 km",
+    "started_at": "2026-04-28T08:45:00+00:00",
+    "updated_at": "2026-04-28T08:45:00+00:00",
+    "location_text": "Krasheninnikov",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "MODIS",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=300190",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=300190",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "300190",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=300190",
+      "vrp_mw": 126.2,
+      "distance_km": 4.47,
+      "sensor": "MODIS",
+      "row_class": [
+        "high"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "MODIS"
+      ],
+      "reports": [
+        {
+          "volcano_id": "300190",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=300190",
+          "vrp_mw": 126.2,
+          "distance_km": 4.47,
+          "sensor": "MODIS",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 1
+    },
+    "member_event_ids": [
+      12102
+    ],
+    "occurred_at": "2026-04-28T08:45:00+00:00",
+    "published_at": "2026-04-28T08:45:00+00:00",
+    "fetched_at": "2026-04-28T08:45:00+00:00"
+  },
+  {
+    "id": 12103,
     "group_key": "volcano|c679da2c8421db1377c58729ab3dc7e04d0ec541",
     "event_type": "volcano",
     "severity_level": "very_high",
@@ -47,7 +101,7 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      12101
+      12103
     ],
     "occurred_at": "2026-04-28T01:10:00+00:00",
     "published_at": "2026-04-28T01:10:00+00:00",

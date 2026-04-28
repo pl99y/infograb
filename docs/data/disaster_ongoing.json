@@ -1,6 +1,6 @@
 [
   {
-    "id": 12092,
+    "id": 12094,
     "group_key": "volcano|c679da2c8421db1377c58729ab3dc7e04d0ec541",
     "event_type": "volcano",
     "severity_level": "very_high",
@@ -47,64 +47,10 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      12092
+      12094
     ],
     "occurred_at": "2026-04-28T01:10:00+00:00",
     "published_at": "2026-04-28T01:10:00+00:00",
     "fetched_at": "2026-04-28T01:10:00+00:00"
-  },
-  {
-    "id": 12093,
-    "group_key": "volcano|369bb005cbd41ed40c1f2b1531c461cbc94d1a13",
-    "event_type": "volcano",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "Krasheninnikov",
-    "summary": "VRP 102.96 MW · VIIRS375 · 5.10 km",
-    "started_at": "2026-04-27T16:42:01+00:00",
-    "updated_at": "2026-04-27T16:42:01+00:00",
-    "location_text": "Krasheninnikov",
-    "lat": null,
-    "lon": null,
-    "source_primary": "MIROVA",
-    "source_secondary": "VIIRS375",
-    "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=300190",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=300190",
-    "country_code": null,
-    "payload": {
-      "volcano_id": "300190",
-      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=300190",
-      "vrp_mw": 102.96,
-      "distance_km": 5.1,
-      "sensor": "VIIRS375",
-      "row_class": [
-        "high"
-      ],
-      "source_page": "https://www.mirovaweb.it/NRT/",
-      "sensors": [
-        "VIIRS375"
-      ],
-      "reports": [
-        {
-          "volcano_id": "300190",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=300190",
-          "vrp_mw": 102.96,
-          "distance_km": 5.1,
-          "sensor": "VIIRS375",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        }
-      ],
-      "merged_count": 1
-    },
-    "member_event_ids": [
-      12093
-    ],
-    "occurred_at": "2026-04-27T16:42:01+00:00",
-    "published_at": "2026-04-27T16:42:01+00:00",
-    "fetched_at": "2026-04-27T16:42:01+00:00"
   }
 ]

@@ -1,27 +1,27 @@
 [
   {
-    "id": 7471,
+    "id": 7477,
     "quote_key": "wti",
     "name": "WTI Crude",
-    "price": 99.6,
+    "price": 99.43,
     "unit": "USD/bbl",
-    "change": 3.23,
-    "change_percent": 3.35,
+    "change": -0.5,
+    "change_percent": -0.5,
     "timestamp_text": null,
     "source_name": "OilPrice.com",
     "source_url": "https://oilprice.com/oil-price-charts/",
     "provider_used": "oilprice_charts",
     "is_delayed": 1,
-    "delay_note": "28-Minute Delay",
-    "fetched_at": "2026-04-28T22:02:05.726740+00:00",
-    "created_at": "2026-04-28 22:02:05",
+    "delay_note": "10-Minute Delay",
+    "fetched_at": "2026-04-28T22:17:06.475304+00:00",
+    "created_at": "2026-04-28 22:17:06",
     "extra": {
       "matched_name": "WTI Crude",
       "parsed_from": "oilprice_table_row"
     }
   },
   {
-    "id": 7472,
+    "id": 7478,
     "quote_key": "brent",
     "name": "Brent Crude",
     "price": 111.22,
@@ -33,37 +33,37 @@
     "source_url": "https://oilprice.com/oil-price-charts/",
     "provider_used": "oilprice_charts",
     "is_delayed": 1,
-    "delay_note": "20-Minute Delay",
-    "fetched_at": "2026-04-28T22:02:05.726740+00:00",
-    "created_at": "2026-04-28 22:02:05",
+    "delay_note": "35-Minute Delay",
+    "fetched_at": "2026-04-28T22:17:06.475304+00:00",
+    "created_at": "2026-04-28 22:17:06",
     "extra": {
       "matched_name": "Brent Crude",
       "parsed_from": "oilprice_table_row"
     }
   },
   {
-    "id": 7473,
+    "id": 7479,
     "quote_key": "murban",
     "name": "Murban Crude",
-    "price": 107.22,
+    "price": 106.7,
     "unit": "USD/bbl",
-    "change": 3.03,
-    "change_percent": 2.91,
+    "change": 2.51,
+    "change_percent": 2.41,
     "timestamp_text": null,
     "source_name": "OilPrice.com",
     "source_url": "https://oilprice.com/oil-price-charts/",
     "provider_used": "oilprice_charts",
     "is_delayed": 1,
     "delay_note": "15-Minute Delay",
-    "fetched_at": "2026-04-28T22:02:05.726740+00:00",
-    "created_at": "2026-04-28 22:02:05",
+    "fetched_at": "2026-04-28T22:17:06.475304+00:00",
+    "created_at": "2026-04-28 22:17:06",
     "extra": {
       "matched_name": "Murban Crude",
       "parsed_from": "oilprice_table_row"
     }
   },
   {
-    "id": 7474,
+    "id": 7480,
     "quote_key": "natural_gas",
     "name": "Natural Gas",
     "price": 2.554,
@@ -75,16 +75,16 @@
     "source_url": "https://oilprice.com/oil-price-charts/",
     "provider_used": "oilprice_charts",
     "is_delayed": 1,
-    "delay_note": "2-Hour Delay",
-    "fetched_at": "2026-04-28T22:02:05.726740+00:00",
-    "created_at": "2026-04-28 22:02:05",
+    "delay_note": "3-Hour Delay",
+    "fetched_at": "2026-04-28T22:17:06.475304+00:00",
+    "created_at": "2026-04-28 22:17:06",
     "extra": {
       "matched_name": "Natural Gas",
       "parsed_from": "oilprice_table_row"
     }
   },
   {
-    "id": 7475,
+    "id": 7481,
     "quote_key": "gasoline",
     "name": "Gasoline (RBOB)",
     "price": 3.56,
@@ -96,16 +96,16 @@
     "source_url": "https://oilprice.com/oil-price-charts/",
     "provider_used": "oilprice_charts",
     "is_delayed": 1,
-    "delay_note": "28-Minute Delay",
-    "fetched_at": "2026-04-28T22:02:05.726740+00:00",
-    "created_at": "2026-04-28 22:02:05",
+    "delay_note": "43-Minute Delay",
+    "fetched_at": "2026-04-28T22:17:06.475304+00:00",
+    "created_at": "2026-04-28 22:17:06",
     "extra": {
       "matched_name": "Gasoline",
       "parsed_from": "oilprice_table_row"
     }
   },
   {
-    "id": 7476,
+    "id": 7482,
     "quote_key": "china",
     "name": "China Crude Oil Futures (INE SC)",
     "price": 668.4,
@@ -118,8 +118,8 @@
     "provider_used": "sina_hq_direct",
     "is_delayed": 1,
     "delay_note": "Parsed from direct Sina HQ quote response.",
-    "fetched_at": "2026-04-28T22:02:06.345291+00:00",
-    "created_at": "2026-04-28 22:02:06",
+    "fetched_at": "2026-04-28T22:17:07.232507+00:00",
+    "created_at": "2026-04-28 22:17:07",
     "extra": {
       "parsed_from": "sina_hq_direct",
       "raw_parts": [

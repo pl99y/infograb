@@ -1,6 +1,6 @@
 [
   {
-    "id": 12081,
+    "id": 12084,
     "group_key": "volcano|c679da2c8421db1377c58729ab3dc7e04d0ec541",
     "event_type": "volcano",
     "severity_level": "very_high",
@@ -47,14 +47,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      12082
+      12084
     ],
     "occurred_at": "2026-04-28T01:10:00+00:00",
     "published_at": "2026-04-28T01:10:00+00:00",
     "fetched_at": "2026-04-28T01:10:00+00:00"
   },
   {
-    "id": 12082,
+    "id": 12085,
     "group_key": "volcano|369bb005cbd41ed40c1f2b1531c461cbc94d1a13",
     "event_type": "volcano",
     "severity_level": "high",
@@ -101,46 +101,10 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      12083
+      12085
     ],
     "occurred_at": "2026-04-27T16:42:01+00:00",
     "published_at": "2026-04-27T16:42:01+00:00",
     "fetched_at": "2026-04-27T16:42:01+00:00"
-  },
-  {
-    "id": 12083,
-    "group_key": "earthquake|us6000st3s",
-    "event_type": "earthquake",
-    "severity_level": "moderate",
-    "severity_color": "moderate",
-    "title": "M 5.1 - 26 km SW of Khorugh, Tajikistan",
-    "summary": "26 km SW of Khorugh, Tajikistan",
-    "started_at": "2026-04-27T06:46:08.014000+00:00",
-    "updated_at": "2026-04-27T08:20:54.906000+00:00",
-    "location_text": "26 km SW of Khorugh, Tajikistan",
-    "lat": 37.3466,
-    "lon": 71.3121,
-    "source_primary": "USGS",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000st3s",
-    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000st3s",
-    "country_code": null,
-    "payload": {
-      "mag": 5.1,
-      "depth_km": 105.112,
-      "place": "26 km SW of Khorugh, Tajikistan",
-      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000st3s.geojson",
-      "alert": null,
-      "sig": 400,
-      "tsunami": 0,
-      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
-    },
-    "member_event_ids": [
-      12081
-    ],
-    "occurred_at": "2026-04-27T06:46:08.014000+00:00",
-    "published_at": "2026-04-27T06:46:08.014000+00:00",
-    "fetched_at": "2026-04-27T06:46:08.014000+00:00"
   }
 ]

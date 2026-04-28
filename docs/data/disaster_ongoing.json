@@ -1,6 +1,6 @@
 [
   {
-    "id": 12004,
+    "id": 12008,
     "group_key": "volcano|4dd9f4a800594dc83efe8a558853073556be342d",
     "event_type": "volcano",
     "severity_level": "high",
@@ -47,14 +47,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      12005
+      12009
     ],
     "occurred_at": "2026-04-27T21:50:00+00:00",
     "published_at": "2026-04-27T21:50:00+00:00",
     "fetched_at": "2026-04-27T21:50:00+00:00"
   },
   {
-    "id": 12005,
+    "id": 12009,
     "group_key": "volcano|369bb005cbd41ed40c1f2b1531c461cbc94d1a13",
     "event_type": "volcano",
     "severity_level": "high",
@@ -114,14 +114,14 @@
       "merged_count": 2
     },
     "member_event_ids": [
-      12006
+      12010
     ],
     "occurred_at": "2026-04-27T16:42:01+00:00",
     "published_at": "2026-04-27T16:42:01+00:00",
     "fetched_at": "2026-04-27T16:42:01+00:00"
   },
   {
-    "id": 12006,
+    "id": 12010,
     "group_key": "earthquake|us6000st3s",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -150,90 +150,10 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      12004
+      12008
     ],
     "occurred_at": "2026-04-27T06:46:08.014000+00:00",
     "published_at": "2026-04-27T06:46:08.014000+00:00",
     "fetched_at": "2026-04-27T06:46:08.014000+00:00"
-  },
-  {
-    "id": 12007,
-    "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
-    "event_type": "flood",
-    "severity_level": "orange",
-    "severity_color": "orange",
-    "title": "Flood in Afghanistan",
-    "summary": "Afghanistan",
-    "started_at": "2026-03-25T01:00:00+00:00",
-    "updated_at": "2026-04-08T15:01:29+00:00",
-    "location_text": "Afghanistan",
-    "lat": null,
-    "lon": null,
-    "source_primary": "GDACS",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://www.gdacs.org/report.aspx?eventid=1103815&episodeid=1&eventtype=FL",
-    "official_link": "https://www.gdacs.org/report.aspx?eventid=1103815&episodeid=1&eventtype=FL",
-    "country_code": null,
-    "payload": {
-      "eventid": "1103815",
-      "episodeid": "1",
-      "alertlevel": "orange",
-      "report_url": "https://www.gdacs.org/report.aspx?eventid=1103815&episodeid=1&eventtype=FL",
-      "geometry_url": null,
-      "details_url": null,
-      "source_page": "https://www.gdacs.org/Alerts/",
-      "active_within_days": 14,
-      "raw": {
-        "eventtype": "FL",
-        "eventid": 1103815,
-        "episodeid": 1,
-        "eventname": "",
-        "glide": "FL-2026-000047-AFG",
-        "name": "Flood in Afghanistan",
-        "description": "Flood in Afghanistan",
-        "htmldescription": "Orange Flood in Afghanistan from: 25 Mar 2026 01 to: 14 Apr 2026 01.",
-        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/FL.png",
-        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/FL.png",
-        "url": {
-          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=FL&eventid=1103815&episodeid=1",
-          "report": "https://www.gdacs.org/report.aspx?eventid=1103815&episodeid=1&eventtype=FL",
-          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=FL&eventid=1103815"
-        },
-        "alertlevel": "Orange",
-        "alertscore": 2,
-        "episodealertlevel": "Orange",
-        "episodealertscore": 1.5,
-        "istemporary": "false",
-        "iscurrent": "false",
-        "country": "Afghanistan",
-        "fromdate": "2026-03-25T01:00:00",
-        "todate": "2026-04-14T01:00:00",
-        "datemodified": "2026-04-08T15:01:29",
-        "iso3": "AFG",
-        "source": "GLOFAS",
-        "sourceid": "",
-        "polygonlabel": "Centroid",
-        "Class": "Point_Centroid",
-        "affectedcountries": [
-          {
-            "iso2": "AF",
-            "iso3": "AFG",
-            "countryname": "Afghanistan"
-          }
-        ],
-        "severitydata": {
-          "severity": 0.0,
-          "severitytext": "Magnitude 0 ",
-          "severityunit": ""
-        }
-      }
-    },
-    "member_event_ids": [
-      12007
-    ],
-    "occurred_at": "2026-03-25T01:00:00+00:00",
-    "published_at": "2026-03-25T01:00:00+00:00",
-    "fetched_at": "2026-03-25T01:00:00+00:00"
   }
 ]

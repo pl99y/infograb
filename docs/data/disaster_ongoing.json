@@ -1,56 +1,38 @@
 [
   {
-    "id": 12133,
-    "group_key": "volcano|c679da2c8421db1377c58729ab3dc7e04d0ec541",
-    "event_type": "volcano",
-    "severity_level": "very_high",
-    "severity_color": "very_high",
-    "title": "Nyamuragira",
-    "summary": "VRP 1171.40 MW · MODIS · 3.00 km",
-    "started_at": "2026-04-28T01:10:00+00:00",
-    "updated_at": "2026-04-28T01:10:00+00:00",
-    "location_text": "Nyamuragira",
-    "lat": null,
-    "lon": null,
-    "source_primary": "MIROVA",
-    "source_secondary": "MODIS",
+    "id": 12134,
+    "group_key": "earthquake|us7000sgp4",
+    "event_type": "earthquake",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "M 5.2 - Fiji region",
+    "summary": "Fiji region",
+    "started_at": "2026-04-28T15:28:16.421000+00:00",
+    "updated_at": "2026-04-28T15:46:44.040000+00:00",
+    "location_text": "Fiji region",
+    "lat": -18.492,
+    "lon": -177.5758,
+    "source_primary": "USGS",
+    "source_secondary": null,
     "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=223020",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=223020",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sgp4",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sgp4",
     "country_code": null,
     "payload": {
-      "volcano_id": "223020",
-      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=223020",
-      "vrp_mw": 1171.4,
-      "distance_km": 3.0,
-      "sensor": "MODIS",
-      "row_class": [
-        "very_high"
-      ],
-      "source_page": "https://www.mirovaweb.it/NRT/",
-      "sensors": [
-        "MODIS"
-      ],
-      "reports": [
-        {
-          "volcano_id": "223020",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=223020",
-          "vrp_mw": 1171.4,
-          "distance_km": 3.0,
-          "sensor": "MODIS",
-          "row_class": [
-            "very_high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        }
-      ],
-      "merged_count": 1
+      "mag": 5.2,
+      "depth_km": 409.024,
+      "place": "Fiji region",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us7000sgp4.geojson",
+      "alert": null,
+      "sig": 416,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      12129
+      12130
     ],
-    "occurred_at": "2026-04-28T01:10:00+00:00",
-    "published_at": "2026-04-28T01:10:00+00:00",
-    "fetched_at": "2026-04-28T01:10:00+00:00"
+    "occurred_at": "2026-04-28T15:28:16.421000+00:00",
+    "published_at": "2026-04-28T15:28:16.421000+00:00",
+    "fetched_at": "2026-04-28T15:28:16.421000+00:00"
   }
 ]

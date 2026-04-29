@@ -1,69 +1,110 @@
 [
   {
-    "id": 12272,
-    "group_key": "volcano|fcc8b1ffe9326ad07f075c14f38fddfbd1073d1b",
-    "event_type": "volcano",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "Aoba",
-    "summary": "VRP 178.26 MW · VIIRS375 / VIIRS · 1.91 km",
-    "started_at": "2026-04-29T02:42:02+00:00",
-    "updated_at": "2026-04-29T02:42:02+00:00",
-    "location_text": "Aoba",
-    "lat": null,
-    "lon": null,
-    "source_primary": "MIROVA",
-    "source_secondary": "VIIRS375 / VIIRS",
+    "id": 12273,
+    "group_key": "earthquake|us7000sh1d",
+    "event_type": "earthquake",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "M 5.1 - Prince Edward Islands region",
+    "summary": "Prince Edward Islands region",
+    "started_at": "2026-04-29T16:31:05.172000+00:00",
+    "updated_at": "2026-04-29T16:53:18.040000+00:00",
+    "location_text": "Prince Edward Islands region",
+    "lat": -44.6347,
+    "lon": 37.2759,
+    "source_primary": "USGS",
+    "source_secondary": null,
     "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=257030",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=257030",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sh1d",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sh1d",
     "country_code": null,
     "payload": {
-      "volcano_id": "257030",
-      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=257030",
-      "vrp_mw": 178.26,
-      "distance_km": 2.25,
-      "sensor": "VIIRS",
-      "row_class": [
-        "moderate",
-        "high"
-      ],
-      "source_page": "https://www.mirovaweb.it/NRT/",
-      "sensors": [
-        "VIIRS375",
-        "VIIRS"
-      ],
-      "reports": [
-        {
-          "volcano_id": "257030",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=257030",
-          "vrp_mw": 36.19,
-          "distance_km": 1.91,
-          "sensor": "VIIRS375",
-          "row_class": [
-            "moderate"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        },
-        {
-          "volcano_id": "257030",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=257030",
-          "vrp_mw": 178.26,
-          "distance_km": 2.25,
-          "sensor": "VIIRS",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        }
-      ],
-      "merged_count": 2
+      "mag": 5.1,
+      "depth_km": 10.0,
+      "place": "Prince Edward Islands region",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us7000sh1d.geojson",
+      "alert": null,
+      "sig": 400,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      12263
+      12264
     ],
-    "occurred_at": "2026-04-29T02:42:02+00:00",
-    "published_at": "2026-04-29T02:42:02+00:00",
-    "fetched_at": "2026-04-29T02:42:02+00:00"
+    "occurred_at": "2026-04-29T16:31:05.172000+00:00",
+    "published_at": "2026-04-29T16:31:05.172000+00:00",
+    "fetched_at": "2026-04-29T16:31:05.172000+00:00"
+  },
+  {
+    "id": 12274,
+    "group_key": "earthquake|us7000sh1c",
+    "event_type": "earthquake",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "M 5.0 - Prince Edward Islands region",
+    "summary": "Prince Edward Islands region",
+    "started_at": "2026-04-29T16:27:36.033000+00:00",
+    "updated_at": "2026-04-29T16:47:23.040000+00:00",
+    "location_text": "Prince Edward Islands region",
+    "lat": -44.5433,
+    "lon": 37.4117,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sh1c",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sh1c",
+    "country_code": null,
+    "payload": {
+      "mag": 5.0,
+      "depth_km": 10.0,
+      "place": "Prince Edward Islands region",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us7000sh1c.geojson",
+      "alert": null,
+      "sig": 385,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      12265
+    ],
+    "occurred_at": "2026-04-29T16:27:36.033000+00:00",
+    "published_at": "2026-04-29T16:27:36.033000+00:00",
+    "fetched_at": "2026-04-29T16:27:36.033000+00:00"
+  },
+  {
+    "id": 12275,
+    "group_key": "earthquake|us7000sh18",
+    "event_type": "earthquake",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "M 5.1 - Prince Edward Islands region",
+    "summary": "Prince Edward Islands region",
+    "started_at": "2026-04-29T16:11:26.657000+00:00",
+    "updated_at": "2026-04-29T16:48:58.040000+00:00",
+    "location_text": "Prince Edward Islands region",
+    "lat": -44.652,
+    "lon": 37.4301,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sh18",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sh18",
+    "country_code": null,
+    "payload": {
+      "mag": 5.1,
+      "depth_km": 10.0,
+      "place": "Prince Edward Islands region",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us7000sh18.geojson",
+      "alert": null,
+      "sig": 400,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      12266
+    ],
+    "occurred_at": "2026-04-29T16:11:26.657000+00:00",
+    "published_at": "2026-04-29T16:11:26.657000+00:00",
+    "fetched_at": "2026-04-29T16:11:26.657000+00:00"
   }
 ]

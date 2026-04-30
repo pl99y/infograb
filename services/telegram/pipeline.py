@@ -147,7 +147,7 @@ def fetch_telegram_once(db_path: str = "app.db") -> dict:
                 posts=posts,
                 fetched_at=fetch_result.fetched_at,
                 db_path=db_path,
-                download_media=True,
+                download_media=False,
             )
 
             results["sources_processed"] += 1

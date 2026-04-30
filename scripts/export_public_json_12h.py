@@ -9,21 +9,26 @@ from pathlib import Path
 from typing import Any, Callable
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-DB_PATH = PROJECT_ROOT / "runtime" / "app.db"
+DB_PATH = Path(os.environ.get("INFOGRAB_DB_PATH", str(PROJECT_ROOT / "runtime" / "app.db")))
 DATA_DIR = PROJECT_ROOT / "docs" / "data"
 
 sys.path.insert(0, str(PROJECT_ROOT))
 os.chdir(PROJECT_ROOT)
 
-from storage import initialize_database  # noqa: E402
+from storage import (  # noqa: E402
+    cleanup_old_data,
+    cleanup_orphaned_media_files,
+    get_connection,
+    initialize_database,
+)
 from services.public_health.pipeline import fetch_public_health_once  # noqa: E402
 from services.public_health.queries import get_public_health_latest  # noqa: E402
 from services.space_weather.pipeline import fetch_space_weather_once, fetch_space_launches_once  # noqa: E402
-from services.space_weather.queries import (
+from services.space_weather.queries import (  # noqa: E402
     get_space_weather_alerts,
     get_space_weather_forecast,
     get_space_launches_latest,
-)  # noqa: E402
+)
 from services.mnd_pla.pipeline import fetch_mnd_pla_once  # noqa: E402
 from services.mnd_pla.queries import get_mnd_pla_dashboard  # noqa: E402
 from services.f1.pipeline import fetch_f1_news_once  # noqa: E402
@@ -35,6 +40,13 @@ EXPORT_LABEL = "12h"
 
 def utc_now_iso() -> str:
     return datetime.now(timezone.utc).isoformat()
+
+
+def env_bool(name: str, default: bool = True) -> bool:
+    raw = os.environ.get(name)
+    if raw is None:
+        return default
+    return raw.strip().lower() not in {"0", "false", "no", "off", ""}
 
 
 def write_json(path: Path, payload: Any) -> None:
@@ -114,9 +126,50 @@ def export_all(steps: list[dict[str, Any]]) -> None:
     print("[ok] wrote export_meta.json")
 
 
+def cleanup_runtime() -> None:
+    """Keep the local SQLite DB and old downloaded media from growing forever.
+
+    This runs after JSON export, so cleanup will not remove anything needed by the
+    current dashboard output. Set INFOGRAB_CLEANUP=0 to disable it temporarily.
+    Set INFOGRAB_VACUUM=0 to skip VACUUM if you need a faster run.
+    """
+    if not env_bool("INFOGRAB_CLEANUP", True):
+        print("[ok] cleanup skipped because INFOGRAB_CLEANUP=0")
+        return
+
+    con = get_connection(str(DB_PATH))
+    try:
+        stats = cleanup_old_data(con)
+        media_stats = cleanup_orphaned_media_files(con)
+        con.commit()
+
+        print("[ok] cleanup database:", json.dumps(stats, ensure_ascii=False, sort_keys=True))
+        print("[ok] cleanup media:", json.dumps(media_stats, ensure_ascii=False, sort_keys=True))
+
+        if env_bool("INFOGRAB_VACUUM", True):
+            con.execute("VACUUM")
+            print("[ok] vacuumed database")
+
+        con.execute("PRAGMA optimize")
+    finally:
+        con.close()
+
+
+def safe_cleanup_runtime(skip_cleanup: bool) -> None:
+    if skip_cleanup:
+        print("[ok] cleanup skipped by --skip-cleanup")
+        return
+    try:
+        cleanup_runtime()
+    except Exception as exc:
+        # Cleanup should never block publishing freshly exported JSON.
+        print(f"[warn] cleanup failed: {exc}")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Export 12-hour dashboard JSON files into docs/data")
     parser.add_argument("--skip-fetch", action="store_true", help="Write JSON from the existing database without running fetchers first.")
+    parser.add_argument("--skip-cleanup", action="store_true", help="Do not prune old database rows or orphan media files after export.")
     args = parser.parse_args()
 
     DATA_DIR.mkdir(parents=True, exist_ok=True)
@@ -125,8 +178,10 @@ def main() -> None:
 
     steps = fetch_all(skip_fetch=args.skip_fetch)
     export_all(steps=steps)
+    safe_cleanup_runtime(skip_cleanup=args.skip_cleanup)
     print(f"Exported {EXPORT_LABEL} profile JSON into {DATA_DIR}")
 
 
 if __name__ == "__main__":
     main()
+

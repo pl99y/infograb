@@ -1,6 +1,6 @@
 [
   {
-    "id": 12624,
+    "id": 12631,
     "group_key": "volcano|e228068b89b7ad584e609153bf8460a1b213a9da",
     "event_type": "volcano",
     "severity_level": "very_high",
@@ -47,68 +47,14 @@
       "merged_count": 1
     },
     "member_event_ids": [
-      12620
+      12627
     ],
     "occurred_at": "2026-04-30T00:50:00+00:00",
     "published_at": "2026-04-30T00:50:00+00:00",
     "fetched_at": "2026-04-30T00:50:00+00:00"
   },
   {
-    "id": 12625,
-    "group_key": "volcano|39716e758e2496e2d231960254ae2cc44d1b69e2",
-    "event_type": "volcano",
-    "severity_level": "high",
-    "severity_color": "high",
-    "title": "Mayon",
-    "summary": "VRP 118.77 MW · MODIS · 1.41 km",
-    "started_at": "2026-04-30T00:40:00+00:00",
-    "updated_at": "2026-04-30T00:40:00+00:00",
-    "location_text": "Mayon",
-    "lat": null,
-    "lon": null,
-    "source_primary": "MIROVA",
-    "source_secondary": "MODIS",
-    "status": "active",
-    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=273030",
-    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=273030",
-    "country_code": null,
-    "payload": {
-      "volcano_id": "273030",
-      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=273030",
-      "vrp_mw": 118.77,
-      "distance_km": 1.41,
-      "sensor": "MODIS",
-      "row_class": [
-        "high"
-      ],
-      "source_page": "https://www.mirovaweb.it/NRT/",
-      "sensors": [
-        "MODIS"
-      ],
-      "reports": [
-        {
-          "volcano_id": "273030",
-          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=273030",
-          "vrp_mw": 118.77,
-          "distance_km": 1.41,
-          "sensor": "MODIS",
-          "row_class": [
-            "high"
-          ],
-          "source_page": "https://www.mirovaweb.it/NRT/"
-        }
-      ],
-      "merged_count": 1
-    },
-    "member_event_ids": [
-      12621
-    ],
-    "occurred_at": "2026-04-30T00:40:00+00:00",
-    "published_at": "2026-04-30T00:40:00+00:00",
-    "fetched_at": "2026-04-30T00:40:00+00:00"
-  },
-  {
-    "id": 12626,
+    "id": 12632,
     "group_key": "earthquake|us7000sh55",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -137,14 +83,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      12615
+      12622
     ],
     "occurred_at": "2026-04-29T22:04:37.689000+00:00",
     "published_at": "2026-04-29T22:04:37.689000+00:00",
     "fetched_at": "2026-04-29T22:04:37.689000+00:00"
   },
   {
-    "id": 12627,
+    "id": 12633,
     "group_key": "earthquake|us7000sh1g",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -173,14 +119,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      12616
+      12623
     ],
     "occurred_at": "2026-04-29T16:41:45.200000+00:00",
     "published_at": "2026-04-29T16:41:45.200000+00:00",
     "fetched_at": "2026-04-29T16:41:45.200000+00:00"
   },
   {
-    "id": 12628,
+    "id": 12634,
     "group_key": "earthquake|us7000sh1d",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -209,14 +155,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      12617
+      12624
     ],
     "occurred_at": "2026-04-29T16:31:05.172000+00:00",
     "published_at": "2026-04-29T16:31:05.172000+00:00",
     "fetched_at": "2026-04-29T16:31:05.172000+00:00"
   },
   {
-    "id": 12629,
+    "id": 12635,
     "group_key": "earthquake|us7000sh1c",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -245,14 +191,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      12618
+      12625
     ],
     "occurred_at": "2026-04-29T16:27:36.033000+00:00",
     "published_at": "2026-04-29T16:27:36.033000+00:00",
     "fetched_at": "2026-04-29T16:27:36.033000+00:00"
   },
   {
-    "id": 12630,
+    "id": 12636,
     "group_key": "earthquake|us7000sh18",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -281,7 +227,7 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      12619
+      12626
     ],
     "occurred_at": "2026-04-29T16:11:26.657000+00:00",
     "published_at": "2026-04-29T16:11:26.657000+00:00",

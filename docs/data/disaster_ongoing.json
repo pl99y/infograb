@@ -1,6 +1,6 @@
 [
   {
-    "id": 12830,
+    "id": 12834,
     "group_key": "earthquake|us7000sh8r",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -29,14 +29,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      12821
+      12825
     ],
     "occurred_at": "2026-04-30T13:27:01.741000+00:00",
     "published_at": "2026-04-30T13:27:01.741000+00:00",
     "fetched_at": "2026-04-30T13:27:01.741000+00:00"
   },
   {
-    "id": 12831,
+    "id": 12835,
     "group_key": "earthquake|us7000sh7l",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -65,14 +65,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      12822
+      12826
     ],
     "occurred_at": "2026-04-30T09:07:09.663000+00:00",
     "published_at": "2026-04-30T09:07:09.663000+00:00",
     "fetched_at": "2026-04-30T09:07:09.663000+00:00"
   },
   {
-    "id": 12832,
+    "id": 12836,
     "group_key": "earthquake|us7000sh55",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -101,46 +101,10 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      12823
+      12827
     ],
     "occurred_at": "2026-04-29T22:04:37.689000+00:00",
     "published_at": "2026-04-29T22:04:37.689000+00:00",
     "fetched_at": "2026-04-29T22:04:37.689000+00:00"
-  },
-  {
-    "id": 12833,
-    "group_key": "earthquake|us7000sh1g",
-    "event_type": "earthquake",
-    "severity_level": "moderate",
-    "severity_color": "moderate",
-    "title": "M 5.2 - Prince Edward Islands region",
-    "summary": "Prince Edward Islands region",
-    "started_at": "2026-04-29T16:41:45.200000+00:00",
-    "updated_at": "2026-04-29T17:03:57.040000+00:00",
-    "location_text": "Prince Edward Islands region",
-    "lat": -44.6333,
-    "lon": 37.2902,
-    "source_primary": "USGS",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sh1g",
-    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sh1g",
-    "country_code": null,
-    "payload": {
-      "mag": 5.2,
-      "depth_km": 10.0,
-      "place": "Prince Edward Islands region",
-      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us7000sh1g.geojson",
-      "alert": null,
-      "sig": 416,
-      "tsunami": 0,
-      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
-    },
-    "member_event_ids": [
-      12824
-    ],
-    "occurred_at": "2026-04-29T16:41:45.200000+00:00",
-    "published_at": "2026-04-29T16:41:45.200000+00:00",
-    "fetched_at": "2026-04-29T16:41:45.200000+00:00"
   }
 ]

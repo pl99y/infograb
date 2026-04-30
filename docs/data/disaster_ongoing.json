@@ -1,6 +1,6 @@
 [
   {
-    "id": 12922,
+    "id": 12925,
     "group_key": "earthquake|us7000sh8r",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -29,14 +29,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      12913
+      12916
     ],
     "occurred_at": "2026-04-30T13:27:01.741000+00:00",
     "published_at": "2026-04-30T13:27:01.741000+00:00",
     "fetched_at": "2026-04-30T13:27:01.741000+00:00"
   },
   {
-    "id": 12923,
+    "id": 12926,
     "group_key": "earthquake|us7000sh7l",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -65,46 +65,10 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      12914
+      12917
     ],
     "occurred_at": "2026-04-30T09:07:09.663000+00:00",
     "published_at": "2026-04-30T09:07:09.663000+00:00",
     "fetched_at": "2026-04-30T09:07:09.663000+00:00"
-  },
-  {
-    "id": 12924,
-    "group_key": "earthquake|us7000sh55",
-    "event_type": "earthquake",
-    "severity_level": "moderate",
-    "severity_color": "moderate",
-    "title": "M 5.0 - 26 km E of Aras-asan, Philippines",
-    "summary": "26 km E of Aras-asan, Philippines",
-    "started_at": "2026-04-29T22:04:37.689000+00:00",
-    "updated_at": "2026-04-29T23:42:40.879000+00:00",
-    "location_text": "26 km E of Aras-asan, Philippines",
-    "lat": 8.9171,
-    "lon": 126.5538,
-    "source_primary": "USGS",
-    "source_secondary": null,
-    "status": "active",
-    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sh55",
-    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000sh55",
-    "country_code": null,
-    "payload": {
-      "mag": 5.0,
-      "depth_km": 10.0,
-      "place": "26 km E of Aras-asan, Philippines",
-      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us7000sh55.geojson",
-      "alert": null,
-      "sig": 385,
-      "tsunami": 0,
-      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
-    },
-    "member_event_ids": [
-      12915
-    ],
-    "occurred_at": "2026-04-29T22:04:37.689000+00:00",
-    "published_at": "2026-04-29T22:04:37.689000+00:00",
-    "fetched_at": "2026-04-29T22:04:37.689000+00:00"
   }
 ]

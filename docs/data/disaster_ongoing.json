@@ -1,6 +1,72 @@
 [
   {
-    "id": 12834,
+    "id": 12837,
+    "group_key": "volcano|c7294cb72f367b3a4514a7fc1ef1b4b0a0134b81",
+    "event_type": "volcano",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Krasheninnikov",
+    "summary": "VRP 115.45 MW · VIIRS375 / VIIRS · 5.10 km",
+    "started_at": "2026-04-30T14:06:01+00:00",
+    "updated_at": "2026-04-30T14:06:01+00:00",
+    "location_text": "Krasheninnikov",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "VIIRS375 / VIIRS",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=300190",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=300190",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "300190",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=300190",
+      "vrp_mw": 115.45,
+      "distance_km": 5.1,
+      "sensor": "VIIRS375",
+      "row_class": [
+        "high"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "VIIRS375",
+        "VIIRS"
+      ],
+      "reports": [
+        {
+          "volcano_id": "300190",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=300190",
+          "vrp_mw": 115.45,
+          "distance_km": 5.1,
+          "sensor": "VIIRS375",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        },
+        {
+          "volcano_id": "300190",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=300190",
+          "vrp_mw": 101.74,
+          "distance_km": 5.41,
+          "sensor": "VIIRS",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 2
+    },
+    "member_event_ids": [
+      12831
+    ],
+    "occurred_at": "2026-04-30T14:06:01+00:00",
+    "published_at": "2026-04-30T14:06:01+00:00",
+    "fetched_at": "2026-04-30T14:06:01+00:00"
+  },
+  {
+    "id": 12838,
     "group_key": "earthquake|us7000sh8r",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -29,14 +95,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      12825
+      12828
     ],
     "occurred_at": "2026-04-30T13:27:01.741000+00:00",
     "published_at": "2026-04-30T13:27:01.741000+00:00",
     "fetched_at": "2026-04-30T13:27:01.741000+00:00"
   },
   {
-    "id": 12835,
+    "id": 12839,
     "group_key": "earthquake|us7000sh7l",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -65,14 +131,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      12826
+      12829
     ],
     "occurred_at": "2026-04-30T09:07:09.663000+00:00",
     "published_at": "2026-04-30T09:07:09.663000+00:00",
     "fetched_at": "2026-04-30T09:07:09.663000+00:00"
   },
   {
-    "id": 12836,
+    "id": 12840,
     "group_key": "earthquake|us7000sh55",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -101,7 +167,7 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      12827
+      12830
     ],
     "occurred_at": "2026-04-29T22:04:37.689000+00:00",
     "published_at": "2026-04-29T22:04:37.689000+00:00",

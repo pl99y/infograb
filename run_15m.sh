@@ -12,6 +12,7 @@ KEEP_LOG_DAYS=7
 JOB_LABEL="15m"
 PYTHON_EXPORT_SCRIPT="scripts/export_public_json.py"
 DEPLOY_TMP=""
+HYDRATE_TMP=""
 
 mkdir -p "$LOG_DIR"
 
@@ -36,6 +37,10 @@ cleanup_old_logs() {
 cleanup_tmp() {
   if [[ -n "${DEPLOY_TMP:-}" && -d "$DEPLOY_TMP" ]]; then
     rm -rf "$DEPLOY_TMP"
+  fi
+
+  if [[ -n "${HYDRATE_TMP:-}" && -d "$HYDRATE_TMP" ]]; then
+    rm -rf "$HYDRATE_TMP"
   fi
 }
 
@@ -65,12 +70,46 @@ ensure_clean_source_tree() {
   fi
 }
 
+hydrate_data_from_gh_pages() {
+  cd "$REPO_DIR"
+
+  local remote_url
+  remote_url=$(git config --get remote.origin.url)
+  if [[ -z "$remote_url" ]]; then
+    echo "[warn] git remote origin is not configured; skipping gh-pages data hydration"
+    return 0
+  fi
+
+  if ! git ls-remote --exit-code --heads origin gh-pages >/dev/null 2>&1; then
+    echo "[ok] gh-pages branch does not exist yet; no previous data to hydrate"
+    return 0
+  fi
+
+  HYDRATE_TMP=$(mktemp -d "$APP_HOME/hydrate-gh-pages.XXXXXX")
+
+  git -C "$HYDRATE_TMP" init -q
+  git -C "$HYDRATE_TMP" remote add origin "$remote_url"
+  git -C "$HYDRATE_TMP" fetch -q --depth=1 origin gh-pages
+  git -C "$HYDRATE_TMP" checkout -q FETCH_HEAD
+
+  if [[ -d "$HYDRATE_TMP/data" ]]; then
+    mkdir -p "$REPO_DIR/docs/data"
+    cp -a "$HYDRATE_TMP/data/." "$REPO_DIR/docs/data/"
+    echo "[ok] hydrated existing docs/data from gh-pages"
+  else
+    echo "[ok] gh-pages has no data directory to hydrate"
+  fi
+
+  rm -rf "$HYDRATE_TMP"
+  HYDRATE_TMP=""
+}
+
 restore_or_remove_generated_data() {
   cd "$REPO_DIR"
 
-  # If docs/data is still tracked on main, restore it so the source branch stays clean.
-  # If it has already been untracked and ignored, remove the generated local copy.
-  if git ls-files --error-unmatch docs/data >/dev/null 2>&1; then
+  # If docs/data files are still tracked on main, restore them so the source branch stays clean.
+  # If docs/data is untracked and ignored, remove the generated local copy.
+  if git ls-files -- docs/data | grep -q .; then
     git restore --staged docs/data 2>/dev/null || true
     git restore docs/data 2>/dev/null || true
     git clean -fd docs/data 2>/dev/null || true
@@ -147,6 +186,7 @@ set -a
 source .env
 set +a
 
+hydrate_data_from_gh_pages
 python "$PYTHON_EXPORT_SCRIPT"
 deploy_docs_to_gh_pages
 restore_or_remove_generated_data

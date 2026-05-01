@@ -327,3 +327,12 @@
         gap: 8px;
     }
 }
+
+
+.aviation-alert-item-inactive {
+    opacity: 0.78;
+}
+
+.aviation-alert-item-inactive .aviation-alert-status {
+    color: var(--text-muted);
+}

@@ -1,6 +1,60 @@
 [
   {
-    "id": 12937,
+    "id": 12939,
+    "group_key": "volcano|4fbefc5dc13a36ccb2cdcbe2968f19969feeeb11",
+    "event_type": "volcano",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "San Cristobal",
+    "summary": "VRP 397.17 MW · MODIS · 22.80 km",
+    "started_at": "2026-04-30T21:25:00+00:00",
+    "updated_at": "2026-04-30T21:25:00+00:00",
+    "location_text": "San Cristobal",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "MODIS",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=344020",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=344020",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "344020",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=344020",
+      "vrp_mw": 397.17,
+      "distance_km": 22.8,
+      "sensor": "MODIS",
+      "row_class": [
+        "high"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "MODIS"
+      ],
+      "reports": [
+        {
+          "volcano_id": "344020",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=344020",
+          "vrp_mw": 397.17,
+          "distance_km": 22.8,
+          "sensor": "MODIS",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 1
+    },
+    "member_event_ids": [
+      12932
+    ],
+    "occurred_at": "2026-04-30T21:25:00+00:00",
+    "published_at": "2026-04-30T21:25:00+00:00",
+    "fetched_at": "2026-04-30T21:25:00+00:00"
+  },
+  {
+    "id": 12940,
     "group_key": "earthquake|us7000sh8r",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -29,14 +83,14 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      12928
+      12930
     ],
     "occurred_at": "2026-04-30T13:27:01.741000+00:00",
     "published_at": "2026-04-30T13:27:01.741000+00:00",
     "fetched_at": "2026-04-30T13:27:01.741000+00:00"
   },
   {
-    "id": 12938,
+    "id": 12941,
     "group_key": "earthquake|us7000sh7l",
     "event_type": "earthquake",
     "severity_level": "moderate",
@@ -65,7 +119,7 @@
       "source_page": "https://earthquake.usgs.gov/earthquakes/map"
     },
     "member_event_ids": [
-      12929
+      12931
     ],
     "occurred_at": "2026-04-30T09:07:09.663000+00:00",
     "published_at": "2026-04-30T09:07:09.663000+00:00",

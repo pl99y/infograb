@@ -1,46 +1,46 @@
 {
-  "id": 62,
+  "id": 63,
   "forecast_key": "swpc_default",
   "forecast_issued_at": "2026-04-30T12:30:00+00:00",
-  "geomag_issued_at": "2026-04-29T22:05:00+00:00",
+  "geomag_issued_at": "2026-04-30T22:05:00+00:00",
   "raw_forecast_text": ":Product: 3-Day Forecast\n:Issued: 2026 Apr 30 1230 UTC\n# Prepared by the U.S. Dept. of Commerce, NOAA, Space Weather Prediction Center\n#\nA. NOAA Geomagnetic Activity Observation and Forecast\n\nThe greatest observed 3 hr Kp over the past 24 hours was 2 (below NOAA\nScale levels).\nThe greatest expected 3 hr Kp for Apr 30-May 02 2026 is 2.67 (below NOAA\nScale levels).\n\nNOAA Kp index breakdown Apr 30-May 02 2026\n\n             Apr 30       May 01       May 02\n00-03UT       2.00         2.67         1.67     \n03-06UT       2.33         2.33         1.67     \n06-09UT       2.67         2.33         1.67     \n09-12UT       2.00         2.00         1.33     \n12-15UT       1.67         2.00         1.33     \n15-18UT       1.67         2.00         1.33     \n18-21UT       1.33         2.33         1.33     \n21-00UT       2.00         2.00         1.33     \n\nRationale: No G1 (Minor) or greater geomagnetic storms are expected.  No\nsignificant transient or recurrent solar wind features are forecast.\n\nB. NOAA Solar Radiation Activity Observation and Forecast\n\nSolar radiation, as observed by NOAA GOES-18 over the past 24 hours, was\nbelow S-scale storm level thresholds.\n\nSolar Radiation Storm Forecast for Apr 30-May 02 2026\n\n              Apr 30  May 01  May 02\nS1 or greater   10%     10%     10%\n\nRationale: There is a slight chance the greater than 10 MeV proton flux\ncould reach S1 (Minor) levels, but is mainly expected to remain at\nbackground levels 30 Apr - 02 May.\n\nC. NOAA Radio Blackout Activity and Forecast\n\nNo radio blackouts were observed over the past 24 hours.\n\nRadio Blackout Forecast for Apr 30-May 02 2026\n\n              Apr 30        May 01        May 02\nR1-R2           65%           65%           65%\nR3 or greater   10%           10%           10%\n\nRationale: There is a high likelihood for R1/R2 (Minor/Moderate) radio\nblackouts, and a slight chance for R3 (Strong or greater) events through\n02 May, due primarily to the complexity of regions 4420 and 4425.\n",
-  "raw_geomag_text": ":Product: Geomagnetic Forecast\n:Issued: 2026 Apr 29 2205 UTC\n# Prepared by the U.S. Dept. of Commerce, NOAA, Space Weather Prediction Center\n#\nNOAA Ap Index Forecast\nObserved Ap 28 Apr 003\nEstimated Ap 29 Apr 004\nPredicted Ap 30 Apr-02 May 014-008-005\n\nNOAA Geomagnetic Activity Probabilities 30 Apr-02 May\nActive                40/15/20\nMinor storm           25/05/01\nModerate storm        10/01/01\nStrong-Extreme storm  01/01/01\n\nNOAA Kp index forecast 30 Apr - 02 May\n             Apr 30    May 01    May 02\n00-03UT        2.67      2.67      1.67      \n03-06UT        2.67      2.33      1.67      \n06-09UT        2.33      2.33      1.67      \n09-12UT        1.67      2.00      1.33      \n12-15UT        2.67      2.00      1.33      \n15-18UT        3.00      2.00      1.33      \n18-21UT        3.67      2.33      1.33      \n21-00UT        3.67      2.00      1.33      \n",
+  "raw_geomag_text": ":Product: Geomagnetic Forecast\n:Issued: 2026 Apr 30 2205 UTC\n# Prepared by the U.S. Dept. of Commerce, NOAA, Space Weather Prediction Center\n#\nNOAA Ap Index Forecast\nObserved Ap 29 Apr 004\nEstimated Ap 30 Apr 010\nPredicted Ap 01 May-03 May 012-008-012\n\nNOAA Geomagnetic Activity Probabilities 01 May-03 May\nActive                50/15/50\nMinor storm           15/05/15\nModerate storm        05/01/05\nStrong-Extreme storm  01/01/01\n\nNOAA Kp index forecast 01 May - 03 May\n             May 01    May 02    May 03\n00-03UT        3.00      2.33      2.33      \n03-06UT        3.00      2.33      1.67      \n06-09UT        2.67      2.33      1.33      \n09-12UT        2.67      2.33      2.33      \n12-15UT        2.00      2.00      2.67      \n15-18UT        2.00      2.00      3.00      \n18-21UT        2.67      2.00      3.33      \n21-00UT        2.67      2.00      3.33      \n",
   "source_name": "SWPC Forecast",
   "source_url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
-  "fetched_at": "2026-04-30T18:07:05.347060+00:00",
-  "created_at": "2026-04-30 18:07:18",
+  "fetched_at": "2026-05-01T00:07:05.652288+00:00",
+  "created_at": "2026-05-01 00:07:25",
   "panel": {
     "forecast_issued_at": "2026-04-30T12:30:00+00:00",
-    "geomag_issued_at": "2026-04-29T22:05:00+00:00",
+    "geomag_issued_at": "2026-04-30T22:05:00+00:00",
     "geomagnetic": {
-      "observed_summary": "过去24小时内观测到的最大3小时Kp指数为2（低于NOAA等级水平）。",
+      "observed_summary": "过去24小时内观测到的最大3小时Kp指数为2（低于NOAA规模等级）。",
       "expected_summary": "预计2026年4月30日至5月2日期间，最大3小时Kp指数为2。",
       "rationale": "预计不会发生G1（轻微）或更高级别的地磁风暴。预计不会出现显著的瞬态或复发性太阳风特征。",
       "days": [
-        "Apr 30",
         "May 01",
-        "May 02"
+        "May 02",
+        "May 03"
       ],
       "ap_index": {
-        "observed": "28 Apr 003 Estimated Ap 29 Apr 004 Predicted Ap 30 Apr-02 May 014-008-005 NOAA Geomagnetic Activity Probabilities 30 Apr-02 May Active 40/15/20 Minor storm 25/05/01 Moderate storm 10/01/01 Strong-Extreme storm 01/01/01 NOAA Kp index forecast 30 Apr - 02 May Apr 30 May 01 May 02 00-03UT 2.67 2.67 1.67 03-06UT 2.67 2.33 1.67 06-09UT 2.33 2.33 1.67 09-12UT 1.67 2.00 1.33 12-15UT 2.67 2.00 1.33 15-18UT 3.00 2.00 1.33 18-21UT 3.67 2.33 1.33 21-00UT 3.67 2.00 1.33",
-        "estimated": "29 Apr 004 Predicted Ap 30 Apr-02 May 014-008-005 NOAA Geomagnetic Activity Probabilities 30 Apr-02 May Active 40/15/20 Minor storm 25/05/01 Moderate storm 10/01/01 Strong-Extreme storm 01/01/01 NOAA Kp index forecast 30 Apr - 02 May Apr 30 May 01 May 02 00-03UT 2.67 2.67 1.67 03-06UT 2.67 2.33 1.67 06-09UT 2.33 2.33 1.67 09-12UT 1.67 2.00 1.33 12-15UT 2.67 2.00 1.33 15-18UT 3.00 2.00 1.33 18-21UT 3.67 2.33 1.33 21-00UT 3.67 2.00 1.33",
-        "predicted": "30 Apr-02 May 014-008-005 NOAA Geomagnetic Activity Probabilities 30 Apr-02 May Active 40/15/20 Minor storm 25/05/01 Moderate storm 10/01/01 Strong-Extreme storm 01/01/01 NOAA Kp index forecast 30 Apr - 02 May Apr 30 May 01 May 02 00-03UT 2.67 2.67 1.67 03-06UT 2.67 2.33 1.67 06-09UT 2.33 2.33 1.67 09-12UT 1.67 2.00 1.33 12-15UT 2.67 2.00 1.33 15-18UT 3.00 2.00 1.33 18-21UT 3.67 2.33 1.33 21-00UT 3.67 2.00 1.33"
+        "observed": "29 Apr 004 Estimated Ap 30 Apr 010 Predicted Ap 01 May-03 May 012-008-012 NOAA Geomagnetic Activity Probabilities 01 May-03 May Active 50/15/50 Minor storm 15/05/15 Moderate storm 05/01/05 Strong-Extreme storm 01/01/01 NOAA Kp index forecast 01 May - 03 May May 01 May 02 May 03 00-03UT 3.00 2.33 2.33 03-06UT 3.00 2.33 1.67 06-09UT 2.67 2.33 1.33 09-12UT 2.67 2.33 2.33 12-15UT 2.00 2.00 2.67 15-18UT 2.00 2.00 3.00 18-21UT 2.67 2.00 3.33 21-00UT 2.67 2.00 3.33",
+        "estimated": "30 Apr 010 Predicted Ap 01 May-03 May 012-008-012 NOAA Geomagnetic Activity Probabilities 01 May-03 May Active 50/15/50 Minor storm 15/05/15 Moderate storm 05/01/05 Strong-Extreme storm 01/01/01 NOAA Kp index forecast 01 May - 03 May May 01 May 02 May 03 00-03UT 3.00 2.33 2.33 03-06UT 3.00 2.33 1.67 06-09UT 2.67 2.33 1.33 09-12UT 2.67 2.33 2.33 12-15UT 2.00 2.00 2.67 15-18UT 2.00 2.00 3.00 18-21UT 2.67 2.00 3.33 21-00UT 2.67 2.00 3.33",
+        "predicted": "01 May-03 May 012-008-012 NOAA Geomagnetic Activity Probabilities 01 May-03 May Active 50/15/50 Minor storm 15/05/15 Moderate storm 05/01/05 Strong-Extreme storm 01/01/01 NOAA Kp index forecast 01 May - 03 May May 01 May 02 May 03 00-03UT 3.00 2.33 2.33 03-06UT 3.00 2.33 1.67 06-09UT 2.67 2.33 1.33 09-12UT 2.67 2.33 2.33 12-15UT 2.00 2.00 2.67 15-18UT 2.00 2.00 3.00 18-21UT 2.67 2.00 3.33 21-00UT 2.67 2.00 3.33"
       },
       "probabilities": {
         "active": [
-          40,
+          50,
           15,
-          20
+          50
         ],
         "minor_storm": [
-          25,
+          15,
           5,
-          1
+          15
         ],
         "moderate_storm": [
-          10,
+          5,
           1,
-          1
+          5
         ],
         "strong_extreme_storm": [
           1,
@@ -50,11 +50,11 @@
       }
     },
     "solar_radiation": {
-      "observed_summary": "根据NOAA GOES-18过去24小时的观测，太阳辐射低于S级风暴阈值。",
+      "observed_summary": "根据NOAA GOES-18过去24小时的观测，太阳辐射低于S级风暴水平阈值。",
       "days": [
-        "Apr 30",
         "May 01",
-        "May 02"
+        "May 02",
+        "May 03"
       ],
       "s1_or_greater": [
         "10%",
@@ -66,9 +66,9 @@
     "radio_blackout": {
       "observed_summary": "过去24小时内未观测到无线电中断。",
       "days": [
-        "Apr 30",
         "May 01",
-        "May 02"
+        "May 02",
+        "May 03"
       ],
       "r1_r2": [
         "65%",
@@ -80,9 +80,9 @@
         "10%",
         "10%"
       ],
-      "rationale": "由于4420和4425区域的复杂性，预计到5月2日之前，发生R1/R2（轻微/中度）无线电中断的可能性很高，并有轻微可能发生R3（强或更强）事件。"
+      "rationale": "由于4420和4425区域的复杂性，预计到5月2日发生R1/R2（轻微/中度）无线电中断的可能性很高，并有轻微可能发生R3（强或更强）事件。"
     },
     "raw_forecast_text": ":Product: 3-Day Forecast\n:Issued: 2026 Apr 30 1230 UTC\n# Prepared by the U.S. Dept. of Commerce, NOAA, Space Weather Prediction Center\n#\nA. NOAA Geomagnetic Activity Observation and Forecast\n\nThe greatest observed 3 hr Kp over the past 24 hours was 2 (below NOAA\nScale levels).\nThe greatest expected 3 hr Kp for Apr 30-May 02 2026 is 2.67 (below NOAA\nScale levels).\n\nNOAA Kp index breakdown Apr 30-May 02 2026\n\n             Apr 30       May 01       May 02\n00-03UT       2.00         2.67         1.67     \n03-06UT       2.33         2.33         1.67     \n06-09UT       2.67         2.33         1.67     \n09-12UT       2.00         2.00         1.33     \n12-15UT       1.67         2.00         1.33     \n15-18UT       1.67         2.00         1.33     \n18-21UT       1.33         2.33         1.33     \n21-00UT       2.00         2.00         1.33     \n\nRationale: No G1 (Minor) or greater geomagnetic storms are expected.  No\nsignificant transient or recurrent solar wind features are forecast.\n\nB. NOAA Solar Radiation Activity Observation and Forecast\n\nSolar radiation, as observed by NOAA GOES-18 over the past 24 hours, was\nbelow S-scale storm level thresholds.\n\nSolar Radiation Storm Forecast for Apr 30-May 02 2026\n\n              Apr 30  May 01  May 02\nS1 or greater   10%     10%     10%\n\nRationale: There is a slight chance the greater than 10 MeV proton flux\ncould reach S1 (Minor) levels, but is mainly expected to remain at\nbackground levels 30 Apr - 02 May.\n\nC. NOAA Radio Blackout Activity and Forecast\n\nNo radio blackouts were observed over the past 24 hours.\n\nRadio Blackout Forecast for Apr 30-May 02 2026\n\n              Apr 30        May 01        May 02\nR1-R2           65%           65%           65%\nR3 or greater   10%           10%           10%\n\nRationale: There is a high likelihood for R1/R2 (Minor/Moderate) radio\nblackouts, and a slight chance for R3 (Strong or greater) events through\n02 May, due primarily to the complexity of regions 4420 and 4425.\n",
-    "raw_geomag_text": ":Product: Geomagnetic Forecast\n:Issued: 2026 Apr 29 2205 UTC\n# Prepared by the U.S. Dept. of Commerce, NOAA, Space Weather Prediction Center\n#\nNOAA Ap Index Forecast\nObserved Ap 28 Apr 003\nEstimated Ap 29 Apr 004\nPredicted Ap 30 Apr-02 May 014-008-005\n\nNOAA Geomagnetic Activity Probabilities 30 Apr-02 May\nActive                40/15/20\nMinor storm           25/05/01\nModerate storm        10/01/01\nStrong-Extreme storm  01/01/01\n\nNOAA Kp index forecast 30 Apr - 02 May\n             Apr 30    May 01    May 02\n00-03UT        2.67      2.67      1.67      \n03-06UT        2.67      2.33      1.67      \n06-09UT        2.33      2.33      1.67      \n09-12UT        1.67      2.00      1.33      \n12-15UT        2.67      2.00      1.33      \n15-18UT        3.00      2.00      1.33      \n18-21UT        3.67      2.33      1.33      \n21-00UT        3.67      2.00      1.33      \n"
+    "raw_geomag_text": ":Product: Geomagnetic Forecast\n:Issued: 2026 Apr 30 2205 UTC\n# Prepared by the U.S. Dept. of Commerce, NOAA, Space Weather Prediction Center\n#\nNOAA Ap Index Forecast\nObserved Ap 29 Apr 004\nEstimated Ap 30 Apr 010\nPredicted Ap 01 May-03 May 012-008-012\n\nNOAA Geomagnetic Activity Probabilities 01 May-03 May\nActive                50/15/50\nMinor storm           15/05/15\nModerate storm        05/01/05\nStrong-Extreme storm  01/01/01\n\nNOAA Kp index forecast 01 May - 03 May\n             May 01    May 02    May 03\n00-03UT        3.00      2.33      2.33      \n03-06UT        3.00      2.33      1.67      \n06-09UT        2.67      2.33      1.33      \n09-12UT        2.67      2.33      2.33      \n12-15UT        2.00      2.00      2.67      \n15-18UT        2.00      2.00      3.00      \n18-21UT        2.67      2.00      3.33      \n21-00UT        2.67      2.00      3.33      \n"
   }
 }

@@ -33,7 +33,7 @@ NAME_TO_SLUG = {
     "Japan": "japanese-grand-prix",
     "Bahrain": "bahrain-grand-prix",
     "Saudi Arabia": "saudi-arabian-grand-prix",
-    "Miami": "miami-grand-prix",
+    "Miami": "united-states-grand-prix-miami",
     "Emilia-Romagna": "emilia-romagna-grand-prix",
     "Monaco": "monaco-grand-prix",
     "Spain": "spanish-grand-prix-barcelona",
@@ -57,6 +57,22 @@ NAME_TO_SLUG = {
     "Russia": "russian-grand-prix",
 }
 
+
+
+# Flashscore does not always use the same Grand Prix naming convention as
+# formula1.com. The current recurring example is Miami: formula1.com labels it
+# "Miami", while Flashscore exposes it as "united-states-grand-prix-miami".
+FLASHSCORE_SLUG_ALIASES: dict[str, list[str]] = {
+    "miami-grand-prix": ["united-states-grand-prix-miami"],
+    "united-states-grand-prix-miami": ["miami-grand-prix"],
+    "mexico-city-grand-prix": ["mexican-grand-prix"],
+    "mexican-grand-prix": ["mexico-city-grand-prix"],
+    "sao-paulo-grand-prix": ["brazilian-grand-prix"],
+    "s-o-paulo-grand-prix": ["brazilian-grand-prix"],
+    "brazilian-grand-prix": ["sao-paulo-grand-prix", "s-o-paulo-grand-prix"],
+    "spanish-grand-prix": ["spanish-grand-prix-barcelona"],
+    "spanish-grand-prix-barcelona": ["spanish-grand-prix"],
+}
 
 DISPLAY_NAME_OVERRIDES = {
     "Australia": "Australian Grand Prix",
@@ -178,6 +194,60 @@ def _link_map_from_home(home_links: list[str]) -> dict[str, str]:
     return mapping
 
 
+def _candidate_slugs_for_round(raw_name: str, primary_slug: str) -> list[str]:
+    candidates: list[str] = []
+
+    def add(value: str | None) -> None:
+        if not value:
+            return
+        value = str(value).strip().strip("/")
+        if value and value not in candidates:
+            candidates.append(value)
+
+    add(primary_slug)
+    add(NAME_TO_SLUG.get(raw_name))
+
+    for key in list(candidates):
+        for alias in FLASHSCORE_SLUG_ALIASES.get(key, []):
+            add(alias)
+
+    raw_lower = str(raw_name or "").lower()
+    if raw_lower == "miami" or "miami" in primary_slug:
+        add("united-states-grand-prix-miami")
+    if "mexico" in raw_lower or "mexico" in primary_slug:
+        add("mexican-grand-prix")
+    if "são paulo" in raw_lower or "sao paulo" in raw_lower or "sao-paulo" in primary_slug:
+        add("brazilian-grand-prix")
+    if raw_lower == "spain" or primary_slug == "spanish-grand-prix":
+        add("spanish-grand-prix-barcelona")
+
+    return candidates
+
+
+def _resolve_flashscore_url(raw_name: str, primary_slug: str, link_map: dict[str, str]) -> str | None:
+    for slug in _candidate_slugs_for_round(raw_name, primary_slug):
+        if slug in link_map:
+            return link_map[slug]
+
+    # Conservative fuzzy fallback: if exactly one Flashscore slug contains the
+    # distinctive part of the Formula1 schedule name, use it. This catches
+    # city-style labels such as Miami without accidentally mapping generic names.
+    tokens = [
+        t for t in re.split(r"[^a-z0-9]+", primary_slug.lower())
+        if t and t not in {"grand", "prix"}
+    ]
+    distinctive = [t for t in tokens if len(t) >= 4]
+    if distinctive:
+        matches = [
+            (slug, url) for slug, url in link_map.items()
+            if all(token in slug for token in distinctive)
+        ]
+        if len(matches) == 1:
+            return matches[0][1]
+
+    return None
+
+
 def parse_formula1_schedule_rounds(html: str, year: int, home_links: list[str] | None = None) -> list[RoundInfo]:
     compact = re.sub(r"\s+", " ", html)
     pattern = re.compile(
@@ -208,7 +278,7 @@ def parse_formula1_schedule_rounds(html: str, year: int, home_links: list[str] |
                 start_date=start_date,
                 end_date=end_date,
                 slug=slug,
-                flashscore_url=link_map.get(slug),
+                flashscore_url=_resolve_flashscore_url(raw_name, slug, link_map),
             )
         )
 

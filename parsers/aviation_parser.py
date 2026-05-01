@@ -4,6 +4,7 @@ import re
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone
 from typing import Any
+from urllib.parse import quote
 
 from bs4 import BeautifulSoup
 
@@ -373,6 +374,184 @@ def _parse_airnav_current_section(lines: list[str], source_url: str) -> list[Avi
 
     return alerts
 
+
+
+SQUAWK_LABELS = {
+    "7700": "7700 - General Emergency",
+    "7600": "7600 - Radio Failure",
+    "7500": "7500 - Unlawful Interference",
+}
+
+SQUAWK_PRIORITY = {
+    "7700": 1,
+    "7600": 2,
+    "7500": 3,
+}
+
+
+def _safe_float(value: Any) -> float | None:
+    try:
+        if value is None or value == "":
+            return None
+        return float(value)
+    except Exception:
+        return None
+
+
+def _safe_int(value: Any) -> int | None:
+    try:
+        if value is None or value == "":
+            return None
+        return int(float(value))
+    except Exception:
+        return None
+
+
+def _compact_callsign(value: Any) -> str:
+    text = str(value or "").strip().upper()
+    return re.sub(r"\s+", "", text)
+
+
+def _format_utc_date_text(value: str | None = None) -> str:
+    if value:
+        try:
+            dt = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+            if dt.tzinfo is None:
+                dt = dt.replace(tzinfo=timezone.utc)
+            dt = dt.astimezone(timezone.utc)
+        except Exception:
+            dt = datetime.now(timezone.utc)
+    else:
+        dt = datetime.now(timezone.utc)
+    return dt.strftime("%Y %b %d")
+
+
+def _adsbfi_aircraft_text(ac: dict[str, Any]) -> str | None:
+    type_code = str(ac.get("t") or "").strip().upper()
+    reg = str(ac.get("r") or "").strip().upper()
+    desc = str(ac.get("desc") or "").strip()
+    if type_code and reg:
+        return f"{type_code} ({reg})"
+    if type_code:
+        return type_code
+    if reg:
+        return reg
+    if desc:
+        return desc
+    return None
+
+
+def _adsbfi_source_url(ac: dict[str, Any], fallback_url: str) -> str:
+    hex_id = str(ac.get("hex") or "").strip().lstrip("~")
+    if hex_id:
+        return f"https://globe.adsb.fi/?icao={quote(hex_id)}"
+    return fallback_url
+
+
+def _adsbfi_status_text(seen_seconds: float | None, seen_pos_seconds: float | None) -> str:
+    bits = ["ADS-B emergency squawk active"]
+    if seen_seconds is not None:
+        bits.append(f"last message {seen_seconds:.0f}s ago")
+    elif seen_pos_seconds is not None:
+        bits.append(f"last position {seen_pos_seconds:.0f}s ago")
+    return " · ".join(bits)
+
+
+def parse_adsbfi_squawk_alerts(
+    payload: dict[str, Any],
+    source_url: str,
+    *,
+    squawk: str,
+    fetched_at: str | None = None,
+) -> list[AviationAlert]:
+    """Map adsb.fi live squawk snapshot JSON into the existing AviationAlert shape.
+
+    The API returns a live snapshot, so an empty aircraft list is a valid success.
+    Historical retention is implemented in services/aviation/pipeline.py.
+    """
+    if not isinstance(payload, dict):
+        raise AviationParseError("ADSB.fi payload is not a JSON object")
+
+    aircraft_rows = payload.get("ac")
+    if aircraft_rows is None:
+        aircraft_rows = payload.get("aircraft")
+    if aircraft_rows is None:
+        aircraft_rows = []
+    if not isinstance(aircraft_rows, list):
+        raise AviationParseError("ADSB.fi aircraft list is not an array")
+
+    squawk = str(squawk or "").strip()
+    alerts: list[AviationAlert] = []
+    for ac in aircraft_rows:
+        if not isinstance(ac, dict):
+            continue
+
+        hex_id = str(ac.get("hex") or "").strip().lstrip("~")
+        registration = str(ac.get("r") or "").strip().upper()
+        callsign = _compact_callsign(ac.get("flight")) or registration or hex_id.upper() or "UNKNOWN"
+        seen_seconds = _safe_float(ac.get("seen"))
+        seen_pos_seconds = _safe_float(ac.get("seen_pos"))
+        age_seconds = seen_seconds if seen_seconds is not None else seen_pos_seconds
+        age_hours = round(age_seconds / 3600.0, 4) if age_seconds is not None else None
+        lat = _safe_float(ac.get("lat"))
+        lon = _safe_float(ac.get("lon"))
+        vertical_rate = _safe_int(ac.get("baro_rate") if ac.get("baro_rate") is not None else ac.get("geom_rate"))
+        ground_speed = _safe_float(ac.get("gs"))
+        track = _safe_float(ac.get("track"))
+
+        extra = {
+            "parser_version": "adsbfi_squawk_v1",
+            "api_url": source_url,
+            "fetched_at": fetched_at,
+            "first_seen_utc": fetched_at,
+            "last_seen_utc": fetched_at,
+            "is_active": True,
+            "hex": hex_id or None,
+            "registration": registration or None,
+            "aircraft_type": str(ac.get("t") or "").strip().upper() or None,
+            "description": str(ac.get("desc") or "").strip() or None,
+            "lat": lat,
+            "lon": lon,
+            "alt_baro": ac.get("alt_baro"),
+            "alt_geom": ac.get("alt_geom"),
+            "ground_speed_kt": ground_speed,
+            "track_deg": track,
+            "vertical_rate_fpm": vertical_rate,
+            "category": ac.get("category"),
+            "emergency": ac.get("emergency"),
+            "nav_modes": ac.get("nav_modes"),
+            "source_raw": ac.get("type"),
+            "seen_seconds": seen_seconds,
+            "seen_pos_seconds": seen_pos_seconds,
+            "messages": ac.get("messages"),
+            "rssi": ac.get("rssi"),
+            "raw_aircraft": ac,
+        }
+        extra = {k: v for k, v in extra.items() if v is not None and v != ""}
+
+        alerts.append(
+            AviationAlert(
+                callsign=callsign,
+                status_text=_adsbfi_status_text(seen_seconds, seen_pos_seconds),
+                alert_type=SQUAWK_LABELS.get(squawk, f"{squawk} - Squawk Alert"),
+                squawk_code=squawk,
+                event_date_text=_format_utc_date_text(fetched_at),
+                departure_time_text=None,
+                departure_airport=None,
+                arrival_time_text=None,
+                arrival_airport=None,
+                duration_text=None,
+                aircraft_text=_adsbfi_aircraft_text(ac),
+                distance_text=None,
+                age_hours=age_hours,
+                source_name="ADSB.fi Emergency Squawk",
+                source_url=_adsbfi_source_url(ac, source_url),
+                extra=extra,
+            )
+        )
+
+    alerts.sort(key=lambda a: (SQUAWK_PRIORITY.get(a.squawk_code, 99), a.age_hours if a.age_hours is not None else 9999, a.callsign))
+    return alerts
 
 def _normalize_country(value: str | None) -> str | None:
     if not value:

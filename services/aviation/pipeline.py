@@ -1,14 +1,16 @@
 from __future__ import annotations
 
 import hashlib
+import json
 import logging
 import re
 import time
+from datetime import datetime, timezone
 from html import unescape
-from types import SimpleNamespace
+from typing import Any
 
-from collectors.aviation_fetcher import fetch_aviation_page
-from parsers.aviation_parser import parse_airnav_alerts, parse_fr24_disruptions
+from collectors.aviation_fetcher import ADSBFI_SQUAWK_CODES, adsbfi_squawk_url, fetch_adsbfi_squawk, fetch_aviation_page
+from parsers.aviation_parser import parse_adsbfi_squawk_alerts, parse_fr24_disruptions
 from storage import (
     get_connection,
     insert_airport_alert,
@@ -19,7 +21,9 @@ from storage import (
 
 logger = logging.getLogger(__name__)
 
-AIRNAV_ALERTS_URL = "https://www.airnavradar.com/data/alerts"
+ADSBFI_SOURCE_NAME = "ADSB.fi Emergency Squawk"
+ADSBFI_SOURCE_URL = "https://opendata.adsb.fi/api"
+ADSBFI_REQUEST_SLEEP_SECONDS = 1.15
 FR24_WORLD_DISRUPTION_URL = (
     "https://www.flightradar24.com/data/airport-disruption"
     "?continent=worldwide&indices=true&period=live&type=departures"
@@ -37,210 +41,64 @@ def _clean_html_text(text: str) -> str:
     return text
 
 
-def _norm_cell(cell: str | None) -> str | None:
-    if cell is None:
+def _json_loads(value: str | None) -> dict[str, Any]:
+    if not value:
+        return {}
+    try:
+        payload = json.loads(value)
+        return payload if isinstance(payload, dict) else {}
+    except Exception:
+        return {}
+
+
+def _json_dumps(value: dict[str, Any] | None) -> str:
+    return json.dumps(value or {}, ensure_ascii=False, separators=(",", ":"))
+
+
+def _parse_dt(value: str | None) -> datetime | None:
+    if not value:
         return None
-    s = cell.strip()
-    if not s or s == "-":
+    try:
+        dt = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt.astimezone(timezone.utc)
+    except Exception:
         return None
-    if s.upper() == "LIVE":
-        return None
-    return s
 
 
-def _looks_like_time(cell: str) -> bool:
-    return bool(re.match(r"^\d{1,2}:\d{2}(?:\s+[A-Z]{2,5})?$", cell.strip()))
+def _format_elapsed_ago(then_iso: str | None, now_iso: str | None = None) -> str:
+    then = _parse_dt(then_iso)
+    now = _parse_dt(now_iso) or datetime.now(timezone.utc)
+    if not then:
+        return "last detected earlier"
+    seconds = max(0, int((now - then).total_seconds()))
+    if seconds < 90:
+        return f"last detected {seconds}s ago"
+    minutes = seconds // 60
+    if minutes < 90:
+        return f"last detected {minutes}m ago"
+    hours = minutes // 60
+    if hours < 48:
+        rem_minutes = minutes % 60
+        if rem_minutes:
+            return f"last detected {hours}h {rem_minutes}m ago"
+        return f"last detected {hours}h ago"
+    days = hours // 24
+    return f"last detected {days}d ago"
 
 
-def _looks_like_duration(cell: str) -> bool:
-    return bool(re.match(r"^\d{2}h\d{2}m$", cell.strip()))
-
-
-def _looks_like_squawk(cell: str) -> bool:
-    return bool(re.match(r"^(7500|7600|7700)\s+-\s+", cell.strip()))
-
-
-def _looks_like_status(cell: str) -> bool:
-    s = cell.strip().lower()
-    return (
-        s.startswith("landed")
-        or s.startswith("departed")
-        or s.startswith("status n/a")
-        or s.startswith("divert")
-        or s.startswith("holding")
-        or s.startswith("return")
-        or s.startswith("emergency")
-    )
-
-
-def _looks_like_replay(cell: str) -> bool:
-    s = cell.lower()
-    return "derived from ads-b/radar" in s or "time aircraft arrives at gate derived" in s
-
-
-def _looks_like_aircraft(cell: str) -> bool:
-    s = cell.strip()
-    return bool(re.match(r"^[A-Z0-9]{2,5}\s*\(\s*[A-Z0-9-]{3,}\s*\)$", s, re.I))
-
-
-def _derive_callsign(
-    raw_callsign: str | None,
-    aircraft_text: str | None,
-    departure_airport: str | None,
-    arrival_airport: str | None,
-) -> tuple[str, bool, str]:
-    callsign = _norm_cell(raw_callsign)
-    if callsign:
-        return callsign, False, "flight_column"
-
-    aircraft = _norm_cell(aircraft_text)
-    if aircraft:
-        m = re.match(r"^([A-Z0-9]{2,5})\s*\(\s*([A-Z0-9-]{3,})\s*\)$", aircraft, re.I)
-        if m:
-            aircraft_type = m.group(1).upper().strip()
-            registration = m.group(2).upper().strip()
-            if registration:
-                return registration, True, "aircraft_registration"
-            if aircraft_type:
-                return aircraft_type, True, "aircraft_type"
-        return aircraft, True, "aircraft_text"
-
-    dep = _norm_cell(departure_airport)
-    arr = _norm_cell(arrival_airport)
-    if dep and arr:
-        return f"{dep} -> {arr}", True, "route"
-    if dep:
-        return dep, True, "departure_airport"
-    if arr:
-        return arr, True, "arrival_airport"
-
-    return "Unknown Flight", True, "synthetic_unknown"
-
-
-def _parse_airnav_alerts_rows(html: str, source_url: str):
-    trs = re.findall(r"<tr[^>]*>(.*?)</tr>", html, flags=re.I | re.S)
-    alerts = []
-
-    for tr in trs:
-        cells_html = re.findall(r"<t[dh][^>]*>(.*?)</t[dh]>", tr, flags=re.I | re.S)
-        if not cells_html:
-            continue
-
-        cells = [_clean_html_text(c) for c in cells_html]
-        if not cells or cells[0].lower() == "date" or len(cells) < 4:
-            continue
-
-        event_date_text = _norm_cell(cells[0])
-        raw_callsign = _norm_cell(cells[1])
-        if not event_date_text:
-            continue
-
-        squawk_cell = _norm_cell(cells[-1]) if _looks_like_squawk(cells[-1]) else None
-        squawk_code = squawk_cell.split(" - ", 1)[0] if squawk_cell else None
-        alert_type = squawk_cell
-
-        departure_time_text = None
-        arrival_time_text = None
-        duration_text = None
-        status_text = None
-        aircraft_text = None
-        notes = []
-        route_cells = []
-
-        middle = cells[2:-1] if squawk_cell else cells[2:]
-
-        for raw_cell in middle:
-            if raw_cell.strip().upper() == "LIVE":
-                notes.append("LIVE")
-                continue
-
-            cell = _norm_cell(raw_cell)
-            if not cell:
-                continue
-
-            if _looks_like_time(cell):
-                if departure_time_text is None:
-                    departure_time_text = cell
-                elif arrival_time_text is None:
-                    arrival_time_text = cell
-                else:
-                    notes.append(cell)
-                continue
-
-            if _looks_like_duration(cell):
-                duration_text = cell
-                continue
-
-            if _looks_like_replay(cell):
-                notes.append(cell)
-                continue
-
-            if _looks_like_status(cell):
-                status_text = cell if status_text is None else f"{status_text} {cell}"
-                continue
-
-            if _looks_like_aircraft(cell):
-                aircraft_text = cell
-                continue
-
-            route_cells.append(cell)
-
-        departure_airport = _norm_cell(route_cells[0]) if len(route_cells) >= 1 else None
-        arrival_airport = _norm_cell(route_cells[1]) if len(route_cells) >= 2 else None
-        callsign, callsign_missing, callsign_source = _derive_callsign(raw_callsign, aircraft_text, departure_airport, arrival_airport)
-
-        extra = {
-            "parser_version": "airnav_rows_primary_v3",
-            "raw_cells": cells,
-            "raw_callsign": raw_callsign,
-            "callsign_missing": callsign_missing,
-            "callsign_source": callsign_source,
-        }
-        if notes:
-            extra["notes"] = notes
-
-        alerts.append(
-            SimpleNamespace(
-                callsign=callsign,
-                status_text=status_text or "Status N/A",
-                alert_type=alert_type,
-                squawk_code=squawk_code,
-                event_date_text=event_date_text,
-                departure_time_text=departure_time_text,
-                departure_airport=departure_airport,
-                arrival_time_text=arrival_time_text,
-                arrival_airport=arrival_airport,
-                duration_text=duration_text,
-                aircraft_text=aircraft_text,
-                distance_text=None,
-                age_hours=None,
-                source_name="AirNav Radar",
-                source_url=source_url,
-                extra=extra,
-            )
-        )
-
-    if not alerts:
-        raise ValueError("AirNav row parser found no alert rows")
-
-    return alerts
+def _alert_event_key(alert) -> str:
+    extra = getattr(alert, "extra", {}) or {}
+    hex_id = str(extra.get("hex") or "").strip().lower().lstrip("~")
+    callsign = str(alert.callsign or "").strip().upper()
+    squawk = str(alert.squawk_code or "").strip()
+    identity = hex_id or callsign or "unknown"
+    return f"adsbfi|{identity}|{squawk}"
 
 
 def _alert_dedupe_key(alert) -> str:
-    raw = " | ".join(
-        [
-            alert.callsign or "",
-            alert.alert_type or "",
-            alert.status_text or "",
-            alert.event_date_text or "",
-            alert.departure_time_text or "",
-            alert.departure_airport or "",
-            alert.arrival_time_text or "",
-            alert.arrival_airport or "",
-            alert.aircraft_text or "",
-        ]
-    )
-    return hashlib.sha1(raw.encode("utf-8")).hexdigest()
+    return hashlib.sha1(_alert_event_key(alert).encode("utf-8")).hexdigest()
 
 
 def _record_failure(
@@ -268,111 +126,268 @@ def _record_failure(
         con.close()
 
 
-def _fetch_with_retries(source_name: str, url: str, retries: int = 3, sleep_s: float = 2.0):
-    last_result = None
-    errors = []
-    for attempt in range(1, retries + 1):
-        result = fetch_aviation_page(source_name, url)
-        last_result = result
-        if result.success:
-            return result, errors
-        errors.append(result.error_message or "Unknown fetch error")
-        if attempt < retries:
-            time.sleep(sleep_s * attempt)
-    return last_result, errors
+def _record_current_adsbfi_alert(con, *, alert, dedupe_key: str, fetched_at: str) -> bool:
+    existing = con.execute(
+        "SELECT * FROM airport_alerts WHERE dedupe_key = ?",
+        (dedupe_key,),
+    ).fetchone()
+
+    if not existing:
+        extra = dict(getattr(alert, "extra", {}) or {})
+        extra.setdefault("event_key", _alert_event_key(alert))
+        extra.setdefault("first_seen_utc", fetched_at)
+        extra["last_seen_utc"] = fetched_at
+        extra["last_refresh_utc"] = fetched_at
+        extra["is_active"] = True
+        alert.extra = extra
+
+        insert_airport_alert(
+            con=con,
+            dedupe_key=dedupe_key,
+            callsign=alert.callsign,
+            status_text=alert.status_text,
+            alert_type=alert.alert_type,
+            squawk_code=alert.squawk_code,
+            event_date_text=alert.event_date_text,
+            departure_time_text=alert.departure_time_text,
+            departure_airport=alert.departure_airport,
+            arrival_time_text=alert.arrival_time_text,
+            arrival_airport=alert.arrival_airport,
+            duration_text=alert.duration_text,
+            aircraft_text=alert.aircraft_text,
+            distance_text=alert.distance_text,
+            age_hours=alert.age_hours,
+            source_name=alert.source_name,
+            source_url=alert.source_url,
+            extra=alert.extra,
+            fetched_at=fetched_at,
+        )
+        return True
+
+    existing_extra = _json_loads(existing["extra_json"])
+    incoming_extra = dict(getattr(alert, "extra", {}) or {})
+    first_seen = existing_extra.get("first_seen_utc") or existing["fetched_at"] or fetched_at
+    merged_extra = {
+        **existing_extra,
+        **incoming_extra,
+        "event_key": existing_extra.get("event_key") or _alert_event_key(alert),
+        "first_seen_utc": first_seen,
+        "last_seen_utc": fetched_at,
+        "last_refresh_utc": fetched_at,
+        "is_active": True,
+        "reactivated": bool(existing_extra and existing_extra.get("is_active") is False),
+    }
+
+    con.execute(
+        """
+        UPDATE airport_alerts
+        SET callsign = ?,
+            status_text = ?,
+            alert_type = ?,
+            squawk_code = ?,
+            departure_time_text = ?,
+            departure_airport = ?,
+            arrival_time_text = ?,
+            arrival_airport = ?,
+            duration_text = ?,
+            aircraft_text = ?,
+            distance_text = ?,
+            age_hours = ?,
+            source_name = ?,
+            source_url = ?,
+            extra_json = ?,
+            fetched_at = ?
+        WHERE dedupe_key = ?
+        """,
+        (
+            alert.callsign,
+            alert.status_text,
+            alert.alert_type,
+            alert.squawk_code,
+            alert.departure_time_text,
+            alert.departure_airport,
+            alert.arrival_time_text,
+            alert.arrival_airport,
+            alert.duration_text,
+            alert.aircraft_text,
+            alert.distance_text,
+            alert.age_hours,
+            alert.source_name,
+            alert.source_url,
+            _json_dumps(merged_extra),
+            fetched_at,
+            dedupe_key,
+        ),
+    )
+    return False
 
 
-def fetch_airnav_alerts_once(db_path: str = "app.db") -> dict:
-    fetch_result, fetch_errors = _fetch_with_retries("AirNav Radar Alerts", AIRNAV_ALERTS_URL, retries=3, sleep_s=2.0)
-    if not fetch_result or not fetch_result.success:
-        error_message = " | ".join(fetch_errors) if fetch_errors else "Unknown fetch error"
+def _mark_inactive_adsbfi_alerts(con, *, active_dedupe_keys: set[str], checked_at: str) -> int:
+    rows = con.execute(
+        """
+        SELECT *
+        FROM airport_alerts
+        WHERE source_name = ?
+          AND datetime(fetched_at) >= datetime('now', '-48 hours')
+        """,
+        (ADSBFI_SOURCE_NAME,),
+    ).fetchall()
+
+    updated = 0
+    for row in rows:
+        dedupe_key = row["dedupe_key"]
+        if dedupe_key in active_dedupe_keys:
+            continue
+
+        extra = _json_loads(row["extra_json"])
+        if extra.get("is_active") is False and extra.get("last_refresh_utc") == checked_at:
+            continue
+
+        last_seen = extra.get("last_seen_utc") or row["fetched_at"]
+        status_text = _format_elapsed_ago(last_seen, checked_at)
+        extra["is_active"] = False
+        extra["last_refresh_utc"] = checked_at
+        extra.setdefault("last_seen_utc", last_seen)
+
+        con.execute(
+            """
+            UPDATE airport_alerts
+            SET status_text = ?,
+                extra_json = ?
+            WHERE dedupe_key = ?
+            """,
+            (status_text, _json_dumps(extra), dedupe_key),
+        )
+        updated += 1
+
+    return updated
+
+
+def fetch_adsbfi_emergency_squawk_alerts_once(db_path: str = "app.db") -> dict:
+    errors: list[str] = []
+    metas: list[dict[str, Any]] = []
+    alerts = []
+    successful_fetches = 0
+    first_started_at: str | None = None
+    last_finished_at: str | None = None
+
+    for idx, squawk in enumerate(ADSBFI_SQUAWK_CODES):
+        fetch_result = fetch_adsbfi_squawk(squawk)
+        if first_started_at is None:
+            first_started_at = fetch_result.fetched_at
+        last_finished_at = fetch_result.fetched_at
+
+        meta = {
+            "squawk": squawk,
+            "url": fetch_result.url,
+            "ok": fetch_result.success,
+            "status_code": fetch_result.status_code,
+            "content_type": fetch_result.content_type,
+            "fetched_at": fetch_result.fetched_at,
+        }
+
+        if not fetch_result.success or fetch_result.payload is None:
+            error = fetch_result.error_message or "Unknown ADSB.fi fetch error"
+            errors.append(f"{squawk}: {error}")
+            meta["error"] = error
+            metas.append(meta)
+        else:
+            successful_fetches += 1
+            try:
+                parsed = parse_adsbfi_squawk_alerts(
+                    fetch_result.payload,
+                    fetch_result.url,
+                    squawk=squawk,
+                    fetched_at=fetch_result.fetched_at,
+                )
+                alerts.extend(parsed)
+                meta["aircraft_count"] = len(parsed)
+                meta["total"] = fetch_result.payload.get("total")
+                meta["msg"] = fetch_result.payload.get("msg")
+                metas.append(meta)
+            except Exception as exc:
+                error = f"{squawk}: {exc}"
+                errors.append(error)
+                meta["error"] = str(exc)
+                metas.append(meta)
+
+        if idx < len(ADSBFI_SQUAWK_CODES) - 1:
+            time.sleep(ADSBFI_REQUEST_SLEEP_SECONDS)
+
+    started_at = first_started_at or datetime.now(timezone.utc).isoformat()
+    finished_at = last_finished_at or started_at
+
+    if successful_fetches == 0:
         _record_failure(
             db_path=db_path,
-            source_name="Aviation/AirNav Alerts",
-            started_at=(fetch_result.fetched_at if fetch_result else ""),
-            error_message=error_message,
+            source_name="Aviation/ADSB.fi Emergency Squawk",
+            started_at=started_at,
+            error_message=" | ".join(errors) or "Could not fetch ADSB.fi squawk snapshots",
         )
-        return {"alerts_saved": 0, "errors": [error_message]}
+        return {"alerts_found": 0, "alerts_saved": 0, "alerts_updated": 0, "errors": errors}
 
-    parser_errors: list[str] = []
-
-    try:
-        alerts = parse_airnav_alerts(fetch_result.html, AIRNAV_ALERTS_URL)
-    except Exception as exc:
-        parser_errors.append(f"text_parser_failed: {exc}")
-        logger.warning("Primary AirNav parser failed, falling back to row parser: %s", exc)
-        try:
-            alerts = _parse_airnav_alerts_rows(fetch_result.html, AIRNAV_ALERTS_URL)
-            for alert in alerts:
-                extra = dict(getattr(alert, "extra", {}) or {})
-                extra.setdefault("fallback_reason", str(exc))
-                alert.extra = extra
-        except Exception as fallback_exc:
-            parser_errors.append(f"row_parser_failed: {fallback_exc}")
-            error_message = " | ".join(parser_errors)
-            _record_failure(
-                db_path=db_path,
-                source_name="Aviation/AirNav Alerts",
-                started_at=fetch_result.fetched_at,
-                error_message=error_message,
-            )
-            return {"alerts_saved": 0, "errors": [error_message]}
+    # Deduplicate current snapshot by aircraft identity + squawk.
+    current_by_key = {}
+    for alert in alerts:
+        current_by_key[_alert_dedupe_key(alert)] = alert
 
     con = get_connection(db_path)
     try:
         source_id = upsert_source(
             con=con,
-            name="AirNav Radar Alerts",
+            name=ADSBFI_SOURCE_NAME,
             source_type="aviation",
-            url=AIRNAV_ALERTS_URL,
+            url=ADSBFI_SOURCE_URL,
             enabled=True,
         )
 
-        # User requirement: every successful aviation refresh must replace the
-        # visible list instead of accumulating older cards across fetches.
-        con.execute("DELETE FROM airport_alerts")
-
+        active_keys: set[str] = set()
         saved = 0
-        for alert in alerts:
-            insert_airport_alert(
-                con=con,
-                dedupe_key=_alert_dedupe_key(alert),
-                callsign=alert.callsign,
-                status_text=alert.status_text,
-                alert_type=alert.alert_type,
-                squawk_code=alert.squawk_code,
-                event_date_text=alert.event_date_text,
-                departure_time_text=alert.departure_time_text,
-                departure_airport=alert.departure_airport,
-                arrival_time_text=alert.arrival_time_text,
-                arrival_airport=alert.arrival_airport,
-                duration_text=alert.duration_text,
-                aircraft_text=alert.aircraft_text,
-                distance_text=alert.distance_text,
-                age_hours=alert.age_hours,
-                source_name=alert.source_name,
-                source_url=alert.source_url,
-                extra=alert.extra,
-                fetched_at=fetch_result.fetched_at,
-            )
-            saved += 1
+        refreshed = 0
+        for dedupe_key, alert in current_by_key.items():
+            fetched_at = (alert.extra or {}).get("fetched_at") or finished_at
+            is_new = _record_current_adsbfi_alert(con, alert=alert, dedupe_key=dedupe_key, fetched_at=fetched_at)
+            active_keys.add(dedupe_key)
+            if is_new:
+                saved += 1
+            else:
+                refreshed += 1
+
+        inactive_updated = _mark_inactive_adsbfi_alerts(con, active_dedupe_keys=active_keys, checked_at=finished_at)
 
         record_fetch_run(
             con=con,
             source_id=source_id,
-            source_name="Aviation/AirNav Alerts",
-            started_at=fetch_result.fetched_at,
-            finished_at=fetch_result.fetched_at,
-            status="success" if not parser_errors else "partial",
-            items_found=len(alerts),
+            source_name="Aviation/ADSB.fi Emergency Squawk",
+            started_at=started_at,
+            finished_at=finished_at,
+            status="success" if not errors else "partial",
+            items_found=len(current_by_key),
             new_items=saved,
-            error_message=" | ".join(parser_errors),
+            error_message=" | ".join(errors),
         )
         con.commit()
 
-        return {"alerts_found": len(alerts), "alerts_saved": saved, "errors": parser_errors}
+        return {
+            "alerts_found": len(current_by_key),
+            "alerts_saved": saved,
+            "alerts_refreshed": refreshed,
+            "alerts_marked_inactive": inactive_updated,
+            "metas": metas,
+            "errors": errors,
+        }
     finally:
         con.close()
+
+
+def fetch_airnav_alerts_once(db_path: str = "app.db") -> dict:
+    """Backward-compatible alias.
+
+    AirNav's HTML alerts page is now protected by Cloudflare challenge pages in
+    many environments. The dashboard now uses ADSB.fi live emergency squawk
+    snapshots plus local 48-hour SQLite retention instead.
+    """
+    return fetch_adsbfi_emergency_squawk_alerts_once(db_path=db_path)
 
 
 def _fetch_and_parse_fr24(url: str, region: str):
@@ -428,8 +443,8 @@ def fetch_fr24_disruptions_once(db_path: str = "app.db") -> dict:
             enabled=True,
         )
 
-        # Same replacement rule for disruption cards: on a successful fetch we
-        # clear the previous snapshot first, then write the current one only.
+        # FR24 disruptions are a current ranking snapshot, so a successful fetch
+        # replaces the previous disruption cards.
         con.execute("DELETE FROM airport_disruptions")
 
         saved = 0
@@ -475,7 +490,7 @@ def fetch_fr24_disruptions_once(db_path: str = "app.db") -> dict:
 
 
 def fetch_aviation_once(db_path: str = "app.db") -> dict:
-    result_alerts = fetch_airnav_alerts_once(db_path=db_path)
+    result_alerts = fetch_adsbfi_emergency_squawk_alerts_once(db_path=db_path)
     result_disruptions = fetch_fr24_disruptions_once(db_path=db_path)
     return {
         "alerts": result_alerts,

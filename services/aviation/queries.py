@@ -8,17 +8,18 @@ import json
 from storage import get_connection
 
 
-def get_airport_alerts(limit: int = 100, db_path: str = "app.db") -> list[dict]:
+def get_airport_alerts(limit: int = 100, db_path: str = "app.db", window_hours: int = 48) -> list[dict]:
     con = get_connection(db_path)
     try:
         rows = con.execute(
             """
             SELECT *
             FROM airport_alerts
+            WHERE datetime(fetched_at) >= datetime('now', ?)
             ORDER BY fetched_at DESC, id ASC
             LIMIT ?
             """,
-            (limit,),
+            (f"-{int(window_hours)} hours", limit),
         ).fetchall()
 
         items = [dict(r) for r in rows]

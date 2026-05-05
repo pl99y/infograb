@@ -3,6 +3,7 @@ const STATUS_LABELS = {
   scheduled: "SCHEDULED",
   stopped: "STOPPED",
   finished: "FINISHED",
+  between_rounds: "IDLE",
 };
 
 const GP_NAME_ALIASES = {
@@ -56,14 +57,46 @@ function cleanGrandPrixName(value) {
   return GP_NAME_ALIASES[cleaned] || `${cleaned} Grand Prix`;
 }
 
+function isBetweenRounds(payload) {
+  return String(payload?.mode || "").toLowerCase() === "between_rounds";
+}
+
+function getStrategyRound(payload, key) {
+  const value = payload?.strategy?.[key];
+  return value && typeof value === "object" ? value : null;
+}
+
+function getNextRound(payload) {
+  return (
+    getStrategyRound(payload, "next_round") ||
+    getStrategyRound(payload, "primary_target") ||
+    getStrategyRound(payload, "best_available_flashscore_target") ||
+    (payload?.round && typeof payload.round === "object" ? payload.round : null)
+  );
+}
+
+function getPreviousRound(payload) {
+  return getStrategyRound(payload, "previous_round") || getStrategyRound(payload, "fallback_results");
+}
+
+function formatRoundDate(round) {
+  if (!round || typeof round !== "object") return "";
+  const dateText = String(round.date_text || "").trim();
+  if (dateText) return dateText;
+  const start = String(round.start_date || "").trim();
+  const end = String(round.end_date || "").trim();
+  if (start && end && start !== end) return `${start} → ${end}`;
+  return start || end;
+}
+
 export function inferStatusClass(payload) {
   if (!payload) return "finished";
   const mode = (payload.mode || "").toLowerCase();
   const sessionName = ((payload.session_name || payload.session?.session_name || "") + "").toLowerCase();
 
   if (mode === "live") return "live";
+  if (mode === "between_rounds") return "between_rounds";
   if (sessionName.includes("cancel")) return "stopped";
-  if (mode === "between_rounds") return "finished";
   return "scheduled";
 }
 
@@ -73,11 +106,29 @@ export function getF1StatusLabel(payload) {
 }
 
 export function getF1GrandPrixName(payload) {
+  if (isBetweenRounds(payload)) {
+    const nextRound = getNextRound(payload);
+    return cleanGrandPrixName(nextRound?.name || "F1");
+  }
   const roundName = payload?.round?.name || payload?.session?.round_name || payload?.headline || payload?.session?.title || "F1";
   return cleanGrandPrixName(roundName);
 }
 
 export function getF1LiveStatusMarkup(payload, options = {}) {
+  if (isBetweenRounds(payload)) {
+    const nextRound = getNextRound(payload);
+    const nextName = nextRound?.name ? cleanGrandPrixName(nextRound.name) : "F1";
+    const updatedText = String(options?.updatedText || "").trim();
+    const updatedTitle = String(options?.updatedTitle || "").trim();
+    return `
+      <span class="f1-live-status-inline">
+        <strong class="f1-live-status-name">${esc(nextName)}</strong>
+        <span class="f1-live-status-pill f1-live-status-pill-scheduled">IDLE</span>
+        ${updatedText ? `<span class="f1-live-updated"${updatedTitle ? ` title="${esc(updatedTitle)}"` : ""}>${esc(updatedText)}</span>` : ""}
+      </span>
+    `;
+  }
+
   if (!payload || payload.error) {
     return `<span class="f1-refresh-error">F1 数据不可用</span>`;
   }
@@ -146,8 +197,33 @@ function buildLiveRows(rows) {
   return `${head}<div class="f1-live-list">${items}</div>`;
 }
 
+function buildBetweenRoundsMarkup(payload) {
+  const nextRound = getNextRound(payload);
+  const previousRound = getPreviousRound(payload);
+  const nextName = nextRound?.name ? cleanGrandPrixName(nextRound.name) : "the next Grand Prix";
+  const nextDates = formatRoundDate(nextRound);
+  const previousName = previousRound?.name ? cleanGrandPrixName(previousRound.name) : "";
+  const previousDates = formatRoundDate(previousRound);
+
+  const nextUrl = nextRound?.flashscore_url || payload?.page_url || "";
+
+  return `
+    <div class="f1-empty">
+      <div><strong>当前没有进行中的 F1 session。</strong></div>
+      <div>下一站：${esc(nextName)}${nextDates ? ` · ${esc(nextDates)}` : ""}</div>
+      ${previousName ? `<div>上一站：${esc(previousName)}${previousDates ? ` · ${esc(previousDates)}` : ""}</div>` : ""}
+      ${nextUrl ? `<div style="margin-top: 8px;"><a href="${esc(nextUrl)}" target="_blank" rel="noopener noreferrer">Open Flashscore round page →</a></div>` : ""}
+    </div>
+  `;
+}
+
 export function renderF1Live(targetEl, payload) {
   if (!targetEl) return;
+
+  if (isBetweenRounds(payload)) {
+    targetEl.innerHTML = buildBetweenRoundsMarkup(payload);
+    return;
+  }
 
   if (!payload || payload.error) {
     targetEl.innerHTML = `

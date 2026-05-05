@@ -240,26 +240,32 @@ function buildPreviousResultMarkup(previousResult) {
     })
     .join("");
 
+  const metaParts = [];
+  if (raceDate) metaParts.push(esc(raceDate));
+  if (circuit) metaParts.push(esc(circuit));
+  const countText = previousResult.rows.length > rows.length ? `Top ${rows.length} of ${previousResult.rows.length}` : `${rows.length} classified`;
+
   return `
-    <section class="f1-previous-result">
-      <div class="f1-previous-result-header">
-        <div>
-          <div class="f1-previous-result-kicker">上一场结果</div>
-          <div class="f1-previous-result-title">${esc(cleanGrandPrixName(gpName))}</div>
-          <div class="f1-previous-result-meta">
-            ${raceDate ? `<span>${esc(raceDate)}</span>` : ""}
-            ${circuit ? `<span>${esc(circuit)}</span>` : ""}
+    <section class="f1-empty" style="margin-top: 12px; padding: 0; overflow: hidden;">
+      <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; padding: 12px 14px 10px; border-bottom: 1px solid var(--border);">
+        <div style="min-width: 0;">
+          <div style="font-size: 10px; color: var(--text-muted); letter-spacing: .08em; text-transform: uppercase; font-weight: 800;">上一场结果</div>
+          <div style="margin-top: 2px; color: var(--text-main); font-weight: 800; line-height: 1.25;">${esc(cleanGrandPrixName(gpName))}</div>
+          <div style="margin-top: 4px; color: var(--text-muted); font-size: 11px; line-height: 1.35;">
+            ${metaParts.join(" · ")}${metaParts.length ? " · " : ""}${esc(countText)}
           </div>
         </div>
-        ${sourceUrl ? `<a href="${esc(sourceUrl)}" target="_blank" rel="noopener noreferrer">Jolpica →</a>` : ""}
+        ${sourceUrl ? `<a href="${esc(sourceUrl)}" target="_blank" rel="noopener noreferrer" style="font-size: 11px; color: var(--accent-blue); white-space: nowrap; text-decoration: none; font-weight: 700;">Jolpica →</a>` : ""}
       </div>
-      <div class="f1-live-table-head">
-        <div>POS</div>
-        <div>DRIVER</div>
-        <div>TEAM</div>
-        <div>RESULT</div>
+      <div style="padding-top: 10px;">
+        <div class="f1-live-table-head">
+          <div>POS</div>
+          <div>DRIVER</div>
+          <div>TEAM</div>
+          <div>RESULT</div>
+        </div>
+        <div class="f1-live-list">${items}</div>
       </div>
-      <div class="f1-live-list">${items}</div>
     </section>
   `;
 }

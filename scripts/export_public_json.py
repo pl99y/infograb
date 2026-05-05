@@ -35,6 +35,7 @@ from services.f1.pipeline import fetch_f1_live_once  # noqa: E402
 from services.f1.queries import get_f1_live  # noqa: E402
 from services.news_timeline.pipeline import fetch_news_timeline_once  # noqa: E402
 from services.news_timeline.queries import get_news_timeline_latest  # noqa: E402
+from services.hotsearch.queries import get_hotsearch_latest  # noqa: E402
 
 TargetFn = Callable[[], Any]
 EXPORT_LABEL = "15m"
@@ -138,6 +139,7 @@ def export_all(steps: list[dict[str, Any]]) -> None:
         "disaster_ongoing.json": get_disaster_ongoing_groups(limit=80, db_path=str(DB_PATH)),
         "telegram.json": normalize_telegram(get_recent_posts(limit=50, db_path=str(DB_PATH))),
         "news_timeline_latest.json": get_news_timeline_latest(limit=120, window_hours=12, db_path=str(DB_PATH)),
+        "news_hotsearch_latest.json": get_hotsearch_latest(db_path=str(DB_PATH)),
         "f1_live.json": get_f1_live(db_path=str(DB_PATH)),
     }
 

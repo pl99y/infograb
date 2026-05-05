@@ -4,6 +4,8 @@ import json
 from datetime import datetime, timezone
 from typing import Any
 
+import requests
+
 from storage import get_connection
 from services.f1.xfeed import get_f1_live_from_feed
 
@@ -48,6 +50,160 @@ def _pick_previous_round(strategy: dict[str, Any]) -> dict[str, Any]:
     return {}
 
 
+
+
+def _as_int(value: Any, default: int | None = None) -> int | None:
+    try:
+        if value is None or value == "":
+            return default
+        return int(value)
+    except Exception:
+        return default
+
+
+def _year_from_round(round_info: dict[str, Any] | None) -> int:
+    if isinstance(round_info, dict):
+        for key in ("start_date", "end_date"):
+            value = str(round_info.get(key) or "").strip()
+            if len(value) >= 4 and value[:4].isdigit():
+                return int(value[:4])
+    return datetime.now(timezone.utc).year
+
+
+def _jolpica_url_for_round(round_info: dict[str, Any] | None) -> str:
+    year = _year_from_round(round_info)
+    round_number = _as_int((round_info or {}).get("round_number"))
+    if round_number:
+        return f"https://api.jolpi.ca/ergast/f1/{year}/{round_number}/results.json"
+    return "https://api.jolpi.ca/ergast/f1/current/last/results.json"
+
+
+def _parse_jolpica_previous_result(data: dict[str, Any], *, source_url: str, previous_round: dict[str, Any] | None) -> dict[str, Any]:
+    races = (((data.get("MRData") or {}).get("RaceTable") or {}).get("Races") or [])
+    if not races:
+        return {
+            "ok": False,
+            "source_name": "Jolpica F1",
+            "source_url": source_url,
+            "fetched_at": datetime.now(timezone.utc).isoformat(),
+            "gp_name": (previous_round or {}).get("name") or "Previous Grand Prix",
+            "rows": [],
+            "rows_count": 0,
+            "warning": "No race result rows returned by Jolpica.",
+        }
+
+    race = races[0] or {}
+    circuit = race.get("Circuit") or {}
+    location = circuit.get("Location") or {}
+    results = race.get("Results") or []
+    mapped_rows: list[dict[str, Any]] = []
+
+    for idx, item in enumerate(results, start=1):
+        driver = item.get("Driver") or {}
+        constructor = item.get("Constructor") or {}
+        time_obj = item.get("Time") or {}
+        fastest = item.get("FastestLap") or {}
+        driver_name = " ".join(
+            part for part in [driver.get("givenName"), driver.get("familyName")] if part
+        ).strip()
+        position_text = str(item.get("positionText") or item.get("position") or idx).strip()
+        position_number = _as_int(item.get("position"), idx)
+        time_or_gap = str(time_obj.get("time") or "").strip()
+
+        mapped_rows.append(
+            {
+                "position": position_text,
+                "position_number": position_number,
+                "driver": driver_name or str(driver.get("code") or "Unknown").strip(),
+                "driver_code": str(driver.get("code") or "").strip(),
+                "constructor": str(constructor.get("name") or "").strip(),
+                "team": str(constructor.get("name") or "").strip(),
+                "grid": str(item.get("grid") or "").strip(),
+                "laps": str(item.get("laps") or "").strip(),
+                "status": str(item.get("status") or "").strip(),
+                "time_or_gap": time_or_gap,
+                "result_time": time_or_gap,
+                "milliseconds": str(time_obj.get("millis") or "").strip(),
+                "points": str(item.get("points") or "0").strip(),
+                "fastest_lap_rank": str(fastest.get("rank") or "").strip(),
+            }
+        )
+
+    return {
+        "ok": True,
+        "source_name": "Jolpica F1",
+        "source_url": source_url,
+        "fetched_at": datetime.now(timezone.utc).isoformat(),
+        "gp_name": race.get("raceName") or (previous_round or {}).get("name") or "Previous Grand Prix",
+        "round_number": _as_int(race.get("round"), _as_int((previous_round or {}).get("round_number"))),
+        "season": _as_int(race.get("season"), _year_from_round(previous_round)),
+        "date": race.get("date"),
+        "time": race.get("time"),
+        "circuit_name": circuit.get("circuitName"),
+        "locality": location.get("locality"),
+        "country": location.get("country"),
+        "rows": mapped_rows,
+        "rows_count": len(mapped_rows),
+        "warning": "",
+        "extra": {
+            "infograb_previous_round": previous_round or {},
+            "api_round": race.get("round"),
+            "api_season": race.get("season"),
+        },
+    }
+
+
+def _fetch_previous_result(previous_round: dict[str, Any] | None) -> dict[str, Any]:
+    if not isinstance(previous_round, dict) or not previous_round:
+        return {
+            "ok": False,
+            "source_name": "Jolpica F1",
+            "source_url": "",
+            "fetched_at": datetime.now(timezone.utc).isoformat(),
+            "gp_name": "Previous Grand Prix",
+            "rows": [],
+            "rows_count": 0,
+            "warning": "No previous round metadata available.",
+        }
+
+    candidate_urls = []
+    primary_url = _jolpica_url_for_round(previous_round)
+    if primary_url:
+        candidate_urls.append(primary_url)
+    candidate_urls.append("https://api.jolpi.ca/ergast/f1/current/last/results.json")
+
+    last_error = ""
+    for url in dict.fromkeys(candidate_urls):
+        try:
+            response = requests.get(
+                url,
+                timeout=12,
+                headers={
+                    "User-Agent": "InfoGrab F1 dashboard (+https://github.com/pl99y/infograb)",
+                    "Accept": "application/json,text/plain,*/*",
+                },
+            )
+            response.raise_for_status()
+            parsed = _parse_jolpica_previous_result(response.json(), source_url=url, previous_round=previous_round)
+            if parsed.get("ok") and parsed.get("rows"):
+                return parsed
+            last_error = str(parsed.get("warning") or "No rows returned.")
+        except Exception as exc:
+            last_error = str(exc)
+
+    return {
+        "ok": False,
+        "source_name": "Jolpica F1",
+        "source_url": primary_url,
+        "fetched_at": datetime.now(timezone.utc).isoformat(),
+        "gp_name": previous_round.get("name") or "Previous Grand Prix",
+        "round_number": previous_round.get("round_number"),
+        "season": _year_from_round(previous_round),
+        "rows": [],
+        "rows_count": 0,
+        "warning": last_error or "Unable to fetch previous race result.",
+    }
+
 def _between_rounds_payload(*, result: dict[str, Any], payload: dict[str, Any], strategy: dict[str, Any]) -> dict[str, Any]:
     next_round = _pick_next_round(strategy)
     previous_round = _pick_previous_round(strategy)
@@ -91,6 +247,7 @@ def _between_rounds_payload(*, result: dict[str, Any], payload: dict[str, Any], 
             "has_data": False,
             "error": None,
             "message": "No live F1 session right now.",
+            "previous_result": _fetch_previous_result(previous_round),
             "source": "between_rounds",
         }
     )

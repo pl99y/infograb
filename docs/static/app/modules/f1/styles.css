@@ -370,3 +370,49 @@
     white-space: normal;
   }
 }
+
+/* Optional: styling for the between-rounds previous-race result block. */
+.f1-previous-result {
+  margin-top: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(15, 23, 42, 0.32);
+}
+
+.f1-previous-result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.14);
+}
+
+.f1-previous-result-kicker {
+  font-size: 11px;
+  color: #94a3b8;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.f1-previous-result-title {
+  margin-top: 2px;
+  font-weight: 700;
+  color: #e5e7eb;
+}
+
+.f1-previous-result-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.f1-previous-result-header a {
+  font-size: 12px;
+  color: #60a5fa;
+  white-space: nowrap;
+}

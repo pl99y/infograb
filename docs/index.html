@@ -378,8 +378,22 @@
                             </div>
                         </div>
 
-                        <div class="news-timeline-list" id="newsTimelineContainer">
-                            <div class="loading-state">正在加载新闻流...</div>
+                        
+                        <div class="news-panel-tabs" id="newsPanelTabs">
+                            <button class="news-panel-tab-btn active" type="button" data-news-panel-tab="timeline">新闻流</button>
+                            <button class="news-panel-tab-btn" type="button" data-news-panel-tab="hotsearch">热搜观察</button>
+                        </div>
+
+                        <div class="news-panel active" id="newsTimelinePanel" data-news-panel="timeline">
+                            <div class="news-timeline-list" id="newsTimelineContainer">
+                                <div class="loading-state">正在加载新闻流...</div>
+                            </div>
+                        </div>
+
+                        <div class="news-panel" id="newsHotsearchPanel" data-news-panel="hotsearch">
+                            <div class="news-hotsearch-list" id="newsHotsearchContainer">
+                                <div class="loading-state">正在加载热搜观察...</div>
+                            </div>
                         </div>
                     </section>
                 </div>

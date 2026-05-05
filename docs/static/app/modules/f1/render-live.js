@@ -197,6 +197,73 @@ function buildLiveRows(rows) {
   return `${head}<div class="f1-live-list">${items}</div>`;
 }
 
+
+function buildPreviousResultCell(row) {
+  const time = row?.time_or_gap || row?.result_time || "";
+  const status = row?.status || "";
+  const points = row?.points ?? "";
+  const parts = [];
+  if (time) parts.push(`<span class="f1-live-result-strong">${esc(time)}</span>`);
+  if (status && status !== "Finished") parts.push(`<span>${esc(status)}</span>`);
+  if (String(points) !== "") parts.push(`<span>${esc(points)} pts</span>`);
+  return parts.join(" • ") || '<span class="f1-live-result-muted">—</span>';
+}
+
+function buildPreviousResultMarkup(previousResult) {
+  if (!previousResult || previousResult.ok !== true || !Array.isArray(previousResult.rows) || previousResult.rows.length === 0) {
+    return "";
+  }
+
+  const rows = previousResult.rows.slice(0, 10);
+  const gpName = previousResult.gp_name || "Previous Grand Prix";
+  const circuit = previousResult.circuit_name || "";
+  const raceDate = previousResult.date || "";
+  const sourceUrl = previousResult.source_url || "";
+
+  const items = rows
+    .map((row) => {
+      const pos = row?.position ?? "—";
+      const driver = row?.driver || "Unknown";
+      const driverCode = row?.driver_code ? ` <span class="f1-live-mini">(${esc(row.driver_code)})</span>` : "";
+      const team = row?.constructor || row?.team || "—";
+      return `
+        <div class="f1-live-row">
+          <div class="f1-live-pos">${esc(pos)}</div>
+          <div class="f1-live-driver-wrap">
+            <div class="f1-live-driver">${esc(driver)}${driverCode}</div>
+            ${row?.grid ? `<div class="f1-live-mini">Grid ${esc(row.grid)}</div>` : ""}
+          </div>
+          <div class="f1-live-team">${esc(team)}</div>
+          <div class="f1-live-result">${buildPreviousResultCell(row)}</div>
+        </div>
+      `;
+    })
+    .join("");
+
+  return `
+    <section class="f1-previous-result">
+      <div class="f1-previous-result-header">
+        <div>
+          <div class="f1-previous-result-kicker">上一场结果</div>
+          <div class="f1-previous-result-title">${esc(cleanGrandPrixName(gpName))}</div>
+          <div class="f1-previous-result-meta">
+            ${raceDate ? `<span>${esc(raceDate)}</span>` : ""}
+            ${circuit ? `<span>${esc(circuit)}</span>` : ""}
+          </div>
+        </div>
+        ${sourceUrl ? `<a href="${esc(sourceUrl)}" target="_blank" rel="noopener noreferrer">Jolpica →</a>` : ""}
+      </div>
+      <div class="f1-live-table-head">
+        <div>POS</div>
+        <div>DRIVER</div>
+        <div>TEAM</div>
+        <div>RESULT</div>
+      </div>
+      <div class="f1-live-list">${items}</div>
+    </section>
+  `;
+}
+
 function buildBetweenRoundsMarkup(payload) {
   const nextRound = getNextRound(payload);
   const previousRound = getPreviousRound(payload);
@@ -207,6 +274,8 @@ function buildBetweenRoundsMarkup(payload) {
 
   const nextUrl = nextRound?.flashscore_url || payload?.page_url || "";
 
+  const previousResultMarkup = buildPreviousResultMarkup(payload?.previous_result);
+
   return `
     <div class="f1-empty">
       <div><strong>当前没有进行中的 F1 session。</strong></div>
@@ -214,6 +283,7 @@ function buildBetweenRoundsMarkup(payload) {
       ${previousName ? `<div>上一站：${esc(previousName)}${previousDates ? ` · ${esc(previousDates)}` : ""}</div>` : ""}
       ${nextUrl ? `<div style="margin-top: 8px;"><a href="${esc(nextUrl)}" target="_blank" rel="noopener noreferrer">Open Flashscore round page →</a></div>` : ""}
     </div>
+    ${previousResultMarkup}
   `;
 }
 

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 from datetime import datetime, timezone
+from typing import Any
 
 from storage import get_connection
 from services.f1.xfeed import get_f1_live_from_feed
@@ -14,6 +15,86 @@ def _loads(value: str | None) -> dict:
         return json.loads(value)
     except Exception:
         return {}
+
+
+def _round_date_text(round_info: dict[str, Any] | None) -> str:
+    if not isinstance(round_info, dict):
+        return ""
+    date_text = str(round_info.get("date_text") or "").strip()
+    if date_text:
+        return date_text
+    start = str(round_info.get("start_date") or "").strip()
+    end = str(round_info.get("end_date") or "").strip()
+    if start and end and start != end:
+        return f"{start} to {end}"
+    return start or end
+
+
+def _pick_next_round(strategy: dict[str, Any]) -> dict[str, Any]:
+    # In between-rounds mode, primary_target is the next race in the current
+    # strategy output. Fall back to best_available for older strategy payloads.
+    for key in ("primary_target", "next_round", "best_available_flashscore_target"):
+        value = strategy.get(key)
+        if isinstance(value, dict) and value:
+            return value
+    return {}
+
+
+def _pick_previous_round(strategy: dict[str, Any]) -> dict[str, Any]:
+    for key in ("previous_round", "fallback_results"):
+        value = strategy.get(key)
+        if isinstance(value, dict) and value:
+            return value
+    return {}
+
+
+def _between_rounds_payload(*, result: dict[str, Any], payload: dict[str, Any], strategy: dict[str, Any]) -> dict[str, Any]:
+    next_round = _pick_next_round(strategy)
+    previous_round = _pick_previous_round(strategy)
+
+    next_name = str(next_round.get("name") or "").strip()
+    next_dates = _round_date_text(next_round)
+    previous_name = str(previous_round.get("name") or "").strip()
+
+    if next_name and next_dates:
+        subheadline = f"No live F1 session right now. Next race: {next_name} · {next_dates}."
+    elif next_name:
+        subheadline = f"No live F1 session right now. Next race: {next_name}."
+    else:
+        subheadline = "No live F1 session right now."
+
+    # This is a normal state, not an availability failure. The live feed may
+    # report "No usable Flashscore round URL" when the current event has ended,
+    # but the dashboard should render an idle state instead of a red error.
+    payload.update(
+        {
+            "mode": "between_rounds",
+            "headline": "F1",
+            "subheadline": subheadline,
+            "session_name": None,
+            "country": None,
+            "lap_info": None,
+            "page_url": next_round.get("flashscore_url") or result.get("page_url"),
+            "feed_url": None,
+            "round": next_round or {},
+            "strategy": {
+                "mode": "between_rounds",
+                "primary_target": strategy.get("primary_target"),
+                "fallback_results": strategy.get("fallback_results"),
+                "best_available_flashscore_target": strategy.get("best_available_flashscore_target"),
+                "previous_round": previous_round or None,
+                "next_round": next_round or None,
+            },
+            "session": {},
+            "rows": [],
+            "session_count": 0,
+            "has_data": False,
+            "error": None,
+            "message": "No live F1 session right now.",
+            "source": "between_rounds",
+        }
+    )
+    return payload
 
 
 def _get_latest_live_snapshot(db_path: str = "app.db") -> dict | None:
@@ -128,6 +209,10 @@ def get_f1_live(db_path: str = "app.db") -> dict:
             "fetched_at": datetime.now(timezone.utc).isoformat(),
             "source": "live_feed",
         }
+
+        if str(payload.get("mode") or "").lower() == "between_rounds":
+            return _between_rounds_payload(result=result, payload=payload, strategy=strategy)
+
         if payload["has_data"]:
             return payload
     except Exception as exc:

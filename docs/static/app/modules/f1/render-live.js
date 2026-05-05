@@ -218,7 +218,6 @@ function buildPreviousResultMarkup(previousResult) {
   const gpName = previousResult.gp_name || "Previous Grand Prix";
   const circuit = previousResult.circuit_name || "";
   const raceDate = previousResult.date || "";
-  const sourceUrl = previousResult.source_url || "";
 
   const items = rows
     .map((row) => {
@@ -255,7 +254,7 @@ function buildPreviousResultMarkup(previousResult) {
             ${metaParts.join(" · ")}${metaParts.length ? " · " : ""}${esc(countText)}
           </div>
         </div>
-        ${sourceUrl ? `<a href="${esc(sourceUrl)}" target="_blank" rel="noopener noreferrer" style="font-size: 11px; color: var(--accent-blue); white-space: nowrap; text-decoration: none; font-weight: 700;">Jolpica →</a>` : ""}
+        
       </div>
       <div style="padding-top: 10px;">
         <div class="f1-live-table-head">
@@ -278,7 +277,6 @@ function buildBetweenRoundsMarkup(payload) {
   const previousName = previousRound?.name ? cleanGrandPrixName(previousRound.name) : "";
   const previousDates = formatRoundDate(previousRound);
 
-  const nextUrl = nextRound?.flashscore_url || payload?.page_url || "";
 
   const previousResultMarkup = buildPreviousResultMarkup(payload?.previous_result);
 
@@ -287,7 +285,7 @@ function buildBetweenRoundsMarkup(payload) {
       <div><strong>当前没有进行中的 F1 session。</strong></div>
       <div>下一站：${esc(nextName)}${nextDates ? ` · ${esc(nextDates)}` : ""}</div>
       ${previousName ? `<div>上一站：${esc(previousName)}${previousDates ? ` · ${esc(previousDates)}` : ""}</div>` : ""}
-      ${nextUrl ? `<div style="margin-top: 8px;"><a href="${esc(nextUrl)}" target="_blank" rel="noopener noreferrer">Open Flashscore round page →</a></div>` : ""}
+      
     </div>
     ${previousResultMarkup}
   `;

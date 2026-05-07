@@ -1,7 +1,9 @@
 from __future__ import annotations
 
 import html as html_lib
+import json
 import re
+from datetime import datetime, timezone
 from dataclasses import dataclass, field
 from typing import Any
 
@@ -42,6 +44,14 @@ DISPLAY_NAME_MAP = {
     "murban": "Murban Crude",
     "natural_gas": "Natural Gas",
     "gasoline": "Gasoline",
+}
+
+OILPRICE_LAST_JSON_ID_MAP = {
+    "wti": "45",
+    "brent": "46",
+    "murban": "4464",
+    "natural_gas": "51",
+    "gasoline": "53",
 }
 
 
@@ -104,6 +114,111 @@ def parse_tradingview_quote(
         extra={},
     )
 
+
+
+def _timestamp_to_iso(value: Any) -> str | None:
+    timestamp = _to_float(value)
+    if timestamp is None:
+        return str(value).strip() if value not in (None, "") else None
+    try:
+        return datetime.fromtimestamp(timestamp, tz=timezone.utc).isoformat()
+    except Exception:
+        return str(value).strip()
+
+
+def _first_last_price_row(value: Any) -> dict[str, Any] | None:
+    if isinstance(value, list) and value:
+        first = value[0]
+        return first if isinstance(first, dict) else None
+    if isinstance(value, dict):
+        return value
+    return None
+
+
+def parse_oilprice_last_json_quote(
+    *,
+    quote_key: str,
+    name: str,
+    json_text: str,
+    source_url: str,
+    data_source_url: str | None = None,
+    metadata_json_text: str | None = None,
+) -> EnergyQuote:
+    """
+    Parse OilPrice's dynamic widget JSON.
+
+    OilPrice's HTML table can contain an old server-rendered snapshot. The page then
+    refreshes rows client-side from:
+      https://s3.amazonaws.com/oilprice.com/widgets/oilprices/all/last.json
+
+    This parser reads that dynamic JSON first, while optionally using
+    blend_cache.json only for labels/source/delay metadata.
+    """
+    blend_id = OILPRICE_LAST_JSON_ID_MAP.get(quote_key)
+    if not blend_id:
+        raise EnergyParseError(f"Unsupported OilPrice last.json quote_key: {quote_key}")
+
+    try:
+        payload = json.loads(json_text or "{}")
+    except Exception as exc:
+        raise EnergyParseError(f"Could not decode OilPrice last.json: {exc}") from exc
+
+    if not isinstance(payload, dict):
+        raise EnergyParseError("OilPrice last.json root is not a JSON object")
+
+    raw_quote = payload.get(blend_id)
+    if not isinstance(raw_quote, dict):
+        raise EnergyParseError(f"OilPrice last.json missing blend id {blend_id} for {quote_key}")
+
+    price = _to_float(raw_quote.get("price"))
+    change = _to_float(raw_quote.get("change"))
+    change_percent = _to_float(raw_quote.get("change_percent"))
+    timestamp_text = _timestamp_to_iso(raw_quote.get("time"))
+
+    if price is None:
+        raise EnergyParseError(f"OilPrice last.json blend id {blend_id} has no usable price")
+
+    metadata: dict[str, Any] = {}
+    if metadata_json_text:
+        try:
+            metadata_payload = json.loads(metadata_json_text)
+            if isinstance(metadata_payload, dict) and isinstance(metadata_payload.get(blend_id), dict):
+                metadata = metadata_payload[blend_id]
+        except Exception:
+            metadata = {}
+
+    metadata_last_price = _first_last_price_row(metadata.get("last_price")) if metadata else None
+    delay_note = None
+    if metadata:
+        delay_note = str(metadata.get("update_text") or "").strip() or None
+
+    return EnergyQuote(
+        quote_key=quote_key,
+        name=name,
+        price=price,
+        unit=UNIT_MAP.get(quote_key),
+        change=change,
+        change_percent=change_percent,
+        timestamp_text=timestamp_text,
+        source_name="OilPrice.com",
+        source_url=source_url,
+        provider_used="oilprice_last_json",
+        is_delayed=True if delay_note else None,
+        delay_note=delay_note,
+        extra={
+            "oilprice_blend_id": blend_id,
+            "oilprice_time": raw_quote.get("time"),
+            "data_source_url": data_source_url or source_url,
+            "metadata_source_url": "https://s3.amazonaws.com/oilprice.com/oilprices/blend_cache.json" if metadata else None,
+            "metadata_blend_name": metadata.get("blend_name") if metadata else None,
+            "metadata_spreadsheet_name": metadata.get("spreadsheet_name") if metadata else None,
+            "metadata_source": metadata.get("source") if metadata else None,
+            "metadata_update_text": delay_note,
+            "metadata_last_price_timestamp": metadata.get("last_price_timestamp") if metadata else None,
+            "metadata_last_price": metadata_last_price,
+            "parsed_from": "oilprice_last_json",
+        },
+    )
 
 def parse_oilprice_charts_quote(
     *,

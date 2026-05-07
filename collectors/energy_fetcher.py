@@ -25,6 +25,14 @@ def _headers_for_energy_url(url: str) -> dict:
             "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
         }
 
+    if host == "s3.amazonaws.com":
+        return {
+            "Accept": "application/json,text/plain,*/*",
+            "Accept-Language": "en-US,en;q=0.9",
+            "Cache-Control": "no-cache",
+            "Pragma": "no-cache",
+        }
+
     return {}
 
 

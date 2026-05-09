@@ -45,6 +45,12 @@ HOTSEARCH_SOURCES: list[HotsearchSource] = [
         limit=20,
     ),
     HotsearchSource(
+        source_id="douyin_hot",
+        source_name="抖音热搜榜",
+        url="https://tophub.today/n/K7GdaMgdQy",
+        limit=20,
+    ),
+    HotsearchSource(
         source_id="bilibili_hot",
         source_name="哔哩哔哩热搜",
         url="https://tophub.today/n/aqeEk03v9R",

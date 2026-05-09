@@ -63,6 +63,8 @@ export function renderNewsTimeline(ctx, container, items) {
   });
 }
 
+const HOTSEARCH_DISPLAY_LIMIT = 10;
+
 function renderAiDigest(digest) {
   if (!digest || digest.ok !== true) {
     const reason = digest?.error ? `（${esc(digest.error)}）` : "";
@@ -107,7 +109,8 @@ function renderAiDigest(digest) {
 }
 
 function renderSourceBlock(source) {
-  const items = Array.isArray(source?.items) ? source.items : [];
+  const allItems = Array.isArray(source?.items) ? source.items : [];
+  const items = allItems.slice(0, HOTSEARCH_DISPLAY_LIMIT);
   const title = source?.source_name || "热搜源";
   const ok = source?.ok !== false;
   const error = source?.error || source?.parse_error || "";
@@ -161,8 +164,8 @@ export function renderHotsearch(ctx, container, payload) {
         <div>
           <div class="hotsearch-title-main">热搜观察</div>
           <div class="hotsearch-subtitle">
-            微博 20 · 百度 20 · B站 10
-            ${itemsCount ? ` · 合并 ${itemsCount} 条` : ""}
+            每源显示前 10 条 · AI 读取微博/百度/抖音各 20 条，B站 10 条
+            ${itemsCount ? ` · AI 输入 ${itemsCount} 条` : ""}
             ${generatedAt ? ` · <span title="${esc(formatAbsoluteLocalDateTime(generatedAt))}">${esc(formatRelativeLocalTime(generatedAt))}更新</span>` : ""}
           </div>
         </div>

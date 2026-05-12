@@ -16,7 +16,7 @@ from parsers.hotsearch_parser import parse_tophub_items, normalize_title_key
 logger = logging.getLogger(__name__)
 
 GEMINI_API_BASE = "https://generativelanguage.googleapis.com/v1beta"
-GEMINI_MODEL = os.getenv("HOTSEARCH_GEMINI_MODEL", os.getenv("GEMINI_MODEL", "gemini-3.1-flash-lite-preview"))
+GEMINI_MODEL = os.getenv("HOTSEARCH_GEMINI_MODEL", os.getenv("GEMINI_MODEL", "gemini-3.1-flash-lite"))
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "").strip()
 
 AI_TIMEOUT = 45

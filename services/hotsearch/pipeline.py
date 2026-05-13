@@ -19,8 +19,14 @@ GEMINI_API_BASE = "https://generativelanguage.googleapis.com/v1beta"
 GEMINI_MODEL = os.getenv("HOTSEARCH_GEMINI_MODEL", os.getenv("GEMINI_MODEL", "gemini-3.1-flash-lite"))
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "").strip()
 
-AI_TIMEOUT = 45
+# These are hard-coded here, so no .env change is required.
+AI_CONNECT_TIMEOUT = 10
+AI_READ_TIMEOUT = 75
 AI_RETRIES = 2
+AI_RETRY_BACKOFF_SECONDS = 4
+AI_MAX_ITEMS = 40
+AI_MAX_OUTPUT_TOKENS = 800
+AI_PRIORITY_LIMIT = 6
 
 
 def utc_now_iso() -> str:
@@ -51,6 +57,7 @@ def _extract_json_object(text: str) -> dict[str, Any]:
     cleaned = _clean_model_text(text)
     if not cleaned:
         raise ValueError("empty model response")
+
     try:
         data = json.loads(cleaned)
         return data if isinstance(data, dict) else {"raw": data}
@@ -60,6 +67,7 @@ def _extract_json_object(text: str) -> dict[str, Any]:
     match = re.search(r"\{.*\}", cleaned, flags=re.DOTALL)
     if not match:
         raise ValueError("model response did not contain a JSON object")
+
     data = json.loads(match.group(0))
     return data if isinstance(data, dict) else {"raw": data}
 
@@ -83,7 +91,7 @@ def _build_ai_prompt(items: list[dict[str, Any]]) -> str:
             "title": item.get("title"),
             "metric": item.get("metric"),
         }
-        for item in items
+        for item in items[:AI_MAX_ITEMS]
     ]
 
     return (
@@ -105,6 +113,48 @@ def _build_ai_prompt(items: list[dict[str, Any]]) -> str:
     )
 
 
+def _normalize_ai_digest(parsed: dict[str, Any]) -> dict[str, Any]:
+    priority_items = parsed.get("priority_items")
+    if not isinstance(priority_items, list):
+        priority_items = []
+
+    cleaned_priority_items: list[dict[str, Any]] = []
+    for item in priority_items[:AI_PRIORITY_LIMIT]:
+        if not isinstance(item, dict):
+            continue
+        cleaned_priority_items.append(
+            {
+                "title": str(item.get("title") or "").strip(),
+                "source": str(item.get("source") or "").strip(),
+                "rank": item.get("rank"),
+                "category": str(item.get("category") or "其他").strip(),
+                "reason": str(item.get("reason") or "").strip(),
+            }
+        )
+
+    return {
+        "ok": True,
+        "summary": str(parsed.get("summary") or "").strip(),
+        "priority_items": cleaned_priority_items,
+        "no_major_news": bool(parsed.get("no_major_news", False)),
+        "noise_note": str(parsed.get("noise_note") or "").strip(),
+        "model": GEMINI_MODEL,
+        "error": "",
+    }
+
+
+def _format_request_error(exc: Exception) -> str:
+    if isinstance(exc, requests.exceptions.ConnectTimeout):
+        return f"Gemini API connect timeout after {AI_CONNECT_TIMEOUT}s"
+    if isinstance(exc, requests.exceptions.ReadTimeout):
+        return f"Gemini API read timeout after {AI_READ_TIMEOUT}s"
+    if isinstance(exc, requests.exceptions.Timeout):
+        return f"Gemini API timeout: {exc}"
+    if isinstance(exc, requests.exceptions.RequestException):
+        return f"Gemini API request error: {exc}"
+    return f"{type(exc).__name__}: {exc}"
+
+
 def generate_hotsearch_ai_digest(items: list[dict[str, Any]]) -> dict[str, Any]:
     if not items:
         return _fallback_digest("no hotsearch items")
@@ -118,42 +168,44 @@ def generate_hotsearch_ai_digest(items: list[dict[str, Any]]) -> dict[str, Any]:
         "generationConfig": {
             "temperature": 0.2,
             "topP": 0.8,
-            "maxOutputTokens": 1200,
+            "maxOutputTokens": AI_MAX_OUTPUT_TOKENS,
+            "responseMimeType": "application/json",
         },
     }
 
     last_error = ""
     for attempt in range(1, AI_RETRIES + 1):
         try:
-            response = requests.post(url, json=payload, timeout=AI_TIMEOUT)
+            response = requests.post(
+                url,
+                json=payload,
+                timeout=(AI_CONNECT_TIMEOUT, AI_READ_TIMEOUT),
+            )
+
             if response.status_code >= 400:
                 last_error = f"HTTP {response.status_code}: {response.text[:500]}"
-                if response.status_code in {429, 500, 502, 503, 504} and attempt < AI_RETRIES:
-                    time.sleep(4 * attempt)
+                retryable = response.status_code in {429, 500, 502, 503, 504}
+                if retryable and attempt < AI_RETRIES:
+                    time.sleep(AI_RETRY_BACKOFF_SECONDS * attempt)
                     continue
+                logger.warning("Hotsearch AI digest failed: %s", last_error)
                 return _fallback_digest(last_error)
 
             data = response.json()
             model_text = _extract_model_text(data)
             parsed = _extract_json_object(model_text)
+            return _normalize_ai_digest(parsed)
 
-            priority_items = parsed.get("priority_items")
-            if not isinstance(priority_items, list):
-                priority_items = []
-
-            return {
-                "ok": True,
-                "summary": str(parsed.get("summary") or "").strip(),
-                "priority_items": priority_items[:6],
-                "no_major_news": bool(parsed.get("no_major_news", False)),
-                "noise_note": str(parsed.get("noise_note") or "").strip(),
-                "model": GEMINI_MODEL,
-                "error": "",
-            }
         except Exception as exc:
-            last_error = f"{type(exc).__name__}: {exc}"
+            last_error = _format_request_error(exc)
+            logger.warning(
+                "Hotsearch AI digest attempt %s/%s failed: %s",
+                attempt,
+                AI_RETRIES,
+                last_error,
+            )
             if attempt < AI_RETRIES:
-                time.sleep(4 * attempt)
+                time.sleep(AI_RETRY_BACKOFF_SECONDS * attempt)
 
     return _fallback_digest(last_error)
 
@@ -202,6 +254,7 @@ def fetch_hotsearch_snapshot(*, include_ai_digest: bool = True) -> dict[str, Any
                 )
             except Exception as exc:
                 parse_error = f"{type(exc).__name__}: {exc}"
+                logger.warning("Failed to parse hotsearch source %s: %s", source_id, parse_error)
 
         public_meta = {
             key: value

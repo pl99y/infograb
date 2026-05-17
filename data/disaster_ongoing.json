@@ -1,0 +1,496 @@
+[
+  {
+    "id": 25457,
+    "group_key": "volcano|3bd4fe706b3171b8049cf5ea01067f29cd3f8402",
+    "event_type": "volcano",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Nyamuragira",
+    "summary": "VRP 761.88 MW · MODIS · 5.10 km",
+    "started_at": "2026-05-17T01:45:00+00:00",
+    "updated_at": "2026-05-17T01:45:00+00:00",
+    "location_text": "Nyamuragira",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "MODIS",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=223020",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=223020",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "223020",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=223020",
+      "vrp_mw": 761.88,
+      "distance_km": 5.1,
+      "sensor": "MODIS",
+      "row_class": [
+        "high"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "MODIS"
+      ],
+      "reports": [
+        {
+          "volcano_id": "223020",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=223020",
+          "vrp_mw": 761.88,
+          "distance_km": 5.1,
+          "sensor": "MODIS",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 1
+    },
+    "member_event_ids": [
+      25455
+    ],
+    "occurred_at": "2026-05-17T01:45:00+00:00",
+    "published_at": "2026-05-17T01:45:00+00:00",
+    "fetched_at": "2026-05-17T01:45:00+00:00"
+  },
+  {
+    "id": 25458,
+    "group_key": "volcano|0fe81f54c147e1b10a4c8bc65a0edf10543e77a2",
+    "event_type": "volcano",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Nyamuragira",
+    "summary": "VRP 318.09 MW · VIIRS · 4.50 km",
+    "started_at": "2026-05-17T00:12:00+00:00",
+    "updated_at": "2026-05-17T00:12:00+00:00",
+    "location_text": "Nyamuragira",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "VIIRS",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "223020",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
+      "vrp_mw": 318.09,
+      "distance_km": 4.5,
+      "sensor": "VIIRS",
+      "row_class": [
+        "high"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "VIIRS"
+      ],
+      "reports": [
+        {
+          "volcano_id": "223020",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=223020",
+          "vrp_mw": 318.09,
+          "distance_km": 4.5,
+          "sensor": "VIIRS",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 1
+    },
+    "member_event_ids": [
+      25456
+    ],
+    "occurred_at": "2026-05-17T00:12:00+00:00",
+    "published_at": "2026-05-17T00:12:00+00:00",
+    "fetched_at": "2026-05-17T00:12:00+00:00"
+  },
+  {
+    "id": 25459,
+    "group_key": "earthquake|us6000sy90",
+    "event_type": "earthquake",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "M 5.4 - 92 km E of Port-Vila, Vanuatu",
+    "summary": "92 km E of Port-Vila, Vanuatu",
+    "started_at": "2026-05-16T15:58:04.288000+00:00",
+    "updated_at": "2026-05-16T18:26:59.954000+00:00",
+    "location_text": "92 km E of Port-Vila, Vanuatu",
+    "lat": -17.8726,
+    "lon": 169.1752,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sy90",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sy90",
+    "country_code": null,
+    "payload": {
+      "mag": 5.4,
+      "depth_km": 10.0,
+      "place": "92 km E of Port-Vila, Vanuatu",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000sy90.geojson",
+      "alert": "green",
+      "sig": 449,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      25448
+    ],
+    "occurred_at": "2026-05-16T15:58:04.288000+00:00",
+    "published_at": "2026-05-16T15:58:04.288000+00:00",
+    "fetched_at": "2026-05-16T15:58:04.288000+00:00"
+  },
+  {
+    "id": 25460,
+    "group_key": "earthquake|us6000sy8k",
+    "event_type": "earthquake",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "M 5.7 - 33 km NE of Auki, Solomon Islands",
+    "summary": "33 km NE of Auki, Solomon Islands",
+    "started_at": "2026-05-16T15:17:56.098000+00:00",
+    "updated_at": "2026-05-16T17:45:24.315000+00:00",
+    "location_text": "33 km NE of Auki, Solomon Islands",
+    "lat": -8.5526,
+    "lon": 160.9161,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sy8k",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sy8k",
+    "country_code": null,
+    "payload": {
+      "mag": 5.7,
+      "depth_km": 23.374,
+      "place": "33 km NE of Auki, Solomon Islands",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000sy8k.geojson",
+      "alert": "green",
+      "sig": 500,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      25449
+    ],
+    "occurred_at": "2026-05-16T15:17:56.098000+00:00",
+    "published_at": "2026-05-16T15:17:56.098000+00:00",
+    "fetched_at": "2026-05-16T15:17:56.098000+00:00"
+  },
+  {
+    "id": 25461,
+    "group_key": "earthquake|us6000sy84",
+    "event_type": "earthquake",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "M 6.0 - 70 km ESE of Codrington, Antigua and Barbuda",
+    "summary": "70 km ESE of Codrington, Antigua and Barbuda",
+    "started_at": "2026-05-16T14:50:03.503000+00:00",
+    "updated_at": "2026-05-17T01:40:54.055000+00:00",
+    "location_text": "70 km ESE of Codrington, Antigua and Barbuda",
+    "lat": 17.5127,
+    "lon": -61.1771,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sy84",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sy84",
+    "country_code": null,
+    "payload": {
+      "mag": 6.0,
+      "depth_km": 30.038,
+      "place": "70 km ESE of Codrington, Antigua and Barbuda",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000sy84.geojson",
+      "alert": "green",
+      "sig": 614,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      25450
+    ],
+    "occurred_at": "2026-05-16T14:50:03.503000+00:00",
+    "published_at": "2026-05-16T14:50:03.503000+00:00",
+    "fetched_at": "2026-05-16T14:50:03.503000+00:00"
+  },
+  {
+    "id": 25462,
+    "group_key": "earthquake|us6000sy7u",
+    "event_type": "earthquake",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "M 5.2 - 94 km E of Port-Vila, Vanuatu",
+    "summary": "94 km E of Port-Vila, Vanuatu",
+    "started_at": "2026-05-16T14:07:54.649000+00:00",
+    "updated_at": "2026-05-16T18:32:43.040000+00:00",
+    "location_text": "94 km E of Port-Vila, Vanuatu",
+    "lat": -17.7708,
+    "lon": 169.2036,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sy7u",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sy7u",
+    "country_code": null,
+    "payload": {
+      "mag": 5.2,
+      "depth_km": 10.0,
+      "place": "94 km E of Port-Vila, Vanuatu",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000sy7u.geojson",
+      "alert": null,
+      "sig": 416,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      25451
+    ],
+    "occurred_at": "2026-05-16T14:07:54.649000+00:00",
+    "published_at": "2026-05-16T14:07:54.649000+00:00",
+    "fetched_at": "2026-05-16T14:07:54.649000+00:00"
+  },
+  {
+    "id": 25463,
+    "group_key": "earthquake|us6000sy7l",
+    "event_type": "earthquake",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "M 5.3 - 94 km E of Port-Vila, Vanuatu",
+    "summary": "94 km E of Port-Vila, Vanuatu",
+    "started_at": "2026-05-16T12:59:30.959000+00:00",
+    "updated_at": "2026-05-16T13:15:08.040000+00:00",
+    "location_text": "94 km E of Port-Vila, Vanuatu",
+    "lat": -17.8503,
+    "lon": 169.1937,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sy7l",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sy7l",
+    "country_code": null,
+    "payload": {
+      "mag": 5.3,
+      "depth_km": 10.0,
+      "place": "94 km E of Port-Vila, Vanuatu",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000sy7l.geojson",
+      "alert": null,
+      "sig": 432,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      25452
+    ],
+    "occurred_at": "2026-05-16T12:59:30.959000+00:00",
+    "published_at": "2026-05-16T12:59:30.959000+00:00",
+    "fetched_at": "2026-05-16T12:59:30.959000+00:00"
+  },
+  {
+    "id": 25464,
+    "group_key": "volcano|c7c1b95790f5fb65a9f273a699cd40aca525727f",
+    "event_type": "volcano",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Kilauea",
+    "summary": "VRP 167.42 MW · VIIRS375 · 10.98 km",
+    "started_at": "2026-05-16T12:30:01+00:00",
+    "updated_at": "2026-05-16T12:30:01+00:00",
+    "location_text": "Kilauea",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "VIIRS375",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=332010",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=332010",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "332010",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=332010",
+      "vrp_mw": 167.42,
+      "distance_km": 10.98,
+      "sensor": "VIIRS375",
+      "row_class": [
+        "high"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "VIIRS375"
+      ],
+      "reports": [
+        {
+          "volcano_id": "332010",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=332010",
+          "vrp_mw": 167.42,
+          "distance_km": 10.98,
+          "sensor": "VIIRS375",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 1
+    },
+    "member_event_ids": [
+      25457
+    ],
+    "occurred_at": "2026-05-16T12:30:01+00:00",
+    "published_at": "2026-05-16T12:30:01+00:00",
+    "fetched_at": "2026-05-16T12:30:01+00:00"
+  },
+  {
+    "id": 25465,
+    "group_key": "earthquake|us6000sy76",
+    "event_type": "earthquake",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "M 5.0 - 5 km WSW of Badak, Philippines",
+    "summary": "5 km WSW of Badak, Philippines",
+    "started_at": "2026-05-16T11:25:43.857000+00:00",
+    "updated_at": "2026-05-16T13:39:35.780000+00:00",
+    "location_text": "5 km WSW of Badak, Philippines",
+    "lat": 6.8241,
+    "lon": 124.6816,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sy76",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sy76",
+    "country_code": null,
+    "payload": {
+      "mag": 5.0,
+      "depth_km": 10.0,
+      "place": "5 km WSW of Badak, Philippines",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000sy76.geojson",
+      "alert": null,
+      "sig": 390,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      25453
+    ],
+    "occurred_at": "2026-05-16T11:25:43.857000+00:00",
+    "published_at": "2026-05-16T11:25:43.857000+00:00",
+    "fetched_at": "2026-05-16T11:25:43.857000+00:00"
+  },
+  {
+    "id": 25466,
+    "group_key": "earthquake|us6000sy5x",
+    "event_type": "earthquake",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "M 5.0 - Kermadec Islands region",
+    "summary": "Kermadec Islands region",
+    "started_at": "2026-05-16T06:48:55.360000+00:00",
+    "updated_at": "2026-05-16T07:17:02.040000+00:00",
+    "location_text": "Kermadec Islands region",
+    "lat": -31.9282,
+    "lon": -178.203,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sy5x",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000sy5x",
+    "country_code": null,
+    "payload": {
+      "mag": 5.0,
+      "depth_km": 10.0,
+      "place": "Kermadec Islands region",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000sy5x.geojson",
+      "alert": null,
+      "sig": 385,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      25454
+    ],
+    "occurred_at": "2026-05-16T06:48:55.360000+00:00",
+    "published_at": "2026-05-16T06:48:55.360000+00:00",
+    "fetched_at": "2026-05-16T06:48:55.360000+00:00"
+  },
+  {
+    "id": 25467,
+    "group_key": "flood|8f2ae611b5f92c719fa50bd1cde660d76547f39f",
+    "event_type": "flood",
+    "severity_level": "orange",
+    "severity_color": "orange",
+    "title": "Flood in Brazil",
+    "summary": "Brazil",
+    "started_at": "2026-02-03T01:00:00+00:00",
+    "updated_at": "2026-05-12T12:15:20+00:00",
+    "location_text": "Brazil",
+    "lat": null,
+    "lon": null,
+    "source_primary": "GDACS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://www.gdacs.org/report.aspx?eventid=1103757&episodeid=25&eventtype=FL",
+    "official_link": "https://www.gdacs.org/report.aspx?eventid=1103757&episodeid=25&eventtype=FL",
+    "country_code": null,
+    "payload": {
+      "eventid": "1103757",
+      "episodeid": "25",
+      "alertlevel": "orange",
+      "report_url": "https://www.gdacs.org/report.aspx?eventid=1103757&episodeid=25&eventtype=FL",
+      "geometry_url": null,
+      "details_url": null,
+      "source_page": "https://www.gdacs.org/Alerts/",
+      "active_within_days": 14,
+      "raw": {
+        "eventtype": "FL",
+        "eventid": 1103757,
+        "episodeid": 25,
+        "eventname": "",
+        "glide": "FL-2026-000028-BRA",
+        "name": "Flood in Brazil",
+        "description": "Flood in Brazil",
+        "htmldescription": "Orange Flood in Brazil from: 03 Feb 2026 01 to: 31 Mar 2026 01.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/FL.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/FL.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=FL&eventid=1103757&episodeid=25",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1103757&episodeid=25&eventtype=FL",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=FL&eventid=1103757"
+        },
+        "alertlevel": "Orange",
+        "alertscore": 2,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "false",
+        "country": "Brazil",
+        "fromdate": "2026-02-03T01:00:00",
+        "todate": "2026-03-31T01:00:00",
+        "datemodified": "2026-05-12T12:15:20",
+        "iso3": "BRA",
+        "source": "GLOFAS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "BR",
+            "iso3": "BRA",
+            "countryname": "Brazil"
+          }
+        ],
+        "severitydata": {
+          "severity": 0.0,
+          "severitytext": "Magnitude 0 ",
+          "severityunit": ""
+        }
+      }
+    },
+    "member_event_ids": [
+      25458
+    ],
+    "occurred_at": "2026-02-03T01:00:00+00:00",
+    "published_at": "2026-02-03T01:00:00+00:00",
+    "fetched_at": "2026-02-03T01:00:00+00:00"
+  }
+]

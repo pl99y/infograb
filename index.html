@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Grabber</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="./static/dashboard.css?v=43">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="logo">
+            <i class="ph-fill ph-globe-hemisphere-west"></i>
+            <span>INFO GRABBER</span>
+            <span class="logo-note">线上静态版，20分钟更新一次，AI翻译结果可能不准确，请自行甄别</span>
+        </div>
+
+        <div class="nav-right">
+            <button id="layoutEditBtn" class="btn-refresh" type="button" title="编辑布局">
+                <i class="ph ph-squares-four"></i>
+                <span>编辑布局</span>
+            </button>
+
+            <button id="themeToggleBtn" class="btn-refresh" title="切换主题" type="button">
+                <i class="ph ph-moon"></i>
+            </button>
+
+            <button id="mobileNavToggleBtn" class="btn-refresh mobile-menu-toggle" title="板块导航" type="button" aria-label="打开板块导航" aria-controls="mobileNavDrawer" aria-expanded="false">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="layout-edit-banner" id="layoutEditBanner">
+        <div class="layout-edit-banner-left">
+            <div class="layout-edit-banner-title">正在编辑布局</div>
+            <div class="layout-edit-banner-text">拖动模块标题可换位；右侧拖宽；底部拖高；可勾选显示板块。</div>
+        </div>
+        <div class="layout-edit-banner-actions">
+            <button id="layoutPanelsBtn" class="btn-refresh" type="button">
+                <i class="ph ph-sliders-horizontal"></i>
+                <span>显示板块</span>
+            </button>
+            <button id="layoutResetBtn" class="btn-refresh" type="button">
+                <i class="ph ph-arrow-counter-clockwise"></i>
+                <span>重置布局</span>
+            </button>
+            <button id="layoutDoneBtn" class="btn-refresh" type="button">
+                <i class="ph ph-check"></i>
+                <span>完成</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="layout-panel-picker" id="layoutPanelPicker">
+        <div class="layout-panel-picker-card">
+            <div class="layout-panel-picker-head">
+                <div class="layout-panel-picker-title">显示板块</div>
+                <button id="layoutPanelPickerCloseBtn" class="btn-refresh btn-refresh-small" type="button">
+                    <i class="ph ph-x"></i>
+                    <span>关闭</span>
+                </button>
+            </div>
+
+            <div class="layout-panel-picker-desc">取消勾选即可隐藏板块；再次勾选会恢复显示。</div>
+            <div class="layout-panel-list" id="layoutPanelList"></div>
+        </div>
+    </div>
+
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+
+    <aside class="mobile-nav-drawer" id="mobileNavDrawer" aria-hidden="true">
+        <div class="mobile-nav-drawer-head">
+            <div>
+                <div class="mobile-nav-drawer-title">板块导航</div>
+                <div class="mobile-nav-drawer-desc">选择一个板块查看</div>
+            </div>
+            <button id="mobileNavCloseBtn" class="btn-refresh btn-refresh-small" type="button" aria-label="关闭板块导航">
+                <i class="ph ph-x"></i>
+                <span>关闭</span>
+            </button>
+        </div>
+
+        <div class="mobile-panel-menu" id="mobilePanelMenu"></div>
+    </aside>
+
+    <main class="dashboard-main">
+        <div class="grid-stack" id="dashboardGrid">
+            <div
+                class="grid-stack-item"
+                gs-id="energy"
+                data-panel-title="能源监控"
+                data-mobile-nav-title="能源"
+                data-default-w="4"
+                data-default-h="420"
+                data-min-w="2"
+                data-min-h="320"
+                data-max-h="1000"
+            >
+                <div class="grid-stack-item-content">
+                    <section class="grid-col col-energy">
+                        <div class="section-header">
+                            <div class="section-header-row">
+                                <div class="section-header-text">
+                                    <h3>能源监控</h3>
+                                    <div class="section-updated" id="energyUpdatedAt">（加载中）</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="market-blocks" id="energy-container">
+                            <div class="loading-state">正在加载能源数据...</div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
+            <div
+                class="grid-stack-item"
+                gs-id="market"
+                data-panel-title="市场观察"
+                data-mobile-nav-title="市场"
+                data-default-w="4"
+                data-default-h="420"
+                data-min-w="3"
+                data-min-h="320"
+                data-max-h="1000"
+            >
+                <div class="grid-stack-item-content">
+                    <section class="grid-col col-market">
+                        <div class="section-header">
+                            <div class="section-header-row">
+                                <div class="section-header-text">
+                                    <h3>市场观察</h3>
+                                    <div class="section-updated" id="marketUpdatedAt">（加载中）</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="market-snapshot-list" id="market-container">
+                            <div class="loading-state">正在加载市场指数...</div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
+            <div
+                class="grid-stack-item"
+                gs-id="space-weather"
+                data-panel-title="空间监控"
+                data-mobile-nav-title="空间"
+                data-default-w="8"
+                data-default-h="620"
+                data-min-w="4"
+                data-min-h="420"
+                data-max-h="1400"
+            >
+                <div class="grid-stack-item-content">
+                    <section class="grid-col col-space-weather">
+                        <div class="section-header">
+                            <div class="section-header-row">
+                                <div class="section-header-text">
+                                    <h3>空间监控</h3>
+                                    <div class="section-updated" id="spaceWeatherUpdatedAt">（加载中）</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-weather-wrap">
+                            <div class="space-weather-tabs" id="spaceWeatherTabs">
+                                <button class="space-weather-tab-btn active" type="button" data-space-weather-tab="launches">发射动态</button>
+                                <button class="space-weather-tab-btn" type="button" data-space-weather-tab="alerts">NOAA Alerts</button>
+                                <button class="space-weather-tab-btn" type="button" data-space-weather-tab="forecast">3-Day Forecast</button>
+                            </div>
+
+                            <div class="space-weather-tab-panel active" id="spaceLaunchesPanel" data-space-weather-panel="launches">
+                                <div class="space-weather-launches" id="spaceLaunchesContainer">
+                                    <div class="loading-state">正在加载发射动态...</div>
+                                </div>
+                            </div>
+
+                            <div class="space-weather-tab-panel" id="spaceWeatherAlertsPanel" data-space-weather-panel="alerts">
+                                <div class="space-weather-alerts" id="spaceWeatherAlertsContainer">
+                                    <div class="loading-state">正在加载 NOAA Alerts...</div>
+                                </div>
+                            </div>
+
+                            <div class="space-weather-tab-panel" id="spaceWeatherForecastPanel" data-space-weather-panel="forecast">
+                                <div class="space-weather-forecast" id="spaceWeatherForecastContainer">
+                                    <div class="loading-state">正在加载 NOAA 3-Day Forecast...</div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div
+                class="grid-stack-item"
+                gs-id="mnd-pla"
+                data-panel-title="台海动态"
+                data-mobile-nav-title="台海"
+                data-default-w="6"
+                data-default-h="720"
+                data-min-w="3"
+                data-min-h="420"
+                data-max-h="1400"
+            >
+                <div class="grid-stack-item-content">
+                    <section class="grid-col col-mnd-pla">
+                        <div class="section-header">
+                            <div class="section-header-row">
+                                <div class="section-header-text">
+                                    <h3>台海动态</h3>
+                                    <div class="section-updated" id="mndPlaUpdatedAt">（加载中）</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mnd-pla-panel" id="mndPlaContainer">
+                            <div class="loading-state">正在加载台海动态...</div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div
+                class="grid-stack-item"
+                gs-id="aviation"
+                data-panel-title="航空监控"
+                data-mobile-nav-title="航空"
+                data-default-w="6"
+                data-default-h="700"
+                data-min-w="3"
+                data-min-h="420"
+                data-max-h="1400"
+            >
+                <div class="grid-stack-item-content">
+                    <section class="grid-col col-aviation">
+                        <div class="section-header">
+                            <div class="section-header-row">
+                                <div class="section-header-text">
+                                    <h3>航空监控</h3>
+                                    <div class="section-updated" id="aviationUpdatedAt">（加载中）</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="aviation-tabs" id="aviationTabs">
+                            <button class="aviation-tab-btn active" data-tab="alerts" type="button">异常航班</button>
+                            <button class="aviation-tab-btn" data-tab="disruptions" type="button">机场扰动</button>
+                        </div>
+
+                        <div class="aviation-tab-panel active" id="aviationAlertsPanel">
+                            <div class="aviation-list" id="aviation-alerts-container">
+                                <div class="loading-state">正在加载异常航班...</div>
+                            </div>
+                        </div>
+
+                        <div class="aviation-tab-panel" id="aviationDisruptionsPanel">
+                            <div class="aviation-list" id="aviation-disruptions-container">
+                                <div class="loading-state">正在加载机场扰动...</div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div
+                class="grid-stack-item"
+                gs-id="disaster"
+                data-panel-title="灾害监控"
+                data-mobile-nav-title="灾害"
+                data-default-w="6"
+                data-default-h="700"
+                data-min-w="4"
+                data-min-h="420"
+                data-max-h="1600"
+            >
+                <div class="grid-stack-item-content">
+                    <section class="grid-col col-disaster">
+                        <div class="section-header">
+                            <div class="section-header-row">
+                                <div class="section-header-text">
+                                    <h3>灾害监控</h3>
+                                    <div class="section-updated" id="disasterUpdatedAt">（加载中）</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="disaster-tabs" id="disasterTabs">
+                            <button class="disaster-tab-btn active" data-tab="instant" type="button">即时警报</button>
+                            <button class="disaster-tab-btn" data-tab="ongoing" type="button">自然灾害</button>
+                        </div>
+
+                        <div class="disaster-tab-panel active" id="disasterInstantPanel">
+                            <div class="disaster-list" id="disaster-instant-container">
+                                <div class="loading-state">正在加载即时灾害警报...</div>
+                            </div>
+                        </div>
+
+                        <div class="disaster-tab-panel" id="disasterOngoingPanel">
+                            <div class="disaster-list">
+                                <div class="empty-state">自然灾害模块稍后接入</div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
+            <div
+                class="grid-stack-item"
+                gs-id="public-health"
+                data-panel-title="公众健康"
+                data-mobile-nav-title="健康"
+                data-default-w="6"
+                data-default-h="700"
+                data-min-w="4"
+                data-min-h="420"
+                data-max-h="1600"
+            >
+                <div class="grid-stack-item-content">
+                    <section class="grid-col col-public-health">
+                        <div class="section-header">
+                            <div class="section-header-row">
+                                <div class="section-header-text">
+                                    <h3>公众健康</h3>
+                                    <div class="section-updated" id="publicHealthUpdatedAt">（加载中）</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="public-health-tabs" id="publicHealthTabs">
+                            <button class="public-health-tab-btn active" data-tab="early-warning" type="button">早期预警</button>
+                            <button class="public-health-tab-btn" data-tab="outbreak-event" type="button">爆发事件</button>
+                        </div>
+
+                        <div class="public-health-tab-panel active" id="publicHealthEarlyPanel">
+                            <div class="public-health-list" id="publicHealthEarlyContainer">
+                                <div class="loading-state">正在加载早期预警...</div>
+                            </div>
+                        </div>
+
+                        <div class="public-health-tab-panel" id="publicHealthOutbreakPanel">
+                            <div class="public-health-list" id="publicHealthOutbreakContainer">
+                                <div class="loading-state">正在加载爆发事件...</div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
+            <div
+                class="grid-stack-item mobile-active"
+                gs-id="news-timeline"
+                data-panel-title="新闻流"
+                data-mobile-nav-title="新闻"
+                data-default-w="8"
+                data-default-h="760"
+                data-min-w="4"
+                data-min-h="420"
+                data-max-h="1600"
+            >
+                <div class="grid-stack-item-content">
+                    <section class="grid-col col-news-timeline">
+                        <div class="section-header">
+                            <div class="section-header-row">
+                                <div class="section-header-text">
+                                    <h3>新闻流</h3>
+                                    <div class="section-updated" id="newsTimelineUpdatedAt">（加载中）</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="news-panel-tabs" id="newsPanelTabs">
+                            <button class="news-panel-tab-btn active" type="button" data-news-panel-tab="timeline">新闻流</button>
+                            <button class="news-panel-tab-btn" type="button" data-news-panel-tab="hotsearch">热搜观察</button>
+                        </div>
+
+                        <div class="news-panel active" id="newsTimelinePanel" data-news-panel="timeline">
+                            <div class="news-timeline-list" id="newsTimelineContainer">
+                                <div class="loading-state">正在加载新闻流...</div>
+                            </div>
+                        </div>
+
+                        <div class="news-panel" id="newsHotsearchPanel" data-news-panel="hotsearch">
+                            <div class="news-hotsearch-list" id="newsHotsearchContainer">
+                                <div class="loading-state">正在加载热搜观察...</div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div
+                class="grid-stack-item"
+                gs-id="f1"
+                data-panel-title="F1 监控"
+                data-mobile-nav-title="F1"
+                data-default-w="4"
+                data-default-h="700"
+                data-min-w="3"
+                data-min-h="420"
+                data-max-h="1400"
+            >
+                <div class="grid-stack-item-content">
+                    <section class="grid-col col-f1">
+                        <div class="section-header">
+                            <div class="section-header-row">
+                                <div class="section-header-text">
+                                    <h3>F1 监控</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div
+                class="grid-stack-item"
+                gs-id="feed"
+                data-panel-title="情报流"
+                data-mobile-nav-title="情报"
+                data-default-w="8"
+                data-default-h="760"
+                data-min-w="4"
+                data-min-h="420"
+                data-max-h="1600"
+            >
+                <div class="grid-stack-item-content">
+                    <section class="grid-col col-feed">
+                        <div class="section-header">
+                            <div class="section-header-row">
+                                <h3>情报流</h3>
+                            </div>
+                        </div>
+
+                        <div class="feed-list" id="telegram-container">
+                            <div class="loading-state">正在加载情报...</div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="lightbox" class="lightbox">
+        <img class="lightbox-content" id="lightbox-img" alt="Expanded media">
+    </div>
+
+    <script type="module" src="./static/app/main-pages.js?v=42"></script>
+</body>
+</html>

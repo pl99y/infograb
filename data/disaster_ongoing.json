@@ -1,0 +1,1067 @@
+[
+  {
+    "id": 212692,
+    "group_key": "earthquake|us7000th1q",
+    "event_type": "earthquake",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "M 5.1 - 101 km S of Yudomari, Japan",
+    "summary": "101 km S of Yudomari, Japan",
+    "started_at": "2026-09-12T20:32:58.910000+00:00",
+    "updated_at": "2026-09-12T21:24:56.469000+00:00",
+    "location_text": "101 km S of Yudomari, Japan",
+    "lat": 29.3244,
+    "lon": 130.3787,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000th1q",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000th1q",
+    "country_code": null,
+    "payload": {
+      "mag": 5.1,
+      "depth_km": 45.513,
+      "place": "101 km S of Yudomari, Japan",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us7000th1q.geojson",
+      "alert": null,
+      "sig": 400,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      212743
+    ],
+    "occurred_at": "2026-09-12T20:32:58.910000+00:00",
+    "published_at": "2026-09-12T20:32:58.910000+00:00",
+    "fetched_at": "2026-09-12T20:32:58.910000+00:00"
+  },
+  {
+    "id": 212693,
+    "group_key": "volcano|7b41f85c9a1f7da7606ffa7af92e0a52dc89506c",
+    "event_type": "volcano",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Nyamuragira",
+    "summary": "VRP 157.22 MW · MODIS · 5.83 km",
+    "started_at": "2026-09-12T19:05:00+00:00",
+    "updated_at": "2026-09-12T19:05:00+00:00",
+    "location_text": "Nyamuragira",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "MODIS",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=223020",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=223020",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "223020",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=223020",
+      "vrp_mw": 157.22,
+      "distance_km": 5.83,
+      "sensor": "MODIS",
+      "row_class": [
+        "high"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "MODIS"
+      ],
+      "reports": [
+        {
+          "volcano_id": "223020",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=223020",
+          "vrp_mw": 157.22,
+          "distance_km": 5.83,
+          "sensor": "MODIS",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 1
+    },
+    "member_event_ids": [
+      212745
+    ],
+    "occurred_at": "2026-09-12T19:05:00+00:00",
+    "published_at": "2026-09-12T19:05:00+00:00",
+    "fetched_at": "2026-09-12T19:05:00+00:00"
+  },
+  {
+    "id": 212695,
+    "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|western_north_pacific_area|invest_98w|1207edf80b91139e",
+    "event_type": "typhoon",
+    "severity_level": "low",
+    "severity_color": "low",
+    "title": "INVEST 98W",
+    "summary": "wind 23-28 kt · 1006 mb",
+    "started_at": "2026-09-12T19:00:00+00:00",
+    "updated_at": "2026-09-12T19:00:00+00:00",
+    "location_text": "17.1N 108.5E",
+    "lat": 17.1,
+    "lon": 108.5,
+    "source_primary": "JTWC-ABPW",
+    "source_secondary": "disturbance",
+    "status": "monitoring",
+    "map_url": "https://www.google.com/maps?q=17.1,108.5",
+    "official_link": "https://www.google.com/maps?q=17.1,108.5",
+    "country_code": null,
+    "payload": {
+      "item_type": "disturbance",
+      "source": "jtwc_abpw",
+      "source_key": "jtwc_abpw|western_north_pacific_area|invest_98w",
+      "content_hash": "1207edf80b91139e",
+      "platform_summary": "17.1N 108.5E | winds 23-28 kt | 1006 mb",
+      "platform_location": "17.1N 108.5E",
+      "wind": "23-28 kt",
+      "risk_48h": null,
+      "risk_7d": null,
+      "next_update": null,
+      "raw_text": "(1) THE AREA OF CONVECTION (INVEST 98W) PREVIOUSLY LOCATED NEAR \n17.0N 109.1E IS NOW LOCATED NEAR 17.1N 108.5E, APPROXIMATELY 67 NM \nNORTH-NORTHEAST OF DA NANG VIETNAM. ANIMATED ENHANCED INFRARED (EIR) \nDEPICTS A BROAD AREA OF DISORGANIZED DEEP CONVECTION ASSOCIATED WITH A \nSLOWLY CONSOLIDATING LOW-LEVEL CIRCULATION CENTER (LLCC). THE LLCC \nREMAINS BROAD AND ELONGATED, WITH THE WESTERN EXTENT OF THE \nCIRCULATION LIKELY EXTENDING OVER LAND. CURRENT ANALYSIS OF THE \nSURROUNDING ENVIRONMENT INDICATES FAVORABLE CONDITIONS FOR FURTHER \nCONSOLIDATION WITH LOW (10-15 KTS) VERTICAL WIND SHEAR, STRONG \nEQUATORWARD OUTFLOW ALOFT, WARM (28-29 C) SEA SURFACE TEMPERATURES, \nAND DEEP MOISTURE THROUGHOUT THE AIR COLUMN BEING OFFSET BY LAND \nINTERACTION. GLOBAL DETERMINISTIC MODELS ARE IN GOOD AGREEMENT THAT \n98W WILL TRACK GENERALLY NORTHWESTWARD, SKIRTING THE COAST OF VIETNAM, \nPOTENTIALLY REACHING TROPICAL DEPRESSION CRITERIA DURING THE NEXT 12-\n24 HOURS. THERE REMAINS SIGNIFICANT UNCERTAINTY AS TO WHETHER THE \nBROAD SYSTEM CAN ORGANIZE BEFORE IT MAKES LANDFALL IN VIETNAM AND \nTRANSITS INLAND. MAXIMUM SUSTAINED SURFACE WINDS ARE ESTIMATED AT 23 \nTO 28 KNOTS. MINIMUM SEA LEVEL PRESSURE IS ESTIMATED TO BE NEAR 1006 \nMB. THE POTENTIAL FOR THE DEVELOPMENT OF A SIGNIFICANT TROPICAL \nCYCLONE WITHIN THE NEXT 24 HOURS IS HIGH.",
+      "metadata": {
+        "basin_section": "WESTERN NORTH PACIFIC AREA (180 TO MALAY PENINSULA)",
+        "invest_id": "98W",
+        "lat": 17.1,
+        "lon": 108.5,
+        "wind_kt_min": 23,
+        "wind_kt_max": 28,
+        "wind_kt": 28,
+        "pressure_mb": 1006,
+        "bulletin_issue_at": "2026-09-12T19:00:00+00:00"
+      }
+    },
+    "member_event_ids": [
+      212754
+    ],
+    "occurred_at": "2026-09-12T19:00:00+00:00",
+    "published_at": "2026-09-12T19:00:00+00:00",
+    "fetched_at": "2026-09-12T19:00:00+00:00"
+  },
+  {
+    "id": 212694,
+    "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|western_north_pacific_area|invest_90w|e49e02bd7699fa46",
+    "event_type": "typhoon",
+    "severity_level": "low",
+    "severity_color": "low",
+    "title": "INVEST 90W",
+    "summary": "wind 13-18 kt · 1007 mb",
+    "started_at": "2026-09-12T19:00:00+00:00",
+    "updated_at": "2026-09-12T19:00:00+00:00",
+    "location_text": "12.5N 156.6E",
+    "lat": 12.5,
+    "lon": 156.6,
+    "source_primary": "JTWC-ABPW",
+    "source_secondary": "disturbance",
+    "status": "monitoring",
+    "map_url": "https://www.google.com/maps?q=12.5,156.6",
+    "official_link": "https://www.google.com/maps?q=12.5,156.6",
+    "country_code": null,
+    "payload": {
+      "item_type": "disturbance",
+      "source": "jtwc_abpw",
+      "source_key": "jtwc_abpw|western_north_pacific_area|invest_90w",
+      "content_hash": "e49e02bd7699fa46",
+      "platform_summary": "12.5N 156.6E | winds 13-18 kt | 1007 mb",
+      "platform_location": "12.5N 156.6E",
+      "wind": "13-18 kt",
+      "risk_48h": null,
+      "risk_7d": null,
+      "next_update": null,
+      "raw_text": "(2) AN AREA OF CONVECTION (INVEST 90W) HAS PERSISTED NEAR 12.5N \n156.6E, APPROXIMATELY 416 NM NORTHEAST OF CHUUK. ANIMATED ENHANCED \nINFRARED IMAGERY (EIR) DEPICTS A BROAD AREA OF CYCLONIC ROTATION \nSITUATED ON A WEST-TO-EAST ORIENTED TROUGH, WITH CYCLING DEEP \nCONVECTION ALONG THE SOUTHERN AND EASTERN PERIPHERY. ENVIRONMENTAL \nCONDITIONS ARE MOSTLY FAVORABLE WITH WARM (28-29C) SEA SURFACE \nTEMPERATURES, GOOD POLEWARD OUTFLOW, LOW TO MODERATE (15-20KT) \nVERTICAL WIND SHEAR, AND DRY AIR TO THE NORTH. GLOBAL MODELS ARE IN \nAGREEMENT THAT THE INVEST 90W WILL SLOWLY CONSOLIDATE OVER THE NEXT \n36-48 HOURS AND TRACK GENERALLY NORTH-NORTHWESTWARD AS THE CONVECTION \nAND WINDS BUILD. MAXIMUM SUSTAINED SURFACE WINDS ARE ESTIMATED AT 13 \nTO 18 KNOTS. MINIMUM SEA LEVEL PRESSURE IS ESTIMATED TO BE NEAR 1007 \nMB. THE POTENTIAL FOR THE DEVELOPMENT OF A SIGNIFICANT TROPICAL \nCYCLONE WITHIN THE NEXT 24 HOURS IS LOW.",
+      "metadata": {
+        "basin_section": "WESTERN NORTH PACIFIC AREA (180 TO MALAY PENINSULA)",
+        "invest_id": "90W",
+        "lat": 12.5,
+        "lon": 156.6,
+        "wind_kt_min": 13,
+        "wind_kt_max": 18,
+        "wind_kt": 18,
+        "pressure_mb": 1007,
+        "bulletin_issue_at": "2026-09-12T19:00:00+00:00"
+      }
+    },
+    "member_event_ids": [
+      212755
+    ],
+    "occurred_at": "2026-09-12T19:00:00+00:00",
+    "published_at": "2026-09-12T19:00:00+00:00",
+    "fetched_at": "2026-09-12T19:00:00+00:00"
+  },
+  {
+    "id": 212700,
+    "group_key": "typhoon|TC|nhc_ep|nhc_ep|ep97|484f240b4f9abc48",
+    "event_type": "typhoon",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "INVEST EP97",
+    "summary": "48h 80% HIGH · 7d 90% HIGH",
+    "started_at": "2026-09-12T17:22:00+00:00",
+    "updated_at": "2026-09-12T17:22:00+00:00",
+    "location_text": null,
+    "lat": null,
+    "lon": null,
+    "source_primary": "NHC-EP",
+    "source_secondary": "disturbance",
+    "status": "monitoring",
+    "map_url": null,
+    "official_link": null,
+    "country_code": null,
+    "payload": {
+      "item_type": "disturbance",
+      "source": "nhc_ep",
+      "source_key": "nhc_ep|ep97",
+      "content_hash": "484f240b4f9abc48",
+      "platform_summary": "48h 80% HIGH | 7d 90% HIGH",
+      "platform_location": null,
+      "wind": null,
+      "risk_48h": "80% HIGH",
+      "risk_7d": "90% HIGH",
+      "next_update": null,
+      "raw_text": "Central and Western East Pacific (EP97):\nShowers and thunderstorms associated with an area of low pressure \nlocated several hundred miles southwest of the southwestern coast \nof Mexico have become a little less organized this morning. \nEnvironmental conditions appear conducive for development, however, \nand a tropical depression is expected to form during the next couple \nof days while it moves generally west-northwestward to westward over \nthe central and western portions of the eastern Pacific basin. For \nmore information, including gale warnings, please see the High Seas \nForecast issued by the National Weather Service. \n* Formation chance through 48 hours...high...80 percent.\n* Formation chance through 7 days...high...90 percent.",
+      "metadata": {
+        "chance_48h_level": "HIGH",
+        "chance_48h_pct": "80",
+        "chance_7d_level": "HIGH",
+        "chance_7d_pct": "90",
+        "invest_id": "EP97",
+        "bulletin_issue_at": "2026-09-12T17:22:00+00:00"
+      }
+    },
+    "member_event_ids": [
+      212757
+    ],
+    "occurred_at": "2026-09-12T17:22:00+00:00",
+    "published_at": "2026-09-12T17:22:00+00:00",
+    "fetched_at": "2026-09-12T17:22:00+00:00"
+  },
+  {
+    "id": 212697,
+    "group_key": "typhoon|TC|cphc_cp|cphc_cp|ep97|484f240b4f9abc48",
+    "event_type": "typhoon",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "INVEST EP97",
+    "summary": "48h 80% HIGH · 7d 90% HIGH",
+    "started_at": "2026-09-12T17:22:00+00:00",
+    "updated_at": "2026-09-12T17:22:00+00:00",
+    "location_text": null,
+    "lat": null,
+    "lon": null,
+    "source_primary": "CPHC-CP",
+    "source_secondary": "disturbance",
+    "status": "monitoring",
+    "map_url": null,
+    "official_link": null,
+    "country_code": null,
+    "payload": {
+      "item_type": "disturbance",
+      "source": "cphc_cp",
+      "source_key": "cphc_cp|ep97",
+      "content_hash": "484f240b4f9abc48",
+      "platform_summary": "48h 80% HIGH | 7d 90% HIGH",
+      "platform_location": null,
+      "wind": null,
+      "risk_48h": "80% HIGH",
+      "risk_7d": "90% HIGH",
+      "next_update": null,
+      "raw_text": "Central and Western East Pacific (EP97):\nShowers and thunderstorms associated with an area of low pressure\nlocated several hundred miles southwest of the southwestern coast\nof Mexico have become a little less organized this morning.\nEnvironmental conditions appear conducive for development, however,\nand a tropical depression is expected to form during the next couple\nof days while it moves generally west-northwestward to westward over\nthe central and western portions of the eastern Pacific basin. For\nmore information, including gale warnings, please see the High Seas\nForecast issued by the National Weather Service.\n* Formation chance through 48 hours...high...80 percent.\n* Formation chance through 7 days...high...90 percent.",
+      "metadata": {
+        "chance_48h_level": "HIGH",
+        "chance_48h_pct": "80",
+        "chance_7d_level": "HIGH",
+        "chance_7d_pct": "90",
+        "invest_id": "EP97",
+        "bulletin_issue_at": "2026-09-12T17:22:00+00:00"
+      }
+    },
+    "member_event_ids": [
+      212760
+    ],
+    "occurred_at": "2026-09-12T17:22:00+00:00",
+    "published_at": "2026-09-12T17:22:00+00:00",
+    "fetched_at": "2026-09-12T17:22:00+00:00"
+  },
+  {
+    "id": 212701,
+    "group_key": "typhoon|TC|nhc_ep|nhc_ep|active_systems|b1d02474aeb19eea",
+    "event_type": "typhoon",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "Tropical Storm Norbert",
+    "summary": "active: Tropical Storm Norbert",
+    "started_at": "2026-09-12T17:22:00+00:00",
+    "updated_at": "2026-09-12T17:22:00+00:00",
+    "location_text": "Tropical Storm Norbert",
+    "lat": null,
+    "lon": null,
+    "source_primary": "NHC-EP",
+    "source_secondary": "active_systems",
+    "status": "active",
+    "map_url": null,
+    "official_link": null,
+    "country_code": null,
+    "payload": {
+      "item_type": "active_systems",
+      "source": "nhc_ep",
+      "source_key": "nhc_ep|active_systems",
+      "content_hash": "b1d02474aeb19eea",
+      "platform_summary": "active: Tropical Storm Norbert",
+      "platform_location": null,
+      "wind": null,
+      "risk_48h": null,
+      "risk_7d": null,
+      "next_update": null,
+      "raw_text": "The National Hurricane Center is issuing advisories on Tropical \nStorm Norbert, located well west-southwest of the southern tip of \nthe Baja California Peninsula.",
+      "metadata": {
+        "active_started": [
+          "Tropical Storm Norbert"
+        ],
+        "active_final": [],
+        "bulletin_issue_at": "2026-09-12T17:22:00+00:00"
+      }
+    },
+    "member_event_ids": [
+      212756
+    ],
+    "occurred_at": "2026-09-12T17:22:00+00:00",
+    "published_at": "2026-09-12T17:22:00+00:00",
+    "fetched_at": "2026-09-12T17:22:00+00:00"
+  },
+  {
+    "id": 212698,
+    "group_key": "typhoon|TC|cphc_cp|cphc_cp|active_systems|b1d02474aeb19eea",
+    "event_type": "typhoon",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "Tropical Storm Norbert",
+    "summary": "active: Tropical Storm Norbert",
+    "started_at": "2026-09-12T17:22:00+00:00",
+    "updated_at": "2026-09-12T17:22:00+00:00",
+    "location_text": "Tropical Storm Norbert",
+    "lat": null,
+    "lon": null,
+    "source_primary": "CPHC-CP",
+    "source_secondary": "active_systems",
+    "status": "active",
+    "map_url": null,
+    "official_link": null,
+    "country_code": null,
+    "payload": {
+      "item_type": "active_systems",
+      "source": "cphc_cp",
+      "source_key": "cphc_cp|active_systems",
+      "content_hash": "b1d02474aeb19eea",
+      "platform_summary": "active: Tropical Storm Norbert",
+      "platform_location": null,
+      "wind": null,
+      "risk_48h": null,
+      "risk_7d": null,
+      "next_update": null,
+      "raw_text": "The National Hurricane Center is issuing advisories on Tropical\nStorm Norbert, located well west-southwest of the southern tip of\nthe Baja California Peninsula.",
+      "metadata": {
+        "active_started": [
+          "Tropical Storm Norbert"
+        ],
+        "active_final": [],
+        "bulletin_issue_at": "2026-09-12T17:22:00+00:00"
+      }
+    },
+    "member_event_ids": [
+      212759
+    ],
+    "occurred_at": "2026-09-12T17:22:00+00:00",
+    "published_at": "2026-09-12T17:22:00+00:00",
+    "fetched_at": "2026-09-12T17:22:00+00:00"
+  },
+  {
+    "id": 212699,
+    "group_key": "typhoon|TC|nhc_ep|nhc_ep|well_southeast_of_the_hawaiian_islands|6f1a91323e42936f",
+    "event_type": "typhoon",
+    "severity_level": "low",
+    "severity_color": "low",
+    "title": "Well Southeast of the Hawaiian Islands",
+    "summary": "48h 10% LOW · 7d 10% LOW",
+    "started_at": "2026-09-12T17:22:00+00:00",
+    "updated_at": "2026-09-12T17:22:00+00:00",
+    "location_text": null,
+    "lat": null,
+    "lon": null,
+    "source_primary": "NHC-EP",
+    "source_secondary": "disturbance",
+    "status": "monitoring",
+    "map_url": null,
+    "official_link": null,
+    "country_code": null,
+    "payload": {
+      "item_type": "disturbance",
+      "source": "nhc_ep",
+      "source_key": "nhc_ep|well_southeast_of_the_hawaiian_islands",
+      "content_hash": "6f1a91323e42936f",
+      "platform_summary": "48h 10% LOW | 7d 10% LOW",
+      "platform_location": null,
+      "wind": null,
+      "risk_48h": "10% LOW",
+      "risk_7d": "10% LOW",
+      "next_update": null,
+      "raw_text": "Well Southeast of the Hawaiian Islands:\nA broad area of low pressure located several hundred miles \nsoutheast of Hilo, Hawaii, is producing disorganized showers and \nthunderstorms. Development of this system, if any, is expected to \nbe slow to occur while it drifts generally west-northwestward.\n* Formation chance through 48 hours...low...10 percent.\n* Formation chance through 7 days...low...10 percent.",
+      "metadata": {
+        "chance_48h_level": "LOW",
+        "chance_48h_pct": "10",
+        "chance_7d_level": "LOW",
+        "chance_7d_pct": "10",
+        "bulletin_issue_at": "2026-09-12T17:22:00+00:00"
+      }
+    },
+    "member_event_ids": [
+      212758
+    ],
+    "occurred_at": "2026-09-12T17:22:00+00:00",
+    "published_at": "2026-09-12T17:22:00+00:00",
+    "fetched_at": "2026-09-12T17:22:00+00:00"
+  },
+  {
+    "id": 212696,
+    "group_key": "typhoon|TC|cphc_cp|cphc_cp|well_southeast_of_the_hawaiian_islands|6f1a91323e42936f",
+    "event_type": "typhoon",
+    "severity_level": "low",
+    "severity_color": "low",
+    "title": "Well Southeast of the Hawaiian Islands",
+    "summary": "48h 10% LOW · 7d 10% LOW",
+    "started_at": "2026-09-12T17:22:00+00:00",
+    "updated_at": "2026-09-12T17:22:00+00:00",
+    "location_text": null,
+    "lat": null,
+    "lon": null,
+    "source_primary": "CPHC-CP",
+    "source_secondary": "disturbance",
+    "status": "monitoring",
+    "map_url": null,
+    "official_link": null,
+    "country_code": null,
+    "payload": {
+      "item_type": "disturbance",
+      "source": "cphc_cp",
+      "source_key": "cphc_cp|well_southeast_of_the_hawaiian_islands",
+      "content_hash": "6f1a91323e42936f",
+      "platform_summary": "48h 10% LOW | 7d 10% LOW",
+      "platform_location": null,
+      "wind": null,
+      "risk_48h": "10% LOW",
+      "risk_7d": "10% LOW",
+      "next_update": null,
+      "raw_text": "Well Southeast of the Hawaiian Islands:\nA broad area of low pressure located several hundred miles\nsoutheast of Hilo, Hawaii, is producing disorganized showers and\nthunderstorms. Development of this system, if any, is expected to\nbe slow to occur while it drifts generally west-northwestward.\n* Formation chance through 48 hours...low...10 percent.\n* Formation chance through 7 days...low...10 percent.",
+      "metadata": {
+        "chance_48h_level": "LOW",
+        "chance_48h_pct": "10",
+        "chance_7d_level": "LOW",
+        "chance_7d_pct": "10",
+        "bulletin_issue_at": "2026-09-12T17:22:00+00:00"
+      }
+    },
+    "member_event_ids": [
+      212761
+    ],
+    "occurred_at": "2026-09-12T17:22:00+00:00",
+    "published_at": "2026-09-12T17:22:00+00:00",
+    "fetched_at": "2026-09-12T17:22:00+00:00"
+  },
+  {
+    "id": 212702,
+    "group_key": "volcano|3a47680525057cb0802edd459c0dd8706dbca7b3",
+    "event_type": "volcano",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "San Miguel",
+    "summary": "VRP 600.98 MW · MODIS · 28.84 km",
+    "started_at": "2026-09-12T14:55:00+00:00",
+    "updated_at": "2026-09-12T14:55:00+00:00",
+    "location_text": "San Miguel",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "MODIS",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=343100",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=343100",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "343100",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=343100",
+      "vrp_mw": 600.98,
+      "distance_km": 28.84,
+      "sensor": "MODIS",
+      "row_class": [
+        "high"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "MODIS"
+      ],
+      "reports": [
+        {
+          "volcano_id": "343100",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=343100",
+          "vrp_mw": 600.98,
+          "distance_km": 28.84,
+          "sensor": "MODIS",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 1
+    },
+    "member_event_ids": [
+      212746
+    ],
+    "occurred_at": "2026-09-12T14:55:00+00:00",
+    "published_at": "2026-09-12T14:55:00+00:00",
+    "fetched_at": "2026-09-12T14:55:00+00:00"
+  },
+  {
+    "id": 212703,
+    "group_key": "volcano|03dad40b1e0e4a45057ff6a8a36fd36e1f131b4f",
+    "event_type": "volcano",
+    "severity_level": "very_high",
+    "severity_color": "very_high",
+    "title": "Kilauea",
+    "summary": "VRP 1630.17 MW · MODIS · 12.17 km",
+    "started_at": "2026-09-12T14:20:00+00:00",
+    "updated_at": "2026-09-12T14:20:00+00:00",
+    "location_text": "Kilauea",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "MODIS",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=332010",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=332010",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "332010",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=332010",
+      "vrp_mw": 1630.17,
+      "distance_km": 12.17,
+      "sensor": "MODIS",
+      "row_class": [
+        "very_high"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "MODIS"
+      ],
+      "reports": [
+        {
+          "volcano_id": "332010",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=332010",
+          "vrp_mw": 1630.17,
+          "distance_km": 12.17,
+          "sensor": "MODIS",
+          "row_class": [
+            "very_high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 1
+    },
+    "member_event_ids": [
+      212747
+    ],
+    "occurred_at": "2026-09-12T14:20:00+00:00",
+    "published_at": "2026-09-12T14:20:00+00:00",
+    "fetched_at": "2026-09-12T14:20:00+00:00"
+  },
+  {
+    "id": 212704,
+    "group_key": "volcano|920f24bb4e89bb710ec6f179d2949ea2bafb4eba",
+    "event_type": "volcano",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Kilauea",
+    "summary": "VRP 577.74 MW · VIIRS375 / VIIRS · 11.78 km",
+    "started_at": "2026-09-12T12:48:02+00:00",
+    "updated_at": "2026-09-12T12:48:02+00:00",
+    "location_text": "Kilauea",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "VIIRS375 / VIIRS",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=332010",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=332010",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "332010",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=332010",
+      "vrp_mw": 577.74,
+      "distance_km": 12.37,
+      "sensor": "VIIRS",
+      "row_class": [
+        "high"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "VIIRS375",
+        "VIIRS"
+      ],
+      "reports": [
+        {
+          "volcano_id": "332010",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=332010",
+          "vrp_mw": 325.25,
+          "distance_km": 11.78,
+          "sensor": "VIIRS375",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        },
+        {
+          "volcano_id": "332010",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=332010",
+          "vrp_mw": 577.74,
+          "distance_km": 12.37,
+          "sensor": "VIIRS",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 2
+    },
+    "member_event_ids": [
+      212748
+    ],
+    "occurred_at": "2026-09-12T12:48:02+00:00",
+    "published_at": "2026-09-12T12:48:02+00:00",
+    "fetched_at": "2026-09-12T12:48:02+00:00"
+  },
+  {
+    "id": 212705,
+    "group_key": "volcano|3218cb40a7b80c97ccf82b02fbcf8a17a27ee2b7",
+    "event_type": "volcano",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Tengger Caldera",
+    "summary": "VRP 551.75 MW · VIIRS / VIIRS375 · 1.35 km",
+    "started_at": "2026-09-12T06:12:01+00:00",
+    "updated_at": "2026-09-12T06:12:01+00:00",
+    "location_text": "Tengger Caldera",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "VIIRS / VIIRS375",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=263310",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=263310",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "263310",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=263310",
+      "vrp_mw": 551.75,
+      "distance_km": 3.82,
+      "sensor": "VIIRS",
+      "row_class": [
+        "high",
+        "low"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "VIIRS",
+        "VIIRS375"
+      ],
+      "reports": [
+        {
+          "volcano_id": "263310",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=263310",
+          "vrp_mw": 551.75,
+          "distance_km": 3.82,
+          "sensor": "VIIRS",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        },
+        {
+          "volcano_id": "263310",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=263310",
+          "vrp_mw": 3.93,
+          "distance_km": 1.35,
+          "sensor": "VIIRS375",
+          "row_class": [
+            "low"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 2
+    },
+    "member_event_ids": [
+      212749
+    ],
+    "occurred_at": "2026-09-12T06:12:01+00:00",
+    "published_at": "2026-09-12T06:12:01+00:00",
+    "fetched_at": "2026-09-12T06:12:01+00:00"
+  },
+  {
+    "id": 212706,
+    "group_key": "earthquake|us7000tgvr",
+    "event_type": "earthquake",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "M 5.1 - South Sandwich Islands region",
+    "summary": "South Sandwich Islands region",
+    "started_at": "2026-09-12T00:55:08.418000+00:00",
+    "updated_at": "2026-09-12T01:14:31.040000+00:00",
+    "location_text": "South Sandwich Islands region",
+    "lat": -59.1348,
+    "lon": -24.9274,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tgvr",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tgvr",
+    "country_code": null,
+    "payload": {
+      "mag": 5.1,
+      "depth_km": 10.0,
+      "place": "South Sandwich Islands region",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us7000tgvr.geojson",
+      "alert": null,
+      "sig": 400,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      212744
+    ],
+    "occurred_at": "2026-09-12T00:55:08.418000+00:00",
+    "published_at": "2026-09-12T00:55:08.418000+00:00",
+    "fetched_at": "2026-09-12T00:55:08.418000+00:00"
+  },
+  {
+    "id": 212707,
+    "group_key": "flood|02e0cb9287170731820781efeefc356715a4e103",
+    "event_type": "flood",
+    "severity_level": "red",
+    "severity_color": "red",
+    "title": "Flood in Nepal",
+    "summary": "Nepal",
+    "started_at": "2026-08-26T01:00:00+00:00",
+    "updated_at": "2026-09-12T22:30:23+00:00",
+    "location_text": "Nepal",
+    "lat": null,
+    "lon": null,
+    "source_primary": "GDACS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://www.gdacs.org/report.aspx?eventid=1104124&episodeid=1&eventtype=FL",
+    "official_link": "https://www.gdacs.org/report.aspx?eventid=1104124&episodeid=1&eventtype=FL",
+    "country_code": null,
+    "payload": {
+      "eventid": "1104124",
+      "episodeid": "1",
+      "alertlevel": "red",
+      "report_url": "https://www.gdacs.org/report.aspx?eventid=1104124&episodeid=1&eventtype=FL",
+      "geometry_url": null,
+      "details_url": null,
+      "source_page": "https://www.gdacs.org/Alerts/",
+      "active_within_days": 14,
+      "raw": {
+        "eventtype": "FL",
+        "eventid": 1104124,
+        "episodeid": 1,
+        "eventname": "",
+        "glide": "FL-2026-000167-NPL",
+        "name": "Flood in Nepal",
+        "description": "Flood in Nepal",
+        "htmldescription": "Red Flood in Nepal from: 26 Aug 2026 01 to: 01 Sep 2026 14.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Red/FL.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Red/FL.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=FL&eventid=1104124&episodeid=1",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1104124&episodeid=1&eventtype=FL",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=FL&eventid=1104124"
+        },
+        "alertlevel": "Red",
+        "alertscore": 3,
+        "episodealertlevel": "Red",
+        "episodealertscore": 2.5,
+        "istemporary": "false",
+        "iscurrent": "false",
+        "country": "Nepal",
+        "fromdate": "2026-08-26T01:00:00",
+        "todate": "2026-09-01T14:00:00",
+        "datemodified": "2026-09-12T22:30:23",
+        "iso3": "NPL",
+        "source": "GLOFAS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "NP",
+            "iso3": "NPL",
+            "countryname": "Nepal"
+          }
+        ],
+        "severitydata": {
+          "severity": 0.0,
+          "severitytext": "Magnitude 0 ",
+          "severityunit": ""
+        }
+      }
+    },
+    "member_event_ids": [
+      212750
+    ],
+    "occurred_at": "2026-08-26T01:00:00+00:00",
+    "published_at": "2026-08-26T01:00:00+00:00",
+    "fetched_at": "2026-08-26T01:00:00+00:00"
+  },
+  {
+    "id": 212708,
+    "group_key": "flood|5950d64d9323491f520584d8956ab6089509ad2e",
+    "event_type": "flood",
+    "severity_level": "orange",
+    "severity_color": "orange",
+    "title": "Flood in India",
+    "summary": "India",
+    "started_at": "2026-08-09T01:00:00+00:00",
+    "updated_at": "2026-09-08T08:37:00+00:00",
+    "location_text": "India",
+    "lat": null,
+    "lon": null,
+    "source_primary": "GDACS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://www.gdacs.org/report.aspx?eventid=1104121&episodeid=12&eventtype=FL",
+    "official_link": "https://www.gdacs.org/report.aspx?eventid=1104121&episodeid=12&eventtype=FL",
+    "country_code": null,
+    "payload": {
+      "eventid": "1104121",
+      "episodeid": "12",
+      "alertlevel": "orange",
+      "report_url": "https://www.gdacs.org/report.aspx?eventid=1104121&episodeid=12&eventtype=FL",
+      "geometry_url": null,
+      "details_url": null,
+      "source_page": "https://www.gdacs.org/Alerts/",
+      "active_within_days": 14,
+      "raw": {
+        "eventtype": "FL",
+        "eventid": 1104121,
+        "episodeid": 12,
+        "eventname": "",
+        "glide": "FL-2026-000165-IND",
+        "name": "Flood in India",
+        "description": "Flood in India",
+        "htmldescription": "Orange Flood in India from: 09 Aug 2026 01 to: 03 Sep 2026 01.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/FL.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/FL.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=FL&eventid=1104121&episodeid=12",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1104121&episodeid=12&eventtype=FL",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=FL&eventid=1104121"
+        },
+        "alertlevel": "Orange",
+        "alertscore": 2,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "false",
+        "country": "India",
+        "fromdate": "2026-08-09T01:00:00",
+        "todate": "2026-09-03T01:00:00",
+        "datemodified": "2026-09-08T08:37:00",
+        "iso3": "IND",
+        "source": "GLOFAS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "IN",
+            "iso3": "IND",
+            "countryname": "India"
+          }
+        ],
+        "severitydata": {
+          "severity": 0.0,
+          "severitytext": "Magnitude 0 ",
+          "severityunit": ""
+        }
+      }
+    },
+    "member_event_ids": [
+      212751
+    ],
+    "occurred_at": "2026-08-09T01:00:00+00:00",
+    "published_at": "2026-08-09T01:00:00+00:00",
+    "fetched_at": "2026-08-09T01:00:00+00:00"
+  },
+  {
+    "id": 212709,
+    "group_key": "flood|54e87355af0efebd5f73f5b86b01825b26214db9",
+    "event_type": "flood",
+    "severity_level": "orange",
+    "severity_color": "orange",
+    "title": "Flood in China",
+    "summary": "China",
+    "started_at": "2026-07-31T01:00:00+00:00",
+    "updated_at": "2026-09-06T06:23:52+00:00",
+    "location_text": "China",
+    "lat": null,
+    "lon": null,
+    "source_primary": "GDACS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://www.gdacs.org/report.aspx?eventid=1104081&episodeid=17&eventtype=FL",
+    "official_link": "https://www.gdacs.org/report.aspx?eventid=1104081&episodeid=17&eventtype=FL",
+    "country_code": null,
+    "payload": {
+      "eventid": "1104081",
+      "episodeid": "17",
+      "alertlevel": "orange",
+      "report_url": "https://www.gdacs.org/report.aspx?eventid=1104081&episodeid=17&eventtype=FL",
+      "geometry_url": null,
+      "details_url": null,
+      "source_page": "https://www.gdacs.org/Alerts/",
+      "active_within_days": 14,
+      "raw": {
+        "eventtype": "FL",
+        "eventid": 1104081,
+        "episodeid": 17,
+        "eventname": "",
+        "glide": "FL-2026-000148-CHN",
+        "name": "Flood in China",
+        "description": "Flood in China",
+        "htmldescription": "Orange Flood in China from: 31 Jul 2026 01 to: 07 Sep 2026 01.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/FL.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/FL.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=FL&eventid=1104081&episodeid=17",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1104081&episodeid=17&eventtype=FL",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=FL&eventid=1104081"
+        },
+        "alertlevel": "Orange",
+        "alertscore": 2,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "false",
+        "country": "China",
+        "fromdate": "2026-07-31T01:00:00",
+        "todate": "2026-09-07T01:00:00",
+        "datemodified": "2026-09-06T06:23:52",
+        "iso3": "CHN",
+        "source": "GLOFAS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "CN",
+            "iso3": "CHN",
+            "countryname": "China"
+          }
+        ],
+        "severitydata": {
+          "severity": 0.0,
+          "severitytext": "Magnitude 0 ",
+          "severityunit": ""
+        }
+      }
+    },
+    "member_event_ids": [
+      212752
+    ],
+    "occurred_at": "2026-07-31T01:00:00+00:00",
+    "published_at": "2026-07-31T01:00:00+00:00",
+    "fetched_at": "2026-07-31T01:00:00+00:00"
+  },
+  {
+    "id": 212710,
+    "group_key": "flood|65f3f8a131846a8362b00987b302de0e713cf8ac",
+    "event_type": "flood",
+    "severity_level": "orange",
+    "severity_color": "orange",
+    "title": "Flood in Afghanistan",
+    "summary": "Afghanistan",
+    "started_at": "2026-03-25T01:00:00+00:00",
+    "updated_at": "2026-09-03T13:36:40+00:00",
+    "location_text": "Afghanistan",
+    "lat": null,
+    "lon": null,
+    "source_primary": "GDACS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://www.gdacs.org/report.aspx?eventid=1103815&episodeid=1&eventtype=FL",
+    "official_link": "https://www.gdacs.org/report.aspx?eventid=1103815&episodeid=1&eventtype=FL",
+    "country_code": null,
+    "payload": {
+      "eventid": "1103815",
+      "episodeid": "1",
+      "alertlevel": "orange",
+      "report_url": "https://www.gdacs.org/report.aspx?eventid=1103815&episodeid=1&eventtype=FL",
+      "geometry_url": null,
+      "details_url": null,
+      "source_page": "https://www.gdacs.org/Alerts/",
+      "active_within_days": 14,
+      "raw": {
+        "eventtype": "FL",
+        "eventid": 1103815,
+        "episodeid": 1,
+        "eventname": "",
+        "glide": "FL-2026-000047-AFG",
+        "name": "Flood in Afghanistan",
+        "description": "Flood in Afghanistan",
+        "htmldescription": "Orange Flood in Afghanistan from: 25 Mar 2026 01 to: 14 Apr 2026 01.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/FL.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/FL.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=FL&eventid=1103815&episodeid=1",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1103815&episodeid=1&eventtype=FL",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=FL&eventid=1103815"
+        },
+        "alertlevel": "Orange",
+        "alertscore": 2,
+        "episodealertlevel": "Orange",
+        "episodealertscore": 1.5,
+        "istemporary": "false",
+        "iscurrent": "false",
+        "country": "Afghanistan",
+        "fromdate": "2026-03-25T01:00:00",
+        "todate": "2026-04-14T01:00:00",
+        "datemodified": "2026-09-03T13:36:40",
+        "iso3": "AFG",
+        "source": "GLOFAS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "AF",
+            "iso3": "AFG",
+            "countryname": "Afghanistan"
+          }
+        ],
+        "severitydata": {
+          "severity": 0.0,
+          "severitytext": "Magnitude 0 ",
+          "severityunit": ""
+        }
+      }
+    },
+    "member_event_ids": [
+      212753
+    ],
+    "occurred_at": "2026-03-25T01:00:00+00:00",
+    "published_at": "2026-03-25T01:00:00+00:00",
+    "fetched_at": "2026-03-25T01:00:00+00:00"
+  }
+]

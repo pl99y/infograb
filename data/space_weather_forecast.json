@@ -1,0 +1,88 @@
+{
+  "id": 655,
+  "forecast_key": "swpc_default",
+  "forecast_issued_at": "2026-09-26T12:30:00+00:00",
+  "geomag_issued_at": "2026-09-25T22:05:00+00:00",
+  "raw_forecast_text": ":Product: 3-Day Forecast\n:Issued: 2026 Sep 26 1230 UTC\n# Prepared by the U.S. Dept. of Commerce, NOAA, Space Weather Prediction Center\n#\nA. NOAA Geomagnetic Activity Observation and Forecast\n\nThe greatest observed 3 hr Kp over the past 24 hours was 4 (below NOAA\nScale levels).\nThe greatest expected 3 hr Kp for Sep 26-Sep 28 2026 is 4.00 (below NOAA\nScale levels).\n\nNOAA Kp index breakdown Sep 26-Sep 28 2026\n\n             Sep 26       Sep 27       Sep 28\n00-03UT       3.33         2.67         1.67     \n03-06UT       4.00         3.00         2.00     \n06-09UT       3.67         2.67         1.67     \n09-12UT       2.67         2.67         1.67     \n12-15UT       2.00         2.00         1.67     \n15-18UT       1.67         1.67         0.67     \n18-21UT       1.67         1.67         0.67     \n21-00UT       2.33         2.00         1.67     \n\nRationale: No G1 (Minor) or greater geomagnetic storms are expected\nthrough 28 Sep as no significant transient or recurrent solar wind\nfeatures are forecast.\n\nB. NOAA Solar Radiation Activity Observation and Forecast\n\nSolar radiation, as observed by NOAA GOES-18 over the past 24 hours, was\nbelow S-scale storm level thresholds.\n\nSolar Radiation Storm Forecast for Sep 26-Sep 28 2026\n\n              Sep 26  Sep 27  Sep 28\nS1 or greater    1%      1%      1%\n\nRationale: No S1 (Minor) or greater solar radiation storms are expected.\nNo significant active region activity favorable for radiation storm\nproduction is forecast.\n\nC. NOAA Radio Blackout Activity and Forecast\n\nNo radio blackouts were observed over the past 24 hours.\n\nRadio Blackout Forecast for Sep 26-Sep 28 2026\n\n              Sep 26        Sep 27        Sep 28\nR1-R2           10%           10%            5%\nR3 or greater    1%            1%            1%\n\nRationale: There is a slight chance for R1-R2 (Minor-Moderate) radio\nblackouts through 28 Sep.\n",
+  "raw_geomag_text": ":Product: Geomagnetic Forecast\n:Issued: 2026 Sep 25 2205 UTC\n# Prepared by the U.S. Dept. of Commerce, NOAA, Space Weather Prediction Center\n#\nNOAA Ap Index Forecast\nObserved Ap 24 Sep 016\nEstimated Ap 25 Sep 020\nPredicted Ap 26 Sep-28 Sep 012-010-005\n\nNOAA Geomagnetic Activity Probabilities 26 Sep-28 Sep\nActive                35/20/15\nMinor storm           20/05/01\nModerate storm        05/01/01\nStrong-Extreme storm  01/01/01\n\nNOAA Kp index forecast 26 Sep - 28 Sep\n             Sep 26    Sep 27    Sep 28\n00-03UT        2.67      2.67      1.67      \n03-06UT        3.67      3.00      2.00      \n06-09UT        3.67      2.67      1.67      \n09-12UT        2.67      2.67      1.67      \n12-15UT        2.00      2.00      1.67      \n15-18UT        1.67      1.67      0.67      \n18-21UT        1.67      1.67      0.67      \n21-00UT        2.33      2.00      1.67      \n",
+  "source_name": "SWPC Forecast",
+  "source_url": "https://services.swpc.noaa.gov/text/3-day-forecast.txt",
+  "fetched_at": "2026-09-26T18:07:12.067036+00:00",
+  "created_at": "2026-09-26 18:07:21",
+  "panel": {
+    "forecast_issued_at": "2026-09-26T12:30:00+00:00",
+    "geomag_issued_at": "2026-09-25T22:05:00+00:00",
+    "geomagnetic": {
+      "observed_summary": "过去 24 小时内观测到的最大 3 小时 Kp 指数为 4（低于 NOAA 规模等级）。",
+      "expected_summary": "预计 2026 年 9 月 26 日至 9 月 28 日期间的最大 3 小时 Kp 指数为 4。",
+      "rationale": "预计到 9 月 28 日前不会出现 G1（微弱）或更高级别的地磁风暴，因为未预报有显著的瞬态或复发性太阳风特征。",
+      "days": [
+        "Sep 26",
+        "Sep 27",
+        "Sep 28"
+      ],
+      "ap_index": {
+        "observed": "24 Sep 016 Estimated Ap 25 Sep 020 Predicted Ap 26 Sep-28 Sep 012-010-005 NOAA Geomagnetic Activity Probabilities 26 Sep-28 Sep Active 35/20/15 Minor storm 20/05/01 Moderate storm 05/01/01 Strong-Extreme storm 01/01/01 NOAA Kp index forecast 26 Sep - 28 Sep Sep 26 Sep 27 Sep 28 00-03UT 2.67 2.67 1.67 03-06UT 3.67 3.00 2.00 06-09UT 3.67 2.67 1.67 09-12UT 2.67 2.67 1.67 12-15UT 2.00 2.00 1.67 15-18UT 1.67 1.67 0.67 18-21UT 1.67 1.67 0.67 21-00UT 2.33 2.00 1.67",
+        "estimated": "25 Sep 020 Predicted Ap 26 Sep-28 Sep 012-010-005 NOAA Geomagnetic Activity Probabilities 26 Sep-28 Sep Active 35/20/15 Minor storm 20/05/01 Moderate storm 05/01/01 Strong-Extreme storm 01/01/01 NOAA Kp index forecast 26 Sep - 28 Sep Sep 26 Sep 27 Sep 28 00-03UT 2.67 2.67 1.67 03-06UT 3.67 3.00 2.00 06-09UT 3.67 2.67 1.67 09-12UT 2.67 2.67 1.67 12-15UT 2.00 2.00 1.67 15-18UT 1.67 1.67 0.67 18-21UT 1.67 1.67 0.67 21-00UT 2.33 2.00 1.67",
+        "predicted": "26 Sep-28 Sep 012-010-005 NOAA Geomagnetic Activity Probabilities 26 Sep-28 Sep Active 35/20/15 Minor storm 20/05/01 Moderate storm 05/01/01 Strong-Extreme storm 01/01/01 NOAA Kp index forecast 26 Sep - 28 Sep Sep 26 Sep 27 Sep 28 00-03UT 2.67 2.67 1.67 03-06UT 3.67 3.00 2.00 06-09UT 3.67 2.67 1.67 09-12UT 2.67 2.67 1.67 12-15UT 2.00 2.00 1.67 15-18UT 1.67 1.67 0.67 18-21UT 1.67 1.67 0.67 21-00UT 2.33 2.00 1.67"
+      },
+      "probabilities": {
+        "active": [
+          35,
+          20,
+          15
+        ],
+        "minor_storm": [
+          20,
+          5,
+          1
+        ],
+        "moderate_storm": [
+          5,
+          1,
+          1
+        ],
+        "strong_extreme_storm": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "solar_radiation": {
+      "observed_summary": "根据 NOAA GOES-18 在过去 24 小时的观测，太阳辐射低于 S 级风暴阈值。",
+      "days": [
+        "Sep 26",
+        "Sep 27",
+        "Sep 28"
+      ],
+      "s1_or_greater": [
+        "1%",
+        "1%",
+        "1%"
+      ],
+      "rationale": "预计不会出现 S1（微弱）或更高级别的太阳辐射风暴。预计没有有利于产生辐射风暴的显著活动区活动。"
+    },
+    "radio_blackout": {
+      "observed_summary": "过去 24 小时内未观测到无线电中断。",
+      "days": [
+        "Sep 26",
+        "Sep 27",
+        "Sep 28"
+      ],
+      "r1_r2": [
+        "10%",
+        "10%",
+        "5%"
+      ],
+      "r3_or_greater": [
+        "1%",
+        "1%",
+        "1%"
+      ],
+      "rationale": "到 9 月 28 日前，出现 R1-R2（微弱至中度）无线电中断的可能性很小。"
+    },
+    "raw_forecast_text": ":Product: 3-Day Forecast\n:Issued: 2026 Sep 26 1230 UTC\n# Prepared by the U.S. Dept. of Commerce, NOAA, Space Weather Prediction Center\n#\nA. NOAA Geomagnetic Activity Observation and Forecast\n\nThe greatest observed 3 hr Kp over the past 24 hours was 4 (below NOAA\nScale levels).\nThe greatest expected 3 hr Kp for Sep 26-Sep 28 2026 is 4.00 (below NOAA\nScale levels).\n\nNOAA Kp index breakdown Sep 26-Sep 28 2026\n\n             Sep 26       Sep 27       Sep 28\n00-03UT       3.33         2.67         1.67     \n03-06UT       4.00         3.00         2.00     \n06-09UT       3.67         2.67         1.67     \n09-12UT       2.67         2.67         1.67     \n12-15UT       2.00         2.00         1.67     \n15-18UT       1.67         1.67         0.67     \n18-21UT       1.67         1.67         0.67     \n21-00UT       2.33         2.00         1.67     \n\nRationale: No G1 (Minor) or greater geomagnetic storms are expected\nthrough 28 Sep as no significant transient or recurrent solar wind\nfeatures are forecast.\n\nB. NOAA Solar Radiation Activity Observation and Forecast\n\nSolar radiation, as observed by NOAA GOES-18 over the past 24 hours, was\nbelow S-scale storm level thresholds.\n\nSolar Radiation Storm Forecast for Sep 26-Sep 28 2026\n\n              Sep 26  Sep 27  Sep 28\nS1 or greater    1%      1%      1%\n\nRationale: No S1 (Minor) or greater solar radiation storms are expected.\nNo significant active region activity favorable for radiation storm\nproduction is forecast.\n\nC. NOAA Radio Blackout Activity and Forecast\n\nNo radio blackouts were observed over the past 24 hours.\n\nRadio Blackout Forecast for Sep 26-Sep 28 2026\n\n              Sep 26        Sep 27        Sep 28\nR1-R2           10%           10%            5%\nR3 or greater    1%            1%            1%\n\nRationale: There is a slight chance for R1-R2 (Minor-Moderate) radio\nblackouts through 28 Sep.\n",
+    "raw_geomag_text": ":Product: Geomagnetic Forecast\n:Issued: 2026 Sep 25 2205 UTC\n# Prepared by the U.S. Dept. of Commerce, NOAA, Space Weather Prediction Center\n#\nNOAA Ap Index Forecast\nObserved Ap 24 Sep 016\nEstimated Ap 25 Sep 020\nPredicted Ap 26 Sep-28 Sep 012-010-005\n\nNOAA Geomagnetic Activity Probabilities 26 Sep-28 Sep\nActive                35/20/15\nMinor storm           20/05/01\nModerate storm        05/01/01\nStrong-Extreme storm  01/01/01\n\nNOAA Kp index forecast 26 Sep - 28 Sep\n             Sep 26    Sep 27    Sep 28\n00-03UT        2.67      2.67      1.67      \n03-06UT        3.67      3.00      2.00      \n06-09UT        3.67      2.67      1.67      \n09-12UT        2.67      2.67      1.67      \n12-15UT        2.00      2.00      1.67      \n15-18UT        1.67      1.67      0.67      \n18-21UT        1.67      1.67      0.67      \n21-00UT        2.33      2.00      1.67      \n"
+  }
+}

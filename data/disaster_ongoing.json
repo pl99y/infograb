@@ -1,0 +1,702 @@
+[
+  {
+    "id": 269875,
+    "group_key": "typhoon|TC|nhc_at|nhc_at|off_the_east_coast_of_the_united_states|022a53704e3158e9",
+    "event_type": "typhoon",
+    "severity_level": "low",
+    "severity_color": "low",
+    "title": "Off the East Coast of the United States",
+    "summary": "48h near 0% LOW · 7d 30% LOW",
+    "started_at": "2026-10-17T23:21:00+00:00",
+    "updated_at": "2026-10-17T23:21:00+00:00",
+    "location_text": null,
+    "lat": null,
+    "lon": null,
+    "source_primary": "NHC-AT",
+    "source_secondary": "disturbance",
+    "status": "monitoring",
+    "map_url": null,
+    "official_link": null,
+    "country_code": null,
+    "payload": {
+      "item_type": "disturbance",
+      "source": "nhc_at",
+      "source_key": "nhc_at|off_the_east_coast_of_the_united_states",
+      "content_hash": "022a53704e3158e9",
+      "platform_summary": "48h near 0% LOW | 7d 30% LOW",
+      "platform_location": null,
+      "wind": null,
+      "risk_48h": "near 0% LOW",
+      "risk_7d": "30% LOW",
+      "next_update": null,
+      "raw_text": "Off the East Coast of the United States:\nA strong non-tropical low pressure area is expected to form by \nSunday night off the southeast coast of the United States. This low \nis likely to move slowly and erratically through the middle of next \nweek, and some subtropical development is possible during this \ntime. Regardless of development, this system will cause high winds, \ncoastal flooding, and dangerous surf along portions of the U.S. East \nCoast. Please consult statements and warnings from local National \nWeather Service offices and the Weather Prediction Center for more \ninformation, along with High Seas Forecasts issued by the National \nWeather Service.\n* Formation chance through 48 hours...low...near 0 percent.\n* Formation chance through 7 days...low...30 percent.",
+      "metadata": {
+        "chance_48h_level": "LOW",
+        "chance_48h_pct": "near 0",
+        "chance_7d_level": "LOW",
+        "chance_7d_pct": "30",
+        "bulletin_issue_at": "2026-10-17T23:21:00+00:00"
+      }
+    },
+    "member_event_ids": [
+      269948
+    ],
+    "occurred_at": "2026-10-17T23:21:00+00:00",
+    "published_at": "2026-10-17T23:21:00+00:00",
+    "fetched_at": "2026-10-17T23:21:00+00:00"
+  },
+  {
+    "id": 269878,
+    "group_key": "typhoon|TC|nhc_ep|nhc_ep|active_systems|384bbb6316ecda76",
+    "event_type": "typhoon",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "Hurricane Trudy",
+    "summary": "active: Hurricane Trudy",
+    "started_at": "2026-10-17T23:20:00+00:00",
+    "updated_at": "2026-10-17T23:20:00+00:00",
+    "location_text": "Hurricane Trudy",
+    "lat": null,
+    "lon": null,
+    "source_primary": "NHC-EP",
+    "source_secondary": "active_systems",
+    "status": "active",
+    "map_url": null,
+    "official_link": null,
+    "country_code": null,
+    "payload": {
+      "item_type": "active_systems",
+      "source": "nhc_ep",
+      "source_key": "nhc_ep|active_systems",
+      "content_hash": "384bbb6316ecda76",
+      "platform_summary": "active: Hurricane Trudy",
+      "platform_location": null,
+      "wind": null,
+      "risk_48h": null,
+      "risk_7d": null,
+      "next_update": null,
+      "raw_text": "The National Hurricane Center is issuing advisories on Hurricane \nTrudy, located offshore of southwestern Mexico.",
+      "metadata": {
+        "active_started": [
+          "Hurricane Trudy"
+        ],
+        "active_final": [],
+        "bulletin_issue_at": "2026-10-17T23:20:00+00:00"
+      }
+    },
+    "member_event_ids": [
+      269949
+    ],
+    "occurred_at": "2026-10-17T23:20:00+00:00",
+    "published_at": "2026-10-17T23:20:00+00:00",
+    "fetched_at": "2026-10-17T23:20:00+00:00"
+  },
+  {
+    "id": 269876,
+    "group_key": "typhoon|TC|cphc_cp|cphc_cp|active_systems|384bbb6316ecda76",
+    "event_type": "typhoon",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "Hurricane Trudy",
+    "summary": "active: Hurricane Trudy",
+    "started_at": "2026-10-17T23:20:00+00:00",
+    "updated_at": "2026-10-17T23:20:00+00:00",
+    "location_text": "Hurricane Trudy",
+    "lat": null,
+    "lon": null,
+    "source_primary": "CPHC-CP",
+    "source_secondary": "active_systems",
+    "status": "active",
+    "map_url": null,
+    "official_link": null,
+    "country_code": null,
+    "payload": {
+      "item_type": "active_systems",
+      "source": "cphc_cp",
+      "source_key": "cphc_cp|active_systems",
+      "content_hash": "384bbb6316ecda76",
+      "platform_summary": "active: Hurricane Trudy",
+      "platform_location": null,
+      "wind": null,
+      "risk_48h": null,
+      "risk_7d": null,
+      "next_update": null,
+      "raw_text": "The National Hurricane Center is issuing advisories on Hurricane\nTrudy, located offshore of southwestern Mexico.",
+      "metadata": {
+        "active_started": [
+          "Hurricane Trudy"
+        ],
+        "active_final": [],
+        "bulletin_issue_at": "2026-10-17T23:20:00+00:00"
+      }
+    },
+    "member_event_ids": [
+      269951
+    ],
+    "occurred_at": "2026-10-17T23:20:00+00:00",
+    "published_at": "2026-10-17T23:20:00+00:00",
+    "fetched_at": "2026-10-17T23:20:00+00:00"
+  },
+  {
+    "id": 269877,
+    "group_key": "typhoon|TC|nhc_ep|nhc_ep|south_of_southern_mexico|9c069f484c730b83",
+    "event_type": "typhoon",
+    "severity_level": "low",
+    "severity_color": "low",
+    "title": "South of Southern Mexico",
+    "summary": "48h near 0% LOW · 7d 80% HIGH",
+    "started_at": "2026-10-17T23:20:00+00:00",
+    "updated_at": "2026-10-17T23:20:00+00:00",
+    "location_text": null,
+    "lat": null,
+    "lon": null,
+    "source_primary": "NHC-EP",
+    "source_secondary": "disturbance",
+    "status": "monitoring",
+    "map_url": null,
+    "official_link": null,
+    "country_code": null,
+    "payload": {
+      "item_type": "disturbance",
+      "source": "nhc_ep",
+      "source_key": "nhc_ep|south_of_southern_mexico",
+      "content_hash": "9c069f484c730b83",
+      "platform_summary": "48h near 0% LOW | 7d 80% HIGH",
+      "platform_location": null,
+      "wind": null,
+      "risk_48h": "near 0% LOW",
+      "risk_7d": "80% HIGH",
+      "next_update": null,
+      "raw_text": "South of Southern Mexico:\nAn area of low pressure is forecast to form well offshore of \nsouthern Mexico within a couple of days. Environmental conditions \nappear conducive for gradual development thereafter, and a tropical \ndepression is likely to form around the middle of next week while \nit moves westward to west-northwestward, well south of Mexico. \n* Formation chance through 48 hours...low...near 0 percent. \n* Formation chance through 7 days...high...80 percent.",
+      "metadata": {
+        "chance_48h_level": "LOW",
+        "chance_48h_pct": "near 0",
+        "chance_7d_level": "HIGH",
+        "chance_7d_pct": "80",
+        "bulletin_issue_at": "2026-10-17T23:20:00+00:00"
+      }
+    },
+    "member_event_ids": [
+      269950
+    ],
+    "occurred_at": "2026-10-17T23:20:00+00:00",
+    "published_at": "2026-10-17T23:20:00+00:00",
+    "fetched_at": "2026-10-17T23:20:00+00:00"
+  },
+  {
+    "id": 269879,
+    "group_key": "volcano|871925f2aeba108effebb755309b93cb149ff506",
+    "event_type": "volcano",
+    "severity_level": "extreme",
+    "severity_color": "extreme",
+    "title": "Kilauea",
+    "summary": "VRP 12058.53 MW · MODIS · 15.13 km",
+    "started_at": "2026-10-17T19:40:00+00:00",
+    "updated_at": "2026-10-17T19:40:00+00:00",
+    "location_text": "Kilauea",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "MODIS",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=332010",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=332010",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "332010",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=332010",
+      "vrp_mw": 12058.53,
+      "distance_km": 15.13,
+      "sensor": "MODIS",
+      "row_class": [
+        "extreme"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "MODIS"
+      ],
+      "reports": [
+        {
+          "volcano_id": "332010",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=332010",
+          "vrp_mw": 12058.53,
+          "distance_km": 15.13,
+          "sensor": "MODIS",
+          "row_class": [
+            "extreme"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 1
+    },
+    "member_event_ids": [
+      269943
+    ],
+    "occurred_at": "2026-10-17T19:40:00+00:00",
+    "published_at": "2026-10-17T19:40:00+00:00",
+    "fetched_at": "2026-10-17T19:40:00+00:00"
+  },
+  {
+    "id": 269881,
+    "group_key": "volcano|b665d1268bdf05e9cc0319e95312f1559a573e8f",
+    "event_type": "volcano",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Tengger Caldera",
+    "summary": "VRP 126.15 MW · VIIRS375 / VIIRS · 6.05 km",
+    "started_at": "2026-10-17T18:00:01+00:00",
+    "updated_at": "2026-10-17T18:00:01+00:00",
+    "location_text": "Tengger Caldera",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "VIIRS375 / VIIRS",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=263310",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=263310",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "263310",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=263310",
+      "vrp_mw": 126.15,
+      "distance_km": 6.05,
+      "sensor": "VIIRS",
+      "row_class": [
+        "moderate",
+        "high"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "VIIRS375",
+        "VIIRS"
+      ],
+      "reports": [
+        {
+          "volcano_id": "263310",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=263310",
+          "vrp_mw": 49.12,
+          "distance_km": 6.84,
+          "sensor": "VIIRS375",
+          "row_class": [
+            "moderate"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        },
+        {
+          "volcano_id": "263310",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=263310",
+          "vrp_mw": 126.15,
+          "distance_km": 6.05,
+          "sensor": "VIIRS",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 2
+    },
+    "member_event_ids": [
+      269944
+    ],
+    "occurred_at": "2026-10-17T18:00:01+00:00",
+    "published_at": "2026-10-17T18:00:01+00:00",
+    "fetched_at": "2026-10-17T18:00:01+00:00"
+  },
+  {
+    "id": 269880,
+    "group_key": "volcano|bef082845576969428ae80b9e13a1b6af867b6d5",
+    "event_type": "volcano",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Semeru",
+    "summary": "VRP 152.22 MW · VIIRS375 / VIIRS · 24.29 km",
+    "started_at": "2026-10-17T18:00:01+00:00",
+    "updated_at": "2026-10-17T18:00:01+00:00",
+    "location_text": "Semeru",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "VIIRS375 / VIIRS",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=263300",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=263300",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "263300",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=263300",
+      "vrp_mw": 152.22,
+      "distance_km": 24.29,
+      "sensor": "VIIRS",
+      "row_class": [
+        "moderate",
+        "high"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "VIIRS375",
+        "VIIRS"
+      ],
+      "reports": [
+        {
+          "volcano_id": "263300",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=263300",
+          "vrp_mw": 38.73,
+          "distance_km": 28.15,
+          "sensor": "VIIRS375",
+          "row_class": [
+            "moderate"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        },
+        {
+          "volcano_id": "263300",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=263300",
+          "vrp_mw": 152.22,
+          "distance_km": 24.29,
+          "sensor": "VIIRS",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 2
+    },
+    "member_event_ids": [
+      269945
+    ],
+    "occurred_at": "2026-10-17T18:00:01+00:00",
+    "published_at": "2026-10-17T18:00:01+00:00",
+    "fetched_at": "2026-10-17T18:00:01+00:00"
+  },
+  {
+    "id": 269882,
+    "group_key": "earthquake|us6000u309",
+    "event_type": "earthquake",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "M 5.2 - 86 km SW of Brisas Barra de Suchiate, Mexico",
+    "summary": "86 km SW of Brisas Barra de Suchiate, Mexico",
+    "started_at": "2026-10-17T13:59:34.575000+00:00",
+    "updated_at": "2026-10-17T14:17:39.040000+00:00",
+    "location_text": "86 km SW of Brisas Barra de Suchiate, Mexico",
+    "lat": 14.0469,
+    "lon": -92.8552,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u309",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u309",
+    "country_code": null,
+    "payload": {
+      "mag": 5.2,
+      "depth_km": 10.0,
+      "place": "86 km SW of Brisas Barra de Suchiate, Mexico",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000u309.geojson",
+      "alert": null,
+      "sig": 416,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      269941
+    ],
+    "occurred_at": "2026-10-17T13:59:34.575000+00:00",
+    "published_at": "2026-10-17T13:59:34.575000+00:00",
+    "fetched_at": "2026-10-17T13:59:34.575000+00:00"
+  },
+  {
+    "id": 269883,
+    "group_key": "volcano|bf8a3316a2676386e211c99e4b79aefbc59f331c",
+    "event_type": "volcano",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Kilauea",
+    "summary": "VRP 119.85 MW · VIIRS375 / VIIRS · 10.61 km",
+    "started_at": "2026-10-17T12:48:01+00:00",
+    "updated_at": "2026-10-17T12:48:01+00:00",
+    "location_text": "Kilauea",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "VIIRS375 / VIIRS",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=332010",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=332010",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "332010",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=332010",
+      "vrp_mw": 119.85,
+      "distance_km": 10.67,
+      "sensor": "VIIRS375",
+      "row_class": [
+        "high",
+        "moderate"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "VIIRS375",
+        "VIIRS"
+      ],
+      "reports": [
+        {
+          "volcano_id": "332010",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=332010",
+          "vrp_mw": 119.85,
+          "distance_km": 10.67,
+          "sensor": "VIIRS375",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        },
+        {
+          "volcano_id": "332010",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=332010",
+          "vrp_mw": 86.01,
+          "distance_km": 10.61,
+          "sensor": "VIIRS",
+          "row_class": [
+            "moderate"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 2
+    },
+    "member_event_ids": [
+      269946
+    ],
+    "occurred_at": "2026-10-17T12:48:01+00:00",
+    "published_at": "2026-10-17T12:48:01+00:00",
+    "fetched_at": "2026-10-17T12:48:01+00:00"
+  },
+  {
+    "id": 269885,
+    "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|western_north_pacific_area|tc_29w|dc0b83f99d7c57df",
+    "event_type": "typhoon",
+    "severity_level": "extreme",
+    "severity_color": "extreme",
+    "title": "Typhoon 29W (Champi)",
+    "summary": "wind 85 kt (gust 105)",
+    "started_at": "2026-10-17T06:00:00+00:00",
+    "updated_at": "2026-10-17T06:00:00+00:00",
+    "location_text": "12.4N 148.6E",
+    "lat": 12.4,
+    "lon": 148.6,
+    "source_primary": "JTWC-ABPW",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://www.google.com/maps?q=12.4,148.6",
+    "official_link": "https://www.google.com/maps?q=12.4,148.6",
+    "country_code": null,
+    "payload": {
+      "item_type": "warning",
+      "source": "jtwc_abpw",
+      "source_key": "jtwc_abpw|western_north_pacific_area|tc_29w",
+      "content_hash": "dc0b83f99d7c57df",
+      "platform_summary": "12.4N 148.6E | wind 85 kt (gust 105)",
+      "platform_location": "12.4N 148.6E",
+      "wind": "85 kt (gust 105)",
+      "risk_48h": null,
+      "risk_7d": null,
+      "next_update": null,
+      "raw_text": "(1) AT 17OCT26 0000Z, TYPHOON 29W (CHAMPI) WAS LOCATED NEAR 12.4N \n148.6E, APPROXIMATELY 230 NM EAST-SOUTHEAST OF ANDERSEN AFB, AND HAD \nTRACKED WEST-NORTHWESTWARD AT 16 KNOTS OVER THE PAST SIX HOURS. MAXIMUM \nSUSTAINED SURFACE WINDS WERE ESTIMATED AT 85 KNOTS GUSTING TO 105 KNOTS. \nSEE REF A (WTPN32 PGTW 170300) FOR FURTHER DETAILS.",
+      "metadata": {
+        "basin_section": "WESTERN NORTH PACIFIC AREA (180 TO MALAY PENINSULA)",
+        "storm_class": "TYPHOON",
+        "storm_id": "29W",
+        "storm_name": "CHAMPI",
+        "fix_date": "17OCT26",
+        "fix_time": "17OCT26 0000Z",
+        "lat": 12.4,
+        "lon": 148.6,
+        "movement_text": "WEST-NORTHWESTWARD",
+        "movement_kt": 16,
+        "wind_kt": 85,
+        "gust_kt": 105,
+        "warning_reference": "WTPN32 PGTW 170300",
+        "bulletin_issue_at": "2026-10-17T06:00:00+00:00"
+      }
+    },
+    "member_event_ids": [
+      269952
+    ],
+    "occurred_at": "2026-10-17T06:00:00+00:00",
+    "published_at": "2026-10-17T06:00:00+00:00",
+    "fetched_at": "2026-10-17T06:00:00+00:00"
+  },
+  {
+    "id": 269884,
+    "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|tc_01p|bb6181a872bce586",
+    "event_type": "typhoon",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Tropical Cyclone 01P",
+    "summary": "wind 40 kt (gust 50)",
+    "started_at": "2026-10-17T06:00:00+00:00",
+    "updated_at": "2026-10-17T06:00:00+00:00",
+    "location_text": "12.7S 163.4W",
+    "lat": -12.7,
+    "lon": -163.4,
+    "source_primary": "JTWC-ABPW",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://www.google.com/maps?q=-12.7,-163.4",
+    "official_link": "https://www.google.com/maps?q=-12.7,-163.4",
+    "country_code": null,
+    "payload": {
+      "item_type": "warning",
+      "source": "jtwc_abpw",
+      "source_key": "jtwc_abpw|south_pacific_area|tc_01p",
+      "content_hash": "bb6181a872bce586",
+      "platform_summary": "12.7S 163.4W | wind 40 kt (gust 50)",
+      "platform_location": "12.7S 163.4W",
+      "wind": "40 kt (gust 50)",
+      "risk_48h": null,
+      "risk_7d": null,
+      "next_update": null,
+      "raw_text": "(1) AT 16OCT26 1800Z, TROPICAL CYCLONE 01P (ONE) WAS LOCATED NEAR \n12.7S 163.4W, APPROXIMATELY 437 NM EAST-NORTHEAST OF PAGO PAGO, AND HAD \nTRACKED SOUTHWARD AT 10 KNOTS OVER THE PAST SIX HOURS. MAXIMUM SUSTAINED \nSURFACE WINDS WERE ESTIMATED AT 40 KNOTS GUSTING TO 50 KNOTS. SEE REF B \n(WTPS31 PGTW 162100) FOR FURTHER DETAILS.",
+      "metadata": {
+        "basin_section": "SOUTH PACIFIC AREA (WEST COAST OF SOUTH AMERICA TO 135 EAST)",
+        "storm_class": "TROPICAL CYCLONE",
+        "storm_id": "01P",
+        "fix_date": "16OCT26",
+        "fix_time": "16OCT26 1800Z",
+        "lat": -12.7,
+        "lon": -163.4,
+        "movement_text": "SOUTHWARD",
+        "movement_kt": 10,
+        "wind_kt": 40,
+        "gust_kt": 50,
+        "warning_reference": "WTPS31 PGTW 162100",
+        "bulletin_issue_at": "2026-10-17T06:00:00+00:00"
+      }
+    },
+    "member_event_ids": [
+      269953
+    ],
+    "occurred_at": "2026-10-17T06:00:00+00:00",
+    "published_at": "2026-10-17T06:00:00+00:00",
+    "fetched_at": "2026-10-17T06:00:00+00:00"
+  },
+  {
+    "id": 269886,
+    "group_key": "earthquake|us6000u2y1",
+    "event_type": "earthquake",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "M 5.7 - 48 km WNW of Khuzdar, Pakistan",
+    "summary": "48 km WNW of Khuzdar, Pakistan",
+    "started_at": "2026-10-17T05:06:57.657000+00:00",
+    "updated_at": "2026-10-17T08:49:11.040000+00:00",
+    "location_text": "48 km WNW of Khuzdar, Pakistan",
+    "lat": 28.0179,
+    "lon": 66.1708,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2y1",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2y1",
+    "country_code": null,
+    "payload": {
+      "mag": 5.7,
+      "depth_km": 10.0,
+      "place": "48 km WNW of Khuzdar, Pakistan",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000u2y1.geojson",
+      "alert": "yellow",
+      "sig": 651,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      269942
+    ],
+    "occurred_at": "2026-10-17T05:06:57.657000+00:00",
+    "published_at": "2026-10-17T05:06:57.657000+00:00",
+    "fetched_at": "2026-10-17T05:06:57.657000+00:00"
+  },
+  {
+    "id": 269887,
+    "group_key": "flood|97a822b10c06bbe42c27ea8c1c55f503ed3117c1",
+    "event_type": "flood",
+    "severity_level": "orange",
+    "severity_color": "orange",
+    "title": "Flood in India",
+    "summary": "India",
+    "started_at": "2026-08-09T01:00:00+00:00",
+    "updated_at": "2026-10-11T06:51:33+00:00",
+    "location_text": "India",
+    "lat": null,
+    "lon": null,
+    "source_primary": "GDACS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://www.gdacs.org/report.aspx?eventid=1104121&episodeid=22&eventtype=FL",
+    "official_link": "https://www.gdacs.org/report.aspx?eventid=1104121&episodeid=22&eventtype=FL",
+    "country_code": null,
+    "payload": {
+      "eventid": "1104121",
+      "episodeid": "22",
+      "alertlevel": "orange",
+      "report_url": "https://www.gdacs.org/report.aspx?eventid=1104121&episodeid=22&eventtype=FL",
+      "geometry_url": null,
+      "details_url": null,
+      "source_page": "https://www.gdacs.org/Alerts/",
+      "active_within_days": 14,
+      "raw": {
+        "eventtype": "FL",
+        "eventid": 1104121,
+        "episodeid": 22,
+        "eventname": "",
+        "glide": "FL-2026-000165-IND",
+        "name": "Flood in India",
+        "description": "Flood in India",
+        "htmldescription": "Orange Flood in India from: 09 Aug 2026 01 to: 07 Oct 2026 01.",
+        "icon": "https://www.gdacs.org/images/gdacs_icons/maps/Green/FL.png",
+        "iconoverall": "https://www.gdacs.org/images/gdacs_icons/maps/Orange/FL.png",
+        "url": {
+          "geometry": "https://www.gdacs.org/gdacsapi/api/polygons/getgeometry?eventtype=FL&eventid=1104121&episodeid=22",
+          "report": "https://www.gdacs.org/report.aspx?eventid=1104121&episodeid=22&eventtype=FL",
+          "details": "https://www.gdacs.org/gdacsapi/api/events/geteventdata?eventtype=FL&eventid=1104121"
+        },
+        "alertlevel": "Orange",
+        "alertscore": 2,
+        "episodealertlevel": "Green",
+        "episodealertscore": 0.5,
+        "istemporary": "false",
+        "iscurrent": "false",
+        "country": "India",
+        "fromdate": "2026-08-09T01:00:00",
+        "todate": "2026-10-07T01:00:00",
+        "datemodified": "2026-10-11T06:51:33",
+        "iso3": "IND",
+        "source": "GLOFAS",
+        "sourceid": "",
+        "polygonlabel": "Centroid",
+        "Class": "Point_Centroid",
+        "affectedcountries": [
+          {
+            "iso2": "IN",
+            "iso3": "IND",
+            "countryname": "India"
+          }
+        ],
+        "severitydata": {
+          "severity": 0.0,
+          "severitytext": "Magnitude 0 ",
+          "severityunit": ""
+        }
+      }
+    },
+    "member_event_ids": [
+      269947
+    ],
+    "occurred_at": "2026-08-09T01:00:00+00:00",
+    "published_at": "2026-08-09T01:00:00+00:00",
+    "fetched_at": "2026-08-09T01:00:00+00:00"
+  }
+]

@@ -1,0 +1,179 @@
+.col-mnd-pla .section-header {
+  flex-shrink: 0;
+}
+
+.mnd-pla-panel {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.mnd-pla-scroll {
+  height: 100%;
+  overflow: auto;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mnd-pla-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.mnd-pla-summary-card {
+  border: 1px solid var(--border);
+  background: var(--bg-surface);
+  border-radius: 10px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mnd-pla-summary-card span {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.mnd-pla-summary-card strong {
+  font-size: 20px;
+  color: var(--text-main);
+}
+
+.mnd-pla-mobile-only {
+  display: none;
+}
+
+.mnd-pla-no-aircraft-dates {
+  font-size: 11px;
+  line-height: 1.4;
+  color: var(--text-sec);
+  word-break: break-word;
+}
+
+.mnd-pla-summary-card-accent {
+  border-color: rgba(245, 158, 11, 0.55);
+}
+
+.mnd-pla-no-aircraft-banner {
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  background: rgba(245, 158, 11, 0.08);
+  color: var(--text-main);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 12px;
+}
+
+.mnd-pla-day-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mnd-pla-day-card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg-surface);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mnd-pla-day-card.is-no-aircraft {
+  border-color: rgba(245, 158, 11, 0.45);
+}
+
+.mnd-pla-day-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.mnd-pla-day-date {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.mnd-pla-day-period {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.mnd-pla-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.mnd-pla-metric {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mnd-pla-metric span {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.mnd-pla-metric strong {
+  font-size: 16px;
+  color: var(--text-main);
+}
+
+.mnd-pla-subline {
+  font-size: 12px;
+  color: var(--text-sec);
+}
+
+.mnd-pla-flag {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: rgba(245, 158, 11, 0.12);
+  color: var(--text-main);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.mnd-pla-copy {
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--text-sec);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media (max-width: 1100px) {
+  .mnd-pla-summary-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .mnd-pla-scroll {
+    padding: 12px;
+  }
+
+  .mnd-pla-summary-grid,
+  .mnd-pla-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .mnd-pla-mobile-only {
+    display: block;
+  }
+}

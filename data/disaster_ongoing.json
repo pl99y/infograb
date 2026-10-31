@@ -1,0 +1,459 @@
+[
+  {
+    "id": 292617,
+    "group_key": "typhoon|TC|jtwc_abio|jtwc_abio|north_indian_ocean_area|invest_91b|c6e70b55b27be28e",
+    "event_type": "typhoon",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "INVEST 91B",
+    "summary": "wind 23-28 kt · 1005 mb · High",
+    "started_at": "2026-10-31T18:00:00+00:00",
+    "updated_at": "2026-10-31T18:00:00+00:00",
+    "location_text": "10.3N 88.7E",
+    "lat": 10.3,
+    "lon": 88.7,
+    "source_primary": "JTWC-ABIO",
+    "source_secondary": "disturbance",
+    "status": "high",
+    "map_url": "https://www.google.com/maps?q=10.3,88.7",
+    "official_link": "https://www.google.com/maps?q=10.3,88.7",
+    "country_code": null,
+    "payload": {
+      "item_type": "disturbance",
+      "source": "jtwc_abio",
+      "source_key": "jtwc_abio|north_indian_ocean_area|invest_91b",
+      "content_hash": "c6e70b55b27be28e",
+      "platform_summary": "10.3N 88.7E | winds 23-28 kt | 1005 mb | HIGH",
+      "platform_location": "10.3N 88.7E",
+      "wind": "23-28 kt",
+      "risk_48h": null,
+      "risk_7d": null,
+      "next_update": null,
+      "raw_text": "(1) THE AREA OF CONVECTION (INVEST 91B) PREVIOUSLY LOCATED NEAR \n9.5N 93.2E IS NOW LOCATED NEAR 10.3N 88.7E, APPROXIMATELY 250 NM \nSOUTH-SOUTHWEST OF PORT BLAIR. ANIMATED ENHANCED INFRARED IMAGERY \n(MSI) AND A 311200Z SSMIS F-17 91GHZ MICROWAVE IMAGE DEPICT AN \nELONGATED LLCC WITH DEEP, PERSISTENT CONVECTION WITH CURVED CONVECTIVE \nBANDING AND FORMATIVE RAIN BANDS IN THE NORTHERN QUADRANT. A 311437Z \nMETOP-B ASCAT PASS REVEALED 20 KTS WRAPPING AROUND THE ELONGATED LLCC, \nWHILE A SMALL REGION OF 25 KT WINDS IS PRESENT IN THE EASTERN FLANK. \nENVIRONMENTAL ANALYSIS REVEALS A FAVORABLE ENVIRONMENT FOR DEVELOPMENT \nWITH LOW TO MODERATE EASTERLY VERTICAL WIND SHEAR (VWS) OF 10-15KTS, \nGOOD UPPER-LEVEL WESTWARD AND POLEWARD OUTFLOW, AND WARM SEA SURFACE \nTEMPERATURES (SST) OF 29-30C. GLOBAL DETERMINISTIC AND ENSEMBLE MODELS \nARE WITHIN MODERATE TO HIGH AGREEMENT ON THE FUTURE EVOLUTION OF 91B, \nWITH AI-BASED MODELS SHOWING THE QUICKEST DEVELOPMENT INTO A TROPICAL \nCYCLONE WITHIN 6 TO 12 HOURS, WHILE PHYSICS-BASED MODELS DEPICT A \nSLOWER INTENSIFICATION AND DEVELOPMENT AFTER 24 HOURS. ALL MODELS ARE \nIN AGREEMENT IN 91B TRACKING NORTHWESTWARD TOWARD MAINLAND INDIA OVER \nTHE NEXT 24-48HRS. MAXIMUM SUSTAINED SURFACE WINDS ARE ESTIMATED AT 23 \nTO 28 KNOTS. MINIMUM SEA LEVEL PRESSURE IS ESTIMATED TO BE NEAR 1005 \nMB. THE POTENTIAL FOR THE DEVELOPMENT OF A SIGNIFICANT TROPICAL \nCYCLONE WITHIN THE NEXT 24 HOURS REMAINS HIGH. SEE REF A (WTIO21 PGTW \n310600) FOR FURTHER DETAILS.",
+      "metadata": {
+        "basin_section": "NORTH INDIAN OCEAN AREA (MALAY PENINSULA WEST TO COAST OF AFRICA)",
+        "invest_id": "91B",
+        "lat": 10.3,
+        "lon": 88.7,
+        "wind_kt_min": 23,
+        "wind_kt_max": 28,
+        "wind_kt": 28,
+        "pressure_mb": 1005,
+        "development_phrase": "REMAINS",
+        "development_level": "HIGH",
+        "bulletin_issue_at": "2026-10-31T18:00:00+00:00"
+      }
+    },
+    "member_event_ids": [
+      292699
+    ],
+    "occurred_at": "2026-10-31T18:00:00+00:00",
+    "published_at": "2026-10-31T18:00:00+00:00",
+    "fetched_at": "2026-10-31T18:00:00+00:00"
+  },
+  {
+    "id": 292619,
+    "group_key": "typhoon|TC|nhc_ep|nhc_ep|well_southeast_of_the_hawaiian_islands|38ee7b412d97aa8a",
+    "event_type": "typhoon",
+    "severity_level": "low",
+    "severity_color": "low",
+    "title": "Well Southeast of the Hawaiian Islands",
+    "summary": "48h near 0% LOW · 7d 40% MEDIUM",
+    "started_at": "2026-10-31T17:17:00+00:00",
+    "updated_at": "2026-10-31T17:17:00+00:00",
+    "location_text": null,
+    "lat": null,
+    "lon": null,
+    "source_primary": "NHC-EP",
+    "source_secondary": "disturbance",
+    "status": "monitoring",
+    "map_url": null,
+    "official_link": null,
+    "country_code": null,
+    "payload": {
+      "item_type": "disturbance",
+      "source": "nhc_ep",
+      "source_key": "nhc_ep|well_southeast_of_the_hawaiian_islands",
+      "content_hash": "38ee7b412d97aa8a",
+      "platform_summary": "48h near 0% LOW | 7d 40% MEDIUM",
+      "platform_location": null,
+      "wind": null,
+      "risk_48h": "near 0% LOW",
+      "risk_7d": "40% MEDIUM",
+      "next_update": null,
+      "raw_text": "Well Southeast of the Hawaiian Islands:\nA broad area of low pressure is forecast to develop well to the \nsoutheast of the Hawaiian Islands by early next week. Thereafter, \nenvironmental conditions appear generally favorable for gradual \ndevelopment of this system, and a tropical depression could form by \nthe end of next week as it moves westward to west-northwestward over \nthe Central Pacific basin.\n* Formation chance through 48 hours...low...near 0 percent.\n* Formation chance through 7 days...medium...40 percent.",
+      "metadata": {
+        "chance_48h_level": "LOW",
+        "chance_48h_pct": "near 0",
+        "chance_7d_level": "MEDIUM",
+        "chance_7d_pct": "40",
+        "bulletin_issue_at": "2026-10-31T17:17:00+00:00"
+      }
+    },
+    "member_event_ids": [
+      292700
+    ],
+    "occurred_at": "2026-10-31T17:17:00+00:00",
+    "published_at": "2026-10-31T17:17:00+00:00",
+    "fetched_at": "2026-10-31T17:17:00+00:00"
+  },
+  {
+    "id": 292618,
+    "group_key": "typhoon|TC|cphc_cp|cphc_cp|well_southeast_of_the_hawaiian_islands|38ee7b412d97aa8a",
+    "event_type": "typhoon",
+    "severity_level": "low",
+    "severity_color": "low",
+    "title": "Well Southeast of the Hawaiian Islands",
+    "summary": "48h near 0% LOW · 7d 40% MEDIUM",
+    "started_at": "2026-10-31T17:17:00+00:00",
+    "updated_at": "2026-10-31T17:17:00+00:00",
+    "location_text": null,
+    "lat": null,
+    "lon": null,
+    "source_primary": "CPHC-CP",
+    "source_secondary": "disturbance",
+    "status": "monitoring",
+    "map_url": null,
+    "official_link": null,
+    "country_code": null,
+    "payload": {
+      "item_type": "disturbance",
+      "source": "cphc_cp",
+      "source_key": "cphc_cp|well_southeast_of_the_hawaiian_islands",
+      "content_hash": "38ee7b412d97aa8a",
+      "platform_summary": "48h near 0% LOW | 7d 40% MEDIUM",
+      "platform_location": null,
+      "wind": null,
+      "risk_48h": "near 0% LOW",
+      "risk_7d": "40% MEDIUM",
+      "next_update": null,
+      "raw_text": "Well Southeast of the Hawaiian Islands:\nA broad area of low pressure is forecast to develop well to the\nsoutheast of the Hawaiian Islands by early next week. Thereafter,\nenvironmental conditions appear generally favorable for gradual\ndevelopment of this system, and a tropical depression could form by\nthe end of next week as it moves westward to west-northwestward over\nthe Central Pacific basin.\n* Formation chance through 48 hours...low...near 0 percent.\n* Formation chance through 7 days...medium...40 percent.",
+      "metadata": {
+        "chance_48h_level": "LOW",
+        "chance_48h_pct": "near 0",
+        "chance_7d_level": "MEDIUM",
+        "chance_7d_pct": "40",
+        "bulletin_issue_at": "2026-10-31T17:17:00+00:00"
+      }
+    },
+    "member_event_ids": [
+      292701
+    ],
+    "occurred_at": "2026-10-31T17:17:00+00:00",
+    "published_at": "2026-10-31T17:17:00+00:00",
+    "fetched_at": "2026-10-31T17:17:00+00:00"
+  },
+  {
+    "id": 292620,
+    "group_key": "earthquake|us7000tujf",
+    "event_type": "earthquake",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "M 5.2 - 4 km S of Bajo Corral, Panama",
+    "summary": "4 km S of Bajo Corral, Panama",
+    "started_at": "2026-10-31T15:50:18.909000+00:00",
+    "updated_at": "2026-10-31T18:29:00.061000+00:00",
+    "location_text": "4 km S of Bajo Corral, Panama",
+    "lat": 7.5692,
+    "lon": -80.2547,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tujf",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tujf",
+    "country_code": null,
+    "payload": {
+      "mag": 5.2,
+      "depth_km": 10.0,
+      "place": "4 km S of Bajo Corral, Panama",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us7000tujf.geojson",
+      "alert": null,
+      "sig": 429,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      292694
+    ],
+    "occurred_at": "2026-10-31T15:50:18.909000+00:00",
+    "published_at": "2026-10-31T15:50:18.909000+00:00",
+    "fetched_at": "2026-10-31T15:50:18.909000+00:00"
+  },
+  {
+    "id": 292621,
+    "group_key": "volcano|a9ec6eed2e530f74e6ea72afe11e55b2ebb6c27c",
+    "event_type": "volcano",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Krasheninnikov",
+    "summary": "VRP 101.07 MW · VIIRS / VIIRS375 · 4.58 km",
+    "started_at": "2026-10-31T14:06:02+00:00",
+    "updated_at": "2026-10-31T14:06:02+00:00",
+    "location_text": "Krasheninnikov",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "VIIRS / VIIRS375",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=300190",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=300190",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "300190",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=300190",
+      "vrp_mw": 101.07,
+      "distance_km": 5.03,
+      "sensor": "VIIRS",
+      "row_class": [
+        "high",
+        "moderate"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "VIIRS",
+        "VIIRS375"
+      ],
+      "reports": [
+        {
+          "volcano_id": "300190",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=300190",
+          "vrp_mw": 101.07,
+          "distance_km": 5.03,
+          "sensor": "VIIRS",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        },
+        {
+          "volcano_id": "300190",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=300190",
+          "vrp_mw": 99.66,
+          "distance_km": 4.58,
+          "sensor": "VIIRS375",
+          "row_class": [
+            "moderate"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 2
+    },
+    "member_event_ids": [
+      292696
+    ],
+    "occurred_at": "2026-10-31T14:06:02+00:00",
+    "published_at": "2026-10-31T14:06:02+00:00",
+    "fetched_at": "2026-10-31T14:06:02+00:00"
+  },
+  {
+    "id": 292622,
+    "group_key": "volcano|94f921c1b3132ed20cbc3666c2d6b791dbc08553",
+    "event_type": "volcano",
+    "severity_level": "very_high",
+    "severity_color": "very_high",
+    "title": "Nyamuragira",
+    "summary": "VRP 1213.68 MW · MODIS · 3.16 km",
+    "started_at": "2026-10-31T13:25:00+00:00",
+    "updated_at": "2026-10-31T13:25:00+00:00",
+    "location_text": "Nyamuragira",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "MODIS",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=223020",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=223020",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "223020",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=223020",
+      "vrp_mw": 1213.68,
+      "distance_km": 3.16,
+      "sensor": "MODIS",
+      "row_class": [
+        "very_high"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "MODIS"
+      ],
+      "reports": [
+        {
+          "volcano_id": "223020",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=223020",
+          "vrp_mw": 1213.68,
+          "distance_km": 3.16,
+          "sensor": "MODIS",
+          "row_class": [
+            "very_high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 1
+    },
+    "member_event_ids": [
+      292697
+    ],
+    "occurred_at": "2026-10-31T13:25:00+00:00",
+    "published_at": "2026-10-31T13:25:00+00:00",
+    "fetched_at": "2026-10-31T13:25:00+00:00"
+  },
+  {
+    "id": 292623,
+    "group_key": "earthquake|us7000tuif",
+    "event_type": "earthquake",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "M 5.0 - 196 km NW of Port-Olry, Vanuatu",
+    "summary": "196 km NW of Port-Olry, Vanuatu",
+    "started_at": "2026-10-31T11:31:12.352000+00:00",
+    "updated_at": "2026-10-31T11:47:21.040000+00:00",
+    "location_text": "196 km NW of Port-Olry, Vanuatu",
+    "lat": -13.9069,
+    "lon": 165.6759,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tuif",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tuif",
+    "country_code": null,
+    "payload": {
+      "mag": 5.0,
+      "depth_km": 10.0,
+      "place": "196 km NW of Port-Olry, Vanuatu",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us7000tuif.geojson",
+      "alert": null,
+      "sig": 385,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      292695
+    ],
+    "occurred_at": "2026-10-31T11:31:12.352000+00:00",
+    "published_at": "2026-10-31T11:31:12.352000+00:00",
+    "fetched_at": "2026-10-31T11:31:12.352000+00:00"
+  },
+  {
+    "id": 292624,
+    "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|western_north_pacific_area|tc_30w|3887d6a7d54ea984",
+    "event_type": "typhoon",
+    "severity_level": "extreme",
+    "severity_color": "extreme",
+    "title": "Typhoon 30W (In-Fa)",
+    "summary": "wind 125 kt (gust 150)",
+    "started_at": "2026-10-31T06:00:00+00:00",
+    "updated_at": "2026-10-31T06:00:00+00:00",
+    "location_text": "17.8N 147.8E",
+    "lat": 17.8,
+    "lon": 147.8,
+    "source_primary": "JTWC-ABPW",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://www.google.com/maps?q=17.8,147.8",
+    "official_link": "https://www.google.com/maps?q=17.8,147.8",
+    "country_code": null,
+    "payload": {
+      "item_type": "warning",
+      "source": "jtwc_abpw",
+      "source_key": "jtwc_abpw|western_north_pacific_area|tc_30w",
+      "content_hash": "3887d6a7d54ea984",
+      "platform_summary": "17.8N 147.8E | wind 125 kt (gust 150)",
+      "platform_location": "17.8N 147.8E",
+      "wind": "125 kt (gust 150)",
+      "risk_48h": null,
+      "risk_7d": null,
+      "next_update": null,
+      "raw_text": "(1) AT 30OCT26 0000Z, TYPHOON 30W (IN-FA) WAS LOCATED NEAR 17.8N \n147.8E, APPROXIMATELY 194 NM NORTHEAST OF SAIPAN, AND HAD TRACKED WEST-\nNORTHWESTWARD AT 19 KNOTS OVER THE PAST SIX HOURS. MAXIMUM SUSTAINED \nSURFACE WINDS WERE ESTIMATED AT 125 KNOTS GUSTING TO 150 KNOTS. SEE REF \nA (WTPN31 PGTW 300300) FOR FURTHER DETAILS.",
+      "metadata": {
+        "basin_section": "WESTERN NORTH PACIFIC AREA (180 TO MALAY PENINSULA)",
+        "storm_class": "TYPHOON",
+        "storm_id": "30W",
+        "storm_name": "IN-FA",
+        "fix_date": "30OCT26",
+        "fix_time": "30OCT26 0000Z",
+        "lat": 17.8,
+        "lon": 147.8,
+        "wind_kt": 125,
+        "gust_kt": 150,
+        "warning_reference": "WTPN31 PGTW 300300",
+        "bulletin_issue_at": "2026-10-31T06:00:00+00:00"
+      }
+    },
+    "member_event_ids": [
+      292702
+    ],
+    "occurred_at": "2026-10-31T06:00:00+00:00",
+    "published_at": "2026-10-31T06:00:00+00:00",
+    "fetched_at": "2026-10-31T06:00:00+00:00"
+  },
+  {
+    "id": 292625,
+    "group_key": "volcano|2f2fd362e11b7b8f4a73765263261e3383867a67",
+    "event_type": "volcano",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Manam",
+    "summary": "VRP 110.68 MW · VIIRS375 / VIIRS · 24.43 km",
+    "started_at": "2026-10-31T04:12:01+00:00",
+    "updated_at": "2026-10-31T04:12:01+00:00",
+    "location_text": "Manam",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "VIIRS375 / VIIRS",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=251020",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=251020",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "251020",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=251020",
+      "vrp_mw": 110.68,
+      "distance_km": 24.43,
+      "sensor": "VIIRS",
+      "row_class": [
+        "moderate",
+        "high"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "VIIRS375",
+        "VIIRS"
+      ],
+      "reports": [
+        {
+          "volcano_id": "251020",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=251020",
+          "vrp_mw": 37.25,
+          "distance_km": 24.68,
+          "sensor": "VIIRS375",
+          "row_class": [
+            "moderate"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        },
+        {
+          "volcano_id": "251020",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=251020",
+          "vrp_mw": 110.68,
+          "distance_km": 24.43,
+          "sensor": "VIIRS",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 2
+    },
+    "member_event_ids": [
+      292698
+    ],
+    "occurred_at": "2026-10-31T04:12:01+00:00",
+    "published_at": "2026-10-31T04:12:01+00:00",
+    "fetched_at": "2026-10-31T04:12:01+00:00"
+  }
+]

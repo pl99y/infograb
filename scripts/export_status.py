@@ -73,7 +73,7 @@ def f1_live_status(payload: dict) -> str:
 
 def publish_exports(
     data_dir: Path, profile: str, exports: dict[str, Callable],
-    attempts: dict, snapshot_status: dict[str, Callable] | None = None,
+    attempts: dict,
 ) -> None:
     """Publish each dataset independently, retaining the previous snapshot on failure."""
     meta_path = data_dir / "export_meta.json"
@@ -86,7 +86,6 @@ def publish_exports(
     old_profile = profiles.get(profile, {})
     datasets = old_profile.get("datasets", {}).copy()
     files = old_profile.get("files", {}).copy()
-    snapshot_status = snapshot_status or {}
 
     # A slow publish also carries forward the fast profile's previous hotsearch file.
     hotsearch_path = data_dir / "news_hotsearch_latest.json"
@@ -97,25 +96,19 @@ def publish_exports(
     for filename, load in exports.items():
         path = data_dir / filename
         attempt = attempts.get(filename)
-        classify = snapshot_status.get(filename)
         status = attempt["status"] if attempt else "unverified"
         attempted_at = attempt["last_attempt_at"] if attempt else None
         success_at = datasets.get(filename, {}).get("last_success_at")
-        if classify:
-            attempted_at = utc_now_iso()
 
         if status != "failed" or not path.exists():
             try:
                 payload = load()
-                if classify:
-                    status = classify(payload)
-                if status != "failed" or not path.exists():
-                    if filename == "f1_live.json" and payload.get("error"):
-                        payload["error"] = "f1_feed_unavailable"
-                    if filename == "f1_live.json" and payload.get("fallback_reason"):
-                        payload["fallback_reason"] = "f1_feed_unavailable"
-                    write_json(path, payload)
-                    files[filename] = utc_now_iso()
+                if filename == "f1_live.json" and payload.get("error"):
+                    payload["error"] = "f1_feed_unavailable"
+                if filename == "f1_live.json" and payload.get("fallback_reason"):
+                    payload["fallback_reason"] = "f1_feed_unavailable"
+                write_json(path, payload)
+                files[filename] = utc_now_iso()
             except Exception as exc:
                 print(f"[warn] {filename}: export failed ({type(exc).__name__})")
                 status = "failed"

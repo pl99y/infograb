@@ -1,24 +1,34 @@
 import { formatAbsoluteLocalDateTime, formatRelativeLocalTime } from "../../core/time.js";
 import { createTranslateButton } from "./translate.js";
 
+function webUrl(value) {
+  if (typeof value !== "string") return null;
+  try {
+    const url = new URL(value);
+    return url.protocol === "https:" || url.protocol === "http:" ? url.href : null;
+  } catch {
+    return null;
+  }
+}
+
 function createMediaGrid(ctx, mediaList) {
   const grid = document.createElement("div");
   grid.className = "feed-media-grid";
 
   mediaList.forEach((media) => {
-    if (!media?.media_url) return;
-    if (media.media_type === "video") return;
+    const url = webUrl(media?.media_url);
+    if (!url || media.media_type === "video") return;
 
     const item = document.createElement("div");
     item.className = "feed-media-item";
 
     const img = document.createElement("img");
-    img.src = media.media_url;
+    img.src = url;
     img.alt = "Feed media";
     img.loading = "lazy";
 
     item.appendChild(img);
-    item.addEventListener("click", () => ctx.lightbox.open(media.media_url));
+    item.addEventListener("click", () => ctx.lightbox.open(url));
     grid.appendChild(item);
   });
 
@@ -41,24 +51,34 @@ export function renderTelegram(ctx, container, items) {
     const timeValue = item.published_at || item.fetched_at || "";
     const displayText = String(item.text_zh || item.text || "").trim();
 
-    wrapper.innerHTML = `
-      <div class="feed-category-line"></div>
-      <div class="feed-meta">
-        <a class="feed-source" href="${item.post_url || "#"}" target="_blank" rel="noopener noreferrer">${item.source_name || "Unknown Source"}</a>
-        <div class="feed-type" data-time-value="${timeValue}"></div>
-      </div>
-      ${displayText ? `<div class="feed-text"></div>` : ""}
-    `;
+    const category = document.createElement("div");
+    category.className = "feed-category-line";
 
-    const timeEl = wrapper.querySelector(".feed-type");
-    if (timeEl) {
-      timeEl.textContent = formatRelativeLocalTime(timeValue);
-      timeEl.title = formatAbsoluteLocalDateTime(timeValue);
+    const meta = document.createElement("div");
+    meta.className = "feed-meta";
+    const postUrl = webUrl(item.post_url);
+    const source = document.createElement(postUrl ? "a" : "span");
+    source.className = "feed-source";
+    source.textContent = item.source_name || "Unknown Source";
+    if (postUrl) {
+      source.href = postUrl;
+      source.target = "_blank";
+      source.rel = "noopener noreferrer";
     }
 
-    const textEl = wrapper.querySelector(".feed-text");
-    if (textEl) {
-      textEl.textContent = displayText;
+    const time = document.createElement("div");
+    time.className = "feed-type";
+    time.dataset.timeValue = timeValue;
+    time.textContent = formatRelativeLocalTime(timeValue);
+    time.title = formatAbsoluteLocalDateTime(timeValue);
+    meta.append(source, time);
+    wrapper.append(category, meta);
+
+    if (displayText) {
+      const text = document.createElement("div");
+      text.className = "feed-text";
+      text.textContent = displayText;
+      wrapper.appendChild(text);
     }
 
     const mediaGrid = createMediaGrid(ctx, Array.isArray(item.media) ? item.media : []);

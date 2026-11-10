@@ -6,7 +6,7 @@ from typing import Any
 
 import requests
 
-from storage import get_connection
+from storage import get_connection, get_dashboard_snapshot
 from services.f1.xfeed import get_f1_live_from_feed
 
 
@@ -334,7 +334,7 @@ def _get_latest_live_snapshot(db_path: str = "app.db") -> dict | None:
         con.close()
 
 
-def get_f1_live(db_path: str = "app.db") -> dict:
+def fetch_f1_live_payload(db_path: str = "app.db") -> dict:
     try:
         result = get_f1_live_from_feed()
         session = result.get("session") or {}
@@ -382,6 +382,11 @@ def get_f1_live(db_path: str = "app.db") -> dict:
         return fallback
 
     return payload
+
+
+def get_f1_live(db_path: str = "app.db") -> dict | None:
+    snapshot = get_dashboard_snapshot("f1_live.json", db_path=db_path)
+    return snapshot if snapshot is not None else _get_latest_live_snapshot(db_path=db_path)
 
 
 def get_f1_news(limit: int = 20, db_path: str = "app.db") -> list[dict]:

@@ -14,7 +14,7 @@ import { createPublicHealthModule } from "./modules/public-health/index.js?v=44"
 import { createSpaceWeatherModule } from "./modules/space-weather/index.js?v=44";
 import { createMndPlaModule } from "./modules/mnd-pla/index.js?v=44";
 import { createF1Module } from "./modules/f1/index.js?v=44";
-import { createFeedModule } from "./modules/feed/index.js?v=44";
+import { createFeedModule } from "./modules/feed/index.js?v=45";
 import { createNewsTimelineModule } from "./modules/news-timeline/index.js?v=44";
 
 function createContext() {

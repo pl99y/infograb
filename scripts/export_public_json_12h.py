@@ -8,7 +8,7 @@ from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DB_PATH = Path(os.environ.get("INFOGRAB_DB_PATH", str(PROJECT_ROOT / "runtime" / "app.db")))
-DATA_DIR = PROJECT_ROOT / "docs" / "data"
+DATA_DIR = Path(os.environ.get("INFOGRAB_DATA_DIR", str(PROJECT_ROOT / "docs" / "data"))).resolve()
 
 sys.path.insert(0, str(PROJECT_ROOT))
 os.chdir(PROJECT_ROOT)

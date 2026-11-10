@@ -2,10 +2,8 @@ from __future__ import annotations
 
 from typing import Any
 
-from services.hotsearch.pipeline import fetch_hotsearch_snapshot
+from storage import get_dashboard_snapshot
 
 
-def get_hotsearch_latest(*, db_path: str = "app.db") -> dict[str, Any]:
-    # db_path is accepted for consistency with other query helpers.
-    # Hotsearch is a lightweight current snapshot and does not need SQLite history.
-    return fetch_hotsearch_snapshot(include_ai_digest=True)
+def get_hotsearch_latest(*, db_path: str = "app.db") -> dict[str, Any] | None:
+    return get_dashboard_snapshot("news_hotsearch_latest.json", db_path=db_path)

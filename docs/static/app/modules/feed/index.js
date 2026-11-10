@@ -1,7 +1,7 @@
 import { setError, setLoading } from "../../core/dom.js";
 import { formatAbsoluteLocalDateTime, formatRelativeLocalTime } from "../../core/time.js";
 import { renderFreshness } from "../../core/export-meta.js?v=44";
-import { renderTelegram } from "./render.js";
+import { renderTelegram } from "./render.js?v=45";
 
 export function createFeedModule(ctx) {
   const container = document.getElementById("telegram-container");

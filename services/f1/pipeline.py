@@ -24,48 +24,6 @@ from storage import get_connection, initialize_database
 
 logger = logging.getLogger(__name__)
 
-F1_SCHEMA_SQL = """
-CREATE TABLE IF NOT EXISTS f1_live_snapshots (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    gp_name TEXT NOT NULL,
-    session_type TEXT NOT NULL,
-    session_status TEXT NOT NULL,
-    source_name TEXT NOT NULL,
-    source_url TEXT NOT NULL,
-    fetched_at TEXT NOT NULL,
-    extra_json TEXT,
-    created_at TEXT DEFAULT CURRENT_TIMESTAMP
-);
-
-CREATE TABLE IF NOT EXISTS f1_live_rows (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    snapshot_id INTEGER NOT NULL,
-    position INTEGER NOT NULL,
-    driver_name TEXT NOT NULL,
-    team_name TEXT,
-    result_text TEXT,
-    extra_json TEXT,
-    created_at TEXT DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (snapshot_id) REFERENCES f1_live_snapshots(id) ON DELETE CASCADE
-);
-
-CREATE TABLE IF NOT EXISTS f1_news_articles (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    title TEXT NOT NULL,
-    published_at TEXT,
-    summary TEXT,
-    url TEXT NOT NULL,
-    normalized_url TEXT NOT NULL UNIQUE,
-    category TEXT,
-    is_live_text INTEGER NOT NULL DEFAULT 0,
-    source_name TEXT NOT NULL,
-    source_url TEXT NOT NULL,
-    fetched_at TEXT NOT NULL,
-    extra_json TEXT,
-    created_at TEXT DEFAULT CURRENT_TIMESTAMP
-);
-"""
-
 F1_WRITE_LOCK = threading.Lock()
 F1_NEWS_KEEP_MAX = 20
 F1_LIVE_KEEP_HOURS = 24
@@ -147,18 +105,6 @@ def _prune_f1_news_to_max(con: sqlite3.Connection, keep_max: int = F1_NEWS_KEEP_
         (keep_max,),
     )
     return cur.rowcount
-
-
-def ensure_f1_tables(con: sqlite3.Connection) -> None:
-    con.executescript(F1_SCHEMA_SQL)
-
-
-def _ensure_f1_news_translation_columns(con: sqlite3.Connection) -> None:
-    cols = {str(row[1]) for row in con.execute("PRAGMA table_info(f1_news_articles)").fetchall()}
-    if "title_zh" not in cols:
-        con.execute("ALTER TABLE f1_news_articles ADD COLUMN title_zh TEXT")
-    if "translation_provider" not in cols:
-        con.execute("ALTER TABLE f1_news_articles ADD COLUMN translation_provider TEXT")
 
 
 def _normalize_text(value: Any) -> str:
@@ -353,7 +299,6 @@ def fetch_f1_live_once(db_path: str = "app.db") -> dict:
         con = get_connection(db_path)
         _prepare_connection(con)
         try:
-            ensure_f1_tables(con)
 
             overview = fetch_flashscore_overview(FLASHSCORE_OVERVIEW_URL)
             if not overview.success or not overview.text:
@@ -498,8 +443,6 @@ def fetch_f1_news_once(db_path: str = "app.db") -> dict:
         con = get_connection(db_path)
         _prepare_connection(con)
         try:
-            ensure_f1_tables(con)
-            _ensure_f1_news_translation_columns(con)
 
             news_page = fetch_autosport_f1_news_page(AUTOSPORT_F1_NEWS_URL)
             if not news_page.success or not news_page.text:

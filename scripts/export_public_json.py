@@ -5,11 +5,11 @@ import json
 import os
 import sys
 from pathlib import Path
-from typing import Any
+from typing import Any, Callable
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DB_PATH = Path(os.environ.get("INFOGRAB_DB_PATH", str(PROJECT_ROOT / "runtime" / "app.db")))
-DATA_DIR = PROJECT_ROOT / "docs" / "data"
+DATA_DIR = Path(os.environ.get("INFOGRAB_DATA_DIR", str(PROJECT_ROOT / "docs" / "data"))).resolve()
 
 sys.path.insert(0, str(PROJECT_ROOT))
 os.chdir(PROJECT_ROOT)
@@ -19,6 +19,7 @@ from storage import (  # noqa: E402
     cleanup_orphaned_media_files,
     get_connection,
     initialize_database,
+    save_dashboard_snapshot,
 )
 from services.energy.pipeline import fetch_energy_once  # noqa: E402
 from services.energy.queries import get_energy_latest  # noqa: E402
@@ -26,17 +27,18 @@ from services.market.pipeline import fetch_market_snapshots_once  # noqa: E402
 from services.market.queries import get_market_snapshots_latest  # noqa: E402
 from services.aviation.pipeline import fetch_aviation_once  # noqa: E402
 from services.aviation.queries import get_airport_alerts, get_airport_disruptions_latest  # noqa: E402
-from services.disaster.pipeline import fetch_weather_alerts_once, fetch_disaster_once  # noqa: E402
+from services.disaster.pipeline import refresh_natural_hazards_once  # noqa: E402
 from services.disaster.queries import get_weather_alerts, get_disaster_ongoing_groups  # noqa: E402
 from services.telegram.pipeline import fetch_telegram_once  # noqa: E402
 from services.telegram.queries import get_recent_posts  # noqa: E402
 from services.f1.pipeline import fetch_f1_live_once  # noqa: E402
-from services.f1.queries import get_f1_live  # noqa: E402
+from services.f1.queries import fetch_f1_live_payload, get_f1_live  # noqa: E402
 from services.news_timeline.pipeline import fetch_news_timeline_once  # noqa: E402
 from services.news_timeline.queries import get_news_timeline_latest  # noqa: E402
+from services.hotsearch.pipeline import fetch_hotsearch_snapshot  # noqa: E402
 from services.hotsearch.queries import get_hotsearch_latest  # noqa: E402
 
-from scripts.export_status import collect, f1_live_status, hotsearch_status, publish_exports  # noqa: E402
+from scripts.export_status import collect, f1_live_status, hotsearch_status, publish_exports, read_object  # noqa: E402
 
 EXPORT_LABEL = "15m"
 
@@ -62,6 +64,19 @@ def normalize_telegram(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return out
 
 
+def collect_snapshot(
+    attempts: dict, filename: str, load: Callable, classify: Callable, *, db_path: str,
+) -> None:
+    def fetch() -> dict:
+        payload = load()
+        status = classify(payload)
+        if status in {"success", "partial"}:
+            save_dashboard_snapshot(filename, payload, db_path=db_path)
+        return {"status": status}
+
+    collect(attempts, filename, fetch)
+
+
 def fetch_all(skip_fetch: bool) -> dict:
     attempts = {}
     if skip_fetch:
@@ -75,8 +90,11 @@ def fetch_all(skip_fetch: bool) -> dict:
         evidence=("alerts_found", "disruptions_found"),
         split={"aviation_alerts.json": "alerts", "aviation_disruptions.json": "disruptions"},
     )
-    collect(attempts, "weather_alerts.json", lambda: fetch_weather_alerts_once(db_path=db_path), evidence=("alerts_found",))
-    collect(attempts, "disaster_ongoing.json", lambda: fetch_disaster_once(db_path=db_path), evidence=("events_found",))
+    collect(
+        attempts, "natural_hazards", lambda: refresh_natural_hazards_once(db_path=db_path),
+        evidence=("alerts_found", "events_found"),
+        split={"weather_alerts.json": "weather", "disaster_ongoing.json": "disaster"},
+    )
     collect(attempts, "telegram.json", lambda: fetch_telegram_once(db_path=db_path), evidence=("sources_processed",))
     # Keep the existing SQLite snapshot collection; the published live feed has its own status.
     try:
@@ -84,10 +102,16 @@ def fetch_all(skip_fetch: bool) -> dict:
     except Exception as exc:
         print(f"[warn] F1 snapshot collection failed ({type(exc).__name__})")
     collect(attempts, "news_timeline_latest.json", lambda: fetch_news_timeline_once(db_path=db_path), evidence=("items_found",))
+    collect_snapshot(
+        attempts, "news_hotsearch_latest.json", fetch_hotsearch_snapshot, hotsearch_status, db_path=db_path,
+    )
+    collect_snapshot(
+        attempts, "f1_live.json", lambda: fetch_f1_live_payload(db_path=db_path), f1_live_status, db_path=db_path,
+    )
     return attempts
 
 
-def export_all(attempts: dict, *, skip_fetch: bool = False) -> None:
+def export_all(attempts: dict) -> None:
     db_path = str(DB_PATH)
     exports = {
         "energy_latest.json": lambda: get_energy_latest(db_path=db_path),
@@ -100,14 +124,18 @@ def export_all(attempts: dict, *, skip_fetch: bool = False) -> None:
         "disaster_ongoing.json": lambda: get_disaster_ongoing_groups(limit=80, db_path=db_path),
         "telegram.json": lambda: normalize_telegram(get_recent_posts(limit=50, db_path=db_path)),
         "news_timeline_latest.json": lambda: get_news_timeline_latest(limit=120, window_hours=12, db_path=db_path),
+        "news_hotsearch_latest.json": lambda: (
+            get_hotsearch_latest(db_path=db_path)
+            or read_object(DATA_DIR / "news_hotsearch_latest.json")
+            or {"ok": False, "sources": [], "items": []}
+        ),
+        "f1_live.json": lambda: (
+            get_f1_live(db_path=db_path)
+            or read_object(DATA_DIR / "f1_live.json")
+            or {"error": "f1_feed_unavailable", "rows": [], "has_data": False}
+        ),
     }
-    snapshot_status = {}
-    if not skip_fetch:
-        exports["news_hotsearch_latest.json"] = lambda: get_hotsearch_latest(db_path=db_path)
-        exports["f1_live.json"] = lambda: get_f1_live(db_path=db_path)
-        snapshot_status = {"news_hotsearch_latest.json": hotsearch_status, "f1_live.json": f1_live_status}
-
-    publish_exports(DATA_DIR, EXPORT_LABEL, exports, attempts, snapshot_status)
+    publish_exports(DATA_DIR, EXPORT_LABEL, exports, attempts)
 
 
 def cleanup_runtime() -> None:
@@ -161,7 +189,7 @@ def main() -> None:
     initialize_database(str(DB_PATH))
 
     attempts = fetch_all(skip_fetch=args.skip_fetch)
-    export_all(attempts, skip_fetch=args.skip_fetch)
+    export_all(attempts)
     safe_cleanup_runtime(skip_cleanup=args.skip_cleanup)
     print(f"Exported {EXPORT_LABEL} profile JSON into {DATA_DIR}")
 

@@ -350,6 +350,51 @@ CREATE TABLE IF NOT EXISTS mnd_pla_daily (
     created_at TEXT DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE IF NOT EXISTS f1_live_snapshots (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    gp_name TEXT NOT NULL,
+    session_type TEXT NOT NULL,
+    session_status TEXT NOT NULL,
+    source_name TEXT NOT NULL,
+    source_url TEXT NOT NULL,
+    fetched_at TEXT NOT NULL,
+    extra_json TEXT,
+    created_at TEXT DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS f1_live_rows (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    snapshot_id INTEGER NOT NULL,
+    position INTEGER NOT NULL,
+    driver_name TEXT NOT NULL,
+    team_name TEXT,
+    result_text TEXT,
+    extra_json TEXT,
+    created_at TEXT DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (snapshot_id) REFERENCES f1_live_snapshots(id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS f1_news_articles (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT NOT NULL,
+    published_at TEXT,
+    summary TEXT,
+    url TEXT NOT NULL,
+    normalized_url TEXT NOT NULL UNIQUE,
+    category TEXT,
+    is_live_text INTEGER NOT NULL DEFAULT 0,
+    source_name TEXT NOT NULL,
+    source_url TEXT NOT NULL,
+    fetched_at TEXT NOT NULL,
+    extra_json TEXT,
+    created_at TEXT DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS dashboard_snapshots (
+    name TEXT PRIMARY KEY NOT NULL,
+    payload_json TEXT NOT NULL
+);
+
 CREATE INDEX IF NOT EXISTS idx_items_fetched_at ON items(fetched_at);
 CREATE INDEX IF NOT EXISTS idx_item_media_item_id ON item_media(item_id);
 CREATE INDEX IF NOT EXISTS idx_energy_quotes_fetched_at ON energy_quotes(fetched_at);
@@ -412,7 +457,39 @@ def initialize_database(db_path: str | Path = "app.db") -> None:
                     con.execute(stmt)
                 except Exception:
                     pass
+        # Existing databases may have F1 tables created before title translation.
+        f1_columns = {row["name"] for row in con.execute("PRAGMA table_info(f1_news_articles)")}
+        if "title_zh" not in f1_columns:
+            con.execute("ALTER TABLE f1_news_articles ADD COLUMN title_zh TEXT")
+        if "translation_provider" not in f1_columns:
+            con.execute("ALTER TABLE f1_news_articles ADD COLUMN translation_provider TEXT")
         con.commit()
+    finally:
+        con.close()
+
+
+def save_dashboard_snapshot(name: str, payload: dict, *, db_path: str | Path) -> None:
+    con = get_connection(db_path)
+    try:
+        with con:
+            con.execute(
+                """
+                INSERT INTO dashboard_snapshots (name, payload_json) VALUES (?, ?)
+                ON CONFLICT(name) DO UPDATE SET payload_json = excluded.payload_json
+                """,
+                (name, json.dumps(payload, ensure_ascii=False)),
+            )
+    finally:
+        con.close()
+
+
+def get_dashboard_snapshot(name: str, *, db_path: str | Path) -> dict | None:
+    con = get_connection(db_path)
+    try:
+        row = con.execute(
+            "SELECT payload_json FROM dashboard_snapshots WHERE name = ?", (name,),
+        ).fetchone()
+        return json.loads(row["payload_json"]) if row else None
     finally:
         con.close()
 

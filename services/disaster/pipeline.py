@@ -192,7 +192,7 @@ def refresh_natural_hazards_once(*, db_path: str = "app.db") -> dict:
             "events_found": len(disaster_records),
             "events_saved": disaster_saved,
             "counts": _count_event_types(disaster_records),
-            "errors": disaster_errors,
+            "errors": disaster_errors + ongoing_stats["errors"],
             "ongoing": ongoing_stats,
         },
     }

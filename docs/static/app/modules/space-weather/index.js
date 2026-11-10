@@ -1,6 +1,6 @@
 import { clearElement, setEmpty, setError, setLoading } from "../../core/dom.js";
 import { formatAbsoluteLocalDateTime, formatRelativeLocalTime } from "../../core/time.js";
-import { getExportProfileGeneratedAt } from "../../core/export-meta.js";
+import { renderFreshness } from "../../core/export-meta.js?v=44";
 
 const DEFAULT_DAY_LABELS = ["第 1 天", "第 2 天", "第 3 天"];
 
@@ -400,14 +400,7 @@ export function createSpaceWeatherModule(ctx) {
   }
 
   function updateHeader() {
-    if (!updatedAt) return;
-    if (!ctx.state.lastSpaceWeatherFetchedAt) {
-      updatedAt.textContent = "（暂无更新时间）";
-      updatedAt.title = "";
-      return;
-    }
-    updatedAt.textContent = `（${formatRelativeLocalTime(ctx.state.lastSpaceWeatherFetchedAt)}更新）`;
-    updatedAt.title = formatAbsoluteLocalDateTime(ctx.state.lastSpaceWeatherFetchedAt);
+    renderFreshness(updatedAt, ["space_launches_latest.json", "space_weather_alerts.json", "space_weather_forecast.json"], ctx.state.lastSpaceWeatherFetchedAt);
   }
 
   async function refresh() {
@@ -425,8 +418,7 @@ export function createSpaceWeatherModule(ctx) {
       ctx.state.spaceLaunches = launches || { items: [] };
       ctx.state.spaceWeatherAlerts = Array.isArray(alerts) ? alerts : [];
       ctx.state.spaceWeatherForecast = forecast || null;
-      const exportGeneratedAt = await getExportProfileGeneratedAt("12h");
-      ctx.state.lastSpaceWeatherFetchedAt = exportGeneratedAt || pickLatestTimestamp(ctx.state.spaceWeatherAlerts, ctx.state.spaceWeatherForecast, ctx.state.spaceLaunches);
+      ctx.state.lastSpaceWeatherFetchedAt = pickLatestTimestamp(ctx.state.spaceWeatherAlerts, ctx.state.spaceWeatherForecast, ctx.state.spaceLaunches);
       renderLaunches(launchesContainer, ctx.state.spaceLaunches);
       renderAlerts(alertsContainer, ctx.state.spaceWeatherAlerts);
       renderForecast(forecastContainer, ctx.state.spaceWeatherForecast);

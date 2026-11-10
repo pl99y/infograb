@@ -1,6 +1,5 @@
 import { clearElement, setEmpty, setError, setLoading } from "../../core/dom.js";
-import { formatAbsoluteLocalDateTime, formatRelativeLocalTime } from "../../core/time.js";
-import { getExportProfileGeneratedAt } from "../../core/export-meta.js";
+import { renderFreshness } from "../../core/export-meta.js?v=44";
 
 function escapeHtml(value) {
   return String(value ?? "")
@@ -188,16 +187,7 @@ export function createMndPlaModule(ctx) {
   const updatedAt = document.getElementById("mndPlaUpdatedAt");
 
   function updateHeader() {
-    if (!updatedAt) return;
-
-    if (!ctx.state.lastMndPlaFetchedAt) {
-      updatedAt.textContent = "（暂无更新时间）";
-      updatedAt.title = "";
-      return;
-    }
-
-    updatedAt.textContent = `（${formatRelativeLocalTime(ctx.state.lastMndPlaFetchedAt)}更新）`;
-    updatedAt.title = formatAbsoluteLocalDateTime(ctx.state.lastMndPlaFetchedAt);
+    renderFreshness(updatedAt, ["mnd_pla_dashboard.json"], ctx.state.lastMndPlaFetchedAt);
   }
 
   function render(payload) {
@@ -229,8 +219,7 @@ export function createMndPlaModule(ctx) {
     try {
       const data = await ctx.api.get("/api/mnd-pla/dashboard?days=7");
       ctx.state.mndPlaData = data || { items: [], summary: {} };
-      const exportGeneratedAt = await getExportProfileGeneratedAt("12h");
-      ctx.state.lastMndPlaFetchedAt = exportGeneratedAt || data?.fetched_at || null;
+      ctx.state.lastMndPlaFetchedAt = data?.fetched_at || null;
       render(ctx.state.mndPlaData);
       updateHeader();
     } catch (error) {

@@ -143,26 +143,45 @@ def _normalize_ai_digest(parsed: dict[str, Any]) -> dict[str, Any]:
     }
 
 
-def _format_request_error(exc: Exception) -> str:
+DIGEST_ERRORS = {
+    "no_items", "missing_key", "http_error", "connection_timeout", "read_timeout",
+    "request_failed", "invalid_response", "disabled", "digest_unavailable",
+}
+
+
+def sanitize_snapshot_errors(snapshot: dict[str, Any]) -> bool:
+    """Replace raw error details carried forward from an older public snapshot."""
+    changed = False
+    digest = snapshot.get("ai_digest") or {}
+    if digest.get("error") and digest["error"] not in DIGEST_ERRORS:
+        digest["error"] = "digest_unavailable"
+        changed = True
+    for source in snapshot.get("sources", []):
+        for field, code in (("error", "fetch_failed"), ("parse_error", "parse_failed")):
+            if source.get(field) and source[field] != code:
+                source[field] = code
+                changed = True
+    return changed
+
+
+def _request_error_code(exc: Exception) -> str:
     if isinstance(exc, requests.exceptions.ConnectTimeout):
-        return f"Gemini API connect timeout after {AI_CONNECT_TIMEOUT}s"
+        return "connection_timeout"
     if isinstance(exc, requests.exceptions.ReadTimeout):
-        return f"Gemini API read timeout after {AI_READ_TIMEOUT}s"
-    if isinstance(exc, requests.exceptions.Timeout):
-        return f"Gemini API timeout: {exc}"
+        return "read_timeout"
     if isinstance(exc, requests.exceptions.RequestException):
-        return f"Gemini API request error: {exc}"
-    return f"{type(exc).__name__}: {exc}"
+        return "request_failed"
+    return "invalid_response"
 
 
 def generate_hotsearch_ai_digest(items: list[dict[str, Any]]) -> dict[str, Any]:
     if not items:
-        return _fallback_digest("no hotsearch items")
+        return _fallback_digest("no_items")
     if not GEMINI_API_KEY:
-        return _fallback_digest("GEMINI_API_KEY is not set")
+        return _fallback_digest("missing_key")
 
     prompt = _build_ai_prompt(items)
-    url = f"{GEMINI_API_BASE}/models/{GEMINI_MODEL}:generateContent?key={GEMINI_API_KEY}"
+    url = f"{GEMINI_API_BASE}/models/{GEMINI_MODEL}:generateContent"
     payload = {
         "contents": [{"role": "user", "parts": [{"text": prompt}]}],
         "generationConfig": {
@@ -179,16 +198,17 @@ def generate_hotsearch_ai_digest(items: list[dict[str, Any]]) -> dict[str, Any]:
             response = requests.post(
                 url,
                 json=payload,
+                headers={"x-goog-api-key": GEMINI_API_KEY},
                 timeout=(AI_CONNECT_TIMEOUT, AI_READ_TIMEOUT),
             )
 
             if response.status_code >= 400:
-                last_error = f"HTTP {response.status_code}: {response.text[:500]}"
+                last_error = "http_error"
                 retryable = response.status_code in {429, 500, 502, 503, 504}
                 if retryable and attempt < AI_RETRIES:
                     time.sleep(AI_RETRY_BACKOFF_SECONDS * attempt)
                     continue
-                logger.warning("Hotsearch AI digest failed: %s", last_error)
+                logger.warning("Hotsearch AI digest failed: HTTP %s", response.status_code)
                 return _fallback_digest(last_error)
 
             data = response.json()
@@ -197,7 +217,7 @@ def generate_hotsearch_ai_digest(items: list[dict[str, Any]]) -> dict[str, Any]:
             return _normalize_ai_digest(parsed)
 
         except Exception as exc:
-            last_error = _format_request_error(exc)
+            last_error = _request_error_code(exc)
             logger.warning(
                 "Hotsearch AI digest attempt %s/%s failed: %s",
                 attempt,
@@ -272,9 +292,9 @@ def fetch_hotsearch_snapshot(*, include_ai_digest: bool = True) -> dict[str, Any
         merged_items.extend(items)
 
     merged_items = _dedupe_items(merged_items)
-    ai_digest = generate_hotsearch_ai_digest(merged_items) if include_ai_digest else _fallback_digest("AI digest disabled")
+    ai_digest = generate_hotsearch_ai_digest(merged_items) if include_ai_digest else _fallback_digest("disabled")
 
-    return {
+    snapshot = {
         "generated_at": generated_at,
         "ok": any(bool(source.get("ok")) for source in source_payloads),
         "source_name": "TopHub 今日热榜",
@@ -283,3 +303,5 @@ def fetch_hotsearch_snapshot(*, include_ai_digest: bool = True) -> dict[str, Any
         "items": merged_items,
         "ai_digest": ai_digest,
     }
+    sanitize_snapshot_errors(snapshot)
+    return snapshot

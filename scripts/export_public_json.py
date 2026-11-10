@@ -4,9 +4,8 @@ import argparse
 import json
 import os
 import sys
-from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any, Callable
+from typing import Any
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DB_PATH = Path(os.environ.get("INFOGRAB_DB_PATH", str(PROJECT_ROOT / "runtime" / "app.db")))
@@ -37,12 +36,9 @@ from services.news_timeline.pipeline import fetch_news_timeline_once  # noqa: E4
 from services.news_timeline.queries import get_news_timeline_latest  # noqa: E402
 from services.hotsearch.queries import get_hotsearch_latest  # noqa: E402
 
-TargetFn = Callable[[], Any]
+from scripts.export_status import collect, f1_live_status, hotsearch_status, publish_exports  # noqa: E402
+
 EXPORT_LABEL = "15m"
-
-
-def utc_now_iso() -> str:
-    return datetime.now(timezone.utc).isoformat()
 
 
 def env_bool(name: str, default: bool = True) -> bool:
@@ -50,39 +46,6 @@ def env_bool(name: str, default: bool = True) -> bool:
     if raw is None:
         return default
     return raw.strip().lower() not in {"0", "false", "no", "off", ""}
-
-
-def write_json(path: Path, payload: Any) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-
-
-def read_existing_json(path: Path) -> dict[str, Any]:
-    if not path.exists():
-        return {}
-    try:
-        payload = json.loads(path.read_text(encoding="utf-8"))
-    except Exception:
-        return {}
-    return payload if isinstance(payload, dict) else {}
-
-
-def build_export_meta(run_at: str, exported_files: list[str], steps: list[dict[str, Any]]) -> dict[str, Any]:
-    path = DATA_DIR / "export_meta.json"
-    meta = read_existing_json(path)
-    profiles = meta.get("profiles") if isinstance(meta.get("profiles"), dict) else {}
-    profiles[EXPORT_LABEL] = {
-        "generated_at": run_at,
-        "files": {name: run_at for name in exported_files},
-        "steps": steps,
-    }
-    meta["version"] = 2
-    meta["generated_at"] = run_at
-    meta["last_profile"] = EXPORT_LABEL
-    meta["profile"] = EXPORT_LABEL
-    meta["steps"] = steps
-    meta["profiles"] = profiles
-    return meta
 
 
 def normalize_telegram(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -99,56 +62,52 @@ def normalize_telegram(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return out
 
 
-def safe_run(name: str, fn: TargetFn) -> dict[str, Any]:
-    try:
-        fn()
-        return {"name": name, "ok": True}
-    except Exception as exc:
-        print(f"[warn] {name}: {exc}")
-        return {"name": name, "ok": False, "error": str(exc)}
-
-
-def fetch_all(skip_fetch: bool) -> list[dict[str, Any]]:
+def fetch_all(skip_fetch: bool) -> dict:
+    attempts = {}
     if skip_fetch:
-        return []
-    return [
-        safe_run("energy", lambda: fetch_energy_once(db_path=str(DB_PATH))),
-        safe_run("market", lambda: fetch_market_snapshots_once(db_path=str(DB_PATH))),
-        safe_run("aviation", lambda: fetch_aviation_once(db_path=str(DB_PATH))),
-        safe_run("weather_alerts", lambda: fetch_weather_alerts_once(db_path=str(DB_PATH))),
-        safe_run("disaster", lambda: fetch_disaster_once(db_path=str(DB_PATH))),
-        safe_run("telegram", lambda: fetch_telegram_once(db_path=str(DB_PATH))),
-        safe_run("f1_live", lambda: fetch_f1_live_once(db_path=str(DB_PATH))),
-        safe_run("news_timeline", lambda: fetch_news_timeline_once(db_path=str(DB_PATH))),
-    ]
+        return attempts
+
+    db_path = str(DB_PATH)
+    collect(attempts, "energy_latest.json", lambda: fetch_energy_once(db_path=db_path), evidence=("quotes_saved",))
+    collect(attempts, "market_latest.json", lambda: fetch_market_snapshots_once(db_path=db_path))
+    collect(
+        attempts, "aviation", lambda: fetch_aviation_once(db_path=db_path),
+        evidence=("alerts_found", "disruptions_found"),
+        split={"aviation_alerts.json": "alerts", "aviation_disruptions.json": "disruptions"},
+    )
+    collect(attempts, "weather_alerts.json", lambda: fetch_weather_alerts_once(db_path=db_path), evidence=("alerts_found",))
+    collect(attempts, "disaster_ongoing.json", lambda: fetch_disaster_once(db_path=db_path), evidence=("events_found",))
+    collect(attempts, "telegram.json", lambda: fetch_telegram_once(db_path=db_path), evidence=("sources_processed",))
+    # Keep the existing SQLite snapshot collection; the published live feed has its own status.
+    try:
+        fetch_f1_live_once(db_path=db_path)
+    except Exception as exc:
+        print(f"[warn] F1 snapshot collection failed ({type(exc).__name__})")
+    collect(attempts, "news_timeline_latest.json", lambda: fetch_news_timeline_once(db_path=db_path), evidence=("items_found",))
+    return attempts
 
 
-def export_all(steps: list[dict[str, Any]]) -> None:
-    run_at = utc_now_iso()
+def export_all(attempts: dict, *, skip_fetch: bool = False) -> None:
+    db_path = str(DB_PATH)
     exports = {
-        "energy_latest.json": get_energy_latest(db_path=str(DB_PATH)),
-        "market_latest.json": get_market_snapshots_latest(db_path=str(DB_PATH)),
-        "aviation_alerts.json": get_airport_alerts(limit=30, db_path=str(DB_PATH)),
-        "aviation_disruptions.json": get_airport_disruptions_latest(
-            region="worldwide",
-            direction="departures",
-            limit=20,
-            db_path=str(DB_PATH),
+        "energy_latest.json": lambda: get_energy_latest(db_path=db_path),
+        "market_latest.json": lambda: get_market_snapshots_latest(db_path=db_path),
+        "aviation_alerts.json": lambda: get_airport_alerts(limit=30, db_path=db_path),
+        "aviation_disruptions.json": lambda: get_airport_disruptions_latest(
+            region="worldwide", direction="departures", limit=20, db_path=db_path,
         ),
-        "weather_alerts.json": get_weather_alerts(limit=60, db_path=str(DB_PATH)),
-        "disaster_ongoing.json": get_disaster_ongoing_groups(limit=80, db_path=str(DB_PATH)),
-        "telegram.json": normalize_telegram(get_recent_posts(limit=50, db_path=str(DB_PATH))),
-        "news_timeline_latest.json": get_news_timeline_latest(limit=120, window_hours=12, db_path=str(DB_PATH)),
-        "news_hotsearch_latest.json": get_hotsearch_latest(db_path=str(DB_PATH)),
-        "f1_live.json": get_f1_live(db_path=str(DB_PATH)),
+        "weather_alerts.json": lambda: get_weather_alerts(limit=60, db_path=db_path),
+        "disaster_ongoing.json": lambda: get_disaster_ongoing_groups(limit=80, db_path=db_path),
+        "telegram.json": lambda: normalize_telegram(get_recent_posts(limit=50, db_path=db_path)),
+        "news_timeline_latest.json": lambda: get_news_timeline_latest(limit=120, window_hours=12, db_path=db_path),
     }
+    snapshot_status = {}
+    if not skip_fetch:
+        exports["news_hotsearch_latest.json"] = lambda: get_hotsearch_latest(db_path=db_path)
+        exports["f1_live.json"] = lambda: get_f1_live(db_path=db_path)
+        snapshot_status = {"news_hotsearch_latest.json": hotsearch_status, "f1_live.json": f1_live_status}
 
-    for filename, payload in exports.items():
-        write_json(DATA_DIR / filename, payload)
-        print(f"[ok] wrote {filename}")
-
-    write_json(DATA_DIR / "export_meta.json", build_export_meta(run_at, list(exports.keys()), steps))
-    print("[ok] wrote export_meta.json")
+    publish_exports(DATA_DIR, EXPORT_LABEL, exports, attempts, snapshot_status)
 
 
 def cleanup_runtime() -> None:
@@ -201,8 +160,8 @@ def main() -> None:
     DB_PATH.parent.mkdir(parents=True, exist_ok=True)
     initialize_database(str(DB_PATH))
 
-    steps = fetch_all(skip_fetch=args.skip_fetch)
-    export_all(steps=steps)
+    attempts = fetch_all(skip_fetch=args.skip_fetch)
+    export_all(attempts, skip_fetch=args.skip_fetch)
     safe_cleanup_runtime(skip_cleanup=args.skip_cleanup)
     print(f"Exported {EXPORT_LABEL} profile JSON into {DATA_DIR}")
 

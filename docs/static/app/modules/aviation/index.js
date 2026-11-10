@@ -1,7 +1,6 @@
 import { setError, setLoading } from "../../core/dom.js";
 import { STORAGE_KEYS } from "../../core/constants.js";
-import { formatAbsoluteLocalDateTime, formatRelativeLocalTime } from "../../core/time.js";
-import { getExportProfileGeneratedAt } from "../../core/export-meta.js";
+import { renderFreshness } from "../../core/export-meta.js?v=44";
 import { renderAviationAlerts } from "./render-alerts.js";
 import { renderAviationDisruptions } from "./render-disruptions.js";
 
@@ -24,15 +23,7 @@ export function createAviationModule(ctx) {
   }
 
   function updateHeader() {
-    if (!updatedAt) return;
-    if (!ctx.state.lastAviationFetchedAt) {
-      updatedAt.textContent = "（暂无更新时间）";
-      updatedAt.title = "";
-      return;
-    }
-
-    updatedAt.textContent = `（${formatRelativeLocalTime(ctx.state.lastAviationFetchedAt)}更新）`;
-    updatedAt.title = formatAbsoluteLocalDateTime(ctx.state.lastAviationFetchedAt);
+    renderFreshness(updatedAt, ["aviation_alerts.json", "aviation_disruptions.json"], ctx.state.lastAviationFetchedAt);
   }
 
   async function refresh() {
@@ -57,9 +48,8 @@ export function createAviationModule(ctx) {
         .map((value) => new Date(value).getTime())
         .filter((value) => !Number.isNaN(value));
 
-      const exportGeneratedAt = await getExportProfileGeneratedAt("15m");
       const fallbackUpdatedAt = timestamps.length > 0 ? new Date(Math.max(...timestamps)).toISOString() : null;
-      ctx.state.lastAviationFetchedAt = exportGeneratedAt || fallbackUpdatedAt;
+      ctx.state.lastAviationFetchedAt = fallbackUpdatedAt;
       updateHeader();
     } catch (error) {
       console.error("Failed to load aviation data:", error);

@@ -4,9 +4,7 @@ import argparse
 import json
 import os
 import sys
-from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any, Callable
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DB_PATH = Path(os.environ.get("INFOGRAB_DB_PATH", str(PROJECT_ROOT / "runtime" / "app.db")))
@@ -34,12 +32,9 @@ from services.mnd_pla.queries import get_mnd_pla_dashboard  # noqa: E402
 from services.f1.pipeline import fetch_f1_news_once  # noqa: E402
 from services.f1.queries import get_f1_news  # noqa: E402
 
-TargetFn = Callable[[], Any]
+from scripts.export_status import collect, publish_exports  # noqa: E402
+
 EXPORT_LABEL = "12h"
-
-
-def utc_now_iso() -> str:
-    return datetime.now(timezone.utc).isoformat()
 
 
 def env_bool(name: str, default: bool = True) -> bool:
@@ -49,81 +44,36 @@ def env_bool(name: str, default: bool = True) -> bool:
     return raw.strip().lower() not in {"0", "false", "no", "off", ""}
 
 
-def write_json(path: Path, payload: Any) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-
-
-def read_existing_json(path: Path) -> dict[str, Any]:
-    if not path.exists():
-        return {}
-    try:
-        payload = json.loads(path.read_text(encoding="utf-8"))
-    except Exception:
-        return {}
-    return payload if isinstance(payload, dict) else {}
-
-
-def build_export_meta(run_at: str, exported_files: list[str], steps: list[dict[str, Any]]) -> dict[str, Any]:
-    path = DATA_DIR / "export_meta.json"
-    meta = read_existing_json(path)
-    profiles = meta.get("profiles") if isinstance(meta.get("profiles"), dict) else {}
-    profiles[EXPORT_LABEL] = {
-        "generated_at": run_at,
-        "files": {name: run_at for name in exported_files},
-        "steps": steps,
-    }
-    meta["version"] = 2
-    meta["generated_at"] = run_at
-    meta["last_profile"] = EXPORT_LABEL
-    meta["profile"] = EXPORT_LABEL
-    meta["steps"] = steps
-    meta["profiles"] = profiles
-    return meta
-
-
-def safe_run(name: str, fn: TargetFn) -> dict[str, Any]:
-    try:
-        fn()
-        return {"name": name, "ok": True}
-    except Exception as exc:
-        print(f"[warn] {name}: {exc}")
-        return {"name": name, "ok": False, "error": str(exc)}
-
-
-def fetch_all(skip_fetch: bool) -> list[dict[str, Any]]:
+def fetch_all(skip_fetch: bool) -> dict:
+    attempts = {}
     if skip_fetch:
-        return []
-    return [
-        safe_run("space_weather", lambda: fetch_space_weather_once(db_path=str(DB_PATH))),
-        safe_run("space_launches", lambda: fetch_space_launches_once(db_path=str(DB_PATH))),
-        safe_run("mnd_pla", lambda: fetch_mnd_pla_once(limit=7, db_path=str(DB_PATH))),
-        safe_run("public_health", lambda: fetch_public_health_once(db_path=str(DB_PATH))),
-        safe_run("f1_news", lambda: fetch_f1_news_once(db_path=str(DB_PATH))),
-    ]
+        return attempts
+
+    db_path = str(DB_PATH)
+    collect(
+        attempts, "space_weather", lambda: fetch_space_weather_once(db_path=db_path),
+        split={"space_weather_alerts.json": "alerts", "space_weather_forecast.json": "forecast"},
+    )
+    collect(attempts, "space_launches_latest.json", lambda: fetch_space_launches_once(db_path=db_path))
+    collect(attempts, "mnd_pla_dashboard.json", lambda: fetch_mnd_pla_once(limit=7, db_path=db_path))
+    collect(attempts, "public_health_latest.json", lambda: fetch_public_health_once(db_path=db_path))
+    collect(attempts, "f1_news.json", lambda: fetch_f1_news_once(db_path=db_path))
+    return attempts
 
 
-def export_all(steps: list[dict[str, Any]]) -> None:
-    run_at = utc_now_iso()
+def export_all(attempts: dict) -> None:
+    db_path = str(DB_PATH)
     exports = {
-        "space_weather_alerts.json": get_space_weather_alerts(limit=30, db_path=str(DB_PATH)),
-        "space_weather_forecast.json": get_space_weather_forecast(db_path=str(DB_PATH)),
-        "space_launches_latest.json": get_space_launches_latest(db_path=str(DB_PATH)),
-        "mnd_pla_dashboard.json": get_mnd_pla_dashboard(days=7, db_path=str(DB_PATH)),
-        "public_health_latest.json": get_public_health_latest(
-            limit_early_warning=120,
-            limit_outbreak_events=120,
-            db_path=str(DB_PATH),
+        "space_weather_alerts.json": lambda: get_space_weather_alerts(limit=30, db_path=db_path),
+        "space_weather_forecast.json": lambda: get_space_weather_forecast(db_path=db_path),
+        "space_launches_latest.json": lambda: get_space_launches_latest(db_path=db_path),
+        "mnd_pla_dashboard.json": lambda: get_mnd_pla_dashboard(days=7, db_path=db_path),
+        "public_health_latest.json": lambda: get_public_health_latest(
+            limit_early_warning=120, limit_outbreak_events=120, db_path=db_path,
         ),
-        "f1_news.json": get_f1_news(limit=24, db_path=str(DB_PATH)),
+        "f1_news.json": lambda: get_f1_news(limit=24, db_path=db_path),
     }
-
-    for filename, payload in exports.items():
-        write_json(DATA_DIR / filename, payload)
-        print(f"[ok] wrote {filename}")
-
-    write_json(DATA_DIR / "export_meta.json", build_export_meta(run_at, list(exports.keys()), steps))
-    print("[ok] wrote export_meta.json")
+    publish_exports(DATA_DIR, EXPORT_LABEL, exports, attempts)
 
 
 def cleanup_runtime() -> None:
@@ -176,8 +126,8 @@ def main() -> None:
     DB_PATH.parent.mkdir(parents=True, exist_ok=True)
     initialize_database(str(DB_PATH))
 
-    steps = fetch_all(skip_fetch=args.skip_fetch)
-    export_all(steps=steps)
+    attempts = fetch_all(skip_fetch=args.skip_fetch)
+    export_all(attempts)
     safe_cleanup_runtime(skip_cleanup=args.skip_cleanup)
     print(f"Exported {EXPORT_LABEL} profile JSON into {DATA_DIR}")
 

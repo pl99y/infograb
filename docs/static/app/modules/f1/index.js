@@ -1,5 +1,4 @@
-import { formatAbsoluteLocalDateTime, formatRelativeLocalTime } from "../../core/time.js";
-import { getExportProfileGeneratedAt } from "../../core/export-meta.js";
+import { getFreshness } from "../../core/export-meta.js?v=44";
 import { renderF1Live, getF1LiveStatusMarkup } from "./render-live.js";
 import { renderF1News } from "./render-news.js";
 
@@ -90,11 +89,6 @@ function setSimpleMessage(panelEl, message) {
   panelEl.innerHTML = `<div class="f1-empty">${esc(message)}</div>`;
 }
 
-function buildUpdatedLabel(value) {
-  if (!value) return "暂无更新时间";
-  return `已更新 ${formatRelativeLocalTime(value)}`;
-}
-
 function pickIsoCandidates(values) {
   return values
     .filter(Boolean)
@@ -126,10 +120,11 @@ function resolveNewsUpdatedAt(payload) {
   return candidates[0]?.value || null;
 }
 
-function applyNewsStatus(statusEl, updatedAt, isError = false) {
+function applyNewsStatus(statusEl, updatedAt) {
   if (!statusEl) return;
-  setStatus(statusEl, buildUpdatedLabel(updatedAt), isError);
-  statusEl.title = updatedAt ? formatAbsoluteLocalDateTime(updatedAt) : "";
+  const freshness = getFreshness(["f1_news.json"], updatedAt);
+  setStatus(statusEl, freshness.text, freshness.failed);
+  statusEl.title = freshness.title;
 }
 
 function applyLiveStatus(statusEl, payload, updatedAt) {
@@ -140,16 +135,16 @@ function applyLiveStatus(statusEl, payload, updatedAt) {
     return;
   }
 
-  const updatedTitle = updatedAt ? formatAbsoluteLocalDateTime(updatedAt) : "";
+  const freshness = getFreshness(["f1_live.json"], updatedAt);
   setStatusMarkup(
     statusEl,
     getF1LiveStatusMarkup(payload, {
-      updatedText: buildUpdatedLabel(updatedAt),
-      updatedTitle,
+      updatedText: freshness.text,
+      updatedTitle: freshness.title,
     }),
-    false,
+    freshness.failed,
   );
-  statusEl.title = updatedTitle;
+  statusEl.title = freshness.title;
 }
 
 function wireTabs(host) {
@@ -180,7 +175,7 @@ export function createF1Module(ctx) {
       applyLiveStatus(liveStatusEl, ctx.state.f1Live, ctx.state.lastF1LiveFetchedAt || null);
     }
     if (ctx.state.f1NewsLoaded) {
-      applyNewsStatus(newsStatusEl, ctx.state.lastF1NewsFetchedAt || null, false);
+      applyNewsStatus(newsStatusEl, ctx.state.lastF1NewsFetchedAt || null);
     }
   }
 
@@ -194,8 +189,7 @@ export function createF1Module(ctx) {
       : Promise.resolve({ data: await ctx.api.get("/api/f1/live"), meta: {} });
 
     const { data: payload } = await loader;
-    const exportGeneratedAt = await getExportProfileGeneratedAt("15m");
-    const updatedAt = exportGeneratedAt || resolveLiveUpdatedAt(payload);
+    const updatedAt = resolveLiveUpdatedAt(payload);
 
     renderF1Live(livePanel, payload);
     ctx.state.lastF1LiveFetchedAt = updatedAt;
@@ -216,14 +210,13 @@ export function createF1Module(ctx) {
       : Promise.resolve({ data: await ctx.api.get("/api/f1/news?limit=20"), meta: {} });
 
     const { data: payload } = await loader;
-    const exportGeneratedAt = await getExportProfileGeneratedAt("12h");
-    const updatedAt = exportGeneratedAt || resolveNewsUpdatedAt(payload);
+    const updatedAt = resolveNewsUpdatedAt(payload);
 
     renderF1News(ctx, newsPanel, payload);
     ctx.state.lastF1NewsFetchedAt = updatedAt;
     ctx.state.f1News = Array.isArray(payload) ? payload : [];
     ctx.state.f1NewsLoaded = true;
-    applyNewsStatus(statusEl, updatedAt, false);
+    applyNewsStatus(statusEl, updatedAt);
     return payload;
   }
 

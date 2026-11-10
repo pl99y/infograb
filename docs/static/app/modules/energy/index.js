@@ -1,6 +1,6 @@
 import { clearElement, setEmpty, setError, setLoading } from "../../core/dom.js";
-import { formatAbsoluteLocalDateTime, formatNumber, formatRelativeLocalTime, formatSigned } from "../../core/time.js";
-import { getExportProfileGeneratedAt } from "../../core/export-meta.js";
+import { formatNumber, formatSigned } from "../../core/time.js";
+import { renderFreshness } from "../../core/export-meta.js?v=44";
 
 const energyInfoMap = {
   wti: {
@@ -55,14 +55,7 @@ export function createEnergyModule(ctx) {
   }
 
   function updateHeader() {
-    if (!updatedAt) return;
-    if (!ctx.state.lastEnergyFetchedAt) {
-      updatedAt.textContent = "（暂无更新时间）";
-      updatedAt.title = "";
-      return;
-    }
-    updatedAt.textContent = `（${formatRelativeLocalTime(ctx.state.lastEnergyFetchedAt)}更新）`;
-    updatedAt.title = formatAbsoluteLocalDateTime(ctx.state.lastEnergyFetchedAt);
+    renderFreshness(updatedAt, ["energy_latest.json"], ctx.state.lastEnergyFetchedAt);
   }
 
   function render(items) {
@@ -126,9 +119,8 @@ export function createEnergyModule(ctx) {
         .map((value) => new Date(value).getTime())
         .filter((value) => !Number.isNaN(value));
 
-      const exportGeneratedAt = await getExportProfileGeneratedAt("15m");
       const fallbackUpdatedAt = timestamps.length > 0 ? new Date(Math.max(...timestamps)).toISOString() : null;
-      ctx.state.lastEnergyFetchedAt = exportGeneratedAt || fallbackUpdatedAt;
+      ctx.state.lastEnergyFetchedAt = fallbackUpdatedAt;
       updateHeader();
     } catch (error) {
       console.error("Failed to load energy data:", error);

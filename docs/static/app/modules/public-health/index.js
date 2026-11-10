@@ -1,6 +1,6 @@
 import { setEmpty, setError, setLoading } from "../../core/dom.js";
 import { formatAbsoluteLocalDateTime, formatRelativeLocalTime } from "../../core/time.js";
-import { getExportProfileGeneratedAt } from "../../core/export-meta.js";
+import { renderFreshness } from "../../core/export-meta.js?v=44";
 
 function escapeHtml(value) {
   return String(value ?? "")
@@ -100,15 +100,7 @@ export function createPublicHealthModule(ctx) {
   let activeTab = "early-warning";
 
   function updateHeader() {
-    if (!updatedAt) return;
-    const value = ctx.state.lastPublicHealthFetchedAt;
-    if (!value) {
-      updatedAt.textContent = "（加载中）";
-      updatedAt.title = "";
-      return;
-    }
-    updatedAt.textContent = `（${formatRelativeLocalTime(value)}更新）`;
-    updatedAt.title = formatAbsoluteLocalDateTime(value);
+    renderFreshness(updatedAt, ["public_health_latest.json"], ctx.state.lastPublicHealthFetchedAt);
   }
 
   function applyTab() {
@@ -135,8 +127,7 @@ export function createPublicHealthModule(ctx) {
       const payload = await ctx.api.get("/api/public-health/latest?limit_early_warning=120&limit_outbreak_events=120");
       ctx.state.publicHealthEarlyWarnings = (payload?.early_warning || []).map(normalizeItem);
       ctx.state.publicHealthOutbreakEvents = (payload?.outbreak_events || []).map(normalizeItem);
-      const exportGeneratedAt = await getExportProfileGeneratedAt("12h");
-      ctx.state.lastPublicHealthFetchedAt = exportGeneratedAt || pickLatestTimestamp(payload);
+      ctx.state.lastPublicHealthFetchedAt = pickLatestTimestamp(payload);
       render();
       updateHeader();
     } catch (error) {

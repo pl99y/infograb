@@ -1,6 +1,5 @@
 import { setError, setLoading } from "../../core/dom.js";
-import { formatAbsoluteLocalDateTime, formatRelativeLocalTime } from "../../core/time.js";
-import { getExportProfileGeneratedAt } from "../../core/export-meta.js";
+import { renderFreshness } from "../../core/export-meta.js?v=44";
 import { renderWeatherPane } from "./render-weather.js";
 import { renderDisasterPane } from "./render-disaster.js?v=37";
 
@@ -109,15 +108,7 @@ export function createDisasterModule(ctx) {
   }
 
   function updateHeader() {
-    if (!updatedAt) return;
-    const value = ctx.state.lastDisasterFetchedAt;
-    if (!value) {
-      updatedAt.textContent = "（暂无更新时间）";
-      updatedAt.title = "";
-      return;
-    }
-    updatedAt.textContent = `（${formatRelativeLocalTime(value)}更新）`;
-    updatedAt.title = formatAbsoluteLocalDateTime(value);
+    renderFreshness(updatedAt, ["weather_alerts.json", "disaster_ongoing.json"], ctx.state.lastDisasterFetchedAt);
   }
 
   function renderInstant() {
@@ -150,12 +141,11 @@ export function createDisasterModule(ctx) {
       renderInstant();
       renderOngoing();
 
-      const exportGeneratedAt = await getExportProfileGeneratedAt("15m");
       const fallbackUpdatedAt = pickLatestTimestamp([
         ...ctx.state.weatherAlerts,
         ...ctx.state.disasterOngoing,
       ]);
-      ctx.state.lastDisasterFetchedAt = exportGeneratedAt || fallbackUpdatedAt;
+      ctx.state.lastDisasterFetchedAt = fallbackUpdatedAt;
       updateHeader();
     } catch (error) {
       console.error("Failed to load disaster module:", error);

@@ -1,20 +1,21 @@
 import { AUTO_REFRESH_MS, RELATIVE_CLOCK_MS, STORAGE_KEYS } from "./core/constants.js";
 import { createApi } from "./core/api.js";
+import { refreshExportMeta } from "./core/export-meta.js?v=44";
 import { createStore } from "./core/store.js";
 import { createThemeModule } from "./modules/theme/index.js";
 import { createMobileModule } from "./modules/mobile/index.js";
 import { createLightboxModule } from "./modules/lightbox/index.js";
 import { createLayoutModule } from "./modules/layout/index.js";
-import { createEnergyModule } from "./modules/energy/index.js";
-import { createMarketModule } from "./modules/market/index.js";
-import { createAviationModule } from "./modules/aviation/index.js";
-import { createDisasterModule } from "./modules/disaster/index.js";
-import { createPublicHealthModule } from "./modules/public-health/index.js";
-import { createSpaceWeatherModule } from "./modules/space-weather/index.js?v=43";
-import { createMndPlaModule } from "./modules/mnd-pla/index.js";
-import { createF1Module } from "./modules/f1/index.js";
-import { createFeedModule } from "./modules/feed/index.js";
-import { createNewsTimelineModule } from "./modules/news-timeline/index.js";
+import { createEnergyModule } from "./modules/energy/index.js?v=44";
+import { createMarketModule } from "./modules/market/index.js?v=44";
+import { createAviationModule } from "./modules/aviation/index.js?v=44";
+import { createDisasterModule } from "./modules/disaster/index.js?v=44";
+import { createPublicHealthModule } from "./modules/public-health/index.js?v=44";
+import { createSpaceWeatherModule } from "./modules/space-weather/index.js?v=44";
+import { createMndPlaModule } from "./modules/mnd-pla/index.js?v=44";
+import { createF1Module } from "./modules/f1/index.js?v=44";
+import { createFeedModule } from "./modules/feed/index.js?v=44";
+import { createNewsTimelineModule } from "./modules/news-timeline/index.js?v=44";
 
 function createContext() {
   const store = createStore();
@@ -91,9 +92,24 @@ document.addEventListener("DOMContentLoaded", async () => {
   ctx.newsTimelineModule = safeInit("news-timeline", createNewsTimelineModule, ctx, modules);
   ctx.feedModule = safeInit("feed", createFeedModule, ctx, modules);
 
+  let refreshing = false;
+
   async function refreshAll() {
-    const refreshers = modules.filter((mod) => typeof mod.refresh === "function").map((mod) => mod.refresh());
-    await Promise.all(refreshers);
+    if (refreshing) return;
+    refreshing = true;
+    try {
+      const tasks = [refreshExportMeta()];
+      for (const mod of modules) {
+        if (typeof mod.refresh === "function") tasks.push(Promise.resolve().then(() => mod.refresh()));
+      }
+      const results = await Promise.allSettled(tasks);
+      for (const result of results) {
+        if (result.status === "rejected") console.error("Dashboard refresh failed:", result.reason);
+      }
+      updateRelativeTexts();
+    } finally {
+      refreshing = false;
+    }
   }
 
   function updateRelativeTexts() {
@@ -111,7 +127,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   try {
     await refreshAll();
-    updateRelativeTexts();
   } catch (error) {
     console.error("Initial load failed:", error);
   }

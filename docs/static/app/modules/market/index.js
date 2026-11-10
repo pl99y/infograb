@@ -1,6 +1,5 @@
 import { clearElement, setEmpty, setError, setLoading } from "../../core/dom.js";
-import { formatAbsoluteLocalDateTime, formatRelativeLocalTime } from "../../core/time.js";
-import { getExportProfileGeneratedAt } from "../../core/export-meta.js";
+import { renderFreshness } from "../../core/export-meta.js?v=44";
 
 const marketLabels = {
   nasdaq: { name: "NASDAQ Composite", symbol: "^IXIC" },
@@ -46,14 +45,7 @@ export function createMarketModule(ctx) {
   const updatedAt = document.getElementById("marketUpdatedAt");
 
   function updateHeader() {
-    if (!updatedAt) return;
-    if (!ctx.state.lastMarketFetchedAt) {
-      updatedAt.textContent = "（暂无更新时间）";
-      updatedAt.title = "";
-      return;
-    }
-    updatedAt.textContent = `（${formatRelativeLocalTime(ctx.state.lastMarketFetchedAt)}更新）`;
-    updatedAt.title = formatAbsoluteLocalDateTime(ctx.state.lastMarketFetchedAt);
+    renderFreshness(updatedAt, ["market_latest.json"], ctx.state.lastMarketFetchedAt);
   }
 
   function render(items) {
@@ -103,11 +95,10 @@ export function createMarketModule(ctx) {
         .map((value) => new Date(value).getTime())
         .filter((value) => !Number.isNaN(value));
 
-      const exportGeneratedAt = await getExportProfileGeneratedAt("15m");
       const fallbackUpdatedAt = timestamps.length > 0
         ? new Date(Math.max(...timestamps)).toISOString()
         : null;
-      ctx.state.lastMarketFetchedAt = exportGeneratedAt || fallbackUpdatedAt;
+      ctx.state.lastMarketFetchedAt = fallbackUpdatedAt;
       updateHeader();
     } catch (error) {
       console.error("Failed to load market snapshots:", error);

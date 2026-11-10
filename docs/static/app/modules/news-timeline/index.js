@@ -1,6 +1,6 @@
 import { setError, setLoading } from "../../core/dom.js";
 import { formatAbsoluteLocalDateTime, formatRelativeLocalTime } from "../../core/time.js";
-import { getExportProfileGeneratedAt } from "../../core/export-meta.js";
+import { renderFreshness } from "../../core/export-meta.js?v=44";
 import { renderHotsearch, renderNewsTimeline } from "./render.js";
 
 export function createNewsTimelineModule(ctx) {
@@ -9,15 +9,14 @@ export function createNewsTimelineModule(ctx) {
   const updatedEl = document.getElementById("newsTimelineUpdatedAt");
   const tabsRoot = document.getElementById("newsPanelTabs");
 
+  let activeTab = "timeline";
+
   function updateHeader() {
-    if (!updatedEl) return;
-    const value = ctx.state.lastNewsTimelineFetchedAt || ctx.state.lastHotsearchFetchedAt;
-    if (!value) {
-      updatedEl.textContent = "（加载中）";
-      return;
+    if (activeTab === "hotsearch") {
+      renderFreshness(updatedEl, ["news_hotsearch_latest.json"], ctx.state.lastHotsearchFetchedAt);
+    } else {
+      renderFreshness(updatedEl, ["news_timeline_latest.json"], ctx.state.lastNewsTimelineFetchedAt);
     }
-    updatedEl.textContent = `（${formatRelativeLocalTime(value)}更新）`;
-    updatedEl.title = formatAbsoluteLocalDateTime(value);
   }
 
   function updateRelativeTimes() {
@@ -31,6 +30,8 @@ export function createNewsTimelineModule(ctx) {
 
   function setActiveTab(tabName) {
     const target = tabName === "hotsearch" ? "hotsearch" : "timeline";
+    activeTab = target;
+    updateHeader();
     document.querySelectorAll("[data-news-panel-tab]").forEach((btn) => {
       btn.classList.toggle("active", btn.dataset.newsPanelTab === target);
     });
@@ -71,8 +72,7 @@ export function createNewsTimelineModule(ctx) {
         }),
       ]);
 
-      const exportGeneratedAt = await getExportProfileGeneratedAt("15m");
-      ctx.state.lastNewsTimelineFetchedAt = exportGeneratedAt || timelineData?.updated_at || null;
+      ctx.state.lastNewsTimelineFetchedAt = timelineData?.updated_at || null;
       updateHeader();
     } catch (error) {
       console.error("Failed to load news timeline:", error);

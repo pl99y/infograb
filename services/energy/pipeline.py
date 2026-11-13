@@ -29,7 +29,7 @@ SINA_CHINA_CRUDE_QUOTE_URL = "https://hq.sinajs.cn/list=nf_SC0"
 ENERGY_SOURCES = [
     {"quote_key": "wti", "name": "WTI Crude", "kind": "oilprice_last_json", "url": OILPRICE_LAST_JSON_URL, "display_url": OILPRICE_CHARTS_URL, "metadata_url": OILPRICE_BLEND_CACHE_URL, "fallback_url": OILPRICE_CHARTS_URL},
     {"quote_key": "brent", "name": "Brent Crude", "kind": "oilprice_last_json", "url": OILPRICE_LAST_JSON_URL, "display_url": OILPRICE_CHARTS_URL, "metadata_url": OILPRICE_BLEND_CACHE_URL, "fallback_url": OILPRICE_CHARTS_URL},
-    {"quote_key": "murban", "name": "Murban Crude", "kind": "oilprice_last_json", "url": OILPRICE_LAST_JSON_URL, "display_url": OILPRICE_CHARTS_URL, "metadata_url": OILPRICE_BLEND_CACHE_URL, "fallback_url": OILPRICE_CHARTS_URL},
+    {"quote_key": "murban", "name": "Murban Crude (Platts Physical)", "kind": "oilprice_last_json", "url": OILPRICE_LAST_JSON_URL, "display_url": OILPRICE_CHARTS_URL, "metadata_url": OILPRICE_BLEND_CACHE_URL},
     {"quote_key": "natural_gas", "name": "Natural Gas", "kind": "oilprice_last_json", "url": OILPRICE_LAST_JSON_URL, "display_url": OILPRICE_CHARTS_URL, "metadata_url": OILPRICE_BLEND_CACHE_URL, "fallback_url": OILPRICE_CHARTS_URL},
     {"quote_key": "gasoline", "name": "Gasoline (RBOB)", "kind": "oilprice_last_json", "url": OILPRICE_LAST_JSON_URL, "display_url": OILPRICE_CHARTS_URL, "metadata_url": OILPRICE_BLEND_CACHE_URL, "fallback_url": OILPRICE_CHARTS_URL},
     {"quote_key": "china", "name": "China Crude Oil Futures (INE SC)", "kind": "sina_hq", "url": SINA_CHINA_CRUDE_QUOTE_URL, "display_url": SINA_CHINA_CRUDE_PAGE_URL, "fallback_urls": []},
@@ -223,6 +223,10 @@ def fetch_energy_once(db_path: str = "app.db", keys: list[str] | None = None) ->
                 results["quotes_saved"] += 1
                 continue
             except Exception as primary_exc:
+                if source_def["quote_key"] == "murban":
+                    results["errors"].append("Murban physical assessment unavailable")
+                    _record_failure(db_path=db_path, source_name=source_def["name"], started_at=fetched_at, error_message="physical_assessment_unavailable")
+                    continue
                 logger.warning("OilPrice last.json parse failed for %s; falling back to HTML: %s", source_def["name"], primary_exc)
                 html, html_fetched_at, html_error = _fetch_oilprice_html_fallback(cache=oilprice_html_cache)
                 if not html:

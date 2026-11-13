@@ -175,6 +175,7 @@ def _record_current_adsbfi_alert(con, *, alert, dedupe_key: str, fetched_at: str
         "last_seen_utc": fetched_at,
         "last_refresh_utc": fetched_at,
         "is_active": True,
+        "verification_pending": False,
         "reactivated": bool(existing_extra and existing_extra.get("is_active") is False),
     }
 
@@ -222,7 +223,7 @@ def _record_current_adsbfi_alert(con, *, alert, dedupe_key: str, fetched_at: str
     return False
 
 
-def _mark_inactive_adsbfi_alerts(con, *, active_dedupe_keys: set[str], checked_at: str) -> int:
+def _mark_inactive_adsbfi_alerts(con, *, active_dedupe_keys: set[str], checked_at: str, successful_squawks: set[str]) -> int:
     rows = con.execute(
         """
         SELECT *
@@ -236,6 +237,11 @@ def _mark_inactive_adsbfi_alerts(con, *, active_dedupe_keys: set[str], checked_a
     updated = 0
     for row in rows:
         dedupe_key = row["dedupe_key"]
+        if str(row["squawk_code"]) not in successful_squawks:
+            extra = _json_loads(row["extra_json"])
+            extra["verification_pending"] = True
+            con.execute("UPDATE airport_alerts SET extra_json = ? WHERE dedupe_key = ?", (_json_dumps(extra), dedupe_key))
+            continue
         if dedupe_key in active_dedupe_keys:
             continue
 
@@ -245,6 +251,7 @@ def _mark_inactive_adsbfi_alerts(con, *, active_dedupe_keys: set[str], checked_a
 
         last_seen = extra.get("last_seen_utc") or row["fetched_at"]
         status_text = _format_elapsed_ago(last_seen, checked_at)
+        extra["verification_pending"] = False
         extra["is_active"] = False
         extra["last_refresh_utc"] = checked_at
         extra.setdefault("last_seen_utc", last_seen)
@@ -268,6 +275,7 @@ def fetch_adsbfi_emergency_squawk_alerts_once(db_path: str = "app.db") -> dict:
     metas: list[dict[str, Any]] = []
     alerts = []
     successful_fetches = 0
+    successful_squawks: set[str] = set()
     first_started_at: str | None = None
     last_finished_at: str | None = None
 
@@ -292,7 +300,6 @@ def fetch_adsbfi_emergency_squawk_alerts_once(db_path: str = "app.db") -> dict:
             meta["error"] = error
             metas.append(meta)
         else:
-            successful_fetches += 1
             try:
                 parsed = parse_adsbfi_squawk_alerts(
                     fetch_result.payload,
@@ -300,6 +307,8 @@ def fetch_adsbfi_emergency_squawk_alerts_once(db_path: str = "app.db") -> dict:
                     squawk=squawk,
                     fetched_at=fetch_result.fetched_at,
                 )
+                successful_fetches += 1
+                successful_squawks.add(str(squawk))
                 alerts.extend(parsed)
                 meta["aircraft_count"] = len(parsed)
                 meta["total"] = fetch_result.payload.get("total")
@@ -318,6 +327,12 @@ def fetch_adsbfi_emergency_squawk_alerts_once(db_path: str = "app.db") -> dict:
     finished_at = last_finished_at or started_at
 
     if successful_fetches == 0:
+        con = get_connection(db_path)
+        try:
+            _mark_inactive_adsbfi_alerts(con, active_dedupe_keys=set(), checked_at=finished_at, successful_squawks=set())
+            con.commit()
+        finally:
+            con.close()
         _record_failure(
             db_path=db_path,
             source_name="Aviation/ADSB.fi Emergency Squawk",
@@ -353,7 +368,7 @@ def fetch_adsbfi_emergency_squawk_alerts_once(db_path: str = "app.db") -> dict:
             else:
                 refreshed += 1
 
-        inactive_updated = _mark_inactive_adsbfi_alerts(con, active_dedupe_keys=active_keys, checked_at=finished_at)
+        inactive_updated = _mark_inactive_adsbfi_alerts(con, active_dedupe_keys=active_keys, checked_at=finished_at, successful_squawks=successful_squawks)
 
         record_fetch_run(
             con=con,

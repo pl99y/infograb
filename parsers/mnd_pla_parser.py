@@ -4,7 +4,7 @@ import re
 from dataclasses import asdict, dataclass
 from datetime import datetime
 from typing import Optional
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlsplit, urlunsplit
 
 from bs4 import BeautifulSoup
 
@@ -107,7 +107,9 @@ def parse_mnd_pla_list_page(
     for anchor in soup.find_all("a", href=True):
         href = str(anchor.get("href") or "").strip()
         detail_url = urljoin(base_url, href)
-        if not re.search(r"/news/plaact/\d+$", detail_url):
+        parts = urlsplit(detail_url)
+        detail_url = urlunsplit((parts.scheme, parts.netloc, parts.path.rstrip("/"), "", ""))
+        if not re.search(r"/news/plaact/\d+$", parts.path.rstrip("/")):
             continue
         if detail_url in seen_urls:
             continue
@@ -283,6 +285,10 @@ def extract_intrusion_info(activity_text: str) -> tuple[Optional[int], list[str]
     if not activity_text:
         return None, []
 
+    activity_text = __import__("unicodedata").normalize("NFKC", activity_text)
+    match = re.search(r"(?:其中|計|共)\s*(\d+)\s*架(?:次)?[^。；;]*?(?:進入|逾越)[^。；;]*?空域", activity_text)
+    if match:
+        return int(match.group(1)), parse_areas_from_text(match.group(0))
     for part in re.findall(r"[（(]([^）)]+)[）)]", activity_text):
         if "空域" not in part:
             continue
@@ -415,11 +421,11 @@ def summarize_mnd_pla_records(records: list[dict], days: int = 7) -> dict:
 
     return {
         "days_counted": len(recent),
-        "aircraft_total_sum": sum(int(record.get("aircraft_total") or 0) for record in recent),
-        "aircraft_intrusion_total_sum": sum(int(record.get("aircraft_intrusion_total") or 0) for record in recent),
-        "ship_total_sum": sum(int(record.get("ship_total") or 0) for record in recent),
-        "official_ship_total_sum": sum(int(record.get("official_ship_total") or 0) for record in recent),
-        "balloon_total_sum": sum(int(record.get("balloon_total") or 0) for record in recent),
+        "aircraft_total_sum": sum(int(record["aircraft_total"]) for record in recent) if recent and all(record.get("aircraft_total") is not None for record in recent) else None,
+        "aircraft_intrusion_total_sum": sum(int(record["aircraft_intrusion_total"]) for record in recent) if recent and all(record.get("aircraft_intrusion_total") is not None for record in recent) else None,
+        "ship_total_sum": sum(int(record["ship_total"]) for record in recent) if recent and all(record.get("ship_total") is not None for record in recent) else None,
+        "official_ship_total_sum": sum(int(record["official_ship_total"]) for record in recent) if recent and all(record.get("official_ship_total") is not None for record in recent) else None,
+        "balloon_total_sum": sum(int(record["balloon_total"]) for record in recent) if recent and all(record.get("balloon_total") is not None for record in recent) else None,
         "no_aircraft_days": len(no_aircraft_dates),
         "no_aircraft_dates": no_aircraft_dates,
         "area_counts": area_counts,

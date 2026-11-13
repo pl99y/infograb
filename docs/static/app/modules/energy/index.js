@@ -1,6 +1,6 @@
-import { clearElement, setEmpty, setError, setLoading } from "../../core/dom.js";
-import { formatNumber, formatSigned } from "../../core/time.js";
-import { renderFreshness } from "../../core/export-meta.js?v=44";
+import { clearElement, setEmpty, setError, setLoading } from "../../core/dom.js?v=46";
+import { formatNumber, formatSigned } from "../../core/time.js?v=46";
+import { renderFreshness } from "../../core/export-meta.js?v=46";
 
 const energyInfoMap = {
   wti: {
@@ -17,7 +17,7 @@ const energyInfoMap = {
   },
   murban: {
     title: "穆尔班原油",
-    subtitle: "Murban Crude",
+    subtitle: "Murban · Platts 现货评估",
     unit: "美元/桶",
     note: "阿布扎比出产的一种高品质原油，常作为中东原油的定价基准之一",
   },
@@ -69,9 +69,9 @@ export function createEnergyModule(ctx) {
 
     items.forEach((item) => {
       const info = getEnergyCardInfo(item);
-      const price = Number(item.price);
-      const change = Number(item.change);
-      const changePercent = Number(item.change_percent);
+      const price = (item.price == null ? NaN : Number(item.price));
+      const change = (item.change == null ? NaN : Number(item.change));
+      const changePercent = (item.change_percent == null ? NaN : Number(item.change_percent));
       const showChange = true;
 
       let changeClass = "";
@@ -102,6 +102,11 @@ export function createEnergyModule(ctx) {
         ${showChange ? `<div class="market-change ${changeClass}">${changeText}</div>` : ""}
       `;
 
+      const status = document.createElement("div");
+      const quoteTime = item.timestamp_text || item.fetched_at;
+      status.className = "market-symbol-sub";
+      status.textContent = (item.status === "unavailable" ? "暂不可用" : item.status === "stale" ? "更新失败 · 保留上次报价" : "最近报价") + (quoteTime ? " · " + new Date(quoteTime).toLocaleString() : "");
+      card.appendChild(status);
       container.appendChild(card);
     });
   }

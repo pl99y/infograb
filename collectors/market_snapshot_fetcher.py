@@ -81,15 +81,14 @@ class YahooMarketSnapshotAdapter:
 
         meta = results[0].get("meta") or {}
         price = _coerce_float(meta.get("regularMarketPrice"), field_name="meta.regularMarketPrice")
-        previous_close = _coerce_float(
-            meta.get("chartPreviousClose"),
-            field_name="meta.chartPreviousClose",
-        )
-
-        if previous_close == 0:
-            raise MarketSnapshotAdapterError("Yahoo previous close is 0, cannot compute change_percent")
-
-        change_percent = round((price - previous_close) / previous_close * 100, 2)
+        # chartPreviousClose is the chart-range baseline, not necessarily yesterday's close.
+        if meta.get("regularMarketChangePercent") is not None:
+            change_percent = round(_coerce_float(meta["regularMarketChangePercent"], field_name="regularMarketChangePercent"), 2)
+        else:
+            previous_close = _coerce_float(meta.get("previousClose", meta.get("chartPreviousClose")), field_name="previousClose")
+            if previous_close == 0:
+                raise MarketSnapshotAdapterError("Previous close is zero")
+            change_percent = round((price - previous_close) / previous_close * 100, 2)
 
         return {
             "key": spec.key,

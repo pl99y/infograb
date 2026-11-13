@@ -334,6 +334,9 @@ def resolve_round_strategy(*, year: int | None = None, today: date | None = None
     home_links = extract_flashscore_home_links(flashscore_home_html)
     rounds = parse_formula1_schedule_rounds(schedule_html, year, home_links=home_links)
 
+    if not rounds or any(not r.start_date or not r.end_date for r in rounds):
+        raise ValueError("F1 calendar could not be parsed completely")
+
     current_round = None
     previous_round = None
     next_round = None

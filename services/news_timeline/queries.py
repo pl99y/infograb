@@ -17,7 +17,7 @@ def _loads_json_list(value: str | None) -> list[str]:
         return []
 
 
-def get_news_timeline_latest(*, limit: int = 120, window_hours: int = NEWS_WINDOW_HOURS, db_path: str = "app.db") -> dict:
+def get_news_timeline_latest(*, limit: int = -1, window_hours: int = NEWS_WINDOW_HOURS, db_path: str = "app.db") -> dict:
     con = get_connection(db_path)
     try:
         rows = con.execute(

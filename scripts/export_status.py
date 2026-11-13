@@ -60,7 +60,7 @@ def hotsearch_status(payload: dict) -> str:
     available = sum(bool(source.get("ok") and source.get("items_count")) for source in sources)
     if not available:
         return "failed"
-    return "success" if available == len(sources) else "partial"
+    return "success" if available == len(sources) and (payload.get("ai_digest", {}).get("ok") or payload.get("ai_digest", {}).get("error") == "disabled") else "partial"
 
 
 def f1_live_status(payload: dict) -> str:

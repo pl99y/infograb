@@ -1,6 +1,6 @@
-import { clearElement, setEmpty, setError, setLoading } from "../../core/dom.js";
-import { formatAbsoluteLocalDateTime, formatRelativeLocalTime } from "../../core/time.js";
-import { renderFreshness } from "../../core/export-meta.js?v=44";
+import { clearElement, setEmpty, setError, setLoading } from "../../core/dom.js?v=46";
+import { formatAbsoluteLocalDateTime, formatRelativeLocalTime } from "../../core/time.js?v=46";
+import { renderFreshness } from "../../core/export-meta.js?v=46";
 
 const DEFAULT_DAY_LABELS = ["第 1 天", "第 2 天", "第 3 天"];
 

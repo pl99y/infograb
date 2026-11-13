@@ -96,6 +96,13 @@ def get_market_snapshots_with_meta(timeout: int = 15) -> dict:
                 item = adapter.fetch_one(spec)  # type: ignore[attr-defined]
                 items.append(item)
             except Exception as exc:
+                if spec.key == "a_share_sse":
+                    try:
+                        fallback = MarketSnapshotSpec(key=spec.key, name=spec.name, symbol="000001.SS", provider="yahoo_finance")
+                        items.append(adapters["yahoo_finance"].fetch_one(fallback))
+                        continue
+                    except Exception:
+                        pass
                 logger.error("Market snapshot fetch failed for %s: %s", spec.key, exc)
                 errors.append(
                     {
@@ -150,6 +157,13 @@ def get_market_snapshots_latest(db_path: str = "app.db") -> list[dict]:
         ).fetchall()
 
         items = [dict(row) for row in rows]
+        present = {item["key"] for item in items}
+        for spec in MARKET_SNAPSHOT_SPECS:
+            if spec.key not in present:
+                items.append({"key": spec.key, "name": spec.name, "price": None, "status": "unavailable"})
+        latest = con.execute("SELECT started_at FROM fetch_runs WHERE source_name = 'Market/Snapshots' ORDER BY id DESC LIMIT 1").fetchone()
+        for item in items:
+            item["status"] = item.get("status") or ("stale" if latest and (item.get("fetched_at") or "") < latest["started_at"] else "available")
         items.sort(key=lambda item: _MARKET_SPEC_ORDER.get(item.get("key"), 999))
         return items
     finally:

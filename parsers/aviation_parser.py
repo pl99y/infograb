@@ -476,7 +476,7 @@ def parse_adsbfi_squawk_alerts(
     if aircraft_rows is None:
         aircraft_rows = payload.get("aircraft")
     if aircraft_rows is None:
-        aircraft_rows = []
+        raise AviationParseError("ADSB.fi snapshot has no aircraft field")
     if not isinstance(aircraft_rows, list):
         raise AviationParseError("ADSB.fi aircraft list is not an array")
 

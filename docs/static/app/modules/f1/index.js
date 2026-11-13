@@ -1,6 +1,6 @@
-import { getFreshness } from "../../core/export-meta.js?v=44";
-import { renderF1Live, getF1LiveStatusMarkup } from "./render-live.js";
-import { renderF1News } from "./render-news.js";
+import { getFreshness } from "../../core/export-meta.js?v=46";
+import { renderF1Live, getF1LiveStatusMarkup } from "./render-live.js?v=46";
+import { renderF1News } from "./render-news.js?v=46";
 
 function findSectionRoot() {
   const direct = document.querySelector(".col-f1");

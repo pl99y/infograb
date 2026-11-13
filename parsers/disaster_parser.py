@@ -337,12 +337,21 @@ def _wmo_severity_label(code: Any) -> str:
 def _parse_wmo_items(raw: dict, fetched_at: str, *, window_hours: int = 24) -> list[dict]:
     block = raw.get("wmo_all", {})
     data = _safe_json(block)
-    if not isinstance(data, dict):
+    if not block.get("ok"):
         return []
+    if not isinstance(data, dict) or not isinstance(data.get("items"), list):
+        raise ValueError("Invalid WMO alert snapshot")
 
-    items = data.get("items", []) or []
+    items = data["items"]
     cutoff = datetime.now(timezone.utc) - timedelta(hours=window_hours)
     out: list[dict] = []
+    superseded = set()
+    for message in items:
+        if isinstance(message, dict) and str(message.get("msgType", "")).lower() in {"cancel", "update"}:
+            for reference in str(message.get("references") or "").split():
+                parts = reference.split(",")
+                if len(parts) >= 2:
+                    superseded.add(parts[1])
 
     for item in items:
         if not isinstance(item, dict):
@@ -355,8 +364,14 @@ def _parse_wmo_items(raw: dict, fetched_at: str, *, window_hours: int = 24) -> l
         sent_dt = _parse_iso_datetime(item.get("sent"))
         effective_dt = _parse_iso_datetime(item.get("effective"))
         expires_dt = _parse_iso_datetime(item.get("expires"))
-        ref_dt = sent_dt or effective_dt or expires_dt
-        if ref_dt is None or ref_dt < cutoff:
+        ref_dt = sent_dt or effective_dt
+        now = datetime.now(timezone.utc)
+        if str(item.get("msgType", "")).lower() == "cancel":
+            continue
+        if expires_dt is not None:
+            if expires_dt <= now:
+                continue
+        elif ref_dt is None or ref_dt < cutoff:
             continue
 
         title = _compact_text(item.get("headline") or item.get("event"))
@@ -365,6 +380,8 @@ def _parse_wmo_items(raw: dict, fetched_at: str, *, window_hours: int = 24) -> l
             continue
 
         item_id = _norm_text(item.get("id") or item.get("identifier"))
+        if item_id in superseded:
+            continue
         sent_iso = sent_dt.isoformat() if sent_dt else fetched_at
         effective_iso = effective_dt.isoformat() if effective_dt else sent_iso
         expires_iso = expires_dt.isoformat() if expires_dt else None

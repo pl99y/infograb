@@ -367,7 +367,7 @@ def fetch_f1_live_payload(db_path: str = "app.db") -> dict:
             "source": "live_feed",
         }
 
-        if str(payload.get("mode") or "").lower() == "between_rounds":
+        if str(payload.get("mode") or "").lower() == "between_rounds" and not payload.get("error"):
             return _between_rounds_payload(result=result, payload=payload, strategy=strategy)
 
         if payload["has_data"]:

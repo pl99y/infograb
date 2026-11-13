@@ -1,4 +1,4 @@
-import { formatAbsoluteLocalDateTime, formatRelativeLocalTime } from "../../core/time.js";
+import { formatAbsoluteLocalDateTime, formatRelativeLocalTime } from "../../core/time.js?v=46";
 
 const SOURCE_LABELS = {
   zaobao: "联合早报",
@@ -24,7 +24,7 @@ function buildMeta(item) {
   return parts.join(" · ");
 }
 
-export function renderNewsTimeline(ctx, container, items) {
+export function renderNewsTimeline(ctx, container, items, visibleCount = 60) {
   if (!container) return;
   if (!Array.isArray(items) || items.length === 0) {
     container.innerHTML = `<div class="empty-state">过去 12 小时暂无新闻。</div>`;
@@ -33,7 +33,7 @@ export function renderNewsTimeline(ctx, container, items) {
 
   container.innerHTML = "";
 
-  items.forEach((item) => {
+  items.slice(0, visibleCount).forEach((item) => {
     const article = document.createElement("article");
     article.className = "news-timeline-item";
 
@@ -61,6 +61,12 @@ export function renderNewsTimeline(ctx, container, items) {
 
     container.appendChild(article);
   });
+  if (items.length > visibleCount) {
+    const more = document.createElement("button");
+    more.textContent = `加载更多（已显示 ${visibleCount} / ${items.length} 条）`;
+    more.addEventListener("click", () => renderNewsTimeline(ctx, container, items, visibleCount + 60));
+    container.appendChild(more);
+  }
 }
 
 const HOTSEARCH_DISPLAY_LIMIT = 10;

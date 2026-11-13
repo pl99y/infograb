@@ -1,5 +1,5 @@
-import { clearElement, setEmpty, setError, setLoading } from "../../core/dom.js";
-import { renderFreshness } from "../../core/export-meta.js?v=44";
+import { clearElement, setEmpty, setError, setLoading } from "../../core/dom.js?v=46";
+import { renderFreshness } from "../../core/export-meta.js?v=46";
 
 const marketLabels = {
   nasdaq: { name: "NASDAQ Composite", symbol: "^IXIC" },
@@ -78,6 +78,10 @@ export function createMarketModule(ctx) {
           <div class="market-snapshot-change ${changeClass}">${formatChangePercent(item?.change_percent)}</div>
         </div>
       `;
+      const status = document.createElement("div");
+      status.className = "market-snapshot-symbol";
+      status.textContent = item.status === "unavailable" ? "暂不可用" : (item.status === "stale" ? "更新失败 · " : "采集于 · ") + (item.fetched_at ? new Date(item.fetched_at).toLocaleString() : "未知");
+      row.querySelector(".market-snapshot-meta").appendChild(status);
       container.appendChild(row);
     });
   }

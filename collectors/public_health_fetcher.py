@@ -68,32 +68,19 @@ def fetch_public_health_payloads(timeout: int = DEFAULT_TIMEOUT) -> dict[str, An
     fetcher = PublicHealthFetcher(timeout=timeout)
     fetched_at = utc_now_iso()
 
-    promed_html = fetcher.fetch_text(PROMED_URL)
-    who_page_html = fetcher.fetch_text(WHO_LIST_URL)
-    who_api_url = extract_who_api_url(who_page_html)
-    who_api_payload = fetcher.fetch_json(
-        who_api_url,
-        headers={
-            "Accept": "application/json, text/plain, */*",
-            "Referer": WHO_LIST_URL,
-            "X-Requested-With": "XMLHttpRequest",
-        },
-    )
-
-    return {
-        "fetched_at": fetched_at,
-        "promed": {
-            "source_name": "ProMED",
-            "source_key": "promed",
-            "list_url": PROMED_URL,
-            "html": promed_html,
-        },
-        "who": {
-            "source_name": "WHO DON",
-            "source_key": "who_don",
-            "list_url": WHO_LIST_URL,
-            "page_html": who_page_html,
-            "api_url": who_api_url,
-            "api_payload": who_api_payload,
-        },
-    }
+    result = {"fetched_at": fetched_at, "errors": {}, "promed": {}, "who": {}}
+    try:
+        result["promed"] = {"html": fetcher.fetch_text(PROMED_URL)}
+    except Exception:
+        result["errors"]["promed"] = "fetch_failed"
+    try:
+        try:
+            page = fetcher.fetch_text(WHO_LIST_URL)
+        except Exception:
+            page = ""
+        api_url = extract_who_api_url(page)
+        result["who"] = {"page_html": page, "api_url": api_url,
+            "api_payload": fetcher.fetch_json(api_url, headers={"Accept": "application/json", "Referer": WHO_LIST_URL})}
+    except Exception:
+        result["errors"]["who"] = "fetch_failed"
+    return result

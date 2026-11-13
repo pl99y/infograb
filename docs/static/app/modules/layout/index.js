@@ -1,4 +1,4 @@
-import { MOBILE_BREAKPOINT, STORAGE_KEYS } from "../../core/constants.js";
+import { MOBILE_BREAKPOINT, STORAGE_KEYS } from "../../core/constants.js?v=46";
 
 const TOTAL_COLUMNS = 24;
 const BOARD_GAP_X = 8;

@@ -1,4 +1,4 @@
-import { formatAbsoluteLocalDateTime, formatRelativeLocalTime } from "../../core/time.js";
+import { formatAbsoluteLocalDateTime, formatRelativeLocalTime } from "../../core/time.js?v=46";
 
 const WMO_LIST_URL = "https://severeweather.wmo.int/list.html";
 
@@ -158,5 +158,5 @@ export function renderWeatherPane(items = []) {
     })
     .join("");
 
-  return `<div class="hazard-card-list weather-card-list">${rows}</div>`;
+  return `<div>仅显示 extreme 等级；按有效期保留，缺少有效期时保留 12 小时。</div><div class="hazard-card-list weather-card-list">${rows}</div>`;
 }

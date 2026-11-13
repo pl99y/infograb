@@ -320,8 +320,22 @@ def fetch_public_health_once(*, db_path: str = "app.db") -> dict[str, Any]:
     raw = fetch_public_health_payloads()
     fetched_at = raw.get("fetched_at") or started_at
 
-    promed_rows = _filter_early_warning_rows(parse_promed_latest_html(raw["promed"]["html"]))
-    who_rows = _filter_outbreak_rows(parse_who_api_payload(raw["who"]["api_payload"], raw["who"]["page_html"]))
+    errors = dict(raw.get("errors") or {})
+    promed_rows, who_rows = [], []
+    for key in ("promed", "who"):
+        if key in errors:
+            continue
+        try:
+            if key == "promed":
+                parsed = parse_promed_latest_html(raw[key]["html"])
+                promed_rows = _filter_early_warning_rows(parsed)
+            else:
+                parsed = parse_who_api_payload(raw[key]["api_payload"], raw[key]["page_html"])
+                who_rows = _filter_outbreak_rows(parsed)
+            if not parsed:
+                errors[key] = "empty_or_unrecognized_response"
+        except Exception:
+            errors[key] = "parse_failed"
 
     all_rows = promed_rows + who_rows
 
@@ -353,10 +367,10 @@ def fetch_public_health_once(*, db_path: str = "app.db") -> dict[str, Any]:
             source_name="ProMED",
             started_at=started_at,
             finished_at=finished_at,
-            status="success",
+            status="failed" if "promed" in errors else "success",
             items_found=len(promed_rows),
             new_items=new_counts.get("promed", 0),
-            error_message="",
+            error_message=errors.get("promed", ""),
         )
         record_fetch_run(
             con,
@@ -364,16 +378,17 @@ def fetch_public_health_once(*, db_path: str = "app.db") -> dict[str, Any]:
             source_name="WHO DON",
             started_at=started_at,
             finished_at=finished_at,
-            status="success",
+            status="failed" if "who" in errors else "success",
             items_found=len(who_rows),
             new_items=new_counts.get("who_don", 0),
-            error_message="",
+            error_message=errors.get("who", ""),
         )
         con.commit()
 
         latest_published_at = max((row.get("published_at") or "" for row in all_rows), default="")
         return {
-            "status": "success",
+            "status": "failed" if len(errors) == 2 else "partial" if errors else "success",
+            "errors": errors,
             "started_at": started_at,
             "finished_at": finished_at,
             "fetched_at": fetched_at,

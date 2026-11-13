@@ -13,21 +13,25 @@ def get_recent_posts(limit: int = 50, db_path: str = "app.db") -> list[dict]:
     try:
         rows = con.execute(
             """
+            WITH ranked AS (
+                SELECT items.*, ROW_NUMBER() OVER (PARTITION BY source_id ORDER BY published_at DESC, id DESC) AS source_rank
+                FROM items
+            )
             SELECT i.id, i.post_url, i.content_text_clean AS text,
                    i.content_text_zh AS text_zh,
                    i.content_text_en AS text_en,
                    i.published_at, i.fetched_at,
                    s.name AS source_name, s.source_type
-            FROM items i
+            FROM ranked i
             JOIN sources s ON i.source_id = s.id
             WHERE s.source_type = ?
-            ORDER BY i.published_at DESC, i.id DESC
+            ORDER BY CASE WHEN i.source_rank <= 3 THEN 0 ELSE 1 END, i.published_at DESC, i.id DESC
             LIMIT ?
             """,
             ("telegram", limit),
         ).fetchall()
 
-        items = [dict(r) for r in rows]
+        items = sorted([dict(r) for r in rows], key=lambda r: (r["published_at"] or "", r["id"]), reverse=True)
         if not items:
             return []
 

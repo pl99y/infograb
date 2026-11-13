@@ -1,6 +1,6 @@
-import { setEmpty, setError, setLoading } from "../../core/dom.js";
-import { formatAbsoluteLocalDateTime, formatRelativeLocalTime } from "../../core/time.js";
-import { renderFreshness } from "../../core/export-meta.js?v=44";
+import { setEmpty, setError, setLoading } from "../../core/dom.js?v=46";
+import { formatAbsoluteLocalDateTime, formatRelativeLocalTime } from "../../core/time.js?v=46";
+import { renderFreshness } from "../../core/export-meta.js?v=46";
 
 function escapeHtml(value) {
   return String(value ?? "")
@@ -46,10 +46,8 @@ function normalizeItem(item) {
 const WHO_OUTBREAK_LIST_URL = "https://www.who.int/emergencies/disease-outbreak-news";
 
 function resolveItemHref(item) {
-  if (item?.categoryKey === "outbreak_event") {
-    return WHO_OUTBREAK_LIST_URL;
-  }
-  return item?.itemUrl || item?.listUrl || "";
+  const href = item?.itemUrl || item?.listUrl || "";
+  return /^https?:\/\//i.test(href) ? href : "";
 }
 
 function formatCardTime(item) {
@@ -98,6 +96,7 @@ export function createPublicHealthModule(ctx) {
   const outbreakContainer = document.getElementById("publicHealthOutbreakContainer");
 
   let activeTab = "early-warning";
+  let sourceStatuses = {};
 
   function updateHeader() {
     renderFreshness(updatedAt, ["public_health_latest.json"], ctx.state.lastPublicHealthFetchedAt);
@@ -110,12 +109,18 @@ export function createPublicHealthModule(ctx) {
     outbreakPanel?.classList.toggle("active", activeTab === "outbreak-event");
   }
 
+  function sourceNote(name) {
+    const source = sourceStatuses[name];
+    if (!source) return "";
+    const label = source.status === "success" ? "更新正常" : "更新失败或未验证 · 保留已有记录";
+    return `<div>${escapeHtml(name)}：${label} · ${escapeHtml(source.started_at ? formatAbsoluteLocalDateTime(source.started_at) : "未知时间")}</div>`;
+  }
   function render() {
     if (earlyContainer) {
-      earlyContainer.innerHTML = renderList(ctx.state.publicHealthEarlyWarnings, "还没有抓到 ProMED 早期预警。");
+      earlyContainer.innerHTML = sourceNote("ProMED") + renderList(ctx.state.publicHealthEarlyWarnings, "还没有抓到 ProMED 早期预警。");
     }
     if (outbreakContainer) {
-      outbreakContainer.innerHTML = renderList(ctx.state.publicHealthOutbreakEvents, "还没有抓到 WHO 爆发事件。");
+      outbreakContainer.innerHTML = sourceNote("WHO DON") + renderList(ctx.state.publicHealthOutbreakEvents, "还没有抓到 WHO 爆发事件。");
     }
   }
 
@@ -125,6 +130,7 @@ export function createPublicHealthModule(ctx) {
 
     try {
       const payload = await ctx.api.get("/api/public-health/latest?limit_early_warning=120&limit_outbreak_events=120");
+      sourceStatuses = payload?.sources || {};
       ctx.state.publicHealthEarlyWarnings = (payload?.early_warning || []).map(normalizeItem);
       ctx.state.publicHealthOutbreakEvents = (payload?.outbreak_events || []).map(normalizeItem);
       ctx.state.lastPublicHealthFetchedAt = pickLatestTimestamp(payload);

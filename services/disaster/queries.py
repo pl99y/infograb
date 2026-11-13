@@ -57,6 +57,8 @@ def get_weather_alerts(limit: int = 100, db_path: str = "app.db") -> list[dict]:
             """
             SELECT *
             FROM weather_alerts
+            WHERE (expires_at IS NOT NULL AND datetime(expires_at) > datetime('now'))
+               OR (expires_at IS NULL AND datetime(COALESCE(issued_at, effective_at)) >= datetime('now', '-12 hours'))
             ORDER BY datetime(COALESCE(issued_at, effective_at, fetched_at)) DESC, id DESC
             LIMIT ?
             """,

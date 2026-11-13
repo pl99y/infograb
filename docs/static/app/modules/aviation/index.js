@@ -1,8 +1,8 @@
-import { setError, setLoading } from "../../core/dom.js";
-import { STORAGE_KEYS } from "../../core/constants.js";
-import { renderFreshness } from "../../core/export-meta.js?v=44";
-import { renderAviationAlerts } from "./render-alerts.js";
-import { renderAviationDisruptions } from "./render-disruptions.js";
+import { setError, setLoading } from "../../core/dom.js?v=46";
+import { STORAGE_KEYS } from "../../core/constants.js?v=46";
+import { renderFreshness } from "../../core/export-meta.js?v=46";
+import { renderAviationAlerts } from "./render-alerts.js?v=46";
+import { renderAviationDisruptions } from "./render-disruptions.js?v=46";
 
 export function createAviationModule(ctx) {
   const alertsContainer = document.getElementById("aviation-alerts-container");

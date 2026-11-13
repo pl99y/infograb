@@ -1,5 +1,5 @@
-import { clearElement, setEmpty, setError, setLoading } from "../../core/dom.js";
-import { renderFreshness } from "../../core/export-meta.js?v=44";
+import { clearElement, setEmpty, setError, setLoading } from "../../core/dom.js?v=46";
+import { renderFreshness } from "../../core/export-meta.js?v=46";
 
 function escapeHtml(value) {
   return String(value ?? "")
@@ -85,17 +85,11 @@ function buildSummaryFromItems(items) {
 
   return {
     days_counted: safeItems.length,
-    aircraft_total_sum: safeItems.reduce((sum, item) => sum + Number(item?.aircraft_total || 0), 0),
-    aircraft_intrusion_total_sum: safeItems.reduce(
-      (sum, item) => sum + Number(item?.aircraft_intrusion_total || 0),
-      0
-    ),
-    ship_total_sum: safeItems.reduce((sum, item) => sum + Number(item?.ship_total || 0), 0),
-    official_ship_total_sum: safeItems.reduce(
-      (sum, item) => sum + Number(item?.official_ship_total || 0),
-      0
-    ),
-    balloon_total_sum: safeItems.reduce((sum, item) => sum + Number(item?.balloon_total || 0), 0),
+    aircraft_total_sum: safeItems.length && safeItems.every(item => item?.aircraft_total != null) ? safeItems.reduce((sum, item) => sum + Number(item.aircraft_total), 0) : null,
+    aircraft_intrusion_total_sum: safeItems.length && safeItems.every(item => item?.aircraft_intrusion_total != null) ? safeItems.reduce((sum, item) => sum + Number(item.aircraft_intrusion_total), 0) : null,
+    ship_total_sum: safeItems.length && safeItems.every(item => item?.ship_total != null) ? safeItems.reduce((sum, item) => sum + Number(item.ship_total), 0) : null,
+    official_ship_total_sum: safeItems.length && safeItems.every(item => item?.official_ship_total != null) ? safeItems.reduce((sum, item) => sum + Number(item.official_ship_total), 0) : null,
+    balloon_total_sum: safeItems.length && safeItems.every(item => item?.balloon_total != null) ? safeItems.reduce((sum, item) => sum + Number(item.balloon_total), 0) : null,
     no_aircraft_days: noAircraftDates.length,
     no_aircraft_dates: noAircraftDates,
     area_counts: areaCounts,
@@ -129,7 +123,7 @@ function renderSummary(summary) {
   const noAircraftDatesText = noAircraftDates.length ? noAircraftDates.join("、") : "无";
 
   return `
-    <div class="mnd-pla-summary-heading">7日内家长到访统计</div>
+    <div class="mnd-pla-summary-heading">7日内家长到访统计（— 表示数据不完整）</div>
     <div class="mnd-pla-summary-grid">
       <div class="mnd-pla-summary-card">
         <span>到访军机</span>

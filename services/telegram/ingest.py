@@ -42,7 +42,6 @@ def clean_telegram_text(text: str) -> str:
         r"Subscribe to.*👉.*$",
         r"Join us on Telegram.*$",
         r"Follow us on.*$",
-        r"http[s]?://t\.me/[\w_]+",
     ]
 
     for pattern in promo_patterns:

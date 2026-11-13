@@ -1,4 +1,4 @@
-import { MOBILE_BREAKPOINT, STORAGE_KEYS } from "../../core/constants.js";
+import { MOBILE_BREAKPOINT, STORAGE_KEYS } from "../../core/constants.js?v=46";
 
 export function createMobileModule(ctx) {
   const panels = Array.from(document.querySelectorAll(".grid-stack-item[gs-id]"));

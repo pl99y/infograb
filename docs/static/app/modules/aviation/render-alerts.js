@@ -101,6 +101,7 @@ function formatStatus(item) {
   const status = cleanText(item?.status_text);
   const alertType = cleanText(item?.alert_type);
   if (isAdsbfiAlert(item)) {
+    if (item?.extra?.verification_pending) return "数据源暂不可用 · 当前状态未确认";
     const active = item?.extra?.is_active !== false;
     const prefix = active ? "当前正在广播异常应答机代码" : "过去 48 小时内检测到";
     if (status && alertType && !isPlaceholder(status)) return `${prefix} · ${status} · ${alertType}`;

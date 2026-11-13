@@ -1,4 +1,4 @@
-import { formatAbsoluteLocalDateTime, formatRelativeLocalTime } from "./time.js";
+import { formatAbsoluteLocalDateTime, formatRelativeLocalTime } from "./time.js?v=46";
 
 let datasets = {};
 

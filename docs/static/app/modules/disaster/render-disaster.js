@@ -1,4 +1,4 @@
-import { formatAbsoluteLocalDateTime, formatRelativeLocalTime } from "../../core/time.js";
+import { formatAbsoluteLocalDateTime, formatRelativeLocalTime } from "../../core/time.js?v=46";
 
 const USGS_MAP_URL = "https://earthquake.usgs.gov/earthquakes/map/";
 const MIROVA_URL = "https://www.mirovaweb.it/NRT/";

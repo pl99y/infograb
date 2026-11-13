@@ -73,7 +73,7 @@ def parse_promed_latest_html(html_text: str) -> list[dict[str, Any]]:
                 "date_raw": date_raw,
                 "published_at": _parse_promed_date(date_raw),
                 "title_raw": title_raw,
-                "item_url": "",
+                "item_url": urljoin("https://www.promedmail.org/", tds[1].find("a", href=True)["href"]) if tds[1].find("a", href=True) else "",
                 "list_url": "https://www.promedmail.org/",
                 "rank": len(rows) + 1,
                 "payload": {},

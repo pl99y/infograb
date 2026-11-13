@@ -1,5 +1,5 @@
-import { formatAbsoluteLocalDateTime, formatRelativeLocalTime } from "../../core/time.js";
-import { createTranslateButton } from "./translate.js";
+import { formatAbsoluteLocalDateTime, formatRelativeLocalTime } from "../../core/time.js?v=46";
+import { createTranslateButton } from "./translate.js?v=46";
 
 function webUrl(value) {
   if (typeof value !== "string") return null;

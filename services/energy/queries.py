@@ -43,6 +43,13 @@ def get_energy_latest(db_path: str = "app.db") -> list[dict]:
             except Exception:
                 item["extra"] = {}
 
+        present = {item["quote_key"] for item in items}
+        for key in ENERGY_ORDER:
+            if key not in present:
+                items.append({"quote_key": key, "price": None, "status": "unavailable"})
+        for item in items:
+            latest = con.execute("SELECT status FROM fetch_runs WHERE source_name LIKE ? ORDER BY id DESC LIMIT 1", ("Energy/" + str(item.get("name", "")),)).fetchone()
+            item["status"] = item.get("status") or ("stale" if latest and latest["status"] != "success" else "available")
         items.sort(key=lambda x: ENERGY_ORDER.get(x.get("quote_key", ""), 999))
         return items
     finally:

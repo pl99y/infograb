@@ -1,7 +1,7 @@
-import { setError, setLoading } from "../../core/dom.js";
-import { formatAbsoluteLocalDateTime, formatRelativeLocalTime } from "../../core/time.js";
-import { renderFreshness } from "../../core/export-meta.js?v=44";
-import { renderHotsearch, renderNewsTimeline } from "./render.js";
+import { setError, setLoading } from "../../core/dom.js?v=46";
+import { formatAbsoluteLocalDateTime, formatRelativeLocalTime } from "../../core/time.js?v=46";
+import { renderFreshness } from "../../core/export-meta.js?v=46";
+import { renderHotsearch, renderNewsTimeline } from "./render.js?v=46";
 
 export function createNewsTimelineModule(ctx) {
   const container = document.getElementById("newsTimelineContainer");
@@ -45,7 +45,7 @@ export function createNewsTimelineModule(ctx) {
 
   async function refreshTimeline() {
     setLoading(container, "正在加载新闻流...");
-    const data = await ctx.api.get("/api/news-timeline/latest?limit=120&window_hours=12");
+    const data = await ctx.api.get("/api/news-timeline/latest?limit=-1&window_hours=12");
     ctx.state.newsTimeline = Array.isArray(data?.items) ? data.items : [];
     renderNewsTimeline(ctx, container, ctx.state.newsTimeline);
     return data;

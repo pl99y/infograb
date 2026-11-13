@@ -334,11 +334,11 @@ def parse_swpc_forecast_payloads(forecast_text: str, geomag_text: str) -> dict[s
         "geomagnetic": {
             "observed_summary": _single_line_match(
                 geomagnetic_section,
-                r"(The greatest observed 3 hr Kp over the past 24 hours was.+?\.)",
+                r"(The greatest observed 3 hr Kp over the past 24 hours was.+?\.(?!\d))",
             ),
             "expected_summary": _single_line_match(
                 geomagnetic_section,
-                r"(The greatest expected 3 hr Kp for.+?\.)",
+                r"(The greatest expected 3 hr Kp for.+?\.(?!\d))",
             ),
             "rationale": _single_line_match(geomagnetic_section, r"Rationale:\s*(.+)$"),
             "days": day_labels,
@@ -352,7 +352,7 @@ def parse_swpc_forecast_payloads(forecast_text: str, geomag_text: str) -> dict[s
         "solar_radiation": {
             "observed_summary": _single_line_match(
                 solar_section,
-                r"(Solar radiation, as observed by NOAA GOES-18 over the past 24 hours, was.+?\.)",
+                r"(Solar radiation, as observed by NOAA GOES-\d+ over the past 24 hours, was.+?\.(?!\d))",
             ),
             "days": day_labels,
             "s1_or_greater": _parse_table_row(solar_section, "S1 or greater"),
@@ -372,4 +372,10 @@ def parse_swpc_forecast_payloads(forecast_text: str, geomag_text: str) -> dict[s
         "raw_geomag_text": geomag_text,
     }
 
+    if not (geomagnetic_section and solar_section and radio_section
+            and forecast["geomagnetic"]["expected_summary"]
+            and any(forecast["geomagnetic"]["probabilities"].values())
+            and forecast["solar_radiation"]["s1_or_greater"]
+            and forecast["radio_blackout"]["r1_r2"]):
+        raise SpaceWeatherParseError("Forecast format missing required sections or values")
     return forecast

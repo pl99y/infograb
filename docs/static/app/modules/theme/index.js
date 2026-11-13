@@ -1,4 +1,4 @@
-import { STORAGE_KEYS } from "../../core/constants.js";
+import { STORAGE_KEYS } from "../../core/constants.js?v=46";
 
 export function createThemeModule(ctx) {
   const button = document.getElementById("themeToggleBtn");

@@ -166,6 +166,20 @@ def parse_oilprice_last_json_quote(
     if not isinstance(payload, dict):
         raise EnergyParseError("OilPrice last.json root is not a JSON object")
 
+    # The retired 4464 feed must not silently switch to monthly official prices.
+    if quote_key == "murban":
+        metadata_payload = json.loads(metadata_json_text or "{}")
+        matches = [(key, value) for key, value in metadata_payload.items()
+                   if isinstance(value, dict) and value.get("blend_name") == "Murban Crude"
+                   and value.get("source") == "Platts" and value.get("app_label") == "Physical"]
+        if len(matches) != 1:
+            raise EnergyParseError("Murban physical assessment mapping unavailable or ambiguous")
+        blend_id, meta_row = matches[0]
+        if not isinstance(payload.get(blend_id), dict):
+            last = _first_last_price_row(meta_row.get("last_price"))
+            if not last or not last.get("dateadded"):
+                raise EnergyParseError("Murban physical assessment has no dated price")
+            payload[blend_id] = {**last, "time": last["dateadded"]}
     raw_quote = payload.get(blend_id)
     if not isinstance(raw_quote, dict):
         raise EnergyParseError(f"OilPrice last.json missing blend id {blend_id} for {quote_key}")

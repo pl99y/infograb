@@ -234,6 +234,25 @@ def parse_zaobao_article(article_html: str) -> tuple[str, str | None, str]:
             if dt:
                 return title, to_iso_utc_str(dt), str(tag["content"])
 
+    candidates = [tag.get("datetime") for tag in soup.find_all("time", datetime=True)]
+    def dates(node):
+        if isinstance(node, dict):
+            if node.get("datePublished"):
+                yield node["datePublished"]
+            for value in node.values():
+                yield from dates(value)
+        elif isinstance(node, list):
+            for value in node:
+                yield from dates(value)
+    for tag in soup.find_all("script", type="application/ld+json"):
+        try:
+            candidates.extend(dates(__import__("json").loads(tag.string or tag.get_text())))
+        except (ValueError, TypeError):
+            pass
+    for value in candidates:
+        dt = parse_iso_dt(value)
+        if dt:
+            return title, to_iso_utc_str(dt), str(value)
     text = soup.get_text("\n", strip=True)
     match = ZAOBAO_TIME_RE.search(text) or ZAOBAO_TIME_RE_ALT.search(text)
     if match:
@@ -274,6 +293,7 @@ def collect_zaobao(session: requests.Session, cutoff_dt: datetime, errors: list[
 
             page_hits = 0
             page_old = 0
+            page_unknown = 0
             for link in links:
                 article_url = link["url"]
                 if article_url in seen_article_urls:
@@ -287,6 +307,10 @@ def collect_zaobao(session: requests.Session, cutoff_dt: datetime, errors: list[
 
                 title, published_at, published_text = parse_zaobao_article(article_html)
                 dt = parse_iso_dt(published_at)
+                if dt is None:
+                    page_unknown += 1
+                    errors.append(f"{section['source_name']} article date unavailable: {article_url}")
+                    continue
                 if not in_last_hours(dt, cutoff_dt):
                     page_old += 1
                     continue
@@ -309,7 +333,7 @@ def collect_zaobao(session: requests.Session, cutoff_dt: datetime, errors: list[
                 page_hits += 1
                 time.sleep(SLEEP_BETWEEN_REQUESTS)
 
-            if page_hits == 0 and page_old > 0:
+            if page_hits == 0 and page_old > 0 and page_unknown == 0:
                 break
 
     return results

@@ -60,6 +60,7 @@ def get_public_health_latest(
 
         return {
             "updated_at": updated_at,
+            "sources": {name: dict(row) if (row := con.execute("SELECT status, started_at, finished_at FROM fetch_runs WHERE source_name = ? ORDER BY id DESC LIMIT 1", (name,)).fetchone()) else {"status": "unverified"} for name in ("ProMED", "WHO DON")},
             "early_warning": early_warning,
             "outbreak_events": outbreak_events,
         }

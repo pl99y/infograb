@@ -40,7 +40,7 @@ def _fetch_rows(con, category_key: str, limit: int) -> list[dict]:
     for row in rows:
         item = dict(row)
         if item.get("source_key") == "who_don":
-            match = re.fullmatch(r"https://www\.who\.int/(\d{4}-DON\d+)/?", item.get("item_url") or "", flags=re.I)
+            match = re.fullmatch(r"https://www\.who\.int/([^/?#]+)/?", item.get("item_url") or "", flags=re.I)
             if match:
                 item["item_url"] = "https://www.who.int/emergencies/disease-outbreak-news/item/" + match.group(1)
         item["title"] = item.get("title_zh") or item.get("title_raw") or ""

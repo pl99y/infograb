@@ -105,7 +105,7 @@ export function createEnergyModule(ctx) {
       const status = document.createElement("div");
       const quoteTime = item.timestamp_text || item.fetched_at;
       status.className = "market-symbol-sub";
-      status.textContent = (item.status === "unavailable" ? "暂不可用" : item.status === "stale" ? "更新失败 · 保留上次报价" : "最近报价") + (quoteTime ? " · " + new Date(quoteTime).toLocaleString() : "");
+      status.textContent = (item.status === "unavailable" ? "暂不可用" : item.status === "stale" ? "更新失败 · 保留上次报价" : "最近报价") + (quoteTime ? " · " + (Number.isNaN(new Date(quoteTime).getTime()) ? String(quoteTime) : new Date(quoteTime).toLocaleString()) : "");
       card.appendChild(status);
       container.appendChild(card);
     });

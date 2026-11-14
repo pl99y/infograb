@@ -8,7 +8,7 @@ from collections import defaultdict
 from storage import get_connection
 
 
-def get_recent_posts(limit: int = 50, db_path: str = "app.db") -> list[dict]:
+def get_recent_posts(limit: int = 50, db_path: str = "app.db", *, per_source: bool = False) -> list[dict]:
     con = get_connection(db_path)
     try:
         rows = con.execute(
@@ -25,13 +25,14 @@ def get_recent_posts(limit: int = 50, db_path: str = "app.db") -> list[dict]:
             FROM ranked i
             JOIN sources s ON i.source_id = s.id
             WHERE s.source_type = ?
-            ORDER BY CASE WHEN i.source_rank <= 3 THEN 0 ELSE 1 END, i.published_at DESC, i.id DESC
+            AND (? = 0 OR i.source_rank <= ?)
+            ORDER BY i.published_at DESC, i.id DESC
             LIMIT ?
             """,
-            ("telegram", limit),
+            ("telegram", per_source, limit, -1 if per_source else limit),
         ).fetchall()
 
-        items = sorted([dict(r) for r in rows], key=lambda r: (r["published_at"] or "", r["id"]), reverse=True)
+        items = [dict(row) for row in rows]
         if not items:
             return []
 

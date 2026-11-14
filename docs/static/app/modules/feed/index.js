@@ -13,7 +13,7 @@ export function createFeedModule(ctx) {
   filter.setAttribute("aria-label", "情报频道筛选");
   container?.before(filter);
   function renderSelected() {
-    renderTelegram(ctx, container, ctx.state.telegram.filter(item => !selectedSource || item.source_name === selectedSource));
+    renderTelegram(ctx, container, ctx.state.telegram.filter(item => !selectedSource || item.source_name === selectedSource).slice(0, 50));
   }
   filter.addEventListener("change", () => { selectedSource = filter.value; renderSelected(); });
 
@@ -37,7 +37,7 @@ export function createFeedModule(ctx) {
       for (const name of ["", ...new Set(ctx.state.telegram.map(item => item.source_name).filter(Boolean))]) {
         const option = document.createElement("option");
         option.value = name;
-        option.textContent = name || "全部频道 · 各频道保留最近 3 条，其余按时间";
+        option.textContent = name || "全部频道";
         filter.appendChild(option);
       }
       if (![...filter.options].some(option => option.value === selectedSource)) selectedSource = "";

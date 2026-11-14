@@ -73,7 +73,7 @@ R1-R2  10%  10%  10%
   quote=parse_oilprice_last_json_quote(quote_key='murban',name='Murban',json_text='{}',source_url='https://oilprice.com',metadata_json_text=json.dumps(meta))
   self.assertEqual(quote.price,93.47);self.assertTrue(quote.timestamp_text)
   with self.assertRaises(EnergyParseError):parse_oilprice_last_json_quote(quote_key='murban',name='Murban',json_text='{}',source_url='https://oilprice.com',metadata_json_text='{}')
- def test_telegram_source_coverage(self):
+ def test_telegram_chronology_and_source_coverage(self):
   from services.telegram.queries import get_recent_posts
   with tempfile.TemporaryDirectory() as d:
    db=str(Path(d)/'test.db');initialize_database(db);con=get_connection(db)
@@ -86,7 +86,13 @@ R1-R2  10%  10%  10%
     con.commit()
    finally:con.close()
    rows=get_recent_posts(db_path=db)
-   self.assertEqual(len(rows),50);self.assertEqual(len({r['source_name'] for r in rows}),7)
+   self.assertEqual(len(rows), 50)
+   self.assertEqual({row["source_name"] for row in rows}, {"1"})
+   source_rows = get_recent_posts(db_path=db, per_source=True)
+   self.assertEqual(len(source_rows), 68)
+   self.assertEqual(source_rows[:50], rows)
+   self.assertEqual(len({row["source_name"] for row in source_rows}), 7)
+
  def test_market_percent_uses_daily_change(self):
   from collectors.market_snapshot_fetcher import YahooMarketSnapshotAdapter, MarketSnapshotSpec
   from unittest.mock import Mock

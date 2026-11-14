@@ -67,7 +67,8 @@ export function createMarketModule(ctx) {
 
       const row = document.createElement("div");
       row.className = "market-snapshot-row";
-      row.title = item?.source ? `Source: ${item.source}` : "";
+      const collected = new Date(item.fetched_at);
+      row.title = [item.source, item.fetched_at && !Number.isNaN(collected.getTime()) && `采集时间 ${collected.toLocaleString()}`].filter(Boolean).join("\n");
       row.innerHTML = `
         <div class="market-snapshot-meta">
           <div class="market-snapshot-name">${info.name}</div>
@@ -78,10 +79,12 @@ export function createMarketModule(ctx) {
           <div class="market-snapshot-change ${changeClass}">${formatChangePercent(item?.change_percent)}</div>
         </div>
       `;
-      const status = document.createElement("div");
-      status.className = "market-snapshot-symbol";
-      status.textContent = item.status === "unavailable" ? "暂不可用" : (item.status === "stale" ? "更新失败 · " : "采集于 · ") + (item.fetched_at ? new Date(item.fetched_at).toLocaleString() : "未知");
-      row.querySelector(".market-snapshot-meta").appendChild(status);
+      if (item.status === "unavailable" || item.status === "stale") {
+        const status = document.createElement("div");
+        status.className = "market-snapshot-symbol";
+        status.textContent = item.status === "unavailable" ? "暂不可用" : "更新失败";
+        row.querySelector(".market-snapshot-meta").appendChild(status);
+      }
       container.appendChild(row);
     });
   }

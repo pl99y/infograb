@@ -90,7 +90,6 @@ export function createEnergyModule(ctx) {
 
       const card = document.createElement("div");
       card.className = "market-card";
-      if (info.note) card.title = info.note;
 
       card.innerHTML = `
         <div class="market-symbol">${info.title}</div>
@@ -102,11 +101,16 @@ export function createEnergyModule(ctx) {
         ${showChange ? `<div class="market-change ${changeClass}">${changeText}</div>` : ""}
       `;
 
-      const status = document.createElement("div");
       const quoteTime = item.timestamp_text || item.fetched_at;
-      status.className = "market-symbol-sub";
-      status.textContent = (item.status === "unavailable" ? "暂不可用" : item.status === "stale" ? "更新失败 · 保留上次报价" : "最近报价") + (quoteTime ? " · " + (Number.isNaN(new Date(quoteTime).getTime()) ? String(quoteTime) : new Date(quoteTime).toLocaleString()) : "");
-      card.appendChild(status);
+      const quoteDate = new Date(quoteTime);
+      const timeText = quoteTime && (Number.isNaN(quoteDate.getTime()) ? String(quoteTime) : quoteDate.toLocaleString());
+      card.title = [info.note, timeText && `报价时间 ${timeText}`].filter(Boolean).join("\n");
+      if (item.status === "unavailable" || item.status === "stale") {
+        const status = document.createElement("div");
+        status.className = "market-symbol-sub";
+        status.textContent = item.status === "unavailable" ? "暂不可用" : "更新失败";
+        card.appendChild(status);
+      }
       container.appendChild(card);
     });
   }

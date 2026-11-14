@@ -122,7 +122,7 @@ def export_all(attempts: dict) -> None:
         ),
         "weather_alerts.json": lambda: get_weather_alerts(limit=-1, db_path=db_path),
         "disaster_ongoing.json": lambda: get_disaster_ongoing_groups(limit=80, db_path=db_path),
-        "telegram.json": lambda: normalize_telegram(get_recent_posts(limit=50, db_path=db_path)),
+        "telegram.json": lambda: normalize_telegram(get_recent_posts(limit=50, db_path=db_path, per_source=True)),
         "news_timeline_latest.json": lambda: get_news_timeline_latest(limit=-1, window_hours=12, db_path=db_path),
         "news_hotsearch_latest.json": lambda: (
             get_hotsearch_latest(db_path=db_path)

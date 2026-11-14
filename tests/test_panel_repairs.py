@@ -98,5 +98,12 @@ R1-R2  10%  10%  10%
   from parsers.mnd_pla_parser import parse_mnd_pla_list_page
   rows=parse_mnd_pla_list_page('<a href="/news/plaact/123/?from=list">115.11.13 中共解放軍臺海周邊海、空域動態</a>', list_url='https://www.mnd.gov.tw/news/plaact')
   self.assertEqual(len(rows),1);self.assertTrue(rows[0].detail_url.endswith('/123'))
+class WhoLinks(unittest.TestCase):
+ def test_relative_article_path(self):
+  from parsers.public_health_parser import _build_who_item_url
+  expected='https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON626'
+  for value in ['/2026-DON626','2026-DON626',expected]:
+   self.assertEqual(_build_who_item_url(value),expected)
+
 if __name__=='__main__':unittest.main()
 

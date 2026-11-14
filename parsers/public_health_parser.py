@@ -194,7 +194,7 @@ def _build_who_item_url(raw_value: Any) -> str:
     if raw.startswith("/emergencies/"):
         return urljoin("https://www.who.int", raw)
     if raw.startswith("/"):
-        return urljoin(WHO_ITEM_BASE, raw)
+        return f"{WHO_ITEM_BASE}/{raw.lstrip(chr(47))}"
     return f"{WHO_ITEM_BASE}/{raw}"
 
 

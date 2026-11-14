@@ -13,9 +13,13 @@ repo="$app_home/repo"
 log_dir="$app_home/logs"
 log_file="$log_dir/run_$job.log"
 deploy_dir=""
-max_log_bytes=$((2 * 1024 * 1024))
+run_output=""
+log_day=""
 
 cleanup() {
+  if [[ -n "$run_output" ]]; then
+    rm -f -- "$run_output"
+  fi
   if [[ -n "$deploy_dir" ]]; then
     rm -rf -- "$deploy_dir"
   fi
@@ -30,32 +34,30 @@ mkdir -p "$log_dir"
 exec 9>"$app_home/infograb.lock"
 flock 9
 
-if [[ -f "$log_file" ]] && (( $(wc -c < "$log_file") > max_log_bytes )); then
-  rotated="$log_file.$(date -u +%Y%m%dT%H%M%SZ)"
-  mv -- "$log_file" "$rotated"
-  gzip -f -- "$rotated" || true
-fi
-# Keep at most four rotated files per job, in addition to the active log.
-for profile in 15m 12h; do
-  archives=("$log_dir"/run_"$profile".log.[0-9]*Z*)
-  kept=0
-  for ((index=${#archives[@]} - 1; index >= 0; index--)); do
-    archive=${archives[index]}
-    [[ -f "$archive" ]] || continue
-    if (( kept >= 4 )); then
-      rm -f -- "$archive"
-    else
-      kept=$((kept + 1))
-    fi
-  done
+log_day=$(date -u +%F)
+log_file="$log_dir/run_$job.$log_day.log"
+cutoff=$(date -u -d '6 days ago' +%F)
+for daily in "$log_dir"/run_15m.????-??-??.log "$log_dir"/run_12h.????-??-??.log; do
+  [[ -f "$daily" ]] || continue
+  day=${daily%.log}
+  day=${day##*.}
+  if [[ "$day" < "$cutoff" ]]; then rm -f -- "$daily"; fi
 done
-find "$log_dir" -maxdepth 1 -type f -name 'run_*.log.[0-9]*Z*' -mmin +10080 -delete
-# A killed publish may leave its temporary checkout. The lock makes these
-# inactive, and the age cutoff leaves recent failures available to inspect.
-find "$app_home" -maxdepth 1 -type d -name 'deploy-gh-pages.??????' -mmin +1440 \
-  -exec rm -rf -- {} +
-exec >> "$log_file" 2>&1
-trap cleanup EXIT
+find "$app_home" -maxdepth 1 -type d -name 'deploy-gh-pages.??????' -mmin +1440 -exec rm -rf -- {} +
+find "$log_dir" -maxdepth 1 -type f -name '.run-output.*' -mmin +1440 -delete
+run_output=$(mktemp "$log_dir/.run-output.XXXXXX")
+finish() {
+  local status=$?
+  if (( status != 0 )) || grep -Eqi '^\[(warn|error|failed|partial)\]|(^|[[:space:]])(WARNING|ERROR):|^fatal:' "$run_output"; then
+    printf '[%s] %s exit=%s (details follow)\n' "$(date -u +%FT%TZ)" "$job" "$status" >> "$log_file"
+    cat -- "$run_output" >> "$log_file"
+  else
+    printf '[%s] %s success\n' "$(date -u +%FT%TZ)" "$job" >> "$log_file"
+  fi
+  cleanup
+}
+exec >> "$run_output" 2>&1
+trap finish EXIT
 trap 'on_error "$LINENO" "$?"' ERR
 
 echo "===== $(date -u +%FT%TZ) run_$job start ====="

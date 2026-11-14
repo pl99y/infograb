@@ -35,7 +35,25 @@ if [[ -f "$log_file" ]] && (( $(wc -c < "$log_file") > max_log_bytes )); then
   mv -- "$log_file" "$rotated"
   gzip -f -- "$rotated" || true
 fi
-find "$log_dir" -type f -name '*.log.*' -mtime +7 -delete 2>/dev/null || true
+# Keep at most four rotated files per job, in addition to the active log.
+for profile in 15m 12h; do
+  archives=("$log_dir"/run_"$profile".log.[0-9]*Z*)
+  kept=0
+  for ((index=${#archives[@]} - 1; index >= 0; index--)); do
+    archive=${archives[index]}
+    [[ -f "$archive" ]] || continue
+    if (( kept >= 4 )); then
+      rm -f -- "$archive"
+    else
+      kept=$((kept + 1))
+    fi
+  done
+done
+find "$log_dir" -maxdepth 1 -type f -name 'run_*.log.[0-9]*Z*' -mmin +10080 -delete
+# A killed publish may leave its temporary checkout. The lock makes these
+# inactive, and the age cutoff leaves recent failures available to inspect.
+find "$app_home" -maxdepth 1 -type d -name 'deploy-gh-pages.??????' -mmin +1440 \
+  -exec rm -rf -- {} +
 exec >> "$log_file" 2>&1
 trap cleanup EXIT
 trap 'on_error "$LINENO" "$?"' ERR

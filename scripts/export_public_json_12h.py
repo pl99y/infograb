@@ -13,6 +13,7 @@ DATA_DIR = Path(os.environ.get("INFOGRAB_DATA_DIR", str(PROJECT_ROOT / "docs" / 
 sys.path.insert(0, str(PROJECT_ROOT))
 os.chdir(PROJECT_ROOT)
 
+from scripts.runtime_maintenance import compact_database_if_needed  # noqa: E402
 from storage import (  # noqa: E402
     cleanup_old_data,
     cleanup_orphaned_media_files,
@@ -97,8 +98,7 @@ def cleanup_runtime() -> None:
         print("[ok] cleanup media:", json.dumps(media_stats, ensure_ascii=False, sort_keys=True))
 
         if env_bool("INFOGRAB_VACUUM", True):
-            con.execute("VACUUM")
-            print("[ok] vacuumed database")
+            compact_database_if_needed(con)
 
         con.execute("PRAGMA optimize")
     finally:

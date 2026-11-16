@@ -3,13 +3,12 @@ import hashlib
 import json
 import os
 import re
-from itertools import islice
 
 import requests
 
 from storage import get_dashboard_snapshot, save_dashboard_snapshot
 
-MODEL = "gemini-3.5-flash"
+MODEL = "gemini-3.5-flash-lite"
 CACHE = "wmo_weather_zh_v1"
 
 
@@ -38,7 +37,7 @@ def translate_batch(rows, api_key):
         f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:generateContent",
         headers={"x-goog-api-key": api_key},
         json={"contents": [{"parts": [{"text": prompt + "\n" + json.dumps(rows, ensure_ascii=False)}]}],
-              "generationConfig": {"responseMimeType": "application/json", "maxOutputTokens": 4096}},
+              "generationConfig": {"responseMimeType": "application/json", "maxOutputTokens": 16384}},
         timeout=(5, 25),
     )
     response.raise_for_status()
@@ -66,23 +65,19 @@ def localized_alerts(items, *, db_path, refresh=False):
     current = {key: cache[key] for key in fields if key in cache}
     api_key = os.getenv("GEMINI_API_KEY", "").strip()
     if refresh and api_key:
-        pending = iter((key, data) for key, data in fields.items() if key not in current)
-        for _ in range(3):
-            batch = list(islice(pending, 12))
-            if not batch:
-                break
-            ids = {str(index): key for index, (key, _) in enumerate(batch)}
+        pending = {key: data for key, data in fields.items() if key not in current}
+        if pending:
+            ids = dict(zip(map(str, range(len(pending))), pending))
             try:
                 translated = translate_batch(
-                    [{"id": str(index), **data} for index, (_, data) in enumerate(batch)], api_key
+                    [{"id": row_id, **pending[key]} for row_id, key in ids.items()], api_key
                 )
             except requests.HTTPError as exc:
                 print(f"[warn] Weather translation unavailable (HTTP {exc.response.status_code})")
-                break
             except (requests.RequestException, ValueError, KeyError, IndexError, TypeError) as exc:
                 print(f"[warn] Weather translation unavailable ({type(exc).__name__})")
-                break
-            current.update({ids[key]: value for key, value in translated.items()})
+            else:
+                current.update({ids[row_id]: value for row_id, value in translated.items()})
     if refresh and current != cache:
         save_dashboard_snapshot(CACHE, current, db_path=db_path)
     return [

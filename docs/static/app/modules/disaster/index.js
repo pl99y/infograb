@@ -1,6 +1,6 @@
 import { setError, setLoading } from "../../core/dom.js?v=46";
 import { renderFreshness } from "../../core/export-meta.js?v=46";
-import { renderWeatherPane } from "./render-weather.js?v=46";
+import { renderWeatherPane } from "./render-weather.js?v=49";
 import { renderDisasterPane } from "./render-disaster.js?v=46";
 
 const DISASTER_TAB_KEY = "ig_disaster_tab";

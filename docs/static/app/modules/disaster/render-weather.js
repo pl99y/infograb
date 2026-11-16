@@ -11,39 +11,7 @@ function escapeHtml(value) {
     .replace(/'/g, "&#39;");
 }
 
-const WEATHER_COUNTRY_PREFIX_MAP = {
-  us: "United States",
-  hr: "Croatia",
-  gr: "Greece",
-  it: "Italy",
-  in: "India",
-  fr: "France",
-  de: "Germany",
-  es: "Spain",
-  pt: "Portugal",
-  uk: "United Kingdom",
-  gb: "United Kingdom",
-  ca: "Canada",
-  au: "Australia",
-  nz: "New Zealand",
-  jp: "Japan",
-  kr: "South Korea",
-  cn: "China",
-  tw: "Taiwan",
-  hk: "Hong Kong",
-  sg: "Singapore",
-  my: "Malaysia",
-  th: "Thailand",
-  vn: "Vietnam",
-  ph: "Philippines",
-  id: "Indonesia",
-  mx: "Mexico",
-  br: "Brazil",
-  ar: "Argentina",
-  cl: "Chile",
-  pe: "Peru",
-  sb: "Solomon Islands",
-};
+const regionNames = new Intl.DisplayNames(["zh-CN"], { type: "region", fallback: "none" });
 
 function firstNonEmpty(...values) {
   for (const value of values) {
@@ -55,27 +23,15 @@ function firstNonEmpty(...values) {
 }
 
 function inferWeatherCountry(item) {
-  const capPath = firstNonEmpty(item?.payload?.cap_path, item?.payload?.capURL, item?.payload?.url);
-  const mid = String(item?.payload?.mid || "").trim();
-  const id = String(item?.payload?.id || "").trim();
-
-  if (id.startsWith("urn:oid:2.49.0.1.840.")) return "United States";
-  if (id.startsWith("IN-")) return "India";
-
-  if (capPath) {
-    const head = capPath.split("/")[0]?.toLowerCase() || "";
-    const prefix = head.split("-")[0];
-    if (WEATHER_COUNTRY_PREFIX_MAP[prefix]) return WEATHER_COUNTRY_PREFIX_MAP[prefix];
-  }
-
-  if (mid === "093") return "United States";
-  if (mid === "066") return "India";
-  if (mid === "063") return "Greece";
-  if (mid === "019") return "Croatia";
-  if (mid === "176") return "Italy";
-  if (mid === "139") return "Solomon Islands";
-
+  const path = firstNonEmpty(item?.payload?.cap_path, item?.payload?.capURL, item?.payload?.url);
+  const code = path.match(/^(?:https:\/\/[^/]+\/)?([a-z]{2})-[^/]+\//i)?.[1]?.toUpperCase();
+  if (code === "UK") return regionNames.of("GB");
+  if (code && code !== "ZZ") return regionNames.of(code) || "";
+  const id = String(item?.payload?.id || "");
+  if (id.startsWith("urn:oid:2.49.0.1.840.")) return regionNames.of("US");
+  if (id.startsWith("IN-")) return regionNames.of("IN");
   return "";
+
 }
 
 function normalizeEventLabel(item) {
@@ -122,12 +78,12 @@ export function renderWeatherPane(items = []) {
 
   const rows = items
     .map((item) => {
-      const eventLabel = normalizeEventLabel(item);
-      const region = normalizeRegion(item);
+      const eventLabel = firstNonEmpty(item?.display_zh?.title, normalizeEventLabel(item));
+      const region = firstNonEmpty(item?.display_zh?.region, normalizeRegion(item));
       const country = inferWeatherCountry(item);
       const subtitle = buildSubtitle(country, region);
       const publishedAt = firstNonEmpty(item?.published_at, item?.issued_at, item?.effective_at, item?.updated_at);
-      const expiresAt = firstNonEmpty(item?.expires_at, item?.updated_at);
+      const expiresAt = firstNonEmpty(item?.expires_at);
       const absoluteTitle = formatAbsoluteLocalDateTime(publishedAt);
 
       return `
@@ -136,17 +92,18 @@ export function renderWeatherPane(items = []) {
           href="${escapeHtml(WMO_LIST_URL)}"
           target="_blank"
           rel="noopener noreferrer"
-          title="打开 WMO Severe Weather 列表"
+          title="${escapeHtml(buildSubtitle(normalizeEventLabel(item), normalizeRegion(item)))}"
         >
           <div class="hazard-card-main">
             <div class="hazard-card-topline">
               <span class="hazard-type-chip type-weather">即时警报</span>
-              <span class="hazard-level-chip level-extreme">EXTREME</span>
+              <span class="hazard-level-chip level-extreme">最高等级</span>
               <span class="hazard-updated-text" title="${escapeHtml(absoluteTitle)}">${escapeHtml(formatRelativeLocalTime(publishedAt))}</span>
             </div>
 
             <div class="hazard-card-title">${escapeHtml(eventLabel)}</div>
             <div class="hazard-card-subtitle">${escapeHtml(subtitle)}</div>
+            ${item?.display_zh?.summary ? `<div class="hazard-card-subtitle">${escapeHtml(item.display_zh.summary)}</div>` : ""}
 
             <div class="hazard-meta-grid weather-meta-grid">
               ${renderTimeRow("发布", publishedAt)}

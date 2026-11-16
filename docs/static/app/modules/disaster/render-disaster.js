@@ -136,7 +136,24 @@ function mapUrl(item) {
   return firstNonEmpty(item?.map_url, item?.payload?.map_url, officialUrl(item));
 }
 
+// Country and region verified against Smithsonian GVP profiles 223020, 300190 and 352090.
+const volcanoLocations = new Map([
+  ["nyamuragira", "刚果民主共和国 · 维龙加火山区"],
+  ["nyamulagira", "刚果民主共和国 · 维龙加火山区"],
+  ["krasheninnikov", "俄罗斯 · 堪察加半岛"],
+  ["sangay", "厄瓜多尔 · 安第斯山区"],
+]);
+
 function buildSubtitle(item) {
+  if (item?.event_type === "earthquake") {
+    return firstNonEmpty(item.display_zh?.region, item.payload?.place, item.location_text);
+  }
+  if (item?.event_type === "volcano") {
+    const name = firstNonEmpty(item.location_text, item.title);
+    const known = volcanoLocations.get(name.toLowerCase());
+    const country = firstNonEmpty(item.payload?.country);
+    return firstNonEmpty(known, country, "国家或地区待确认");
+  }
   const localized = firstNonEmpty(item?.display_zh?.summary, item?.display_zh?.region);
   if (localized && localized !== item?.display_zh?.title) return localized;
   const eventType = String(item?.event_type || "").toLowerCase();
@@ -163,7 +180,6 @@ function buildInlineFacts(item) {
   if (type === "earthquake") {
     pushFact("震级", formatMetric(payload.mag, " M"));
     pushFact("深度", formatMetric(payload.depth_km, " km"));
-    pushFact("位置", firstNonEmpty(item.display_zh?.region, item.location_text, payload.place));
   } else if (type === "volcano") {
     pushFact("VRP", formatMetric(payload.vrp_mw, " MW"));
     pushFact("传感器", firstNonEmpty(item.source_secondary, payload.sensor));

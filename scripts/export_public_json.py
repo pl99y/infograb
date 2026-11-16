@@ -113,8 +113,22 @@ def fetch_all(skip_fetch: bool) -> dict:
 
 
 def export_all(attempts: dict) -> None:
+    from functools import lru_cache
     from services.disaster.weather_zh import localized_alerts
+
     db_path = str(DB_PATH)
+
+    @lru_cache(maxsize=1)
+    def hazard_exports():
+        weather = get_weather_alerts(limit=-1, db_path=db_path)
+        disasters = get_disaster_ongoing_groups(limit=80, db_path=db_path)
+        refresh = any(
+            attempts.get(name, {}).get("status") in {"success", "partial"}
+            for name in ("weather_alerts.json", "disaster_ongoing.json")
+        )
+        combined = localized_alerts(weather + disasters, db_path=db_path, refresh=refresh)
+        return combined[:len(weather)], combined[len(weather):]
+
     exports = {
         "energy_latest.json": lambda: get_energy_latest(db_path=db_path),
         "market_latest.json": lambda: get_market_snapshots_latest(db_path=db_path),
@@ -122,11 +136,8 @@ def export_all(attempts: dict) -> None:
         "aviation_disruptions.json": lambda: get_airport_disruptions_latest(
             region="worldwide", direction="departures", limit=20, db_path=db_path,
         ),
-        "weather_alerts.json": lambda: localized_alerts(
-            get_weather_alerts(limit=-1, db_path=db_path), db_path=db_path,
-            refresh=attempts.get("weather_alerts.json", {}).get("status") in {"success", "partial"},
-        ),
-        "disaster_ongoing.json": lambda: get_disaster_ongoing_groups(limit=80, db_path=db_path),
+        "weather_alerts.json": lambda: hazard_exports()[0],
+        "disaster_ongoing.json": lambda: hazard_exports()[1],
         "telegram.json": lambda: normalize_telegram(get_recent_posts(limit=50, db_path=db_path, per_source=True)),
         "news_timeline_latest.json": lambda: get_news_timeline_latest(limit=-1, window_hours=12, db_path=db_path),
         "news_hotsearch_latest.json": lambda: (

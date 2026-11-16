@@ -137,6 +137,8 @@ function mapUrl(item) {
 }
 
 function buildSubtitle(item) {
+  const localized = firstNonEmpty(item?.display_zh?.summary, item?.display_zh?.region);
+  if (localized && localized !== item?.display_zh?.title) return localized;
   const eventType = String(item?.event_type || "").toLowerCase();
   if (eventType === "typhoon" || eventType === "volcano") return "";
 
@@ -161,23 +163,23 @@ function buildInlineFacts(item) {
   if (type === "earthquake") {
     pushFact("震级", formatMetric(payload.mag, " M"));
     pushFact("深度", formatMetric(payload.depth_km, " km"));
-    pushFact("位置", firstNonEmpty(item.location_text, payload.place));
+    pushFact("位置", firstNonEmpty(item.display_zh?.region, item.location_text, payload.place));
   } else if (type === "volcano") {
     pushFact("VRP", formatMetric(payload.vrp_mw, " MW"));
     pushFact("传感器", firstNonEmpty(item.source_secondary, payload.sensor));
     pushFact("距离", formatMetric(payload.distance_km, " km"));
   } else if (type === "flood") {
-    pushFact("地区", firstNonEmpty(item.location_text, payload?.raw?.country, item.summary));
+    pushFact("地区", firstNonEmpty(item.display_zh?.region, item.location_text, payload?.raw?.country, item.summary));
     pushFact("等级", titleCase(item.severity_level || payload.alertlevel));
     pushFact("状态", titleCase(item.status));
   } else if (type === "typhoon") {
     pushFact("类型", firstNonEmpty(payload.item_type, item.source_secondary));
-    pushFact("位置", firstNonEmpty(item.location_text, payload.platform_location));
+    pushFact("位置", firstNonEmpty(item.display_zh?.region, item.location_text, payload.platform_location));
     pushFact("风速", firstNonEmpty(payload.wind, payload.platform_summary?.match(/winds?\s+([^|]+)/i)?.[1]?.trim()));
     pushFact("气压", payload.metadata?.pressure_mb ? `${payload.metadata.pressure_mb} mb` : "");
     pushFact("风险", firstNonEmpty(item.status, payload.metadata?.development_level));
   } else if (type === "tsunami") {
-    pushFact("区域", firstNonEmpty(item.location_text, item.summary));
+    pushFact("区域", firstNonEmpty(item.display_zh?.region, item.location_text, item.summary));
     pushFact("状态", titleCase(item.status || item.severity_level));
   } else {
     pushFact("信息", firstNonEmpty(item.summary, item.location_text));
@@ -218,7 +220,7 @@ export function renderDisasterPane(items = []) {
   const rows = items.map((item) => {
     const eventType = String(item?.event_type || "unknown").toLowerCase();
     const level = firstNonEmpty(item?.severity_level, item?.payload?.alertlevel, item?.payload?.alert_level);
-    const title = firstNonEmpty(item?.title, `${typeLabel(eventType)}事件`);
+    const title = firstNonEmpty(item?.display_zh?.title, item?.title, `${typeLabel(eventType)}事件`);
     const subtitle = buildSubtitle(item);
     const source = firstNonEmpty(item?.source_primary, item?.source, item?.payload?.source);
     const latestTime = displayTime(item);

@@ -71,7 +71,6 @@ export function renderWeatherPane(items = []) {
     return `
       <div class="disaster-pane-empty">
         <div class="disaster-pane-empty-title">当前暂无即时警报</div>
-        <div class="disaster-pane-empty-subtitle">这里只显示按系统规则筛选后的 extreme 天气警报。</div>
       </div>
     `;
   }
@@ -115,5 +114,5 @@ export function renderWeatherPane(items = []) {
     })
     .join("");
 
-  return `<div>仅显示 extreme 等级；按有效期保留，缺少有效期时保留 12 小时。</div><div class="hazard-card-list weather-card-list">${rows}</div>`;
+  return `<div class="hazard-card-list weather-card-list">${rows}</div>`;
 }

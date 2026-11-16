@@ -111,8 +111,8 @@ export function createPublicHealthModule(ctx) {
 
   function sourceNote(name) {
     const source = sourceStatuses[name];
-    if (!source) return "";
-    const label = source.status === "success" ? "更新正常" : "更新失败或未验证 · 保留已有记录";
+    if (!source || source.status === "success") return "";
+    const label = "更新失败或未验证 · 保留已有记录";
     return `<div>${escapeHtml(name)}：${label} · ${escapeHtml(source.started_at ? formatAbsoluteLocalDateTime(source.started_at) : "未知时间")}</div>`;
   }
   function render() {

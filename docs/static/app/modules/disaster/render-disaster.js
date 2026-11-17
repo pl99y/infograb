@@ -1,5 +1,7 @@
 import { formatAbsoluteLocalDateTime, formatRelativeLocalTime } from "../../core/time.js?v=46";
 
+import { chinaFirst, isChinaCode, mentionsChina } from "../../core/china-first.js?v=53";
+
 const USGS_MAP_URL = "https://earthquake.usgs.gov/earthquakes/map/";
 const MIROVA_URL = "https://www.mirovaweb.it/NRT/";
 const TSUNAMI_URL = "https://www.tsunami.gov/";
@@ -223,6 +225,18 @@ function renderInlineFacts(item) {
   `;
 }
 
+function isChinaDisaster(item) {
+  const payload = item?.payload;
+  if ([item?.country_code, payload?.country_code, payload?.country].some(isChinaCode)) return true;
+  return [
+    item?.location_text,
+    payload?.place,
+    payload?.country,
+    payload?.platform_location,
+    item?.display_zh?.region,
+  ].some(mentionsChina);
+}
+
 export function renderDisasterPane(items = []) {
   if (!Array.isArray(items) || items.length === 0) {
     return `
@@ -233,7 +247,7 @@ export function renderDisasterPane(items = []) {
     `;
   }
 
-  const rows = items.map((item) => {
+  const rows = chinaFirst(items, isChinaDisaster).map((item) => {
     const eventType = String(item?.event_type || "unknown").toLowerCase();
     const level = firstNonEmpty(item?.severity_level, item?.payload?.alertlevel, item?.payload?.alert_level);
     const title = firstNonEmpty(item?.display_zh?.title, item?.title, `${typeLabel(eventType)}事件`);

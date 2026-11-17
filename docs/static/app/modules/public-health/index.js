@@ -2,6 +2,8 @@ import { setEmpty, setError, setLoading } from "../../core/dom.js?v=46";
 import { formatAbsoluteLocalDateTime, formatRelativeLocalTime } from "../../core/time.js?v=46";
 import { renderFreshness } from "../../core/export-meta.js?v=46";
 
+import { chinaFirst, mentionsChina } from "../../core/china-first.js?v=53";
+
 function escapeHtml(value) {
   return String(value ?? "")
     .replace(/&/g, "&amp;")
@@ -67,7 +69,7 @@ function renderList(items, emptyText) {
     `;
   }
 
-  return items.map((item) => {
+  return chinaFirst(items, (item) => mentionsChina(item.titleRaw || item.title)).map((item) => {
     const href = resolveItemHref(item);
     const sourceClass = item.sourceKey === "promed" ? "promed" : "who";
     const relative = item.publishedAt ? formatRelativeLocalTime(item.publishedAt) : (item.dateRaw || "");

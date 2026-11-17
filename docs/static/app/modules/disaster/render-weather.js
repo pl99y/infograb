@@ -1,5 +1,7 @@
 import { formatAbsoluteLocalDateTime, formatRelativeLocalTime } from "../../core/time.js?v=46";
 
+import { chinaFirst, isChinaCode, mentionsChina } from "../../core/china-first.js?v=53";
+
 const WMO_LIST_URL = "https://severeweather.wmo.int/list.html";
 
 function escapeHtml(value) {
@@ -22,16 +24,22 @@ function firstNonEmpty(...values) {
   return "";
 }
 
-function inferWeatherCountry(item) {
+function inferWeatherCode(item) {
   const path = firstNonEmpty(item?.payload?.cap_path, item?.payload?.capURL, item?.payload?.url);
   const code = path.match(/^(?:https:\/\/[^/]+\/)?([a-z]{2})-[^/]+\//i)?.[1]?.toUpperCase();
-  if (code === "UK") return regionNames.of("GB");
-  if (code && code !== "ZZ") return regionNames.of(code) || "";
+  if (code === "UK") return "GB";
+  if (code && code !== "ZZ") return code;
   const id = String(item?.payload?.id || "");
-  if (id.startsWith("urn:oid:2.49.0.1.840.")) return regionNames.of("US");
-  if (id.startsWith("IN-")) return regionNames.of("IN");
+  if (id.startsWith("urn:oid:2.49.0.1.840.")) return "US";
+  if (id.startsWith("IN-")) return "IN";
   return "";
+}
 
+function isChinaWeather(item) {
+  const code = inferWeatherCode(item);
+  if (isChinaCode(code) || isChinaCode(item?.country_code)) return true;
+  if (code && regionNames.of(code)) return false;
+  return mentionsChina(normalizeRegion(item)) || mentionsChina(item?.display_zh?.region);
 }
 
 function normalizeEventLabel(item) {
@@ -75,11 +83,12 @@ export function renderWeatherPane(items = []) {
     `;
   }
 
-  const rows = items
+  const rows = chinaFirst(items, isChinaWeather)
     .map((item) => {
       const eventLabel = firstNonEmpty(item?.display_zh?.title, normalizeEventLabel(item));
       const region = firstNonEmpty(item?.display_zh?.region, normalizeRegion(item));
-      const country = inferWeatherCountry(item);
+      const code = inferWeatherCode(item);
+      const country = code ? regionNames.of(code) : "";
       const subtitle = buildSubtitle(country, region);
       const publishedAt = firstNonEmpty(item?.published_at, item?.issued_at, item?.effective_at, item?.updated_at);
       const expiresAt = firstNonEmpty(item?.expires_at);

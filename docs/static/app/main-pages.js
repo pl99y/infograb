@@ -1,5 +1,5 @@
 import { AUTO_REFRESH_MS, RELATIVE_CLOCK_MS, STORAGE_KEYS } from "./core/constants.js?v=46";
-import { createApi } from "./core/api.js?v=46";
+import { createApi } from "./core/api.js?v=54";
 import { refreshExportMeta } from "./core/export-meta.js?v=46";
 import { createStore } from "./core/store.js?v=46";
 import { createThemeModule } from "./modules/theme/index.js?v=46";
@@ -16,6 +16,8 @@ import { createMndPlaModule } from "./modules/mnd-pla/index.js?v=46";
 import { createF1Module } from "./modules/f1/index.js?v=46";
 import { createFeedModule } from "./modules/feed/index.js?v=48";
 import { createNewsTimelineModule } from "./modules/news-timeline/index.js?v=46";
+
+import { createHistoryModule } from "./modules/history/index.js?v=54";
 
 function createContext() {
   const store = createStore();
@@ -79,6 +81,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   ctx.lightbox = safeInit("lightbox", createLightboxModule, ctx, modules);
   ctx.theme = safeInit("theme", createThemeModule, ctx, modules);
+  ctx.historyModule = safeInit("history", createHistoryModule, ctx, modules);
   ctx.f1Module = safeInit("f1", createF1Module, ctx, modules);
   ctx.layout = safeInit("layout", createLayoutModule, ctx, modules);
   ctx.mobile = safeInit("mobile", createMobileModule, ctx, modules);

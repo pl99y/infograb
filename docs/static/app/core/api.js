@@ -17,6 +17,7 @@ export function createApi() {
 
   function mapGet(url) {
     const clean = String(url || "");
+    if (clean.startsWith("/api/history/today")) return "./data/history_today.json";
     if (clean.startsWith("/api/energy/latest")) return "./data/energy_latest.json";
     if (clean.startsWith("/api/market-snapshots/latest")) return "./data/market_latest.json";
     if (clean.startsWith("/api/aviation/alerts")) return "./data/aviation_alerts.json";

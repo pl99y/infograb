@@ -1,0 +1,659 @@
+[
+  {
+    "id": 314260,
+    "group_key": "typhoon|TC|nhc_at|nhc_at|offshore_of_the_southeast_u_s_coast|cdc812e241b64b46",
+    "event_type": "typhoon",
+    "severity_level": "low",
+    "severity_color": "low",
+    "title": "Offshore of the Southeast U.S. Coast",
+    "summary": "48h 10% LOW · 7d 10% LOW",
+    "started_at": "2026-11-21T11:54:00+00:00",
+    "updated_at": "2026-11-21T11:54:00+00:00",
+    "location_text": null,
+    "lat": null,
+    "lon": null,
+    "source_primary": "NHC-AT",
+    "source_secondary": "disturbance",
+    "status": "monitoring",
+    "map_url": null,
+    "official_link": null,
+    "country_code": null,
+    "payload": {
+      "item_type": "disturbance",
+      "source": "nhc_at",
+      "source_key": "nhc_at|offshore_of_the_southeast_u_s_coast",
+      "content_hash": "cdc812e241b64b46",
+      "platform_summary": "48h 10% LOW | 7d 10% LOW",
+      "platform_location": null,
+      "wind": null,
+      "risk_48h": "10% LOW",
+      "risk_7d": "10% LOW",
+      "next_update": null,
+      "raw_text": "Offshore of the Southeast U.S. Coast:\nA large non-tropical low pressure area centered a few hundred miles \neast of northeastern Florida continues to produce disorganized \nshowers and thunderstorms. The system is moving into an \nenvironment that will probably not be conducive for development of \nsignificant tropical or subtropical characteristics. \n\nAlthough the chances of tropical development continue to decrease, \nthis large weather system is still expected to produce gusty winds, \ndangerous surf, rip currents, and coastal flooding along portions \nof the southeast and mid-Atlantic U.S. coasts into early next week. \nIn addition, heavy rainfall and the threat of flash flooding will \nmove northward over coastal portions of the Carolinas and the \nmid-Atlantic through the weekend. Interests along the U.S. \nEast Coast should continue to monitor the progress of this system. \nAdditional information on this system, including Gale Warnings, can \nbe found in High Seas Forecasts issued by the National Weather \nService, as well as products issued by your local National Weather \nService forecast office.\n* Formation chance through 48 hours...low...10 percent.\n* Formation chance through 7 days...low...10 percent.",
+      "metadata": {
+        "chance_48h_level": "LOW",
+        "chance_48h_pct": "10",
+        "chance_7d_level": "LOW",
+        "chance_7d_pct": "10",
+        "bulletin_issue_at": "2026-11-21T11:54:00+00:00"
+      }
+    },
+    "member_event_ids": [
+      314365
+    ],
+    "occurred_at": "2026-11-21T11:54:00+00:00",
+    "published_at": "2026-11-21T11:54:00+00:00",
+    "fetched_at": "2026-11-21T11:54:00+00:00",
+    "display_zh": {
+      "title": "热带气旋警报",
+      "region": "美国东南部近海",
+      "summary": ""
+    }
+  },
+  {
+    "id": 314261,
+    "group_key": "earthquake|us6000ucly",
+    "event_type": "earthquake",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "M 5.9 - 238 km SW of Yanglong, China",
+    "summary": "238 km SW of Yanglong, China",
+    "started_at": "2026-11-21T10:45:33.230000+00:00",
+    "updated_at": "2026-11-21T12:51:14.230000+00:00",
+    "location_text": "238 km SW of Yanglong, China",
+    "lat": 37.1958,
+    "lon": 96.6398,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucly",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucly",
+    "country_code": null,
+    "payload": {
+      "mag": 5.9,
+      "depth_km": 10.0,
+      "place": "238 km SW of Yanglong, China",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000ucly.geojson",
+      "alert": "yellow",
+      "sig": 650,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      314357
+    ],
+    "occurred_at": "2026-11-21T10:45:33.230000+00:00",
+    "published_at": "2026-11-21T10:45:33.230000+00:00",
+    "fetched_at": "2026-11-21T10:45:33.230000+00:00",
+    "display_zh": {
+      "title": "5.9级地震",
+      "region": "中国 · 央龙西南约238公里",
+      "summary": ""
+    }
+  },
+  {
+    "id": 314262,
+    "group_key": "earthquake|us6000ucky",
+    "event_type": "earthquake",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "M 5.2 - 112 km SSE of Tateyama, Japan",
+    "summary": "112 km SSE of Tateyama, Japan",
+    "started_at": "2026-11-21T10:09:05.474000+00:00",
+    "updated_at": "2026-11-21T11:17:36.040000+00:00",
+    "location_text": "112 km SSE of Tateyama, Japan",
+    "lat": 34.0109,
+    "lon": 140.2109,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucky",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucky",
+    "country_code": null,
+    "payload": {
+      "mag": 5.2,
+      "depth_km": 10.0,
+      "place": "112 km SSE of Tateyama, Japan",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000ucky.geojson",
+      "alert": null,
+      "sig": 416,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      314358
+    ],
+    "occurred_at": "2026-11-21T10:09:05.474000+00:00",
+    "published_at": "2026-11-21T10:09:05.474000+00:00",
+    "fetched_at": "2026-11-21T10:09:05.474000+00:00",
+    "display_zh": {
+      "title": "日本馆山东南偏南约112公里 5.2级地震",
+      "region": "日本 · 馆山东南偏南约112公里",
+      "summary": ""
+    }
+  },
+  {
+    "id": 314263,
+    "group_key": "earthquake|us6000ucij",
+    "event_type": "earthquake",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "M 6.8 - 105 km NE of Lospalos, Timor Leste",
+    "summary": "105 km NE of Lospalos, Timor Leste",
+    "started_at": "2026-11-21T09:42:09.120000+00:00",
+    "updated_at": "2026-11-21T12:40:35.300000+00:00",
+    "location_text": "105 km NE of Lospalos, Timor Leste",
+    "lat": -7.7324,
+    "lon": 127.5407,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucij",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucij",
+    "country_code": null,
+    "payload": {
+      "mag": 6.8,
+      "depth_km": 132.055,
+      "place": "105 km NE of Lospalos, Timor Leste",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000ucij.geojson",
+      "alert": "green",
+      "sig": 725,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      314359
+    ],
+    "occurred_at": "2026-11-21T09:42:09.120000+00:00",
+    "published_at": "2026-11-21T09:42:09.120000+00:00",
+    "fetched_at": "2026-11-21T09:42:09.120000+00:00",
+    "display_zh": {
+      "title": "里氏6.8级地震",
+      "region": "东帝汶洛斯帕洛斯东北约105公里",
+      "summary": ""
+    }
+  },
+  {
+    "id": 314264,
+    "group_key": "volcano|2f4a299d0cd4f2d84d9e27ee68ba4d7d6870f0df",
+    "event_type": "volcano",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Fuego",
+    "summary": "VRP 135.36 MW · VIIRS / VIIRS375 · 4.93 km",
+    "started_at": "2026-11-21T08:30:01+00:00",
+    "updated_at": "2026-11-21T08:30:01+00:00",
+    "location_text": "Fuego",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "VIIRS / VIIRS375",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=342090",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=342090",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "342090",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=342090",
+      "vrp_mw": 135.36,
+      "distance_km": 4.93,
+      "sensor": "VIIRS375",
+      "row_class": [
+        "moderate",
+        "high"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "VIIRS",
+        "VIIRS375"
+      ],
+      "reports": [
+        {
+          "volcano_id": "342090",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR.php?volcano_id=342090",
+          "vrp_mw": 67.7,
+          "distance_km": 5.46,
+          "sensor": "VIIRS",
+          "row_class": [
+            "moderate"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        },
+        {
+          "volcano_id": "342090",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_VIR375.php?volcano_id=342090",
+          "vrp_mw": 135.36,
+          "distance_km": 4.93,
+          "sensor": "VIIRS375",
+          "row_class": [
+            "high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 2
+    },
+    "member_event_ids": [
+      314363
+    ],
+    "occurred_at": "2026-11-21T08:30:01+00:00",
+    "published_at": "2026-11-21T08:30:01+00:00",
+    "fetched_at": "2026-11-21T08:30:01+00:00",
+    "display_zh": {
+      "title": "富埃戈火山活动",
+      "region": "富埃戈",
+      "summary": "VRP 135.36 MW · VIIRS / VIIRS375 · 4.93 km"
+    }
+  },
+  {
+    "id": 314265,
+    "group_key": "volcano|4e87b09a5fe0995623e62e637d4052b340b69930",
+    "event_type": "volcano",
+    "severity_level": "very_high",
+    "severity_color": "very_high",
+    "title": "Nyamuragira",
+    "summary": "VRP 1355.32 MW · MODIS · 5.00 km",
+    "started_at": "2026-11-21T06:25:00+00:00",
+    "updated_at": "2026-11-21T06:25:00+00:00",
+    "location_text": "Nyamuragira",
+    "lat": null,
+    "lon": null,
+    "source_primary": "MIROVA",
+    "source_secondary": "MODIS",
+    "status": "active",
+    "map_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=223020",
+    "official_link": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=223020",
+    "country_code": null,
+    "payload": {
+      "volcano_id": "223020",
+      "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=223020",
+      "vrp_mw": 1355.32,
+      "distance_km": 5.0,
+      "sensor": "MODIS",
+      "row_class": [
+        "very_high"
+      ],
+      "source_page": "https://www.mirovaweb.it/NRT/",
+      "sensors": [
+        "MODIS"
+      ],
+      "reports": [
+        {
+          "volcano_id": "223020",
+          "volcano_url": "https://www.mirovaweb.it/NRT/volcanoDetails_MOD.php?volcano_id=223020",
+          "vrp_mw": 1355.32,
+          "distance_km": 5.0,
+          "sensor": "MODIS",
+          "row_class": [
+            "very_high"
+          ],
+          "source_page": "https://www.mirovaweb.it/NRT/"
+        }
+      ],
+      "merged_count": 1
+    },
+    "member_event_ids": [
+      314364
+    ],
+    "occurred_at": "2026-11-21T06:25:00+00:00",
+    "published_at": "2026-11-21T06:25:00+00:00",
+    "fetched_at": "2026-11-21T06:25:00+00:00",
+    "display_zh": {
+      "title": "尼亚穆拉吉拉火山",
+      "region": "尼亚穆拉吉拉",
+      "summary": ""
+    }
+  },
+  {
+    "id": 314266,
+    "group_key": "typhoon|TC|jtwc_abpw|jtwc_abpw|south_pacific_area|tc_04p|4c1cde39abde24e2",
+    "event_type": "typhoon",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "Tropical Cyclone 04P (Xavier)",
+    "summary": "wind 45 kt (gust 55)",
+    "started_at": "2026-11-21T06:00:00+00:00",
+    "updated_at": "2026-11-21T06:00:00+00:00",
+    "location_text": "11.5S 164.2W",
+    "lat": -11.5,
+    "lon": -164.2,
+    "source_primary": "JTWC-ABPW",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://www.google.com/maps?q=-11.5,-164.2",
+    "official_link": "https://www.google.com/maps?q=-11.5,-164.2",
+    "country_code": null,
+    "payload": {
+      "item_type": "warning",
+      "source": "jtwc_abpw",
+      "source_key": "jtwc_abpw|south_pacific_area|tc_04p",
+      "content_hash": "4c1cde39abde24e2",
+      "platform_summary": "11.5S 164.2W | wind 45 kt (gust 55)",
+      "platform_location": "11.5S 164.2W",
+      "wind": "45 kt (gust 55)",
+      "risk_48h": null,
+      "risk_7d": null,
+      "next_update": null,
+      "raw_text": "(1) AT 21NOV26 0000Z, TROPICAL CYCLONE 04P (XAVIER) WAS LOCATED \nNEAR 11.5S 164.2W, APPROXIMATELY 416 NM EAST-NORTHEAST OF PAGO PAGO, \nAND HAD TRACKED WEST-SOUTHWESTWARD AT 04 KNOTS OVER THE PAST SIX \nHOURS. MAXIMUM SUSTAINED SURFACE WINDS WERE ESTIMATED AT 45 KNOTS \nGUSTING TO 55 KNOTS. SEE REF A (WTPS31 PGTW 210300) FOR FURTHER \nDETAILS.",
+      "metadata": {
+        "basin_section": "SOUTH PACIFIC AREA (WEST COAST OF SOUTH AMERICA TO 135 EAST)",
+        "storm_class": "TROPICAL CYCLONE",
+        "storm_id": "04P",
+        "storm_name": "XAVIER",
+        "fix_date": "21NOV26",
+        "fix_time": "21NOV26 0000Z",
+        "lat": -11.5,
+        "lon": -164.2,
+        "movement_text": "WEST-SOUTHWESTWARD",
+        "movement_kt": 4,
+        "wind_kt": 45,
+        "gust_kt": 55,
+        "warning_reference": "WTPS31 PGTW 210300",
+        "bulletin_issue_at": "2026-11-21T06:00:00+00:00"
+      }
+    },
+    "member_event_ids": [
+      314366
+    ],
+    "occurred_at": "2026-11-21T06:00:00+00:00",
+    "published_at": "2026-11-21T06:00:00+00:00",
+    "fetched_at": "2026-11-21T06:00:00+00:00",
+    "display_zh": {
+      "title": "热带气旋泽维尔 (04P)",
+      "region": "",
+      "summary": "风速45节，阵风55节"
+    }
+  },
+  {
+    "id": 314267,
+    "group_key": "earthquake|us6000uchd",
+    "event_type": "earthquake",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "M 5.0 - 0 km NE of Carhuamayo, Peru",
+    "summary": "0 km NE of Carhuamayo, Peru",
+    "started_at": "2026-11-21T05:12:04.898000+00:00",
+    "updated_at": "2026-11-21T14:30:38.672000+00:00",
+    "location_text": "0 km NE of Carhuamayo, Peru",
+    "lat": -10.913,
+    "lon": -76.0308,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000uchd",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000uchd",
+    "country_code": null,
+    "payload": {
+      "mag": 5.0,
+      "depth_km": 110.928,
+      "place": "0 km NE of Carhuamayo, Peru",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000uchd.geojson",
+      "alert": null,
+      "sig": 388,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      314360
+    ],
+    "occurred_at": "2026-11-21T05:12:04.898000+00:00",
+    "published_at": "2026-11-21T05:12:04.898000+00:00",
+    "fetched_at": "2026-11-21T05:12:04.898000+00:00",
+    "display_zh": {
+      "title": "5.0级地震",
+      "region": "秘鲁 · 卡尔瓦马约东北约0公里",
+      "summary": ""
+    }
+  },
+  {
+    "id": 314268,
+    "group_key": "earthquake|us6000ucfm",
+    "event_type": "earthquake",
+    "severity_level": "high",
+    "severity_color": "high",
+    "title": "M 6.7 - 9 km NE of Carhuamayo, Peru",
+    "summary": "9 km NE of Carhuamayo, Peru",
+    "started_at": "2026-11-21T00:09:19.667000+00:00",
+    "updated_at": "2026-11-21T11:31:51.336000+00:00",
+    "location_text": "9 km NE of Carhuamayo, Peru",
+    "lat": -10.8548,
+    "lon": -75.9779,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucfm",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucfm",
+    "country_code": null,
+    "payload": {
+      "mag": 6.7,
+      "depth_km": 107.991,
+      "place": "9 km NE of Carhuamayo, Peru",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000ucfm.geojson",
+      "alert": "green",
+      "sig": 747,
+      "tsunami": 1,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      314361
+    ],
+    "occurred_at": "2026-11-21T00:09:19.667000+00:00",
+    "published_at": "2026-11-21T00:09:19.667000+00:00",
+    "fetched_at": "2026-11-21T00:09:19.667000+00:00",
+    "display_zh": {
+      "title": "秘鲁卡尔瓦马约东北约9公里发生6.7级地震",
+      "region": "秘鲁 · 卡尔瓦马约东北约9公里",
+      "summary": ""
+    }
+  },
+  {
+    "id": 314271,
+    "group_key": "typhoon|TC|jtwc_abio|jtwc_abio|south_indian_ocean_area|invest_96s|2c872fe39e63b01f",
+    "event_type": "typhoon",
+    "severity_level": "elevated",
+    "severity_color": "elevated",
+    "title": "INVEST 96S",
+    "summary": "wind 27-32 kt · 1006 mb · Medium",
+    "started_at": "2026-11-21T00:00:00+00:00",
+    "updated_at": "2026-11-21T00:00:00+00:00",
+    "location_text": "10.8S 90.4E",
+    "lat": -10.8,
+    "lon": 90.4,
+    "source_primary": "JTWC-ABIO",
+    "source_secondary": "disturbance",
+    "status": "active",
+    "map_url": "https://www.google.com/maps?q=-10.8,90.4",
+    "official_link": "https://www.google.com/maps?q=-10.8,90.4",
+    "country_code": null,
+    "payload": {
+      "item_type": "disturbance",
+      "source": "jtwc_abio",
+      "source_key": "jtwc_abio|south_indian_ocean_area|invest_96s",
+      "content_hash": "2c872fe39e63b01f",
+      "platform_summary": "10.8S 90.4E | winds 27-32 kt | 1006 mb | MEDIUM",
+      "platform_location": "10.8S 90.4E",
+      "wind": "27-32 kt",
+      "risk_48h": null,
+      "risk_7d": null,
+      "next_update": null,
+      "raw_text": "(1) THE AREA OF CONVECTION (INVEST 96S) PREVIOUSLY LOCATED NEAR \n10.4S 90.2E IS NOW LOCATED NEAR 10.8S 90.4E, APPROXIMATELY 394 NM WEST \nOF COCOS ISLANDS. ANIMATED ENHANCED INFRARED (EIR) SATELLITE DEPICTS \nDEEP CONVECTION DISPLACED BY MODERATE NORTHWESTERLY VERTICAL WIND \nSHEAR TO THE SOUTHERN PORTION OF AN ELONGATED LOW-LEVEL CIRCULATION \nCENTER (LLCC) EVIDENT IN A 200344Z METOP-C ASCAT PASS. ENVIRONMENTAL \nANALYSIS REVEALS A MARGINAL ENVIRONMENT FOR DEVELOPMENT WITH MODERATE \nVERTICAL WIND SHEAR (VWS) OF (10 TO 15 KNOTS), MODERATE TO STRONG \nPOLEWARD UPPER-LEVEL OUTFLOW, AND WARM SEA SURFACE TEMPERATURES (SSTS) \nOF 28 TO 29 C. GLOBAL DETERMINISTIC MODELS DEPICT A CLEARLY DEFINED \nCIRCULATION, THOUGH THE SYSTEM STRUGGLES TO MEET WIND SPEED CRITERIA \nAS IT TRAVERSES SOUTHWARD. ENSEMBLE MODELS DEPICT A SLOW DEVELOPMENT \nTREND OVER THE NEXT 24-36 HOURS. MAXIMUM SUSTAINED SURFACE WINDS ARE \nESTIMATED AT 27 TO 32 KNOTS. MINIMUM SEA LEVEL PRESSURE IS ESTIMATED \nTO BE NEAR 1006 MB. THE POTENTIAL FOR THE DEVELOPMENT OF A SIGNIFICANT \nTROPICAL CYCLONE WITHIN THE NEXT 24 HOURS REMAINS MEDIUM.",
+      "metadata": {
+        "basin_section": "SOUTH INDIAN OCEAN AREA (135E WEST TO COAST OF AFRICA)",
+        "invest_id": "96S",
+        "lat": -10.8,
+        "lon": 90.4,
+        "wind_kt_min": 27,
+        "wind_kt_max": 32,
+        "wind_kt": 32,
+        "pressure_mb": 1006,
+        "development_phrase": "REMAINS",
+        "development_level": "MEDIUM",
+        "bulletin_issue_at": "2026-11-21T00:00:00+00:00"
+      }
+    },
+    "member_event_ids": [
+      314367
+    ],
+    "occurred_at": "2026-11-21T00:00:00+00:00",
+    "published_at": "2026-11-21T00:00:00+00:00",
+    "fetched_at": "2026-11-21T00:00:00+00:00",
+    "display_zh": {
+      "title": "INVEST 96S 台风",
+      "region": "10.8S 90.4E",
+      "summary": "风速27-32节，气压1006百帕，中等强度"
+    }
+  },
+  {
+    "id": 314270,
+    "group_key": "typhoon|TC|jtwc_abio|jtwc_abio|south_indian_ocean_area|invest_98s|5a7650a779012388",
+    "event_type": "typhoon",
+    "severity_level": "low",
+    "severity_color": "low",
+    "title": "INVEST 98S",
+    "summary": "wind 13-18 kt · 1009 mb · Low",
+    "started_at": "2026-11-21T00:00:00+00:00",
+    "updated_at": "2026-11-21T00:00:00+00:00",
+    "location_text": "7.7S 75.3E",
+    "lat": -7.7,
+    "lon": 75.3,
+    "source_primary": "JTWC-ABIO",
+    "source_secondary": "disturbance",
+    "status": "active",
+    "map_url": "https://www.google.com/maps?q=-7.7,75.3",
+    "official_link": "https://www.google.com/maps?q=-7.7,75.3",
+    "country_code": null,
+    "payload": {
+      "item_type": "disturbance",
+      "source": "jtwc_abio",
+      "source_key": "jtwc_abio|south_indian_ocean_area|invest_98s",
+      "content_hash": "5a7650a779012388",
+      "platform_summary": "7.7S 75.3E | winds 13-18 kt | 1009 mb | LOW",
+      "platform_location": "7.7S 75.3E",
+      "wind": "13-18 kt",
+      "risk_48h": null,
+      "risk_7d": null,
+      "next_update": null,
+      "raw_text": "(2) THE AREA OF CONVECTION (INVEST 98S) PREVIOUSLY LOCATED NEAR \n7.7S 75.5E IS NOW LOCATED NEAR 7.7S 75.3E, APPROXIMATELY 167 NM EAST \nOF DIEGO GARCIA. RECENT ANIMATED ENHANCED INFRARED SATELLITE IMAGERY \nINDICATES PATCHY DEEP CONVECTION DEVELOPING OVER A DEVELOPING, \nELONGATED LOW-LEVEL CIRCULATION EVIDENT IN A 201620Z PARTIAL METOP-C \nASCAT PASS. THIS DISTURBANCE LIES IN AN AREA OF LOW VERTICAL WIND \nSHEAR (5-10 KTS), FAVORABLE UPPER-LEVEL OUTFLOW, AND WARM SEA SURFACE \nTEMPERATURES (29-30C). HOWEVER, THE DEVELOPING CIRCULATION IS STILL \nQUITE WEAK AND DISORGANIZED, AND DETERMINISTIC MODELS AND ENSEMBLES \nBOTH INDICATE SLOW DEVELOPMENT OVER THE NEXT FEW DAYS AS THE SYSTEM \nTRACKS GENERALLY POLEWARD. MAXIMUM SUSTAINED SURFACE WINDS ARE \nESTIMATED AT 13 TO 18 KNOTS. MINIMUM SEA LEVEL PRESSURE IS ESTIMATED \nTO BE NEAR 1009 MB. THE POTENTIAL FOR THE DEVELOPMENT OF A SIGNIFICANT \nTROPICAL CYCLONE WITHIN THE NEXT 24 HOURS REMAINS LOW.",
+      "metadata": {
+        "basin_section": "SOUTH INDIAN OCEAN AREA (135E WEST TO COAST OF AFRICA)",
+        "invest_id": "98S",
+        "lat": -7.7,
+        "lon": 75.3,
+        "wind_kt_min": 13,
+        "wind_kt_max": 18,
+        "wind_kt": 18,
+        "pressure_mb": 1009,
+        "development_phrase": "REMAINS",
+        "development_level": "LOW",
+        "bulletin_issue_at": "2026-11-21T00:00:00+00:00"
+      }
+    },
+    "member_event_ids": [
+      314368
+    ],
+    "occurred_at": "2026-11-21T00:00:00+00:00",
+    "published_at": "2026-11-21T00:00:00+00:00",
+    "fetched_at": "2026-11-21T00:00:00+00:00",
+    "display_zh": {
+      "title": "INVEST 98S 台风",
+      "region": "7.7S 75.3E",
+      "summary": "风速13-18节，气压1009百帕，低强度"
+    }
+  },
+  {
+    "id": 314269,
+    "group_key": "typhoon|TC|jtwc_abio|jtwc_abio|south_indian_ocean_area|invest_97s|2f536a7ec34c7919",
+    "event_type": "typhoon",
+    "severity_level": "low",
+    "severity_color": "low",
+    "title": "INVEST 97S",
+    "summary": "wind 18-23 kt · 1009 mb",
+    "started_at": "2026-11-21T00:00:00+00:00",
+    "updated_at": "2026-11-21T00:00:00+00:00",
+    "location_text": "6.6S 66.3E",
+    "lat": -6.6,
+    "lon": 66.3,
+    "source_primary": "JTWC-ABIO",
+    "source_secondary": "disturbance",
+    "status": "monitoring",
+    "map_url": "https://www.google.com/maps?q=-6.6,66.3",
+    "official_link": "https://www.google.com/maps?q=-6.6,66.3",
+    "country_code": null,
+    "payload": {
+      "item_type": "disturbance",
+      "source": "jtwc_abio",
+      "source_key": "jtwc_abio|south_indian_ocean_area|invest_97s",
+      "content_hash": "2f536a7ec34c7919",
+      "platform_summary": "6.6S 66.3E | winds 18-23 kt | 1009 mb",
+      "platform_location": "6.6S 66.3E",
+      "wind": "18-23 kt",
+      "risk_48h": null,
+      "risk_7d": null,
+      "next_update": null,
+      "raw_text": "(3) AN AREA OF CONVECTION (INVEST 97S) HAS PERSISTED NEAR 6.6S \n66.3E, APPROXIMATELY 371 NM WEST OF DIEGO GARCIA. RECENT ANIMATED \nENHANCED INFRARED SATELLITE IMAGERY SHOWS DEEP CONVECTION DEVELOPING \nOVER A BROAD AREA OF LOW-LEVEL CYCLONIC TURNING EVIDENT IN A 201448Z \nSSMIS PASS. THIS DISTURBANCE LIES IN A GENERALLY FAVORABLE ENVIRONMENT \nWITH LOW VERTICAL WIND SHEAR (5-10 KTS), MODERATE POLEWARD UPPER-LEVEL \nOUTFLOW, AND WARM SEA SURFACE TEMPERATURES (29-30C). DETERMINISTIC AND \nENSEMBLE MODELS INDICATE SLOW BUT STEADY CONSOLIDATION OF THIS SYSTEM \nAS IT MEANDERS EASTWARD OVER THE NEXT SEVERAL DAYS. MAXIMUM SUSTAINED \nSURFACE WINDS ARE ESTIMATED AT 18 TO 23 KNOTS. MINIMUM SEA LEVEL \nPRESSURE IS ESTIMATED TO BE NEAR 1009 MB. THE POTENTIAL FOR THE \nDEVELOPMENT OF A SIGNIFICANT TROPICAL CYCLONE WITHIN THE NEXT 24 HOURS \nIS LOW.",
+      "metadata": {
+        "basin_section": "SOUTH INDIAN OCEAN AREA (135E WEST TO COAST OF AFRICA)",
+        "invest_id": "97S",
+        "lat": -6.6,
+        "lon": 66.3,
+        "wind_kt_min": 18,
+        "wind_kt_max": 23,
+        "wind_kt": 23,
+        "pressure_mb": 1009,
+        "bulletin_issue_at": "2026-11-21T00:00:00+00:00"
+      }
+    },
+    "member_event_ids": [
+      314369
+    ],
+    "occurred_at": "2026-11-21T00:00:00+00:00",
+    "published_at": "2026-11-21T00:00:00+00:00",
+    "fetched_at": "2026-11-21T00:00:00+00:00",
+    "display_zh": {
+      "title": "热带扰动 INVEST 97S",
+      "region": "6.6S 66.3E",
+      "summary": "风速18-23节，气压1009百帕"
+    }
+  },
+  {
+    "id": 314272,
+    "group_key": "earthquake|us6000ucd6",
+    "event_type": "earthquake",
+    "severity_level": "moderate",
+    "severity_color": "moderate",
+    "title": "M 5.1 - 32 km NE of Port-Olry, Vanuatu",
+    "summary": "32 km NE of Port-Olry, Vanuatu",
+    "started_at": "2026-11-20T17:53:15.442000+00:00",
+    "updated_at": "2026-11-20T18:11:13.040000+00:00",
+    "location_text": "32 km NE of Port-Olry, Vanuatu",
+    "lat": -14.835,
+    "lon": 167.29,
+    "source_primary": "USGS",
+    "source_secondary": null,
+    "status": "active",
+    "map_url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucd6",
+    "official_link": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000ucd6",
+    "country_code": null,
+    "payload": {
+      "mag": 5.1,
+      "depth_km": 94.53,
+      "place": "32 km NE of Port-Olry, Vanuatu",
+      "detail": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/us6000ucd6.geojson",
+      "alert": null,
+      "sig": 400,
+      "tsunami": 0,
+      "source_page": "https://earthquake.usgs.gov/earthquakes/map"
+    },
+    "member_event_ids": [
+      314362
+    ],
+    "occurred_at": "2026-11-20T17:53:15.442000+00:00",
+    "published_at": "2026-11-20T17:53:15.442000+00:00",
+    "fetched_at": "2026-11-20T17:53:15.442000+00:00",
+    "display_zh": {
+      "title": "5.1级地震",
+      "region": "瓦努阿图 · 佩尔奥利东北约32公里",
+      "summary": ""
+    }
+  }
+]

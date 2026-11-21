@@ -6,7 +6,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 from parsers.history_parser import parse_history_events
-from services.history.pipeline import CACHE, get_history_today, refresh_history_once, validate_history
+from services.history.pipeline import CACHE, factual_fallback, failure_reason, get_history_today, refresh_history_once, validate_history
 from storage import get_dashboard_snapshot, initialize_database, save_dashboard_snapshot
 
 
@@ -75,15 +75,51 @@ class HistoryTests(unittest.TestCase):
     @patch("services.history.pipeline.generate_history", side_effect=ValueError("invalid"))
     @patch("services.history.pipeline.parse_history_events", return_value=[event()])
     @patch("services.history.pipeline.fetch_history_events", return_value={})
-    def test_failure_retains_old_day_and_backs_off(self, fetch, parse, generate):
+    def test_failure_uses_today_facts_and_backs_off(self, fetch, parse, generate):
         self.save({"date": "2026-11-20", "cards": [{"id": "old", "fact": "昨天"}]})
         with patch.dict("os.environ", {"GEMINI_API_KEY": "test-only"}):
             first = refresh_history_once(db_path=self.db, now=self.now)
             refresh_history_once(db_path=self.db, now=self.now + timedelta(minutes=15))
         self.assertEqual(first["status"], "partial")
-        self.assertEqual(get_history_today(db_path=self.db)["date"], "2026-11-20")
+        self.assertEqual(get_history_today(db_path=self.db)["date"], "2026-11-21")
+        self.assertEqual(get_history_today(db_path=self.db)["cards"][0]["fact"], event()["fact"])
+        self.assertEqual(get_history_today(db_path=self.db)["cards"][0]["comment"], "")
         generate.assert_called_once()
         fetch.assert_called_once()
+
+    @patch("services.history.pipeline.generate_history", return_value=[{"id": "new", "fact": "今天"}])
+    def test_fallback_retries_next_slot_and_upgrades(self, generate):
+        self.save({"date": "2026-11-21", "cards": [{"id": "fallback", "fact": "当天原文"}],
+                   "generation_status": "fallback", "last_attempt_at": self.now.isoformat(),
+                   "raw_date": "2026-11-21", "raw": [event()],
+                   "display_slot": int(self.now.timestamp()) // 21600, "selected_index": 0})
+        with patch.dict("os.environ", {"GEMINI_API_KEY": "test-only"}):
+            refresh_history_once(db_path=self.db, now=self.now + timedelta(minutes=15))
+            generate.assert_not_called()
+            result = refresh_history_once(db_path=self.db, now=self.now + timedelta(hours=6))
+        self.assertEqual(result["status"], "success")
+        generate.assert_called_once()
+        self.assertEqual(get_dashboard_snapshot(CACHE, db_path=self.db)["generation_status"], "generated")
+
+    @patch("services.history.pipeline.generate_history")
+    def test_backoff_migrates_yesterday_without_extra_request(self, generate):
+        self.save({"date": "2026-11-20", "cards": [{"id": "old", "fact": "昨天"}],
+                   "last_attempt_at": self.now.isoformat(), "raw_date": "2026-11-21", "raw": [event()]})
+        refresh_history_once(db_path=self.db, now=self.now + timedelta(minutes=15))
+        self.assertEqual(get_history_today(db_path=self.db)["date"], "2026-11-21")
+        generate.assert_not_called()
+
+    def test_fallback_cannot_translate_or_duplicate_topics(self):
+        self.assertEqual(len(factual_fallback([event(), event("duplicate"), {**event("en"), "language": "en"}])), 1)
+        self.assertEqual(failure_reason(ValueError("secret provider payload")), "ValueError")
+
+    @patch("services.history.pipeline.generate_history", side_effect=ValueError("invalid"))
+    def test_no_sources_keeps_actual_date(self, generate):
+        self.save({"date": "2026-11-20", "cards": [{"id": "old", "fact": "昨天"}],
+                   "raw_date": "2026-11-21", "raw": [{**event(), "language": "en"}]})
+        with patch.dict("os.environ", {"GEMINI_API_KEY": "test-only"}):
+            refresh_history_once(db_path=self.db, now=self.now)
+        self.assertEqual(get_history_today(db_path=self.db)["date"], "2026-11-20")
 
     @patch("services.history.pipeline.generate_history", return_value=[{"id": "new", "fact": "今天"}])
     def test_new_day_replaces_previous_and_bounds_seen(self, generate):

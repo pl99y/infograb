@@ -119,6 +119,48 @@ def _prune_seen(seen, day):
     return dict(sorted(recent.items(), key=lambda pair: pair[1], reverse=True)[:360])
 
 
+def factual_fallback(candidates):
+    """Use today's Chinese source facts without inventing a translation or joke."""
+    cards, used_topics = [], []
+    for event in candidates:
+        if event.get("language") != "zh":
+            continue
+        topics = {p["qid"] for p in event["pages"] if p.get("qid")}
+        if any(year == event["year"] and topics & previous for year, previous in used_topics):
+            continue
+        cards.append({"id": event["id"], "year": event["year"], "month_day": event["month_day"],
+                      "title": event["fact"], "comment": "", "fact": event["fact"],
+                      "china": event["china"], "source_language": "zh",
+                      "sources": [{"title": p["title"], "url": p["url"]} for p in event["pages"][:3]]})
+        used_topics.append((event["year"], topics))
+        if len(cards) == 4:
+            break
+    return cards
+
+
+def failure_reason(error):
+    # Never log request URLs, provider bodies, or credentials.
+    if isinstance(error, requests.HTTPError):
+        return f"HTTP {getattr(error.response, 'status_code', 'unknown')}"
+    if isinstance(error, requests.RequestException):
+        return type(error).__name__
+    known = {"History model version mismatch", "Incomplete history response",
+             "History response must contain items", "No history cards passed validation",
+             "No usable history candidates", "History API key unavailable"}
+    return str(error) if str(error) in known else type(error).__name__
+
+
+def _use_fallback(state, today, now, slot):
+    if state.get("date") == today:
+        return state.get("generation_status") == "fallback"
+    cards = factual_fallback(state.get("raw", [])) if state.get("raw_date") == today else []
+    if not cards:
+        return False
+    state.update(date=today, cards=cards, selected_index=0, display_slot=slot,
+                 generated_at=now.isoformat(), generation_status="fallback", model=None)
+    return True
+
+
 def refresh_history_once(*, db_path, now=None):
     """Called only from run_dashboard.sh's shared flock, like other collectors."""
     now = now or datetime.now(timezone.utc)
@@ -133,12 +175,15 @@ def refresh_history_once(*, db_path, now=None):
                                       state.get("selected_index", 0) + max(0, slot - previous_slot))
         state["display_slot"] = slot
         save_dashboard_snapshot(CACHE, state, db_path=db_path)
-        return {"status": "success", "count": len(state["cards"])}
+        if state.get("generation_status") != "fallback":
+            return {"status": "success", "count": len(state["cards"])}
 
     last_attempt = state.get("last_attempt_at")
     if last_attempt:
         attempted = datetime.fromisoformat(last_attempt)
         if attempted.astimezone(LOCAL_TIME).date() == day and now - attempted < timedelta(hours=RETRY_HOURS):
+            if _use_fallback(state, today, now, slot):
+                save_dashboard_snapshot(CACHE, state, db_path=db_path)
             return {"status": "partial" if state.get("cards") else "failed"}
     state["last_attempt_at"] = now.isoformat()
     save_dashboard_snapshot(CACHE, state, db_path=db_path)
@@ -156,12 +201,18 @@ def refresh_history_once(*, db_path, now=None):
         if not key:
             raise ValueError("History API key unavailable")
         cards = generate_history(candidates, key)
-    except (requests.RequestException, ValueError, KeyError, IndexError, TypeError):
-        print("[warn] History generation unavailable; retained dated previous cards")
+    except (requests.RequestException, ValueError, KeyError, IndexError, TypeError) as error:
+        fallback = _use_fallback(state, today, now, slot)
+        state["last_error"] = failure_reason(error)
+        save_dashboard_snapshot(CACHE, state, db_path=db_path)
+        print(f"[warn] History generation unavailable ({state['last_error']}); "
+              + ("using today's source facts" if fallback else "no current Chinese source facts"))
         return {"status": "partial" if state.get("cards") else "failed"}
 
-    state.update(date=today, cards=cards, selected_index=0, display_slot=slot,
-                 generated_at=now.isoformat(), model=MODEL, prompt_version=PROMPT_VERSION)
+    selected_index = state.get("selected_index", 0) if state.get("date") == today else 0
+    state.update(date=today, cards=cards, selected_index=min(len(cards) - 1, selected_index), display_slot=slot,
+                 generated_at=now.isoformat(), model=MODEL, prompt_version=PROMPT_VERSION,
+                 generation_status="generated", last_error=None)
     state["seen"].update({card["id"]: today for card in cards})
     state["seen"] = _prune_seen(state["seen"], day)
     save_dashboard_snapshot(CACHE, state, db_path=db_path)

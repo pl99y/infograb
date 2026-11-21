@@ -96,7 +96,8 @@ class HistoryTests(unittest.TestCase):
         with patch.dict("os.environ", {"GEMINI_API_KEY": "test-only"}):
             refresh_history_once(db_path=self.db, now=self.now + timedelta(minutes=15))
             generate.assert_not_called()
-            result = refresh_history_once(db_path=self.db, now=self.now + timedelta(hours=6))
+            # Cron can reach this collector slightly earlier in the next run.
+            result = refresh_history_once(db_path=self.db, now=self.now + timedelta(hours=6, seconds=-30))
         self.assertEqual(result["status"], "success")
         generate.assert_called_once()
         self.assertEqual(get_dashboard_snapshot(CACHE, db_path=self.db)["generation_status"], "generated")

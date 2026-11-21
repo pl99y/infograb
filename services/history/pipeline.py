@@ -166,7 +166,7 @@ def refresh_history_once(*, db_path, now=None):
     now = now or datetime.now(timezone.utc)
     day = now.astimezone(LOCAL_TIME).date()
     today = day.isoformat()
-    slot = int(now.timestamp()) // (6 * 3600)
+    slot = int(now.timestamp()) // (RETRY_HOURS * 3600)
     state = get_dashboard_snapshot(CACHE, db_path=db_path) or {}
     state["seen"] = _prune_seen(state.get("seen", {}), day)
     if state.get("date") == today and state.get("cards"):
@@ -181,7 +181,8 @@ def refresh_history_once(*, db_path, now=None):
     last_attempt = state.get("last_attempt_at")
     if last_attempt:
         attempted = datetime.fromisoformat(last_attempt)
-        if attempted.astimezone(LOCAL_TIME).date() == day and now - attempted < timedelta(hours=RETRY_HOURS):
+        attempted_slot = int(attempted.timestamp()) // (RETRY_HOURS * 3600)
+        if attempted.astimezone(LOCAL_TIME).date() == day and attempted_slot >= slot:
             if _use_fallback(state, today, now, slot):
                 save_dashboard_snapshot(CACHE, state, db_path=db_path)
             return {"status": "partial" if state.get("cards") else "failed"}

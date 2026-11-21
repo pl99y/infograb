@@ -1,4 +1,4 @@
-"""One daily packed generation, using the dashboard's existing serial job lock."""
+"""Daily packed generation with bounded retries under the shared dashboard lock."""
 from __future__ import annotations
 
 import hashlib
@@ -19,7 +19,8 @@ MODEL = "gemini-3.5-flash-lite"
 CACHE = "history_today_v1"
 LOCAL_TIME = ZoneInfo("Asia/Shanghai")
 MAX_CANDIDATES = 32
-RETRY_HOURS = 6
+DISPLAY_HOURS = 6
+RETRY_MINUTES = (15, 30, 60, 60)
 FORBIDDEN = ("谁能想到", "这波", "拉满", "妥妥", "开启新篇章", "第一件事", "从此", "后来成为",
              "还没开始", "尚未开始", "比当事人", "紧张", "心想", "没想到", "嫌弃", "突破天际")
 
@@ -161,32 +162,39 @@ def _use_fallback(state, today, now, slot):
     return True
 
 
-def refresh_history_once(*, db_path, now=None):
-    """Called only from run_dashboard.sh's shared flock, like other collectors."""
+def refresh_history_once(*, db_path, now=None, retry_only=False):
+    """Long jobs start/rotate; fast jobs only retry, both under the shared flock."""
     now = now or datetime.now(timezone.utc)
     day = now.astimezone(LOCAL_TIME).date()
     today = day.isoformat()
-    slot = int(now.timestamp()) // (RETRY_HOURS * 3600)
+    slot = int(now.timestamp()) // (DISPLAY_HOURS * 3600)
     state = get_dashboard_snapshot(CACHE, db_path=db_path) or {}
     state["seen"] = _prune_seen(state.get("seen", {}), day)
     if state.get("date") == today and state.get("cards"):
-        previous_slot = state.get("display_slot", slot)
-        state["selected_index"] = min(len(state["cards"]) - 1,
-                                      state.get("selected_index", 0) + max(0, slot - previous_slot))
-        state["display_slot"] = slot
-        save_dashboard_snapshot(CACHE, state, db_path=db_path)
+        if not retry_only:
+            previous_slot = state.get("display_slot", slot)
+            state["selected_index"] = min(len(state["cards"]) - 1,
+                                          state.get("selected_index", 0) + max(0, slot - previous_slot))
+            state["display_slot"] = slot
+            save_dashboard_snapshot(CACHE, state, db_path=db_path)
         if state.get("generation_status") != "fallback":
             return {"status": "success", "count": len(state["cards"])}
 
     last_attempt = state.get("last_attempt_at")
-    if last_attempt:
-        attempted = datetime.fromisoformat(last_attempt)
-        attempted_slot = int(attempted.timestamp()) // (RETRY_HOURS * 3600)
-        if attempted.astimezone(LOCAL_TIME).date() == day and attempted_slot >= slot:
-            if _use_fallback(state, today, now, slot):
-                save_dashboard_snapshot(CACHE, state, db_path=db_path)
-            return {"status": "partial" if state.get("cards") else "failed"}
-    state["last_attempt_at"] = now.isoformat()
+    attempted = datetime.fromisoformat(last_attempt) if last_attempt else None
+    attempted_today = attempted is not None and attempted.astimezone(LOCAL_TIME).date() == day
+    # Older snapshots have no counter; their last attempt counts as the initial one.
+    count = state.get("attempt_count", 1) if attempted_today else 0
+    due = None
+    if attempted_today:
+        due = (datetime.fromisoformat(state["next_attempt_at"]) if state.get("next_attempt_at")
+               else attempted + timedelta(minutes=RETRY_MINUTES[min(max(count - 1, 0), len(RETRY_MINUTES) - 1)]))
+    if ((retry_only and not attempted_today) or count >= 1 + len(RETRY_MINUTES)
+            or (due is not None and now < due)):
+        if _use_fallback(state, today, now, slot):
+            save_dashboard_snapshot(CACHE, state, db_path=db_path)
+        return {"status": "partial" if state.get("cards") else "failed"}
+    state.update(last_attempt_at=now.isoformat(), attempt_count=count + 1, next_attempt_at=None)
     save_dashboard_snapshot(CACHE, state, db_path=db_path)
     try:
         candidates = state.get("raw", []) if state.get("raw_date") == today else []
@@ -205,15 +213,19 @@ def refresh_history_once(*, db_path, now=None):
     except (requests.RequestException, ValueError, KeyError, IndexError, TypeError) as error:
         fallback = _use_fallback(state, today, now, slot)
         state["last_error"] = failure_reason(error)
+        if state["attempt_count"] <= len(RETRY_MINUTES):
+            state["next_attempt_at"] = (now + timedelta(
+                minutes=RETRY_MINUTES[state["attempt_count"] - 1])).isoformat()
         save_dashboard_snapshot(CACHE, state, db_path=db_path)
         print(f"[warn] History generation unavailable ({state['last_error']}); "
-              + ("using today's source facts" if fallback else "no current Chinese source facts"))
+              + ("using today's source facts" if fallback else "no current Chinese source facts")
+              + f"; daily attempt {state['attempt_count']}/{1 + len(RETRY_MINUTES)}")
         return {"status": "partial" if state.get("cards") else "failed"}
 
     selected_index = state.get("selected_index", 0) if state.get("date") == today else 0
     state.update(date=today, cards=cards, selected_index=min(len(cards) - 1, selected_index), display_slot=slot,
                  generated_at=now.isoformat(), model=MODEL, prompt_version=PROMPT_VERSION,
-                 generation_status="generated", last_error=None)
+                 generation_status="generated", last_error=None, next_attempt_at=None)
     state["seen"].update({card["id"]: today for card in cards})
     state["seen"] = _prune_seen(state["seen"], day)
     save_dashboard_snapshot(CACHE, state, db_path=db_path)

@@ -6,7 +6,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 from parsers.history_parser import parse_history_events
-from services.history.pipeline import CACHE, factual_fallback, failure_reason, get_history_today, refresh_history_once, validate_history
+from services.history.pipeline import CACHE, MODEL, factual_fallback, failure_reason, generate_history, get_history_today, refresh_history_once, validate_history
 from storage import get_dashboard_snapshot, initialize_database, save_dashboard_snapshot
 
 
@@ -34,6 +34,17 @@ class HistoryTests(unittest.TestCase):
     def test_chinese_fact_is_immutable(self):
         result = validate_history({"items": [generated()]}, [event()])
         self.assertEqual(result[0]["fact"], event()["fact"])
+
+    @patch("services.history.pipeline.requests.post")
+    def test_generation_is_one_packed_request_to_exact_model(self, post):
+        post.return_value.json.return_value = {"modelVersion": MODEL, "candidates": [{
+            "finishReason": "STOP", "content": {"parts": [{"text": json.dumps({"items": [generated()]})}]}}]}
+        candidates = [event(), event("second")]
+        generate_history(candidates, "test-only")
+        post.assert_called_once()
+        self.assertIn("gemini-3.5-flash-lite:generateContent", post.call_args.args[0])
+        packed = post.call_args.kwargs["json"]["contents"][0]["parts"][0]["text"]
+        self.assertEqual(json.loads(packed), candidates)
 
     def test_unknown_ids_and_unsupported_numbers_rejected(self):
         for row in [generated("unknown"), generated(comment="这一次足足改了9999个窗口。"), generated(comment="谁能想到窗户仍需地基。")]:
@@ -79,7 +90,7 @@ class HistoryTests(unittest.TestCase):
         self.save({"date": "2026-11-20", "cards": [{"id": "old", "fact": "昨天"}]})
         with patch.dict("os.environ", {"GEMINI_API_KEY": "test-only"}):
             first = refresh_history_once(db_path=self.db, now=self.now)
-            refresh_history_once(db_path=self.db, now=self.now + timedelta(minutes=15))
+            refresh_history_once(db_path=self.db, now=self.now + timedelta(minutes=14), retry_only=True)
         self.assertEqual(first["status"], "partial")
         self.assertEqual(get_history_today(db_path=self.db)["date"], "2026-11-21")
         self.assertEqual(get_history_today(db_path=self.db)["cards"][0]["fact"], event()["fact"])
@@ -94,10 +105,9 @@ class HistoryTests(unittest.TestCase):
                    "raw_date": "2026-11-21", "raw": [event()],
                    "display_slot": int(self.now.timestamp()) // 21600, "selected_index": 0})
         with patch.dict("os.environ", {"GEMINI_API_KEY": "test-only"}):
-            refresh_history_once(db_path=self.db, now=self.now + timedelta(minutes=15))
+            refresh_history_once(db_path=self.db, now=self.now + timedelta(minutes=14), retry_only=True)
             generate.assert_not_called()
-            # Cron can reach this collector slightly earlier in the next run.
-            result = refresh_history_once(db_path=self.db, now=self.now + timedelta(hours=6, seconds=-30))
+            result = refresh_history_once(db_path=self.db, now=self.now + timedelta(minutes=15), retry_only=True)
         self.assertEqual(result["status"], "success")
         generate.assert_called_once()
         self.assertEqual(get_dashboard_snapshot(CACHE, db_path=self.db)["generation_status"], "generated")
@@ -106,7 +116,7 @@ class HistoryTests(unittest.TestCase):
     def test_backoff_migrates_yesterday_without_extra_request(self, generate):
         self.save({"date": "2026-11-20", "cards": [{"id": "old", "fact": "昨天"}],
                    "last_attempt_at": self.now.isoformat(), "raw_date": "2026-11-21", "raw": [event()]})
-        refresh_history_once(db_path=self.db, now=self.now + timedelta(minutes=15))
+        refresh_history_once(db_path=self.db, now=self.now + timedelta(minutes=14), retry_only=True)
         self.assertEqual(get_history_today(db_path=self.db)["date"], "2026-11-21")
         generate.assert_not_called()
 
@@ -135,6 +145,51 @@ class HistoryTests(unittest.TestCase):
         self.assertLessEqual(len(saved["seen"]), 360)
         self.assertNotIn("stale", saved["seen"])
         self.assertNotIn("raw", get_history_today(db_path=self.db))
+
+    @patch("services.history.pipeline.generate_history", side_effect=ValueError("No history cards passed validation"))
+    @patch("services.history.pipeline.parse_history_events", return_value=[event()])
+    @patch("services.history.pipeline.fetch_history_events", return_value={})
+    def test_shared_daily_budget_and_backoff(self, fetch, parse, generate):
+        with patch.dict("os.environ", {"GEMINI_API_KEY": "test-only"}):
+            refresh_history_once(db_path=self.db, now=self.now)
+            for minute, expected in ((14, 1), (15, 2), (44, 2), (45, 3), (104, 3),
+                                     (105, 4), (164, 4), (165, 5), (500, 5)):
+                refresh_history_once(db_path=self.db, now=self.now + timedelta(minutes=minute), retry_only=True)
+                self.assertEqual(generate.call_count, expected)
+            # The long job must respect the same cap, not start another retry series.
+            refresh_history_once(db_path=self.db, now=self.now + timedelta(hours=18))
+        self.assertEqual(generate.call_count, 5)
+        fetch.assert_called_once()
+        saved = get_dashboard_snapshot(CACHE, db_path=self.db)
+        self.assertEqual(saved["attempt_count"], 5)
+        self.assertIsNone(saved["next_attempt_at"])
+        self.assertEqual(saved["last_error"], "No history cards passed validation")
+
+    @patch("services.history.pipeline.generate_history", side_effect=ValueError("invalid"))
+    @patch("services.history.pipeline.parse_history_events", return_value=[event()])
+    @patch("services.history.pipeline.fetch_history_events", return_value={})
+    def test_new_day_only_long_job_starts_and_resets_budget(self, fetch, parse, generate):
+        self.save({"date": "2026-11-20", "cards": [{"fact": "昨天"}], "attempt_count": 5,
+                   "last_attempt_at": (self.now - timedelta(hours=6)).isoformat(),
+                   "next_attempt_at": (self.now + timedelta(minutes=5)).isoformat()})
+        with patch.dict("os.environ", {"GEMINI_API_KEY": "test-only"}):
+            refresh_history_once(db_path=self.db, now=self.now, retry_only=True)
+            generate.assert_not_called()
+            fetch.assert_not_called()
+            refresh_history_once(db_path=self.db, now=self.now)
+        self.assertEqual(generate.call_count, 1)
+        self.assertEqual(get_dashboard_snapshot(CACHE, db_path=self.db)["attempt_count"], 1)
+
+    @patch("services.history.pipeline.generate_history")
+    def test_fast_job_never_regenerates_or_rotates_success(self, generate):
+        self.save({"date": "2026-11-21", "cards": [{"fact": "今天"}] * 4,
+                   "generation_status": "generated", "selected_index": 0,
+                   "display_slot": int(self.now.timestamp()) // 21600})
+        refresh_history_once(db_path=self.db, now=self.now + timedelta(hours=6), retry_only=True)
+        generate.assert_not_called()
+        self.assertEqual(get_history_today(db_path=self.db)["selected_index"], 0)
+        refresh_history_once(db_path=self.db, now=self.now + timedelta(hours=6))
+        self.assertEqual(get_history_today(db_path=self.db)["selected_index"], 1)
 
 
 if __name__ == "__main__":

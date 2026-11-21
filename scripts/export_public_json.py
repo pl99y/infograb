@@ -38,6 +38,7 @@ from services.news_timeline.pipeline import fetch_news_timeline_once  # noqa: E4
 from services.news_timeline.queries import get_news_timeline_latest  # noqa: E402
 from services.hotsearch.pipeline import fetch_hotsearch_snapshot  # noqa: E402
 from services.hotsearch.queries import get_hotsearch_latest  # noqa: E402
+from services.history.pipeline import refresh_history_once, get_history_today  # noqa: E402
 
 from scripts.export_status import collect, f1_live_status, hotsearch_status, publish_exports, read_object  # noqa: E402
 
@@ -109,6 +110,7 @@ def fetch_all(skip_fetch: bool) -> dict:
     collect_snapshot(
         attempts, "f1_live.json", lambda: fetch_f1_live_payload(db_path=db_path), f1_live_status, db_path=db_path,
     )
+    collect(attempts, "history_today.json", lambda: refresh_history_once(db_path=db_path, retry_only=True))
     return attempts
 
 
@@ -130,6 +132,7 @@ def export_all(attempts: dict) -> None:
         return combined[:len(weather)], combined[len(weather):]
 
     exports = {
+        "history_today.json": lambda: get_history_today(db_path=db_path),
         "energy_latest.json": lambda: get_energy_latest(db_path=db_path),
         "market_latest.json": lambda: get_market_snapshots_latest(db_path=db_path),
         "aviation_alerts.json": lambda: get_airport_alerts(limit=30, db_path=db_path),

@@ -2,7 +2,10 @@
 .top-nav .logo, .top-nav .nav-right { flex-shrink: 0; }
 .history-today { flex: 1; min-width: 0; overflow: hidden; color: var(--text-sec); font-size: 12px; padding: 6px 0; }
 .history-today[hidden] { display: none; }
-#historyTodayText { display: flex; align-items: center; gap: 9px; min-height: 20px; }
+.topline-viewport { height: 20px; overflow: hidden; }
+.topline-track { position: relative; height: 100%; }
+.topline-row { display: flex; align-items: center; gap: 9px; height: 100%; width: 100%; }
+.topline-incoming { position: absolute; top: 100%; left: 0; }
 .topline-message { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .history-today .topline-credit { flex-shrink: 0; font-size: 10px; color: var(--text-muted); text-decoration: none; }
 .history-today .topline-credit:hover { text-decoration: underline; }
@@ -10,5 +13,6 @@
 @media (max-width: 768px) {
   .top-nav { gap: 9px; min-height: 68px; height: auto; }
   .history-today { font-size: 11px; line-height: 1.6; }
+  .topline-viewport { height: 35.2px; }
   .topline-message { white-space: normal; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 }

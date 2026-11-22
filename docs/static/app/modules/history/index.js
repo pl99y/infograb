@@ -15,13 +15,16 @@ export function createHistoryModule(ctx) {
   let active = "history";
   let paused = false;
   let animating = false;
+  let track = null;
+  let timer = null;
 
   function entries() {
     const result = [];
-    const cards = history?.date === localDate() && Array.isArray(history.cards)
-      ? history.cards.filter(card => card && typeof card.fact === "string") : [];
+    const dated = history?.days?.[localDate()] || history;
+    const cards = dated?.date === localDate() && Array.isArray(dated.cards)
+      ? dated.cards.filter(card => card && typeof card.fact === "string") : [];
     if (cards.length) {
-      const index = Math.min(cards.length - 1, Math.max(0, Number(history.selected_index) || 0));
+      const index = Math.min(cards.length - 1, Math.max(0, Number(dated.selected_index) || 0));
       const card = cards[index];
       const title = (card.title || card.fact).replace(/[。！？.!?]+$/u, "");
       result.push({kind: "history", text: `历史上的今天 · ${card.year}年　${title}。${card.comment || ""}`,
@@ -34,16 +37,12 @@ export function createHistoryModule(ctx) {
     return result;
   }
 
-  function render() {
-    if (!container || !line) return;
-    const rows = entries();
-    const row = rows.find(item => item.kind === active) || rows[0];
-    active = row?.kind || "history";
+  function fillRow(target, row) {
     const message = document.createElement("span");
     message.className = "topline-message";
     message.textContent = row?.text || "历史上的今天 · 今日内容待更新";
-    line.replaceChildren(message);
-    if (active === "weather") {
+    target.replaceChildren(message);
+    if (row?.kind === "weather") {
       const credit = document.createElement("a");
       credit.className = "topline-credit";
       credit.textContent = "Open-Meteo";
@@ -51,11 +50,61 @@ export function createHistoryModule(ctx) {
       credit.target = "_blank";
       credit.rel = "noopener noreferrer";
       credit.title = "天气数据来源及 CC BY 4.0 许可；文案已改写";
-      line.append(credit);
+      target.append(credit);
     }
+  }
+
+  function render() {
+    if (!container || !line || animating) return;
+    const rows = entries();
+    const row = rows.find(item => item.kind === active) || rows[0];
+    active = row?.kind || "history";
+    fillRow(line, row);
     container.title = row?.title || "";
     container.dataset.topline = active;
     container.hidden = false;
+  }
+
+  function schedule(delay = 5000) {
+    clearTimeout(timer);
+    timer = setTimeout(turn, delay);
+  }
+
+  async function turn() {
+    if (!container || !line || !track) return;
+    if (paused || document.hidden) { schedule(); return; }
+    render(); // Also switches a preloaded history day at midnight, without another request.
+    const rows = entries();
+    if (rows.length < 2) { schedule(); return; }
+    const next = rows.find(row => row.kind !== active);
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduced) {
+      active = next.kind;
+      render();
+      schedule(10000);
+      return;
+    }
+    const incoming = document.createElement("span");
+    incoming.className = "topline-row topline-incoming";
+    incoming.setAttribute("aria-hidden", "true");
+    fillRow(incoming, next);
+    incoming.querySelectorAll("a").forEach(link => { link.tabIndex = -1; });
+    track.append(incoming);
+    animating = true;
+    container.dataset.transition = "scrolling";
+    const animation = track.animate([{transform: "translateY(0)"}, {transform: "translateY(-100%)"}],
+      {duration: 5000, easing: "ease-in-out", fill: "forwards"});
+    try {
+      await animation.finished;
+      active = next.kind;
+    } finally {
+      incoming.remove();
+      animation.cancel();
+      animating = false;
+      container.dataset.transition = "idle";
+      render();
+      schedule();
+    }
   }
 
   return {
@@ -64,21 +113,17 @@ export function createHistoryModule(ctx) {
       container?.addEventListener("mouseleave", () => { paused = false; });
       container?.addEventListener("focusin", () => { paused = true; });
       container?.addEventListener("focusout", () => { paused = false; });
-      setInterval(async () => {
-        if (!container || !line || paused || animating || document.hidden) return;
-        const rows = entries();
-        if (rows.length < 2) { render(); return; }
-        animating = true;
-        try {
-          const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-          if (!reduced) await line.animate([{transform: "translateY(0)", opacity: 1},
-            {transform: "translateY(-100%)", opacity: 0}], {duration: 180}).finished;
-          active = active === "history" ? "weather" : "history";
-          render();
-          if (!reduced) await line.animate([{transform: "translateY(100%)", opacity: 0},
-            {transform: "translateY(0)", opacity: 1}], {duration: 180}).finished;
-        } finally { animating = false; }
-      }, 20000);
+      if (!container || !line) return;
+      const viewport = document.createElement("div");
+      viewport.className = "topline-viewport";
+      track = document.createElement("div");
+      track.className = "topline-track";
+      line.classList.add("topline-row");
+      container.append(viewport);
+      viewport.append(track);
+      track.append(line);
+      container.dataset.transition = "idle";
+      schedule();
     },
     async refresh() {
       const results = await Promise.allSettled([

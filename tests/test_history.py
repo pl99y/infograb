@@ -72,124 +72,112 @@ class HistoryTests(unittest.TestCase):
         item = parse_history_events(payload, date(2026, 8, 16))[0]
         self.assertEqual(item["fact"], "伊恩·默多克正式创立 Debian 项目。")
 
+    def days(self):
+        return (get_dashboard_snapshot(CACHE, db_path=self.db) or {}).get("days", {})
+
+    def public(self, now=None):
+        return get_history_today(db_path=self.db, now=now or self.now)
+
     @patch("services.history.pipeline.generate_history")
     @patch("services.history.pipeline.fetch_history_events")
-    def test_once_per_chinese_day_and_four_slots(self, fetch, generate):
-        cards = [{"id": str(i), "title": "标题", "fact": "事实"} for i in range(4)]
-        self.save({"date": "2026-11-21", "cards": cards, "display_slot": int(self.now.timestamp()) // 21600, "selected_index": 0})
-        for slot in range(4):
-            refresh_history_once(db_path=self.db, now=self.now + timedelta(hours=6 * slot))
-            self.assertEqual(get_history_today(db_path=self.db)["selected_index"], slot)
-        fetch.assert_not_called()
+    def test_legacy_migration_discards_seen_and_successful_raw(self, fetch, generate):
+        self.save({"date": "2026-11-21", "generation_status": "generated", "cards": [{"fact": "今天"}],
+                   "raw": [event()], "raw_date": "2026-11-21", "seen": {str(i): "2026-11-20" for i in range(500)}})
+        refresh_history_once(db_path=self.db, now=self.now)
+        root = get_dashboard_snapshot(CACHE, db_path=self.db)
+        self.assertNotIn("seen", root)
+        self.assertNotIn("raw", self.days()["2026-11-21"])
+        self.assertNotIn("seen", self.days()["2026-11-21"])
         generate.assert_not_called()
-
-    @patch("services.history.pipeline.generate_history", side_effect=ValueError("invalid"))
-    @patch("services.history.pipeline.parse_history_events", return_value=[event()])
-    @patch("services.history.pipeline.fetch_history_events", return_value={})
-    def test_failure_uses_today_facts_and_backs_off(self, fetch, parse, generate):
-        self.save({"date": "2026-11-20", "cards": [{"id": "old", "fact": "昨天"}]})
-        with patch.dict("os.environ", {"GEMINI_API_KEY": "test-only"}):
-            first = refresh_history_once(db_path=self.db, now=self.now)
-            refresh_history_once(db_path=self.db, now=self.now + timedelta(minutes=14), retry_only=True)
-        self.assertEqual(first["status"], "partial")
-        self.assertEqual(get_history_today(db_path=self.db)["date"], "2026-11-21")
-        self.assertEqual(get_history_today(db_path=self.db)["cards"][0]["fact"], event()["fact"])
-        self.assertEqual(get_history_today(db_path=self.db)["cards"][0]["comment"], "")
-        generate.assert_called_once()
-        fetch.assert_called_once()
-
-    @patch("services.history.pipeline.generate_history", return_value=[{"id": "new", "fact": "今天"}])
-    def test_fallback_retries_next_slot_and_upgrades(self, generate):
-        self.save({"date": "2026-11-21", "cards": [{"id": "fallback", "fact": "当天原文"}],
-                   "generation_status": "fallback", "last_attempt_at": self.now.isoformat(),
-                   "raw_date": "2026-11-21", "raw": [event()],
-                   "display_slot": int(self.now.timestamp()) // 21600, "selected_index": 0})
-        with patch.dict("os.environ", {"GEMINI_API_KEY": "test-only"}):
-            refresh_history_once(db_path=self.db, now=self.now + timedelta(minutes=14), retry_only=True)
-            generate.assert_not_called()
-            result = refresh_history_once(db_path=self.db, now=self.now + timedelta(minutes=15), retry_only=True)
-        self.assertEqual(result["status"], "success")
-        generate.assert_called_once()
-        self.assertEqual(get_dashboard_snapshot(CACHE, db_path=self.db)["generation_status"], "generated")
+        fetch.assert_not_called()
 
     @patch("services.history.pipeline.generate_history")
-    def test_backoff_migrates_yesterday_without_extra_request(self, generate):
-        self.save({"date": "2026-11-20", "cards": [{"id": "old", "fact": "昨天"}],
-                   "last_attempt_at": self.now.isoformat(), "raw_date": "2026-11-21", "raw": [event()]})
-        refresh_history_once(db_path=self.db, now=self.now + timedelta(minutes=14), retry_only=True)
-        self.assertEqual(get_history_today(db_path=self.db)["date"], "2026-11-21")
+    def test_four_long_update_slots(self, generate):
+        cards = [{"id": str(i), "fact": "事实"} for i in range(4)]
+        self.save({"days": {"2026-11-21": {"date": "2026-11-21", "generation_status": "generated", "cards": cards}}})
+        for slot in range(4):
+            now = self.now + timedelta(hours=6 * slot)
+            # At 20:07 tomorrow is prepared; seed it so this test only measures rotation.
+            tomorrow = {"date": "2026-11-22", "generation_status": "generated", "cards": cards}
+            current = self.days().get("2026-11-21")
+            self.save({"days": {"2026-11-21": current, "2026-11-22": tomorrow}})
+            refresh_history_once(db_path=self.db, now=now)
+            self.assertEqual(self.public(now)["selected_index"], slot)
+        generate.assert_not_called()
+
+    @patch("services.history.pipeline.generate_history", return_value=[{"id": "new", "fact": "明天", "comment": "短评"}])
+    @patch("services.history.pipeline.parse_history_events", return_value=[event()])
+    @patch("services.history.pipeline.fetch_history_events", return_value={})
+    def test_evening_prefetch_published_before_midnight_and_promoted(self, fetch, parse, generate):
+        evening = datetime(2026, 11, 21, 12, 7, tzinfo=timezone.utc)
+        self.save({"date": "2026-11-21", "generation_status": "generated", "cards": [{"fact": "今天"}]})
+        with patch.dict("os.environ", {"GEMINI_API_KEY": "test"}):
+            refresh_history_once(db_path=self.db, now=evening)
+            before = self.public(evening)
+            self.assertEqual(before["date"], "2026-11-21")
+            self.assertEqual(before["days"]["2026-11-22"]["cards"][0]["fact"], "明天")
+            self.assertNotIn("raw", self.days()["2026-11-22"])
+            midnight = datetime(2026, 11, 21, 16, 0, tzinfo=timezone.utc)
+            self.assertEqual(self.public(midnight)["date"], "2026-11-22")
+            self.assertEqual(self.public(midnight)["cards"][0]["fact"], "明天")
+            refresh_history_once(db_path=self.db, now=midnight, retry_only=True)
+        generate.assert_called_once()
+        fetch.assert_called_once_with(date(2026, 11, 22))
+        self.assertEqual(set(self.days()), {"2026-11-22"})
+
+    @patch("services.history.pipeline.generate_history", side_effect=ValueError("No history cards passed validation"))
+    def test_shared_target_day_budget_survives_midnight(self, generate):
+        # 23:00 China: tomorrow's retries continue across midnight, without resetting the budget.
+        start = datetime(2026, 11, 21, 15, 0, tzinfo=timezone.utc)
+        self.save({"days": {
+            "2026-11-21": {"date": "2026-11-21", "generation_status": "generated", "cards": [{"fact": "今天"}]},
+            "2026-11-22": {"date": "2026-11-22", "raw": [event()]}}})
+        with patch.dict("os.environ", {"GEMINI_API_KEY": "test"}):
+            refresh_history_once(db_path=self.db, now=start)
+            for minute, expected in ((14, 1), (15, 2), (44, 2), (45, 3), (104, 3),
+                                     (105, 4), (164, 4), (165, 5), (500, 5)):
+                refresh_history_once(db_path=self.db, now=start + timedelta(minutes=minute), retry_only=True)
+                self.assertEqual(generate.call_count, expected)
+            refresh_history_once(db_path=self.db, now=start + timedelta(hours=7))
+        self.assertEqual(generate.call_count, 5)
+        saved = self.days()["2026-11-22"]
+        self.assertEqual(saved["attempt_count"], 5)
+        self.assertIsNone(saved["next_attempt_at"])
+        self.assertEqual(saved["generation_status"], "fallback")
+
+    @patch("services.history.pipeline.generate_history", return_value=[{"id": "new", "fact": "生成成功"}])
+    def test_fallback_upgrade_drops_raw_without_additional_calls(self, generate):
+        self.save({"days": {"2026-11-21": {"date": "2026-11-21", "generation_status": "fallback",
+            "cards": [{"fact": "原文"}], "raw": [event()], "last_attempt_at": self.now.isoformat(), "attempt_count": 1}}})
+        with patch.dict("os.environ", {"GEMINI_API_KEY": "test"}):
+            refresh_history_once(db_path=self.db, now=self.now + timedelta(minutes=14), retry_only=True)
+            generate.assert_not_called()
+            refresh_history_once(db_path=self.db, now=self.now + timedelta(minutes=15), retry_only=True)
+            refresh_history_once(db_path=self.db, now=self.now + timedelta(minutes=30), retry_only=True)
+        generate.assert_called_once()
+        self.assertNotIn("raw", self.days()["2026-11-21"])
+        self.assertEqual(self.public()["cards"][0]["fact"], "生成成功")
+
+    @patch("services.history.pipeline.generate_history")
+    @patch("services.history.pipeline.fetch_history_events")
+    def test_fast_job_cannot_start_unplanned_generation(self, fetch, generate):
+        refresh_history_once(db_path=self.db, now=self.now, retry_only=True)
+        generate.assert_not_called()
+        fetch.assert_not_called()
+        self.assertEqual(self.days(), {})
+
+    @patch("services.history.pipeline.generate_history")
+    def test_only_today_and_tomorrow_survive_cleanup(self, generate):
+        records = {f"2026-11-{day}": {"date": f"2026-11-{day}", "generation_status": "generated", "cards": [{"fact": "史实"}]}
+                   for day in (19, 20, 21, 22, 23)}
+        self.save({"days": records})
+        refresh_history_once(db_path=self.db, now=self.now, retry_only=True)
+        self.assertEqual(set(self.days()), {"2026-11-21", "2026-11-22"})
         generate.assert_not_called()
 
     def test_fallback_cannot_translate_or_duplicate_topics(self):
         self.assertEqual(len(factual_fallback([event(), event("duplicate"), {**event("en"), "language": "en"}])), 1)
         self.assertEqual(failure_reason(ValueError("secret provider payload")), "ValueError")
-
-    @patch("services.history.pipeline.generate_history", side_effect=ValueError("invalid"))
-    def test_no_sources_keeps_actual_date(self, generate):
-        self.save({"date": "2026-11-20", "cards": [{"id": "old", "fact": "昨天"}],
-                   "raw_date": "2026-11-21", "raw": [{**event(), "language": "en"}]})
-        with patch.dict("os.environ", {"GEMINI_API_KEY": "test-only"}):
-            refresh_history_once(db_path=self.db, now=self.now)
-        self.assertEqual(get_history_today(db_path=self.db)["date"], "2026-11-20")
-
-    @patch("services.history.pipeline.generate_history", return_value=[{"id": "new", "fact": "今天"}])
-    def test_new_day_replaces_previous_and_bounds_seen(self, generate):
-        self.save({"date": "2026-11-20", "cards": [{"id": "old"}], "raw_date": "2026-11-21", "raw": [event()],
-                   "seen": {"stale": "2025-01-01", **{str(i): "2026-11-20" for i in range(500)}}})
-        with patch.dict("os.environ", {"GEMINI_API_KEY": "test-only"}):
-            result = refresh_history_once(db_path=self.db, now=self.now)
-        self.assertEqual(result["status"], "success")
-        saved = get_dashboard_snapshot(CACHE, db_path=self.db)
-        self.assertEqual(saved["cards"][0]["id"], "new")
-        self.assertEqual(saved["date"], "2026-11-21")
-        self.assertLessEqual(len(saved["seen"]), 360)
-        self.assertNotIn("stale", saved["seen"])
-        self.assertNotIn("raw", get_history_today(db_path=self.db))
-
-    @patch("services.history.pipeline.generate_history", side_effect=ValueError("No history cards passed validation"))
-    @patch("services.history.pipeline.parse_history_events", return_value=[event()])
-    @patch("services.history.pipeline.fetch_history_events", return_value={})
-    def test_shared_daily_budget_and_backoff(self, fetch, parse, generate):
-        with patch.dict("os.environ", {"GEMINI_API_KEY": "test-only"}):
-            refresh_history_once(db_path=self.db, now=self.now)
-            for minute, expected in ((14, 1), (15, 2), (44, 2), (45, 3), (104, 3),
-                                     (105, 4), (164, 4), (165, 5), (500, 5)):
-                refresh_history_once(db_path=self.db, now=self.now + timedelta(minutes=minute), retry_only=True)
-                self.assertEqual(generate.call_count, expected)
-            # The long job must respect the same cap, not start another retry series.
-            refresh_history_once(db_path=self.db, now=self.now + timedelta(hours=18))
-        self.assertEqual(generate.call_count, 5)
-        fetch.assert_called_once()
-        saved = get_dashboard_snapshot(CACHE, db_path=self.db)
-        self.assertEqual(saved["attempt_count"], 5)
-        self.assertIsNone(saved["next_attempt_at"])
-        self.assertEqual(saved["last_error"], "No history cards passed validation")
-
-    @patch("services.history.pipeline.generate_history", side_effect=ValueError("invalid"))
-    @patch("services.history.pipeline.parse_history_events", return_value=[event()])
-    @patch("services.history.pipeline.fetch_history_events", return_value={})
-    def test_new_day_only_long_job_starts_and_resets_budget(self, fetch, parse, generate):
-        self.save({"date": "2026-11-20", "cards": [{"fact": "昨天"}], "attempt_count": 5,
-                   "last_attempt_at": (self.now - timedelta(hours=6)).isoformat(),
-                   "next_attempt_at": (self.now + timedelta(minutes=5)).isoformat()})
-        with patch.dict("os.environ", {"GEMINI_API_KEY": "test-only"}):
-            refresh_history_once(db_path=self.db, now=self.now, retry_only=True)
-            generate.assert_not_called()
-            fetch.assert_not_called()
-            refresh_history_once(db_path=self.db, now=self.now)
-        self.assertEqual(generate.call_count, 1)
-        self.assertEqual(get_dashboard_snapshot(CACHE, db_path=self.db)["attempt_count"], 1)
-
-    @patch("services.history.pipeline.generate_history")
-    def test_fast_job_never_regenerates_or_rotates_success(self, generate):
-        self.save({"date": "2026-11-21", "cards": [{"fact": "今天"}] * 4,
-                   "generation_status": "generated", "selected_index": 0,
-                   "display_slot": int(self.now.timestamp()) // 21600})
-        refresh_history_once(db_path=self.db, now=self.now + timedelta(hours=6), retry_only=True)
-        generate.assert_not_called()
-        self.assertEqual(get_history_today(db_path=self.db)["selected_index"], 0)
-        refresh_history_once(db_path=self.db, now=self.now + timedelta(hours=6))
-        self.assertEqual(get_history_today(db_path=self.db)["selected_index"], 1)
 
 
 if __name__ == "__main__":

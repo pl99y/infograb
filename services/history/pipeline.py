@@ -25,11 +25,11 @@ FORBIDDEN = ("谁能想到", "这波", "拉满", "妥妥", "开启新篇章", "�
              "还没开始", "尚未开始", "比当事人", "紧张", "心想", "没想到", "嫌弃", "突破天际")
 
 
-def choose_candidates(events, seen, day):
-    """Prefer China, leave room for foreign events, and rotate unseen material."""
+def choose_candidates(events, day):
+    """Prefer China, leaving room for foreign events."""
     def rank(event):
         shuffle = hashlib.sha256(f"{day}|{event['id']}".encode()).hexdigest()
-        return (event["id"] in seen, event["language"] != "zh", shuffle)
+        return (event["language"] != "zh", shuffle)
 
     china = sorted((e for e in events if e["china"]), key=rank)
     world = sorted((e for e in events if not e["china"]), key=rank)
@@ -114,12 +114,6 @@ def validate_history(generated, candidates):
     return sorted(cards, key=lambda card: not card["china"])
 
 
-def _prune_seen(seen, day):
-    cutoff = (day - timedelta(days=90)).isoformat()
-    recent = {key: date for key, date in seen.items() if isinstance(date, str) and cutoff <= date <= day.isoformat()}
-    return dict(sorted(recent.items(), key=lambda pair: pair[1], reverse=True)[:360])
-
-
 def factual_fallback(candidates):
     """Use today's Chinese source facts without inventing a translation or joke."""
     cards, used_topics = [], []
@@ -151,90 +145,124 @@ def failure_reason(error):
     return str(error) if str(error) in known else type(error).__name__
 
 
-def _use_fallback(state, today, now, slot):
-    if state.get("date") == today:
-        return state.get("generation_status") == "fallback"
-    cards = factual_fallback(state.get("raw", [])) if state.get("raw_date") == today else []
-    if not cards:
-        return False
-    state.update(date=today, cards=cards, selected_index=0, display_slot=slot,
-                 generated_at=now.isoformat(), generation_status="fallback", model=None)
-    return True
-
-
-def refresh_history_once(*, db_path, now=None, retry_only=False):
-    """Long jobs start/rotate; fast jobs only retry, both under the shared flock."""
-    now = now or datetime.now(timezone.utc)
-    day = now.astimezone(LOCAL_TIME).date()
-    today = day.isoformat()
-    slot = int(now.timestamp()) // (DISPLAY_HOURS * 3600)
+def _load_days(db_path, today):
+    """Migrate the old single-day snapshot and keep today/tomorrow only."""
     state = get_dashboard_snapshot(CACHE, db_path=db_path) or {}
-    state["seen"] = _prune_seen(state.get("seen", {}), day)
-    if state.get("date") == today and state.get("cards"):
-        if not retry_only:
-            previous_slot = state.get("display_slot", slot)
-            state["selected_index"] = min(len(state["cards"]) - 1,
-                                          state.get("selected_index", 0) + max(0, slot - previous_slot))
-            state["display_slot"] = slot
-            save_dashboard_snapshot(CACHE, state, db_path=db_path)
-        if state.get("generation_status") != "fallback":
-            return {"status": "success", "count": len(state["cards"])}
+    tomorrow = (today + timedelta(days=1)).isoformat()
+    allowed = {today.isoformat(), tomorrow}
+    days = state.get("days")
+    if not isinstance(days, dict):
+        days = {}
+        if state.get("date") in allowed or state.get("raw_date") in allowed:
+            date = state.get("date")
+            if date not in allowed or state.get("generation_status") == "fallback":
+                date = state.get("raw_date") or date
+            if date in allowed:
+                record = {key: value for key, value in state.items() if key not in ("seen", "display_slot")}
+                if record.get("date") != date:
+                    record.pop("cards", None)
+                    record["date"] = date
+                    record["generation_status"] = "fallback"
+                days[date] = record
+    days = {date: record for date, record in days.items() if date in allowed and isinstance(record, dict)}
+    for record in days.values():
+        record.pop("seen", None)
+        record.pop("display_slot", None)
+        if isinstance(record.get("cards"), list):
+            record["cards"] = record["cards"][:4]
+        if isinstance(record.get("raw"), list):
+            record["raw"] = record["raw"][:MAX_CANDIDATES]
+        if record.get("generation_status") == "generated":
+            record.pop("raw", None)
+            record.pop("raw_date", None)
+    return days
 
-    last_attempt = state.get("last_attempt_at")
-    attempted = datetime.fromisoformat(last_attempt) if last_attempt else None
-    attempted_today = attempted is not None and attempted.astimezone(LOCAL_TIME).date() == day
-    # Older snapshots have no counter; their last attempt counts as the initial one.
-    count = state.get("attempt_count", 1) if attempted_today else 0
-    due = None
-    if attempted_today:
-        due = (datetime.fromisoformat(state["next_attempt_at"]) if state.get("next_attempt_at")
-               else attempted + timedelta(minutes=RETRY_MINUTES[min(max(count - 1, 0), len(RETRY_MINUTES) - 1)]))
-    if ((retry_only and not attempted_today) or count >= 1 + len(RETRY_MINUTES)
-            or (due is not None and now < due)):
-        if _use_fallback(state, today, now, slot):
-            save_dashboard_snapshot(CACHE, state, db_path=db_path)
-        return {"status": "partial" if state.get("cards") else "failed"}
-    state.update(last_attempt_at=now.isoformat(), attempt_count=count + 1, next_attempt_at=None)
-    save_dashboard_snapshot(CACHE, state, db_path=db_path)
+
+def _save_days(days, db_path):
+    save_dashboard_snapshot(CACHE, {"version": 2, "days": days}, db_path=db_path)
+
+
+def _refresh_day(days, day, now, db_path):
+    date = day.isoformat()
+    record = days.setdefault(date, {"date": date})
+    if record.get("generation_status") == "generated" and record.get("cards"):
+        return {"status": "success", "count": len(record["cards"])}
+    count = record.get("attempt_count", 1 if record.get("last_attempt_at") else 0)
+    if count >= 1 + len(RETRY_MINUTES):
+        return {"status": "partial" if record.get("cards") else "failed"}
+    attempted = datetime.fromisoformat(record["last_attempt_at"]) if record.get("last_attempt_at") else None
+    due = (datetime.fromisoformat(record["next_attempt_at"]) if record.get("next_attempt_at")
+           else attempted + timedelta(minutes=RETRY_MINUTES[max(0, count - 1)]) if attempted else None)
+    if due is not None and now < due:
+        return {"status": "partial" if record.get("cards") else "failed"}
+    record.update(last_attempt_at=now.isoformat(), attempt_count=count + 1, next_attempt_at=None)
+    _save_days(days, db_path)
     try:
-        candidates = state.get("raw", []) if state.get("raw_date") == today else []
+        candidates = record.get("raw", [])
         if not candidates:
-            raw = fetch_history_events(day)
-            events = parse_history_events(raw, day)
-            candidates = choose_candidates(events, state["seen"], today)
+            candidates = choose_candidates(parse_history_events(fetch_history_events(day), day), date)
             if not candidates:
                 raise ValueError("No usable history candidates")
-            state.update(raw_date=today, raw=candidates)
-            save_dashboard_snapshot(CACHE, state, db_path=db_path)
+            record["raw"] = candidates
+            _save_days(days, db_path)
         key = os.getenv("GEMINI_API_KEY", "").strip()
         if not key:
             raise ValueError("History API key unavailable")
         cards = generate_history(candidates, key)
     except (requests.RequestException, ValueError, KeyError, IndexError, TypeError) as error:
-        fallback = _use_fallback(state, today, now, slot)
-        state["last_error"] = failure_reason(error)
-        if state["attempt_count"] <= len(RETRY_MINUTES):
-            state["next_attempt_at"] = (now + timedelta(
-                minutes=RETRY_MINUTES[state["attempt_count"] - 1])).isoformat()
-        save_dashboard_snapshot(CACHE, state, db_path=db_path)
-        print(f"[warn] History generation unavailable ({state['last_error']}); "
-              + ("using today's source facts" if fallback else "no current Chinese source facts")
-              + f"; daily attempt {state['attempt_count']}/{1 + len(RETRY_MINUTES)}")
-        return {"status": "partial" if state.get("cards") else "failed"}
-
-    selected_index = state.get("selected_index", 0) if state.get("date") == today else 0
-    state.update(date=today, cards=cards, selected_index=min(len(cards) - 1, selected_index), display_slot=slot,
-                 generated_at=now.isoformat(), model=MODEL, prompt_version=PROMPT_VERSION,
-                 generation_status="generated", last_error=None, next_attempt_at=None)
-    state["seen"].update({card["id"]: today for card in cards})
-    state["seen"] = _prune_seen(state["seen"], day)
-    save_dashboard_snapshot(CACHE, state, db_path=db_path)
-    print(f"[ok] History generated {len(cards)} cards in one request")
+        if not record.get("cards"):
+            record["cards"] = factual_fallback(record.get("raw", []))
+        record.update(generation_status="fallback", model=None, last_error=failure_reason(error))
+        if record["cards"]:
+            record.setdefault("generated_at", now.isoformat())
+        if record["attempt_count"] <= len(RETRY_MINUTES):
+            record["next_attempt_at"] = (now + timedelta(minutes=RETRY_MINUTES[record["attempt_count"] - 1])).isoformat()
+        _save_days(days, db_path)
+        print(f"[warn] History {date} unavailable ({record['last_error']}); attempt {record['attempt_count']}/5")
+        return {"status": "partial" if record.get("cards") else "failed"}
+    record.update(cards=cards, generated_at=now.isoformat(), model=MODEL,
+                  prompt_version=PROMPT_VERSION, generation_status="generated", last_error=None,
+                  next_attempt_at=None, selected_index=record.get("selected_index", 0))
+    record.pop("raw", None)
+    record.pop("raw_date", None)
+    _save_days(days, db_path)
+    print(f"[ok] History {date} generated {len(cards)} cards in one packed request")
     return {"status": "success", "count": len(cards)}
 
 
-def get_history_today(*, db_path):
-    state = get_dashboard_snapshot(CACHE, db_path=db_path) or {}
-    return {key: state.get(key, default) for key, default in (
-        ("date", ""), ("generated_at", ""), ("selected_index", 0), ("cards", []),
-    )}
+def refresh_history_once(*, db_path, now=None, retry_only=False, prepare_tomorrow=False):
+    """Prepare tomorrow at the evening long run; fast runs publish rollover/retry."""
+    now = now or datetime.now(timezone.utc)
+    local = now.astimezone(LOCAL_TIME)
+    today = local.date()
+    tomorrow = today + timedelta(days=1)
+    days = _load_days(db_path, today)
+    targets = [today]
+    if (not retry_only and local.hour >= 20) or prepare_tomorrow:
+        targets.append(tomorrow)
+    elif retry_only and days.get(tomorrow.isoformat(), {}).get("last_attempt_at"):
+        targets.append(tomorrow)
+    for day in targets:
+        record = days.get(day.isoformat(), {})
+        if retry_only and not record.get("last_attempt_at") and record.get("generation_status") != "generated":
+            continue
+        _refresh_day(days, day, now, db_path)
+    current = days.get(today.isoformat(), {})
+    if not retry_only and current.get("cards"):
+        # Matches the existing 02/08/14/20 long-update schedule; midnight starts at card zero.
+        current["selected_index"] = min(len(current["cards"]) - 1, max(0, (local.hour - 2) // 6))
+    _save_days(days, db_path)
+    return {"status": "success" if current.get("generation_status") == "generated" else
+            "partial" if current.get("cards") else "failed", "count": len(current.get("cards", []))}
+
+
+def get_history_today(*, db_path, now=None):
+    now = now or datetime.now(timezone.utc)
+    today = now.astimezone(LOCAL_TIME).date()
+    days = _load_days(db_path, today)
+    def public(record):
+        return {key: record.get(key, default) for key, default in (
+            ("date", ""), ("generated_at", ""), ("selected_index", 0), ("cards", []))}
+    result = public(days.get(today.isoformat(), {"date": today.isoformat()}))
+    result["days"] = {date: public(record) for date, record in days.items() if record.get("cards")}
+    return result

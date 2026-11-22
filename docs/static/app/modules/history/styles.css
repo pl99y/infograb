@@ -1,20 +1,14 @@
 .top-nav { gap: 14px; }
 .top-nav .logo, .top-nav .nav-right { flex-shrink: 0; }
-.history-today {
-  flex: 1;
-  min-width: 0;
-  border: 0;
-  background: transparent;
-  color: var(--text-sec);
-  font: inherit;
-  font-size: 12px;
-  text-align: left;
-  padding: 6px 0;
-}
+.history-today { flex: 1; min-width: 0; overflow: hidden; color: var(--text-sec); font-size: 12px; padding: 6px 0; }
 .history-today[hidden] { display: none; }
-.history-today span { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#historyTodayText { display: flex; align-items: center; gap: 9px; min-height: 20px; }
+.topline-message { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.history-today .topline-credit { flex-shrink: 0; font-size: 10px; color: var(--text-muted); text-decoration: none; }
+.history-today .topline-credit:hover { text-decoration: underline; }
+.history-today .topline-credit:focus-visible { outline: 2px solid var(--accent-blue); }
 @media (max-width: 768px) {
   .top-nav { gap: 9px; min-height: 68px; height: auto; }
   .history-today { font-size: 11px; line-height: 1.6; }
-  .history-today span { white-space: normal; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .topline-message { white-space: normal; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 }

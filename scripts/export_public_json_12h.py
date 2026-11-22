@@ -36,6 +36,7 @@ from services.f1.queries import get_f1_news  # noqa: E402
 from scripts.export_status import collect, publish_exports  # noqa: E402
 
 from services.history.pipeline import refresh_history_once, get_history_today
+from services.local_weather.pipeline import refresh_local_weather_once, get_local_weather
 
 EXPORT_LABEL = "12h"
 
@@ -62,6 +63,7 @@ def fetch_all(skip_fetch: bool) -> dict:
     collect(attempts, "public_health_latest.json", lambda: fetch_public_health_once(db_path=db_path))
     collect(attempts, "f1_news.json", lambda: fetch_f1_news_once(db_path=db_path))
     collect(attempts, "history_today.json", lambda: refresh_history_once(db_path=db_path))
+    collect(attempts, "local_weather.json", lambda: refresh_local_weather_once(db_path=db_path))
     return attempts
 
 
@@ -77,6 +79,7 @@ def export_all(attempts: dict) -> None:
         ),
         "f1_news.json": lambda: get_f1_news(limit=24, db_path=db_path),
         "history_today.json": lambda: get_history_today(db_path=db_path),
+        "local_weather.json": lambda: get_local_weather(db_path=db_path),
     }
     publish_exports(DATA_DIR, EXPORT_LABEL, exports, attempts)
 

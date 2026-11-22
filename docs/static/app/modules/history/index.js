@@ -78,7 +78,7 @@ export function createHistoryModule(ctx) {
           if (!reduced) await line.animate([{transform: "translateY(100%)", opacity: 0},
             {transform: "translateY(0)", opacity: 1}], {duration: 180}).finished;
         } finally { animating = false; }
-      }, 10000);
+      }, 20000);
     },
     async refresh() {
       const results = await Promise.allSettled([

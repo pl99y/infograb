@@ -17,7 +17,7 @@ import { createF1Module } from "./modules/f1/index.js?v=46";
 import { createFeedModule } from "./modules/feed/index.js?v=48";
 import { createNewsTimelineModule } from "./modules/news-timeline/index.js?v=46";
 
-import { createHistoryModule } from "./modules/history/index.js?v=56";
+import { createHistoryModule } from "./modules/history/index.js?v=57";
 
 function createContext() {
   const store = createStore();

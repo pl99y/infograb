@@ -44,18 +44,35 @@ const energyInfoMap = {
 export function createEnergyModule(ctx) {
   const container = document.getElementById("energy-container");
   const updatedAt = document.getElementById("energyUpdatedAt");
+  const tabs = document.getElementById("energyTabs");
+  let activeTab = ctx.store?.get("ig_energy_tab", "energy") === "commodities" ? "commodities" : "energy";
+  let energy = [], commodities = [];
+
+  function selectTab(value) {
+    activeTab = value === "commodities" ? "commodities" : "energy";
+    ctx.store?.set("ig_energy_tab", activeTab);
+    const heading = document.getElementById("energyPanelTitle");
+    if (heading) heading.textContent = activeTab === "energy" ? "能源监控" : "大宗商品";
+    tabs?.querySelectorAll("button").forEach(button => {
+      const active = button.dataset.energyTab === activeTab;
+      button.classList.toggle("active", active);
+      button.setAttribute("aria-selected", String(active));
+    });
+    render(activeTab === "energy" ? energy : commodities);
+    updateHeader();
+  }
 
   function getEnergyCardInfo(item) {
     return energyInfoMap[item.quote_key] || {
       title: item.name || item.quote_key || "未知品种",
-      subtitle: item.name || "",
+      subtitle: `${item.symbol || ""} · 连续期货`,
       unit: item.unit || "",
-      note: "",
+      note: `期货报价，非现货；${item.contract_name || "具体月份以来源为准"}`,
     };
   }
 
   function updateHeader() {
-    renderFreshness(updatedAt, ["energy_latest.json"], ctx.state.lastEnergyFetchedAt);
+    renderFreshness(updatedAt, [activeTab === "energy" ? "energy_latest.json" : "commodities_latest.json"], activeTab === "energy" ? ctx.state.lastEnergyFetchedAt : ctx.state.lastCommodityFetchedAt);
   }
 
   function render(items) {
@@ -105,6 +122,12 @@ export function createEnergyModule(ctx) {
       const quoteDate = new Date(quoteTime);
       const timeText = quoteTime && (Number.isNaN(quoteDate.getTime()) ? String(quoteTime) : quoteDate.toLocaleString());
       card.title = [info.note, timeText && `报价时间 ${timeText}`].filter(Boolean).join("\n");
+      if (item.contract_rolled) {
+        const roll = document.createElement("div");
+        roll.className = "market-symbol-sub";
+        roll.textContent = "合约已换月";
+        card.appendChild(roll);
+      }
       if (item.status === "unavailable" || item.status === "stale") {
         const status = document.createElement("div");
         status.className = "market-symbol-sub";
@@ -116,27 +139,17 @@ export function createEnergyModule(ctx) {
   }
 
   async function refresh() {
-    setLoading(container, "正在加载能源数据...");
-    try {
-      const data = await ctx.api.get("/api/energy/latest");
-      ctx.state.energy = Array.isArray(data) ? data : [];
-      render(ctx.state.energy);
-
-      const timestamps = ctx.state.energy
-        .map((item) => item.fetched_at)
-        .filter(Boolean)
-        .map((value) => new Date(value).getTime())
-        .filter((value) => !Number.isNaN(value));
-
-      const fallbackUpdatedAt = timestamps.length > 0 ? new Date(Math.max(...timestamps)).toISOString() : null;
-      ctx.state.lastEnergyFetchedAt = fallbackUpdatedAt;
-      updateHeader();
-    } catch (error) {
-      console.error("Failed to load energy data:", error);
-      ctx.state.lastEnergyFetchedAt = null;
-      updateHeader();
-      setError(container, "能源数据加载失败。");
-    }
+    setLoading(container, "正在加载行情...");
+    const results = await Promise.allSettled([
+      ctx.api.get("/api/energy/latest"), ctx.api.get("/api/commodities/latest"),
+    ]);
+    if (results[0].status === "fulfilled") energy = Array.isArray(results[0].value) ? results[0].value : [];
+    if (results[1].status === "fulfilled") commodities = Array.isArray(results[1].value) ? results[1].value : [];
+    ctx.state.energy = energy;
+    const newest = items => items.map(item => item.fetched_at).filter(Boolean).sort().at(-1) || null;
+    ctx.state.lastEnergyFetchedAt = newest(energy);
+    ctx.state.lastCommodityFetchedAt = newest(commodities);
+    selectTab(activeTab);
   }
 
   return {
@@ -144,6 +157,10 @@ export function createEnergyModule(ctx) {
     updateHeader,
     refresh,
     init() {
+      tabs?.addEventListener("click", event => {
+        const button = event.target.closest("[data-energy-tab]");
+        if (button) selectTab(button.dataset.energyTab);
+      });
     },
   };
 }

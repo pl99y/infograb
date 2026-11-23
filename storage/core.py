@@ -88,6 +88,7 @@ CREATE TABLE IF NOT EXISTS market_snapshots (
     change_percent REAL,
     source_name TEXT NOT NULL,
     fetched_at TEXT NOT NULL,
+    quote_time TEXT,
     created_at TEXT DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -416,6 +417,7 @@ CREATE INDEX IF NOT EXISTS idx_mnd_pla_daily_fetched_at ON mnd_pla_daily(fetched
 """
 
 _MIGRATION_SQL = """
+ALTER TABLE market_snapshots ADD COLUMN quote_time TEXT;
 ALTER TABLE items ADD COLUMN content_text_zh TEXT;
 ALTER TABLE items ADD COLUMN content_text_en TEXT;
 ALTER TABLE disaster_events ADD COLUMN event_family TEXT DEFAULT 'instant';
@@ -658,13 +660,14 @@ def insert_market_snapshot(
     change_percent: float | None,
     source_name: str,
     fetched_at: str,
+    quote_time: str | None = None,
 ) -> int:
     cur = con.execute(
         """
         INSERT INTO market_snapshots (
-            snapshot_key, name, symbol, price, change_percent, source_name, fetched_at
+            snapshot_key, name, symbol, price, change_percent, source_name, fetched_at, quote_time
         )
-        VALUES (?, ?, ?, ?, ?, ?, ?)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
         """,
         (
             snapshot_key,
@@ -674,6 +677,7 @@ def insert_market_snapshot(
             change_percent,
             source_name,
             fetched_at,
+            quote_time,
         ),
     )
     return int(cur.lastrowid)

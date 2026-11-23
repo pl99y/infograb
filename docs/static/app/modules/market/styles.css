@@ -85,3 +85,7 @@
         font-size: 11px;
     }
 }
+
+.market-session { align-self: flex-start; margin-top: 2px; padding: 2px 5px; border-radius: 4px; font-size: 10px; background: var(--bg-surface); color: var(--text-muted); }
+.market-session[data-state="open"] { color: var(--accent-green); }
+.market-session[data-state="break"], .market-session[data-state="auction"] { color: #d9a441; }

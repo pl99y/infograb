@@ -34,6 +34,7 @@ def fetch_market_snapshots_once(db_path: str = "app.db", timeout: int = 15) -> d
                 change_percent=item.get("change_percent"),
                 source_name=item.get("source") or "unknown",
                 fetched_at=started_at,
+                quote_time=item.get("quote_time"),
             )
 
         if items and not errors:

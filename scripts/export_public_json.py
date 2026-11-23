@@ -39,6 +39,9 @@ from services.news_timeline.queries import get_news_timeline_latest  # noqa: E40
 from services.hotsearch.pipeline import fetch_hotsearch_snapshot  # noqa: E402
 from services.hotsearch.queries import get_hotsearch_latest  # noqa: E402
 from services.history.pipeline import refresh_history_once, get_history_today  # noqa: E402
+from services.market.calendar import get_market_calendar
+from services.commodities.pipeline import fetch_commodities_once, get_commodities
+from services.focus.pipeline import fetch_hotsearch_bundle, get_focus
 
 from scripts.export_status import collect, f1_live_status, hotsearch_status, publish_exports, read_object  # noqa: E402
 
@@ -87,6 +90,7 @@ def fetch_all(skip_fetch: bool) -> dict:
     db_path = str(DB_PATH)
     collect(attempts, "energy_latest.json", lambda: fetch_energy_once(db_path=db_path), evidence=("quotes_saved",))
     collect(attempts, "market_latest.json", lambda: fetch_market_snapshots_once(db_path=db_path))
+    collect(attempts, "commodities_latest.json", lambda: fetch_commodities_once(db_path=db_path))
     collect(
         attempts, "aviation", lambda: fetch_aviation_once(db_path=db_path),
         evidence=("alerts_found", "disruptions_found"),
@@ -105,8 +109,9 @@ def fetch_all(skip_fetch: bool) -> dict:
         print(f"[warn] F1 snapshot collection failed ({type(exc).__name__})")
     collect(attempts, "news_timeline_latest.json", lambda: fetch_news_timeline_once(db_path=db_path), evidence=("items_found",))
     collect_snapshot(
-        attempts, "news_hotsearch_latest.json", fetch_hotsearch_snapshot, hotsearch_status, db_path=db_path,
+        attempts, "news_hotsearch_latest.json", lambda: fetch_hotsearch_bundle(db_path=db_path), hotsearch_status, db_path=db_path,
     )
+    collect(attempts, "focus_latest.json", lambda: {"status": "success" if get_focus(db_path=db_path).get("text") else "failed"})
     collect_snapshot(
         attempts, "f1_live.json", lambda: fetch_f1_live_payload(db_path=db_path), f1_live_status, db_path=db_path,
     )
@@ -132,6 +137,9 @@ def export_all(attempts: dict) -> None:
         return combined[:len(weather)], combined[len(weather):]
 
     exports = {
+        "market_calendar.json": get_market_calendar,
+        "commodities_latest.json": lambda: get_commodities(db_path=db_path),
+        "focus_latest.json": lambda: get_focus(db_path=db_path),
         "history_today.json": lambda: get_history_today(db_path=db_path),
         "energy_latest.json": lambda: get_energy_latest(db_path=db_path),
         "market_latest.json": lambda: get_market_snapshots_latest(db_path=db_path),

@@ -12,6 +12,7 @@ export function createHistoryModule(ctx) {
   const line = document.getElementById("historyTodayText");
   let history = null;
   let weather = null;
+  let focus = null;
   let active = "history";
   let paused = false;
   let animating = false;
@@ -34,11 +35,18 @@ export function createHistoryModule(ctx) {
       result.push({kind: "weather", text: `天气占卜 · ${weather.text}`,
         title: "天气数据：Open-Meteo · CC BY 4.0；AI 或规则改写，仅供参考。"});
     }
+    if (focus?.text && Date.parse(focus.valid_until) > Date.now()) {
+      result.push({kind: "focus", text: `当前关注 · ${focus.text}`,
+        href: /^https?:\/\//i.test(focus.url || "") ? focus.url : "",
+        title: `${focus.source_name || "来源"} · ${focus.source_time || ""}`});
+      if (focus.alert_level === "critical") return result.filter(row => row.kind === "focus");
+    }
     return result;
   }
 
   function fillRow(target, row) {
-    const message = document.createElement("span");
+    const message = document.createElement(row?.href ? "a" : "span");
+    if (row?.href) { message.href = row.href; message.target = "_blank"; message.rel = "noopener noreferrer"; }
     message.className = "topline-message";
     message.textContent = row?.text || "历史上的今天 · 今日内容待更新";
     target.replaceChildren(message);
@@ -63,6 +71,8 @@ export function createHistoryModule(ctx) {
     container.title = row?.title || "";
     container.dataset.topline = active;
     container.hidden = false;
+    const level = focus?.text && Date.parse(focus.valid_until) > Date.now() ? focus.alert_level : "normal";
+    document.querySelector(".top-nav")?.setAttribute("data-alert", ["major", "critical"].includes(level) ? level : "normal");
   }
 
   function schedule(delay = 5000) {
@@ -76,7 +86,8 @@ export function createHistoryModule(ctx) {
     render(); // Also switches a preloaded history day at midnight, without another request.
     const rows = entries();
     if (rows.length < 2) { schedule(); return; }
-    const next = rows.find(row => row.kind !== active);
+    const index = rows.findIndex(row => row.kind === active);
+    const next = rows[(index + 1) % rows.length];
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduced) {
       active = next.kind;
@@ -127,10 +138,11 @@ export function createHistoryModule(ctx) {
     },
     async refresh() {
       const results = await Promise.allSettled([
-        ctx.api.get("/api/history/today"), ctx.api.get("/api/local-weather"),
+        ctx.api.get("/api/history/today"), ctx.api.get("/api/local-weather"), ctx.api.get("/api/focus/latest"),
       ]);
       if (results[0].status === "fulfilled") history = results[0].value;
       if (results[1].status === "fulfilled") weather = results[1].value;
+      if (results[2].status === "fulfilled") focus = results[2].value;
       render();
     },
   };

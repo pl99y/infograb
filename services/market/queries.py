@@ -144,7 +144,8 @@ def get_market_snapshots_latest(db_path: str = "app.db") -> list[dict]:
                    ms.price,
                    ms.change_percent,
                    ms.source_name AS source,
-                   ms.fetched_at
+                   ms.fetched_at,
+                   ms.quote_time
             FROM market_snapshots ms
             INNER JOIN (
                 SELECT snapshot_key, MAX(id) AS max_id

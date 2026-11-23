@@ -1,5 +1,6 @@
 import { clearElement, setEmpty, setError, setLoading } from "../../core/dom.js?v=46";
 import { renderFreshness } from "../../core/export-meta.js?v=46";
+import { marketSession } from "./session.js?v=59";
 
 const marketLabels = {
   nasdaq: { name: "NASDAQ Composite", symbol: "^IXIC" },
@@ -43,6 +44,16 @@ function getDisplayInfo(item) {
 export function createMarketModule(ctx) {
   const container = document.getElementById("market-container");
   const updatedAt = document.getElementById("marketUpdatedAt");
+  let calendar = null;
+
+  function updateSessions() {
+    container?.querySelectorAll("[data-market-session]").forEach(element => {
+      const session = marketSession(element.dataset.marketSession, calendar);
+      element.textContent = session.label;
+      element.dataset.state = session.state;
+      element.title = session.detail;
+    });
+  }
 
   function updateHeader() {
     renderFreshness(updatedAt, ["market_latest.json"], ctx.state.lastMarketFetchedAt);
@@ -68,11 +79,13 @@ export function createMarketModule(ctx) {
       const row = document.createElement("div");
       row.className = "market-snapshot-row";
       const collected = new Date(item.fetched_at);
-      row.title = [item.source, item.fetched_at && !Number.isNaN(collected.getTime()) && `采集时间 ${collected.toLocaleString()}`].filter(Boolean).join("\n");
+      row.title = [item.source, item.quote_time && `报价时间 ${new Date(item.quote_time).toLocaleString()}`,
+        item.fetched_at && !Number.isNaN(collected.getTime()) && `采集时间 ${collected.toLocaleString()}`].filter(Boolean).join("\n");
       row.innerHTML = `
         <div class="market-snapshot-meta">
           <div class="market-snapshot-name">${info.name}</div>
           <div class="market-snapshot-symbol">${info.symbol}</div>
+          <span class="market-session" data-market-session="${item.key}"></span>
         </div>
         <div class="market-snapshot-values">
           <div class="market-snapshot-price">${formatSnapshotPrice(item?.price)}</div>
@@ -87,12 +100,18 @@ export function createMarketModule(ctx) {
       }
       container.appendChild(row);
     });
+    updateSessions();
   }
 
   async function refresh() {
     setLoading(container, "正在加载市场指数...");
     try {
-      const data = await ctx.api.get("/api/market-snapshots/latest");
+      const results = await Promise.allSettled([
+        ctx.api.get("/api/market-snapshots/latest"), ctx.api.get("/api/market/calendar"),
+      ]);
+      if (results[1].status === "fulfilled") calendar = results[1].value;
+      if (results[0].status !== "fulfilled") throw results[0].reason;
+      const data = results[0].value;
       ctx.state.marketSnapshots = Array.isArray(data) ? data : [];
       render(ctx.state.marketSnapshots);
 
@@ -120,6 +139,7 @@ export function createMarketModule(ctx) {
     updateHeader,
     refresh,
     init() {
+      setInterval(updateSessions, 30000);
     },
   };
 }

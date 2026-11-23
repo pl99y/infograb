@@ -19,6 +19,9 @@ export function createApi() {
     const clean = String(url || "");
     if (clean.startsWith("/api/history/today")) return "./data/history_today.json";
     if (clean.startsWith("/api/local-weather")) return "./data/local_weather.json";
+    if (clean.startsWith("/api/focus/latest")) return "./data/focus_latest.json";
+    if (clean.startsWith("/api/commodities/latest")) return "./data/commodities_latest.json";
+    if (clean.startsWith("/api/market/calendar")) return "./data/market_calendar.json";
     if (clean.startsWith("/api/energy/latest")) return "./data/energy_latest.json";
     if (clean.startsWith("/api/market-snapshots/latest")) return "./data/market_latest.json";
     if (clean.startsWith("/api/aviation/alerts")) return "./data/aviation_alerts.json";

@@ -2,6 +2,8 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 import logging
+import math
+from datetime import datetime, timezone
 from typing import Any
 from urllib.parse import quote
 
@@ -43,7 +45,10 @@ def _coerce_float(value: Any, *, field_name: str) -> float:
         raise MarketSnapshotAdapterError(f"Missing field: {field_name}")
 
     try:
-        return float(value)
+        result = float(value)
+        if not math.isfinite(result):
+            raise ValueError("Non-finite quote")
+        return result
     except (TypeError, ValueError) as exc:
         raise MarketSnapshotAdapterError(
             f"Invalid numeric field {field_name}: {value!r}"
@@ -97,6 +102,8 @@ class YahooMarketSnapshotAdapter:
             "price": price,
             "change_percent": change_percent,
             "source": self.source_name,
+            "quote_time": datetime.fromtimestamp(meta["regularMarketTime"], timezone.utc).isoformat() if meta.get("regularMarketTime") else None,
+            "contract_name": str(meta.get("shortName") or "")[:120],
         }
 
 
@@ -136,6 +143,8 @@ class EastmoneyMarketSnapshotAdapter:
         name = str(data.get("f58") or spec.name)
         price = _coerce_float(data.get("f43"), field_name="data.f43")
         change_percent = round(_coerce_float(data.get("f170"), field_name="data.f170"), 2)
+        epoch = data.get("f124") or data.get("f86")
+        quote_time = datetime.fromtimestamp(epoch, timezone.utc).isoformat() if isinstance(epoch, (int, float)) and 946684800 < epoch < 10000000000 else None
 
         return {
             "key": spec.key,
@@ -144,4 +153,5 @@ class EastmoneyMarketSnapshotAdapter:
             "price": price,
             "change_percent": change_percent,
             "source": self.source_name,
+            "quote_time": quote_time,
         }

@@ -7,7 +7,7 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <link rel="stylesheet" href="./static/dashboard.css?v=58">
+    <link rel="stylesheet" href="./static/dashboard.css?v=59">
 </head>
 <body>
     <header class="top-nav">
@@ -107,12 +107,16 @@
                         <div class="section-header">
                             <div class="section-header-row">
                                 <div class="section-header-text">
-                                    <h3>能源监控</h3>
+                                    <h3 id="energyPanelTitle">能源监控</h3>
                                     <div class="section-updated" id="energyUpdatedAt">（加载中）</div>
                                 </div>
                             </div>
                         </div>
 
+                        <div class="energy-tabs" id="energyTabs" role="tablist" aria-label="行情类别">
+                            <button type="button" class="active" role="tab" aria-selected="true" data-energy-tab="energy">能源监控</button>
+                            <button type="button" role="tab" aria-selected="false" data-energy-tab="commodities">大宗商品</button>
+                        </div>
                         <div class="market-blocks" id="energy-container">
                             <div class="loading-state">正在加载能源数据...</div>
                         </div>
@@ -459,6 +463,6 @@
         <img class="lightbox-content" id="lightbox-img" alt="Expanded media">
     </div>
 
-    <script type="module" src="./static/app/main-pages.js?v=58"></script>
+    <script type="module" src="./static/app/main-pages.js?v=59"></script>
 </body>
 </html>

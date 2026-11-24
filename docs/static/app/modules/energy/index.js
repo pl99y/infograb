@@ -1,7 +1,7 @@
 import { resourceSession } from "./session.js?v=61";
 import { clearElement, setEmpty, setError, setLoading } from "../../core/dom.js?v=46";
 import { formatNumber, formatSigned } from "../../core/time.js?v=46";
-import { renderFreshness } from "../../core/export-meta.js?v=46";
+import { renderFreshness } from "../../core/export-meta.js?v=63";
 
 const energyInfoMap = {
   wti: {

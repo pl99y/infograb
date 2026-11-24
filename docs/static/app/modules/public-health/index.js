@@ -1,6 +1,6 @@
 import { setEmpty, setError, setLoading } from "../../core/dom.js?v=46";
 import { formatAbsoluteLocalDateTime, formatRelativeLocalTime } from "../../core/time.js?v=46";
-import { renderFreshness } from "../../core/export-meta.js?v=46";
+import { renderFreshness } from "../../core/export-meta.js?v=63";
 
 import { chinaFirst, mentionsChina } from "../../core/china-first.js?v=53";
 

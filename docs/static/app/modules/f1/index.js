@@ -1,5 +1,5 @@
 import { isF1SessionLive } from "./activity.js?v=61";
-import { getFreshness } from "../../core/export-meta.js?v=46";
+import { getFreshness } from "../../core/export-meta.js?v=63";
 import { renderF1Live, getF1LiveStatusMarkup } from "./render-live.js?v=46";
 import { renderF1News } from "./render-news.js?v=46";
 
@@ -248,17 +248,6 @@ export function createF1Module(ctx) {
       host.innerHTML = buildShell();
       wireTabs(host);
 
-      refreshLive(host).catch((err) => {
-        console.error("F1 live load failed:", err);
-        setSimpleMessage(host.querySelector("[data-f1-live-panel]"), `F1 实况加载失败：${err?.message || err}`);
-        setStatus(host.querySelector("[data-f1-live-status]"), "加载失败", true);
-      });
-
-      refreshNews(host).catch((err) => {
-        console.error("F1 news load failed:", err);
-        setSimpleMessage(host.querySelector("[data-f1-news-panel]"), `F1 新闻加载失败：${err?.message || err}`);
-        setStatus(host.querySelector("[data-f1-news-status]"), "加载失败", true);
-      });
     },
   };
 }

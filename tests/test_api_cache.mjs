@@ -1,0 +1,25 @@
+import assert from 'node:assert/strict';
+import { createApi } from '../docs/static/app/core/api.js';
+let calls = 0;
+let release;
+globalThis.fetch = (url, options) => {
+  calls++;
+  assert.equal(options.cache, 'no-cache');
+  return new Promise(resolve => { release = () => resolve({ok:true,json:async()=>[1],headers:new Headers()}); });
+};
+const api=createApi();
+const a=api.get('/api/market/calendar');
+const b=api.getWithMeta('/api/market/calendar');
+assert.equal(calls,1);
+release();
+assert.deepEqual(await a,[1]);
+assert.deepEqual((await b).data,[1]);
+const c=api.get('/api/market/calendar');
+assert.equal(calls,2);
+release();await c;
+let tries=0;
+globalThis.fetch=async()=>{tries++;throw new Error('offline');};
+await assert.rejects(api.get('/api/energy/latest'));
+await assert.rejects(api.get('/api/energy/latest'));
+assert.equal(tries,2);
+console.log('API: concurrent deduplication, revalidation and retry after failure passed');

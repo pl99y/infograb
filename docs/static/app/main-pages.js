@@ -1,21 +1,21 @@
 import { AUTO_REFRESH_MS, RELATIVE_CLOCK_MS, STORAGE_KEYS } from "./core/constants.js?v=46";
-import { createApi } from "./core/api.js?v=59";
-import { refreshExportMeta } from "./core/export-meta.js?v=46";
+import { createApi } from "./core/api.js?v=63";
+import { refreshExportMeta } from "./core/export-meta.js?v=63";
 import { createStore } from "./core/store.js?v=46";
 import { createThemeModule } from "./modules/theme/index.js?v=46";
 import { createMobileModule } from "./modules/mobile/index.js?v=46";
 import { createLightboxModule } from "./modules/lightbox/index.js?v=46";
 import { createLayoutModule } from "./modules/layout/index.js?v=46";
-import { createEnergyModule } from "./modules/energy/index.js?v=61";
-import { createMarketModule } from "./modules/market/index.js?v=61";
-import { createAviationModule } from "./modules/aviation/index.js?v=46";
-import { createDisasterModule } from "./modules/disaster/index.js?v=53";
-import { createPublicHealthModule } from "./modules/public-health/index.js?v=53";
-import { createSpaceWeatherModule } from "./modules/space-weather/index.js?v=46";
-import { createMndPlaModule } from "./modules/mnd-pla/index.js?v=46";
-import { createF1Module } from "./modules/f1/index.js?v=61";
-import { createFeedModule } from "./modules/feed/index.js?v=48";
-import { createNewsTimelineModule } from "./modules/news-timeline/index.js?v=46";
+import { createEnergyModule } from "./modules/energy/index.js?v=63";
+import { createMarketModule } from "./modules/market/index.js?v=63";
+import { createAviationModule } from "./modules/aviation/index.js?v=63";
+import { createDisasterModule } from "./modules/disaster/index.js?v=63";
+import { createPublicHealthModule } from "./modules/public-health/index.js?v=63";
+import { createSpaceWeatherModule } from "./modules/space-weather/index.js?v=63";
+import { createMndPlaModule } from "./modules/mnd-pla/index.js?v=63";
+import { createF1Module } from "./modules/f1/index.js?v=63";
+import { createFeedModule } from "./modules/feed/index.js?v=63";
+import { createNewsTimelineModule } from "./modules/news-timeline/index.js?v=63";
 
 import { createHistoryModule } from "./modules/history/index.js?v=59";
 

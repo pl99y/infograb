@@ -5,7 +5,7 @@ let datasets = {};
 export async function refreshExportMeta() {
   try {
     const response = await fetch("./data/export_meta.json", {
-      cache: "no-store",
+      cache: "no-cache",
       signal: AbortSignal.timeout(8000),
     });
     if (!response.ok) return;

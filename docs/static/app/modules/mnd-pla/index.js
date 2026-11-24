@@ -1,5 +1,5 @@
 import { clearElement, setEmpty, setError, setLoading } from "../../core/dom.js?v=46";
-import { renderFreshness } from "../../core/export-meta.js?v=46";
+import { renderFreshness } from "../../core/export-meta.js?v=63";
 
 function escapeHtml(value) {
   return String(value ?? "")

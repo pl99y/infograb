@@ -1,5 +1,5 @@
 import { setError, setLoading } from "../../core/dom.js?v=46";
-import { renderFreshness } from "../../core/export-meta.js?v=46";
+import { renderFreshness } from "../../core/export-meta.js?v=63";
 import { renderWeatherPane } from "./render-weather.js?v=53";
 import { renderDisasterPane } from "./render-disaster.js?v=53";
 

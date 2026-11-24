@@ -71,6 +71,14 @@ def f1_live_status(payload: dict) -> str:
     return "failed"
 
 
+def telegram_preview(rows: list) -> dict:
+    return {
+        "items": rows[:50],
+        "sources": list(dict.fromkeys(row["source_name"] for row in rows if row.get("source_name"))),
+        "snapshot_at": max((row.get("fetched_at") or "" for row in rows), default=""),
+    }
+
+
 def publish_exports(
     data_dir: Path, profile: str, exports: dict[str, Callable],
     attempts: dict,
@@ -124,6 +132,14 @@ def publish_exports(
             }
         if status == "failed":
             print(f"[warn] {filename}: {'kept previous snapshot' if path.exists() else 'no snapshot available'}")
+
+    # Fixed-size companion snapshot, derived from the exact full export that
+    # survived collection/export failure handling. No additional collection.
+    if "telegram.json" in exports:
+        full_path = data_dir / "telegram.json"
+        if full_path.exists():
+            rows = json.loads(full_path.read_text(encoding="utf-8"))
+            write_json(data_dir / "telegram_preview.json", telegram_preview(rows))
 
     published_at = utc_now_iso()
     steps = [

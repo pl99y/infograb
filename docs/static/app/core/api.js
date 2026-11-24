@@ -1,6 +1,15 @@
 export function createApi() {
-  async function fetchJson(path) {
-    const response = await fetch(path, { cache: "no-store" });
+  const pending = new Map();
+
+  function fetchJson(path) {
+    if (pending.has(path)) return pending.get(path);
+    const request = loadJson(path).finally(() => pending.delete(path));
+    pending.set(path, request);
+    return request;
+  }
+
+  async function loadJson(path) {
+    const response = await fetch(path, { cache: "no-cache" });
     if (!response.ok) {
       throw new Error(`HTTP ${response.status}: ${path}`);
     }
@@ -35,6 +44,7 @@ export function createApi() {
     if (clean.startsWith("/api/mnd-pla/dashboard")) return "./data/mnd_pla_dashboard.json";
     if (clean.startsWith("/api/f1/live")) return "./data/f1_live.json";
     if (clean.startsWith("/api/f1/news")) return "./data/f1_news.json";
+    if (clean.startsWith("/api/telegram/preview")) return "./data/telegram_preview.json";
     if (clean.startsWith("/api/telegram")) return "./data/telegram.json";
     if (clean.startsWith("/api/news-timeline/latest")) return "./data/news_timeline_latest.json";
     if (clean.startsWith("/api/news-hotsearch/latest")) return "./data/news_hotsearch_latest.json";

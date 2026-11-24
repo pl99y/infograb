@@ -1,6 +1,6 @@
 import { setError, setLoading } from "../../core/dom.js?v=46";
 import { formatAbsoluteLocalDateTime, formatRelativeLocalTime } from "../../core/time.js?v=46";
-import { renderFreshness } from "../../core/export-meta.js?v=46";
+import { renderFreshness } from "../../core/export-meta.js?v=63";
 import { renderHotsearch, renderNewsTimeline } from "./render.js?v=46";
 
 export function createNewsTimelineModule(ctx) {

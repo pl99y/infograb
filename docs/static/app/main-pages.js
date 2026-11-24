@@ -13,8 +13,8 @@ import { createDisasterModule } from "./modules/disaster/index.js?v=63";
 import { createPublicHealthModule } from "./modules/public-health/index.js?v=63";
 import { createSpaceWeatherModule } from "./modules/space-weather/index.js?v=63";
 import { createMndPlaModule } from "./modules/mnd-pla/index.js?v=63";
-import { createF1Module } from "./modules/f1/index.js?v=63";
-import { createFeedModule } from "./modules/feed/index.js?v=63";
+import { createF1Module } from "./modules/f1/index.js?v=64";
+import { createFeedModule } from "./modules/feed/index.js?v=64";
 import { createNewsTimelineModule } from "./modules/news-timeline/index.js?v=63";
 
 import { createHistoryModule } from "./modules/history/index.js?v=59";

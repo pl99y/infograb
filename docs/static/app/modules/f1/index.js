@@ -231,8 +231,15 @@ export function createF1Module(ctx) {
     async refresh() {
       if (!section) return;
       const host = ensureHost(section);
-      await refreshLive(host);
-      await refreshNews(host);
+      // Independent loads: an unavailable live feed must not block the news.
+      const results = await Promise.allSettled([refreshLive(host), refreshNews(host)]);
+      results.forEach((result, index) => {
+        if (result.status !== "rejected") return;
+        const tab = index === 0 ? "live" : "news";
+        console.error(`F1 ${tab} load failed:`, result.reason);
+        setSimpleMessage(host.querySelector(`[data-f1-${tab}-panel]`), "F1 数据加载失败，请稍后重试。");
+        setStatus(host.querySelector(`[data-f1-${tab}-status]`), "加载失败", true);
+      });
     },
 
     updateHeader,

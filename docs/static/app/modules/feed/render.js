@@ -11,7 +11,9 @@ function webUrl(value) {
   }
 }
 
-function createMediaGrid(ctx, mediaList) {
+const mediaObservers = new WeakMap();
+
+function createMediaGrid(ctx, mediaList, observer) {
   const grid = document.createElement("div");
   grid.className = "feed-media-grid";
 
@@ -23,7 +25,17 @@ function createMediaGrid(ctx, mediaList) {
     item.className = "feed-media-item";
 
     const img = document.createElement("img");
-    img.src = url;
+    // Native lazy loading can prefetch most of a nested scroll pane.
+    // Assign a URL only when the thumbnail approaches the actual viewport.
+    if (observer) {
+      img.dataset.src = url;
+      observer.observe(img);
+    } else {
+      img.src = url;
+    }
+    img.width = 200;
+    img.height = 140;
+    img.decoding = "async";
     img.alt = "Feed media";
     img.loading = "lazy";
 
@@ -37,6 +49,19 @@ function createMediaGrid(ctx, mediaList) {
 
 export function renderTelegram(ctx, container, items) {
   if (!container) return;
+  mediaObservers.get(container)?.disconnect();
+  const observer = typeof IntersectionObserver === "function" ? new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const img = entry.target;
+      if (img.dataset.src) {
+        img.src = img.dataset.src;
+        delete img.dataset.src;
+      }
+      observer.unobserve(img);
+    });
+  }, { rootMargin: "150px 0px" }) : null;
+  if (observer) mediaObservers.set(container, observer);
   if (!Array.isArray(items) || items.length === 0) {
     container.innerHTML = `<div class="empty-state">暂无情报内容。</div>`;
     return;
@@ -81,7 +106,7 @@ export function renderTelegram(ctx, container, items) {
       wrapper.appendChild(text);
     }
 
-    const mediaGrid = createMediaGrid(ctx, Array.isArray(item.media) ? item.media : []);
+    const mediaGrid = createMediaGrid(ctx, Array.isArray(item.media) ? item.media : [], observer);
     if (mediaGrid) {
       wrapper.appendChild(mediaGrid);
     }

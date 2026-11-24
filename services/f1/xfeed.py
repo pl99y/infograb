@@ -91,10 +91,10 @@ def _to_int(value: Any) -> int | None:
 
 def _record_to_dict(record: str) -> dict[str, str]:
     out: dict[str, str] = {}
-    for field in record.split("¬"):
-        if "÷" not in field:
+    for field in record.split("卢"):
+        if "梅" not in field:
             continue
-        key, value = field.split("÷", 1)
+        key, value = field.split("梅", 1)
         out[key.strip()] = value.strip()
     return out
 
@@ -194,7 +194,7 @@ def fetch_round_page_and_feed(round_url: str) -> dict[str, Any]:
 
 
 def parse_tournament_feed(feed_text: str) -> list[F1Session]:
-    raw_records = [part for part in feed_text.split("¬~") if part.strip()]
+    raw_records = [part for part in feed_text.split("卢~") if part.strip()]
     dict_records = [_record_to_dict(rec) for rec in raw_records]
 
     session_map: dict[str, F1Session] = {}
@@ -293,6 +293,17 @@ def choose_display_session(sessions: list[F1Session], mode: str) -> F1Session | 
 
 def get_f1_live_from_feed() -> dict[str, Any]:
     strategy = resolve_round_strategy()
+
+    # Between races the official calendar and Jolpica results are sufficient.
+    # Flashscore can remove a completed round from its navigation immediately.
+    if strategy.get("mode") == "between_rounds":
+        return {
+            "mode": "between_rounds",
+            "strategy": strategy,
+            "round": strategy.get("next_round"),
+            "session": None,
+            "rows": [],
+        }
 
     if strategy.get("mode") == "live":
         target_round = strategy.get("current_round") or strategy.get("best_available_flashscore_target")

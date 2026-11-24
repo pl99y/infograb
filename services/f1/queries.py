@@ -213,15 +213,13 @@ def _between_rounds_payload(*, result: dict[str, Any], payload: dict[str, Any], 
     previous_name = str(previous_round.get("name") or "").strip()
 
     if next_name and next_dates:
-        subheadline = f"No live F1 session right now. Next race: {next_name} · {next_dates}."
+        subheadline = f"No live F1 session right now. Next race: {next_name} 路 {next_dates}."
     elif next_name:
         subheadline = f"No live F1 session right now. Next race: {next_name}."
     else:
         subheadline = "No live F1 session right now."
 
-    # This is a normal state, not an availability failure. The live feed may
-    # report "No usable Flashscore round URL" when the current event has ended,
-    # but the dashboard should render an idle state instead of a red error.
+    # The calendar has been refreshed; between races no live feed is required.
     payload.update(
         {
             "mode": "between_rounds",

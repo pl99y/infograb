@@ -7,6 +7,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(var(--module-card-min-width), 1fr));
     gap: 10px;
+    grid-auto-rows: max-content;
     overflow-y: auto;
     min-height: 0;
     align-content: start;
@@ -21,6 +22,11 @@
     gap: 4px;
     min-height: 118px;
     cursor: default;
+}
+
+/* Keep each text line inside its card when the panel is short. */
+.market-card > * {
+    flex-shrink: 0;
 }
 
 .market-card[title] {

@@ -7,6 +7,10 @@ from scripts.export_status import f1_live_status
 
 
 class F1IdleTests(unittest.TestCase):
+    def test_flashscore_field_delimiters(self):
+        from services.f1.xfeed import _record_to_dict
+        self.assertEqual(_record_to_dict("AA\u00f7123\u00acBB\u00f7race"), {"AA": "123", "BB": "race"})
+
     def test_idle_does_not_require_removed_score_link(self):
         strategy = {
             "mode": "between_rounds",

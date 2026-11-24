@@ -6,14 +6,14 @@ import { createThemeModule } from "./modules/theme/index.js?v=46";
 import { createMobileModule } from "./modules/mobile/index.js?v=46";
 import { createLightboxModule } from "./modules/lightbox/index.js?v=46";
 import { createLayoutModule } from "./modules/layout/index.js?v=46";
-import { createEnergyModule } from "./modules/energy/index.js?v=59";
-import { createMarketModule } from "./modules/market/index.js?v=59";
+import { createEnergyModule } from "./modules/energy/index.js?v=61";
+import { createMarketModule } from "./modules/market/index.js?v=61";
 import { createAviationModule } from "./modules/aviation/index.js?v=46";
 import { createDisasterModule } from "./modules/disaster/index.js?v=53";
 import { createPublicHealthModule } from "./modules/public-health/index.js?v=53";
 import { createSpaceWeatherModule } from "./modules/space-weather/index.js?v=46";
 import { createMndPlaModule } from "./modules/mnd-pla/index.js?v=46";
-import { createF1Module } from "./modules/f1/index.js?v=46";
+import { createF1Module } from "./modules/f1/index.js?v=61";
 import { createFeedModule } from "./modules/feed/index.js?v=48";
 import { createNewsTimelineModule } from "./modules/news-timeline/index.js?v=46";
 

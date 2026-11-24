@@ -51,6 +51,7 @@ export function createMarketModule(ctx) {
       const session = marketSession(element.dataset.marketSession, calendar);
       element.textContent = session.label;
       element.dataset.state = session.state;
+      element.closest(".market-snapshot-row").dataset.sessionState = session.state;
       element.title = session.detail;
     });
   }

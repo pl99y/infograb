@@ -1,3 +1,4 @@
+import { isF1SessionLive } from "./activity.js?v=61";
 import { getFreshness } from "../../core/export-meta.js?v=46";
 import { renderF1Live, getF1LiveStatusMarkup } from "./render-live.js?v=46";
 import { renderF1News } from "./render-news.js?v=46";
@@ -165,7 +166,12 @@ function wireTabs(host) {
 export function createF1Module(ctx) {
   const section = findSectionRoot();
 
+  function updateActivity() {
+    if (section) section.dataset.sessionLive = String(isF1SessionLive(ctx.state.f1Live));
+  }
+
   function updateHeader() {
+    updateActivity();
     if (!section) return;
     const host = ensureHost(section);
     const liveStatusEl = host.querySelector("[data-f1-live-status]");
@@ -196,6 +202,7 @@ export function createF1Module(ctx) {
     ctx.state.lastF1FetchedAt = updatedAt;
     ctx.state.f1Live = payload;
     ctx.state.f1LiveLoaded = true;
+    updateActivity();
     applyLiveStatus(statusEl, payload, updatedAt);
     return payload;
   }
@@ -231,6 +238,7 @@ export function createF1Module(ctx) {
     updateHeader,
 
     init() {
+      setInterval(updateActivity, 30000);
       if (!section) {
         console.warn("F1 section root not found; skipping F1 module init.");
         return;

@@ -1,3 +1,4 @@
+import { resourceSession } from "./session.js?v=61";
 import { clearElement, setEmpty, setError, setLoading } from "../../core/dom.js?v=46";
 import { formatNumber, formatSigned } from "../../core/time.js?v=46";
 import { renderFreshness } from "../../core/export-meta.js?v=46";
@@ -47,12 +48,22 @@ export function createEnergyModule(ctx) {
   const tabs = document.getElementById("energyTabs");
   let activeTab = ctx.store?.get("ig_energy_tab", "energy") === "commodities" ? "commodities" : "energy";
   let energy = [], commodities = [];
+  let calendar = null;
+
+  function updateSessions() {
+    container?.querySelectorAll("[data-resource-key]").forEach(card => {
+      const session = resourceSession(card.dataset.resourceKey, calendar);
+      card.dataset.sessionState = session.state;
+      const badge = card.querySelector(".resource-session");
+      if (badge) { badge.textContent = session.label; badge.title = session.detail; }
+    });
+  }
 
   function selectTab(value) {
     activeTab = value === "commodities" ? "commodities" : "energy";
     ctx.store?.set("ig_energy_tab", activeTab);
     const heading = document.getElementById("energyPanelTitle");
-    if (heading) heading.textContent = activeTab === "energy" ? "能源监控" : "大宗商品";
+    if (heading) heading.textContent = "资源行情";
     tabs?.querySelectorAll("button").forEach(button => {
       const active = button.dataset.energyTab === activeTab;
       button.classList.toggle("active", active);
@@ -107,6 +118,7 @@ export function createEnergyModule(ctx) {
 
       const card = document.createElement("div");
       card.className = "market-card";
+      card.dataset.resourceKey = item.quote_key;
 
       card.innerHTML = `
         <div class="market-symbol">${info.title}</div>
@@ -134,17 +146,22 @@ export function createEnergyModule(ctx) {
         status.textContent = item.status === "unavailable" ? "暂不可用" : "更新失败";
         card.appendChild(status);
       }
+      const badge = document.createElement("span");
+      badge.className = "resource-session";
+      card.appendChild(badge);
       container.appendChild(card);
     });
+    updateSessions();
   }
 
   async function refresh() {
     setLoading(container, "正在加载行情...");
     const results = await Promise.allSettled([
-      ctx.api.get("/api/energy/latest"), ctx.api.get("/api/commodities/latest"),
+      ctx.api.get("/api/energy/latest"), ctx.api.get("/api/commodities/latest"), ctx.api.get("/api/market/calendar"),
     ]);
     if (results[0].status === "fulfilled") energy = Array.isArray(results[0].value) ? results[0].value : [];
     if (results[1].status === "fulfilled") commodities = Array.isArray(results[1].value) ? results[1].value : [];
+    if (results[2].status === "fulfilled") calendar = results[2].value;
     ctx.state.energy = energy;
     const newest = items => items.map(item => item.fetched_at).filter(Boolean).sort().at(-1) || null;
     ctx.state.lastEnergyFetchedAt = newest(energy);
@@ -157,6 +174,7 @@ export function createEnergyModule(ctx) {
     updateHeader,
     refresh,
     init() {
+      setInterval(updateSessions, 30000);
       tabs?.addEventListener("click", event => {
         const button = event.target.closest("[data-energy-tab]");
         if (button) selectTab(button.dataset.energyTab);

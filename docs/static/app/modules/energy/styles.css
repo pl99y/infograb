@@ -88,3 +88,11 @@
 .energy-tabs button { flex: 1; padding: 8px; border: 1px solid var(--border); border-radius: 8px; background: transparent; color: var(--text-main); font: inherit; font-size: 12px; cursor: pointer; }
 .energy-tabs button.active { background: var(--accent-blue); border-color: var(--accent-blue); color: #fff; }
 .energy-tabs button:focus-visible { outline: 2px solid var(--accent-blue); outline-offset: 2px; }
+
+.col-energy .market-card { transition: background-color .3s; }
+.col-energy .market-card[data-session-state="open"] { background: color-mix(in srgb, var(--bg-surface) 92%, var(--accent-blue)); }
+.col-energy .market-card[data-session-state="break"] { background: color-mix(in srgb, var(--bg-surface) 94%, var(--accent-orange)); }
+.col-energy .market-card[data-session-state="closed"] { background: color-mix(in srgb, var(--bg-surface) 97%, var(--text-muted)); }
+.resource-session { display: block; margin-top: 3px; font-size: 10px; line-height: 1.3; color: var(--text-muted); }
+.market-card[data-session-state="open"] .resource-session { color: var(--accent-blue); }
+.market-card[data-session-state="break"] .resource-session { color: var(--accent-orange); }

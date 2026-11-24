@@ -89,3 +89,11 @@
 .market-session { align-self: flex-start; margin-top: 2px; padding: 2px 5px; border-radius: 4px; font-size: 10px; background: var(--bg-surface); color: var(--text-muted); }
 .market-session[data-state="open"] { color: var(--accent-green); }
 .market-session[data-state="break"], .market-session[data-state="auction"] { color: #d9a441; }
+
+/* Activity colors are separate from red/green price changes. */
+.market-snapshot-row { padding: 10px 8px; border-radius: 8px; transition: background-color .3s; }
+.market-snapshot-row[data-session-state="open"] { background: color-mix(in srgb, var(--bg-card) 92%, var(--accent-blue)); }
+.market-snapshot-row[data-session-state="break"], .market-snapshot-row[data-session-state="auction"] { background: color-mix(in srgb, var(--bg-card) 94%, var(--accent-orange)); }
+.market-snapshot-row[data-session-state="closed"] { background: color-mix(in srgb, var(--bg-card) 97%, var(--text-muted)); }
+.market-session { font-size: 11px; padding: 3px 6px; }
+.market-session[data-state="open"] { color: var(--accent-blue); }

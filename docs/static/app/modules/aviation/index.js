@@ -1,7 +1,7 @@
 import { setError, setLoading } from "../../core/dom.js?v=46";
 import { STORAGE_KEYS } from "../../core/constants.js?v=46";
 import { renderFreshness } from "../../core/export-meta.js?v=63";
-import { renderAviationAlerts } from "./render-alerts.js?v=46";
+import { renderAviationAlerts } from "./render-alerts.js?v=65";
 import { renderAviationDisruptions } from "./render-disruptions.js?v=46";
 
 export function createAviationModule(ctx) {

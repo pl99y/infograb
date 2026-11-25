@@ -76,8 +76,8 @@ function getRoutePart(item, kind) {
 
 function formatPosition(item) {
   const extra = item?.extra || {};
-  const lat = Number(extra.lat);
-  const lon = Number(extra.lon);
+  const lat = extra.lat == null || extra.lat === "" ? NaN : Number(extra.lat);
+  const lon = extra.lon == null || extra.lon === "" ? NaN : Number(extra.lon);
   if (Number.isFinite(lat) && Number.isFinite(lon)) {
     return `位置 ${lat.toFixed(3)}, ${lon.toFixed(3)}`;
   }
@@ -103,9 +103,9 @@ function formatStatus(item) {
   if (isAdsbfiAlert(item)) {
     if (item?.extra?.verification_pending) return "数据源暂不可用 · 当前状态未确认";
     const active = item?.extra?.is_active !== false;
-    const prefix = active ? "当前正在广播异常应答机代码" : "过去 48 小时内检测到";
-    if (status && alertType && !isPlaceholder(status)) return `${prefix} · ${status} · ${alertType}`;
-    return `${prefix}${alertType ? ` · ${alertType}` : ""}`;
+    const prefix = active ? "最近采集仍检测到" : "本轮未再检测到";
+    const meaning = { "7700": "一般紧急情况", "7600": "通信故障", "7500": "非法干扰" }[getSquawkCode(item)];
+    return `${prefix}${meaning ? ` · ${meaning}` : ""}`;
   }
 
   if (status && alertType && !isPlaceholder(status)) return `${status} · ${alertType}`;
@@ -113,9 +113,9 @@ function formatStatus(item) {
 }
 
 function formatIsoTime(value) {
+  if (!value) return "";
   const text = cleanText(value);
-  if (!text) return "";
-  const date = new Date(text);
+  const date = typeof value === "number" ? new Date(value) : new Date(text);
   if (Number.isNaN(date.getTime())) return text;
   return date.toLocaleString(undefined, {
     month: "short",
@@ -135,6 +135,7 @@ function formatAltitude(value) {
 }
 
 function formatNumberWithUnit(value, unit, digits = 0) {
+  if (value == null || cleanText(value) === "") return "";
   const n = Number(value);
   if (!Number.isFinite(n)) return "";
   return `${n.toFixed(digits)} ${unit}`;
@@ -143,8 +144,9 @@ function formatNumberWithUnit(value, unit, digits = 0) {
 function buildAdsbfiMetaHtml(item) {
   const extra = item?.extra || {};
   const fields = [
+    ["注册号", cleanText(extra.registration)],
     ["机型", cleanText(item?.aircraft_text) || cleanText(extra.description)],
-    ["高度", formatAltitude(extra.alt_baro || extra.alt_geom)],
+    ["高度", formatAltitude(extra.alt_baro ?? extra.alt_geom)],
     ["速度", formatNumberWithUnit(extra.ground_speed_kt, "kt", 0)],
     ["航向", formatNumberWithUnit(extra.track_deg, "°", 0)],
     ["垂直速度", formatNumberWithUnit(extra.vertical_rate_fpm, "fpm", 0)],
@@ -200,16 +202,38 @@ function getSourceUrl(item) {
   return cleanText(item?.source_url) || cleanText(item?.url) || "https://www.airnavradar.com/data/alerts";
 }
 
-function getIdLabel(item) {
-  return isAdsbfiAlert(item) ? "呼号 / 注册号 / HEX" : "注册号 / 呼号";
+export function alertIdentity(item) {
+  const extra = item?.extra || {};
+  if (!isAdsbfiAlert(item)) return { value: cleanText(item?.callsign) || "未知", label: "航班标识" };
+  const registration = cleanText(extra.registration).toUpperCase();
+  const hex = cleanText(extra.hex).toUpperCase();
+  const raw = extra.raw_aircraft;
+  // Older snapshots already retain the source's flight field in raw_aircraft.
+  const broadcast = cleanText(extra.broadcast_callsign ?? raw?.flight).replace(/\s+/g, "").toUpperCase();
+  if (broadcast && !isPlaceholder(broadcast)) return { value: broadcast, label: "呼号" };
+  if (!raw && extra.broadcast_callsign == null) {
+    const legacy = cleanText(item?.callsign);
+    if (legacy && legacy !== registration && legacy !== hex && !isPlaceholder(legacy)) return { value: legacy, label: "呼号" };
+  }
+  if (registration) return { value: registration, label: "注册号（未提供呼号）" };
+  if (hex) return { value: hex, label: "HEX（未提供呼号）" };
+  return { value: "未知", label: "未提供航空器标识" };
+}
+
+export function alertTimestamp(item) {
+  for (const value of [item?.extra?.last_seen_utc, item?.fetched_at]) {
+    if (value && Number.isFinite(new Date(value).getTime())) return new Date(value).getTime();
+  }
+  return 0;
 }
 
 function renderOneAlert(item) {
   const extra = item?.extra || {};
-  const callsign = cleanText(item?.callsign) || cleanText(extra.registration) || cleanText(extra.hex).toUpperCase() || "UNKNOWN";
+  const identity = alertIdentity(item);
+  const callsign = identity.value;
   const route = formatRoute(item);
   const status = formatStatus(item);
-  const eventDate = cleanText(item?.event_date_text);
+  const eventDate = formatIsoTime(alertTimestamp(item)) || cleanText(item?.event_date_text);
   const badgeText = getSquawkCode(item);
   const badgeClass = getBadgeClass(badgeText);
   const metaHtml = buildMetaHtml(item);
@@ -221,7 +245,7 @@ function renderOneAlert(item) {
       <article class="aviation-alert-item aviation-alert-item-clickable${activeClass}">
         <div class="aviation-alert-head">
           <div class="aviation-alert-head-left">
-            <div class="aviation-alert-id-label">${escapeHtml(getIdLabel(item))}</div>
+            <div class="aviation-alert-id-label">${escapeHtml(identity.label)}</div>
             <div class="aviation-alert-callsign">${escapeHtml(callsign)}</div>
           </div>
 
@@ -257,6 +281,7 @@ export function renderAviationAlerts(container, items) {
     return;
   }
 
+  filtered.sort((a, b) => alertTimestamp(b) - alertTimestamp(a) || Number(b.id || 0) - Number(a.id || 0));
   container.innerHTML = filtered.map(renderOneAlert).join("");
 }
 

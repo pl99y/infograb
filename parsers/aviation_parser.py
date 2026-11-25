@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import re
+import math
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone
 from typing import Any
@@ -393,7 +394,8 @@ def _safe_float(value: Any) -> float | None:
     try:
         if value is None or value == "":
             return None
-        return float(value)
+        number = float(value)
+        return number if math.isfinite(number) else None
     except Exception:
         return None
 
@@ -488,11 +490,28 @@ def parse_adsbfi_squawk_alerts(
 
         hex_id = str(ac.get("hex") or "").strip().lstrip("~")
         registration = str(ac.get("r") or "").strip().upper()
-        callsign = _compact_callsign(ac.get("flight")) or registration or hex_id.upper() or "UNKNOWN"
+        broadcast_callsign = _compact_callsign(ac.get("flight"))
+        callsign = broadcast_callsign or registration or hex_id.upper() or "UNKNOWN"
         seen_seconds = _safe_float(ac.get("seen"))
         seen_pos_seconds = _safe_float(ac.get("seen_pos"))
         age_seconds = seen_seconds if seen_seconds is not None else seen_pos_seconds
-        age_hours = round(age_seconds / 3600.0, 4) if age_seconds is not None else None
+        if age_seconds is not None and age_seconds > 300:
+            continue  # An old receiver observation is not a current alert.
+        if ac.get("squawk") is not None and str(ac["squawk"]).strip() != squawk:
+            continue
+        observed_at = fetched_at
+        if fetched_at:
+            stamp = datetime.fromisoformat(fetched_at.replace("Z", "+00:00"))
+            if stamp.tzinfo is None:
+                stamp = stamp.replace(tzinfo=timezone.utc)
+            source_now = _safe_float(payload.get("now"))
+            if source_now is not None:
+                if source_now > 100000000000:
+                    source_now /= 1000
+                if abs(source_now - stamp.timestamp()) <= 300:
+                    stamp = datetime.fromtimestamp(source_now, timezone.utc)
+            observed_at = (stamp - timedelta(seconds=max(age_seconds or 0, 0))).isoformat()
+        age_hours = round(max(age_seconds, 0) / 3600.0, 4) if age_seconds is not None else None
         lat = _safe_float(ac.get("lat"))
         lon = _safe_float(ac.get("lon"))
         vertical_rate = _safe_int(ac.get("baro_rate") if ac.get("baro_rate") is not None else ac.get("geom_rate"))
@@ -500,11 +519,12 @@ def parse_adsbfi_squawk_alerts(
         track = _safe_float(ac.get("track"))
 
         extra = {
-            "parser_version": "adsbfi_squawk_v1",
+            "parser_version": "adsbfi_squawk_v2",
+            "broadcast_callsign": broadcast_callsign,
             "api_url": source_url,
             "fetched_at": fetched_at,
-            "first_seen_utc": fetched_at,
-            "last_seen_utc": fetched_at,
+            "first_seen_utc": observed_at,
+            "last_seen_utc": observed_at,
             "is_active": True,
             "hex": hex_id or None,
             "registration": registration or None,
@@ -527,7 +547,7 @@ def parse_adsbfi_squawk_alerts(
             "rssi": ac.get("rssi"),
             "raw_aircraft": ac,
         }
-        extra = {k: v for k, v in extra.items() if v is not None and v != ""}
+        extra = {k: v for k, v in extra.items() if k == "broadcast_callsign" or (v is not None and v != "")}
 
         alerts.append(
             AviationAlert(
@@ -535,7 +555,7 @@ def parse_adsbfi_squawk_alerts(
                 status_text=_adsbfi_status_text(seen_seconds, seen_pos_seconds),
                 alert_type=SQUAWK_LABELS.get(squawk, f"{squawk} - Squawk Alert"),
                 squawk_code=squawk,
-                event_date_text=_format_utc_date_text(fetched_at),
+                event_date_text=_format_utc_date_text(observed_at),
                 departure_time_text=None,
                 departure_airport=None,
                 arrival_time_text=None,

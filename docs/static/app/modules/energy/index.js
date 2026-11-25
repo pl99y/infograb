@@ -76,7 +76,7 @@ export function createEnergyModule(ctx) {
   function getEnergyCardInfo(item) {
     return energyInfoMap[item.quote_key] || {
       title: item.name || item.quote_key || "未知品种",
-      subtitle: `${item.symbol || ""} · 连续期货`,
+      subtitle: `${item.symbol || ""} · ${Object.hasOwn(item, "display_price") ? "国际期货折算" : "连续期货"}`,
       unit: item.unit || "",
       note: `期货报价，非现货；${item.contract_name || "具体月份以来源为准"}`,
     };
@@ -97,7 +97,10 @@ export function createEnergyModule(ctx) {
 
     items.forEach((item) => {
       const info = getEnergyCardInfo(item);
-      const price = (item.price == null ? NaN : Number(item.price));
+      const converted = Object.hasOwn(item, "display_price");
+      const displayPrice = converted ? item.display_price : item.price;
+      const price = displayPrice == null ? NaN : Number(displayPrice);
+      if (converted) info.unit = item.display_unit;
       const change = (item.change == null ? NaN : Number(item.change));
       const changePercent = (item.change_percent == null ? NaN : Number(item.change_percent));
       const showChange = true;
@@ -133,7 +136,16 @@ export function createEnergyModule(ctx) {
       const quoteTime = item.timestamp_text || item.fetched_at;
       const quoteDate = new Date(quoteTime);
       const timeText = quoteTime && (Number.isNaN(quoteDate.getTime()) ? String(quoteTime) : quoteDate.toLocaleString());
-      card.title = [info.note, timeText && `报价时间 ${timeText}`].filter(Boolean).join("\n");
+      const fxNote = converted ? (item.fx
+        ? `原价 ${item.price} 美元/金衡盎司；1 美元 = ${item.fx.rate} 人民币；汇率时间 ${new Date(item.fx.quote_time).toLocaleString()}；涨跌幅为美元期货原报价涨跌幅`
+        : "缺少有效汇率，暂不显示折算价") : "";
+      card.title = [info.note, fxNote, timeText && `报价时间 ${timeText}`].filter(Boolean).join("\n");
+      if (converted && item.conversion_status !== "available") {
+        const status = document.createElement("div");
+        status.className = "market-symbol-sub";
+        status.textContent = "汇率暂不可用";
+        card.appendChild(status);
+      }
       if (item.contract_rolled) {
         const roll = document.createElement("div");
         roll.className = "market-symbol-sub";

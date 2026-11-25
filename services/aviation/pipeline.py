@@ -132,11 +132,13 @@ def _record_current_adsbfi_alert(con, *, alert, dedupe_key: str, fetched_at: str
         (dedupe_key,),
     ).fetchone()
 
+    observed_at = (getattr(alert, "extra", {}) or {}).get("last_seen_utc") or fetched_at
+
     if not existing:
         extra = dict(getattr(alert, "extra", {}) or {})
         extra.setdefault("event_key", _alert_event_key(alert))
-        extra.setdefault("first_seen_utc", fetched_at)
-        extra["last_seen_utc"] = fetched_at
+        extra.setdefault("first_seen_utc", observed_at)
+        extra["last_seen_utc"] = observed_at
         extra["last_refresh_utc"] = fetched_at
         extra["is_active"] = True
         alert.extra = extra
@@ -166,13 +168,18 @@ def _record_current_adsbfi_alert(con, *, alert, dedupe_key: str, fetched_at: str
 
     existing_extra = _json_loads(existing["extra_json"])
     incoming_extra = dict(getattr(alert, "extra", {}) or {})
-    first_seen = existing_extra.get("first_seen_utc") or existing["fetched_at"] or fetched_at
+    before = _parse_dt(existing_extra.get("last_seen_utc") or existing["fetched_at"])
+    incoming = _parse_dt(observed_at)
+    if before and incoming and incoming < before:
+        return False
+    reactivated = existing_extra.get("is_active") is False
+    first_seen = observed_at if reactivated else existing_extra.get("first_seen_utc") or existing["fetched_at"] or observed_at
     merged_extra = {
         **existing_extra,
         **incoming_extra,
         "event_key": existing_extra.get("event_key") or _alert_event_key(alert),
         "first_seen_utc": first_seen,
-        "last_seen_utc": fetched_at,
+        "last_seen_utc": observed_at,
         "last_refresh_utc": fetched_at,
         "is_active": True,
         "verification_pending": False,
@@ -184,6 +191,7 @@ def _record_current_adsbfi_alert(con, *, alert, dedupe_key: str, fetched_at: str
         UPDATE airport_alerts
         SET callsign = ?,
             status_text = ?,
+            event_date_text = ?,
             alert_type = ?,
             squawk_code = ?,
             departure_time_text = ?,
@@ -203,6 +211,7 @@ def _record_current_adsbfi_alert(con, *, alert, dedupe_key: str, fetched_at: str
         (
             alert.callsign,
             alert.status_text,
+            alert.event_date_text,
             alert.alert_type,
             alert.squawk_code,
             alert.departure_time_text,

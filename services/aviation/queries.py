@@ -4,6 +4,7 @@ Aviation query helpers for API / dashboard usage.
 from __future__ import annotations
 
 import json
+from datetime import datetime, timedelta, timezone
 
 from storage import get_connection
 
@@ -16,10 +17,9 @@ def get_airport_alerts(limit: int = 100, db_path: str = "app.db", window_hours: 
             SELECT *
             FROM airport_alerts
             WHERE datetime(fetched_at) >= datetime('now', ?)
-            ORDER BY fetched_at DESC, id ASC
-            LIMIT ?
+            ORDER BY datetime(fetched_at) DESC, id DESC
             """,
-            (f"-{int(window_hours)} hours", limit),
+            (f"-{int(window_hours)} hours",),
         ).fetchall()
 
         items = [dict(r) for r in rows]
@@ -29,7 +29,17 @@ def get_airport_alerts(limit: int = 100, db_path: str = "app.db", window_hours: 
                 item["extra"] = json.loads(extra_json) if extra_json else {}
             except Exception:
                 item["extra"] = {}
-        return items
+        def detected_at(item):
+            value = item["extra"].get("last_seen_utc") or item.get("fetched_at")
+            try:
+                stamp = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+                return stamp.replace(tzinfo=timezone.utc) if stamp.tzinfo is None else stamp.astimezone(timezone.utc)
+            except (ValueError, TypeError):
+                return datetime.min.replace(tzinfo=timezone.utc)
+        cutoff = datetime.now(timezone.utc) - timedelta(hours=window_hours)
+        items = [item for item in items if detected_at(item) >= cutoff]
+        items.sort(key=lambda item: (detected_at(item), item["id"]), reverse=True)
+        return items if limit < 0 else items[:limit]
     finally:
         con.close()
 

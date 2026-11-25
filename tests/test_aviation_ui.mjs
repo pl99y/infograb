@@ -1,0 +1,18 @@
+import assert from 'node:assert/strict';
+import { alertIdentity, alertTimestamp, renderAviationAlerts } from '../docs/static/app/modules/aviation/render-alerts.js';
+const source_name='ADSB.fi Emergency Squawk';
+const base={source_name,callsign:'N123AB',extra:{registration:'N123AB',hex:'abc123',raw_aircraft:{}}};
+assert.deepEqual(alertIdentity(base),{value:'N123AB',label:'注册号（未提供呼号）'});
+assert.deepEqual(alertIdentity({...base,extra:{...base.extra,raw_aircraft:{flight:' ABC123 '}}}),{value:'ABC123',label:'呼号'});
+assert.deepEqual(alertIdentity({...base,extra:{hex:'abc123',raw_aircraft:{}}}),{value:'ABC123',label:'HEX（未提供呼号）'});
+const container={innerHTML:''};
+const older={...base,id:1,extra:{...base.extra,is_active:false,last_seen_utc:'2026-11-24T10:00:00Z'}};
+const newer={...base,id:2,callsign:'CALL123',fetched_at:'2026-11-25T12:00:00Z',extra:{...base.extra,last_seen_utc:'2026-11-25T10:00:00Z',raw_aircraft:{flight:'CALL123'}}};
+renderAviationAlerts(container,[older,newer]);
+assert.ok(container.innerHTML.indexOf('CALL123')<container.innerHTML.indexOf('N123AB'));
+assert.ok(!container.innerHTML.includes('0.000, 0.000'));
+assert.ok(!container.innerHTML.includes('0 kt'));
+assert.ok(container.innerHTML.includes('本轮未再检测到'));
+assert.ok(container.innerHTML.includes('最近采集仍检测到'));
+assert.ok(alertTimestamp(newer)>alertTimestamp(older));
+console.log('Aviation UI: accurate identity labels, observed-time ordering, missing telemetry and explicit state passed');

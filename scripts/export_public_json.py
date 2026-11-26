@@ -111,7 +111,7 @@ def fetch_all(skip_fetch: bool) -> dict:
     collect_snapshot(
         attempts, "news_hotsearch_latest.json", lambda: fetch_hotsearch_bundle(db_path=db_path), hotsearch_status, db_path=db_path,
     )
-    collect(attempts, "focus_latest.json", lambda: {"status": "success" if get_focus(db_path=db_path).get("text") else "failed"})
+    collect(attempts, "focus_latest.json", lambda: {"status": "success" if (get_focus(db_path=db_path).get("text") or get_focus(db_path=db_path).get("status") == "quiet") else "failed"})
     collect_snapshot(
         attempts, "f1_live.json", lambda: fetch_f1_live_payload(db_path=db_path), f1_live_status, db_path=db_path,
     )

@@ -109,7 +109,7 @@ class MarketFocusTests(unittest.TestCase):
         choice = {"level": "critical", "global_impact": True, "event_type": "nuclear_use", "support_ids": [rows[0]["id"]]}
         self.assertEqual(assess_alert(choice, rows)["shadow_level"], "normal")
         store_focus(rows, None, db_path=self.db, now=NOW)
-        self.assertFalse(get_focus(db_path=self.db, now=NOW))
+        self.assertFalse(get_focus(db_path=self.db, now=NOW).get("text"))
 
     def test_shadow_mode_expiry_bad_model_ids_and_unsupported_numbers(self):
         rows = self.evidence()

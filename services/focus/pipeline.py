@@ -24,7 +24,7 @@ from storage import get_dashboard_snapshot, save_dashboard_snapshot
 CACHE = "current_focus_v1"
 OFFICIAL = ("who.int", "un.org", "usgs.gov", "tsunami.gov", "noaa.gov", "jma.go.jp", "gov.cn", "hko.gov.hk", "gdacs.org")
 NEWS_ORIGINS = {"zaobao.com.sg": "zaobao", "bbc.com": "bbc", "bbc.co.uk": "bbc",
-                "feeds.bbci.co.uk": "bbc", "news.mingpao.com": "mingpao", "hk01.com": "hk01"}
+                "feeds.bbci.co.uk": "bbc", "aljazeera.com": "aljazeera", "france24.com": "france24", "news.mingpao.com": "mingpao", "hk01.com": "hk01"}
 CRITICAL_TYPES = {"major_power_war", "nuclear_use", "global_financial_disruption", "global_health_emergency", "multinational_catastrophe"}
 UNCERTAIN = re.compile(r"疑似|传闻|未证实|谣言|演习|回顾|假设|否认|可能|\b(?:unconfirmed|rumou?r|drill|simulation|anniversary|denies|could|may)\b", re.I)
 
@@ -76,32 +76,43 @@ def normalize_candidates(rows, now):
                 "snippet": clean(row.get("snippet"), 350), "url": url,
                 "source_name": clean(row.get("source_name"), 60), "source_kind": row.get("source_kind", "news"),
                 "published_at": published.isoformat(), "score": int(row.get("score", 1)),
-                "authors": clean(row.get("authors"), 150)}
+                "authors": clean(row.get("authors"), 150),
+                "international_feed": bool(row.get("international_feed"))}
         item["official"] = is_official(item)
         item["origin"] = origin_of(item)
         result.append(item)
     result.sort(key=lambda row: (row["score"], row["published_at"]), reverse=True)
     # Keep representation from the panels instead of letting a large feed crowd them out.
-    selected, counts = [], {}
+    selected, counts, origin_counts = [], {}, {}
     for row in result:
         kind = row["source_kind"]
         if counts.get(kind, 0) < 2:
             selected.append(row); counts[kind] = counts.get(kind, 0) + 1
+            if kind == "news": origin_counts[row["origin"]] = origin_counts.get(row["origin"], 0) + 1
     selected = selected[:40]
     chosen_ids = {row["id"] for row in selected}
+    # Reserve a slot for each available news origin before filling spare slots.
+    # Panel representation above remains intact and news still has a 16-row cap.
+    for row in result:
+        if len(selected) >= 40 or counts.get("news", 0) >= 16: break
+        if row["source_kind"] != "news" or row["origin"] in origin_counts: continue
+        selected.append(row); chosen_ids.add(row["id"])
+        counts["news"] = counts.get("news", 0) + 1
+        origin_counts[row["origin"]] = 1
     for row in result:
         if len(selected) == 40: break
         if row["id"] in chosen_ids: continue
         kind = row["source_kind"]
         if counts.get(kind, 0) >= (16 if kind == "news" else 8): continue
+        if kind == "news" and origin_counts.get(row["origin"], 0) >= 4: continue
         selected.append(row); counts[kind] = counts.get(kind, 0) + 1
+        if kind == "news": origin_counts[row["origin"]] = origin_counts.get(row["origin"], 0) + 1
     return sorted(selected, key=lambda row: (row["score"], row["published_at"]), reverse=True)
 
 
 def build_focus_candidates(*, db_path, now=None):
     now = now or datetime.now(timezone.utc)
     rows = fetch_focus_news()
-    for row in rows: row["score"] = 4
     news = get_news_timeline_latest(limit=35, db_path=db_path).get("items", [])
     rows += [{"title": r.get("title"), "url": r.get("url"), "published_at": r.get("published_at"),
               "source_name": r.get("source_name"), "source_kind": "news", "score": 4,
@@ -186,22 +197,26 @@ def assess_alert(selection, candidates):
             "evidence": [{k: r[k] for k in ("id", "title", "url", "source_name", "origin")} for r in evidence]}
 
 
-def store_focus(candidates, selection, *, db_path, now=None):
+def store_focus(candidates, selection, *, db_path, now=None, editor_declined=False):
     now = now or datetime.now(timezone.utc)
     lookup = {row["id"]: row for row in candidates}
     selection = selection if isinstance(selection, dict) else {}
     chosen = lookup.get(selection.get("id")) if isinstance(selection.get("id"), str) else None
     valid_ai = chosen is not None
-    if not chosen:
+    if not chosen and not editor_declined:
         # A Telegram rumor cannot become the default headline when the editor fails.
-        eligible = [r for r in candidates if r["source_kind"] not in ("telegram", "f1")]
-        chosen = next((r for r in eligible if re.search(r"[\u3400-\u9fff]", r["title"])), eligible[0] if eligible else None)
+        eligible = [r for r in candidates if r["source_kind"] not in ("telegram", "f1")
+                    and (not r.get("international_feed") or r["score"] >= 3)]
+        top_score = max((r["score"] for r in eligible), default=0)
+        chosen = next((r for r in eligible if r["score"] == top_score and re.search(r"[\u3400-\u9fff]", r["title"])), eligible[0] if eligible else None)
     if not chosen:
         previous = get_dashboard_snapshot(CACHE, db_path=db_path) or {}
         if previous.get("alert_level") in ("major", "critical"):
             # A collection outage is not evidence that a confirmed emergency ended.
             return
-        save_dashboard_snapshot(CACHE, {"generated_at": now.isoformat(), "text": "", "audit": []}, db_path=db_path)
+        save_dashboard_snapshot(CACHE, {"generated_at": now.isoformat(), "text": "", "audit": [],
+                                       "status": "quiet", "alert_level": "normal",
+                                       "valid_until": (now + timedelta(minutes=45)).isoformat()}, db_path=db_path)
         return
     text = clean(selection.get("text"), 100) if valid_ai else ""
     evidence_text = chosen["title"] + chosen["snippet"]
@@ -236,7 +251,8 @@ def fetch_hotsearch_bundle(*, db_path):
     snapshot = fetch_hotsearch_snapshot(focus_candidates=candidates)
     selection = snapshot.get("ai_digest", {}).pop("focus", None)
     try:
-        store_focus(candidates, selection, db_path=db_path)
+        store_focus(candidates, selection, db_path=db_path,
+                    editor_declined=bool(snapshot.get("ai_digest", {}).get("ok")) and selection is None)
     except Exception as error:
         print(f"[warn] Focus export unavailable ({type(error).__name__})")
     return snapshot
@@ -254,4 +270,4 @@ def get_focus(*, db_path, now=None):
                         "valid_until": min(now + timedelta(minutes=30), expired + timedelta(days=1)).isoformat()}
             return {}
     except (ValueError, TypeError): return {}
-    return {key: state.get(key, "") for key in ("text", "url", "source_name", "source_time", "generated_at", "valid_until", "alert_level")}
+    return {key: state.get(key, "") for key in ("text", "url", "source_name", "source_time", "generated_at", "valid_until", "alert_level", "status")}

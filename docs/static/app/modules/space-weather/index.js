@@ -251,8 +251,9 @@ function renderAlerts(container, alerts) {
           <span class="space-weather-badge">${escapeHtml(formatMessageType(item?.message_type))}</span>
           ${item?.noaa_scale ? `<span class="space-weather-badge space-weather-badge-scale">${escapeHtml(item.noaa_scale)}</span>` : ""}
           ${item?.product_id ? `<span class="space-weather-badge space-weather-badge-muted">${escapeHtml(item.product_id)}</span>` : ""}
+          ${item?.serial_number ? `<span class="space-weather-badge space-weather-badge-muted" title="NOAA 通告序号">#${escapeHtml(item.serial_number)}</span>` : ""}
         </div>
-        <div class="space-weather-alert-time" title="${escapeHtml(formatIssueTime(item?.issue_datetime))}">${escapeHtml(formatRelativeLocalTime(item?.issue_datetime))}</div>
+        <div class="space-weather-alert-time" title="${escapeHtml(formatIssueTime(item?.issue_datetime))}">${escapeHtml(formatIssueTime(item?.issue_datetime))}</div>
       </div>
       <div class="space-weather-alert-title">${escapeHtml(item?.headline || "未命名消息")}</div>
       <div class="space-weather-alert-summary">${escapeHtml(summary)}</div>

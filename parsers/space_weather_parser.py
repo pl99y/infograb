@@ -156,6 +156,23 @@ def _parse_alert_message(message: str) -> dict[str, Any]:
 
 
 
+def normalize_swpc_headline(value: str, message_type: str | None) -> str:
+    # WATCH is a warning level, not the verb "to watch".
+    if message_type == "watch":
+        return re.sub(r"^观看\s*[：:]", "监视：", value)
+    return value
+
+
+def latest_swpc_versions(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    latest = {}
+    for row in sorted(rows, key=lambda r: r.get("issue_datetime") or "", reverse=True):
+        product, code = row.get("product_id"), row.get("message_code")
+        key = (product or "", code or "") if product or code else (row.get("dedupe_key"), "")
+        if key not in latest:
+            latest[key] = row
+    return list(latest.values())
+
+
 def parse_swpc_alerts_payload(
     payload: Any,
     *,
@@ -206,7 +223,7 @@ def parse_swpc_alerts_payload(
         )
 
     parsed_rows.sort(key=lambda row: row.get("issue_datetime") or "", reverse=True)
-    return parsed_rows[: max(0, int(max_items))]
+    return latest_swpc_versions(parsed_rows)[: max(0, int(max_items))]
 
 
 

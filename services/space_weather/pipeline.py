@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import asyncio
 import logging
+import re
 from typing import Any
 
 from collectors.common import utc_now_iso
@@ -18,6 +19,8 @@ from collectors.space_launch_fetcher import (
 )
 from parsers.space_weather_parser import (
     parse_swpc_alerts_payload,
+    _parse_alert_message,
+    normalize_swpc_headline,
     parse_swpc_forecast_payloads,
 )
 from services.shared.translation import translate_batch_with_meta
@@ -71,7 +74,7 @@ def _pick_provider(providers: list[str] | None) -> str:
 def _read_existing_alert_cache(con) -> dict[str, dict[str, str]]:
     rows = con.execute(
         """
-        SELECT dedupe_key, headline, impacts_text, description_text
+        SELECT dedupe_key, headline, impacts_text, description_text, message_raw
         FROM swpc_alerts
         """
     ).fetchall()
@@ -81,10 +84,12 @@ def _read_existing_alert_cache(con) -> dict[str, dict[str, str]]:
         dedupe_key = _compact_text(row["dedupe_key"])
         if not dedupe_key:
             continue
+        original = _parse_alert_message(row["message_raw"] or "")
         cache[dedupe_key] = {
             "headline": _compact_text(row["headline"]),
             "impacts_text": _compact_text(row["impacts_text"]),
             "description_text": _compact_text(row["description_text"]),
+            **{"source_" + field: _compact_text(original.get(field)) for field in ALERT_TEXT_FIELDS},
         }
     return cache
 
@@ -123,7 +128,7 @@ def _reuse_cached_forecast_translations(panel: dict[str, Any], cached_panel: dic
     for section, field in FORECAST_TEXT_PATHS:
         fresh_value = _compact_text(panel.get(section, {}).get(field))
         cached_value = _compact_text(cached_panel.get(section, {}).get(field))
-        if not fresh_value or not cached_value:
+        if not fresh_value or not cached_value or not re.search(r"[\u3400-\u9fff]", cached_value):
             continue
         panel.setdefault(section, {})[field] = cached_value
         reused_any = True
@@ -150,8 +155,9 @@ def _build_translation_plan(
             if not value:
                 continue
             cached_value = _compact_text(cached.get(field))
-            if cached_value:
-                alert[field] = cached_value
+            if (cached_value and re.search(r"[\u3400-\u9fff]", cached_value)
+                    and cached.get("source_" + field) == value):
+                alert[field] = normalize_swpc_headline(cached_value, alert.get("message_type")) if field == "headline" else cached_value
                 provider_hint = "cached"
                 continue
             reused_all_fields = False
@@ -164,6 +170,9 @@ def _build_translation_plan(
         for section, field in FORECAST_TEXT_PATHS:
             value = _compact_text(panel.get(section, {}).get(field))
             if not value:
+                continue
+            if re.search(r"[\u3400-\u9fff]", value):
+                provider_hint = "cached"
                 continue
             texts.append(value)
             slots.append(("forecast", (section, field)))
@@ -188,7 +197,7 @@ def _apply_translation_results(
         kind, target = slot
         if kind == "alert":
             index, field = target
-            alerts[index][field] = clean
+            alerts[index][field] = normalize_swpc_headline(clean, alerts[index].get("message_type")) if field == "headline" else clean
         else:
             section, field = target
             panel.setdefault(section, {})[field] = clean

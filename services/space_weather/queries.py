@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 
 from storage import get_connection
+from parsers.space_weather_parser import latest_swpc_versions, normalize_swpc_headline
 
 
 
@@ -14,9 +15,7 @@ def get_space_weather_alerts(limit: int = 30, db_path: str = "app.db") -> list[d
             SELECT *
             FROM swpc_alerts
             ORDER BY datetime(issue_datetime) DESC, id DESC
-            LIMIT ?
             """,
-            (int(limit),),
         ).fetchall()
 
         items = [dict(row) for row in rows]
@@ -26,7 +25,10 @@ def get_space_weather_alerts(limit: int = 30, db_path: str = "app.db") -> list[d
                 item["details"] = json.loads(details_json) if details_json else {}
             except Exception:
                 item["details"] = {}
-        return items
+        items = latest_swpc_versions(items)
+        for item in items:
+            item["headline"] = normalize_swpc_headline(item.get("headline") or "", item.get("message_type"))
+        return items if limit < 0 else items[:int(limit)]
     finally:
         con.close()
 

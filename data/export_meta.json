@@ -1,0 +1,340 @@
+{
+  "version": 3,
+  "generated_at": "2026-11-28T13:48:39.913121+00:00",
+  "last_profile": "15m",
+  "profile": "15m",
+  "steps": [
+    {
+      "name": "energy_latest.json",
+      "ok": true,
+      "status": "success"
+    },
+    {
+      "name": "market_latest.json",
+      "ok": true,
+      "status": "success"
+    },
+    {
+      "name": "aviation_alerts.json",
+      "ok": true,
+      "status": "success"
+    },
+    {
+      "name": "aviation_disruptions.json",
+      "ok": true,
+      "status": "success"
+    },
+    {
+      "name": "weather_alerts.json",
+      "ok": true,
+      "status": "success"
+    },
+    {
+      "name": "disaster_ongoing.json",
+      "ok": true,
+      "status": "success"
+    },
+    {
+      "name": "telegram.json",
+      "ok": true,
+      "status": "success"
+    },
+    {
+      "name": "news_timeline_latest.json",
+      "ok": true,
+      "status": "success"
+    },
+    {
+      "name": "news_hotsearch_latest.json",
+      "ok": true,
+      "status": "success"
+    },
+    {
+      "name": "f1_live.json",
+      "ok": false,
+      "status": "failed"
+    },
+    {
+      "name": "history_today.json",
+      "ok": true,
+      "status": "success"
+    },
+    {
+      "name": "market_calendar.json",
+      "ok": false,
+      "status": "unverified"
+    },
+    {
+      "name": "commodities_latest.json",
+      "ok": true,
+      "status": "success"
+    },
+    {
+      "name": "focus_latest.json",
+      "ok": true,
+      "status": "success"
+    }
+  ],
+  "profiles": {
+    "15m": {
+      "generated_at": "2026-11-28T13:48:39.913121+00:00",
+      "files": {
+        "energy_latest.json": "2026-11-28T13:48:39.868855+00:00",
+        "market_latest.json": "2026-11-28T13:48:39.870083+00:00",
+        "aviation_alerts.json": "2026-11-28T13:48:39.872414+00:00",
+        "aviation_disruptions.json": "2026-11-28T13:48:39.873657+00:00",
+        "weather_alerts.json": "2026-11-28T13:48:39.880050+00:00",
+        "disaster_ongoing.json": "2026-11-28T13:48:39.880597+00:00",
+        "telegram.json": "2026-11-28T13:48:39.898483+00:00",
+        "news_timeline_latest.json": "2026-11-28T13:48:39.903952+00:00",
+        "news_hotsearch_latest.json": "2026-11-28T13:48:39.906914+00:00",
+        "f1_live.json": "2026-11-28T13:33:48.338433+00:00",
+        "history_today.json": "2026-11-28T13:48:39.866975+00:00",
+        "market_calendar.json": "2026-11-28T13:48:39.863513+00:00",
+        "commodities_latest.json": "2026-11-28T13:48:39.864509+00:00",
+        "focus_latest.json": "2026-11-28T13:48:39.865709+00:00"
+      },
+      "datasets": {
+        "energy_latest.json": {
+          "status": "success",
+          "last_attempt_at": "2026-11-28T13:47:10.299575+00:00",
+          "last_success_at": "2026-11-28T13:47:10.299575+00:00"
+        },
+        "market_latest.json": {
+          "status": "success",
+          "last_attempt_at": "2026-11-28T13:47:13.408261+00:00",
+          "last_success_at": "2026-11-28T13:47:13.408261+00:00"
+        },
+        "aviation_alerts.json": {
+          "status": "success",
+          "last_attempt_at": "2026-11-28T13:47:15.308355+00:00",
+          "last_success_at": "2026-11-28T13:47:15.308355+00:00"
+        },
+        "aviation_disruptions.json": {
+          "status": "success",
+          "last_attempt_at": "2026-11-28T13:47:15.308355+00:00",
+          "last_success_at": "2026-11-28T13:47:15.308355+00:00"
+        },
+        "weather_alerts.json": {
+          "status": "success",
+          "last_attempt_at": "2026-11-28T13:47:19.259716+00:00",
+          "last_success_at": "2026-11-28T13:47:19.259716+00:00"
+        },
+        "disaster_ongoing.json": {
+          "status": "success",
+          "last_attempt_at": "2026-11-28T13:47:19.259716+00:00",
+          "last_success_at": "2026-11-28T13:47:19.259716+00:00"
+        },
+        "telegram.json": {
+          "status": "success",
+          "last_attempt_at": "2026-11-28T13:47:28.350574+00:00",
+          "last_success_at": "2026-11-28T13:47:28.350574+00:00"
+        },
+        "news_timeline_latest.json": {
+          "status": "success",
+          "last_attempt_at": "2026-11-28T13:47:44.125099+00:00",
+          "last_success_at": "2026-11-28T13:47:44.125099+00:00"
+        },
+        "news_hotsearch_latest.json": {
+          "status": "success",
+          "last_attempt_at": "2026-11-28T13:48:10.455653+00:00",
+          "last_success_at": "2026-11-28T13:48:10.455653+00:00"
+        },
+        "f1_live.json": {
+          "status": "failed",
+          "last_attempt_at": "2026-11-28T13:48:38.922711+00:00",
+          "last_success_at": "2026-11-28T13:33:45.785243+00:00"
+        },
+        "history_today.json": {
+          "status": "success",
+          "last_attempt_at": "2026-11-28T13:48:39.856880+00:00",
+          "last_success_at": "2026-11-28T13:48:39.856880+00:00"
+        },
+        "market_calendar.json": {
+          "status": "unverified",
+          "last_attempt_at": null,
+          "last_success_at": null
+        },
+        "commodities_latest.json": {
+          "status": "success",
+          "last_attempt_at": "2026-11-28T13:47:15.161545+00:00",
+          "last_success_at": "2026-11-28T13:47:15.161545+00:00"
+        },
+        "focus_latest.json": {
+          "status": "success",
+          "last_attempt_at": "2026-11-28T13:48:38.921226+00:00",
+          "last_success_at": "2026-11-28T13:48:38.921226+00:00"
+        }
+      },
+      "steps": [
+        {
+          "name": "energy_latest.json",
+          "ok": true,
+          "status": "success"
+        },
+        {
+          "name": "market_latest.json",
+          "ok": true,
+          "status": "success"
+        },
+        {
+          "name": "aviation_alerts.json",
+          "ok": true,
+          "status": "success"
+        },
+        {
+          "name": "aviation_disruptions.json",
+          "ok": true,
+          "status": "success"
+        },
+        {
+          "name": "weather_alerts.json",
+          "ok": true,
+          "status": "success"
+        },
+        {
+          "name": "disaster_ongoing.json",
+          "ok": true,
+          "status": "success"
+        },
+        {
+          "name": "telegram.json",
+          "ok": true,
+          "status": "success"
+        },
+        {
+          "name": "news_timeline_latest.json",
+          "ok": true,
+          "status": "success"
+        },
+        {
+          "name": "news_hotsearch_latest.json",
+          "ok": true,
+          "status": "success"
+        },
+        {
+          "name": "f1_live.json",
+          "ok": false,
+          "status": "failed"
+        },
+        {
+          "name": "history_today.json",
+          "ok": true,
+          "status": "success"
+        },
+        {
+          "name": "market_calendar.json",
+          "ok": false,
+          "status": "unverified"
+        },
+        {
+          "name": "commodities_latest.json",
+          "ok": true,
+          "status": "success"
+        },
+        {
+          "name": "focus_latest.json",
+          "ok": true,
+          "status": "success"
+        }
+      ]
+    },
+    "12h": {
+      "generated_at": "2026-11-28T12:08:26.941941+00:00",
+      "files": {
+        "space_weather_alerts.json": "2026-11-28T12:08:26.927348+00:00",
+        "space_weather_forecast.json": "2026-11-28T12:08:26.928564+00:00",
+        "space_launches_latest.json": "2026-11-28T12:08:26.929622+00:00",
+        "mnd_pla_dashboard.json": "2026-11-28T12:08:26.930998+00:00",
+        "public_health_latest.json": "2026-11-28T12:08:26.937520+00:00",
+        "f1_news.json": "2026-11-28T12:08:26.939569+00:00",
+        "history_today.json": "2026-11-28T12:08:26.940986+00:00",
+        "local_weather.json": "2026-11-28T12:08:26.941928+00:00"
+      },
+      "datasets": {
+        "space_weather_alerts.json": {
+          "status": "success",
+          "last_attempt_at": "2026-11-28T12:07:09.787644+00:00",
+          "last_success_at": "2026-11-28T12:07:09.787644+00:00"
+        },
+        "space_weather_forecast.json": {
+          "status": "success",
+          "last_attempt_at": "2026-11-28T12:07:09.787644+00:00",
+          "last_success_at": "2026-11-28T12:07:09.787644+00:00"
+        },
+        "space_launches_latest.json": {
+          "status": "success",
+          "last_attempt_at": "2026-11-28T12:07:11.917443+00:00",
+          "last_success_at": "2026-11-28T12:07:11.917443+00:00"
+        },
+        "mnd_pla_dashboard.json": {
+          "status": "success",
+          "last_attempt_at": "2026-11-28T12:07:12.364584+00:00",
+          "last_success_at": "2026-11-28T12:07:12.364584+00:00"
+        },
+        "public_health_latest.json": {
+          "status": "success",
+          "last_attempt_at": "2026-11-28T12:07:15.423978+00:00",
+          "last_success_at": "2026-11-28T12:07:15.423978+00:00"
+        },
+        "f1_news.json": {
+          "status": "success",
+          "last_attempt_at": "2026-11-28T12:08:04.484789+00:00",
+          "last_success_at": "2026-11-28T12:08:04.484789+00:00"
+        },
+        "history_today.json": {
+          "status": "success",
+          "last_attempt_at": "2026-11-28T12:08:10.538086+00:00",
+          "last_success_at": "2026-11-28T12:08:10.538086+00:00"
+        },
+        "local_weather.json": {
+          "status": "success",
+          "last_attempt_at": "2026-11-28T12:08:20.956644+00:00",
+          "last_success_at": "2026-11-28T12:08:20.956644+00:00"
+        }
+      },
+      "steps": [
+        {
+          "name": "space_weather_alerts.json",
+          "ok": true,
+          "status": "success"
+        },
+        {
+          "name": "space_weather_forecast.json",
+          "ok": true,
+          "status": "success"
+        },
+        {
+          "name": "space_launches_latest.json",
+          "ok": true,
+          "status": "success"
+        },
+        {
+          "name": "mnd_pla_dashboard.json",
+          "ok": true,
+          "status": "success"
+        },
+        {
+          "name": "public_health_latest.json",
+          "ok": true,
+          "status": "success"
+        },
+        {
+          "name": "f1_news.json",
+          "ok": true,
+          "status": "success"
+        },
+        {
+          "name": "history_today.json",
+          "ok": true,
+          "status": "success"
+        },
+        {
+          "name": "local_weather.json",
+          "ok": true,
+          "status": "success"
+        }
+      ]
+    }
+  }
+}
